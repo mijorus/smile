@@ -42,7 +42,7 @@ class Application(Gtk.Application):
         about.present()
 
     def on_preferences_action(self, widget, _):
-        print('app.preferences action activated')
+        print('app.preferences action activate')
 
     def create_action(self, name, callback):
         """ Add an Action and connect to a callback """
