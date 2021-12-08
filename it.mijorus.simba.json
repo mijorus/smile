@@ -29,8 +29,8 @@
             "buildsystem" : "meson",
             "sources" : [
                 {
-                    "type" : "git",
-                    "url" : "file:///home/altravia/Progetti/simba"
+                    "type" : "dir",
+                    "path" : "/home/altravia/Progetti/simba"
                 }
             ]
         }

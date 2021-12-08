@@ -28,7 +28,7 @@ configure_file(
 simba_sources = [
   '__init__.py',
   'main.py',
-  'window.py',
+#   'window.py',
 ]
 
 install_data(simba_sources, install_dir: moduledir)

@@ -18,39 +18,20 @@
 import sys
 import gi
 
-gi.require_version('Gtk', '4.0')
+gi.require_version('Gtk', '3.0')
 
 from gi.repository import Gtk, Gio
 
-from .window import SimbaWindow, AboutDialog
+@Gtk.Template(resource_path='/it/mijorus/simba/window.ui')
+class Application(Gtk.Window):
+    __gtype_name__ = 'SimbaWindow'
 
-
-class Application(Gtk.Application):
-    def __init__(self):
-        super().__init__(application_id='it.mijorus.simba', flags=Gio.ApplicationFlags.FLAGS_NONE)
-
-    def do_activate(self):
-        win = self.props.active_window
-        if not win:
-            win = SimbaWindow(application=self)
-        self.create_action('about', self.on_about_action)
-        self.create_action('preferences', self.on_preferences_action)
-        win.present()
-
-    def on_about_action(self, widget, _):
-        about = AboutDialog(self.props.active_window)
-        about.present()
-
-    def on_preferences_action(self, widget, _):
-        print('app.preferences action activate')
-
-    def create_action(self, name, callback):
-        """ Add an Action and connect to a callback """
-        action = Gio.SimpleAction.new(name, None)
-        action.connect("activate", callback)
-        self.add_action(action)
-
+    def __init__(self, version):
+        super().__init__(title='La mia app ' + version)
 
 def main(version):
-    app = Application()
-    return app.run(sys.argv)
+    win = Application(version)
+    win.connect("destroy", Gtk.main_quit)
+    win.show_all()
+
+    Gtk.main()
