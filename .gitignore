@@ -2,3 +2,4 @@ builddir/
 
 .flatpak-builder
 build
+.idea

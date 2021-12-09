@@ -22,24 +22,24 @@ gi.require_version('Gtk', '3.0')
 
 from gi.repository import Gtk, Gio
 
-@Gtk.Template(resource_path='/it/mijorus/simba/window.ui')
-class Application(Gtk.Window):
-    __gtype_name__ = 'SimbaWindow'
+class Handler:
+    def onButtonPressed(self, button):
+        print("Hello World!")
+        label = builder.get_object('label')
+        label.set_label('pressed!')
 
-    display_counter = Gtk.Template.Child()
-    counter = 0
+    def onHandleMove(self, el):
+        print("Hello World!")
+        builder.get_object('label').set_label('move!')
 
-    def __init__(self, version):
-        super().__init__(title='La mia app ' + version)
 
-    @Gtk.Template.Callback()
-    def increment_btn_clicked(self, *args):
-        self.counter += 1
-        self.display_counter.set_label('Premuto ' + str(self.counter))
+builder = Gtk.Builder()
+builder.add_from_file("src/window.glade")
+builder.connect_signals(Handler())
 
-def main(version):
-    win = Application(version)
-    win.connect("destroy", Gtk.main_quit)
-    win.show_all()
+def main(verison):
+    window = builder.get_object("window")
+    window.connect("destroy", Gtk.main_quit)
+    window.show_all()
 
     Gtk.main()
