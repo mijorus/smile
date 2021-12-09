@@ -24,10 +24,8 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="display_counter">
-            <property name="label">Button 2</property>
-            <property name="can-focus">False</property>
-            <property name="receives-default">False</property>
+          <object class="GtkLabel" id="display_counter">
+            <property name="label">Non hai mai cliccato</property>
           </object>
           <packing>
             <property name="resize">True</property>

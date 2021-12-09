@@ -26,8 +26,16 @@ from gi.repository import Gtk, Gio
 class Application(Gtk.Window):
     __gtype_name__ = 'SimbaWindow'
 
+    display_counter = Gtk.Template.Child()
+    counter = 0
+
     def __init__(self, version):
         super().__init__(title='La mia app ' + version)
+
+    @Gtk.Template.Callback()
+    def increment_btn_clicked(self, *args):
+        self.counter += 1
+        self.display_counter.set_label('Premuto ' + str(self.counter))
 
 def main(version):
     win = Application(version)
