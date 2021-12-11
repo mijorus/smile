@@ -18,30 +18,10 @@
 import sys
 import gi
 
-from src.get_junk import junkGetter
-
 gi.require_version('Gtk', '3.0')
 
 from gi.repository import Gtk, Gio
 
-class Handler():
-    counter = 0
-
-    def onJunkRequested():
-        junkGetter()
-
-    # def onSubtract(self, button):
-    #     self.counter -= 1
-    #     builder.get_object('label').set_label(str(self.counter))
-
-
-builder = Gtk.Builder()
-builder.add_from_file("src/window.glade")
-builder.connect_signals(Handler())
-
-def main(verison):
-    window = builder.get_object("window")
-    window.connect("destroy", Gtk.main_quit)
-    window.show_all()
-
-    Gtk.main()
+class junkGetter():
+    def __init__(self, box: Gtk.GtkBox) -> None:
+        self.box = box
