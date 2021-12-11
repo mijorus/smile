@@ -18,17 +18,21 @@
 import sys
 import gi
 
-from src.get_junk import junkGetter
+from .get_junk import junkGetter
 
 gi.require_version('Gtk', '3.0')
 
 from gi.repository import Gtk, Gio
 
 class Handler():
-    counter = 0
+    j = None
 
-    def onJunkRequested():
-        junkGetter()
+    def onJunkRequested(self, widget):
+        if not self.j:
+            self.j = junkGetter(builder.get_object('list-container'))
+
+        self.j.get_some_junk()
+
 
     # def onSubtract(self, button):
     #     self.counter -= 1

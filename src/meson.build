@@ -28,6 +28,7 @@ configure_file(
 simba_sources = [
   '__init__.py',
   'main.py',
+  'get_junk.py',
 #   'window.py',
 ]
 
