@@ -51,7 +51,7 @@ class Smile(Gtk.Window):
 
 
     def create_flowbox(self, flowbox):
-        colors = [
+        emojis = [
             '😀', 
             '😃',
             '😄',
@@ -75,8 +75,8 @@ class Smile(Gtk.Window):
             '😚',
         ]
 
-        for color in colors:
-            button = self.create_emoji_button(color)
+        for e in emojis:
+            button = self.create_emoji_button(e)
             flowbox.add(button)
 
 def main(verison):

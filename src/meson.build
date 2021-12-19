@@ -31,4 +31,4 @@ smile_sources = [
   'get_junk.py',
 ]
 
-install_data(smile_sources, install_dir: moduledir)
+install_subdir('.', install_dir: moduledir)
