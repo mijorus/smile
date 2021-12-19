@@ -17,6 +17,8 @@
 
 import sys
 import gi
+import manimpango
+import os
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio, Gdk
@@ -26,6 +28,7 @@ class Smile(Gtk.Window):
         super().__init__(title="Smile")
         self.set_border_width(10)
         self.set_default_size(300, 250)
+        manimpango.register_font(os.path.dirname(__file__) + '/../assets/NotoColorEmoji.ttf')
 
 
         scrolled = Gtk.ScrolledWindow()

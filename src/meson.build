@@ -25,10 +25,5 @@ configure_file(
   install_dir: get_option('bindir')
 )
 
-smile_sources = [
-  '__init__.py',
-  'main.py',
-  'get_junk.py',
-]
 
 install_subdir('.', install_dir: moduledir)
