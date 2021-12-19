@@ -1,9 +1,9 @@
 {
-    "app-id" : "it.mijorus.simba",
+    "app-id" : "it.mijorus.smile",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "41",
     "sdk" : "org.gnome.Sdk",
-    "command" : "simba",
+    "command" : "smile",
     "finish-args" : [
         "--share=network",
         "--share=ipc",
@@ -58,13 +58,13 @@
             ]
         },
         {
-            "name" : "simba",
+            "name" : "smile",
             "builddir" : true,
             "buildsystem" : "meson",
             "sources" : [
                 {
                     "type" : "dir",
-                    "path" : "/home/lorenzo/Projects/simba"
+                    "path" : "/home/lorenzo/Projects/smile"
                 }
             ]
         }

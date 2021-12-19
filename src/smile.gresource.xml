@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/it/mijorus/simba">
-    <file>window.glade</file>
+  <gresource prefix="/it/mijorus/smile">
     <file>gtk/help-overlay.ui</file>
   </gresource>
 </gresources>

@@ -1,6 +1,6 @@
 #!@PYTHON@
 
-# simba.in
+# smile.in
 #
 # Copyright 2021 Lorenzo Paderi
 #
@@ -28,14 +28,14 @@ localedir = '@localedir@'
 
 sys.path.insert(1, pkgdatadir)
 signal.signal(signal.SIGINT, signal.SIG_DFL)
-gettext.install('simba', localedir)
+gettext.install('smile', localedir)
 
 if __name__ == '__main__':
     import gi
 
     from gi.repository import Gio
-    resource = Gio.Resource.load(os.path.join(pkgdatadir, 'simba.gresource'))
+    resource = Gio.Resource.load(os.path.join(pkgdatadir, 'smile.gresource'))
     resource._register()
 
-    from simba import main
+    from smile import main
     sys.exit(main.main(VERSION))

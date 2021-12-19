@@ -3,3 +3,4 @@ typings/*
 .flatpak-builder
 build
 .idea
+flatpak-pip-generator.py

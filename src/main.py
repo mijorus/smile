@@ -18,33 +18,69 @@
 import sys
 import gi
 
-from .get_junk import junkGetter
-
 gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk, Gio, Gdk
 
-from gi.repository import Gtk, Gio
-
-class Handler():
-    j = None
-
-    def onJunkRequested(self, widget):
-        if not self.j:
-            self.j = junkGetter(builder.get_object('list-container'))
-
-        self.j.get_some_junk()
+class Smile(Gtk.Window):
+    def __init__(self):
+        super().__init__(title="Smile")
+        self.set_border_width(10)
+        self.set_default_size(300, 250)
 
 
-    # def onSubtract(self, button):
-    #     self.counter -= 1
-    #     builder.get_object('label').set_label(str(self.counter))
+        scrolled = Gtk.ScrolledWindow()
+        scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
+
+        flowbox = Gtk.FlowBox()
+        flowbox.set_valign(Gtk.Align.START)
+        flowbox.set_max_children_per_line(30)
+        flowbox.set_selection_mode(Gtk.SelectionMode.NONE)
+
+        self.create_flowbox(flowbox)
+
+        scrolled.add(flowbox)
+
+        self.add(scrolled)
+        self.show_all()
+
+    def create_emoji_button(self, emoji):
+        button = Gtk.Button()
+        button.set_label(emoji)
+
+        return button
 
 
-builder = Gtk.Builder()
-builder.add_from_file("src/window.glade")
-builder.connect_signals(Handler())
+    def create_flowbox(self, flowbox):
+        colors = [
+            '😀', 
+            '😃',
+            '😄',
+            '😁',
+            '😆',
+            '😅',
+            '😂',
+            '🤣',
+            '🥲',
+            '😊',
+            '😇',
+            '🙂',
+            '🙃',
+            '😉',
+            '😌',
+            '😍',
+            '🥰',
+            '😘',
+            '😗',
+            '😙',
+            '😚',
+        ]
+
+        for color in colors:
+            button = self.create_emoji_button(color)
+            flowbox.add(button)
 
 def main(verison):
-    window = builder.get_object("window")
+    window = Smile()
     window.connect("destroy", Gtk.main_quit)
     window.show_all()
 

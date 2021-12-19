@@ -1,1 +1,1 @@
-i18n.gettext('simba', preset: 'glib')
+i18n.gettext('smile', preset: 'glib')

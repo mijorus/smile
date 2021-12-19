@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=simba
-Exec=simba
-Icon=it.mijorus.simba
+Name=smile
+Exec=smile
+Icon=it.mijorus.smile
 Terminal=false
 Type=Application
 Categories=GTK;

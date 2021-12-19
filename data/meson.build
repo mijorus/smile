@@ -1,6 +1,6 @@
 desktop_file = i18n.merge_file(
-  input: 'it.mijorus.simba.desktop.in',
-  output: 'it.mijorus.simba.desktop',
+  input: 'it.mijorus.smile.desktop.in',
+  output: 'it.mijorus.smile.desktop',
   type: 'desktop',
   po_dir: '../po',
   install: true,
@@ -15,8 +15,8 @@ if desktop_utils.found()
 endif
 
 appstream_file = i18n.merge_file(
-  input: 'it.mijorus.simba.appdata.xml.in',
-  output: 'it.mijorus.simba.appdata.xml',
+  input: 'it.mijorus.smile.appdata.xml.in',
+  output: 'it.mijorus.smile.appdata.xml',
   po_dir: '../po',
   install: true,
   install_dir: join_paths(get_option('datadir'), 'appdata')
@@ -29,7 +29,7 @@ if appstream_util.found()
   )
 endif
 
-install_data('it.mijorus.simba.gschema.xml',
+install_data('it.mijorus.smile.gschema.xml',
   install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
 )
 

@@ -1,4 +1,4 @@
-application_id = 'it.mijorus.simba'
+application_id = 'it.mijorus.smile'
 
 scalable_dir = join_paths('hicolor', 'scalable', 'apps')
 install_data(
