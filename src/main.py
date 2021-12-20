@@ -28,7 +28,6 @@ class Smile(Gtk.Window):
         super().__init__(title="Smile")
         self.set_border_width(10)
         self.set_default_size(300, 250)
-        manimpango.register_font(os.path.dirname(__file__) + '/../assets/NotoColorEmoji.ttf')
 
 
         scrolled = Gtk.ScrolledWindow()
@@ -82,7 +81,9 @@ class Smile(Gtk.Window):
             button = self.create_emoji_button(e)
             flowbox.add(button)
 
-def main(verison):
+def main(verison, datadir):
+    manimpango.register_font(datadir + '/assets/NotoColorEmoji.ttf')
+
     window = Smile()
     window.connect("destroy", Gtk.main_quit)
     window.show_all()

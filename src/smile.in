@@ -38,4 +38,4 @@ if __name__ == '__main__':
     resource._register()
 
     from smile import main
-    sys.exit(main.main(VERSION))
+    sys.exit(main.main(VERSION, pkgdatadir))
