@@ -31,9 +31,12 @@
             "sources" : [
                 {
                     "type" : "dir",
-                    "path" : "/home/lorenzo/Projects/smile"
+                    "path" : "/home/altravia/Progetti/simba"
                 }
             ]
         }
-    ]
+    ],
+    "build-options" : {
+        "env" : {        }
+    }
 }

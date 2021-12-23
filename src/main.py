@@ -33,16 +33,19 @@ class Smile(Gtk.Window):
         scrolled = Gtk.ScrolledWindow()
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
 
-        flowbox = Gtk.FlowBox()
-        flowbox.set_valign(Gtk.Align.START)
-        flowbox.set_max_children_per_line(30)
-        flowbox.set_selection_mode(Gtk.SelectionMode.NONE)
+        self.box = Gtk.Box(orientation = Gtk.Orientation.VERTICAL)
 
-        self.create_flowbox(flowbox)
+        self.create_emoji_list()
 
-        scrolled.add(flowbox)
+        scrolled.add(self.flowbox)
+        self.box.pack_start(scrolled, True, True, 0)
+        
+        self.search_entry = Gtk.SearchEntry()
+        # self.signals.search_changed()
 
-        self.add(scrolled)
+        self.box.pack_end(self.search_entry, False, True, 0)
+
+        self.add(self.box)
         self.show_all()
 
     def create_emoji_button(self, emoji):
@@ -51,35 +54,32 @@ class Smile(Gtk.Window):
 
         return button
 
+    def search_emoji(query):
+        pass
 
-    def create_flowbox(self, flowbox):
+    def create_emoji_list(self):
+        self.flowbox = Gtk.FlowBox()
+        self.flowbox.set_valign(Gtk.Align.START)
+        self.flowbox.set_max_children_per_line(30)
+        self.flowbox.set_selection_mode(Gtk.SelectionMode.NONE)
+        self.flowbox.set_filter_func(self.filter_emoji_list, None)
+        
         emojis = [
-            '😀', 
+            '😀',
             '😃',
             '😄',
             '😁',
             '😆',
             '😅',
-            '😂',
-            '🤣',
-            '🥲',
-            '😊',
-            '😇',
-            '🙂',
-            '🙃',
-            '😉',
-            '😌',
-            '😍',
-            '🥰',
-            '😘',
-            '😗',
-            '😙',
-            '😚',
         ]
 
         for e in emojis:
             button = self.create_emoji_button(e)
-            flowbox.add(button)
+            self.flowbox.add(button)
+
+    def filter_emoji_list(self, child, user_data):
+        print(child.get_child())
+        return True
 
 def main(verison, datadir):
     manimpango.register_font(datadir + '/assets/NotoColorEmoji.ttf')
