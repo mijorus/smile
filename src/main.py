@@ -20,6 +20,7 @@ import gi
 import manimpango
 import os
 import csv
+from .emojis import emojis
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio, Gdk
@@ -27,10 +28,19 @@ from gi.repository import Gtk, Gio, Gdk
 class Smile(Gtk.Window):
     def __init__(self, datadir):
         super().__init__(title="Smile")
-        self.set_border_width(10)
+        self.connect('key_press_event', self.quit_on_escape)
         self.datadir = datadir
+        self.set_border_width(10)
         self.set_default_size(300, 250)
 
+        self.clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
+
+        self.css_provider = Gtk.CssProvider()
+        self.css_provider.load_from_path(self.datadir + '/assets/style.css')
+
+        screen = Gdk.Screen.get_default()
+
+        Gtk.StyleContext.add_provider_for_screen(screen, self.css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
 
         scrolled = Gtk.ScrolledWindow()
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
@@ -39,10 +49,6 @@ class Smile(Gtk.Window):
 
         self.query = None
 
-        csv_emojis = open(self.datadir + '/assets/NotoColorEmoji.ttf', 'r')
-        self.emoji_list = csv.reader(csv_emojis)
-        # csv_emojis.close()
-
         self.create_emoji_list()
 
         scrolled.add(self.flowbox)
@@ -50,19 +56,31 @@ class Smile(Gtk.Window):
         
         self.search_entry = Gtk.SearchEntry()
         self.search_entry.connect('search_changed', self.search_emoji)
+        self.set_focus(self.search_entry)
 
         self.box.pack_end(self.search_entry, False, True, 0)
+
 
         self.add(self.box)
         self.show_all()
 
-    def create_emoji_button(self, emoji):
+    def quit_on_escape(self, widget, event: Gdk.Event):
+        if (event.keyval == Gdk.KEY_Escape):
+            Gtk.main_quit()
+
+    def create_emoji_button(self, emoji: str):
         button = Gtk.Button()
         button.set_label(emoji)
-
+        button.connect('clicked', lambda button: self.copy_and_quit(emoji))
+        
         return button
 
-    def search_emoji(self, search_entry):
+    def copy_and_quit(self, text: str):
+        self.clipboard.set_text(text, -1)
+        self.clipboard.wait_for_text()
+        Gtk.main_quit()
+
+    def search_emoji(self, search_entry: str):
         query = search_entry.get_text()
         self.query = None if (len(query) == 0) else query
         self.flowbox.invalidate_filter()
@@ -74,28 +92,18 @@ class Smile(Gtk.Window):
         self.flowbox.set_selection_mode(Gtk.SelectionMode.NONE)
         self.flowbox.set_filter_func(self.filter_emoji_list, None)
         
-        emojis = {
-            '😀': 'smile',
-            '😃': 'smile',
-            '😄': 'laught',
-            '😁': 'smile',
-            '😆': 'cry',
-            '😅': 'drop',
-        }
-
-        for e, tag in self.emoji_list:
+        for e, tag in emojis.items():
             button = self.create_emoji_button(e)
             button.tag = tag
             self.flowbox.add(button)
 
-    def filter_emoji_list(self, child, user_data):
-        print((self.query))
-        if (self.query == None):
+    def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
+        if (self.query == None or ( (widget.get_child()).tag.lower().__contains__(self.query.lower()) )):
             return True
-        
+
         return False
 
-def main(verison, datadir):
+def main(verison, datadir: str):
     manimpango.register_font(datadir + '/assets/NotoColorEmoji.ttf')
 
     window = Smile(datadir)
