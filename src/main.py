@@ -20,7 +20,7 @@ import gi
 import manimpango
 import os
 import csv
-from .emojis import emojis
+from .lib.emoji_list import emojis
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio, Gdk
@@ -71,14 +71,14 @@ class Smile(Gtk.Window):
     def create_emoji_button(self, emoji: str):
         button = Gtk.Button()
         button.set_label(emoji)
-        button.connect('clicked', lambda button: self.copy_and_quit(emoji))
+        button.connect('clicked', self.copy_and_quit)
         
         return button
 
-    def copy_and_quit(self, text: str):
-        self.clipboard.set_text(text, -1)
-        self.clipboard.wait_for_text()
-        Gtk.main_quit()
+    def copy_and_quit(self, button: Gtk.Button):
+        clip = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
+        clip.set_text(button.get_label(), -1)
+        self.close()
 
     def search_emoji(self, search_entry: str):
         query = search_entry.get_text()
@@ -89,13 +89,15 @@ class Smile(Gtk.Window):
         self.flowbox = Gtk.FlowBox()
         self.flowbox.set_valign(Gtk.Align.START)
         self.flowbox.set_max_children_per_line(30)
+        self.flowbox.set_min_children_per_line(4)
         self.flowbox.set_selection_mode(Gtk.SelectionMode.NONE)
         self.flowbox.set_filter_func(self.filter_emoji_list, None)
         
-        for e, tag in emojis.items():
-            button = self.create_emoji_button(e)
-            button.tag = tag
-            self.flowbox.add(button)
+        for e in emojis:
+            if e['skintone'] == '':
+                button = self.create_emoji_button(e['emoji'])
+                button.tag = f"{e['annotation']} {e['tags']}".replace(',', '')
+                self.flowbox.add(button)
 
     def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
         if (self.query == None or ( (widget.get_child()).tag.lower().__contains__(self.query.lower()) )):
