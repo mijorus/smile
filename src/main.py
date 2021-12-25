@@ -1,6 +1,5 @@
 import manimpango
 import sys
-from .smile import Smile
 import gi
 from .picker import Picker
 
