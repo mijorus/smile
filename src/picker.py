@@ -102,7 +102,10 @@ class Picker(Gtk.Window):
         return flowbox
 
     def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
-        if (self.query == None or ( (widget.get_child()).tag.lower().__contains__(self.query.lower()) )):
+        if (self.query and (widget.get_child()).tag.lower().__contains__(self.query.lower())):
+            return True
+        
+        elif self.query == None and widget.get_index() < 100:
             return True
 
         return False
