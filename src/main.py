@@ -7,9 +7,9 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio, Gdk
 
 class Smile(Gtk.Application):
-    def __init__(self, version, datadir: str) -> None:
+    def __init__(self, **kwargs) -> None:
         super().__init__(application_id="it.mijorus.smile")
-        self.datadir = datadir
+        self.datadir = kwargs['datadir']
         self.window = None
 
     def do_startup(self):
@@ -35,5 +35,5 @@ class Smile(Gtk.Application):
         self.window.present()
 
 def main(version: str, datadir: str) -> None:
-    app = Smile(version, datadir)
+    app = Smile(version=version, datadir=datadir)
     app.run(sys.argv)
