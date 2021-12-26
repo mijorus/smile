@@ -30,8 +30,8 @@ class Picker(Gtk.Window):
         super().__init__(title="Smile")
         self.connect('key_press_event', self.quit_on_escape)
         self.set_border_width(5)
-        self.set_default_size(200, 250)
-        self.set_resizable(True)
+        self.set_default_size(200, 350)
+        self.set_resizable(False)
         self.set_position(Gtk.WindowPosition.MOUSE)
         
         self.clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
@@ -48,7 +48,7 @@ class Picker(Gtk.Window):
         
         # Create an header bar
         self.header_bar = Gtk.HeaderBar()
-        self.header_bar.set_title('Emoji picker')
+        self.header_bar.set_title('Smile')
         self.header_bar.props.subtitle = 'Select an emoji or use the search bar'
         self.header_bar.props.show_close_button = True
         
@@ -65,52 +65,41 @@ class Picker(Gtk.Window):
 
     def quit_on_escape(self, widget, event: Gdk.Event):
         if (event.keyval == Gdk.KEY_Escape):
-            Gtk.main_quit()
+            Gtk.hide()
 
     def create_emoji_button(self, emoji: str):
-        box = Gtk.Box()
-
         button = Gtk.Button()
         button.set_label(emoji)
         button.connect('clicked', self.copy_and_quit)
 
-        box.add(button)
-        
-        return box
+        return button
 
     def copy_and_quit(self, button: Gtk.Button):
         clip = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
         clip.set_text(button.get_label(), -1)
-        Gtk.main_quit()
+        self.hide()
 
     def search_emoji(self, search_entry: str):
         query = search_entry.get_text()
         self.query = None if (len(query) == 0) else query
-        self.flowbox.invalidate_filter()
+        self.emoji_list.invalidate_filter()
 
     def create_emoji_list(self):
-        # self.flowbox = Gtk.FlowBox()
-        # self.flowbox.set_valign(Gtk.Align.START)
-        # self.flowbox.set_max_children_per_line(5)
-        # self.flowbox.set_min_children_per_line(5)
-        # self.flowbox.set_selection_mode(Gtk.SelectionMode.NONE)
-        # self.flowbox.set_filter_func(self.filter_emoji_list, None)
-        emoji_grid = Gtk.Grid()
-            
-        row = 0
-        col = 0
-        for e in emojis:
+        flowbox = Gtk.FlowBox()
+        flowbox.set_valign(Gtk.Align.START)
+        flowbox.set_max_children_per_line(5)
+        flowbox.set_min_children_per_line(5)
+        flowbox.set_homogeneous(True)
+        flowbox.set_selection_mode(Gtk.SelectionMode.NONE)
+        flowbox.set_filter_func(self.filter_emoji_list, None)
+
+        for i, e in enumerate(emojis):
             if e['skintone'] == '':
                 button = self.create_emoji_button(e['emoji'])
                 button.tag = f"{e['annotation']} {e['tags']}".replace(',', '')
-                
-                # self.flowbox.add(fb_child)
-                emoji_grid.attach(button, col, row, 1, 1)
-
-                col = col + 1 if col < 5 else 0
-                row += 1 if col == 5 else 0
+                flowbox.add(button)
         
-        return emoji_grid
+        return flowbox
 
     def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
         if (self.query == None or ( (widget.get_child()).tag.lower().__contains__(self.query.lower()) )):
