@@ -27,11 +27,12 @@ class Smile(Gtk.Application):
             # Windows are associated with the application
             # when the last one is closed the application shuts down
             self.window = Picker()
-            self.window.show_all()
             self.window.connect("destroy", Gtk.main_quit)
+            self.window.show_all()
             
             Gtk.main()
         
+        self.window.show_all()
         self.window.present()
 
 def main(version: str, datadir: str) -> None:
