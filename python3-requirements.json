@@ -1,49 +1,14 @@
 {
-    "name": "python3-requirements",
+    "name": "python3-manimpango",
     "buildsystem": "simple",
-    "build-commands": [],
-    "modules": [
+    "build-commands": [
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"manimpango==0.4.0\" --no-build-isolation"
+    ],
+    "sources": [
         {
-            "name": "python3-manimpango",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"manimpango==0.4.0\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/73/e7/3f8c94bff2c44747292f26e6a666a1728b0d3c7b48de978c237b063607ae/ManimPango-0.4.0.tar.gz",
-                    "sha256": "2e40eb7ae7ad500961113a0a0e3f61ac462e693db28112a8c96f4f17022bb62c"
-                }
-            ]
-        },
-        {
-            "name": "python3-emojis",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"emojis==0.6.0\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/2e/94/61025e53488acd95b49862ec854e05b036f92fe9d0e512ca551a5a8b03d6/emojis-0.6.0-py3-none-any.whl",
-                    "sha256": "7da34c8a78ae262fd68cef9e2c78a3c1feb59784489eeea0f54ba1d4b7111c7c"
-                }
-            ]
-        },
-        {
-            "name": "python3-pyperclip",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyperclip==1.8.2\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a7/2c/4c64579f847bd5d539803c8b909e54ba087a79d01bb3aba433a95879a6c5/pyperclip-1.8.2.tar.gz",
-                    "sha256": "105254a8b04934f0bc84e9c24eb360a591aaf6535c9def5f29d92af107a9bf57"
-                }
-            ]
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/73/e7/3f8c94bff2c44747292f26e6a666a1728b0d3c7b48de978c237b063607ae/ManimPango-0.4.0.tar.gz",
+            "sha256": "2e40eb7ae7ad500961113a0a0e3f61ac462e693db28112a8c96f4f17022bb62c"
         }
     ]
 }
