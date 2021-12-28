@@ -11,6 +11,13 @@ for i, el in enumerate(emoji_list):
     if problematic.__contains__(el['hexcode']):
         continue
 
+    if el['unicode']:
+        try:
+            if float(el['unicode']) >= 11:
+                continue
+        except:
+            pass
+
     output.append(el)
 
 print(f'emojis = {output}')

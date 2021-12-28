@@ -99,9 +99,9 @@ class Picker(Gtk.Window):
         flowbox.set_filter_func(self.filter_emoji_list, None)
 
         for i, e in enumerate(emojis):
-                button = self.create_emoji_button(e['emoji'])
-                button.tag = f"{e['annotation']} {e['tags']}".replace(',', '')
-                flowbox.add(button)
+            button = self.create_emoji_button(e['emoji'])
+            button.tag = f"{e['annotation']} {e['tags']}".replace(',', '')
+            flowbox.add(button)
         
         return flowbox
 
@@ -109,7 +109,7 @@ class Picker(Gtk.Window):
         if self.query and (widget.get_child()).tag.lower().__contains__(self.query.lower()):
             return True
         
-        elif self.query == None and widget.get_index() < 100:
+        elif (self.query == None or len(self.query) <= 1) and widget.get_index() < 100:
             return True
 
         return False
