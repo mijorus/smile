@@ -58,14 +58,19 @@ class Picker(Gtk.Window):
         self.search_entry.connect('search_changed', self.search_emoji)
         
         self.header_bar.pack_start(self.search_entry)
-        self.set_focus(self.search_entry)
         self.set_titlebar(self.header_bar)
 
         self.add(self.box)
+        self.connect('show', self.on_show)
 
+    def on_show(self, widget: Gtk.Window):
+        self.search_entry.set_text('')
+        self.query = None
+        self.set_focus(self.search_entry)
+    
     def quit_on_escape(self, widget, event: Gdk.Event):
         if (event.keyval == Gdk.KEY_Escape):
-            Gtk.hide()
+            self.hide()
 
     def create_emoji_button(self, emoji: str):
         button = Gtk.Button()
@@ -94,7 +99,6 @@ class Picker(Gtk.Window):
         flowbox.set_filter_func(self.filter_emoji_list, None)
 
         for i, e in enumerate(emojis):
-            if e['skintone'] == '':
                 button = self.create_emoji_button(e['emoji'])
                 button.tag = f"{e['annotation']} {e['tags']}".replace(',', '')
                 flowbox.add(button)
@@ -102,7 +106,7 @@ class Picker(Gtk.Window):
         return flowbox
 
     def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
-        if (self.query and (widget.get_child()).tag.lower().__contains__(self.query.lower())):
+        if self.query and (widget.get_child()).tag.lower().__contains__(self.query.lower()):
             return True
         
         elif self.query == None and widget.get_index() < 100:
