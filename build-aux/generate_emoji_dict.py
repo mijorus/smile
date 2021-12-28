@@ -8,7 +8,7 @@ emoji_list = requests.get('https://raw.githubusercontent.com/hfg-gmuend/openmoji
 
 output = []
 for i, el in enumerate(emoji_list):
-    if problematic.__contains__(el['hexcode']):
+    if problematic.__contains__(el['hexcode']) or el['group'] == 'extras-openmoji':
         continue
 
     if el['unicode']:
