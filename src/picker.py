@@ -49,7 +49,7 @@ class Picker(Gtk.Window):
         # Create an header bar
         self.header_bar = Gtk.HeaderBar()
         self.header_bar.set_title('Smile')
-        self.header_bar.props.subtitle = 'Select an emoji or use the search bar'
+        self.header_bar.props.subtitle = 'Type to search'
         self.header_bar.props.show_close_button = True
         
 
@@ -92,8 +92,8 @@ class Picker(Gtk.Window):
     def create_emoji_list(self):
         flowbox = Gtk.FlowBox()
         flowbox.set_valign(Gtk.Align.START)
-        flowbox.set_max_children_per_line(5)
-        flowbox.set_min_children_per_line(5)
+        flowbox.set_max_children_per_line(4)
+        flowbox.set_min_children_per_line(4)
         flowbox.set_homogeneous(True)
         flowbox.set_selection_mode(Gtk.SelectionMode.NONE)
         flowbox.set_filter_func(self.filter_emoji_list, None)
