@@ -37,6 +37,7 @@ class Picker(Gtk.Window):
         self.clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
 
         # Create the emoji list
+        self.categories_count = 0
         scrolled = Gtk.ScrolledWindow()
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
         self.box = Gtk.Box(orientation = Gtk.Orientation.VERTICAL)
@@ -84,8 +85,8 @@ class Picker(Gtk.Window):
         # box = Gtk.Box(orientation = Gtk.Orientation.HORIZONTAL)
         flowbox = Gtk.FlowBox()
         flowbox.set_valign(Gtk.Align.START)
-        flowbox.set_max_children_per_line(7)
-        flowbox.set_min_children_per_line(7)
+        flowbox.set_max_children_per_line(6)
+        flowbox.set_min_children_per_line(6)
         flowbox.set_homogeneous(True)
         flowbox.set_name('emoji_categories_box')
         
@@ -101,6 +102,42 @@ class Picker(Gtk.Window):
         clip = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
         clip.set_text(button.get_label(), -1)
         self.hide()
+
+    def search_emoji(self, search_entry: str):
+        query = search_entry.get_text()
+        self.query = None if (len(query) == 0) else query
+        self.emoji_list.invalidate_filter()
+
+    def create_emoji_list(self):
+        flowbox = Gtk.FlowBox()
+        flowbox.set_valign(Gtk.Align.START)
+        flowbox.set_homogeneous(True)
+        flowbox.set_selection_mode(Gtk.SelectionMode.NONE)
+        flowbox.set_filter_func(self.filter_emoji_list, None)
+        flowbox.set_max_children_per_line(6)
+        flowbox.set_min_children_per_line(6)
+
+        for i, e in enumerate(emojis):
+            button = self.create_emoji_button(e['emoji'])
+            button.emoji_dict = e
+            button.tag = f"{e['annotation']} {e['tags']}".replace(',', '')
+            flowbox.add(button)
+        
+        return flowbox
+
+    def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
+        e = (widget.get_child()).emoji_dict
+
+        if e['skintone'] != '':
+            return False
+        
+        if self.query and (widget.get_child()).tag.lower().__contains__(self.query.lower()):
+            return True
+        
+        elif (self.query == None or len(self.query) <= 1) and e['group'] == 'smileys-emotion':
+            return True
+
+        return False
 
     def get_emoji_category(self) -> dict:
         return {
@@ -126,7 +163,7 @@ class Picker(Gtk.Window):
                 'icon': '💡'
             }, 
             'symbols': {
-                'icon': '1️⃣'
+                'nested': 'objects'
             }, 
             'flags': {
                 'icon': '🏳️'
@@ -138,41 +175,4 @@ class Picker(Gtk.Window):
                 'nested': 'symbols'
             }
         }
-
-    def search_emoji(self, search_entry: str):
-        query = search_entry.get_text()
-        self.query = None if (len(query) == 0) else query
-        self.emoji_list.invalidate_filter()
-
-    def create_emoji_list(self):
-        flowbox = Gtk.FlowBox()
-        flowbox.set_valign(Gtk.Align.START)
-        flowbox.set_max_children_per_line(7)
-        flowbox.set_min_children_per_line(7)
-        flowbox.set_homogeneous(True)
-        flowbox.set_selection_mode(Gtk.SelectionMode.NONE)
-        flowbox.set_filter_func(self.filter_emoji_list, None)
-
-        for i, e in enumerate(emojis):
-            button = self.create_emoji_button(e['emoji'])
-            button.emoji_dict = e
-            button.tag = f"{e['annotation']} {e['tags']}".replace(',', '')
-            flowbox.add(button)
-        
-        return flowbox
-
-    def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
-        e = (widget.get_child()).emoji_dict
-
-        if e['skintone'] != '':
-            return False
-        
-        if self.query and (widget.get_child()).tag.lower().__contains__(self.query.lower()):
-            return True
-        
-        elif (self.query == None or len(self.query) <= 1) and e['group'] == 'smileys-emotion':
-            return True
-
-        return False
-
 
