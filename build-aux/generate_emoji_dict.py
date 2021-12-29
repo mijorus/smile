@@ -1,12 +1,14 @@
 import csv
 import json
 import time 
+import os
 import requests
 from problematic_emojis import problematic
 
-emoji_list = requests.get('https://raw.githubusercontent.com/hfg-gmuend/openmoji/master/data/openmoji.json').json()
+emoji_list = json.load(open(os.path.dirname(__file__) + '/openmoji.json', 'r'))
 
 output = []
+cat = set()
 for i, el in enumerate(emoji_list):
     if problematic.__contains__(el['hexcode']) or el['group'] == 'extras-openmoji':
         continue
@@ -19,5 +21,6 @@ for i, el in enumerate(emoji_list):
             pass
 
     output.append(el)
+    cat.add(el['group'])
 
 print(f'emojis = {output}')
