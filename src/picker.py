@@ -45,6 +45,7 @@ class Picker(Gtk.Window):
         self.emoji_list = self.create_emoji_list()
         scrolled.add(self.emoji_list)
         self.box.pack_start(scrolled, True, True, 0)
+        self.box.pack_end(self.create_category_picker(), False, True, 3)
         
         # Create an header bar
         self.header_bar = Gtk.HeaderBar()
@@ -79,10 +80,64 @@ class Picker(Gtk.Window):
 
         return button
 
+    def create_category_picker(self) -> Gtk.FlowBox:
+        # box = Gtk.Box(orientation = Gtk.Orientation.HORIZONTAL)
+        flowbox = Gtk.FlowBox()
+        flowbox.set_valign(Gtk.Align.START)
+        flowbox.set_max_children_per_line(7)
+        flowbox.set_min_children_per_line(7)
+        flowbox.set_homogeneous(True)
+        flowbox.set_name('emoji_categories_box')
+        
+        for c, cat in self.get_emoji_category().items():
+            if 'icon' in cat:
+                button = Gtk.Button()
+                button.set_label(cat['icon'])
+                flowbox.add(button)
+
+        return flowbox
+
     def copy_and_quit(self, button: Gtk.Button):
         clip = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
         clip.set_text(button.get_label(), -1)
         self.hide()
+
+    def get_emoji_category(self) -> dict:
+        return {
+            'smileys-emotion': {
+                'icon': '😀',
+            }, 
+            'animals-nature': {
+                'icon': '🐶'
+            }, 
+            'food-drink': {
+                'nested': 'animals-nature'
+            }, 
+            'travel-places': {
+                'icon': '🚘️'
+            }, 
+            'component': {
+                'nested': 'symbols'
+            }, 
+            'activities': {
+                'icon': '⚽️'
+            }, 
+            'objects': {
+                'icon': '💡'
+            }, 
+            'symbols': {
+                'icon': '1️⃣'
+            }, 
+            'flags': {
+                'icon': '🏳️'
+            }, 
+            'people-body': {
+                'nested': 'smileys-emotion'
+            }, 
+            'extras-unicode':{
+                'nested': 'symbols'
+            }
+        }
 
     def search_emoji(self, search_entry: str):
         query = search_entry.get_text()
@@ -92,24 +147,30 @@ class Picker(Gtk.Window):
     def create_emoji_list(self):
         flowbox = Gtk.FlowBox()
         flowbox.set_valign(Gtk.Align.START)
-        flowbox.set_max_children_per_line(4)
-        flowbox.set_min_children_per_line(4)
+        flowbox.set_max_children_per_line(7)
+        flowbox.set_min_children_per_line(7)
         flowbox.set_homogeneous(True)
         flowbox.set_selection_mode(Gtk.SelectionMode.NONE)
         flowbox.set_filter_func(self.filter_emoji_list, None)
 
         for i, e in enumerate(emojis):
             button = self.create_emoji_button(e['emoji'])
+            button.emoji_dict = e
             button.tag = f"{e['annotation']} {e['tags']}".replace(',', '')
             flowbox.add(button)
         
         return flowbox
 
     def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
+        e = (widget.get_child()).emoji_dict
+
+        if e['skintone'] != '':
+            return False
+        
         if self.query and (widget.get_child()).tag.lower().__contains__(self.query.lower()):
             return True
         
-        elif (self.query == None or len(self.query) <= 1) and widget.get_index() < 100:
+        elif (self.query == None or len(self.query) <= 1) and e['group'] == 'smileys-emotion':
             return True
 
         return False
