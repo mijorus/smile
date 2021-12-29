@@ -1,7 +1,7 @@
 button {
-    font-size: 22px;
+    font-size: 20px;
 }
 
-.test {
-    font-size: 22px;
+#emoji_categories_box {
+    box-shadow: 0 0 10 0 #000;
 }
