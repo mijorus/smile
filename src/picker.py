@@ -96,9 +96,10 @@ class Picker(Gtk.Window):
             elif event.keyval == Gdk.KEY_Right:
                 next_sel = self.selected_category_index + 1 if (self.selected_category_index < 5) else 5
                 
-            if ('next_sel' in locals()): self.filter_for_category(self.category_picker.get_child_at_index(next_sel).get_child())
-            return True
-        
+            if ('next_sel' in locals()): 
+                self.filter_for_category(self.category_picker.get_child_at_index(next_sel).get_child())
+                return True
+                
         return False
 
     def create_emoji_button(self, data: dict):
