@@ -169,6 +169,7 @@ class Picker(Gtk.Window):
         flowbox.set_max_children_per_line(self.emoji_grid_col_n)
         flowbox.set_min_children_per_line(self.emoji_grid_col_n)
 
+        start = time.time_ns() // 1000000
         for i, e in enumerate(emojis):
             flowbox_child = Gtk.FlowBoxChild()
             flowbox_child.props.can_focus = False
@@ -178,6 +179,7 @@ class Picker(Gtk.Window):
             flowbox_child.add(button)
             flowbox.add(flowbox_child)
 
+        print('Emoji list parsing took ' + str((time.time_ns() // 1000000) - start) + 'ms')
         return flowbox
 
     def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
