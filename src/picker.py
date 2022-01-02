@@ -38,7 +38,8 @@ class Picker(Gtk.Window):
         
         self.selected_category_index = 0
         self.selected_category = 'smileys-emotion'
-        self.query = None
+        self.query: str = None
+        self.selection: List[str] = []
         
         self.clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
 
@@ -75,6 +76,9 @@ class Picker(Gtk.Window):
         self.set_focus(self.search_entry)
     
     def handle_window_key_press(self, widget, event: Gdk.Event):
+        ctrl_key = bool(event.state & Gdk.ModifierType.CONTROL_MASK)
+        focused_widget = self.get_focus()
+
         if (event.keyval == Gdk.KEY_Escape):
             self.hide()
         
@@ -82,24 +86,32 @@ class Picker(Gtk.Window):
             if (event.keyval == Gdk.KEY_Down):
                 self.emoji_list.get_child_at_pos(0, 0).get_child().grab_focus()
                 return True
-        elif isinstance(self.get_focus(), Gtk.Button):
-            if (event.keyval == Gdk.KEY_Up) and (self.get_focus().props.parent.get_index() < self.emoji_grid_col_n):
-            #     self.search_entry.grab_focus()
-            #     return True
-                pass
-            elif not event.is_modifier and event.length == 1 and re.match(r'\S', event.string):
-                self.search_entry.grab_focus()
         
-        if bool(event.state & Gdk.ModifierType.CONTROL_MASK):
+        if ctrl_key:
             if event.keyval == Gdk.KEY_Left:
                 next_sel = self.selected_category_index - 1 if (self.selected_category_index > 0) else 0
             elif event.keyval == Gdk.KEY_Right:
-                next_sel = self.selected_category_index + 1 if (self.selected_category_index < 5) else 5
+                next_sel = self.selected_category_index + 1 if (self.selected_category_index < (self.emoji_grid_col_n - 1)) else (self.emoji_grid_col_n - 1)
                 
             if ('next_sel' in locals()): 
                 self.filter_for_category(self.category_picker.get_child_at_index(next_sel).get_child())
                 return True
-                
+
+            if (event.keyval == Gdk.KEY_Return):
+                if isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'emoji_data'):
+                    self.selection.append(focused_widget.get_label())
+                    return True
+
+        else:
+            if isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'emoji_data'):
+                if (event.keyval == Gdk.KEY_Return):
+                    self.copy_and_quit(focused_widget)
+                    return True
+                elif (event.keyval == Gdk.KEY_Up) and (focused_widget.props.parent.get_index() < self.emoji_grid_col_n):
+                    return False
+                elif not event.is_modifier and event.length == 1 and re.match(r'\S', event.string):
+                    self.search_entry.grab_focus()
+
         return False
 
     def create_emoji_button(self, data: dict):
@@ -148,9 +160,9 @@ class Picker(Gtk.Window):
         self.category_picker.set_opacity(1)
         self.emoji_list.invalidate_filter()
 
-    def copy_and_quit(self, button: Gtk.Button):
+    def copy_and_quit(self, button: Gtk.Button = None):
         clip = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
-        clip.set_text(button.get_label(), -1)
+        clip.set_text(' '.join([*self.selection, button.get_label()]), -1)
         self.hide()
 
     def search_emoji(self, search_entry: str):
