@@ -8,6 +8,12 @@
     outline: transparent;
 }
 
+#emoji_list_box button.selected {
+    border-color: rgba(255, 0, 0, 0.75);
+    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 0.45);
+    outline: transparent;
+}
+
 #emoji_categories_box {
     border-radius: 5px;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);

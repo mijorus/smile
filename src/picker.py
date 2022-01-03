@@ -28,11 +28,9 @@ from gi.repository import Gtk, Gio, Gdk
 
 class Picker(Gtk.Window):
     def __init__(self):
-        super().__init__(title="Smile")
+        super().__init__(title="Smile", resizable=False, border_width=5)
         self.connect('key_press_event', self.handle_window_key_press)
-        self.set_border_width(5)
         self.set_default_size(200, 350)
-        self.set_resizable(False)
         self.set_position(Gtk.WindowPosition.MOUSE)
         self.emoji_grid_col_n = 6
         
@@ -56,8 +54,7 @@ class Picker(Gtk.Window):
         self.box.pack_end(self.category_picker, False, True, 3)
         
         # Create an header bar
-        self.header_bar = Gtk.HeaderBar()
-        self.header_bar.set_title('Smile')
+        self.header_bar = Gtk.HeaderBar(title='Smile')
         self.header_bar.props.subtitle = 'Type to search'
         self.header_bar.props.show_close_button = True
         
@@ -74,10 +71,20 @@ class Picker(Gtk.Window):
         self.search_entry.set_text('')
         self.query = None
         self.set_focus(self.search_entry)
-    
+
+    def update_header_bar_title(self, title: str):
+        self.header_bar.props.subtitle = None
+        self.header_bar.set_title(''.join(title[-8:]))
+
+    def select_button_emoji(self, button: Gtk.Button):
+        self.selection.append(button.get_label())
+        button.get_style_context().add_class('selected')
+        self.update_header_bar_title(self.selection)
+
     def handle_window_key_press(self, widget, event: Gdk.Event):
         ctrl_key = bool(event.state & Gdk.ModifierType.CONTROL_MASK)
         focused_widget = self.get_focus()
+        focused_button = focused_widget if isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'emoji_data') else None
 
         if (event.keyval == Gdk.KEY_Escape):
             self.hide()
@@ -98,16 +105,33 @@ class Picker(Gtk.Window):
                 return True
 
             if (event.keyval == Gdk.KEY_Return):
-                if isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'emoji_data'):
-                    self.selection.append(focused_widget.get_label())
+                if focused_button:
+                    if not len(self.selection):
+                        print('selection mode enabled')
+                        self.select_button_emoji(focused_button)
+                    else:
+                        self.copy_and_quit()
+                    return True
+            
+            if (event.keyval == Gdk.KEY_BackSpace):
+                if focused_button:
+                    if self.selection.__contains__(focused_button.get_label()): 
+                        self.selection.remove(focused_button.get_label())
+
+                    if not self.selection.__contains__(focused_button.get_label()): 
+                        focused_button.get_style_context().remove_class('selected')
+
                     return True
 
         else:
-            if isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'emoji_data'):
+            if focused_button:
                 if (event.keyval == Gdk.KEY_Return):
-                    self.copy_and_quit(focused_widget)
+                    if len(self.selection):
+                        self.select_button_emoji(focused_button)
+                    else:
+                        self.copy_and_quit(focused_button)
                     return True
-                elif (event.keyval == Gdk.KEY_Up) and (focused_widget.props.parent.get_index() < self.emoji_grid_col_n):
+                elif (event.keyval == Gdk.KEY_Up) and (focused_button.props.parent.get_index() < self.emoji_grid_col_n):
                     return False
                 elif not event.is_modifier and event.length == 1 and re.match(r'\S', event.string):
                     self.search_entry.grab_focus()
@@ -162,7 +186,8 @@ class Picker(Gtk.Window):
 
     def copy_and_quit(self, button: Gtk.Button = None):
         clip = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
-        clip.set_text(' '.join([*self.selection, button.get_label()]), -1)
+        text = button.get_label() if button else ''
+        clip.set_text(''.join([*self.selection, text]), -1)
         self.hide()
 
     def search_emoji(self, search_entry: str):
