@@ -1,8 +1,10 @@
+#!/usr/bin/env python3
+
 import csv
 import json
 import time 
 import os
-import requests
+from io import StringIO
 from problematic_emojis import problematic
 
 emoji_list = json.load(open(os.path.dirname(__file__) + '/openmoji.json', 'r'))
@@ -23,4 +25,10 @@ for i, el in enumerate(emoji_list):
     output.append(el)
     cat.add(el['group'])
 
-print(f'emojis = {output}')
+
+output_dict = StringIO()
+print(f'emojis = {output}', file=output_dict)
+
+output_file = open(f"{os.path.dirname(__file__)}/../src/lib/emoji_list.py", 'w+')
+output_file.write(output_dict.getvalue())
+
