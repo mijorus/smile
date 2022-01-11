@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="smile">
-	<schema id="it.mijorus.smile" path="/it/mijorus/smile/">
-	</schema>
+	<schema id="it.mijorus.smile" path="/it/mijorus/smile/"></schema>
 </schemalist>
