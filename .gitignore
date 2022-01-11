@@ -5,3 +5,4 @@ build
 .idea
 flatpak-pip-generator.py
 *.pyc
+run.sh
