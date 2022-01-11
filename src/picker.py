@@ -1,4 +1,4 @@
-    # main.py
+# main.py
 #
 # Copyright 2021 Lorenzo Paderi
 #
@@ -54,8 +54,7 @@ class Picker(Gtk.Window):
         self.box.pack_end(self.category_picker, False, True, 3)
         
         # Create an header bar
-        self.header_bar = Gtk.HeaderBar(title='Smile')
-        self.header_bar.props.subtitle = 'Type to search'
+        self.header_bar = Gtk.HeaderBar()
         self.header_bar.props.show_close_button = True
         
         # Create search entry
@@ -69,7 +68,9 @@ class Picker(Gtk.Window):
 
     def on_show(self, widget: Gtk.Window):
         self.search_entry.set_text('')
+        self.header_bar.set_title('')
         self.query = None
+        self.selection = []
         self.set_focus(self.search_entry)
 
     def update_header_bar_title(self, title: str):
@@ -83,6 +84,8 @@ class Picker(Gtk.Window):
 
     def handle_window_key_press(self, widget, event: Gdk.Event):
         ctrl_key = bool(event.state & Gdk.ModifierType.CONTROL_MASK)
+        shift_key = bool(event.state & Gdk.ModifierType.SHIFT_MASK)
+
         focused_widget = self.get_focus()
         focused_button = focused_widget if isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'emoji_data') else None
 
@@ -94,6 +97,12 @@ class Picker(Gtk.Window):
                 self.emoji_list.get_child_at_pos(0, 0).get_child().grab_focus()
                 return True
         
+        if shift_key:
+            if (event.keyval == Gdk.KEY_Return):
+                if focused_button:
+                    self.select_button_emoji(focused_button)
+                    return True
+
         if ctrl_key:
             if event.keyval == Gdk.KEY_Left:
                 next_sel = self.selected_category_index - 1 if (self.selected_category_index > 0) else 0
@@ -105,12 +114,8 @@ class Picker(Gtk.Window):
                 return True
 
             if (event.keyval == Gdk.KEY_Return):
-                if focused_button:
-                    if not len(self.selection):
-                        print('selection mode enabled')
-                        self.select_button_emoji(focused_button)
-                    else:
-                        self.copy_and_quit()
+                if len(self.selection):
+                    self.copy_and_quit()
                     return True
             
             if (event.keyval == Gdk.KEY_BackSpace):
@@ -126,10 +131,7 @@ class Picker(Gtk.Window):
         else:
             if focused_button:
                 if (event.keyval == Gdk.KEY_Return):
-                    if len(self.selection):
-                        self.select_button_emoji(focused_button)
-                    else:
-                        self.copy_and_quit(focused_button)
+                    self.copy_and_quit(focused_button)
                     return True
                 elif (event.keyval == Gdk.KEY_Up) and (focused_button.props.parent.get_index() < self.emoji_grid_col_n):
                     return False
