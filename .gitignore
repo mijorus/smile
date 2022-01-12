@@ -4,5 +4,5 @@ typings/*
 build
 .idea
 flatpak-pip-generator.py
-*.pyc
+problematic_emojis.cpython*
 run.sh
