@@ -4,6 +4,7 @@ import csv
 import json
 import time 
 import os
+import subprocess
 from io import StringIO
 from problematic_emojis import problematic
 
@@ -57,3 +58,4 @@ print(f'emojis = {output}', file=output_dict)
 output_file = open(f"{os.path.dirname(__file__)}/../src/lib/emoji_list.py", 'w+')
 output_file.write(output_dict.getvalue())
 
+subprocess.call(['python3', '-m', 'compileall', os.path.abspath(output_file.name)])
