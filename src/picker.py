@@ -141,11 +141,21 @@ class Picker(Gtk.Window):
         return False
 
     def show_skin_selector(self, widget: Gtk.Button, event):
+        if event.button != 3:
+            return False
+
         popover = Gtk.Popover(relative_to=widget)
         popover_content = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, name='skin_selector')
 
-        button = Gtk.Button(label="😀")
-        popover_content.pack_end(button, False, True, 2)
+        relative_widget_label = widget.get_label()
+        if ('skintones' in emojis[relative_widget_label]):
+            for skintone in emojis[relative_widget_label]['skintones']:
+                button = self.create_emoji_button(skintone)
+                popover_content.pack_end(button, False, True, 2)
+        else:
+            label = Gtk.Label(label='No skintones available')
+            popover_content.pack_end(label, False, True, 2)
+            
         popover_content.show_all()
 
         popover.add(popover_content)
@@ -153,12 +163,16 @@ class Picker(Gtk.Window):
         
         self.emoji_list.set_opacity(0.5)
         popover.connect('closed', lambda w: self.emoji_list.set_opacity(1))
+        return True
 
     def create_emoji_button(self, data: dict):
         button = Gtk.Button()
         button.set_label(data['emoji'])
         button.emoji_data = data
         button.tag = f"{data['annotation']} {data['tags']}".replace(',', ' ')
+        if 'skintones' in data:
+            button.get_style_context().add_class('emoji-with-skintones')
+
         button.connect('clicked', self.copy_and_quit)
         button.connect('button_press_event', self.show_skin_selector)
 
