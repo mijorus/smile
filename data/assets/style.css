@@ -2,6 +2,10 @@
     font-size: 20px;
 }
 
+.emoji-with-skintones {
+    border-top-right-radius: 10px;
+}
+
 #skin_selector button {
     font-size: 20px;
 }
