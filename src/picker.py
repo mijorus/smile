@@ -140,12 +140,27 @@ class Picker(Gtk.Window):
 
         return False
 
+    def show_skin_selector(self, widget: Gtk.Button, event):
+        popover = Gtk.Popover(relative_to=widget)
+        popover_content = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, name='skin_selector')
+
+        button = Gtk.Button(label="😀")
+        popover_content.pack_end(button, False, True, 2)
+        popover_content.show_all()
+
+        popover.add(popover_content)
+        popover.popup()
+        
+        self.emoji_list.set_opacity(0.5)
+        popover.connect('closed', lambda w: self.emoji_list.set_opacity(1))
+
     def create_emoji_button(self, data: dict):
         button = Gtk.Button()
         button.set_label(data['emoji'])
         button.emoji_data = data
         button.tag = f"{data['annotation']} {data['tags']}".replace(',', ' ')
         button.connect('clicked', self.copy_and_quit)
+        button.connect('button_press_event', self.show_skin_selector)
 
         return button
 
@@ -209,7 +224,7 @@ class Picker(Gtk.Window):
         flowbox.set_min_children_per_line(self.emoji_grid_col_n)
 
         start = time.time_ns() // 1000000
-        for i, e in enumerate(emojis):
+        for i, e in emojis.items():
             flowbox_child = Gtk.FlowBoxChild()
             flowbox_child.props.can_focus = False
 
@@ -223,9 +238,6 @@ class Picker(Gtk.Window):
 
     def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
         e = (widget.get_child()).emoji_data
-
-        if e['skintone'] != '':
-            return False
         
         if self.query:
             return (widget.get_child()).tag.lower().__contains__(self.query.lower())
@@ -244,14 +256,8 @@ class Picker(Gtk.Window):
             'animals-nature': {
                 'icon': '🐶'
             }, 
-            'food-drink': {
-                'nested': 'animals-nature'
-            }, 
             'travel-places': {
                 'icon': '🚘️'
-            }, 
-            'component': {
-                'nested': 'symbols'
             }, 
             'activities': {
                 'icon': '⚽️'
@@ -259,17 +265,8 @@ class Picker(Gtk.Window):
             'objects': {
                 'icon': '💡'
             }, 
-            'symbols': {
-                'nested': 'objects'
-            }, 
             'flags': {
                 'icon': '🏳️'
-            }, 
-            'people-body': {
-                'nested': 'smileys-emotion'
-            }, 
-            'extras-unicode':{
-                'nested': 'symbols'
-            }
+            },
         }
 
