@@ -37,12 +37,16 @@ for i, el in enumerate(emoji_list):
         append_skintone(el, el['skintone_base_hexcode'])
         continue
 
+    ignored_groups = ['extras-unicode']
+    if ignored_groups.__contains__(el['group']):
+        continue
+
     nested_groups = {
-            'food-drink':  'animals-nature',
-            'component':  'symbols',
-            'symbols':  'objects',
-            'people-body':  'smileys-emotion',
-            'extras-unicode': 'symbols',
+        'food-drink':  'animals-nature',
+        'component':  'symbols',
+        'symbols':  'objects',
+        'people-body':  'smileys-emotion',
+        'extras-unicode': 'symbols',
     }
 
     if el['group'] in nested_groups:
