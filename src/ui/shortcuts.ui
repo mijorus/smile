@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <object class="GtkShortcutsWindow" id="shortcuts">
+        <property name="modal">1</property>
+        <child>
+            <object class="GtkShortcutsSection">
+                <property name="visible">True</property>
+                <property name="section-name">shortcuts</property>
+                <child>
+                    <object class="GtkShortcutsGroup">
+                        <property name="visible">True</property>
+                        <property name="title" translatable="yes">General</property>
+                        <child>
+                            <object class="GtkShortcutsShortcut">
+                                <property name="visible">True</property>
+                                <property name="accelerator">Return</property>
+                                <property name="title" translatable="yes">Copy the selected emoji and hide the window</property>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkShortcutsShortcut">
+                                <property name="visible">True</property>
+                                <property name="accelerator">&lt;ctrl&gt;Right</property>
+                                <property name="title" translatable="yes">Move focus on the category to the right</property>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkShortcutsShortcut">
+                                <property name="visible">True</property>
+                                <property name="accelerator">&lt;ctrl&gt;Left</property>
+                                <property name="title" translatable="yes">Move focus on the category to the left</property>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkShortcutsShortcut">
+                                <property name="visible">True</property>
+                                <property name="accelerator">&lt;shift&gt;Return</property>
+                                <property name="title" translatable="yes">Add the emoji to selection</property>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkShortcutsShortcut">
+                                <property name="visible">True</property>
+                                <property name="accelerator">&lt;ctrl&gt;Return</property>
+                                <property name="title" translatable="yes">Copy the selection and hide the window, without the highlighted emoji</property>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkShortcutsShortcut">
+                                <property name="visible">True</property>
+                                <property name="accelerator">&lt;alt&gt;E</property>
+                                <property name="title" translatable="yes">Open skintone selector (if available)</property>
+                            </object>
+                        </child>
+                    </object>
+                </child>
+            </object>
+        </child>
+    </object>
+</interface>

@@ -21,7 +21,9 @@ import time
 import os
 import csv
 import re
+
 from .lib.emoji_list import emojis
+from .shortcuts import ShortcutsWindow
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio, Gdk
@@ -63,6 +65,8 @@ class Picker(Gtk.Window):
         self.header_bar.pack_start(self.search_entry)
         self.set_titlebar(self.header_bar)
 
+        self.shortcut_window: ShortcutsWindow = None
+
         self.add(self.box)
         self.connect('show', self.on_show)
 
@@ -89,7 +93,6 @@ class Picker(Gtk.Window):
 
         focused_widget = self.get_focus()
         focused_button = focused_widget if isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'emoji_data') else None
-
         if (event.keyval == Gdk.KEY_Escape):
             self.hide()
             return True
@@ -115,6 +118,9 @@ class Picker(Gtk.Window):
                 next_sel = self.selected_category_index - 1 if (self.selected_category_index > 0) else 0
             elif event.keyval == Gdk.KEY_Right:
                 next_sel = self.selected_category_index + 1 if (self.selected_category_index < (self.emoji_grid_col_n - 1)) else (self.emoji_grid_col_n - 1)
+            elif event.keyval == Gdk.KEY_question:
+                shortcut_window = ShortcutsWindow()
+                shortcut_window.open()
                 
             if ('next_sel' in locals()): 
                 self.filter_for_category(self.category_picker.get_child_at_index(next_sel).get_child())
