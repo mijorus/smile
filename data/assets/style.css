@@ -1,4 +1,4 @@
-#emoji_list_box button {
+#emoji_list_box button, #skin_selector button, #emoji_categories_box button {
     font-size: 20px;
 }
 
@@ -6,17 +6,15 @@
     border-top-right-radius: 10px;
 }
 
-#skin_selector button {
-    font-size: 20px;
-}
-
-#emoji_list_box button:focus {
+/* Focused emoji button */
+#emoji_list_box button:focus, #emoji_list_box button.selected:focus, #skin_selector button:focus {
     border-color: red;
     box-shadow: 0px 0px 2px 1px red;
     outline: transparent;
 }
 
-#emoji_list_box button.selected {
+/* Selected emoji button */
+#emoji_list_box button.selected, #skin_selector button.selected {
     border-color: rgba(255, 0, 0, 0.75);
     box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 0.45);
     outline: transparent;
@@ -25,10 +23,6 @@
 #emoji_categories_box {
     border-radius: 5px;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
-}
-
-#emoji_categories_box button {
-    font-size: 20px;
 }
 
 #emoji_categories_box button:focus {

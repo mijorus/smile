@@ -85,18 +85,25 @@ class Picker(Gtk.Window):
     def handle_window_key_press(self, widget, event: Gdk.Event):
         ctrl_key = bool(event.state & Gdk.ModifierType.CONTROL_MASK)
         shift_key = bool(event.state & Gdk.ModifierType.SHIFT_MASK)
+        alt_key = bool(event.state & Gdk.ModifierType.MOD1_MASK)
 
         focused_widget = self.get_focus()
         focused_button = focused_widget if isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'emoji_data') else None
 
         if (event.keyval == Gdk.KEY_Escape):
             self.hide()
-        
+            return True
+
+        if alt_key:
+            if focused_button and event.keyval == Gdk.KEY_e:
+                self.show_skin_selector(focused_button)
+            return True
+
         if self.search_entry.has_focus():
             if (event.keyval == Gdk.KEY_Down):
                 self.emoji_list.get_child_at_pos(0, 0).get_child().grab_focus()
                 return True
-        
+
         if shift_key:
             if (event.keyval == Gdk.KEY_Return):
                 if focused_button:
@@ -127,23 +134,23 @@ class Picker(Gtk.Window):
                         focused_button.get_style_context().remove_class('selected')
 
                     return True
-
         else:
             if focused_button:
                 if (event.keyval == Gdk.KEY_Return):
                     self.copy_and_quit(focused_button)
                     return True
-                elif (event.keyval == Gdk.KEY_Up) and (focused_button.props.parent.get_index() < self.emoji_grid_col_n):
+                elif (event.keyval == Gdk.KEY_Up) and isinstance(focused_button.props.parent, Gtk.FlowBoxChild) and (focused_button.props.parent.get_index() < self.emoji_grid_col_n):
                     return False
                 elif not event.is_modifier and event.length == 1 and re.match(r'\S', event.string):
                     self.search_entry.grab_focus()
 
         return False
 
-    def show_skin_selector(self, widget: Gtk.Button, event):
-        if event.button != 3:
-            return False
+    def hide_skin_selector(self, widget: Gtk.Popover):
+        self.emoji_list.set_opacity(1)
+        widget.destroy()
 
+    def show_skin_selector(self, widget: Gtk.Button):
         popover = Gtk.Popover(relative_to=widget)
         popover_content = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, name='skin_selector')
 
@@ -155,14 +162,14 @@ class Picker(Gtk.Window):
         else:
             label = Gtk.Label(label='No skintones available')
             popover_content.pack_end(label, False, True, 2)
-            
+
         popover_content.show_all()
 
         popover.add(popover_content)
         popover.popup()
-        
+
         self.emoji_list.set_opacity(0.5)
-        popover.connect('closed', lambda w: self.emoji_list.set_opacity(1))
+        popover.connect('closed', self.hide_skin_selector)
         return True
 
     def create_emoji_button(self, data: dict):
@@ -174,7 +181,7 @@ class Picker(Gtk.Window):
             button.get_style_context().add_class('emoji-with-skintones')
 
         button.connect('clicked', self.copy_and_quit)
-        button.connect('button_press_event', self.show_skin_selector)
+        button.connect('button_press_event', lambda w, e: self.show_skin_selector() if e.button == 3 else None)
 
         return button
 
