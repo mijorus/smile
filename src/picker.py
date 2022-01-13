@@ -40,6 +40,7 @@ class Picker(Gtk.Window):
         self.selected_category = 'smileys-emotion'
         self.query: str = None
         self.selection: List[str] = []
+        self.selected_buttons: List[Gtk.Button] = []
         
         self.clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
 
@@ -69,13 +70,21 @@ class Picker(Gtk.Window):
 
         self.add(self.box)
         self.connect('show', self.on_show)
+        self.connect('hide', self.on_hide)
 
-    def on_show(self, widget: Gtk.Window):
+    def on_hide(self, widget: Gtk.Widget):
         self.search_entry.set_text('')
         self.header_bar.set_title('')
         self.query = None
         self.selection = []
+        for button in self.selected_buttons:
+            button.get_style_context().remove_class('selected')
+
+        self.selected_buttons = []
+
+    def on_show(self, widget: Gtk.Window):
         self.set_focus(self.search_entry)
+
 
     def update_header_bar_title(self, title: str):
         self.header_bar.props.subtitle = None
@@ -83,6 +92,7 @@ class Picker(Gtk.Window):
 
     def select_button_emoji(self, button: Gtk.Button):
         self.selection.append(button.get_label())
+        self.selected_buttons.append(button)
         button.get_style_context().add_class('selected')
         self.update_header_bar_title(self.selection)
 
@@ -187,7 +197,7 @@ class Picker(Gtk.Window):
             button.get_style_context().add_class('emoji-with-skintones')
 
         button.connect('clicked', self.copy_and_quit)
-        button.connect('button_press_event', lambda w, e: self.show_skin_selector() if e.button == 3 else None)
+        button.connect('button_press_event', lambda w, e: self.show_skin_selector(w) if e.button == 3 else None)
 
         return button
 
