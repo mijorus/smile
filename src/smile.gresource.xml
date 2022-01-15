@@ -2,5 +2,6 @@
 <gresources>
     <gresource prefix="/it/mijorus/smile">
         <file>ui/shortcuts.ui</file>
+        <file>assets/style.css</file>
     </gresource>
 </gresources>
