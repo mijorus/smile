@@ -12,7 +12,7 @@ from gi.repository import Gtk, Gio, Gdk
 class ShortcutsWindow():
     def __init__(self):
         builder = Gtk.Builder()
-        builder.add_from_resource('/it/mijorus/smile/ui/shortcuts.ui')
+        builder.add_from_resource('/it/mijorus/smile/ui/shortcuts.xml')
         self.shortcut_window = builder.get_object('shortcuts')
         self.shortcut_window.set_default_size(600, 400)
 

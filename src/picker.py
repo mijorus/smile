@@ -28,7 +28,7 @@ from .shortcuts import ShortcutsWindow
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio, Gdk
 
-class Picker(Gtk.Window):
+class Picker(Gtk.ApplicationWindow):
     def __init__(self):
         super().__init__(title="Smile", resizable=False, border_width=5)
         self.connect('key_press_event', self.handle_window_key_press)
@@ -59,6 +59,8 @@ class Picker(Gtk.Window):
         # Create an header bar
         self.header_bar = Gtk.HeaderBar()
         self.header_bar.props.show_close_button = True
+        self.menu_button = self.create_menu_button()
+        self.header_bar.pack_end(self.menu_button)
         
         # Create search entry
         self.search_entry = self.create_search_entry()
@@ -85,10 +87,27 @@ class Picker(Gtk.Window):
     def on_show(self, widget: Gtk.Window):
         self.set_focus(self.search_entry)
 
+    def on_about_action(self, widget, event):
+        pass
+
+    def create_menu_button(self):
+        builder = Gtk.Builder()
+        builder.add_from_resource('/it/mijorus/smile/ui/menu.xml')
+        menu = builder.get_object('primary_menu')
+       
+        self.create_action("about", self.on_about_action)
+        self.create_action("open_shortcuts", lambda w,e: ShortcutsWindow().open())
+        return Gtk.MenuButton(popover=menu, image=Gtk.Image.new_from_icon_name('open-menu-symbolic', Gtk.IconSize.MENU), use_popover = True)
+
+    def create_action(self, name, callback):
+        """ Add an Action and connect to a callback """
+        action = Gio.SimpleAction.new(name, None)
+        action.connect("activate", callback)
+        self.add_action(action)
 
     def update_header_bar_title(self, title: str):
         self.header_bar.props.subtitle = None
-        self.header_bar.set_title(''.join(title[-8:]))
+        self.header_bar.set_title(''.join(title[-5:]))
 
     def select_button_emoji(self, button: Gtk.Button):
         self.selection.append(button.get_label())

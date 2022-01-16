@@ -2,13 +2,14 @@ import manimpango
 import sys
 import gi
 from .picker import Picker
+from .shortcuts import ShortcutsWindow
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio, Gdk
 
 class Smile(Gtk.Application):
     def __init__(self, **kwargs) -> None:
-        super().__init__(application_id="it.mijorus.smile")
+        super().__init__(application_id="it.mijorus.smile", flags=Gio.ApplicationFlags.FLAGS_NONE)
         self.datadir = kwargs['datadir']
         self.window = None
 
