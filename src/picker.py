@@ -87,25 +87,14 @@ class Picker(Gtk.ApplicationWindow):
     def on_show(self, widget: Gtk.Window):
         self.set_focus(self.search_entry)
 
-    def on_about_action(self, widget, event):
-        pass
-
     def create_menu_button(self):
         builder = Gtk.Builder()
         builder.add_from_resource('/it/mijorus/smile/ui/menu.xml')
         menu = builder.get_object('primary_menu')
-       
-        self.create_action("about", self.on_about_action)
-        self.create_action("open_shortcuts", lambda w,e: ShortcutsWindow().open())
+
         return Gtk.MenuButton(popover=menu, image=Gtk.Image.new_from_icon_name('open-menu-symbolic', Gtk.IconSize.MENU), use_popover = True)
 
-    def create_action(self, name, callback):
-        """ Add an Action and connect to a callback """
-        action = Gio.SimpleAction.new(name, None)
-        action.connect("activate", callback)
-        self.add_action(action)
-
-    def update_header_bar_title(self, title: str):
+    def update_header_bar_title(self, title: str = None):
         self.header_bar.props.subtitle = None
         self.header_bar.set_title(''.join(title[-5:]))
 
@@ -116,30 +105,50 @@ class Picker(Gtk.ApplicationWindow):
         self.update_header_bar_title(self.selection)
 
     def handle_window_key_press(self, widget, event: Gdk.Event):
+        """Handle every possible keypress here"""
+        if (event.keyval == Gdk.KEY_Escape):
+            self.hide()
+            return True
+
         ctrl_key = bool(event.state & Gdk.ModifierType.CONTROL_MASK)
         shift_key = bool(event.state & Gdk.ModifierType.SHIFT_MASK)
         alt_key = bool(event.state & Gdk.ModifierType.MOD1_MASK)
 
         focused_widget = self.get_focus()
         focused_button = focused_widget if isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'emoji_data') else None
-        if (event.keyval == Gdk.KEY_Escape):
-            self.hide()
-            return True
-
-        if alt_key:
-            if focused_button and event.keyval == Gdk.KEY_e:
-                self.show_skin_selector(focused_button)
-            return True
 
         if self.search_entry.has_focus():
             if (event.keyval == Gdk.KEY_Down):
                 self.emoji_list.get_child_at_pos(0, 0).get_child().grab_focus()
                 return True
 
+            return False
+
+
+        if alt_key:
+            if focused_button and event.keyval == Gdk.KEY_e:
+                self.show_skin_selector(focused_button)
+            return True
+
+
         if shift_key:
             if (event.keyval == Gdk.KEY_Return):
                 if focused_button:
                     self.select_button_emoji(focused_button)
+                    return True
+
+            elif (event.keyval == Gdk.KEY_BackSpace):
+                if focused_button:
+                    if len(self.selection) > 0:
+                        last_button = self.selected_buttons[-1]
+
+                        self.selection.pop()
+                        self.selected_buttons.pop()
+                        
+                        if not self.selection.__contains__(last_button.get_label()):
+                            last_button.get_style_context().remove_class('selected')
+                        self.update_header_bar_title(self.selection)
+
                     return True
 
         if ctrl_key:
@@ -159,16 +168,7 @@ class Picker(Gtk.ApplicationWindow):
                 if len(self.selection):
                     self.copy_and_quit()
                     return True
-            
-            if (event.keyval == Gdk.KEY_BackSpace):
-                if focused_button:
-                    if self.selection.__contains__(focused_button.get_label()): 
-                        self.selection.remove(focused_button.get_label())
 
-                    if not self.selection.__contains__(focused_button.get_label()): 
-                        focused_button.get_style_context().remove_class('selected')
-
-                    return True
         else:
             if focused_button:
                 if (event.keyval == Gdk.KEY_Return):
