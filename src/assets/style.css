@@ -30,3 +30,7 @@
     box-shadow: 0px 0px 2px 1px rgb(12, 170, 12);
     outline: transparent;
 }
+
+#custom_tag_entry {
+    margin: 10px;
+}

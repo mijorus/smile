@@ -20,7 +20,6 @@ class Smile(Gtk.Application):
         css_provider = Gtk.CssProvider()
         css_provider.load_from_resource('/it/mijorus/smile/assets/style.css')
         Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
-        
 
     def do_activate(self):
          # We only allow a single window and raise any existing ones

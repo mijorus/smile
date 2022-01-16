@@ -24,6 +24,7 @@ import re
 
 from .lib.emoji_list import emojis
 from .shortcuts import ShortcutsWindow
+from .custom_tag_entry import CustomTagEntry
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio, Gdk
@@ -124,12 +125,13 @@ class Picker(Gtk.ApplicationWindow):
 
             return False
 
-
         if alt_key:
             if focused_button and event.keyval == Gdk.KEY_e:
                 self.show_skin_selector(focused_button)
-            return True
-
+                return True
+            elif focused_button and event.keyval == Gdk.KEY_t:
+                CustomTagEntry(focused_button)
+                return True
 
         if shift_key:
             if (event.keyval == Gdk.KEY_Return):
@@ -189,18 +191,18 @@ class Picker(Gtk.ApplicationWindow):
         popover = Gtk.Popover(relative_to=widget)
         popover_content = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, name='skin_selector')
 
-        relative_widget_label = widget.get_label()
-        if ('skintones' in emojis[relative_widget_label]):
-            for skintone in emojis[relative_widget_label]['skintones']:
+        relative_widget_hexcode = widget.emoji_data['hexcode']
+        if ('skintones' in emojis[relative_widget_hexcode]):
+            for skintone in emojis[relative_widget_hexcode]['skintones']:
                 button = self.create_emoji_button(skintone)
                 popover_content.pack_end(button, False, True, 2)
         else:
             label = Gtk.Label(label='No skintones available')
             popover_content.pack_end(label, False, True, 2)
 
-        popover_content.show_all()
 
         popover.add(popover_content)
+        popover_content.show_all()
         popover.popup()
 
         self.emoji_list.set_opacity(0.5)
@@ -211,6 +213,7 @@ class Picker(Gtk.ApplicationWindow):
         button = Gtk.Button()
         button.set_label(data['emoji'])
         button.emoji_data = data
+        button.hexcode = data['hexcode']
         button.tag = f"{data['annotation']} {data['tags']}".replace(',', ' ')
         if 'skintones' in data:
             button.get_style_context().add_class('emoji-with-skintones')
