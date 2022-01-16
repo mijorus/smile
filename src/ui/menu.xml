@@ -27,7 +27,7 @@
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
-            <property name="action-name">win.open_shortcuts</property>
+            <property name="action-name">app.open_shortcuts</property>
             <property name="text" translatable="yes">Keyboard Shortcuts</property>
           </object>
         </child>

@@ -32,6 +32,7 @@ class Smile(Gtk.Application):
             self.window.show_all()
 
         self.create_action("about", self.on_about_action)
+        self.create_action("open_shortcuts", lambda w,e: ShortcutsWindow().open())
         self.window.show_all()
         self.window.present()
 
