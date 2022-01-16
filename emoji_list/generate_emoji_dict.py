@@ -52,7 +52,7 @@ for i, el in enumerate(emoji_list):
     if el['group'] in nested_groups:
         el['group'] = nested_groups[el['group']]
 
-    output[el['emoji']] = el
+    output[el['hexcode']] = el
     cat.add(el['group'])
 
 
