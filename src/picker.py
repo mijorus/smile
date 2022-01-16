@@ -29,8 +29,8 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio, Gdk
 
 class Picker(Gtk.ApplicationWindow):
-    def __init__(self):
-        super().__init__(title="Smile", resizable=False, border_width=5)
+    def __init__(self, *args, **kwargs):
+        super().__init__(title="Smile", resizable=False, border_width=5, *args, **kwargs)
         self.connect('key_press_event', self.handle_window_key_press)
         self.set_default_size(200, 350)
         self.set_position(Gtk.WindowPosition.MOUSE)

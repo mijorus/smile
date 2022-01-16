@@ -27,14 +27,22 @@ class Smile(Gtk.Application):
         if not self.window:
             # Windows are associated with the application
             # when the last one is closed the application shuts down
-            self.window = Picker()
+            self.window = Picker(application=self)
             self.window.connect("destroy", Gtk.main_quit)
             self.window.show_all()
-            
-            Gtk.main()
-        
+
+        self.create_action("about", self.on_about_action)
         self.window.show_all()
         self.window.present()
+
+    def create_action(self, name, callback):
+        """ Add an Action and connect to a callback """
+        action = Gio.SimpleAction.new(name, None)
+        action.connect("activate", callback)
+        self.add_action(action)
+
+    def on_about_action(self, widget, event):
+        pass
 
 def main(version: str, datadir: str) -> None:
     app = Smile(version=version, datadir=datadir)
