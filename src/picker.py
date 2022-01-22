@@ -25,6 +25,7 @@ import re
 from .lib.emoji_list import emojis
 from .shortcuts import ShortcutsWindow
 from .custom_tag_entry import CustomTagEntry
+from .lib.emoji_history import increament_emoji_usage_counter, get_history
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio, Gdk
@@ -42,7 +43,8 @@ class Picker(Gtk.ApplicationWindow):
         self.query: str = None
         self.selection: List[str] = []
         self.selected_buttons: List[Gtk.Button] = []
-        
+        self.history_size = 0
+
         self.clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
 
         # Create the emoji list and category picker
@@ -97,11 +99,12 @@ class Picker(Gtk.ApplicationWindow):
 
         return Gtk.MenuButton(popover=menu, image=Gtk.Image.new_from_icon_name('open-menu-symbolic', Gtk.IconSize.MENU), use_popover = True)
 
-    def create_emoji_button(self, data: dict):
+    def create_emoji_button(self, data: dict, is_recently_used = False):
         button = Gtk.Button()
         button.set_label(data['emoji'])
         button.emoji_data = data
         button.hexcode = data['hexcode']
+        button.recent = is_recently_used
         button.tag = f"{data['annotation']} {data['tags']}".replace(',', ' ')
         if 'skintones' in data:
             button.get_style_context().add_class('emoji-with-skintones')
@@ -154,10 +157,13 @@ class Picker(Gtk.ApplicationWindow):
             flowbox_child = Gtk.FlowBoxChild()
             flowbox_child.props.can_focus = False
 
-            button = self.create_emoji_button(e)
-
+            is_recent = (e['hexcode'] in get_history(True))
+            button = self.create_emoji_button(e, is_recent)
             flowbox_child.add(button)
             flowbox.add(flowbox_child)
+
+            if is_recent:
+                self.history_size += 1
 
         print('Emoji list parsing took ' + str((time.time_ns() // 1000000) - start) + 'ms')
         return flowbox
@@ -169,6 +175,8 @@ class Picker(Gtk.ApplicationWindow):
 
     def select_button_emoji(self, button: Gtk.Button):
         self.selection.append(button.get_label())
+        increament_emoji_usage_counter(button)
+
         self.selected_buttons.append(button)
         button.get_style_context().add_class('selected')
         self.update_header_bar_title(self.selection)
@@ -294,7 +302,12 @@ class Picker(Gtk.ApplicationWindow):
 
     def copy_and_quit(self, button: Gtk.Button = None):
         clip = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
-        text = button.get_label() if button else ''
+
+        text = ''
+        if button:
+            text = button.get_label()
+            increament_emoji_usage_counter(button)
+
         clip.set_text(''.join([*self.selection, text]), -1)
         self.hide()
 
@@ -311,13 +324,19 @@ class Picker(Gtk.ApplicationWindow):
             return (widget.get_child()).tag.lower().__contains__(self.query.lower())
         
         elif self.selected_category:
+            if self.selected_category == 'recents':
+                return (widget.get_child()).recent == True
+
             return self.selected_category == e['group']
 
         else:
-            return e['group'] == 'smileys-emotion'
+            return e['group'] == self.selected_category
 
     def get_emoji_category(self) -> dict:
         return {
+            'recents': {
+                'icon': '🕖️',
+            }, 
             'smileys-emotion': {
                 'icon': '😀',
             }, 
