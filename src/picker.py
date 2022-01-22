@@ -35,7 +35,7 @@ class Picker(Gtk.ApplicationWindow):
         self.connect('key_press_event', self.handle_window_key_press)
         self.set_default_size(200, 350)
         self.set_position(Gtk.WindowPosition.MOUSE)
-        self.emoji_grid_col_n = 6
+        self.emoji_grid_col_n = 5
         
         self.selected_category_index = 0
         self.selected_category = 'smileys-emotion'
@@ -45,13 +45,14 @@ class Picker(Gtk.ApplicationWindow):
         
         self.clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
 
-        # Create the emoji list
+        # Create the emoji list and category picker
         self.categories_count = 0
         scrolled = Gtk.ScrolledWindow()
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
         self.box = Gtk.Box(orientation = Gtk.Orientation.VERTICAL)
 
         self.emoji_list = self.create_emoji_list()
+        self.category_count = 0 # will be set in create_category_picker()
         self.category_picker = self.create_category_picker()
         scrolled.add(self.emoji_list)
         self.box.pack_start(scrolled, True, True, 0)
@@ -88,6 +89,7 @@ class Picker(Gtk.ApplicationWindow):
     def on_show(self, widget: Gtk.Window):
         self.set_focus(self.search_entry)
 
+    # Create stuff
     def create_menu_button(self):
         builder = Gtk.Builder()
         builder.add_from_resource('/it/mijorus/smile/ui/menu.xml')
@@ -95,6 +97,72 @@ class Picker(Gtk.ApplicationWindow):
 
         return Gtk.MenuButton(popover=menu, image=Gtk.Image.new_from_icon_name('open-menu-symbolic', Gtk.IconSize.MENU), use_popover = True)
 
+    def create_emoji_button(self, data: dict):
+        button = Gtk.Button()
+        button.set_label(data['emoji'])
+        button.emoji_data = data
+        button.hexcode = data['hexcode']
+        button.tag = f"{data['annotation']} {data['tags']}".replace(',', ' ')
+        if 'skintones' in data:
+            button.get_style_context().add_class('emoji-with-skintones')
+
+        button.connect('clicked', self.copy_and_quit)
+        button.connect('button_press_event', lambda w, e: self.show_skin_selector(w) if e.button == 3 else None)
+
+        return button
+
+    def create_search_entry(self) -> Gtk.SearchEntry:
+        search_entry = Gtk.SearchEntry()
+        search_entry.set_hexpand(True)
+        search_entry.connect('search_changed', self.search_emoji)
+        return search_entry
+
+    def create_category_picker(self) -> Gtk.ScrolledWindow:
+        scrolled = Gtk.ScrolledWindow(name='emoji_categories_box')
+        box = Gtk.Box()
+
+        i = 0
+        for c, cat in self.get_emoji_category().items():
+            if 'icon' in cat:
+
+                button = Gtk.Button(valign=Gtk.Align.CENTER)
+                button.category = c
+                button.index = i
+                button.set_label(cat['icon'])
+                button.connect('clicked', self.filter_for_category)
+
+                box.pack_start(button, True, True, 3)
+                i += 1
+
+        scrolled.add(box)
+        scrolled.get_children()[0].props.margin = 5
+        self.categories_count = i
+        return scrolled
+
+    def create_emoji_list(self) -> Gtk.FlowBox:
+        flowbox = Gtk.FlowBox()
+        flowbox.set_valign(Gtk.Align.START)
+        flowbox.set_homogeneous(True)
+        flowbox.set_name('emoji_list_box')
+        flowbox.set_selection_mode(Gtk.SelectionMode.NONE)
+        flowbox.set_filter_func(self.filter_emoji_list, None)
+        flowbox.set_max_children_per_line(self.emoji_grid_col_n)
+        flowbox.set_min_children_per_line(self.emoji_grid_col_n)
+
+        start = time.time_ns() // 1000000
+        for i, e in emojis.items():
+            flowbox_child = Gtk.FlowBoxChild()
+            flowbox_child.props.can_focus = False
+
+            button = self.create_emoji_button(e)
+
+            flowbox_child.add(button)
+            flowbox.add(flowbox_child)
+
+        print('Emoji list parsing took ' + str((time.time_ns() // 1000000) - start) + 'ms')
+        return flowbox
+
+    # Random methods
     def update_header_bar_title(self, title: str = None):
         self.header_bar.props.subtitle = None
         self.header_bar.set_title(''.join(title[-5:]))
@@ -157,13 +225,20 @@ class Picker(Gtk.ApplicationWindow):
             if event.keyval == Gdk.KEY_Left:
                 next_sel = self.selected_category_index - 1 if (self.selected_category_index > 0) else 0
             elif event.keyval == Gdk.KEY_Right:
-                next_sel = self.selected_category_index + 1 if (self.selected_category_index < (self.emoji_grid_col_n - 1)) else (self.emoji_grid_col_n - 1)
+                next_sel_index = (self.categories_count - 1)
+                next_sel = self.selected_category_index + 1 if (self.selected_category_index < (next_sel_index)) else (next_sel_index)
             elif event.keyval == Gdk.KEY_question:
                 shortcut_window = ShortcutsWindow()
                 shortcut_window.open()
                 
-            if ('next_sel' in locals()): 
-                self.filter_for_category(self.category_picker.get_child_at_index(next_sel).get_child())
+            if ('next_sel' in locals()):
+                category_picker_box = self.category_picker.get_children()[0].get_children()[0]
+                
+                for child in category_picker_box.get_children():
+                    if child.index == next_sel:
+                        self.filter_for_category(child)
+                        break
+
                 return True
 
             if (event.keyval == Gdk.KEY_Return):
@@ -209,54 +284,11 @@ class Picker(Gtk.ApplicationWindow):
         popover.connect('closed', self.hide_skin_selector)
         return True
 
-    def create_emoji_button(self, data: dict):
-        button = Gtk.Button()
-        button.set_label(data['emoji'])
-        button.emoji_data = data
-        button.hexcode = data['hexcode']
-        button.tag = f"{data['annotation']} {data['tags']}".replace(',', ' ')
-        if 'skintones' in data:
-            button.get_style_context().add_class('emoji-with-skintones')
-
-        button.connect('clicked', self.copy_and_quit)
-        button.connect('button_press_event', lambda w, e: self.show_skin_selector(w) if e.button == 3 else None)
-
-        return button
-
-    def create_search_entry(self) -> Gtk.SearchEntry:
-        search_entry = Gtk.SearchEntry()
-        search_entry.set_hexpand(True)
-        search_entry.connect('search_changed', self.search_emoji)
-        return search_entry
-
-    def create_category_picker(self) -> Gtk.FlowBox:
-        flowbox = Gtk.FlowBox()
-        flowbox.set_valign(Gtk.Align.START)
-        flowbox.set_max_children_per_line(self.emoji_grid_col_n)
-        flowbox.set_min_children_per_line(self.emoji_grid_col_n)
-        flowbox.set_homogeneous(True)
-        flowbox.set_name('emoji_categories_box')
-        
-        for c, cat in self.get_emoji_category().items():
-            if 'icon' in cat:
-                flowbox_child = Gtk.FlowBoxChild()
-                flowbox_child.props.can_focus = False
-
-                button = Gtk.Button()
-                button.category = c
-                button.set_label(cat['icon'])
-                button.connect('clicked', self.filter_for_category)
-
-                flowbox_child.add(button)
-                flowbox.add(flowbox_child)
-
-        return flowbox
-
     def filter_for_category(self, widget: Gtk.Button):
         widget.grab_focus()
         self.query = None
         self.selected_category = widget.category
-        self.selected_category_index = widget.props.parent.get_index()
+        self.selected_category_index = widget.index
         self.category_picker.set_opacity(1)
         self.emoji_list.invalidate_filter()
 
@@ -271,29 +303,6 @@ class Picker(Gtk.ApplicationWindow):
         self.query = None if (len(query) == 0) else query
         self.category_picker.set_opacity(1 if self.query == None else 0.6)
         self.emoji_list.invalidate_filter()
-
-    def create_emoji_list(self):
-        flowbox = Gtk.FlowBox()
-        flowbox.set_valign(Gtk.Align.START)
-        flowbox.set_homogeneous(True)
-        flowbox.set_name('emoji_list_box')
-        flowbox.set_selection_mode(Gtk.SelectionMode.NONE)
-        flowbox.set_filter_func(self.filter_emoji_list, None)
-        flowbox.set_max_children_per_line(self.emoji_grid_col_n)
-        flowbox.set_min_children_per_line(self.emoji_grid_col_n)
-
-        start = time.time_ns() // 1000000
-        for i, e in emojis.items():
-            flowbox_child = Gtk.FlowBoxChild()
-            flowbox_child.props.can_focus = False
-
-            button = self.create_emoji_button(e)
-
-            flowbox_child.add(button)
-            flowbox.add(flowbox_child)
-
-        print('Emoji list parsing took ' + str((time.time_ns() // 1000000) - start) + 'ms')
-        return flowbox
 
     def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
         e = (widget.get_child()).emoji_data
