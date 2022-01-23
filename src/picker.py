@@ -143,14 +143,11 @@ class Picker(Gtk.ApplicationWindow):
         return scrolled
 
     def create_emoji_list(self) -> Gtk.FlowBox:
-        flowbox = Gtk.FlowBox()
-        flowbox.set_valign(Gtk.Align.START)
-        flowbox.set_homogeneous(True)
-        flowbox.set_name('emoji_list_box')
-        flowbox.set_selection_mode(Gtk.SelectionMode.NONE)
+        flowbox = Gtk.FlowBox(valign=Gtk.Align.START, homogeneous=True, name='emoji_list_box', selection_mode=Gtk.SelectionMode.NONE,
+            max_children_per_line=self.emoji_grid_col_n, min_children_per_line=self.emoji_grid_col_n
+        )
+
         flowbox.set_filter_func(self.filter_emoji_list, None)
-        flowbox.set_max_children_per_line(self.emoji_grid_col_n)
-        flowbox.set_min_children_per_line(self.emoji_grid_col_n)
 
         start = time.time_ns() // 1000000
         for i, e in emojis.items():
@@ -165,7 +162,7 @@ class Picker(Gtk.ApplicationWindow):
             if is_recent:
                 self.history_size += 1
 
-        print('Emoji list parsing took ' + str((time.time_ns() // 1000000) - start) + 'ms')
+        print('Emoji list creation took ' + str((time.time_ns() // 1000000) - start) + 'ms')
         return flowbox
 
     # Random methods
