@@ -51,14 +51,19 @@ class Picker(Gtk.ApplicationWindow):
         self.categories_count = 0
         scrolled = Gtk.ScrolledWindow()
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
-        self.box = Gtk.Box(orientation = Gtk.Orientation.VERTICAL)
+        self.viewport_box = Gtk.Box(orientation = Gtk.Orientation.VERTICAL)
 
+        self.list_tip_container = Gtk.Revealer(reveal_child=False)
+        self.list_tip_container.add(Gtk.Label(label='', opacity=0.7, justify=Gtk.Justification.CENTER))
+        
         self.emoji_list = self.create_emoji_list()
         self.category_count = 0 # will be set in create_category_picker()
         self.category_picker = self.create_category_picker()
         scrolled.add(self.emoji_list)
-        self.box.pack_start(scrolled, True, True, 0)
-        self.box.pack_end(self.category_picker, False, True, 3)
+
+        self.viewport_box.pack_start(self.list_tip_container, False, False, 0)
+        self.viewport_box.pack_start(scrolled, True, True, 0)
+        self.viewport_box.pack_end(self.category_picker, False, True, 3)
         
         # Create an header bar
         self.header_bar = Gtk.HeaderBar()
@@ -74,7 +79,7 @@ class Picker(Gtk.ApplicationWindow):
 
         self.shortcut_window: ShortcutsWindow = None
 
-        self.add(self.box)
+        self.add(self.viewport_box)
         self.connect('show', self.on_show)
         self.connect('hide', self.on_hide)
 
@@ -99,12 +104,12 @@ class Picker(Gtk.ApplicationWindow):
 
         return Gtk.MenuButton(popover=menu, image=Gtk.Image.new_from_icon_name('open-menu-symbolic', Gtk.IconSize.MENU), use_popover = True)
 
-    def create_emoji_button(self, data: dict, is_recently_used = False):
+    def create_emoji_button(self, data: dict):
         button = Gtk.Button()
         button.set_label(data['emoji'])
         button.emoji_data = data
         button.hexcode = data['hexcode']
-        button.recent = is_recently_used
+        button.history = get_history()[data['hexcode']] if (data['hexcode']) in get_history() else None
         button.tag = f"{data['annotation']} {data['tags']}".replace(',', ' ')
         if 'skintones' in data:
             button.get_style_context().add_class('emoji-with-skintones')
@@ -148,14 +153,15 @@ class Picker(Gtk.ApplicationWindow):
         )
 
         flowbox.set_filter_func(self.filter_emoji_list, None)
+        flowbox.set_sort_func(self.sort_emoji_list, None)
 
         start = time.time_ns() // 1000000
         for i, e in emojis.items():
             flowbox_child = Gtk.FlowBoxChild()
             flowbox_child.props.can_focus = False
 
-            is_recent = (e['hexcode'] in get_history(True))
-            button = self.create_emoji_button(e, is_recent)
+            is_recent = (e['hexcode'] in get_history())
+            button = self.create_emoji_button(e)
             flowbox_child.add(button)
             flowbox.add(flowbox_child)
 
@@ -166,6 +172,13 @@ class Picker(Gtk.ApplicationWindow):
         return flowbox
 
     # Random methods
+    def update_list_tip(self, text: str = None):
+        if (text == None):
+            self.list_tip_container.set_reveal_child(False)
+        else:
+            self.list_tip_container.get_children()[0].set_label(text)
+            self.list_tip_container.set_reveal_child(True)
+
     def update_header_bar_title(self, title: str = None):
         self.header_bar.props.subtitle = None
         self.header_bar.set_title(''.join(title[-5:]))
@@ -295,7 +308,15 @@ class Picker(Gtk.ApplicationWindow):
         self.selected_category = widget.category
         self.selected_category_index = widget.index
         self.category_picker.set_opacity(1)
+
         self.emoji_list.invalidate_filter()
+
+        if widget.category == 'recents':
+            self.update_list_tip('Recently used emojis' if (len(get_history())) else "Whoa, it's still empty! \nYour most used emojis will show up here\n")
+        else:
+            self.update_list_tip(None)
+
+        self.emoji_list.invalidate_sort()
 
     def copy_and_quit(self, button: Gtk.Button = None):
         clip = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
@@ -322,12 +343,24 @@ class Picker(Gtk.ApplicationWindow):
         
         elif self.selected_category:
             if self.selected_category == 'recents':
-                return (widget.get_child()).recent == True
+                return get_history().__contains__((widget.get_child()).hexcode)
 
             return self.selected_category == e['group']
 
         else:
             return e['group'] == self.selected_category
+
+    def sort_emoji_list(self, child1: Gtk.FlowBoxChild, child2: Gtk.FlowBoxChild, user_data):
+        child1 = child1.get_child()
+        child2 = child2.get_child()
+
+        if (self.selected_category == 'recents'):
+            h1 = child1.history
+            h2 = child2.history
+            return ( (h2['lastUsage'] if h2 else 0) - (h1['lastUsage'] if h1 else 0) )
+
+        else:
+            return (child1.emoji_data['order'] - child2.emoji_data['order'])
 
     def get_emoji_category(self) -> dict:
         return {
