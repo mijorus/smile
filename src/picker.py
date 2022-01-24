@@ -180,8 +180,7 @@ class Picker(Gtk.ApplicationWindow):
             self.list_tip_container.set_reveal_child(True)
 
     def update_header_bar_title(self, title: str = None):
-        self.header_bar.props.subtitle = None
-        self.header_bar.set_title(''.join(title[-5:]))
+        self.update_list_tip('Selected: ' + ''.join(title[-8:]))
 
     def select_button_emoji(self, button: Gtk.Button):
         self.selection.append(button.get_label())
@@ -313,7 +312,7 @@ class Picker(Gtk.ApplicationWindow):
 
         if widget.category == 'recents':
             self.update_list_tip('Recently used emojis' if (len(get_history())) else "Whoa, it's still empty! \nYour most used emojis will show up here\n")
-        else:
+        elif len(self.selected_buttons) == 0:
             self.update_list_tip(None)
 
         self.emoji_list.invalidate_sort()
@@ -355,8 +354,8 @@ class Picker(Gtk.ApplicationWindow):
         child2 = child2.get_child()
 
         if (self.selected_category == 'recents'):
-            h1 = child1.history
-            h2 = child2.history
+            h1 = get_history()[child1.hexcode] if child1.hexcode in get_history() else None
+            h2 = get_history()[child2.hexcode] if child2.hexcode in get_history() else None
             return ( (h2['lastUsage'] if h2 else 0) - (h1['lastUsage'] if h1 else 0) )
 
         else:
