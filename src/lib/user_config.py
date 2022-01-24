@@ -1,6 +1,6 @@
 import json
 from gi.repository import GLib
-from .emoji_list import emojis
+from ..assets.emoji_list import emojis
 
 def remove_config_file():
     pass

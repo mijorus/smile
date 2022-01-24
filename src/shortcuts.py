@@ -4,7 +4,7 @@ import time
 import os
 import csv
 import re
-from .lib.emoji_list import emojis
+from .assets.emoji_list import emojis
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio, Gdk

@@ -1,7 +1,7 @@
 import manimpango
 import sys
 import gi
-from .lib.emoji_list import emojis
+from .assets.emoji_list import emojis
 from .lib.custom_tags import set_custom_tags
 
 

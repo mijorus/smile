@@ -8,6 +8,9 @@ import subprocess
 from io import StringIO
 from problematic_emojis import problematic
 
+prefix = os.environ.get('MESON_INSTALL_PREFIX', '/usr/local')
+datadir = os.path.join(prefix, 'share/smile/smile/assets')
+
 emoji_list = json.load(open(os.path.dirname(__file__) + '/openmoji.json', 'r'))
 
 output = {}
@@ -59,7 +62,7 @@ for i, el in enumerate(emoji_list):
 output_dict = StringIO()
 print(f'emojis = {output}', file=output_dict)
 
-output_file = open(f"{os.path.dirname(__file__)}/../src/lib/emoji_list.py", 'w+')
+output_file = open(f"{datadir}/emoji_list.py", 'w+')
 output_file.write(output_dict.getvalue())
 
 subprocess.call(['python3', '-m', 'compileall', os.path.abspath(output_file.name)])

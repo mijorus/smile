@@ -10,4 +10,5 @@ subdir('data')
 subdir('src')
 subdir('po')
 
+meson.add_install_script('build-aux/meson/emoji_list/generate_emoji_dict.py')
 meson.add_install_script('build-aux/meson/postinstall.py')

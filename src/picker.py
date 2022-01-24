@@ -22,7 +22,7 @@ import os
 import csv
 import re
 
-from .lib.emoji_list import emojis
+from .assets.emoji_list import emojis
 from .shortcuts import ShortcutsWindow
 from .custom_tag_entry import CustomTagEntry
 from .lib.emoji_history import increament_emoji_usage_counter, get_history
@@ -85,9 +85,9 @@ class Picker(Gtk.ApplicationWindow):
 
     def on_hide(self, widget: Gtk.Widget):
         self.search_entry.set_text('')
-        self.header_bar.set_title('')
         self.query = None
         self.selection = []
+        self.update_list_tip(None)
         for button in self.selected_buttons:
             button.get_style_context().remove_class('selected')
 
@@ -179,7 +179,7 @@ class Picker(Gtk.ApplicationWindow):
             self.list_tip_container.get_children()[0].set_label(text)
             self.list_tip_container.set_reveal_child(True)
 
-    def update_header_bar_title(self, title: str = None):
+    def update_selection_content(self, title: str = None):
         self.update_list_tip('Selected: ' + ''.join(title[-8:]))
 
     def select_button_emoji(self, button: Gtk.Button):
@@ -188,7 +188,7 @@ class Picker(Gtk.ApplicationWindow):
 
         self.selected_buttons.append(button)
         button.get_style_context().add_class('selected')
-        self.update_header_bar_title(self.selection)
+        self.update_selection_content(self.selection)
 
     def handle_window_key_press(self, widget, event: Gdk.Event):
         """Handle every possible keypress here"""
@@ -234,7 +234,7 @@ class Picker(Gtk.ApplicationWindow):
                         
                         if not self.selection.__contains__(last_button.get_label()):
                             last_button.get_style_context().remove_class('selected')
-                        self.update_header_bar_title(self.selection)
+                        self.update_selection_content(self.selection)
 
                     return True
 

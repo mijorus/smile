@@ -1,6 +1,6 @@
 import json
 from gi.repository import GLib
-from .emoji_list import emojis
+from ..assets.emoji_list import emojis
 from .user_config import save_json_config, read_json_config
 
 def set_custom_tags(emoji: str, tags: str):
