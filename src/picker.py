@@ -182,6 +182,13 @@ class Picker(Gtk.ApplicationWindow):
     def update_selection_content(self, title: str = None):
         self.update_list_tip('Selected: ' + ''.join(title[-8:]))
 
+    def set_active_category(self, category: str):
+        for b in self.category_picker.get_children()[0].get_children()[0].get_children():
+            if b.category != category:
+                b.get_style_context().remove_class('selected')
+            else:
+                b.get_style_context().add_class('selected')
+
     def select_button_emoji(self, button: Gtk.Button):
         self.selection.append(button.get_label())
         increament_emoji_usage_counter(button)
@@ -203,7 +210,7 @@ class Picker(Gtk.ApplicationWindow):
         focused_widget = self.get_focus()
         focused_button = focused_widget if isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'emoji_data') else None
 
-        if self.search_entry.has_focus():
+        if self.search_entry.has_focus() and not ctrl_key:
             if (event.keyval == Gdk.KEY_Down):
                 self.emoji_list.get_child_at_pos(0, 0).get_child().grab_focus()
                 return True
@@ -273,6 +280,18 @@ class Picker(Gtk.ApplicationWindow):
                 elif not event.is_modifier and event.length == 1 and re.match(r'\S', event.string):
                     self.search_entry.grab_focus()
 
+            elif isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'category'):
+                # Triggers when we press arrow up on the category picker
+                if (event.keyval == Gdk.KEY_Up):
+                    self.set_active_category(focused_widget.category)
+
+                    for f in self.emoji_list.get_children():
+                        if f.get_children()[0].emoji_data['group'] == self.selected_category:
+                            f.get_children()[0].grab_focus()
+                            break
+
+                    return True
+
         return False
 
     def hide_skin_selector(self, widget: Gtk.Popover):
@@ -302,7 +321,9 @@ class Picker(Gtk.ApplicationWindow):
         return True
 
     def filter_for_category(self, widget: Gtk.Button):
+        self.set_active_category(None)
         widget.grab_focus()
+
         self.query = None
         self.selected_category = widget.category
         self.selected_category_index = widget.index
