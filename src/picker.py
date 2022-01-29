@@ -78,6 +78,7 @@ class Picker(Gtk.ApplicationWindow):
         self.set_titlebar(self.header_bar)
 
         self.shortcut_window: ShortcutsWindow = None
+        self.shift_key_pressed = False
 
         self.add(self.viewport_box)
         self.connect('show', self.on_show)
@@ -114,7 +115,7 @@ class Picker(Gtk.ApplicationWindow):
         if 'skintones' in data:
             button.get_style_context().add_class('emoji-with-skintones')
 
-        button.connect('clicked', self.copy_and_quit)
+        button.connect('clicked', self.handle_emoji_button_click)
         button.connect('button_press_event', lambda w, e: self.show_skin_selector(w) if e.button == 3 else None)
 
         return button
@@ -171,7 +172,13 @@ class Picker(Gtk.ApplicationWindow):
         print('Emoji list creation took ' + str((time.time_ns() // 1000000) - start) + 'ms')
         return flowbox
 
-    # Random methods
+    # Other methods
+    def handle_emoji_button_click(self, widget: Gtk.Button):
+        if (self.shift_key_pressed):
+            self.select_button_emoji(widget)
+        else:
+            self.copy_and_quit()
+
     def update_list_tip(self, text: str = None):
         if (text == None):
             self.list_tip_container.set_reveal_child(False)
@@ -203,6 +210,8 @@ class Picker(Gtk.ApplicationWindow):
             self.hide()
             return True
 
+        self.shift_key_pressed = (event.keyval == Gdk.KEY_Shift_L or event.keyval == Gdk.KEY_Shift_R)
+
         ctrl_key = bool(event.state & Gdk.ModifierType.CONTROL_MASK)
         shift_key = bool(event.state & Gdk.ModifierType.SHIFT_MASK)
         alt_key = bool(event.state & Gdk.ModifierType.MOD1_MASK)
@@ -210,7 +219,7 @@ class Picker(Gtk.ApplicationWindow):
         focused_widget = self.get_focus()
         focused_button = focused_widget if isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'emoji_data') else None
 
-        if self.search_entry.has_focus() and not ctrl_key:
+        if self.search_entry.has_focus() and ctrl_key:
             if (event.keyval == Gdk.KEY_Down):
                 self.emoji_list.get_child_at_pos(0, 0).get_child().grab_focus()
                 return True
@@ -286,9 +295,14 @@ class Picker(Gtk.ApplicationWindow):
                     self.set_active_category(focused_widget.category)
 
                     for f in self.emoji_list.get_children():
-                        if f.get_children()[0].emoji_data['group'] == self.selected_category:
-                            f.get_children()[0].grab_focus()
-                            break
+                        if self.selected_category == 'recents':
+                            if f.get_children()[0].hexcode in get_history():
+                                f.get_children()[0].grab_focus()
+                                break
+                        else:
+                            if f.get_children()[0].emoji_data['group'] == self.selected_category:
+                                f.get_children()[0].grab_focus()
+                                break
 
                     return True
 
