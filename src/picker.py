@@ -25,6 +25,7 @@ import re
 from .assets.emoji_list import emojis
 from .shortcuts import ShortcutsWindow
 from .custom_tag_entry import CustomTagEntry
+from .lib.custom_tags import get_custom_tags
 from .lib.emoji_history import increament_emoji_usage_counter, get_history
 
 gi.require_version('Gtk', '3.0')
@@ -219,7 +220,7 @@ class Picker(Gtk.ApplicationWindow):
         focused_widget = self.get_focus()
         focused_button = focused_widget if isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'emoji_data') else None
 
-        if self.search_entry.has_focus() and ctrl_key:
+        if self.search_entry.has_focus():
             if (event.keyval == Gdk.KEY_Down):
                 self.emoji_list.get_child_at_pos(0, 0).get_child().grab_focus()
                 return True
@@ -373,7 +374,8 @@ class Picker(Gtk.ApplicationWindow):
         e = (widget.get_child()).emoji_data
         
         if self.query:
-            return (widget.get_child()).tag.lower().__contains__(self.query.lower())
+            print((widget.get_child()).tag)
+            return (widget.get_child()).tag.lower().__contains__(self.query.lower()) or get_custom_tags(e['hexcode']).lower().__contains__(self.query.lower())
         
         elif self.selected_category:
             if self.selected_category == 'recents':

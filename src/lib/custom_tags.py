@@ -16,3 +16,8 @@ def set_custom_tags(emoji: str, tags: str):
     current_conf[emoji]['tags'] += f', {tags}' if (len(current_conf[emoji]['tags']) > 0) else tags
 
     res = save_json_config(current_conf, 'custom_tags')
+
+def get_custom_tags(hexcode: str) -> str:
+    current_conf = read_json_config('custom_tags')
+
+    return current_conf[hexcode]['tags'] if (hexcode in current_conf) else ''

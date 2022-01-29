@@ -12,7 +12,6 @@ def increament_emoji_usage_counter(button: Gtk.Button):
     
     emoji_hexcode = button.hexcode
     history = read_json_config('usage_history')
-    print(len(history))
 
     if not emoji_hexcode in history:
         history[emoji_hexcode] = {}
