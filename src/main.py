@@ -1,8 +1,8 @@
 import manimpango
 import sys
 import gi
-from .picker import Picker
-from .shortcuts import ShortcutsWindow
+from .Picker import Picker
+from .ShortcutsWindow import ShortcutsWindow
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio, Gdk

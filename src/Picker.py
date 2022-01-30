@@ -23,8 +23,8 @@ import csv
 import re
 
 from .assets.emoji_list import emojis
-from .shortcuts import ShortcutsWindow
-from .custom_tag_entry import CustomTagEntry
+from .ShortcutsWindow import ShortcutsWindow
+from .CustomTagEntry import CustomTagEntry
 from .lib.custom_tags import get_custom_tags
 from .lib.emoji_history import increament_emoji_usage_counter, get_history
 from .utils import tag_list_contains
