@@ -27,6 +27,7 @@ from .shortcuts import ShortcutsWindow
 from .custom_tag_entry import CustomTagEntry
 from .lib.custom_tags import get_custom_tags
 from .lib.emoji_history import increament_emoji_usage_counter, get_history
+from .utils import tag_list_contains
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio, Gdk
@@ -112,7 +113,7 @@ class Picker(Gtk.ApplicationWindow):
         button.emoji_data = data
         button.hexcode = data['hexcode']
         button.history = get_history()[data['hexcode']] if (data['hexcode']) in get_history() else None
-        button.tag = f"{data['annotation']} {data['tags']}".replace(',', ' ')
+        # button.tag = f"{data['annotation']} {data['tags']}".replace(',', ' ')
         if 'skintones' in data:
             button.get_style_context().add_class('emoji-with-skintones')
 
@@ -369,13 +370,18 @@ class Picker(Gtk.ApplicationWindow):
         self.query = None if (len(query) == 0) else query
         self.category_picker.set_opacity(1 if self.query == None else 0.6)
         self.emoji_list.invalidate_filter()
+        self.emoji_list.invalidate_sort()
 
     def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
         e = (widget.get_child()).emoji_data
         
         if self.query:
-            print((widget.get_child()).tag)
-            return (widget.get_child()).tag.lower().__contains__(self.query.lower()) or get_custom_tags(e['hexcode']).lower().__contains__(self.query.lower())
+            if get_custom_tags(e['hexcode'], cache=True) and tag_list_contains(get_custom_tags(e['hexcode'], cache=True), self.query):
+                return True
+            elif tag_list_contains(e['tags'], self.query): 
+                return True
+            else:
+                return False
         
         elif self.selected_category:
             if self.selected_category == 'recents':
@@ -394,6 +400,9 @@ class Picker(Gtk.ApplicationWindow):
             h1 = get_history()[child1.hexcode] if child1.hexcode in get_history() else None
             h2 = get_history()[child2.hexcode] if child2.hexcode in get_history() else None
             return ( (h2['lastUsage'] if h2 else 0) - (h1['lastUsage'] if h1 else 0) )
+
+        elif self.query:
+            return -1 if get_custom_tags(child1.hexcode, True) else 1
 
         else:
             return (child1.emoji_data['order'] - child2.emoji_data['order'])
