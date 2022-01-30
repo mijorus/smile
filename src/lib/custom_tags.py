@@ -3,6 +3,8 @@ from gi.repository import GLib
 from ..assets.emoji_list import emojis
 from .user_config import save_json_config, read_json_config
 
+custom_tags_config = None
+
 def set_custom_tags(emoji: str, tags: str):
     """Saves the new tags for a given emoji in a configuration file"""
     current_conf = read_json_config('custom_tags')
@@ -17,7 +19,10 @@ def set_custom_tags(emoji: str, tags: str):
 
     res = save_json_config(current_conf, 'custom_tags')
 
-def get_custom_tags(hexcode: str) -> str:
-    current_conf = read_json_config('custom_tags')
+def get_custom_tags(hexcode: str, cache = False) -> str:
+    global custom_tags_config
 
-    return current_conf[hexcode]['tags'] if (hexcode in current_conf) else ''
+    if not cache or not custom_tags_config:
+        custom_tags_config = read_json_config('custom_tags')
+
+    return custom_tags_config[hexcode]['tags'] if (hexcode in custom_tags_config) else ''
