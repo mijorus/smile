@@ -49,7 +49,7 @@ for i, el in enumerate(emoji_list):
         continue
 
     el['annotation'] = el['annotation'].replace('with ', '').replace('flag:', '')
-    el['tags'] = el['tags'].replace('“', '').replace('”', '')
+    el['tags'] = (f'{el["tags"]} {el["openmoji_tags"]}').replace('“', '').replace('”', '')
 
     nested_groups = {
         'food-drink':  'animals-nature',
