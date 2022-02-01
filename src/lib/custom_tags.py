@@ -26,3 +26,16 @@ def get_custom_tags(hexcode: str, cache = False) -> str:
         custom_tags_config = read_json_config('custom_tags')
 
     return custom_tags_config[hexcode]['tags'] if (hexcode in custom_tags_config) else ''
+
+def get_all_custom_tags() -> dict:
+    return read_json_config('custom_tags')
+
+def delete_custom_tags(hexcode: str):
+    conf = read_json_config('custom_tags')
+    result = conf.pop(hexcode, False)
+
+    if (result):
+        save_json_config(conf, 'custom_tags')
+
+    custom_tags_config = conf
+    return result

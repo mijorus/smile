@@ -34,3 +34,11 @@
 #custom_tag_entry {
     margin: 10px;
 }
+
+#preferencies-listbox {
+    border-radius: 10px;
+}
+
+.emoji_with_custom_tags_preferencies {
+    font-size: 20px;
+}

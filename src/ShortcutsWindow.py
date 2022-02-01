@@ -16,5 +16,7 @@ class ShortcutsWindow():
         self.shortcut_window = builder.get_object('shortcuts')
         self.shortcut_window.set_default_size(600, 400)
 
+        
+
     def open(self):
         self.shortcut_window.show_all()

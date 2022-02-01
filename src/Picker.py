@@ -38,6 +38,12 @@ class Picker(Gtk.ApplicationWindow):
         self.connect('key_press_event', self.handle_window_key_press)
         self.set_default_size(200, 350)
         self.set_position(Gtk.WindowPosition.MOUSE)
+
+        self.settings = Gio.Settings.new('it.mijorus.smile')
+        self.settings.connect('changed::open-on-mouse-position', lambda s,key: 
+            self.set_position(Gtk.WindowPosition.MOUSE) if s.get_boolean('open-on-mouse-position') else self.set_position(Gtk.WindowPosition.CENTER)
+        )
+
         self.emoji_grid_col_n = 5
         
         self.selected_category_index = 0

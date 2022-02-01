@@ -3,6 +3,7 @@ import sys
 import gi
 from .Picker import Picker
 from .ShortcutsWindow import ShortcutsWindow
+from .Settings import Settings
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio, Gdk
@@ -20,6 +21,7 @@ class Smile(Gtk.Application):
         css_provider = Gtk.CssProvider()
         css_provider.load_from_resource('/it/mijorus/smile/assets/style.css')
         Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
+        self.settings = Gio.Settings.new('it.mijorus.smile')
 
     def do_activate(self):
          # We only allow a single window and raise any existing ones
@@ -30,8 +32,9 @@ class Smile(Gtk.Application):
             self.window.connect("destroy", Gtk.main_quit)
             self.window.show_all()
 
-        self.create_action("about", self.on_about_action)
+        self.create_action("preferencies", lambda w,e: Settings())
         self.create_action("open_shortcuts", lambda w,e: ShortcutsWindow().open())
+        self.create_action("about", self.on_about_action)
         self.window.show_all()
         self.window.present()
 

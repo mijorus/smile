@@ -18,7 +18,7 @@
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
-            <property name="action-name">win.preferencies</property>
+            <property name="action-name">app.preferencies</property>
             <property name="text" translatable="yes">Preferencies</property>
           </object>
         </child>

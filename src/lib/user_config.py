@@ -10,7 +10,7 @@ def save_json_config(content: dict or List, filename: str):
     config_dir = GLib.get_user_config_dir()
     return GLib.file_set_contents(f"{config_dir}/{filename}.json", json.dumps(content).encode())
 
-def read_json_config(filename: str):
+def read_json_config(filename: str) -> dict or list or False:
     """Reads from a configuration file"""
     config_dir = GLib.get_user_config_dir()
     config_filename = f"{config_dir}/{filename}.json"
