@@ -2,8 +2,10 @@ import json
 from gi.repository import GLib
 from ..assets.emoji_list import emojis
 
-def remove_config_file():
-    pass
+# These two helper functions can be used to 
+# read and write a json file in the user's configuration directory
+#
+# If the file does not exits, it will be created
 
 def save_json_config(content: dict or List, filename: str):
     """Saves in a configuration file"""

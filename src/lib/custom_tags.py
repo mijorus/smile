@@ -5,21 +5,22 @@ from .user_config import save_json_config, read_json_config
 
 custom_tags_config = None
 
-def set_custom_tags(emoji: str, tags: str):
-    global custom_tags_config
+def set_custom_tags(hexcode: str, tags: str):
     """Saves the new tags for a given emoji in a configuration file"""
+    global custom_tags_config
+
     current_conf = read_json_config('custom_tags')
 
-    if not emoji in current_conf:
-        current_conf[emoji] = {}
+    if not hexcode in current_conf:
+        current_conf[hexcode] = {}
 
-    if not 'tags' in current_conf[emoji]:
-        current_conf[emoji]['tags'] = ''
+    if not 'tags' in current_conf[hexcode]:
+        current_conf[hexcode]['tags'] = ''
 
     if (len(tags) == 0):
-        del current_conf[emoji]
+        del current_conf[hexcode]
     else:
-        current_conf[emoji]['tags'] = tags if tags.endswith(',') else f'{tags},'
+        current_conf[hexcode]['tags'] = tags if tags.endswith(',') else f'{tags},'
 
     res = save_json_config(current_conf, 'custom_tags')
     custom_tags_config = current_conf
