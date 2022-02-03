@@ -16,7 +16,10 @@ def set_custom_tags(emoji: str, tags: str):
     if not 'tags' in current_conf[emoji]:
         current_conf[emoji]['tags'] = ''
 
-    current_conf[emoji]['tags'] = tags if tags.endswith(',') or (len(tags) == 0) else f'{tags},'
+    if (len(tags) == 0):
+        del current_conf[emoji]
+    else:
+        current_conf[emoji]['tags'] = tags if tags.endswith(',') else f'{tags},'
 
     res = save_json_config(current_conf, 'custom_tags')
     custom_tags_config = current_conf
