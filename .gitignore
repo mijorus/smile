@@ -8,3 +8,4 @@ problematic_emojis.cpython*
 run.sh
 src/lib/__pycache__
 src/lib/__pycache__
+.glade~
