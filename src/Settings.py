@@ -21,7 +21,8 @@ class Settings():
         self.settings = Gio.Settings.new('it.mijorus.smile')
         self.create_boolean_settings_entry('Open on mouse position', 'open-on-mouse-position', 'Might not work on Wayland systems')
         self.create_custom_tags_list()
-
+        self.custom_tags_entries: list[Gtk.Entry] = []
+        self.window.connect('destroy', self.on_window_close)
 
         self.window.show_all()
 
@@ -64,9 +65,14 @@ class Settings():
                         delete_button.get_style_context().add_class('destructive-action')
                         delete_button.connect('clicked', lambda w: self.delete_tag(e))
 
-                        box.pack_end(  delete_button, False, True,  5 )
-                        box.pack_end(  Gtk.Entry(text=tags['tags']), True, True, 5 )
+                        box.pack_end(delete_button, False, True,  5)
+
+                        entry = Gtk.Entry(text=tags['tags'])
+                        entry.hexcode = hexcode
+                        
+                        box.pack_end(entry, True, True, 5 )
                         box.hexcode = e
+
                         break
 
                 rows.append(box)
@@ -91,3 +97,12 @@ class Settings():
             listbox_row.add(self.empty_list_label)
             self.custom_tags_list_box.add(listbox_row)
             self.custom_tags_list_box.show_all()
+
+    def on_window_close(self, widget: Gtk.Window):
+        for listbox_row in self.custom_tags_list_box.get_children():
+            row = listbox_row.get_children()[0]
+             
+            for widget in row:
+                if isinstance(widget, Gtk.Entry):
+                    set_custom_tags(row.hexcode, widget.get_text())
+                    break
