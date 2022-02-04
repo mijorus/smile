@@ -3,6 +3,7 @@ import sys
 import gi
 from .Picker import Picker
 from .ShortcutsWindow import ShortcutsWindow
+from .AboutDialog import AboutDialog
 from .Settings import Settings
 
 gi.require_version('Gtk', '3.0')
@@ -12,6 +13,7 @@ class Smile(Gtk.Application):
     def __init__(self, **kwargs) -> None:
         super().__init__(application_id="it.mijorus.smile", flags=Gio.ApplicationFlags.FLAGS_NONE)
         self.datadir = kwargs['datadir']
+        self.version = kwargs['version']
         self.window = None
 
     def do_startup(self):
@@ -45,7 +47,8 @@ class Smile(Gtk.Application):
         self.add_action(action)
 
     def on_about_action(self, widget, event):
-        pass
+        about = AboutDialog(self.props.active_window, version=self.version)
+        about.present()
 
 def main(version: str, datadir: str) -> None:
     app = Smile(version=version, datadir=datadir)
