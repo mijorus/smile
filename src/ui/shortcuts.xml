@@ -21,28 +21,28 @@
                             <object class="GtkShortcutsShortcut">
                                 <property name="visible">True</property>
                                 <property name="accelerator">&lt;ctrl&gt;Right</property>
-                                <property name="title" translatable="yes">Move focus on the category to the right</property>
+                                <property name="title" translatable="yes">Move focus to the category on the right</property>
                             </object>
                         </child>
                         <child>
                             <object class="GtkShortcutsShortcut">
                                 <property name="visible">True</property>
                                 <property name="accelerator">&lt;ctrl&gt;Left</property>
-                                <property name="title" translatable="yes">Move focus on the category to the left</property>
+                                <property name="title" translatable="yes">Move focus to the category on the left</property>
                             </object>
                         </child>
                         <child>
                             <object class="GtkShortcutsShortcut">
                                 <property name="visible">True</property>
                                 <property name="accelerator">&lt;shift&gt;Return</property>
-                                <property name="title" translatable="yes">Add the emoji to selection</property>
+                                <property name="title" translatable="yes">Add the emoji to the selection</property>
                             </object>
                         </child>
                         <child>
                             <object class="GtkShortcutsShortcut">
                                 <property name="visible">True</property>
                                 <property name="accelerator">&lt;shift&gt;BackSpace</property>
-                                <property name="title" translatable="yes">Remove the last emoji from selection</property>
+                                <property name="title" translatable="yes">Remove the last emoji from the selection</property>
                             </object>
                         </child>
                         <child>
@@ -57,6 +57,13 @@
                                 <property name="visible">True</property>
                                 <property name="accelerator">&lt;alt&gt;E</property>
                                 <property name="title" translatable="yes">Open skintone selector (if available)</property>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkShortcutsShortcut">
+                                <property name="visible">True</property>
+                                <property name="accelerator">&lt;alt&gt;T</property>
+                                <property name="title" translatable="yes">Add a custom tag</property>
                             </object>
                         </child>
                     </object>
