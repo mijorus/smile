@@ -7,7 +7,7 @@
     "finish-args" : [
         "--share=network",
         "--share=ipc",
-        "--socket=x11",
+        "--socket=fallback-x11",
         "--device=dri",
         "--socket=wayland"
     ],
@@ -35,8 +35,5 @@
                 }
             ]
         }
-    ],
-    "build-options" : {
-        "env" : {        }
-    }
+    ]
 }
