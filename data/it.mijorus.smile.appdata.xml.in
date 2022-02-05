@@ -1,9 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-	<id>it.mijorus.smile.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<project_license>GPL-3.0-or-later</project_license>
-	<description>
-	  <p>No description</p>
-	</description>
+    <id>it.mijorus.smile.desktop</id>
+    <name>Smile</name>
+    <summary>An emoji picker</summary>
+    <url>https://github.com/mijorus/smile</url>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>GPL-3.0-or-later</project_license>
+    <description>
+        <p>
+            Smile is a simple emoji picker for linux with
+            <strong>custom tags support</strong>
+            .
+        </p>
+    </description>
+    <releases>
+        <release type="stable" version="1.1.2" date="2022-02-05T00:00:00Z">
+            <description>
+                <ul>
+                    <li>First release on Flathub</li>
+                </ul>
+            </description>
+        </release>
+    </releases>
+    <screenshots>
+        <screenshot type="default">
+            <caption>Showcase</caption>
+            <image type="source">https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot1.png</image>
+        </screenshot>
+        <screenshot>
+            <caption>Skintones support</caption>
+            <image type="source">https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot2.png</image>
+        </screenshot>
+        <screenshot>
+            <caption>Custom tags</caption>
+            <image type="source">https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot3.png</image>
+        </screenshot>
+    </screenshots>
+    <content_rating type="oars-1.0" />
 </component>
