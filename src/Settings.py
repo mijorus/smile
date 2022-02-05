@@ -27,19 +27,22 @@ class Settings():
         self.window.show_all()
 
     def create_boolean_settings_entry(self, label: str, key: str, subtitle: str = None):
-        container = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, margin=10)
-        box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, expand=True, margin=0, can_focus=False)
-        switch = Gtk.Switch()
+        container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, margin=10)
 
-        box.pack_start(Gtk.Label(label=label, halign=Gtk.Align.START), True, True, 0)
-        box.pack_end(switch, False, False, 0)
-
-        container.pack_start(box, False,False, 0)
-        
-        self.settings.bind(key, switch, 'state', Gio.SettingsBindFlags.DEFAULT)
+        # Title box
+        title_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, expand=False, margin=0, can_focus=False)
+        title_box.pack_start(Gtk.Label(label=label, halign=Gtk.Align.START), True, True, 0)
 
         if subtitle:
-            container.pack_end(Gtk.Label(label=f"<small>{subtitle}</small>", halign=Gtk.Align.START, use_markup=True), False, False, 0)
+            title_box.pack_end(Gtk.Label(label=f"<small>{subtitle}</small>", halign=Gtk.Align.START, use_markup=True), False, False, 0)
+
+        container.pack_start(title_box, False, False, 0)
+
+        # Switch
+        switch = Gtk.Switch(valign=Gtk.Align.CENTER)
+        self.settings.bind(key, switch, 'state', Gio.SettingsBindFlags.DEFAULT)
+
+        container.pack_end(switch, False, False, 0)
 
         listbox_row = Gtk.ListBoxRow(selectable=False)
         listbox_row.add(container)
