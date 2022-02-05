@@ -9,7 +9,7 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio, Gdk, GLib
 
 class Settings():
-    def __init__(self):
+    def __init__(self, application_id: str):
         builder = Gtk.Builder()
         builder.add_from_resource('/it/mijorus/smile/ui/settings.glade')
         self.window = builder.get_object('settings-window')
@@ -21,6 +21,8 @@ class Settings():
         self.settings = Gio.Settings.new('it.mijorus.smile')
         self.create_boolean_settings_entry('Open on mouse position', 'open-on-mouse-position', 'Might not work on Wayland systems')
         self.create_custom_tags_list()
+        self.create_launch_shortcut_settings_entry(application_id)
+
         self.custom_tags_entries: list[Gtk.Entry] = []
         self.window.connect('destroy', self.on_window_close)
 
@@ -43,6 +45,24 @@ class Settings():
         self.settings.bind(key, switch, 'state', Gio.SettingsBindFlags.DEFAULT)
 
         container.pack_end(switch, False, False, 0)
+
+        listbox_row = Gtk.ListBoxRow(selectable=False)
+        listbox_row.add(container)
+        self.list_box.add(listbox_row)
+
+    def create_launch_shortcut_settings_entry(self, application_id: str):
+        container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, margin=10)
+
+        # Title box
+        title_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, expand=False, margin=0, can_focus=False)
+        title_box.pack_start(Gtk.Label(label='Launch the app with a custom shortcut', halign=Gtk.Align.START), True, True, 0)
+        title_box.pack_end(
+            Gtk.Label(label=f"<small>Create a new keyboard shortcut in your\nsystem settings and paste the following code\nas a custom command</small>", halign=Gtk.Align.START, use_markup=True), False, False, 0
+        )
+        container.pack_start(title_box, False, False, 0)
+
+        command_label = Gtk.Label(label=f'flatpak run {application_id}', selectable=True)
+        container.pack_end(command_label, False, False, 0)
 
         listbox_row = Gtk.ListBoxRow(selectable=False)
         listbox_row.add(container)

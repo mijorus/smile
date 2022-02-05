@@ -11,7 +11,8 @@ from gi.repository import Gtk, Gio, Gdk
 
 class Smile(Gtk.Application):
     def __init__(self, **kwargs) -> None:
-        super().__init__(application_id="it.mijorus.smile", flags=Gio.ApplicationFlags.FLAGS_NONE)
+        self.application_id = "it.mijorus.smile"
+        super().__init__(application_id=self.application_id, flags=Gio.ApplicationFlags.FLAGS_NONE)
         self.datadir = kwargs['datadir']
         self.version = kwargs['version']
         self.window = None
@@ -23,7 +24,7 @@ class Smile(Gtk.Application):
         css_provider = Gtk.CssProvider()
         css_provider.load_from_resource('/it/mijorus/smile/assets/style.css')
         Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
-        self.settings = Gio.Settings.new('it.mijorus.smile')
+        self.settings = Gio.Settings.new(self.application_id)
 
     def do_activate(self):
          # We only allow a single window and raise any existing ones
@@ -34,7 +35,7 @@ class Smile(Gtk.Application):
             self.window.connect("destroy", Gtk.main_quit)
             self.window.show_all()
 
-        self.create_action("preferencies", lambda w,e: Settings())
+        self.create_action("preferencies", lambda w,e: Settings(self.application_id))
         self.create_action("open_shortcuts", lambda w,e: ShortcutsWindow().open())
         self.create_action("about", self.on_about_action)
         self.window.show_all()
