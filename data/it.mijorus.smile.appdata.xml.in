@@ -6,13 +6,7 @@
     <url>https://github.com/mijorus/smile</url>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0-or-later</project_license>
-    <description>
-        <p>
-            Smile is a simple emoji picker for linux with
-            <strong>custom tags support</strong>
-            .
-        </p>
-    </description>
+    <description>Smile is a simple emoji picker for linux with custom tags support</description>
     <releases>
         <release type="stable" version="1.1.2" date="2022-02-05T00:00:00Z">
             <description>
