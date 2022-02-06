@@ -36,6 +36,7 @@ class Picker(Gtk.ApplicationWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(title="Smile", resizable=False, border_width=5, *args, **kwargs)
         self.connect('key_press_event', self.handle_window_key_press)
+        self.connect('key_release_event', self.handle_window_key_release)
         self.set_default_size(200, 350)
         self.set_position(Gtk.WindowPosition.MOUSE)
 
@@ -185,7 +186,7 @@ class Picker(Gtk.ApplicationWindow):
         if (self.shift_key_pressed):
             self.select_button_emoji(widget)
         else:
-            self.copy_and_quit()
+            self.copy_and_quit(widget)
 
     def update_list_tip(self, text: str = None):
         if (text == None):
@@ -211,6 +212,10 @@ class Picker(Gtk.ApplicationWindow):
         self.selected_buttons.append(button)
         button.get_style_context().add_class('selected')
         self.update_selection_content(self.selection)
+
+    def handle_window_key_release(self, widget, event: Gdk.Event):
+        if (event.keyval == Gdk.KEY_Shift_L or event.keyval == Gdk.KEY_Shift_R):
+            self.shift_key_pressed = False
 
     def handle_window_key_press(self, widget, event: Gdk.Event):
         """Handle every possible keypress here"""
