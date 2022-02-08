@@ -14,7 +14,7 @@ Do you want 🌐 to show up when you search for "internet", but it is only tagge
 
 
 <p align="center">
-  <img width="200" src="https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot4.png">
+  <img width="500" src="https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot4.png">
 </p>
 
 ## Download
