@@ -4,5 +4,6 @@ Exec=smile
 Icon=it.mijorus.smile
 Terminal=false
 Type=Application
-Categories=Utilities;GTK;
+Categories=Utility;GTK;
 StartupNotify=true
+Keywords=Emoji;Picker;
