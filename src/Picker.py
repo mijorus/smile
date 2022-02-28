@@ -68,7 +68,10 @@ class Picker(Gtk.ApplicationWindow):
         self.emoji_list = self.create_emoji_list()
         self.category_count = 0 # will be set in create_category_picker()
         self.category_picker = self.create_category_picker()
-        scrolled.add(self.emoji_list)
+
+        self.emoji_list_container = Gtk.Revealer(reveal_child=True, transition_type=Gtk.RevealerTransitionType.CROSSFADE)
+        self.emoji_list_container.add(self.emoji_list)
+        scrolled.add(self.emoji_list_container)
 
         self.viewport_box.pack_start(self.list_tip_container, False, False, 0)
         self.viewport_box.pack_start(scrolled, True, True, 0)
@@ -379,9 +382,13 @@ class Picker(Gtk.ApplicationWindow):
     def search_emoji(self, search_entry: str):
         query = search_entry.get_text()
         self.query = None if (len(query) == 0) else query
-        self.category_picker.set_opacity(1 if self.query == None else 0.6)
+        
+        self.emoji_list_container.set_reveal_child(False)
+
         self.emoji_list.invalidate_filter()
         self.emoji_list.invalidate_sort()
+
+        self.emoji_list_container.set_reveal_child(True)
 
     def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
         e = (widget.get_child()).emoji_data
