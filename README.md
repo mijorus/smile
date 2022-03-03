@@ -22,6 +22,11 @@ Do you want 🌐 to show up when you search for "internet", but it is only tagge
   <img width="200" src="https://flathub.org/assets/badges/flathub-badge-i-en.png">
 </a>
 
+## Source
+<a href="https://github.com/mijorus/smile" align="center">
+  <img width="100" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png">
+</a>
+
 ## Building 
 You will need:
 - flatpak
