@@ -308,20 +308,26 @@ class Picker(Gtk.ApplicationWindow):
 
             elif isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'category'):
                 # Triggers when we press arrow up on the category picker
-                if (event.keyval == Gdk.KEY_Up):
-                    self.set_active_category(focused_widget.category)
+                if (not ([Gdk.KEY_Up, Gdk.KEY_Down, Gdk.KEY_Left, Gdk.KEY_Right].__contains__(event.keyval))
+                    and re.match(re.compile(r"[a-z]", re.IGNORECASE), event.string) 
+                ):
+                    self.search_entry.grab_focus()
+                else:
+                    if (event.keyval == Gdk.KEY_Up):
+                        self.set_active_category(focused_widget.category)
 
-                    for f in self.emoji_list.get_children():
-                        if self.selected_category == 'recents':
-                            if f.get_children()[0].hexcode in get_history():
-                                f.get_children()[0].grab_focus()
-                                break
-                        else:
-                            if f.get_children()[0].emoji_data['group'] == self.selected_category:
-                                f.get_children()[0].grab_focus()
-                                break
+                        for f in self.emoji_list.get_children():
+                            if self.selected_category == 'recents':
+                                if f.get_children()[0].hexcode in get_history():
+                                    f.get_children()[0].grab_focus()
+                                    break
+                            else:
+                                if f.get_children()[0].emoji_data['group'] == self.selected_category:
+                                    f.get_children()[0].grab_focus()
+                                    break
 
-                    return True
+                        return True
+                
 
         return False
 
