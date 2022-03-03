@@ -40,8 +40,8 @@ for i, el in enumerate(emoji_list):
         # ignore if the emoji belongs to the aforementioned groups because they create caos and look bad
         continue
 
-    el['annotation'] = el['annotation'].replace('with ', '').replace('flag:', '').replace(' ', ',')
-    el['tags'] = (f'{el["tags"]},{el["openmoji_tags"]}').replace('“', '').replace('”', '')
+    el['annotation'] = '' if (not el['annotation'].__contains__('flag')) else el['annotation'].replace('flag:', '').replace(' ', ',')
+    el['tags'] = (f'{el["tags"]},{el["openmoji_tags"]},{el["annotation"]}').replace('“', '').replace('”', '')
 
     nested_groups = {
         'food-drink':  'animals-nature',
