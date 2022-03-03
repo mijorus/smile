@@ -13,6 +13,7 @@
         <release type="stable" version="1.2.0" date="2022-03-03T00:00:00Z">
             <description>
                 <p>- Added support for more emojis!</p>
+                <p>- Search countries with their full name</p>
                 <p>- Performance improvements</p>
             </description>
         </release>
