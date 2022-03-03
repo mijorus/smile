@@ -92,6 +92,10 @@ class Picker(Gtk.ApplicationWindow):
         self.shortcut_window: ShortcutsWindow = None
         self.shift_key_pressed = False
 
+        # Display custom tags at the top of the list when searching
+        # This variable the status of the sorting status
+        self.list_was_sorted = False
+
         self.add(self.viewport_box)
         self.connect('show', self.on_show)
         self.connect('hide', self.on_hide)
@@ -382,15 +386,19 @@ class Picker(Gtk.ApplicationWindow):
     def search_emoji(self, search_entry: str):
         query = search_entry.get_text()
         
-        time.sleep(0.5)
-        if search_entry.get_text() != query:
-            return
-            
-        print('run')
-        self.query = None if (len(query) == 0) else query
-        
+        if (len(query) == 0):
+            self.query = None
+            list_was_sorted = False
+        else:
+            self.query = query
+            list_was_sorted = True
+
         self.emoji_list.invalidate_filter()
-        self.emoji_list.invalidate_sort()
+        
+        if (self.list_was_sorted != list_was_sorted):
+            self.emoji_list.invalidate_sort()
+
+        self.list_was_sorted = list_was_sorted
 
     def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
         e = (widget.get_child()).emoji_data
