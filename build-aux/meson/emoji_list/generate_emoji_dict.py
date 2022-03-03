@@ -30,14 +30,6 @@ for i, el in enumerate(emoji_list):
     if problematic.__contains__(el['hexcode']) or el['group'] == 'extras-openmoji':
         continue
 
-    if el['unicode']:
-        try:
-            # ignore if an emoji is too recent and potentially unsupported
-            if float(el['unicode']) >= 11:
-                continue
-        except:
-            pass
-
     if (len(el['skintone_base_hexcode']) > 0) and (el['skintone_base_hexcode'] != el['hexcode']):
         append_skintone(el, el['skintone_base_hexcode'])
         # skip if we already have the base emoji
