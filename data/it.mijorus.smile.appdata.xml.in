@@ -10,6 +10,12 @@
         <p>Smile is a simple emoji picker for linux with custom tags support</p>
     </description>
     <releases>
+        <release type="stable" version="1.2.2" date="2022-03-07T00:00:00Z">
+            <description>
+                <p>- Focus on the searchbar when pressing ⬆️ on an element in the first row</p>
+                <p>- Performance improvements</p>
+            </description>
+        </release>
         <release type="stable" version="1.2.0" date="2022-03-03T00:00:00Z">
             <description>
                 <p>- Added support for more emojis!</p>
