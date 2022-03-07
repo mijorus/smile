@@ -46,6 +46,7 @@ class Picker(Gtk.ApplicationWindow):
         )
 
         self.emoji_grid_col_n = 5
+        self.emoji_grid_first_row = []
         
         self.selected_category_index = 0
         self.selected_category = 'smileys-emotion'
@@ -95,6 +96,9 @@ class Picker(Gtk.ApplicationWindow):
         # Display custom tags at the top of the list when searching
         # This variable the status of the sorting status
         self.list_was_sorted = False
+
+        # Finally, get the first row of the emoji picker
+        self.get_first_row()
 
         self.add(self.viewport_box)
         self.connect('show', self.on_show)
@@ -184,41 +188,19 @@ class Picker(Gtk.ApplicationWindow):
 
             if is_recent:
                 self.history_size += 1
+            
 
         print('Emoji list creation took ' + str((time.time_ns() // 1000000) - start) + 'ms')
         return flowbox
 
-    # Other methods
+    # Handle events
     def handle_emoji_button_click(self, widget: Gtk.Button):
         if (self.shift_key_pressed):
             self.select_button_emoji(widget)
         else:
             self.copy_and_quit(widget)
 
-    def update_list_tip(self, text: str = None):
-        if (text == None):
-            self.list_tip_container.set_reveal_child(False)
-        else:
-            self.list_tip_container.get_children()[0].set_label(text)
-            self.list_tip_container.set_reveal_child(True)
-
-    def update_selection_content(self, title: str = None):
-        self.update_list_tip('Selected: ' + ''.join(title[-8:]))
-
-    def set_active_category(self, category: str):
-        for b in self.category_picker.get_children()[0].get_children()[0].get_children():
-            if b.category != category:
-                b.get_style_context().remove_class('selected')
-            else:
-                b.get_style_context().add_class('selected')
-
-    def select_button_emoji(self, button: Gtk.Button):
-        self.selection.append(button.get_label())
-        increament_emoji_usage_counter(button)
-
-        self.selected_buttons.append(button)
-        button.get_style_context().add_class('selected')
-        self.update_selection_content(self.selection)
+        # Handle key-presses
 
     def handle_window_key_release(self, widget, event: Gdk.Event):
         if (event.keyval == Gdk.KEY_Shift_L or event.keyval == Gdk.KEY_Shift_R):
@@ -300,15 +282,18 @@ class Picker(Gtk.ApplicationWindow):
                     return True
 
         else:
+            # Focus is on an emoji button
             if focused_button:
                 if (event.keyval == Gdk.KEY_Return):
                     self.copy_and_quit(focused_button)
                     return True
-                elif (event.keyval == Gdk.KEY_Up) and isinstance(focused_button.props.parent, Gtk.FlowBoxChild) and (focused_button.props.parent.get_index() < self.emoji_grid_col_n):
+                elif (event.keyval == Gdk.KEY_Up) and isinstance(focused_button.props.parent, Gtk.FlowBoxChild) and (self.emoji_grid_first_row.__contains__(focused_button)):
+                    self.search_entry.grab_focus()
                     return False
                 elif not event.is_modifier and event.length == 1 and re.match(r'\S', event.string):
                     self.search_entry.grab_focus()
 
+            # Focus is on a category button
             elif isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'category'):
                 # Triggers when we press arrow up on the category picker
                 if (event.keyval == Gdk.KEY_Up):
@@ -327,6 +312,32 @@ class Picker(Gtk.ApplicationWindow):
                     return True
 
         return False
+
+    # 
+    def update_list_tip(self, text: str = None):
+        if (text == None):
+            self.list_tip_container.set_reveal_child(False)
+        else:
+            self.list_tip_container.get_children()[0].set_label(text)
+            self.list_tip_container.set_reveal_child(True)
+
+    def update_selection_content(self, title: str = None):
+        self.update_list_tip('Selected: ' + ''.join(title[-8:]))
+
+    def set_active_category(self, category: str):
+        for b in self.category_picker.get_children()[0].get_children()[0].get_children():
+            if b.category != category:
+                b.get_style_context().remove_class('selected')
+            else:
+                b.get_style_context().add_class('selected')
+
+    def select_button_emoji(self, button: Gtk.Button):
+        self.selection.append(button.get_label())
+        increament_emoji_usage_counter(button)
+
+        self.selected_buttons.append(button)
+        button.get_style_context().add_class('selected')
+        self.update_selection_content(self.selection)
 
     def hide_skin_selector(self, widget: Gtk.Popover):
         self.emoji_list.set_opacity(1)
@@ -354,6 +365,12 @@ class Picker(Gtk.ApplicationWindow):
         popover.connect('closed', self.hide_skin_selector)
         return True
 
+    def get_first_row(self):
+        self.emoji_grid_first_row = []
+        for widget in self.emoji_list.get_children():
+            if (len(self.emoji_grid_first_row) < self.emoji_grid_col_n) and widget.props.visible:
+                self.emoji_grid_first_row.append(widget.get_children()[0])
+
     def filter_for_category(self, widget: Gtk.Button):
         self.set_active_category(None)
         widget.grab_focus()
@@ -371,6 +388,7 @@ class Picker(Gtk.ApplicationWindow):
             self.update_list_tip(None)
 
         self.emoji_list.invalidate_sort()
+        self.get_first_row()
 
     def copy_and_quit(self, button: Gtk.Button = None):
         clip = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
@@ -396,29 +414,42 @@ class Picker(Gtk.ApplicationWindow):
         self.emoji_list.invalidate_filter()
         
         if (self.list_was_sorted != list_was_sorted):
-            self.emoji_list.invalidate_sort()
+            if query:
+                for child in self.emoji_list.get_children():
+                    if get_custom_tags((child.get_child().hexcode), True): child.changed()
+            else:
+                self.emoji_list.invalidate_sort()
+                self.get_first_row()
 
         self.list_was_sorted = list_was_sorted
 
     def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
         e = (widget.get_child()).emoji_data
+        filter_result = True
         
         if self.query:
             if get_custom_tags(e['hexcode'], cache=True) and tag_list_contains(get_custom_tags(e['hexcode'], cache=True), self.query):
-                return True
+                filter_result = True
             elif tag_list_contains(e['tags'], self.query): 
-                return True
+                filter_result = True
             else:
-                return False
-        
+                filter_result = False
+
         elif self.selected_category:
             if self.selected_category == 'recents':
-                return get_history().__contains__((widget.get_child()).hexcode)
-
-            return self.selected_category == e['group']
+                filter_result = get_history().__contains__((widget.get_child()).hexcode)
+            else:
+                filter_result = self.selected_category == e['group']
 
         else:
-            return e['group'] == self.selected_category
+            filter_result = e['group'] == self.selected_category
+
+        if filter_result:
+            widget.show()
+        else: 
+            widget.hide()
+
+        return filter_result
 
     def sort_emoji_list(self, child1: Gtk.FlowBoxChild, child2: Gtk.FlowBoxChild, user_data):
         child1 = child1.get_child()
