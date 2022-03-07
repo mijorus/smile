@@ -69,10 +69,7 @@ class Picker(Gtk.ApplicationWindow):
         self.emoji_list = self.create_emoji_list()
         self.category_count = 0 # will be set in create_category_picker()
         self.category_picker = self.create_category_picker()
-
-        self.emoji_list_container = Gtk.Revealer(reveal_child=True, transition_type=Gtk.RevealerTransitionType.SLIDE_RIGHT, transition_duration=200)
-        self.emoji_list_container.add(self.emoji_list)
-        scrolled.add(self.emoji_list_container)
+        scrolled.add(self.emoji_list)
 
         self.viewport_box.pack_start(self.list_tip_container, False, False, 0)
         self.viewport_box.pack_start(scrolled, True, True, 0)
@@ -94,11 +91,8 @@ class Picker(Gtk.ApplicationWindow):
         self.shift_key_pressed = False
 
         # Display custom tags at the top of the list when searching
-        # This variable the status of the sorting status
+        # This variable the status of the sorted status
         self.list_was_sorted = False
-
-        # Finally, get the first row of the emoji picker
-        self.get_first_row()
 
         self.add(self.viewport_box)
         self.connect('show', self.on_show)
@@ -296,20 +290,26 @@ class Picker(Gtk.ApplicationWindow):
             # Focus is on a category button
             elif isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'category'):
                 # Triggers when we press arrow up on the category picker
-                if (event.keyval == Gdk.KEY_Up):
-                    self.set_active_category(focused_widget.category)
+                if (not ([Gdk.KEY_Up, Gdk.KEY_Down, Gdk.KEY_Left, Gdk.KEY_Right].__contains__(event.keyval))
+                    and re.match(re.compile(r"[a-z]", re.IGNORECASE), event.string) 
+                ):
+                    self.search_entry.grab_focus()
+                else:
+                    if (event.keyval == Gdk.KEY_Up):
+                        self.set_active_category(focused_widget.category)
 
-                    for f in self.emoji_list.get_children():
-                        if self.selected_category == 'recents':
-                            if f.get_children()[0].hexcode in get_history():
-                                f.get_children()[0].grab_focus()
-                                break
-                        else:
-                            if f.get_children()[0].emoji_data['group'] == self.selected_category:
-                                f.get_children()[0].grab_focus()
-                                break
+                        for f in self.emoji_list.get_children():
+                            if self.selected_category == 'recents':
+                                if f.get_children()[0].hexcode in get_history():
+                                    f.get_children()[0].grab_focus()
+                                    break
+                            else:
+                                if f.get_children()[0].emoji_data['group'] == self.selected_category:
+                                    f.get_children()[0].grab_focus()
+                                    break
 
-                    return True
+                        return True
+                
 
         return False
 
@@ -403,7 +403,6 @@ class Picker(Gtk.ApplicationWindow):
 
     def search_emoji(self, search_entry: str):
         query = search_entry.get_text()
-        
         if (len(query) == 0):
             self.query = None
             list_was_sorted = False
@@ -419,7 +418,6 @@ class Picker(Gtk.ApplicationWindow):
                     if get_custom_tags((child.get_child().hexcode), True): child.changed()
             else:
                 self.emoji_list.invalidate_sort()
-                self.get_first_row()
 
         self.list_was_sorted = list_was_sorted
 
