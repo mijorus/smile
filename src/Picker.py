@@ -402,7 +402,7 @@ class Picker(Gtk.ApplicationWindow):
         self.hide()
 
     def search_emoji(self, search_entry: str):
-        query = search_entry.get_text()
+        query = search_entry.get_text().strip()
         if (len(query) == 0):
             self.query = None
             list_was_sorted = False
