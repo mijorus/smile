@@ -22,7 +22,7 @@ class Settings():
 
         self.settings = Gio.Settings.new('it.mijorus.smile')
         self.create_boolean_settings_entry('Open on mouse position', 'open-on-mouse-position', 'Might not work on Wayland systems')
-        self.create_boolean_settings_entry('Load on login', 'load-hidden-on-startup', 'Automatically load Smile on user login for a faster launch')
+        self.create_boolean_settings_entry('Load on login', 'load-hidden-on-startup', 'Automatically load Smile in background on login for a faster launch')
         self.create_custom_tags_list()
         self.create_launch_shortcut_settings_entry()
 
