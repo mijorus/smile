@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Exec=flatpak run {{application_id}} --hidden
+X-GNOME-Autostart-enabled=true
+Name=smile

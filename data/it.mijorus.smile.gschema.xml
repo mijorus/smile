@@ -4,5 +4,8 @@
         <key name="open-on-mouse-position" type="b">
             <default>true</default>
         </key>
+        <key name="load-hidden-on-startup" type="b">
+            <default>false</default>
+        </key>
     </schema>
 </schemalist>

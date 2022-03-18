@@ -51,8 +51,8 @@ class Picker(Gtk.ApplicationWindow):
         self.selected_category_index = 0
         self.selected_category = 'smileys-emotion'
         self.query: str = None
-        self.selection: List[str] = []
-        self.selected_buttons: List[Gtk.Button] = []
+        self.selection: list[str] = []
+        self.selected_buttons: list[Gtk.Button] = []
         self.history_size = 0
 
         self.clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
@@ -61,7 +61,7 @@ class Picker(Gtk.ApplicationWindow):
         self.categories_count = 0
         scrolled = Gtk.ScrolledWindow()
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
-        self.viewport_box = Gtk.Box(orientation = Gtk.Orientation.VERTICAL)
+        self.viewport_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
         self.list_tip_container = Gtk.Revealer(reveal_child=False)
         self.list_tip_container.add(Gtk.Label(label='', opacity=0.7, justify=Gtk.Justification.CENTER))
@@ -137,6 +137,7 @@ class Picker(Gtk.ApplicationWindow):
     def create_search_entry(self) -> Gtk.SearchEntry:
         search_entry = Gtk.SearchEntry()
         search_entry.set_hexpand(True)
+        search_entry.props.enable_emoji_completion = False
         search_entry.connect('search_changed', self.search_emoji)
         return search_entry
 

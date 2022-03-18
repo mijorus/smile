@@ -1,4 +1,4 @@
-from gi.repository import GLib
+from gi.repository import GLib, Gio
 
 def tag_list_contains(tags: str, q: str) -> bool():
     tags_arr = tags.replace(', ', ',').split(',')
@@ -21,3 +21,11 @@ def make_option(long_name, short_name=None, flags=0, arg=GLib.OptionArg.NONE, ar
     option.description = description
     option.arg_description = arg_description
     return option
+
+def read_text_resource(res: str) -> str:
+    file = Gio.resources_lookup_data(res, Gio.ResourceLookupFlags.NONE)
+    data: bytes = file.get_data()
+    
+    decoded = data.decode('utf-8')
+    file.unref()
+    return decoded

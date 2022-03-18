@@ -5,11 +5,11 @@
     "sdk" : "org.gnome.Sdk",
     "command" : "smile",
     "finish-args" : [
-        "--share=network",
         "--share=ipc",
+        "--socket=wayland",
         "--socket=fallback-x11",
         "--device=dri",
-        "--socket=wayland"
+        "--filesystem=xdg-config/autostart:create"
     ],
     "cleanup" : [
         "/include",

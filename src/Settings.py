@@ -3,6 +3,7 @@ import sys
 import gi
 from .assets.emoji_list import emojis
 from .lib.custom_tags import set_custom_tags, get_custom_tags, get_all_custom_tags, delete_custom_tags
+from .utils import read_text_resource
 
 
 gi.require_version('Gtk', '3.0')
@@ -13,6 +14,7 @@ class Settings():
         builder = Gtk.Builder()
         builder.add_from_resource('/it/mijorus/smile/ui/settings.glade')
         self.window = builder.get_object('settings-window')
+        self.application_id = application_id
         
         self.list_box = builder.get_object('preferencies-listbox')
         self.custom_tags_list_box = builder.get_object('customtags-listbox')
@@ -20,13 +22,30 @@ class Settings():
 
         self.settings = Gio.Settings.new('it.mijorus.smile')
         self.create_boolean_settings_entry('Open on mouse position', 'open-on-mouse-position', 'Might not work on Wayland systems')
+        self.create_boolean_settings_entry('Load on login', 'load-hidden-on-startup', 'Automatically loads Smile on user login for a faster launch')
         self.create_custom_tags_list()
-        self.create_launch_shortcut_settings_entry(application_id)
+        self.create_launch_shortcut_settings_entry()
 
         self.custom_tags_entries: list[Gtk.Entry] = []
+        self.settings.connect('changed', self.on_settings_changes)
         self.window.connect('destroy', self.on_window_close)
 
         self.window.show_all()
+
+    def on_load_hidden_on_startup_changed(self, settings, key: str):
+        value: bool = settings.get_boolean(key)
+        home_dir = GLib.get_home_dir()
+        file_path = f'{home_dir}/.config/autostart/smile.autostart.desktop'
+
+        try:
+            if value:
+                desktop_file = read_text_resource('/it/mijorus/smile/assets/smile.autostart.desktop')
+                GLib.file_set_contents(file_path, desktop_file.replace('{{application_id}}', self.application_id).encode())
+            else:
+                Gio.File.new_for_path(file_path).delete()
+        except Exception as e:
+            print(e)
+            self.settings.set_boolean(key, False)
 
     def create_boolean_settings_entry(self, label: str, key: str, subtitle: str = None):
         container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, margin=10)
@@ -50,7 +69,7 @@ class Settings():
         listbox_row.add(container)
         self.list_box.add(listbox_row)
 
-    def create_launch_shortcut_settings_entry(self, application_id: str):
+    def create_launch_shortcut_settings_entry(self):
         container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, margin=10)
 
         # Title box
@@ -61,7 +80,7 @@ class Settings():
         )
         container.pack_start(title_box, False, False, 0)
 
-        command_label = Gtk.Label(label=f'flatpak run {application_id}', selectable=True)
+        command_label = Gtk.Label(label=f'flatpak run {self.application_id}', selectable=True)
         container.pack_end(command_label, False, False, 0)
 
         listbox_row = Gtk.ListBoxRow(selectable=False)
@@ -120,6 +139,12 @@ class Settings():
             listbox_row.add(self.empty_list_label)
             self.custom_tags_list_box.add(listbox_row)
             self.custom_tags_list_box.show_all()
+
+    def on_settings_changes(self, settings, key: str):
+        callback = getattr(self, f"on_{key.replace('-', '_')}_changed", None)
+
+        if callback:
+            callback(settings, key)
 
     def on_window_close(self, widget: Gtk.Window):
         for listbox_row in self.custom_tags_list_box.get_children():
