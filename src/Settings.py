@@ -75,7 +75,7 @@ class Settings():
 
         # Title box
         title_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, expand=False, margin=0, can_focus=False)
-        title_box.pack_start(Gtk.Label(label='Launch the app with a custom shortcut', halign=Gtk.Align.START), True, True, 0)
+        title_box.pack_start(Gtk.Label(label='Launch the app with a shortcut', halign=Gtk.Align.START), True, True, 0)
         title_box.pack_end(
             Gtk.Label(label=f"<small>Create a new keyboard shortcut in your\nsystem settings and paste the following code\nas a custom command</small>", halign=Gtk.Align.START, use_markup=True), False, False, 0
         )

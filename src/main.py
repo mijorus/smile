@@ -45,7 +45,7 @@ class Smile(Gtk.Application):
         self.settings = Gio.Settings.new(self.application_id)
 
     def do_activate(self):
-         # We only allow a single window and raise any existing ones
+        # We only allow a single window and raise any existing ones
         if not self.window:
             # Windows are associated with the application
             # when the last one is closed the application shuts down
@@ -55,7 +55,7 @@ class Smile(Gtk.Application):
             self.create_action("preferencies", lambda w,e: Settings(self.application_id))
             self.create_action("open_shortcuts", lambda w,e: ShortcutsWindow().open())
             self.create_action("about", self.on_about_action)
-            
+
             if not self.start_hidden:
                 self.window.show_all()
                 self.window.present()
