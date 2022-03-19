@@ -22,7 +22,7 @@ import os
 import csv
 import re
 
-from .assets.emoji_list import emojis
+from .assets.emoji_list import emojis, emoji_categories
 from .ShortcutsWindow import ShortcutsWindow
 from .CustomTagEntry import CustomTagEntry
 from .lib.custom_tags import get_custom_tags
@@ -146,7 +146,7 @@ class Picker(Gtk.ApplicationWindow):
         box = Gtk.Box()
 
         i = 0
-        for c, cat in self.get_emoji_category().items():
+        for c, cat in emoji_categories.items():
             if 'icon' in cat:
 
                 button = Gtk.Button(valign=Gtk.Align.CENTER)
@@ -164,9 +164,7 @@ class Picker(Gtk.ApplicationWindow):
         return scrolled
 
     def create_emoji_list(self) -> Gtk.FlowBox:
-        flowbox = Gtk.FlowBox(valign=Gtk.Align.START, homogeneous=True, name='emoji_list_box', selection_mode=Gtk.SelectionMode.NONE,
-            max_children_per_line=self.emoji_grid_col_n, min_children_per_line=self.emoji_grid_col_n
-        )
+        flowbox = Gtk.FlowBox(valign=Gtk.Align.START, homogeneous=True, name='emoji_list_box', selection_mode=Gtk.SelectionMode.NONE, max_children_per_line=self.emoji_grid_col_n, min_children_per_line=self.emoji_grid_col_n)
 
         flowbox.set_filter_func(self.filter_emoji_list, None)
         flowbox.set_sort_func(self.sort_emoji_list, None)
@@ -314,7 +312,7 @@ class Picker(Gtk.ApplicationWindow):
 
         return False
 
-    # 
+    # # # # # #
     def update_list_tip(self, text: str = None):
         if (text == None):
             self.list_tip_container.set_reveal_child(False)
@@ -464,29 +462,3 @@ class Picker(Gtk.ApplicationWindow):
 
         else:
             return (child1.emoji_data['order'] - child2.emoji_data['order'])
-
-    def get_emoji_category(self) -> dict:
-        return {
-            'recents': {
-                'icon': '🕖️',
-            }, 
-            'smileys-emotion': {
-                'icon': '😀',
-            }, 
-            'animals-nature': {
-                'icon': '🐶'
-            }, 
-            'travel-places': {
-                'icon': '🚘️'
-            }, 
-            'activities': {
-                'icon': '⚽️'
-            }, 
-            'objects': {
-                'icon': '💡'
-            }, 
-            'flags': {
-                'icon': '🏳️'
-            },
-        }
-
