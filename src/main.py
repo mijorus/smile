@@ -38,9 +38,6 @@ class Smile(Gtk.Application):
     def do_startup(self):
         Gtk.Application.do_startup(self)
 
-        # GLib.file_set_contents('~/test.txt', 'test'.encode())
-        print(GLib.get_home_dir())
-
         manimpango.register_font(self.datadir + '/assets/NotoColorEmoji.ttf')
         css_provider = Gtk.CssProvider()
         css_provider.load_from_resource('/it/mijorus/smile/assets/style.css')
