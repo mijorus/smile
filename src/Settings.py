@@ -45,6 +45,7 @@ class Settings():
                 Gio.File.new_for_path(file_path).delete()
         except Exception as e:
             print(e)
+            self.create_error_dialog('The has been an error trying to add Smile to the autostart services', e)
             self.settings.set_boolean(key, False)
 
     def create_boolean_settings_entry(self, label: str, key: str, subtitle: str = None):
@@ -146,6 +147,18 @@ class Settings():
         if callback:
             callback(settings, key)
 
+    def create_error_dialog(self, text: str):
+        dialog = Gtk.MessageDialog(
+            transient_for=self.window,
+            flags=0,
+            message_type=Gtk.MessageType.ERROR,
+            buttons=Gtk.ButtonsType.OK,
+            text=text,
+        )
+
+        dialog.run()
+        dialog.destroy()
+    
     def on_window_close(self, widget: Gtk.Window):
         for listbox_row in self.custom_tags_list_box.get_children():
             row = listbox_row.get_children()[0]

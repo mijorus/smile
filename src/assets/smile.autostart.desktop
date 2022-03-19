@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Icon=it.mijorus.smile
+Icon={{application_id}}
 Exec=flatpak run {{application_id}} --start-hidden
 X-GNOME-Autostart-enabled=true
 Name=smile
