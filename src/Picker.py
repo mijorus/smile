@@ -38,7 +38,7 @@ class Picker(Gtk.ApplicationWindow):
         self.set_position(Gtk.WindowPosition.MOUSE)
 
         self.settings = Gio.Settings.new('it.mijorus.smile')
-        self.settings.connect('changed::open-on-mouse-position', lambda s,key: 
+        self.settings.connect('changed::open-on-mouse-position', lambda s, key:
             self.set_position(Gtk.WindowPosition.MOUSE) if s.get_boolean('open-on-mouse-position') else self.set_position(Gtk.WindowPosition.CENTER)
         )
 
@@ -62,7 +62,7 @@ class Picker(Gtk.ApplicationWindow):
 
         self.list_tip_container = Gtk.Revealer(reveal_child=False)
         self.list_tip_container.add(Gtk.Label(label='', opacity=0.7, justify=Gtk.Justification.CENTER))
-        
+
         self.emoji_list = self.create_emoji_list()
         self.category_count = 0 # will be set in create_category_picker()
         self.category_picker = self.create_category_picker()
@@ -71,16 +71,16 @@ class Picker(Gtk.ApplicationWindow):
         self.viewport_box.pack_start(self.list_tip_container, False, False, 0)
         self.viewport_box.pack_start(scrolled, True, True, 0)
         self.viewport_box.pack_end(self.category_picker, False, True, 3)
-        
+
         # Create an header bar
         self.header_bar = Gtk.HeaderBar()
         self.header_bar.props.show_close_button = True
         self.menu_button = self.create_menu_button()
         self.header_bar.pack_end(self.menu_button)
-        
+
         # Create search entry
         self.search_entry = self.create_search_entry()
-        
+
         self.header_bar.pack_start(self.search_entry)
         self.set_titlebar(self.header_bar)
 
@@ -93,9 +93,9 @@ class Picker(Gtk.ApplicationWindow):
 
         self.add(self.viewport_box)
         self.connect('show', self.on_show)
-        self.connect('hide', self.on_hide)
+        # self.connect('hide', self.on_hide)
 
-    def on_hide(self, widget: Gtk.Widget):
+    def on_hide(self):
         self.search_entry.set_text('')
         self.query = None
         self.selection = []
@@ -199,7 +199,7 @@ class Picker(Gtk.ApplicationWindow):
     def handle_window_key_press(self, widget, event: Gdk.Event):
         """Handle every possible keypress here"""
         if (event.keyval == Gdk.KEY_Escape):
-            self.hide()
+            self.default_hiding_action()
             return True
 
         self.shift_key_pressed = (event.keyval == Gdk.KEY_Shift_L or event.keyval == Gdk.KEY_Shift_R)
@@ -309,6 +309,10 @@ class Picker(Gtk.ApplicationWindow):
 
         return False
 
+    def default_hiding_action(self):
+        self.iconify() if self.settings.get_boolean('iconify-on-esc') else self.hide()
+        self.on_hide()
+
     # # # # # #
     def update_list_tip(self, text: str = None):
         if (text == None):
@@ -395,7 +399,7 @@ class Picker(Gtk.ApplicationWindow):
             increament_emoji_usage_counter(button)
 
         clip.set_text(''.join([*self.selection, text]), -1)
-        self.hide()
+        self.default_hiding_action()
 
     def search_emoji(self, search_entry: str):
         query = search_entry.get_text().strip()
