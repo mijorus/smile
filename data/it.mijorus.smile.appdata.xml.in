@@ -10,6 +10,11 @@
         <p>Smile is a simple emoji picker for linux with custom tags support</p>
     </description>
     <releases>
+        <release type="stable" version="1.5.1" date="2022-04-04T00:00:00Z">
+            <description>
+                <p>- Removed the option to minimize the app (for now) as it was buggy and uncompatible with Wayland</p>
+            </description>
+        </release>
         <release type="stable" version="1.5.0" date="2022-04-01T00:00:00Z">
             <description>
                 <p>- Added an option to minimize the app to the system tray when selecting an emoji</p>

@@ -93,7 +93,6 @@ class Picker(Gtk.ApplicationWindow):
 
         self.add(self.viewport_box)
         self.connect('show', self.on_show)
-        # self.connect('hide', self.on_hide)
 
     def on_hide(self):
         self.search_entry.set_text('')
@@ -310,7 +309,8 @@ class Picker(Gtk.ApplicationWindow):
         return False
 
     def default_hiding_action(self):
-        self.iconify() if self.settings.get_boolean('iconify-on-esc') else self.hide()
+        # self.iconify() if self.settings.get_boolean('iconify-on-esc') else self.hide()
+        self.hide()
         self.on_hide()
 
     # # # # # #
