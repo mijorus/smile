@@ -44,7 +44,7 @@ class Picker(Gtk.ApplicationWindow):
 
         self.emoji_grid_col_n = 5
         self.emoji_grid_first_row = []
-        
+
         self.selected_category_index = 0
         self.selected_category = 'smileys-emotion'
         self.query: str = None
@@ -105,8 +105,13 @@ class Picker(Gtk.ApplicationWindow):
 
         self.selected_buttons = []
 
-    def on_show(self, widget: Gtk.Window):
+    def on_activation(self):
+        print(dir(self.props.screen))
+        self.deiconify()
         self.set_focus(self.search_entry)
+
+    def on_show(self, widget: Gtk.Window):
+        pass
 
     # Create stuff
     def create_menu_button(self):
