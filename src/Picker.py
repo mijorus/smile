@@ -24,7 +24,7 @@ from .ShortcutsWindow import ShortcutsWindow
 from .CustomTagEntry import CustomTagEntry
 from .lib.custom_tags import get_custom_tags
 from .lib.emoji_history import increament_emoji_usage_counter, get_history
-from .utils import tag_list_contains
+from .utils import tag_list_contains, is_wayland
 
 gi.require_version('Gtk', '3.0')
 gi.require_version('Wnck', '3.0')
@@ -107,16 +107,18 @@ class Picker(Gtk.ApplicationWindow):
         self.selected_buttons = []
 
     def on_activation(self):
-        screen = Wnck.Screen.get_default()
-        windows = screen.get_windows() if screen else None
+        if not is_wayland():
+            screen = Wnck.Screen.get_default()
+            windows = screen.get_windows() if screen else None
 
-        if windows:
-            for w in windows:
-                if w.get_name() == 'smile' and w.get_icon_name() == 'smile':
-                    w.move_to_workspace(screen.get_active_workspace())
-                    break
+            if windows:
+                for w in windows:
+                    if w.get_name() == 'smile' and w.get_icon_name() == 'smile':
+                        w.move_to_workspace(screen.get_active_workspace())
+                        break
 
-        self.deiconify()
+            self.deiconify()
+
         self.present()
         self.set_focus(self.search_entry)
 
@@ -325,7 +327,11 @@ class Picker(Gtk.ApplicationWindow):
         return False
 
     def default_hiding_action(self):
-        self.iconify() if self.settings.get_boolean('iconify-on-esc') else self.hide()
+        if (self.settings.get_boolean('iconify-on-esc') and not is_wayland()):
+            self.iconify()
+        else:
+            self.hide()
+
         self.on_hide()
 
     # # # # # #

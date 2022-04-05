@@ -1,3 +1,4 @@
+import os
 from gi.repository import GLib, Gio
 
 def tag_list_contains(tags: str, q: str) -> bool():
@@ -25,7 +26,14 @@ def make_option(long_name, short_name=None, flags=0, arg=GLib.OptionArg.NONE, ar
 def read_text_resource(res: str) -> str:
     file = Gio.resources_lookup_data(res, Gio.ResourceLookupFlags.NONE)
     data: bytes = file.get_data()
-    
+
     decoded = data.decode('utf-8')
     file.unref()
     return decoded
+
+def is_wayland() -> bool:
+    for k in [os.getenv('XDG_SESSION_TYPE', ''), os.getenv('XDG_SESSION_DESKTOP')]:
+        if 'wayland' in k:
+            return True
+
+    return False
