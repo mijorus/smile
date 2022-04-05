@@ -60,6 +60,7 @@ class Smile(Gtk.Application):
                 self.window.show_all()
                 self.window.present()
         else:
+            self.window.present()
             self.window.show_all()
 
         self.window.on_activation()
