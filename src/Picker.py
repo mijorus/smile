@@ -27,7 +27,8 @@ from .lib.emoji_history import increament_emoji_usage_counter, get_history
 from .utils import tag_list_contains
 
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gio, Gdk
+gi.require_version('Wnck', '3.0')
+from gi.repository import Gtk, Gio, Gdk, Wnck
 
 class Picker(Gtk.ApplicationWindow):
     def __init__(self, *args, **kwargs):
@@ -106,7 +107,8 @@ class Picker(Gtk.ApplicationWindow):
         self.selected_buttons = []
 
     def on_activation(self):
-        print(dir(self.props.screen))
+        screen = Wnck.Screen.get_active_workspace()
+        # print(screen.get_active_workspace())
         self.deiconify()
         self.set_focus(self.search_entry)
 

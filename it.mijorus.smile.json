@@ -1,17 +1,17 @@
 {
-    "app-id" : "it.mijorus.smile",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "41",
-    "sdk" : "org.gnome.Sdk",
-    "command" : "smile",
-    "finish-args" : [
+    "app-id": "it.mijorus.smile",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "41",
+    "sdk": "org.gnome.Sdk",
+    "command": "smile",
+    "finish-args": [
         "--share=ipc",
         "--socket=wayland",
         "--socket=fallback-x11",
         "--device=dri",
         "--filesystem=xdg-config/autostart:create"
     ],
-    "cleanup" : [
+    "cleanup": [
         "/include",
         "/lib/pkgconfig",
         "/man",
@@ -22,7 +22,23 @@
         "*.la",
         "*.a"
     ],
-    "modules" : [
+    "modules": [
+        {
+            "name": "libwnck",
+            "buildsystem": "meson",
+            "cleanup": [
+                "/bin",
+                "/include",
+                "/lib/pkgconfig"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libwnck/40/libwnck-40.1.tar.xz",
+                    "sha256": "03134fa114ef3fbe34075aa83678f58aa2debe9fcef4ea23c0779e28601d6611"
+                }
+            ]
+        },
         {
             "name": "python3-manimpango",
             "buildsystem": "simple",
@@ -38,13 +54,13 @@
             ]
         },
         {
-            "name" : "smile",
-            "builddir" : true,
-            "buildsystem" : "meson",
-            "sources" : [
+            "name": "smile",
+            "builddir": true,
+            "buildsystem": "meson",
+            "sources": [
                 {
-                    "type" : "dir",
-                    "path" : "./"
+                    "type": "dir",
+                    "path": "./"
                 }
             ]
         }
