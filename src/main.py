@@ -58,11 +58,11 @@ class Smile(Gtk.Application):
 
             if not self.start_hidden:
                 self.window.show_all()
-                self.window.present()
+                self.window.on_activation()
         else:
             self.window.show_all()
+            self.window.on_activation()
 
-        self.window.on_activation()
 
     def create_action(self, name, callback):
         """ Add an Action and connect to a callback """
