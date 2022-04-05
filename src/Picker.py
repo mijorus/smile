@@ -107,9 +107,17 @@ class Picker(Gtk.ApplicationWindow):
         self.selected_buttons = []
 
     def on_activation(self):
-        screen = Wnck.Screen.get_active_workspace()
-        # print(screen.get_active_workspace())
+        screen = Wnck.Screen.get_default()
+        windows = screen.get_windows() if screen else None
+
+        if windows:
+            for w in windows:
+                if w.get_name() == 'smile' and w.get_icon_name() == 'smile':
+                    w.move_to_workspace(screen.get_active_workspace())
+                    break
+
         self.deiconify()
+        self.present()
         self.set_focus(self.search_entry)
 
     def on_show(self, widget: Gtk.Window):

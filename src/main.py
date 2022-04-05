@@ -61,8 +61,7 @@ class Smile(Gtk.Application):
                 self.window.present()
         else:
             self.window.show_all()
-            self.window.present()
-        
+
         self.window.on_activation()
 
     def create_action(self, name, callback):
