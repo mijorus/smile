@@ -65,7 +65,7 @@ class Picker(Gtk.ApplicationWindow):
         self.list_tip_container.add(Gtk.Label(label='', opacity=0.7, justify=Gtk.Justification.CENTER))
 
         self.emoji_list = self.create_emoji_list()
-        self.category_count = 0 # will be set in create_category_picker()
+        self.category_count = 0  # will be set in create_category_picker()
         self.category_picker = self.create_category_picker()
         scrolled.add(self.emoji_list)
 
@@ -130,7 +130,7 @@ class Picker(Gtk.ApplicationWindow):
         builder.add_from_resource('/it/mijorus/smile/ui/menu.xml')
         menu = builder.get_object('primary_menu')
 
-        return Gtk.MenuButton(popover=menu, image=Gtk.Image.new_from_icon_name('open-menu-symbolic', Gtk.IconSize.MENU), use_popover = True)
+        return Gtk.MenuButton(popover=menu, image=Gtk.Image.new_from_icon_name('open-menu-symbolic', Gtk.IconSize.MENU), use_popover=True)
 
     def create_emoji_button(self, data: dict):
         button = Gtk.Button()
@@ -194,7 +194,6 @@ class Picker(Gtk.ApplicationWindow):
 
             if is_recent:
                 self.history_size += 1
-            
 
         print('Emoji list creation took ' + str((time.time_ns() // 1000000) - start) + 'ms')
         return flowbox
@@ -255,7 +254,7 @@ class Picker(Gtk.ApplicationWindow):
 
                         self.selection.pop()
                         self.selected_buttons.pop()
-                        
+
                         if not self.selection.__contains__(last_button.get_label()):
                             last_button.get_style_context().remove_class('selected')
                         self.update_selection_content(self.selection)
@@ -271,10 +270,10 @@ class Picker(Gtk.ApplicationWindow):
             elif event.keyval == Gdk.KEY_question:
                 shortcut_window = ShortcutsWindow()
                 shortcut_window.open()
-                
+
             if ('next_sel' in locals()):
                 category_picker_box = self.category_picker.get_children()[0].get_children()[0]
-                
+
                 for child in category_picker_box.get_children():
                     if child.index == next_sel:
                         self.filter_for_category(child)
@@ -321,7 +320,6 @@ class Picker(Gtk.ApplicationWindow):
                                     break
 
                         return True
-                
 
         return False
 
@@ -335,7 +333,7 @@ class Picker(Gtk.ApplicationWindow):
 
     # # # # # #
     def update_list_tip(self, text: str = None):
-        if (text == None):
+        if (text is None):
             self.list_tip_container.set_reveal_child(False)
         else:
             self.list_tip_container.get_children()[0].set_label(text)
@@ -375,7 +373,6 @@ class Picker(Gtk.ApplicationWindow):
         else:
             label = Gtk.Label(label='No skintones available')
             popover_content.pack_end(label, False, True, 2)
-
 
         popover.add(popover_content)
         popover_content.show_all()
