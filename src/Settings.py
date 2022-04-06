@@ -3,7 +3,7 @@ import sys
 import gi
 from .assets.emoji_list import emojis
 from .lib.custom_tags import set_custom_tags, get_custom_tags, get_all_custom_tags, delete_custom_tags
-from .utils import read_text_resource
+from .utils import read_text_resource, is_wayland
 
 
 gi.require_version('Gtk', '3.0')
@@ -21,9 +21,18 @@ class Settings():
         self.empty_list_label = Gtk.Label(label="There are no custom tags for any emoji yet; create one with <b>Alt+T</b>", use_markup=True, margin=10)
 
         self.settings = Gio.Settings.new('it.mijorus.smile')
-        self.create_boolean_settings_entry('Open on mouse position', 'open-on-mouse-position', 'Might not work on Wayland systems')
-        self.create_boolean_settings_entry('Load on login', 'load-hidden-on-startup', 'Automatically load Smile in background on login for a faster launch')
-        # self.create_boolean_settings_entry('Minimize on exit', 'iconify-on-esc', 'Minimize the window when pressing ESC\nor when selecting an emoji, instead of hiding it;\nresuming the app when minimized is faster\nbut shows up in your system tray')
+
+        wl_not_available_text = 'Not available yet on Wayland'
+        
+        text = wl_not_available_text if is_wayland() else None
+        self.create_boolean_settings_entry('Open at mouse position', 'open-on-mouse-position', text, usable=(not is_wayland()))
+        self.create_boolean_settings_entry('Load on login', 'load-hidden-on-startup', 'Automatically load Smile in background for a faster launch')
+
+        text: str = 'Minimize the window when pressing ESC\nor when selecting an emoji, instead of hiding it;\nresuming the app when minimized is faster\nbut will show up in your system tray'
+        if is_wayland():
+            text = wl_not_available_text
+
+        self.create_boolean_settings_entry('Minimize on exit', 'iconify-on-esc', text, usable=(not is_wayland()))
         self.create_custom_tags_list()
         self.create_launch_shortcut_settings_entry()
 
@@ -49,7 +58,7 @@ class Settings():
             self.create_error_dialog('The has been an error trying to add Smile to the autostart services', e)
             self.settings.set_boolean(key, False)
 
-    def create_boolean_settings_entry(self, label: str, key: str, subtitle: str = None):
+    def create_boolean_settings_entry(self, label: str, key: str, subtitle: str = None, usable: bool = True):
         container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, margin=10)
 
         # Title box
@@ -64,6 +73,11 @@ class Settings():
         # Switch
         switch = Gtk.Switch(valign=Gtk.Align.CENTER)
         self.settings.bind(key, switch, 'state', Gio.SettingsBindFlags.DEFAULT)
+
+        switch.set_sensitive(usable)
+
+        if not usable:
+            container.set_opacity(0.7)
 
         container.pack_end(switch, False, False, 0)
 
