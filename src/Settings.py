@@ -26,7 +26,7 @@ class Settings():
         
         text = wl_not_available_text if is_wayland() else None
         self.create_boolean_settings_entry('Open at mouse position', 'open-on-mouse-position', text, usable=(not is_wayland()))
-        self.create_boolean_settings_entry('Load on login', 'load-hidden-on-startup', 'Automatically load Smile in background on login for a faster launch')
+        self.create_boolean_settings_entry('Load on login', 'load-hidden-on-startup', 'Automatically load Smile in background for a faster launch')
 
         text: str = 'Minimize the window when pressing ESC\nor when selecting an emoji, instead of hiding it;\nresuming the app when minimized is faster\nbut will show up in your system tray'
         if is_wayland():

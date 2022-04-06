@@ -46,6 +46,9 @@ You will need:
 git clone https://github.com/mijorus/smile.git
 cd smile
 
+# kill any instance of Smile
+flatpak kill it.mijorus.smile
+
 # to run the app:
 flatpak-builder build/ it.mijorus.smile.json --user --force-clean
 flatpak-builder --run build/ it.mijorus.smile.json smile
