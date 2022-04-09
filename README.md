@@ -3,6 +3,10 @@
   <img width="150" src="https://raw.githubusercontent.com/mijorus/smile/master/docs/it.mijorus.smile.png">
 </p>
 
+<p align="center">
+  <img width="150" src="https://img.shields.io/endpoint?url=https://flathub-stats-backend.vercel.app/badges/it.mijorus.smile/shields.io.json">
+</p>
+
 Smile is a simple emoji picker for linux with **custom tags support**.
 
 ... Wait what?
