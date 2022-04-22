@@ -1,8 +1,6 @@
-import manimpango
-import sys
 import gi
 from .assets.emoji_list import emojis
-from .lib.custom_tags import set_custom_tags, get_custom_tags, get_all_custom_tags, delete_custom_tags
+from .lib.custom_tags import set_custom_tags, get_all_custom_tags, delete_custom_tags
 from .utils import read_text_resource, is_wayland
 
 
@@ -15,7 +13,7 @@ class Settings():
         builder.add_from_resource('/it/mijorus/smile/ui/settings.glade')
         self.window = builder.get_object('settings-window')
         self.application_id = application_id
-        
+
         self.list_box = builder.get_object('preferencies-listbox')
         self.custom_tags_list_box = builder.get_object('customtags-listbox')
         self.empty_list_label = Gtk.Label(label="There are no custom tags for any emoji yet; create one with <b>Alt+T</b>", use_markup=True, margin=10)
