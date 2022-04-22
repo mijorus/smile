@@ -123,8 +123,9 @@ class Settings():
                         box.pack_start( label, False, True,  5 )
 
                         delete_button = Gtk.Button(label="Remove")
+                        delete_button.hexcode = e
                         delete_button.get_style_context().add_class('destructive-action')
-                        delete_button.connect('clicked', lambda w: self.delete_tag(e))
+                        delete_button.connect('clicked', lambda w: self.delete_tag(w.hexcode))
 
                         box.pack_end(delete_button, False, True,  5)
 
