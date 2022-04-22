@@ -110,9 +110,12 @@ class Settings():
         if not len(custom_tags):
             rows.append(self.empty_list_label)
         else:
-            for hexcode, tags in custom_tags.items():
+            for hexcode, config in custom_tags.items():
+                if not 'tags' in config or not config['tags']:
+                    continue
+
                 box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, expand=True, margin=5)
-                
+
                 for e, data in emojis.items():
                     if (e == hexcode):
                         label = Gtk.Label(label=data['emoji'], halign=Gtk.Align.START)
@@ -125,7 +128,7 @@ class Settings():
 
                         box.pack_end(delete_button, False, True,  5)
 
-                        entry = Gtk.Entry(text=tags['tags'])
+                        entry = Gtk.Entry(text=config['tags'])
                         entry.hexcode = hexcode
                         
                         box.pack_end(entry, True, True, 5 )
@@ -142,19 +145,21 @@ class Settings():
             self.custom_tags_list_box.add(listbox_row)
 
     def delete_tag(self, hexcode: str):
+        print('DELETING ' + hexcode)
         result = delete_custom_tags(hexcode)
 
         if result:
             for child in self.custom_tags_list_box.get_children():
                 if child.get_children()[0].hexcode == hexcode:
-                    child.destroy()
+                    self.custom_tags_list_box.remove(child)
                     break
 
         if (not get_all_custom_tags()) or (len(get_all_custom_tags()) == 0):
             listbox_row = Gtk.ListBoxRow(selectable=False, visible=True)
             listbox_row.add(self.empty_list_label)
             self.custom_tags_list_box.add(listbox_row)
-            self.custom_tags_list_box.show_all()
+
+        self.custom_tags_list_box.show_all()
 
     def on_settings_changes(self, settings, key: str):
         callback = getattr(self, f"on_{key.replace('-', '_')}_changed", None)
