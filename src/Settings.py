@@ -144,7 +144,6 @@ class Settings():
             self.custom_tags_list_box.add(listbox_row)
 
     def delete_tag(self, hexcode: str):
-        print('DELETING ' + hexcode)
         result = delete_custom_tags(hexcode)
 
         if result:
