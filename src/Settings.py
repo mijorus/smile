@@ -20,7 +20,7 @@ class Settings():
 
         self.settings = Gio.Settings.new('it.mijorus.smile')
 
-        wl_not_available_text = 'Not available yet on Wayland'
+        wl_not_available_text = 'Not available on Wayland'
         
         text = wl_not_available_text if is_wayland() else None
         self.create_boolean_settings_entry('Open at mouse position', 'open-on-mouse-position', text, usable=(not is_wayland()))
@@ -56,7 +56,7 @@ class Settings():
             self.create_error_dialog('The has been an error trying to add Smile to the autostart services', e)
             self.settings.set_boolean(key, False)
 
-    def create_boolean_settings_entry(self, label: str, key: str, subtitle: str = None, usable: bool = True):
+    def create_boolean_settings_entry(self, label: str, key: str, subtitle: str=None, usable: bool=True):
         container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, margin=10)
 
         # Title box
@@ -75,7 +75,7 @@ class Settings():
         switch.set_sensitive(usable)
 
         if not usable:
-            container.set_opacity(0.7)
+            container.set_opacity(0.5)
 
         container.pack_end(switch, False, False, 0)
 
