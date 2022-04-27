@@ -18,8 +18,8 @@
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
-            <property name="action-name">app.preferencies</property>
-            <property name="text" translatable="yes">Preferencies</property>
+            <property name="action-name">app.preferences</property>
+            <property name="text" translatable="yes">Preferences</property>
           </object>
         </child>
         <child>

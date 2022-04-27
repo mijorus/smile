@@ -50,8 +50,8 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkListBox" id="preferencies-listbox">
-                        <property name="name">preferencies-listbox</property>
+                      <object class="GtkListBox" id="preferences-listbox">
+                        <property name="name">preferences-listbox</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
                       </object>
@@ -98,7 +98,7 @@
                     </child>
                     <child>
                       <object class="GtkListBox" id="customtags-listbox">
-                        <property name="name">preferencies-listbox</property>
+                        <property name="name">preferences-listbox</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
                       </object>

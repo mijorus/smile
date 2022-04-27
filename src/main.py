@@ -52,7 +52,7 @@ class Smile(Gtk.Application):
             self.window = Picker(application=self)
             self.window.connect("destroy", Gtk.main_quit)
 
-            self.create_action("preferencies", lambda w,e: Settings(self.application_id))
+            self.create_action("preferences", lambda w,e: Settings(self.application_id))
             self.create_action("open_shortcuts", lambda w,e: ShortcutsWindow().open())
             self.create_action("about", self.on_about_action)
 

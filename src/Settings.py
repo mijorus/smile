@@ -14,7 +14,7 @@ class Settings():
         self.window = builder.get_object('settings-window')
         self.application_id = application_id
 
-        self.list_box = builder.get_object('preferencies-listbox')
+        self.list_box = builder.get_object('preferences-listbox')
         self.custom_tags_list_box = builder.get_object('customtags-listbox')
         self.empty_list_label = Gtk.Label(label="There are no custom tags for any emoji yet; create one with <b>Alt+T</b>", use_markup=True, margin=10)
 
@@ -117,7 +117,7 @@ class Settings():
                 for e, data in emojis.items():
                     if (e == hexcode):
                         label = Gtk.Label(label=data['emoji'], halign=Gtk.Align.START)
-                        label.get_style_context().add_class('emoji_with_custom_tags_preferencies')
+                        label.get_style_context().add_class('emoji_with_custom_tags_preferences')
                         box.pack_start( label, False, True,  5 )
 
                         delete_button = Gtk.Button(label="Remove")
