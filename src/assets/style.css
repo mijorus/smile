@@ -42,3 +42,7 @@
 .emoji_with_custom_tags_preferences {
     font-size: 20px;
 }
+
+window {
+    border-radius: 10px;
+}

@@ -1,0 +1,9 @@
+{
+    "buttons": [
+        {
+            "name": "Run",
+            "script": "flatpak-builder build/ it.mijorus.smile.json --user --force-clean && flatpak-builder --run --env=DEBUG_MODE=dev build/ it.mijorus.smile.json smile",
+            "description": ""
+        }
+    ]
+}

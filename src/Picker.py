@@ -74,16 +74,19 @@ class Picker(Gtk.ApplicationWindow):
         self.viewport_box.pack_end(self.category_picker, False, True, 3)
 
         # Create an header bar
-        self.header_bar = Gtk.HeaderBar()
-        self.header_bar.props.show_close_button = True
-        self.menu_button = self.create_menu_button()
-        self.header_bar.pack_end(self.menu_button)
+        # self.header_bar = Gtk.HeaderBar()
+        # self.header_bar.props.show_close_button = True
+        # self.menu_button = self.create_menu_button()
+        # self.header_bar.pack_end(self.menu_button)
+
+        self.set_decorated(False)
 
         # Create search entry
-        self.search_entry = self.create_search_entry()
+        # self.search_entry = self.create_search_entry()
 
-        self.header_bar.pack_start(self.search_entry)
-        self.set_titlebar(self.header_bar)
+        # self.header_bar.pack_start(self.search_entry)
+        # self.set_titlebar(self.header_bar)
+        # self.header_bar.set_visible(False)
 
         self.shortcut_window: ShortcutsWindow = None
         self.shift_key_pressed = False
