@@ -10,5 +10,8 @@
         <key name="iconify-on-esc" type="b">
             <default>false</default>
         </key>
+        <key name="is-first-run" type="b">
+            <default>true</default>
+        </key>
     </schema>
 </schemalist>

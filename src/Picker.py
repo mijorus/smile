@@ -28,6 +28,7 @@ from .utils import tag_list_contains, is_wayland
 
 gi.require_version('Gtk', '3.0')
 gi.require_version('Wnck', '3.0')
+
 from gi.repository import Gtk, Gio, Gdk, Wnck
 
 class Picker(Gtk.ApplicationWindow):
@@ -416,6 +417,15 @@ class Picker(Gtk.ApplicationWindow):
             increament_emoji_usage_counter(button)
 
         clip.set_text(''.join([*self.selection, text]), -1)
+
+        if self.settings.get_boolean('is-first-run'):
+            n = Gio.Notification.new('Copied!')
+            n.set_body("I have copied the emoji to the clipboard. You can now paste it in any input field.")
+            n.set_icon(Gio.ThemedIcon.new('dialog-information'))
+
+            Gio.Application.get_default().send_notification('copy-message', n)
+            self.settings.set_boolean('is-first-run', False)
+
         self.default_hiding_action()
 
     def search_emoji(self, search_entry: str):
