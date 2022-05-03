@@ -9,12 +9,18 @@
 
 Smile is a simple emoji picker for linux with **custom tags support**.
 
+
+### Custom tags
 ... Wait what?
 
 No matter how many tags we put, there is always going to be that one emoji you use every day which you expect to show up when you enter a specific query, but it doesn't. Smile wants to fix that, allowing the user to set his/her own custom tags for a specific emoji.
 
 An example?  
 Do you want 🌐 to show up when you search for "internet", but it is only tagged as "globe"? Select the icon using the arrow keys and press `Alt + T` to insert "internet" as custom tag.
+
+<p align="center">
+  <img width="500" src="https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot4.png">
+</p>
 
 ### Custom shortcut
 This app does not register its own system-wide shortcut, but you can create one simply by going in the system settings. Most, if not all, distrubutions let the user add shortcuts that trigger custom commands. 
@@ -23,10 +29,19 @@ You can create a shortcut for Smile by launching this command: `flatpak run it.m
 
 I believe that having all the shortcuts in once central panel is a much better user expecience than apps registering their own shortcuts separately.
 
+### Skintone selector
 
+Press `Alt + E` or `Right Click` on any emoji with the **rounded top-right** corner (see screenshot below).
 <p align="center">
-  <img width="500" src="https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot4.png">
+  <img width="500" src="https://user-images.githubusercontent.com/39067225/166464525-fb2a56ef-581d-4c08-ad23-4bcd245e7fdd.png">
 </p>
+
+### Multi selection
+Use `Shift + Enter` to select multiple emojis; use `Ctrl+Enter` to quit without selecting an additional emoji
+
+![image](https://user-images.githubusercontent.com/39067225/166487730-e1b6b686-5095-4ddb-8ba9-723b3d53101d.png)
+
+
 
 ## Download
 <a href="https://flathub.org/apps/details/it.mijorus.smile" align="center">
