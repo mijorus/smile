@@ -23,6 +23,9 @@ You can create a shortcut for Smile by launching this command: `flatpak run it.m
 
 I believe that having all the shortcuts in once central panel is a much better user expecience than apps registering their own shortcuts separately.
 
+### Skintone selector
+
+Press `Alt + E` or `Right Click` on any emoji with the **rounded top-right** corner.
 
 <p align="center">
   <img width="500" src="https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot4.png">
