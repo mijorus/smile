@@ -70,6 +70,20 @@ class Picker(Gtk.ApplicationWindow):
         self.category_picker = self.create_category_picker()
         scrolled.add(self.emoji_list)
 
+        self.search_entry = self.create_search_entry()
+        self.search_entry.props.margin = 3
+        self.search_entry.props.hexpand = True
+
+        menu_button = self.create_menu_button()
+        menu_button.props.valign = Gtk.Align.CENTER
+
+        search_entry_container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        search_entry_container.pack_start(self.search_entry, False, True, 0)
+        search_entry_container.pack_end(menu_button, False, False, 0)
+
+        self.viewport_box.pack_start(search_entry_container, False, False, 3)
+
+
         self.viewport_box.pack_start(self.list_tip_container, False, False, 0)
         self.viewport_box.pack_start(scrolled, True, True, 0)
         self.viewport_box.pack_end(self.category_picker, False, True, 3)
@@ -83,7 +97,6 @@ class Picker(Gtk.ApplicationWindow):
         self.set_decorated(False)
 
         # Create search entry
-        # self.search_entry = self.create_search_entry()
 
         # self.header_bar.pack_start(self.search_entry)
         # self.set_titlebar(self.header_bar)
@@ -279,6 +292,9 @@ class Picker(Gtk.ApplicationWindow):
                 category_picker_box = self.category_picker.get_children()[0].get_children()[0]
 
                 for child in category_picker_box.get_children():
+                    if isinstance(child, Gtk.MenuButton):
+                        continue
+
                     if child.index == next_sel:
                         self.filter_for_category(child)
                         break
@@ -348,6 +364,9 @@ class Picker(Gtk.ApplicationWindow):
 
     def set_active_category(self, category: str):
         for b in self.category_picker.get_children()[0].get_children()[0].get_children():
+            if isinstance(b, Gtk.MenuButton):
+                continue
+
             if b.category != category:
                 b.get_style_context().remove_class('selected')
             else:
