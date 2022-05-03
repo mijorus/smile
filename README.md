@@ -36,6 +36,10 @@ Press `Alt + E` or `Right Click` on any emoji with the **rounded top-right** cor
   <img width="500" src="https://user-images.githubusercontent.com/39067225/166464525-fb2a56ef-581d-4c08-ad23-4bcd245e7fdd.png">
 </p>
 
+### Multi selection
+Use `Shift + Enter` to select multiple emojis
+![image](https://user-images.githubusercontent.com/39067225/166487730-e1b6b686-5095-4ddb-8ba9-723b3d53101d.png)
+
 
 
 ## Download
