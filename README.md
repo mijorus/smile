@@ -37,7 +37,7 @@ Press `Alt + E` or `Right Click` on any emoji with the **rounded top-right** cor
 </p>
 
 ### Multi selection
-Use `Shift + Enter` to select multiple emojis; use `Ctrl+Enter` to quit without selecting an additional emojis
+Use `Shift + Enter` to select multiple emojis; use `Ctrl+Enter` to quit without selecting an additional emoji
 
 ![image](https://user-images.githubusercontent.com/39067225/166487730-e1b6b686-5095-4ddb-8ba9-723b3d53101d.png)
 
