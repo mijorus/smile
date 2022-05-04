@@ -77,6 +77,10 @@ flatpak-builder --run build/ it.mijorus.smile.json smile
 flatpak-builder build/ it.mijorus.smile.json --user --install --force-clean
 ```
 
+## Thanks to
+
+- [Emote](https://github.com/tom-james-watson/Emote) for the inspiration and some code
+
 ## Some more screenshots
 <p align="center">
   <img width="500" src="https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot1.png">
@@ -90,6 +94,10 @@ flatpak-builder build/ it.mijorus.smile.json --user --install --force-clean
 <p align="center">
   <img width="500" src="https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot5.png">
 </p>
+<p align="center">
+  <img width="500" src="https://user-images.githubusercontent.com/39067225/166669581-6a94e26d-0b4c-4583-8767-e1f3db84ed78.png">
+</p>
+
 
 
 
