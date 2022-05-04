@@ -13,7 +13,7 @@ Smile is a simple emoji picker for linux with **custom tags support**.
 ### Custom tags
 ... Wait what?
 
-No matter how many tags we put, there is always going to be that one emoji you use every day which you expect to show up when you enter a specific query, but it doesn't. Smile wants to fix that, allowing the user to set their own custom tags for a specific emoji.
+No matter how many tags we put, there is always going to be that one emoji you use every day which you expect to show up when you enter a specific query, but it doesn't. Smile wants to fix that, allowing the users to set their own custom tags for a specific emoji.
 
 An example?  
 Do you want 🌐 to show up when you search for "internet", but it is only tagged as "globe"? Select the icon using the arrow keys and press `Alt + T` to insert "internet" as custom tag.
