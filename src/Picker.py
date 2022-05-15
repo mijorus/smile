@@ -33,10 +33,10 @@ from gi.repository import Gtk, Gio, Gdk, Wnck
 
 class Picker(Gtk.ApplicationWindow):
     def __init__(self, *args, **kwargs):
-        super().__init__(title="Smile", resizable=False, border_width=5, *args, **kwargs)
+        super().__init__(title="Smile", resizable=True, border_width=5, *args, **kwargs)
         self.connect('key_press_event', self.handle_window_key_press)
         self.connect('key_release_event', self.handle_window_key_release)
-        self.set_default_size(200, 350)
+        self.set_default_size(-1, 350)
         self.set_position(Gtk.WindowPosition.MOUSE)
 
         self.settings: Gio.Settings = Gio.Settings.new('it.mijorus.smile')
@@ -60,6 +60,7 @@ class Picker(Gtk.ApplicationWindow):
         self.categories_count = 0
         scrolled = Gtk.ScrolledWindow()
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
+        scrolled.set_size_request(-1, 300)
         self.viewport_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
         self.list_tip_container = Gtk.Revealer(reveal_child=False)
