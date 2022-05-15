@@ -453,7 +453,9 @@ class Picker(Gtk.ApplicationWindow):
         filter_result = True
         
         if self.query:
-            if get_custom_tags(e['hexcode'], cache=True) and tag_list_contains(get_custom_tags(e['hexcode'], cache=True), self.query):
+            if self.query == e['emoji']: 
+                filter_result = True
+            elif get_custom_tags(e['hexcode'], cache=True) and tag_list_contains(get_custom_tags(e['hexcode'], cache=True), self.query):
                 filter_result = True
             elif tag_list_contains(e['tags'], self.query): 
                 filter_result = True
