@@ -19,7 +19,7 @@ class Settings():
         self.modifiers_list_box = builder.get_object('modifiers-listbox')
         self.empty_list_label = Gtk.Label(label="There are no custom tags for any emoji yet; create one with <b>Alt+T</b>", use_markup=True, margin=10)
 
-        self.settings = Gio.Settings.new('it.mijorus.smile')l
+        self.settings = Gio.Settings.new('it.mijorus.smile')
 
         wl_not_available_text = 'Not available on Wayland'
         
@@ -192,6 +192,7 @@ class Settings():
             if self.settings.get_string('skintone-modifier') == j[0]:
                 skintones_combo.set_active(i)
 
+        skintones_combo.connect('changed', lambda w: self.settings.set_string('skintone-modifier', w.get_active_id()))
         container.pack_end(skintones_combo, False, False, 0)
 
         listbox_row = Gtk.ListBoxRow(selectable=False)
