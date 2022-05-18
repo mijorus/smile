@@ -365,7 +365,12 @@ class Picker(Gtk.ApplicationWindow):
 
     def show_skin_selector(self, widget: Gtk.Button):
         popover = Gtk.Popover(relative_to=widget)
-        popover_content = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, name='skin_selector')
+        popover_content = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, name='skin_selector', hexpand=True)
+
+        popover_container = Gtk.ScrolledWindow()
+        popover_container.set_max_content_width(300)
+        popover_container.set_propagate_natural_width(True)
+        popover_container.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.NEVER)
 
         relative_widget_hexcode = widget.emoji_data['hexcode']
         if ('skintones' in emojis[relative_widget_hexcode]):
@@ -376,8 +381,9 @@ class Picker(Gtk.ApplicationWindow):
             label = Gtk.Label(label='No skintones available')
             popover_content.pack_end(label, False, True, 2)
 
-        popover.add(popover_content)
-        popover_content.show_all()
+        popover.add(popover_container)
+        popover_container.add_with_viewport(popover_content)
+        popover_container.show_all()
         popover.popup()
 
         self.emoji_list.set_opacity(0.5)
