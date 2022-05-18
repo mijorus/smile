@@ -16,9 +16,10 @@ class Settings():
 
         self.list_box = builder.get_object('preferences-listbox')
         self.custom_tags_list_box = builder.get_object('customtags-listbox')
+        self.modifiers_list_box = builder.get_object('modifiers-listbox')
         self.empty_list_label = Gtk.Label(label="There are no custom tags for any emoji yet; create one with <b>Alt+T</b>", use_markup=True, margin=10)
 
-        self.settings = Gio.Settings.new('it.mijorus.smile')
+        self.settings = Gio.Settings.new('it.mijorus.smile')l
 
         wl_not_available_text = 'Not available on Wayland'
         
@@ -32,6 +33,7 @@ class Settings():
 
         self.create_boolean_settings_entry('Minimize on exit', 'iconify-on-esc', text, usable=(not is_wayland()))
         self.create_custom_tags_list()
+        self.create_modifiers_combo_boxes()
         self.create_launch_shortcut_settings_entry()
 
         self.custom_tags_entries: list[Gtk.Entry] = []
@@ -176,7 +178,26 @@ class Settings():
 
         dialog.run()
         dialog.destroy()
-    
+
+    def create_modifiers_combo_boxes(self):
+        container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, margin=10)
+        container.pack_start(Gtk.Label(label='Default skintone', halign=Gtk.Align.START), True, True, 0)
+
+        skintones = [["", "👋"], ["1F3FB", "👋🏻"], ["1F3FC", "👋🏼"], ["1F3FD", "👋🏽"], ["1F3FE", "👋🏾"], ["1F3FF", "👋🏿"]]
+        skintones_combo = Gtk.ComboBoxText()
+        
+        for i, j in enumerate(skintones):
+            skintones_combo.append(j[0], j[1])
+
+            if self.settings.get_string('skintone-modifier') == j[0]:
+                skintones_combo.set_active(i)
+
+        container.pack_end(skintones_combo, False, False, 0)
+
+        listbox_row = Gtk.ListBoxRow(selectable=False)
+        listbox_row.add(container)
+        self.modifiers_list_box.add(listbox_row)
+
     def on_window_close(self, widget: Gtk.Window):
         for listbox_row in self.custom_tags_list_box.get_children():
             row = listbox_row.get_children()[0]

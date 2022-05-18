@@ -8,6 +8,41 @@ from problematic_emojis import problematic
 
 output = {}
 
+emoji_categories = {
+    'recents': {
+        'icon': '🕖️',
+    },
+    'smileys-emotion': {
+        'icon': '😀',
+    },
+    'animals-nature': {
+        'icon': '🐶'
+    },
+    'food-drink': {
+        'icon': '🍔'
+    },
+    'travel-places': {
+        'icon': '🚘️'
+    },
+    'events': {
+        'icon': '🎁'
+    },
+    'activities': {
+        'icon': '⚽️'
+    },
+    'objects': {
+        'icon': '💡'
+    },
+    'symbols': {
+        'icon': '1️⃣'
+    },
+    'flags': {
+        'icon': '🏳️'
+    },
+}
+
+components = {}
+
 def append_skintone(skintone: dict, base_hex: str):
     global output
     for e, o in output.items():
@@ -22,43 +57,18 @@ def main():
     datadir = os.path.join(prefix, 'share/smile/smile/assets')
     cat = set()
 
-    emoji_categories = {
-        'recents': {
-            'icon': '🕖️',
-        },
-        'smileys-emotion': {
-            'icon': '😀',
-        },
-        'animals-nature': {
-            'icon': '🐶'
-        },
-        'food-drink': {
-            'icon': '🍔'
-        },
-        'travel-places': {
-            'icon': '🚘️'
-        },
-        'events': {
-            'icon': '🎁'
-        },
-        'activities': {
-            'icon': '⚽️'
-        },
-        'objects': {
-            'icon': '💡'
-        },
-        'symbols': {
-            'icon': '1️⃣'
-        },
-        'flags': {
-            'icon': '🏳️'
-        },
-    }
+   
 
     emoji_list = json.load(open(os.path.dirname(__file__) + '/openmoji.json', 'r'))
     for i, el in enumerate(emoji_list):
+        if el['group'] == 'component':
+            if not el['subgroups'] in components:
+                components[ el['subgroups'] ] = {}
+
+            components[el['subgroups']][el['hexcode']] = el
+
         # ignore if an emoji is misbehaving
-        if problematic.__contains__(el['hexcode']) or el['group'] == 'extras-openmoji':
+        if (el['hexcode'] in problematic) or (el['group'] == 'extras-openmoji'):
             continue
 
         if (len(el['skintone_base_hexcode']) > 0) and (el['skintone_base_hexcode'] != el['hexcode']):
@@ -102,7 +112,7 @@ def main():
         cat.add(el['group'])
 
     output_dict = StringIO()
-    print(f'emojis = {output}\nemoji_categories = {emoji_categories}', file=output_dict)
+    print(f'emojis = {output}\nemoji_categories = {emoji_categories}\ncomponents = {components}', file=output_dict)
 
     output_file = open(f"{datadir}/emoji_list.py", 'w+')
     output_file.write(output_dict.getvalue())

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- available types here: https://docs.gtk.org/glib/struct.VariantType.html -->
 <schemalist gettext-domain="smile">
 	<schema id="it.mijorus.smile" path="/it/mijorus/smile/">
         <key name="open-on-mouse-position" type="b">
@@ -12,6 +13,12 @@
         </key>
         <key name="is-first-run" type="b">
             <default>true</default>
+        </key>
+        <key name="skintone-modifier" type="s">
+            <default>""</default>
+        </key>
+        <key name="haircut-modifier" type="s">
+            <default>""</default>
         </key>
     </schema>
 </schemalist>

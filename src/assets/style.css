@@ -39,6 +39,10 @@
     border-radius: 10px;
 }
 
+#modifiers-listbox {
+    border-radius: 10px;
+}
+
 .emoji_with_custom_tags_preferences {
     font-size: 20px;
 }
