@@ -141,8 +141,17 @@ class Picker(Gtk.ApplicationWindow):
         button.hexcode = data['hexcode']
         button.history = get_history()[data['hexcode']] if (data['hexcode']) in get_history() else None
         # button.tag = f"{data['annotation']} {data['tags']}".replace(',', ' ')
+
         if 'skintones' in data:
             button.get_style_context().add_class('emoji-with-skintones')
+
+            modifier_settings = self.settings.get_string('skintone-modifier')
+            if len(modifier_settings):
+                for tone in data['skintones']:
+                    if f'-{modifier_settings}' in tone['hexcode']:
+                        button.set_label(tone['emoji'])
+                        break
+
 
         button.connect('clicked', self.handle_emoji_button_click)
         button.connect('button_press_event', lambda w, e: self.show_skin_selector(w) if e.button == 3 else None)
@@ -368,7 +377,7 @@ class Picker(Gtk.ApplicationWindow):
         popover_content = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, name='skin_selector', hexpand=True)
 
         popover_container = Gtk.ScrolledWindow()
-        popover_container.set_max_content_width(300)
+        popover_container.set_max_content_width(500)
         popover_container.set_propagate_natural_width(True)
         popover_container.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.NEVER)
 
