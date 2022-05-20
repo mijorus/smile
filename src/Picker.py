@@ -44,6 +44,8 @@ class Picker(Gtk.ApplicationWindow):
             self.set_position(Gtk.WindowPosition.MOUSE) if s.get_boolean('open-on-mouse-position') else self.set_position(Gtk.WindowPosition.CENTER)
         )
 
+        self.settings.connect('changed::skintone-modifier', self.update_emoji_skintones)
+
         self.emoji_grid_col_n = 5
         self.emoji_grid_first_row = []
 
@@ -145,10 +147,10 @@ class Picker(Gtk.ApplicationWindow):
         if 'skintones' in data:
             button.get_style_context().add_class('emoji-with-skintones')
 
-            modifier_settings = self.settings.get_string('skintone-modifier')
-            if len(modifier_settings):
+            skintone_modifier_settings = self.settings.get_string('skintone-modifier')
+            if len(skintone_modifier_settings):
                 for tone in data['skintones']:
-                    if f'-{modifier_settings}' in tone['hexcode']:
+                    if f'-{skintone_modifier_settings}' in tone['hexcode']:
                         button.set_label(tone['emoji'])
                         break
 
@@ -188,7 +190,13 @@ class Picker(Gtk.ApplicationWindow):
         return scrolled
 
     def create_emoji_list(self) -> Gtk.FlowBox:
-        flowbox = Gtk.FlowBox(valign=Gtk.Align.START, homogeneous=True, name='emoji_list_box', selection_mode=Gtk.SelectionMode.NONE, max_children_per_line=self.emoji_grid_col_n, min_children_per_line=self.emoji_grid_col_n)
+        flowbox = Gtk.FlowBox(valign=Gtk.Align.START, 
+            homogeneous=True, 
+            name='emoji_list_box', 
+            selection_mode=Gtk.SelectionMode.NONE, 
+            max_children_per_line=self.emoji_grid_col_n, 
+            min_children_per_line=self.emoji_grid_col_n
+        )
 
         flowbox.set_filter_func(self.filter_emoji_list, None)
         flowbox.set_sort_func(self.sort_emoji_list, None)
@@ -508,3 +516,17 @@ class Picker(Gtk.ApplicationWindow):
 
         else:
             return (child1.emoji_data['order'] - child2.emoji_data['order'])
+
+    def update_emoji_skintones(self, settings: Gio.Settings, key):
+        modifier_settings = self.settings.get_string('skintone-modifier')
+        for child in self.emoji_list.get_children():
+            emoji_button = child.get_children()[0]
+            
+            if 'skintones' in emoji_button.emoji_data:
+                if len(modifier_settings):
+                    for tone in emoji_button.emoji_data['skintones']:
+                        if f'-{modifier_settings}' in tone['hexcode']:
+                            emoji_button.set_label(tone['emoji'])
+                            break
+                else:
+                    emoji_button.set_label(emoji_button.emoji_data['emoji'])

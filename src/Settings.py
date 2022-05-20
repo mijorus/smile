@@ -180,8 +180,8 @@ class Settings():
         dialog.destroy()
 
     def create_modifiers_combo_boxes(self):
-        container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, margin=10)
-        container.pack_start(Gtk.Label(label='Default skintone', halign=Gtk.Align.START), True, True, 0)
+        skintones_container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, margin=10)
+        skintones_container.pack_start(Gtk.Label(label='Default skintone', halign=Gtk.Align.START), True, True, 0)
 
         skintones = [["", "👋"], ["1F3FB", "👋🏻"], ["1F3FC", "👋🏼"], ["1F3FD", "👋🏽"], ["1F3FE", "👋🏾"], ["1F3FF", "👋🏿"]]
         skintones_combo = Gtk.ComboBoxText()
@@ -193,11 +193,12 @@ class Settings():
                 skintones_combo.set_active(i)
 
         skintones_combo.connect('changed', lambda w: self.settings.set_string('skintone-modifier', w.get_active_id()))
-        container.pack_end(skintones_combo, False, False, 0)
+        skintones_container.pack_end(skintones_combo, False, False, 0)
 
-        listbox_row = Gtk.ListBoxRow(selectable=False)
-        listbox_row.add(container)
-        self.modifiers_list_box.add(listbox_row)
+        skintones_listbox_row = Gtk.ListBoxRow(selectable=False)
+        skintones_listbox_row.add(skintones_container)
+
+        self.modifiers_list_box.add(skintones_listbox_row)
 
     def on_window_close(self, widget: Gtk.Window):
         for listbox_row in self.custom_tags_list_box.get_children():
