@@ -11,3 +11,5 @@ src/lib/__pycache__
 .glade~
 python3-requirements.json
 install.sh
+
+src/ui/menu.xml~

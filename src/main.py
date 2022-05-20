@@ -1,6 +1,7 @@
 import manimpango
 import sys
 import gi
+import time
 from .utils import make_option
 from .Picker import Picker
 from .ShortcutsWindow import ShortcutsWindow
@@ -54,6 +55,7 @@ class Smile(Gtk.Application):
 
             self.create_action("preferences", lambda w,e: Settings(self.application_id))
             self.create_action("open_shortcuts", lambda w,e: ShortcutsWindow().open())
+            self.create_action("open_changelog", lambda w,e: Gtk.show_uri(None, 'https://smile.mijorus.it/changelog', time.time()))
             self.create_action("about", self.on_about_action)
 
             if not self.start_hidden:
