@@ -13,7 +13,7 @@
         <release type="stable" version="1.6.0" date="2022-05-20T00:00:00Z">
             <description>
                 <p>- Added default skintone selector</p>
-                <p>- Created a new "changelog" page on the website: https://smile.mijorus.it/changelog </p>
+                <p>- Added a new "What's new" page to check the changelog </p>
             </description>
         </release>
         <release type="stable" version="1.5.7" date="2022-05-16T09:00:00Z">
