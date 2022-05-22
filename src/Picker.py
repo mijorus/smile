@@ -121,8 +121,10 @@ class Picker(Gtk.ApplicationWindow):
                         break
 
             self.deiconify()
+            self.present()
+        else:
+            self.present_with_time(time.time())
 
-        self.present()
         self.set_focus(self.search_entry)
 
     def on_show(self, widget: Gtk.Window):
@@ -343,7 +345,7 @@ class Picker(Gtk.ApplicationWindow):
         return False
 
     def default_hiding_action(self):
-        if (self.settings.get_boolean('iconify-on-esc') and not is_wayland()):
+        if (self.settings.get_boolean('iconify-on-esc')):
             self.iconify()
         else:
             self.hide()

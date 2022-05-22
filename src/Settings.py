@@ -1,4 +1,5 @@
 import gi
+import time
 from .assets.emoji_list import emojis
 from .lib.custom_tags import set_custom_tags, get_all_custom_tags, delete_custom_tags
 from .utils import read_text_resource, is_wayland
@@ -27,11 +28,9 @@ class Settings():
         self.create_boolean_settings_entry('Open at mouse position', 'open-on-mouse-position', text, usable=(not is_wayland()))
         self.create_boolean_settings_entry('Load on login', 'load-hidden-on-startup', 'Automatically load Smile in background for a faster launch')
 
-        text: str = 'Minimize the window when pressing ESC\nor when selecting an emoji, instead of hiding it;\nresuming the app when minimized is faster\nbut will show up in your system tray'
-        if is_wayland():
-            text = wl_not_available_text
+        text: str = 'Minimize the window when pressing ESC\nor when selecting an emoji:\nresuming the app when minimized is faster\nbut will show up in your system tray'
 
-        self.create_boolean_settings_entry('Minimize on exit', 'iconify-on-esc', text, usable=(not is_wayland()))
+        self.create_boolean_settings_entry('Minimize on exit', 'iconify-on-esc', text)
         self.create_custom_tags_list()
         self.create_modifiers_combo_boxes()
         self.create_launch_shortcut_settings_entry()
@@ -41,6 +40,7 @@ class Settings():
         self.window.connect('destroy', self.on_window_close)
 
         self.window.show_all()
+        self.window.present_with_time(time.time())
 
     def on_load_hidden_on_startup_changed(self, settings, key: str):
         value: bool = settings.get_boolean(key)
