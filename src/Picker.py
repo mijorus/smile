@@ -124,6 +124,7 @@ class Picker(Gtk.ApplicationWindow):
             self.present()
         else:
             self.present_with_time(time.time())
+            self.grab_focus()
 
         self.set_focus(self.search_entry)
 
