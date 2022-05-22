@@ -56,6 +56,9 @@ Use `Shift + Enter` to select multiple emojis; use `Ctrl+Enter` to quit without 
   <img width="200" src="https://flathub.org/assets/badges/flathub-badge-i-en.png">
 </a>
 
+## Changelog
+Please check out [https://smile.mijorus.it/changelog](https://smile.mijorus.it/changelog)
+
 ## Source
 <a href="https://github.com/mijorus/smile" align="center">
   <img width="100" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png">
