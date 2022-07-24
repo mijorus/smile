@@ -145,7 +145,6 @@ class Picker(Gtk.ApplicationWindow):
         button.emoji_data = data
         button.hexcode = data['hexcode']
         button.history = get_history()[data['hexcode']] if (data['hexcode']) in get_history() else None
-        # button.tag = f"{data['annotation']} {data['tags']}".replace(',', ' ')
 
         if 'skintones' in data:
             button.get_style_context().add_class('emoji-with-skintones')

@@ -55,9 +55,7 @@ def append_skintone(skintone: dict, base_hex: str):
 def main():
     prefix = os.environ.get('MESON_INSTALL_PREFIX', '/usr/local')
     datadir = os.path.join(prefix, 'share/smile/smile/assets')
-    cat = set()
-
-   
+    categ = set()
 
     emoji_list = json.load(open(os.path.dirname(__file__) + '/openmoji.json', 'r'))
     for i, el in enumerate(emoji_list):
@@ -108,8 +106,12 @@ def main():
         if el['subgroups'] in subgroups:
             el['group'] = subgroups[el['subgroups']]
 
+        for useless_key in ["openmoji_tags", "openmoji_author", "openmoji_date", "annotation", "skintone_combination"]:
+            if useless_key in el: 
+                del el[useless_key]
+
         output[el['hexcode']] = el
-        cat.add(el['group'])
+        categ.add(el['group'])
 
     output_dict = StringIO()
     print(f'emojis = {output}\nemoji_categories = {emoji_categories}\ncomponents = {components}', file=output_dict)
