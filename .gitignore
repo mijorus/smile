@@ -13,3 +13,4 @@ python3-requirements.json
 install.sh
 
 src/ui/menu.xml~
+old_emoji_list.py
