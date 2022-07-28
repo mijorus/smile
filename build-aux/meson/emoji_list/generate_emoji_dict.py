@@ -119,6 +119,4 @@ def main():
     output_file = open(f"{datadir}/emoji_list.py", 'w+')
     output_file.write(output_dict.getvalue())
 
-    subprocess.call(['python3', '-m', 'compileall', os.path.abspath(output_file.name)])
-
 main()
