@@ -34,6 +34,8 @@ class Settings():
         self.create_custom_tags_list()
         self.create_modifiers_combo_boxes()
         self.create_launch_shortcut_settings_entry()
+        self.create_tags_locale_combo_boxes()
+        self.create_boolean_settings_entry('Merge localized tags with English tags', 'merge-english', 'Use custom tags instead of the default ones', add_to=self.modifiers_list_box)
 
         self.custom_tags_entries: list[Gtk.Entry] = []
         self.settings.connect('changed', self.on_settings_changes)
@@ -58,7 +60,7 @@ class Settings():
             self.create_error_dialog('The has been an error trying to add Smile to the autostart services', e)
             self.settings.set_boolean(key, False)
 
-    def create_boolean_settings_entry(self, label: str, key: str, subtitle: str=None, usable: bool=True):
+    def create_boolean_settings_entry(self, label: str, key: str, subtitle: str=None, usable: bool=True, add_to=None):
         container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, margin=10)
 
         # Title box
@@ -83,7 +85,11 @@ class Settings():
 
         listbox_row = Gtk.ListBoxRow(selectable=False)
         listbox_row.add(container)
-        self.list_box.add(listbox_row)
+
+        if add_to:
+            add_to.add(listbox_row)
+        else:
+            self.list_box.add(listbox_row)
 
     def create_launch_shortcut_settings_entry(self):
         container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, margin=10)
@@ -199,6 +205,54 @@ class Settings():
         skintones_listbox_row.add(skintones_container)
 
         self.modifiers_list_box.add(skintones_listbox_row)
+
+    def create_tags_locale_combo_boxes(self):
+        container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, margin=10)
+        container.pack_start(Gtk.Label(label='Localized tags', halign=Gtk.Align.START), True, True, 0)
+
+        locales_with_flags = {
+            'da': '🇩🇰',
+            'de': '🇩🇪',
+            'en': '🇺🇸',
+            'es': '🇪🇸',
+            'et': '🇪🇪',
+            'fi': '🇫🇮',
+            'fr': '🇫🇷',
+            'hu': '🇭🇺',
+            'it': '🇮🇹',
+            'ja': '🇯🇵',
+            'ko': '🇰🇷',
+            'lt': '🇱🇹',
+            'ms': '🇲🇴',
+            'nb': '🇳🇴',
+            'nl': '🇳🇱',
+            'pl': '🇵🇱',
+            'pt': '🇵🇹',
+            'ru': '🇷🇺',
+            'sv': '🇸🇪',
+            'th': '🇹🇭',
+            'uk': '🇺🇦',
+            'zh': '🇨🇳',
+        }
+
+        locales_combo = Gtk.ComboBoxText(row_span_column=2)
+        
+        i = 0
+        for k, v in locales_with_flags.items():
+            locales_combo.append(k, v + ' ' + k.upper())
+
+            if self.settings.get_string('tags-locale') == k:
+                locales_combo.set_active(i)
+
+            i += 1
+
+        locales_combo.connect('changed', lambda w: self.settings.set_string('tags-locale', w.get_active_id()))
+        container.pack_end(locales_combo, False, False, 0)
+
+        locales_picker_row = Gtk.ListBoxRow(selectable=False)
+        locales_picker_row.add(container)
+
+        self.modifiers_list_box.add(locales_picker_row)
 
     def on_window_close(self, widget: Gtk.Window):
         for listbox_row in self.custom_tags_list_box.get_children():

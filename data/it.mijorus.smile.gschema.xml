@@ -20,5 +20,11 @@
         <key name="haircut-modifier" type="s">
             <default>""</default>
         </key>
+        <key name="tags-locale" type="s">
+            <default>"en"</default>
+        </key>
+        <key name="merge-english" type="b">
+            <default>true</default>
+        </key>
     </schema>
 </schemalist>
