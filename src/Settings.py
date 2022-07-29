@@ -18,6 +18,7 @@ class Settings():
         self.list_box = builder.get_object('preferences-listbox')
         self.custom_tags_list_box = builder.get_object('customtags-listbox')
         self.modifiers_list_box = builder.get_object('modifiers-listbox')
+        self.localized_tags_list_box = builder.get_object('localized-tags-listbox')
         self.empty_list_label = Gtk.Label(label="There are no custom tags for any emoji yet; create one with <b>Alt+T</b>", use_markup=True, margin=10)
 
         self.settings = Gio.Settings.new('it.mijorus.smile')
@@ -34,8 +35,9 @@ class Settings():
         self.create_custom_tags_list()
         self.create_modifiers_combo_boxes()
         self.create_launch_shortcut_settings_entry()
+        self.create_boolean_settings_entry('Use localized tags', 'use-localized-tags', '', add_to=self.localized_tags_list_box)
         self.create_tags_locale_combo_boxes()
-        self.create_boolean_settings_entry('Merge localized tags with English tags', 'merge-english', 'Use custom tags instead of the default ones', add_to=self.modifiers_list_box)
+        self.create_boolean_settings_entry('Merge localized tags with English tags', 'merge-english', 'Use both localized tags and English ones at the same time', add_to=self.localized_tags_list_box)
 
         self.custom_tags_entries: list[Gtk.Entry] = []
         self.settings.connect('changed', self.on_settings_changes)
@@ -213,7 +215,7 @@ class Settings():
         locales_with_flags = {
             'da': '🇩🇰',
             'de': '🇩🇪',
-            'en': '🇺🇸',
+            'en': '🇬🇧',
             'es': '🇪🇸',
             'et': '🇪🇪',
             'fi': '🇫🇮',
@@ -235,7 +237,7 @@ class Settings():
             'zh': '🇨🇳',
         }
 
-        locales_combo = Gtk.ComboBoxText(row_span_column=2)
+        locales_combo = Gtk.ComboBoxText()
         
         i = 0
         for k, v in locales_with_flags.items():
@@ -252,7 +254,7 @@ class Settings():
         locales_picker_row = Gtk.ListBoxRow(selectable=False)
         locales_picker_row.add(container)
 
-        self.modifiers_list_box.add(locales_picker_row)
+        self.localized_tags_list_box.add(locales_picker_row)
 
     def on_window_close(self, widget: Gtk.Window):
         for listbox_row in self.custom_tags_list_box.get_children():
@@ -262,3 +264,9 @@ class Settings():
                 if isinstance(widget, Gtk.Entry):
                     set_custom_tags(row.hexcode, widget.get_text())
                     break
+
+    def on_use_localized_tags_changed(self, settings, key: str):
+        if settings.get_boolean(key):
+            self.localized_tags_list_box.set_opacity(1)
+        else:
+            self.localized_tags_list_box.set_opacity(0.7)
