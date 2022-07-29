@@ -61,6 +61,25 @@ class Smile(Gtk.Application):
             if not self.start_hidden:
                 self.window.show_all()
                 self.window.on_activation()
+
+                # create message dialog
+                last_run_version = self.settings.get_string('last-run-version') or '0.0.0'
+                last_run_version_split = last_run_version.split('.')
+
+                if last_run_version_split[0] != self.version.split('.')[0] or last_run_version_split[1] != self.version.split('.')[1]:
+                    dialog = Gtk.MessageDialog(
+                        transient_for=self.window,
+                        flags=0,
+                        message_type=Gtk.MessageType.INFO,
+                        buttons=Gtk.ButtonsType.OK,
+                        text=f"Smile was updated to version {self.version}!\n\nSee the changelog on Menu > What's new\nor visit smile.mijorus.it/changelog",
+                    )
+
+                    dialog.run()
+                    dialog.destroy()
+
+                self.settings.set_string('last-run-version', '1.6.2')
+
         else:
             self.window.show_all()
             self.window.on_activation()
