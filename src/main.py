@@ -72,13 +72,14 @@ class Smile(Gtk.Application):
                         flags=0,
                         message_type=Gtk.MessageType.INFO,
                         buttons=Gtk.ButtonsType.OK,
-                        text=f"Smile was updated to version {self.version}!\n\nSee the changelog on Menu > What's new\nor visit smile.mijorus.it/changelog",
                     )
+
+                    dialog.set_markup(f"Smile was updated to version {self.version}!\n\nSee the changelog on <b>Menu > What's new</b>\nor visit smile.mijorus.it/changelog")
 
                     dialog.run()
                     dialog.destroy()
 
-                self.settings.set_string('last-run-version', '1.6.2')
+                self.settings.set_string('last-run-version', self.version)
 
         else:
             self.window.show_all()
