@@ -23,7 +23,7 @@
         <key name="tags-locale" type="s">
             <default>"en"</default>
         </key>
-        <key name="merge-english" type="b">
+        <key name="merge-english-tags" type="b">
             <default>true</default>
         </key>
         <key name="use-localized-tags" type="b">
