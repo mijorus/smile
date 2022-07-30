@@ -23,6 +23,7 @@ from .assets.emoji_list import emojis, emoji_categories
 from .ShortcutsWindow import ShortcutsWindow
 from .CustomTagEntry import CustomTagEntry
 from .lib.custom_tags import get_custom_tags
+from .lib.localized_tags import get_localized_tags
 from .lib.emoji_history import increament_emoji_usage_counter, get_history
 from .utils import tag_list_contains, is_wayland
 
@@ -477,14 +478,26 @@ class Picker(Gtk.ApplicationWindow):
     def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
         e = (widget.get_child()).emoji_data
         filter_result = True
-        
+
+        localized_tags = []
+        if self.settings.get_boolean('use-localized-tags') and self.settings.get_string('tags-locale') != 'en':
+            localized_tags = get_localized_tags(self.settings.get_string('tags-locale'), e['hexcode'], Gio.Application.get_default().datadir)
+
+        merge_en_tags = self.settings.get_boolean('use-localized-tags') and self.settings.get_boolean('merge-english-tags')
+
         if self.query:
             if self.query == e['emoji']: 
                 filter_result = True
             elif get_custom_tags(e['hexcode'], cache=True) and tag_list_contains(get_custom_tags(e['hexcode'], cache=True), self.query):
                 filter_result = True
-            elif tag_list_contains(e['tags'], self.query): 
-                filter_result = True
+            elif (not self.settings.get_boolean('use-localized-tags')):
+                filter_result = tag_list_contains(e['tags'], self.query)
+            elif self.settings.get_boolean('use-localized-tags'):
+                if self.settings.get_boolean('merge-english-tags'):
+                    filter_result = tag_list_contains(','.join(localized_tags), self.query) or tag_list_contains(e['tags'], self.query)
+                else:
+                    filter_result = tag_list_contains(','.join(localized_tags), self.query)
+
             else:
                 filter_result = False
 

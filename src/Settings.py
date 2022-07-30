@@ -2,6 +2,7 @@ import gi
 import time
 from .assets.emoji_list import emojis
 from .lib.custom_tags import set_custom_tags, get_all_custom_tags, delete_custom_tags
+from .lib.localized_tags import get_countries_list
 from .utils import read_text_resource, is_wayland
 
 
@@ -37,7 +38,7 @@ class Settings():
         self.create_launch_shortcut_settings_entry()
         self.create_boolean_settings_entry('Use localized tags', 'use-localized-tags', '', add_to=self.localized_tags_list_box)
         self.create_tags_locale_combo_boxes()
-        self.create_boolean_settings_entry('Merge localized tags with English tags', 'merge-english', 'Use both localized tags and English ones at the same time', add_to=self.localized_tags_list_box)
+        self.create_boolean_settings_entry('Merge localized tags with English tags', 'merge-english-tags', 'Use both localized tags and English ones at the same time', add_to=self.localized_tags_list_box)
 
         self.custom_tags_entries: list[Gtk.Entry] = []
         self.settings.connect('changed', self.on_settings_changes)
@@ -212,36 +213,11 @@ class Settings():
         container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, margin=10)
         container.pack_start(Gtk.Label(label='Localized tags', halign=Gtk.Align.START), True, True, 0)
 
-        locales_with_flags = {
-            'da': '🇩🇰',
-            'de': '🇩🇪',
-            'en': '🇬🇧',
-            'es': '🇪🇸',
-            'et': '🇪🇪',
-            'fi': '🇫🇮',
-            'fr': '🇫🇷',
-            'hu': '🇭🇺',
-            'it': '🇮🇹',
-            'ja': '🇯🇵',
-            'ko': '🇰🇷',
-            'lt': '🇱🇹',
-            'ms': '🇲🇴',
-            'nb': '🇳🇴',
-            'nl': '🇳🇱',
-            'pl': '🇵🇱',
-            'pt': '🇵🇹',
-            'ru': '🇷🇺',
-            'sv': '🇸🇪',
-            'th': '🇹🇭',
-            'uk': '🇺🇦',
-            'zh': '🇨🇳',
-        }
-
         locales_combo = Gtk.ComboBoxText()
         
         i = 0
-        for k, v in locales_with_flags.items():
-            locales_combo.append(k, v + ' ' + k.upper())
+        for k, v in get_countries_list().items():
+            locales_combo.append(k, v['flag'] + ' ' + k.upper())
 
             if self.settings.get_string('tags-locale') == k:
                 locales_combo.set_active(i)
