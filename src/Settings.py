@@ -40,6 +40,9 @@ class Settings():
         self.create_tags_locale_combo_boxes()
         self.create_boolean_settings_entry('Merge localized tags with English tags', 'merge-english-tags', 'Use both localized tags and English ones at the same time', add_to=self.localized_tags_list_box)
 
+        if not self.settings.get_boolean('use-localized-tags'):
+            self.localized_tags_list_box.set_opacity(0.7)
+
         self.custom_tags_entries: list[Gtk.Entry] = []
         self.settings.connect('changed', self.on_settings_changes)
         self.window.connect('destroy', self.on_window_close)
