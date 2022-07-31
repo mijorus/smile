@@ -4,7 +4,21 @@ import json
 import os
 import subprocess
 from io import StringIO
-from problematic_emojis import problematic
+
+problematic = [
+    # Skin tones
+    '1F3FB',
+    '1F3FC',
+    '1F3FD',
+    '1F3FE',
+    '1F3FF',
+
+    # hair styles
+    "1F9B0",
+    "1F9B1",
+    "1F9B3",
+    "1F9B2",
+]
 
 output = {}
 
@@ -53,6 +67,8 @@ def append_skintone(skintone: dict, base_hex: str):
             o['skintones'].append(skintone)
 
 def main():
+    _path = os.path.dirname(os.path.abspath(__file__))
+
     prefix = os.environ.get('MESON_INSTALL_PREFIX', '/usr/local')
     datadir = os.path.join(prefix, 'share/smile/smile/assets')
     categ = set()
@@ -116,7 +132,8 @@ def main():
     output_dict = StringIO()
     print(f'emojis = {output}\nemoji_categories = {emoji_categories}\ncomponents = {components}', file=output_dict)
 
-    output_file = open(f"{datadir}/emoji_list.py", 'w+')
+    output_file = open(f"{_path}/../../src/emoji_list.py", 'w+')
     output_file.write(output_dict.getvalue())
 
-main()
+if __name__ == '__main__':
+    main()
