@@ -22,22 +22,22 @@ def get_countries_list() -> dict:
             },
             'de': {
                 'flag': '🇩🇪',
-                'name': 'Deutschland',
+                'name': 'Germany',
                 'language': 'German',
             },
             'es': {
                 'flag': '🇪🇸',
-                'name': 'España',
+                'name': 'Spain',
                 'language': 'Spanish',
             },
             'et': {
                 'flag': '🇪🇪',
-                'name': 'Eesti',
+                'name': 'Estonia',
                 'language': 'Estonian',
             },
             'fi': {
                 'flag': '🇫🇮',
-                'name': 'Suomi',
+                'name': 'Finland',
                 'language': 'Finnish',
             },
             'fr': {
@@ -47,32 +47,17 @@ def get_countries_list() -> dict:
             },
             'hu': {
                 'flag': '🇭🇺',
-                'name': 'Magyarország',
+                'name': 'Hungary',
                 'language': 'Hungarian',
             },
             'it': {
                 'flag': '🇮🇹',
-                'name': 'Italia',
+                'name': 'Italy',
                 'language': 'Italian',
-            },
-            'ja': {
-                'flag': '🇯🇵',
-                'name': '日本',
-                'language': 'Japanese',
-            },
-            'ko': {
-                'flag': '🇰🇷',
-                'name': '대한민국',
-                'language': 'Korean',
-            },
-            'ms': {
-                'flag': '🇲🇴',
-                'name': 'Malaysia',
-                'language': 'Malay',
             },
             'nb': {
                 'flag': '🇳🇴',
-                'name': 'Norge',
+                'name': 'Norway',
                 'language': 'Norwegian',
             },
             'nl': {
@@ -82,7 +67,7 @@ def get_countries_list() -> dict:
             },
             'pl': {
                 'flag': '🇵🇱',
-                'name': 'Polska',
+                'name': 'Poland',
                 'language': 'Polish',
             },
             'pt': {
@@ -92,22 +77,12 @@ def get_countries_list() -> dict:
             },
             'ru': {
                 'flag': '🇷🇺',
-                'name': 'Россия',
+                'name': 'Russia',
                 'language': 'Russian',
             },
             'sv': {
                 'flag': '🇸🇪',
-                'name': 'Sverige',
+                'name': 'Sweden',
                 'language': 'Swedish',
-            },
-            'th': {
-                'flag': '🇹🇭',
-                'name': 'ไทย',
-                'language': 'Thai',
-            },
-            'zh': {
-                'flag': '🇨🇳',
-                'name': '中国',
-                'language': 'Chinese',
-            },
+            }
         }
