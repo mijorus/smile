@@ -132,7 +132,7 @@ def main():
     output_dict = StringIO()
     print(f'emojis = {output}\nemoji_categories = {emoji_categories}\ncomponents = {components}', file=output_dict)
 
-    output_file = open(f"{_path}/../../src/emoji_list.py", 'w+')
+    output_file = open(f"{_path}/../../src/assets/emoji_list.py", 'w+')
     output_file.write(output_dict.getvalue())
 
 if __name__ == '__main__':
