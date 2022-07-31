@@ -99,6 +99,7 @@ class Picker(Gtk.ApplicationWindow):
 
         self.add(self.viewport_box)
         self.connect('show', self.on_show)
+        self.set_active_category('smileys-emotion')
 
     def on_hide(self):
         self.search_entry.set_text('')
