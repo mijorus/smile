@@ -10,11 +10,9 @@
 </a>
 </p>
 
+## Features
 
 Smile is a simple emoji picker for linux with **custom tags support**.
-
-
-
 
 
 ### Custom tags
@@ -64,6 +62,12 @@ Please check out [https://smile.mijorus.it/changelog](https://smile.mijorus.it/c
   <img width="100" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png">
 </a>
 
+## Third party licences
+Awesome resources that made Smile possible:
+
+- [Openmoji](https://openmoji.org/) for the emoji list and english tags
+- [Emojibase](https://github.com/milesj/emojibase) for the translated tags available since version 1.70
+
 ## Building 
 You will need:
 - flatpak
@@ -105,7 +109,3 @@ flatpak-builder build/ it.mijorus.smile.json --user --install --force-clean
   <img width="500" src="https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot5.png">
 </p>
 
-
-
-## Disclaimer
-This is my first GTK app. If there is something wrong with the code, like say... it sucks, please let me know opening  a bug or a pull request
