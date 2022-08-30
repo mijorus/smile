@@ -10,6 +10,13 @@
 </a>
 </p>
 
+## Download
+<a href="https://flathub.org/apps/details/it.mijorus.smile" align="center">
+  <img width="200" src="https://flathub.org/assets/badges/flathub-badge-i-en.png">
+</a>
+
+Note: Flathub and Github are the only official release channels for Smile. Any release on external marketplaces or packaging formats are unofficial and not supported by me.
+
 ## Features
 
 Smile is a simple emoji picker for linux with **custom tags support**.
@@ -47,12 +54,6 @@ Use `Shift + Enter` to select multiple emojis; use `Ctrl+Enter` to quit without 
   <img width="500" src="https://user-images.githubusercontent.com/39067225/166487730-e1b6b686-5095-4ddb-8ba9-723b3d53101d.png">
 </p>
 
-
-
-## Download
-<a href="https://flathub.org/apps/details/it.mijorus.smile" align="center">
-  <img width="200" src="https://flathub.org/assets/badges/flathub-badge-i-en.png">
-</a>
 
 ## Changelog
 Please check out [https://smile.mijorus.it/changelog](https://smile.mijorus.it/changelog)
