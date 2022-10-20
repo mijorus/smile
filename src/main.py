@@ -8,7 +8,7 @@ from .ShortcutsWindow import ShortcutsWindow
 from .AboutDialog import AboutDialog
 from .Settings import Settings
 
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, Gio, Gdk, GLib
 
 class Smile(Gtk.Application):

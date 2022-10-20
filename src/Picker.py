@@ -27,23 +27,24 @@ from .lib.localized_tags import get_localized_tags
 from .lib.emoji_history import increament_emoji_usage_counter, get_history
 from .utils import tag_list_contains, is_wayland
 
-gi.require_version('Gtk', '3.0')
-gi.require_version('Wnck', '3.0')
+gi.require_version('Gtk', '4.0')
+# gi.require_version('Wnck', '3.0')
 
-from gi.repository import Gtk, Gio, Gdk, Wnck
+# from gi.repository import Gtk, Gio, Gdk, Wnck
+from gi.repository import Gtk, Gio, Gdk
 
 class Picker(Gtk.ApplicationWindow):
     def __init__(self, *args, **kwargs):
-        super().__init__(title="Smile", resizable=True, border_width=5, *args, **kwargs)
-        self.connect('key_press_event', self.handle_window_key_press)
-        self.connect('key_release_event', self.handle_window_key_release)
+        super().__init__(title="Smile", resizable=True, *args, **kwargs)
+        # self.connect('key_press_event', self.handle_window_key_press)
+        # self.connect('key_release_event', self.handle_window_key_release)
         self.set_default_size(-1, 350)
-        self.set_position(Gtk.WindowPosition.MOUSE)
+        # self.set_position(Gtk.WindowPosition.MOUSE)
 
         self.settings: Gio.Settings = Gio.Settings.new('it.mijorus.smile')
-        self.settings.connect('changed::open-on-mouse-position', lambda s, key:
-            self.set_position(Gtk.WindowPosition.MOUSE) if s.get_boolean('open-on-mouse-position') else self.set_position(Gtk.WindowPosition.CENTER)
-        )
+        # self.settings.connect('changed::open-on-mouse-position', lambda s, key:
+        #     self.set_position(Gtk.WindowPosition.MOUSE) if s.get_boolean('open-on-mouse-position') else self.set_position(Gtk.WindowPosition.CENTER)
+        # )
 
         self.settings.connect('changed::skintone-modifier', self.update_emoji_skintones)
 
@@ -57,7 +58,7 @@ class Picker(Gtk.ApplicationWindow):
         self.selected_buttons: list[Gtk.Button] = []
         self.history_size = 0
 
-        self.clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
+        self.clipboard = Gdk.Display.get_default().get_primary_clipboard()
 
         # Create the emoji list and category picker
         self.categories_count = 0
@@ -67,15 +68,15 @@ class Picker(Gtk.ApplicationWindow):
         self.viewport_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
         self.list_tip_container = Gtk.Revealer(reveal_child=False)
-        self.list_tip_container.add(Gtk.Label(label='', opacity=0.7, justify=Gtk.Justification.CENTER))
+        self.list_tip_container.set_child(Gtk.Label(label='', opacity=0.7, justify=Gtk.Justification.CENTER))
 
         self.emoji_list = self.create_emoji_list()
         self.category_count = 0  # will be set in create_category_picker()
         self.category_picker = self.create_category_picker()
         scrolled.add(self.emoji_list)
 
-        self.viewport_box.pack_start(self.list_tip_container, False, False, 0)
-        self.viewport_box.pack_start(scrolled, True, True, 0)
+        self.viewport_box.prepend(self.list_tip_container)
+        self.viewport_box.prepend(scrolled)
         self.viewport_box.pack_end(self.category_picker, False, True, 3)
 
         # Create an header bar
@@ -87,7 +88,7 @@ class Picker(Gtk.ApplicationWindow):
         # Create search entry
         self.search_entry = self.create_search_entry()
 
-        self.header_bar.pack_start(self.search_entry)
+        self.header_bar.prepend(self.search_entry)
         self.set_titlebar(self.header_bar)
 
         self.shortcut_window: ShortcutsWindow = None
@@ -160,7 +161,7 @@ class Picker(Gtk.ApplicationWindow):
 
 
         button.connect('clicked', self.handle_emoji_button_click)
-        button.connect('button_press_event', lambda w, e: self.show_skin_selector(w) if e.button == 3 else None)
+        # button.connect('button_press_event', lambda w, e: self.show_skin_selector(w) if e.button == 3 else None)
 
         return button
 
@@ -185,10 +186,10 @@ class Picker(Gtk.ApplicationWindow):
                 button.set_label(cat['icon'])
                 button.connect('clicked', self.filter_for_category)
 
-                box.pack_start(button, True, True, 3)
+                box.prepend(button)
                 i += 1
 
-        scrolled.add(box)
+        scrolled.set_child(box)
         scrolled.get_children()[0].props.margin = 5
         self.categories_count = i
         return scrolled
@@ -212,8 +213,8 @@ class Picker(Gtk.ApplicationWindow):
 
             is_recent = (e['hexcode'] in get_history())
             button = self.create_emoji_button(e)
-            flowbox_child.add(button)
-            flowbox.add(flowbox_child)
+            flowbox_child.set_child(button)
+            flowbox.append(flowbox_child)
 
             if is_recent:
                 self.history_size += 1
@@ -437,14 +438,12 @@ class Picker(Gtk.ApplicationWindow):
         self.get_first_row()
 
     def copy_and_quit(self, button: Gtk.Button = None):
-        clip = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
-
         text = ''
         if button:
             text = button.get_label()
             increament_emoji_usage_counter(button)
 
-        clip.set_text(''.join([*self.selection, text]), -1)
+        self.clipboard.set_content(''.join([*self.selection, text]), -1)
 
         if self.settings.get_boolean('is-first-run'):
             n = Gio.Notification.new('Copied!')
