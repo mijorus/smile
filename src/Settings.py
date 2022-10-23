@@ -55,8 +55,10 @@ class Settings():
 
     def on_load_hidden_on_startup_changed(self, settings, key: str):
         value: bool = settings.get_boolean(key)
-        home_dir = GLib.get_home_dir()
-        file_path = f'{home_dir}/.config/autostart/smile.autostart.desktop'
+
+        old_autostart_file = Gio.File.new_for_path(f'{GLib.get_home_dir()}/.config/autostart/smile.autostart.desktop')
+        if old_autostart_file.query_exists():
+            old_autostart_file.delete()
 
         bus = dbus.SessionBus()
         obj = bus.get_object("org.freedesktop.portal.Desktop", "/org/freedesktop/portal/desktop")
