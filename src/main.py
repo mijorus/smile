@@ -2,6 +2,9 @@ import manimpango
 import sys
 import gi
 import time
+import dbus
+
+from dbus.mainloop.glib import DBusGMainLoop
 from .utils import make_option
 from .Picker import Picker
 from .ShortcutsWindow import ShortcutsWindow
@@ -44,6 +47,17 @@ class Smile(Gtk.Application):
         css_provider.load_from_resource('/it/mijorus/smile/assets/style.css')
         Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
         self.settings = Gio.Settings.new(self.application_id)
+
+        loop = GLib.MainLoop()
+        dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
+        bus = dbus.SessionBus()
+
+        bus.add_signal_receiver(
+            lambda response, res: print('Smile autostart activated: ' + str(res['autostart'])),
+            signal_name="Response",
+            dbus_interface="org.freedesktop.portal.Request",
+            bus_name="org.freedesktop.portal.Desktop"
+        )
 
     def do_activate(self):
         # We only allow a single window and raise any existing ones
