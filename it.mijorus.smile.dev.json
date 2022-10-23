@@ -8,8 +8,7 @@
         "--share=ipc",
         "--socket=wayland",
         "--socket=fallback-x11",
-        "--device=dri",
-        "--filesystem=xdg-config/autostart:create"
+        "--device=dri"
     ],
     "cleanup": [
         "/include",
