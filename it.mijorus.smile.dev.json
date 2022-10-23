@@ -1,7 +1,7 @@
 {
     "app-id": "it.mijorus.smile",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "42",
+    "runtime-version": "43",
     "sdk": "org.gnome.Sdk",
     "command": "smile",
     "finish-args": [
