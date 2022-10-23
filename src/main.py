@@ -2,6 +2,9 @@ import manimpango
 import sys
 import gi
 import time
+import dbus
+
+from dbus.mainloop.glib import DBusGMainLoop
 from .utils import make_option
 from .Picker import Picker
 from .ShortcutsWindow import ShortcutsWindow

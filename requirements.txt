@@ -1,1 +1,2 @@
 manimpango == 0.4.0
+dbus-python == 1.2.8

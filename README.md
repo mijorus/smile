@@ -21,6 +21,10 @@ Note: Flathub and Github are the only official release channels for Smile. Any r
 
 Smile is a simple emoji picker for linux with **custom tags support**.
 
+### Localized tags + english fallback!
+In my daily routine, I alway mix Italian and English in my brain. One tab with Italian newspaper, the other with an English documentation; with Smile, you can finally use both English and localized tags at the same time!
+
+Go to `Preferences > Localized tags > Merge localized tags`!
 
 ### Custom tags
 ... Wait what?

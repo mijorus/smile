@@ -1,5 +1,8 @@
 import gi
+import dbus
 import time
+
+from dbus.mainloop.glib import DBusGMainLoop
 from .assets.emoji_list import emojis
 from .lib.custom_tags import set_custom_tags, get_all_custom_tags, delete_custom_tags
 from .lib.localized_tags import get_countries_list
@@ -52,19 +55,15 @@ class Settings():
 
     def on_load_hidden_on_startup_changed(self, settings, key: str):
         value: bool = settings.get_boolean(key)
-        home_dir = GLib.get_home_dir()
-        file_path = f'{home_dir}/.config/autostart/smile.autostart.desktop'
 
-        try:
-            if value:
-                desktop_file = read_text_resource('/it/mijorus/smile/assets/smile.autostart.desktop')
-                GLib.file_set_contents(file_path, desktop_file.replace('{{application_id}}', self.application_id).encode())
-            else:
-                Gio.File.new_for_path(file_path).delete()
-        except Exception as e:
-            print(e)
-            self.create_error_dialog('The has been an error trying to add Smile to the autostart services', e)
-            self.settings.set_boolean(key, False)
+        old_autostart_file = Gio.File.new_for_path(f'{GLib.get_home_dir()}/.config/autostart/smile.autostart.desktop')
+        if old_autostart_file.query_exists():
+            old_autostart_file.delete()
+
+        bus = dbus.SessionBus()
+        obj = bus.get_object("org.freedesktop.portal.Desktop", "/org/freedesktop/portal/desktop")
+        inter = dbus.Interface(obj, "org.freedesktop.portal.Background")
+        res = inter.RequestBackground('', {'reason': 'Smile autostart', 'autostart': value, 'background': value, 'commandline': dbus.Array(['smile', '--start-hidden']) })
 
     def create_boolean_settings_entry(self, label: str, key: str, subtitle: str=None, usable: bool=True, add_to=None):
         container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, margin=10)
