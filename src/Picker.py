@@ -31,9 +31,9 @@ gi.require_version('Gtk', '4.0')
 # gi.require_version('Wnck', '3.0')
 
 # from gi.repository import Gtk, Gio, Gdk, Wnck
-from gi.repository import Gtk, Gio, Gdk
+from gi.repository import Gtk, Gio, Gdk, Adw
 
-class Picker(Gtk.ApplicationWindow):
+class Picker(Adw.ApplicationWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(title="Smile", resizable=True, *args, **kwargs)
         # self.connect('key_press_event', self.handle_window_key_press)
@@ -77,18 +77,17 @@ class Picker(Gtk.ApplicationWindow):
 
         self.viewport_box.prepend(self.list_tip_container)
         self.viewport_box.prepend(scrolled)
-        self.viewport_box.pack_end(self.category_picker, False, True, 3)
+        self.viewport_box.append(self.category_picker)
 
         # Create an header bar
         self.header_bar = Gtk.HeaderBar()
-        self.header_bar.props.show_close_button = True
-        self.menu_button = self.create_menu_button()
-        self.header_bar.pack_end(self.menu_button)
+        # self.menu_button = self.create_menu_button()
+        # self.header_bar.append(self.menu_button)
 
         # Create search entry
         self.search_entry = self.create_search_entry()
 
-        self.header_bar.prepend(self.search_entry)
+        # self.header_bar.prepend(self.search_entry)
         self.set_titlebar(self.header_bar)
 
         self.shortcut_window: ShortcutsWindow = None
@@ -98,7 +97,7 @@ class Picker(Gtk.ApplicationWindow):
         # This variable the status of the sorted status
         self.list_was_sorted = False
 
-        self.add(self.viewport_box)
+        self.set_child(self.viewport_box)
         self.connect('show', self.on_show)
         self.set_active_category('smileys-emotion')
 
@@ -168,7 +167,7 @@ class Picker(Gtk.ApplicationWindow):
     def create_search_entry(self) -> Gtk.SearchEntry:
         search_entry = Gtk.SearchEntry()
         search_entry.set_hexpand(True)
-        search_entry.props.enable_emoji_completion = False
+        # search_entry.props.enable_emoji_completion = False
         search_entry.connect('search_changed', self.search_emoji)
         return search_entry
 
