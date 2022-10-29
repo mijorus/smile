@@ -12,9 +12,9 @@ from .AboutDialog import AboutDialog
 from .Settings import Settings
 
 gi.require_version('Gtk', '4.0')
-from gi.repository import Gtk, Gio, Gdk, GLib
+from gi.repository import Gtk, Gio, Gdk, GLib, Adw
 
-class Smile(Gtk.Application):
+class Smile(Adw.Application):
     def __init__(self, **kwargs) -> None:
         self.application_id = "it.mijorus.smile"
         super().__init__(application_id=self.application_id, flags=Gio.ApplicationFlags.FLAGS_NONE)
@@ -40,7 +40,7 @@ class Smile(Gtk.Application):
         return -1
 
     def do_startup(self):
-        Gtk.Application.do_startup(self)
+        Adw.Application.do_startup(self)
 
         manimpango.register_font(self.datadir + '/assets/NotoColorEmoji.ttf')
         css_provider = Gtk.CssProvider()

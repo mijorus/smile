@@ -73,7 +73,7 @@ class Picker(Gtk.ApplicationWindow):
         self.emoji_list = self.create_emoji_list()
         self.category_count = 0  # will be set in create_category_picker()
         self.category_picker = self.create_category_picker()
-        scrolled.add(self.emoji_list)
+        scrolled.set_child(self.emoji_list)
 
         self.viewport_box.prepend(self.list_tip_container)
         self.viewport_box.prepend(scrolled)
@@ -190,7 +190,7 @@ class Picker(Gtk.ApplicationWindow):
                 i += 1
 
         scrolled.set_child(box)
-        scrolled.get_children()[0].props.margin = 5
+        # scrolled.get_child().props.margin = 5
         self.categories_count = i
         return scrolled
 
