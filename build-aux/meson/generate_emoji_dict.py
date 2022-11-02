@@ -4,6 +4,7 @@
 # https://github.com/hfg-gmuend/openmoji/blob/master/data/openmoji.json
 
 import json
+import sys
 import os
 import subprocess
 from io import StringIO
@@ -73,10 +74,11 @@ def main():
     _path = os.path.dirname(os.path.abspath(__file__))
 
     prefix = os.environ.get('MESON_INSTALL_PREFIX', '/usr/local')
-    datadir = os.path.join(prefix, 'share/smile/smile/assets')
+    destdir = os.path.join(prefix, 'share', sys.argv[1], sys.argv[1], 'assets')
+
     categ = set()
 
-    emoji_list = json.load(open(os.path.dirname(__file__) + '/openmoji.json', 'r'))
+    emoji_list = json.load(open(_path + '/openmoji.json', 'r'))
     for i, el in enumerate(emoji_list):
         if el['group'] == 'component':
             if not el['subgroups'] in components:
@@ -135,7 +137,7 @@ def main():
     output_dict = StringIO()
     print(f'emojis = {output}\nemoji_categories = {emoji_categories}\ncomponents = {components}', file=output_dict)
 
-    output_file = open(f"{_path}/../../src/assets/emoji_list.py", 'w+')
+    output_file = open(f"{destdir}/emoji_list.py", 'w+')
     output_file.write(output_dict.getvalue())
 
 if __name__ == '__main__':
