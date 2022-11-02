@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+# Emoji source
+# https://github.com/hfg-gmuend/openmoji/blob/master/data/openmoji.json
+
 import json
 import os
 import subprocess
