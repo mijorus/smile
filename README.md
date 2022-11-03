@@ -29,10 +29,14 @@ Go to `Preferences > Localized tags > Merge localized tags`!
 ### Custom tags
 ... Wait what?
 
-No matter how many tags we put, there is always going to be that one emoji you use every day which you expect to show up when you enter a specific query, but it doesn't. Smile wants to fix that, allowing the users to set their own custom tags for a specific emoji.
+No matter how many tags we put, there is always going to be that one emoji you expect to show up, but it doesn't. 
 
-An example?  
-Do you want 🌐 to show up when you search for "internet", but it is only tagged as "globe"? Select the icon using the arrow keys and press `Alt + T` to insert "internet" as custom tag.
+Smile wants to fix that, allowing the users to set their own custom tags.
+
+**An example?**  
+Do you want 🌐 when you search for "internet"? 
+
+Select the icon using the arrow keys and press `Alt + T` to insert "internet" as custom tag.
 
 <p align="center">
   <img width="500" src="https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot4.png">
