@@ -33,7 +33,7 @@ gi.require_version('Gtk', '4.0')
 # from gi.repository import Gtk, Gio, Gdk, Wnck
 from gi.repository import Gtk, Gio, Gdk, Adw
 
-class Picker(Adw.ApplicationWindow):
+class Picker(Gtk.ApplicationWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(title="Smile", resizable=True, *args, **kwargs)
         # self.connect('key_press_event', self.handle_window_key_press)
@@ -112,21 +112,8 @@ class Picker(Adw.ApplicationWindow):
         self.selected_buttons = []
 
     def on_activation(self):
-        if not is_wayland():
-            screen = Wnck.Screen.get_default()
-            windows = screen.get_windows() if screen else None
-
-            if windows:
-                for w in windows:
-                    if w.get_name() == 'smile' and w.get_icon_name() == 'smile':
-                        w.move_to_workspace(screen.get_active_workspace())
-                        break
-
-            self.deiconify()
-            self.present()
-        else:
-            self.present_with_time(time.time())
-            self.grab_focus()
+        self.present_with_time(time.time())
+        self.grab_focus()
 
         self.set_focus(self.search_entry)
 
@@ -366,7 +353,7 @@ class Picker(Adw.ApplicationWindow):
         self.update_list_tip('Selected: ' + ''.join(title[-8:]))
 
     def set_active_category(self, category: str):
-        for b in self.category_picker.get_children()[0].get_children()[0].get_children():
+        for b in []:
             if b.category != category:
                 b.get_style_context().remove_class('selected')
             else:

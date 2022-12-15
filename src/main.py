@@ -54,7 +54,7 @@ class Smile(Adw.Application):
             # Windows are associated with the application
             # when the last one is closed the application shuts down
             self.window = Picker(application=self)
-            self.window.connect("destroy", Gtk.main_quit)
+            #self.window.connect("destroy", Gtk.main_quit)
 
             self.create_action("preferences", lambda w,e: Settings(self.application_id))
             self.create_action("open_shortcuts", lambda w,e: ShortcutsWindow().open())
@@ -62,7 +62,7 @@ class Smile(Adw.Application):
             self.create_action("about", self.on_about_action)
 
             if not self.start_hidden:
-                self.window.show_all()
+                self.window.show()
                 self.window.on_activation()
 
                 # create message dialog
@@ -88,9 +88,8 @@ class Smile(Adw.Application):
                     print(e)
 
         else:
-            self.window.show_all()
+            self.window.show()
             self.window.on_activation()
-
 
     def create_action(self, name, callback):
         """ Add an Action and connect to a callback """
