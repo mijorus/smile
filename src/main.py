@@ -12,6 +12,7 @@ from .AboutDialog import AboutDialog
 from .Settings import Settings
 
 gi.require_version('Gtk', '4.0')
+gi.require_version('Adw', '1')
 from gi.repository import Gtk, Gio, Gdk, GLib, Adw
 
 class Smile(Adw.Application):
@@ -45,7 +46,7 @@ class Smile(Adw.Application):
         manimpango.register_font(self.datadir + '/assets/NotoColorEmoji.ttf')
         css_provider = Gtk.CssProvider()
         css_provider.load_from_resource('/it/mijorus/smile/assets/style.css')
-        Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
+        Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
         self.settings = Gio.Settings.new(self.application_id)
 
     def do_activate(self):

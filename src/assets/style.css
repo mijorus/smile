@@ -20,9 +20,13 @@
     outline: transparent;
 }
 
+#emoji_categories_box button {
+    margin: 1px;
+}
+
 #emoji_categories_box {
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+    /* border-radius: 5px; */
+    /* box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3); */
 }
 
 #emoji_categories_box button:focus, button.selected{
@@ -45,4 +49,9 @@
 
 .emoji_with_custom_tags_preferences {
     font-size: 20px;
+}
+
+.viewport {
+    margin: 10px;
+    margin-bottom: 0;
 }

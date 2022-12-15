@@ -28,9 +28,8 @@ from .lib.emoji_history import increament_emoji_usage_counter, get_history
 from .utils import tag_list_contains, is_wayland
 
 gi.require_version('Gtk', '4.0')
-# gi.require_version('Wnck', '3.0')
+gi.require_version('Adw', '1')
 
-# from gi.repository import Gtk, Gio, Gdk, Wnck
 from gi.repository import Gtk, Gio, Gdk, Adw
 
 class Picker(Gtk.ApplicationWindow):
@@ -39,12 +38,7 @@ class Picker(Gtk.ApplicationWindow):
         # self.connect('key_press_event', self.handle_window_key_press)
         # self.connect('key_release_event', self.handle_window_key_release)
         self.set_default_size(-1, 350)
-        # self.set_position(Gtk.WindowPosition.MOUSE)
-
         self.settings: Gio.Settings = Gio.Settings.new('it.mijorus.smile')
-        # self.settings.connect('changed::open-on-mouse-position', lambda s, key:
-        #     self.set_position(Gtk.WindowPosition.MOUSE) if s.get_boolean('open-on-mouse-position') else self.set_position(Gtk.WindowPosition.CENTER)
-        # )
 
         self.settings.connect('changed::skintone-modifier', self.update_emoji_skintones)
 
@@ -64,8 +58,8 @@ class Picker(Gtk.ApplicationWindow):
         self.categories_count = 0
         scrolled = Gtk.ScrolledWindow()
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
-        scrolled.set_size_request(-1, 300)
-        self.viewport_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        scrolled.set_size_request(350, 350)
+        self.viewport_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, css_classes=['viewport'])
 
         self.list_tip_container = Gtk.Revealer(reveal_child=False)
         self.list_tip_container.set_child(Gtk.Label(label='', opacity=0.7, justify=Gtk.Justification.CENTER))
@@ -81,8 +75,8 @@ class Picker(Gtk.ApplicationWindow):
 
         # Create an header bar
         self.header_bar = Gtk.HeaderBar()
-        # self.menu_button = self.create_menu_button()
-        # self.header_bar.append(self.menu_button)
+        self.menu_button = self.create_menu_button()
+        self.header_bar.pack_end(self.menu_button)
 
         # Create search entry
         self.search_entry = self.create_search_entry()
@@ -126,7 +120,7 @@ class Picker(Gtk.ApplicationWindow):
         builder.add_from_resource('/it/mijorus/smile/ui/menu.xml')
         menu = builder.get_object('primary_menu')
 
-        return Gtk.MenuButton(popover=menu, image=Gtk.Image.new_from_icon_name('open-menu-symbolic', Gtk.IconSize.MENU), use_popover=True)
+        return Gtk.MenuButton(popover=menu, icon_name='open-menu-symbolic')
 
     def create_emoji_button(self, data: dict):
         button = Gtk.Button()
@@ -160,13 +154,13 @@ class Picker(Gtk.ApplicationWindow):
 
     def create_category_picker(self) -> Gtk.ScrolledWindow:
         scrolled = Gtk.ScrolledWindow(name='emoji_categories_box')
-        box = Gtk.Box()
+        box = Gtk.Box(spacing=4)
 
         i = 0
-        for c, cat in emoji_categories.items():
+        for c, cat in emoji_categories.items().__reversed__():
             if 'icon' in cat:
-
                 button = Gtk.Button(valign=Gtk.Align.CENTER)
+                
                 button.category = c
                 button.index = i
                 button.set_label(cat['icon'])
