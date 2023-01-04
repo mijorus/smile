@@ -52,7 +52,7 @@ class Picker(Gtk.ApplicationWindow):
         self.selected_buttons: list[Gtk.Button] = []
         self.history_size = 0
 
-        self.clipboard = Gdk.Display.get_default().get_primary_clipboard()
+        self.clipboard = Gdk.Display.get_default().get_clipboard()
 
         # Create the emoji list and category picker
         self.categories_count = 0
@@ -209,8 +209,7 @@ class Picker(Gtk.ApplicationWindow):
         else:
             self.copy_and_quit(widget)
 
-        # Handle key-presses
-
+    # Handle key-presses
     def handle_window_key_release(self, widget, event: Gdk.Event):
         if (event.keyval == Gdk.KEY_Shift_L or event.keyval == Gdk.KEY_Shift_R):
             self.shift_key_pressed = False
@@ -423,7 +422,8 @@ class Picker(Gtk.ApplicationWindow):
             text = button.get_label()
             increament_emoji_usage_counter(button)
 
-        self.clipboard.set_content(''.join([*self.selection, text]), -1)
+        contx = Gdk.ContentProvider.new_for_value(''.join([*self.selection, text]))
+        self.clipboard.set_content(contx)
 
         if self.settings.get_boolean('is-first-run'):
             n = Gio.Notification.new('Copied!')
