@@ -15,6 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+from gi.repository import Gtk, Gio, Gdk, Adw
 import gi
 import time
 import re
@@ -30,20 +31,37 @@ from .utils import tag_list_contains, is_wayland
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Gdk, Adw
 
 class FlowBoxChild(Gtk.FlowBoxChild):
     def __init__(self, emoji_button: Gtk.Button, **kwargs):
         super().__init__(**kwargs)
         self.emoji_button = emoji_button
+        self.emoji_button.set_can_focus(False)
+
+        self.event_controller_focus = Gtk.EventControllerFocus()
+        self.event_controller_focus.connect('enter', self.on_selection)
+        self.event_controller_focus.connect('leave', self.on_selection_leave)
+        self.add_controller(self.event_controller_focus)
+
         self.set_child(self.emoji_button)
+
+    def on_selection(self, event):
+        self.set_css_classes(['flowbox-selected'])
+        self.emoji_button.set_css_classes(['emoji-button', 'selected', 'active'])
+
+    def on_selection_leave(self, event):
+        self.set_css_classes([])
+        self.emoji_button.set_css_classes(['emoji-button'])
+
 
 class Picker(Gtk.ApplicationWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(title="Smile", resizable=True, *args, **kwargs)
-        self.event_controller = Gtk.EventControllerKey()
-        self.event_controller.connect('key-pressed', self.handle_window_key_press)
-        self.add_controller(self.event_controller)
+
+        self.event_controller_keys = Gtk.EventControllerKey()
+        self.event_controller_keys.connect('key-pressed', self.handle_window_key_press)
+        self.add_controller(self.event_controller_keys)
+
         # self.connect('key_press_event', self.handle_window_key_press)
         # self.connect('key_release_event', self.handle_window_key_release)
         self.set_default_size(-1, 350)
@@ -133,11 +151,13 @@ class Picker(Gtk.ApplicationWindow):
         return Gtk.MenuButton(popover=menu, icon_name='open-menu-symbolic')
 
     def create_emoji_button(self, data: dict):
-        button = Gtk.Button()
-        button.set_label(data['emoji'])
+        button = Gtk.Button(label=data['emoji'], css_classes=['emoji-button'])
         button.emoji_data = data
         button.hexcode = data['hexcode']
-        button.history = get_history()[data['hexcode']] if (data['hexcode']) in get_history() else None
+        button.history = None
+
+        if (data['hexcode']) in get_history():
+            button.history = get_history()[data['hexcode']]
 
         if 'skintones' in data:
             button.get_style_context().add_class('emoji-with-skintones')
@@ -148,7 +168,6 @@ class Picker(Gtk.ApplicationWindow):
                     if f'-{skintone_modifier_settings}' in tone['hexcode']:
                         button.set_label(tone['emoji'])
                         break
-
 
         button.connect('clicked', self.handle_emoji_button_click)
         # button.connect('button_press_event', lambda w, e: self.show_skin_selector(w) if e.button == 3 else None)
@@ -170,7 +189,7 @@ class Picker(Gtk.ApplicationWindow):
         for c, cat in emoji_categories.items().__reversed__():
             if 'icon' in cat:
                 button = Gtk.Button(valign=Gtk.Align.CENTER)
-                
+
                 button.category = c
                 button.index = i
                 button.set_label(cat['icon'])
@@ -185,13 +204,13 @@ class Picker(Gtk.ApplicationWindow):
         return scrolled
 
     def create_emoji_list(self) -> Gtk.FlowBox:
-        flowbox = Gtk.FlowBox(valign=Gtk.Align.START, 
-            homogeneous=True, 
-            name='emoji_list_box', 
-            selection_mode=Gtk.SelectionMode.NONE, 
-            max_children_per_line=self.emoji_grid_col_n, 
-            min_children_per_line=self.emoji_grid_col_n
-        )
+        flowbox = Gtk.FlowBox(valign=Gtk.Align.START,
+                              homogeneous=True,
+                              name='emoji_list_box',
+                              selection_mode=Gtk.SelectionMode.NONE,
+                              max_children_per_line=self.emoji_grid_col_n,
+                              min_children_per_line=self.emoji_grid_col_n
+                              )
 
         flowbox.set_filter_func(self.filter_emoji_list, None)
         flowbox.set_sort_func(self.sort_emoji_list, None)
@@ -235,9 +254,12 @@ class Picker(Gtk.ApplicationWindow):
         shift_key = bool(state & Gdk.ModifierType.SHIFT_MASK)
         alt_key = bool(state & Gdk.ModifierType.ALT_MASK)
 
+        is_modifier = ctrl_key or shift_key or alt_key
+        string = keycode
+
         focused_widget = self.get_focus()
         focused_button = None
-        
+
         if isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'emoji_data'):
             focused_button = focused_widget
 
@@ -310,15 +332,16 @@ class Picker(Gtk.ApplicationWindow):
                 elif (keyval == Gdk.KEY_Up) and isinstance(focused_button.props.parent, Gtk.FlowBoxChild) and (focused_button in self.emoji_grid_first_row):
                     self.search_entry.grab_focus()
                     return False
-                elif not event.is_modifier and event.length == 1 and re.match(r'\S', event.string):
+                # !TODO
+                elif (not is_modifier) and (keycode == 1) and re.match(r'\S', string):
                     self.search_entry.grab_focus()
 
             # Focus is on a category button
             elif isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'category'):
                 # Triggers when we press arrow up on the category picker
                 if (not ([Gdk.KEY_Up, Gdk.KEY_Down, Gdk.KEY_Left, Gdk.KEY_Right].__contains__(keyval))
-                    and re.match(re.compile(r"[a-z]", re.IGNORECASE), event.string) 
-                ):
+                            and re.match(re.compile(r"[a-z]", re.IGNORECASE), string)
+                        ):
                     self.search_entry.grab_focus()
                 else:
                     if (keyval == Gdk.KEY_Up):
@@ -458,11 +481,12 @@ class Picker(Gtk.ApplicationWindow):
             list_was_sorted = True
 
         self.emoji_list.invalidate_filter()
-        
+
         if (self.list_was_sorted != list_was_sorted):
             if query:
                 for child in self.emoji_list.get_children():
-                    if get_custom_tags((child.get_child().hexcode), True): child.changed()
+                    if get_custom_tags((child.get_child().hexcode), True):
+                        child.changed()
             else:
                 self.emoji_list.invalidate_sort()
 
@@ -479,7 +503,7 @@ class Picker(Gtk.ApplicationWindow):
         merge_en_tags = self.settings.get_boolean('use-localized-tags') and self.settings.get_boolean('merge-english-tags')
 
         if self.query:
-            if self.query == e['emoji']: 
+            if self.query == e['emoji']:
                 filter_result = True
             elif get_custom_tags(e['hexcode'], cache=True) and tag_list_contains(get_custom_tags(e['hexcode'], cache=True), self.query):
                 filter_result = True
@@ -505,7 +529,7 @@ class Picker(Gtk.ApplicationWindow):
 
         if filter_result:
             widget.show()
-        else: 
+        else:
             widget.hide()
 
         return filter_result
@@ -517,7 +541,7 @@ class Picker(Gtk.ApplicationWindow):
         if (self.selected_category == 'recents'):
             h1 = get_history()[child1.hexcode] if child1.hexcode in get_history() else None
             h2 = get_history()[child2.hexcode] if child2.hexcode in get_history() else None
-            return ( (h2['lastUsage'] if h2 else 0) - (h1['lastUsage'] if h1 else 0) )
+            return ((h2['lastUsage'] if h2 else 0) - (h1['lastUsage'] if h1 else 0))
 
         elif self.query:
             return -1 if get_custom_tags(child1.hexcode, True) else 1
@@ -529,7 +553,7 @@ class Picker(Gtk.ApplicationWindow):
         modifier_settings = self.settings.get_string('skintone-modifier')
         for child in self.emoji_list.get_children():
             emoji_button = child.get_children()[0]
-            
+
             if 'skintones' in emoji_button.emoji_data:
                 if len(modifier_settings):
                     for tone in emoji_button.emoji_data['skintones']:
