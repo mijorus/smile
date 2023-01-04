@@ -20,7 +20,7 @@
     outline: transparent;
 }
 
-.emoji-button.selected.active {
+.emoji-button.active {
     border-color: rgba(255, 0, 0, 1);
     box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 1);
     outline: transparent;

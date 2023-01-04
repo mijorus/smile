@@ -33,11 +33,37 @@ gi.require_version('Adw', '1')
 from gi.repository import Gtk, Gio, Gdk, Adw  # noqa
 
 
+class EmojiButton(Gtk.Button):
+    emoji_button_css = ['emoji-button']
+    selected_emoji_button_css = [*emoji_button_css, 'selected']
+    active_emoji_button_css = [*emoji_button_css, 'active']
+
+    def __init__(self, data):
+        super().__init__(label=data['emoji'], css_classes=self.emoji_button_css)
+        self.emoji_data = data
+        self.hexcode = data['hexcode']
+        self.history = None
+
+    def toggle_select(self):
+        self.set_css_classes(self.selected_emoji_button_css)
+
+    def toggle_active(self):
+        self.set_css_classes(self.active_emoji_button_css)
+
+    def toggle_deselect(self):
+        self.set_css_classes(self.emoji_button_css)
+
+
 class FlowBoxChild(Gtk.FlowBoxChild):
-    def __init__(self, emoji_button: Gtk.Button, **kwargs):
+    emoji_button_css = ['emoji-button']
+    selected_emoji_button_css = [*emoji_button_css, 'selected']
+    active_emoji_button_css = [*selected_emoji_button_css, 'active']
+
+    def __init__(self, emoji_button: EmojiButton, **kwargs):
         super().__init__(**kwargs)
         self.emoji_button = emoji_button
         self.emoji_button.set_can_focus(False)
+        self.emoji_button.emoji_is_selected = False
 
         self.event_controller_focus = Gtk.EventControllerFocus()
         self.event_controller_focus.connect('enter', self.on_selection)
@@ -48,11 +74,13 @@ class FlowBoxChild(Gtk.FlowBoxChild):
 
     def on_selection(self, event):
         self.set_css_classes(['flowbox-selected'])
-        self.emoji_button.set_css_classes(['emoji-button', 'selected', 'active'])
+        self.emoji_button.toggle_active()
 
     def on_selection_leave(self, event):
         self.set_css_classes([])
-        self.emoji_button.set_css_classes(['emoji-button'])
+
+        if not self.emoji_button.emoji_is_selected:
+            self.emoji_button.toggle_deselect()
 
 
 class Picker(Gtk.ApplicationWindow):
@@ -89,8 +117,9 @@ class Picker(Gtk.ApplicationWindow):
         scrolled.set_size_request(350, 350)
         self.viewport_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, css_classes=['viewport'])
 
-        self.list_tip_container = Gtk.Revealer(reveal_child=False)
-        self.list_tip_container.set_child(Gtk.Label(label='', opacity=0.7, justify=Gtk.Justification.CENTER))
+        self.list_tip_revealer = Gtk.Revealer(reveal_child=False)
+        self.list_tip_label = Gtk.Label(label='', opacity=0.7, justify=Gtk.Justification.CENTER)
+        self.list_tip_revealer.set_child(self.list_tip_label)
 
         self.emoji_list_widgets: list[FlowBoxChild] = []
         self.emoji_list = self.create_emoji_list()
@@ -98,7 +127,7 @@ class Picker(Gtk.ApplicationWindow):
         self.category_picker = self.create_category_picker()
         scrolled.set_child(self.emoji_list)
 
-        self.viewport_box.prepend(self.list_tip_container)
+        self.viewport_box.prepend(self.list_tip_revealer)
         self.viewport_box.prepend(scrolled)
         self.viewport_box.append(self.category_picker)
 
@@ -152,24 +181,7 @@ class Picker(Gtk.ApplicationWindow):
         return Gtk.MenuButton(popover=menu, icon_name='open-menu-symbolic')
 
     def create_emoji_button(self, data: dict):
-        button = Gtk.Button(label=data['emoji'], css_classes=['emoji-button'])
-        button.emoji_data = data
-        button.hexcode = data['hexcode']
-        button.history = None
-
-        if (data['hexcode']) in get_history():
-            button.history = get_history()[data['hexcode']]
-
-        if 'skintones' in data:
-            button.get_style_context().add_class('emoji-with-skintones')
-
-            skintone_modifier_settings = self.settings.get_string('skintone-modifier')
-            if len(skintone_modifier_settings):
-                for tone in data['skintones']:
-                    if f'-{skintone_modifier_settings}' in tone['hexcode']:
-                        button.set_label(tone['emoji'])
-                        break
-
+        button = EmojiButton(data)
         button.connect('clicked', self.handle_emoji_button_click)
         # button.connect('button_press_event', lambda w, e: self.show_skin_selector(w) if e.button == 3 else None)
 
@@ -373,10 +385,10 @@ class Picker(Gtk.ApplicationWindow):
     # # # # # #
     def update_list_tip(self, text: str = None):
         if (text is None):
-            self.list_tip_container.set_reveal_child(False)
+            self.list_tip_revealer.set_reveal_child(False)
         else:
-            self.list_tip_container.get_children()[0].set_label(text)
-            self.list_tip_container.set_reveal_child(True)
+            self.list_tip_label.set_label(text)
+            self.list_tip_revealer.set_reveal_child(True)
 
     def update_selection_content(self, title: str = None):
         self.update_list_tip('Selected: ' + ''.join(title[-8:]))
@@ -388,13 +400,16 @@ class Picker(Gtk.ApplicationWindow):
             else:
                 b.get_style_context().add_class('selected')
 
-    def select_button_emoji(self, button: Gtk.Button):
-        self.selection.append(button.get_label())
-        increament_emoji_usage_counter(button)
+    def select_button_emoji(self, button: EmojiButton):
+        if not button.emoji_is_selected:
+            self.selection.append(button.get_label())
+            increament_emoji_usage_counter(button)
 
-        self.selected_buttons.append(button)
-        button.get_style_context().add_class('selected')
-        self.update_selection_content(self.selection)
+            self.selected_buttons.append(button)
+            button.emoji_is_selected = True
+
+            button.toggle_select()
+            self.update_selection_content(self.selection)
 
     def hide_skin_selector(self, widget: Gtk.Popover):
         self.emoji_list.set_opacity(1)
