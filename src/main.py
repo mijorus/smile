@@ -12,9 +12,9 @@ from .AboutDialog import AboutDialog
 from .Settings import Settings
 
 gi.require_version('Gtk', '4.0')
-gi.require_version('Adw', '1.0')
+gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Gdk, GLib, Adw
+from gi.repository import Gtk, Gio, Gdk, Adw  # noqa
 
 class Smile(Adw.Application):
     def __init__(self, **kwargs) -> None:
@@ -56,11 +56,11 @@ class Smile(Adw.Application):
             # Windows are associated with the application
             # when the last one is closed the application shuts down
             self.window = Picker(application=self)
-            #self.window.connect("destroy", Gtk.main_quit)
+            # self.window.connect("destroy", Gtk.main_quit)
 
-            self.create_action("preferences", lambda w,e: Settings(self.application_id))
-            self.create_action("open_shortcuts", lambda w,e: ShortcutsWindow().open())
-            self.create_action("open_changelog", lambda w,e: Gtk.show_uri(None, 'https://smile.mijorus.it/changelog', time.time()))
+            self.create_action("preferences", lambda w, e: Settings(self.application_id))
+            self.create_action("open_shortcuts", lambda w, e: ShortcutsWindow().open())
+            self.create_action("open_changelog", lambda w, e: Gtk.show_uri(None, 'https://smile.mijorus.it/changelog', time.time()))
             self.create_action("about", self.on_about_action)
 
             if not self.start_hidden:
@@ -102,6 +102,7 @@ class Smile(Adw.Application):
     def on_about_action(self, widget, event):
         about = AboutDialog(self.props.active_window, version=self.version)
         about.present()
+
 
 def main(version: str, datadir: str) -> None:
     app = Smile(version=version, datadir=datadir)

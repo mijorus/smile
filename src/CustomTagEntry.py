@@ -6,7 +6,6 @@ from .lib.custom_tags import set_custom_tags, get_custom_tags
 from .lib.localized_tags import get_localized_tags, get_countries_list
 
 
-gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, Gio, Gdk, GLib
 
 class CustomTagEntry(Gtk.Popover):

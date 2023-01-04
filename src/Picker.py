@@ -15,7 +15,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from gi.repository import Gtk, Gio, Gdk, Adw
 import gi
 import time
 import re
@@ -27,6 +26,11 @@ from .lib.custom_tags import get_custom_tags
 from .lib.localized_tags import get_localized_tags
 from .lib.emoji_history import increament_emoji_usage_counter, get_history
 from .utils import tag_list_contains, is_wayland
+
+gi.require_version('Gtk', '4.0')
+gi.require_version('Adw', '1')
+
+from gi.repository import Gtk, Gio, Gdk, Adw  # noqa
 
 
 class FlowBoxChild(Gtk.FlowBoxChild):

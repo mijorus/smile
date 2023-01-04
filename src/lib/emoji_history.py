@@ -2,7 +2,6 @@ import gi
 import time
 from .user_config import read_json_config, save_json_config
 from gi.repository import Gtk, Gio, Gdk
-gi.require_version('Gtk', '4.0')
 
 history: dict = None
 
