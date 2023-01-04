@@ -105,7 +105,7 @@ class Picker(Gtk.ApplicationWindow):
         self.selected_category = 'smileys-emotion'
         self.query: str = None
         self.selection: list[str] = []
-        self.selected_buttons: list[Gtk.Button] = []
+        self.selected_buttons: list[EmojiButton] = []
         self.history_size = 0
 
         self.clipboard = Gdk.Display.get_default().get_clipboard()
@@ -127,8 +127,8 @@ class Picker(Gtk.ApplicationWindow):
         self.category_picker = self.create_category_picker()
         scrolled.set_child(self.emoji_list)
 
-        self.viewport_box.prepend(self.list_tip_revealer)
-        self.viewport_box.prepend(scrolled)
+        self.viewport_box.append(self.list_tip_revealer)
+        self.viewport_box.append(scrolled)
         self.viewport_box.append(self.category_picker)
 
         # Create an header bar
