@@ -28,9 +28,6 @@ from .lib.localized_tags import get_localized_tags
 from .lib.emoji_history import increament_emoji_usage_counter, get_history
 from .utils import tag_list_contains, is_wayland
 
-gi.require_version('Gtk', '4.0')
-gi.require_version('Adw', '1')
-
 
 class FlowBoxChild(Gtk.FlowBoxChild):
     def __init__(self, emoji_button: Gtk.Button, **kwargs):
@@ -260,8 +257,8 @@ class Picker(Gtk.ApplicationWindow):
         focused_widget = self.get_focus()
         focused_button = None
 
-        if isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'emoji_data'):
-            focused_button = focused_widget
+        if isinstance(focused_widget, FlowBoxChild):
+            focused_button = focused_widget.emoji_button
 
         if self.search_entry.has_focus():
             if (keyval == Gdk.KEY_Down):
@@ -329,19 +326,18 @@ class Picker(Gtk.ApplicationWindow):
                 if (keyval == Gdk.KEY_Return):
                     self.copy_and_quit(focused_button)
                     return True
-                elif (keyval == Gdk.KEY_Up) and isinstance(focused_button.props.parent, Gtk.FlowBoxChild) and (focused_button in self.emoji_grid_first_row):
-                    self.search_entry.grab_focus()
-                    return False
-                # !TODO
+                elif (keyval == Gdk.KEY_Up):
+                    if isinstance(focused_button.props.parent, Gtk.FlowBoxChild) and (focused_button in self.emoji_grid_first_row):
+                        self.search_entry.grab_focus()
+                        return False
                 elif (not is_modifier) and (keycode == 1) and re.match(r'\S', string):
                     self.search_entry.grab_focus()
 
             # Focus is on a category button
             elif isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'category'):
                 # Triggers when we press arrow up on the category picker
-                if (not ([Gdk.KEY_Up, Gdk.KEY_Down, Gdk.KEY_Left, Gdk.KEY_Right].__contains__(keyval))
-                            and re.match(re.compile(r"[a-z]", re.IGNORECASE), string)
-                        ):
+                az_re = re.compile(r"[a-z]", re.IGNORECASE)
+                if (keyval in [Gdk.KEY_Up, Gdk.KEY_Down, Gdk.KEY_Left, Gdk.KEY_Right]) and re.match(az_re, string):
                     self.search_entry.grab_focus()
                 else:
                     if (keyval == Gdk.KEY_Up):

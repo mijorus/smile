@@ -12,7 +12,8 @@ from .AboutDialog import AboutDialog
 from .Settings import Settings
 
 gi.require_version('Gtk', '4.0')
-gi.require_version('Adw', '1')
+gi.require_version('Adw', '1.0')
+
 from gi.repository import Gtk, Gio, Gdk, GLib, Adw
 
 class Smile(Adw.Application):
