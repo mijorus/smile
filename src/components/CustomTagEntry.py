@@ -1,9 +1,8 @@
-import manimpango
-import sys
 import gi
 from ..assets.emoji_list import emojis
 from ..lib.custom_tags import set_custom_tags, get_custom_tags
 from ..lib.localized_tags import get_localized_tags, get_countries_list
+from .CustomPopover import CustomPopover
 
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
@@ -11,9 +10,9 @@ gi.require_version('Adw', '1')
 from gi.repository import Gtk, Gio, Gdk, GLib, Adw  # noqa
 
 
-class CustomTagEntry(Adw.Window):
+class CustomTagEntry(CustomPopover):
     def __init__(self, flowbox_child: Gtk.FlowBoxChild, parent: Gtk.Window):
-        super().__init__(resizable=False, transient_for=parent, destroy_with_parent=True, modal=True)
+        super().__init__(parent=parent)
 
         self.emoji_buttom = flowbox_child.emoji_button
 
@@ -37,7 +36,7 @@ class CustomTagEntry(Adw.Window):
 
         popover_content.append(
             Gtk.Label(
-                label=f'<b>{self.emoji_buttom.emoji_data["emoji"]} Custom tags</b>',
+                label=f'<b>{self.emoji_buttom.emoji_data["emoji"]} Edit custom tags</b>',
                 use_markup=True,
                 margin_bottom=10,
                 css_classes=['heading']
@@ -48,10 +47,6 @@ class CustomTagEntry(Adw.Window):
         self.entry.set_placeholder_text("List of custom tags, separated  by comma")
         popover_content.append(self.entry)
 
-        self.event_controller_keys = Gtk.EventControllerKey()
-        self.event_controller_keys.connect('key-pressed', self.handle_key_press)
-
-        self.entry.add_controller(self.event_controller_keys)
         self.entry.connect('activate', self.handle_activate)
 
         label_text = f"<small><b>Default tags</b>: {default_tags}</small>"
@@ -67,11 +62,6 @@ class CustomTagEntry(Adw.Window):
 
         self.set_content(popover_content)
         self.show()
-
-    def handle_key_press(self, controller: Gtk.EventController, keyval: int, keycode: int, state: Gdk.ModifierType):
-        if keyval == Gdk.KEY_Escape:
-            self.destroy()
-            return True
 
     def handle_activate(self, user_data):
         set_custom_tags(self.relative_widget_hexcode, self.entry.get_text())

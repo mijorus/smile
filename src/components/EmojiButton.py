@@ -12,8 +12,8 @@ class EmojiButton(Gtk.Button):
     selected_emoji_button_css = [*emoji_button_css, 'selected']
     active_emoji_button_css = [*emoji_button_css, 'active']
 
-    def __init__(self, data):
-        super().__init__(label=data['emoji'], css_classes=self.emoji_button_css)
+    def __init__(self, data, **kwargs):
+        super().__init__(label=data['emoji'], css_classes=self.emoji_button_css, **kwargs)
         self.emoji_data = data
         self.hexcode = data['hexcode']
         self.history = None

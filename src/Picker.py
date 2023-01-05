@@ -22,6 +22,7 @@ import re
 from .assets.emoji_list import emojis, emoji_categories
 from .ShortcutsWindow import ShortcutsWindow
 from .components.CustomTagEntry import CustomTagEntry
+from .components.SkintoneSelector import SkintoneSelector
 from .components.FlowBoxChild import FlowBoxChild
 from .components.EmojiButton import EmojiButton
 from .lib.custom_tags import get_custom_tags
@@ -101,7 +102,9 @@ class Picker(Gtk.ApplicationWindow):
         # This variable the status of the sorted status
         self.list_was_sorted = False
 
-        self.set_child(self.viewport_box)
+        self.overlay = Adw.ToastOverlay()
+        self.overlay.set_child(self.viewport_box)
+        self.set_child(self.overlay)
         self.connect('show', self.on_show)
         self.set_active_category('smileys-emotion')
 
@@ -237,7 +240,13 @@ class Picker(Gtk.ApplicationWindow):
 
         if alt_key:
             if focused_button and keyval == Gdk.KEY_e:
-                self.show_skin_selector(focused_button)
+                if not SkintoneSelector.check_skintone(focused_widget):
+                    self.overlay.add_toast(
+                        Adw.Toast(title="No skintones available", timeout=1)
+                    )
+                else:
+                    SkintoneSelector(focused_widget, self)
+
                 return True
             elif focused_button and keyval == Gdk.KEY_t:
                 CustomTagEntry(focused_widget, self)
@@ -363,9 +372,9 @@ class Picker(Gtk.ApplicationWindow):
             button.toggle_select()
             self.update_selection_content(self.selection)
 
-    def hide_skin_selector(self, widget: Gtk.Popover):
-        self.emoji_list.set_opacity(1)
-        widget.destroy()
+    # def hide_skin_selector(self, widget: Gtk.Popover):
+    #     self.emoji_list.set_opacity(1)
+    #     widget.destroy()
 
     def show_skin_selector(self, widget: Gtk.Button):
         popover = Gtk.Popover(relative_to=widget)
