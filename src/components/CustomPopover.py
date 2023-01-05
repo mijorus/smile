@@ -12,6 +12,7 @@ class CustomPopover(Adw.Window):
 
         self.event_controller_keys = Gtk.EventControllerKey()
         self.event_controller_keys.connect('key-pressed', self.handle_key_press)
+        self.add_controller(self.event_controller_keys)
 
     def handle_key_press(self, controller: Gtk.EventController, keyval: int, keycode: int, state: Gdk.ModifierType):
         if keyval == Gdk.KEY_Escape:

@@ -12,8 +12,9 @@ from gi.repository import Gtk, Gio, Gdk, GLib, Adw  # noqa
 
 
 class SkintoneSelector(CustomPopover):
-    def __init__(self, flowbox_child: Gtk.FlowBoxChild, parent: Gtk.Window):
+    def __init__(self, flowbox_child: Gtk.FlowBoxChild, parent: Gtk.Window, click_handler: callable):
         super().__init__(parent=parent)
+        self.click_handler = click_handler
 
         popover_content = Gtk.Box(
             orientation=Gtk.Orientation.VERTICAL, 
@@ -34,19 +35,25 @@ class SkintoneSelector(CustomPopover):
         relative_widget_hexcode = flowbox_child.emoji_button.emoji_data['hexcode']
         for skintone in emojis[relative_widget_hexcode]['skintones']:
             button = EmojiButton(skintone, width_request=55)
+            button.connect('clicked', self.handle_activate)
             skintone_emojis.append(button)
             
         popover_content.append(skintone_emojis)
 
         popover_content.append(
-            Gtk.Label(label="<small>Press Enter or ESC to close without saving</small>", use_markup=True, margin_top=10, css_classes=['dim-label'])
+            Gtk.Label(
+                label="<small>Press Enter to select or ESC to close</small>", 
+                use_markup=True, 
+                margin_top=10, 
+                css_classes=['dim-label']
+            )
         )
 
         self.set_content(popover_content)
         self.show()
 
-    def handle_activate(self, user_data):
-        set_custom_tags(self.relative_widget_hexcode, self.entry.get_text())
+    def handle_activate(self, _):
+        self.click_handler(_)
         self.destroy()
         return True
 

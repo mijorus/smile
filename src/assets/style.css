@@ -6,6 +6,10 @@
     border-top-right-radius: 10px;
 }
 
+.emoji-button {
+    font-size: 20px;
+}
+
 /* Focused emoji button */
 .emoji-button:focus, .emoji-button.selected {
     border-color: red;

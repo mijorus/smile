@@ -135,7 +135,7 @@ class Picker(Gtk.ApplicationWindow):
 
         return Gtk.MenuButton(popover=menu, icon_name='open-menu-symbolic')
 
-    def create_emoji_button(self, data: dict):
+    def     create_emoji_button(self, data: dict):
         button = EmojiButton(data)
         button.connect('clicked', self.handle_emoji_button_click)
         # button.connect('button_press_event', lambda w, e: self.show_skin_selector(w) if e.button == 3 else None)
@@ -245,7 +245,7 @@ class Picker(Gtk.ApplicationWindow):
                         Adw.Toast(title="No skintones available", timeout=1)
                     )
                 else:
-                    SkintoneSelector(focused_widget, self)
+                    SkintoneSelector(focused_widget, self, self.handle_emoji_button_click)
 
                 return True
             elif focused_button and keyval == Gdk.KEY_t:
