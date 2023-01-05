@@ -1,9 +1,9 @@
 import manimpango
 import sys
 import gi
-from .assets.emoji_list import emojis
-from .lib.custom_tags import set_custom_tags, get_custom_tags
-from .lib.localized_tags import get_localized_tags, get_countries_list
+from ..assets.emoji_list import emojis
+from ..lib.custom_tags import set_custom_tags, get_custom_tags
+from ..lib.localized_tags import get_localized_tags, get_countries_list
 
 
 from gi.repository import Gtk, Gio, Gdk, GLib

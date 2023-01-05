@@ -21,7 +21,9 @@ import re
 
 from .assets.emoji_list import emojis, emoji_categories
 from .ShortcutsWindow import ShortcutsWindow
-from .CustomTagEntry import CustomTagEntry
+from .components.CustomTagEntry import CustomTagEntry
+from .components.FlowBoxChild import FlowBoxChild
+from .components.EmojiButton import EmojiButton
 from .lib.custom_tags import get_custom_tags
 from .lib.localized_tags import get_localized_tags
 from .lib.emoji_history import increament_emoji_usage_counter, get_history
@@ -31,56 +33,6 @@ gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Gdk, Adw  # noqa
-
-
-class EmojiButton(Gtk.Button):
-    emoji_button_css = ['emoji-button']
-    selected_emoji_button_css = [*emoji_button_css, 'selected']
-    active_emoji_button_css = [*emoji_button_css, 'active']
-
-    def __init__(self, data):
-        super().__init__(label=data['emoji'], css_classes=self.emoji_button_css)
-        self.emoji_data = data
-        self.hexcode = data['hexcode']
-        self.history = None
-
-    def toggle_select(self):
-        self.set_css_classes(self.selected_emoji_button_css)
-
-    def toggle_active(self):
-        self.set_css_classes(self.active_emoji_button_css)
-
-    def toggle_deselect(self):
-        self.set_css_classes(self.emoji_button_css)
-
-
-class FlowBoxChild(Gtk.FlowBoxChild):
-    emoji_button_css = ['emoji-button']
-    selected_emoji_button_css = [*emoji_button_css, 'selected']
-    active_emoji_button_css = [*selected_emoji_button_css, 'active']
-
-    def __init__(self, emoji_button: EmojiButton, **kwargs):
-        super().__init__(**kwargs)
-        self.emoji_button = emoji_button
-        self.emoji_button.set_can_focus(False)
-        self.emoji_button.emoji_is_selected = False
-
-        self.event_controller_focus = Gtk.EventControllerFocus()
-        self.event_controller_focus.connect('enter', self.on_selection)
-        self.event_controller_focus.connect('leave', self.on_selection_leave)
-        self.add_controller(self.event_controller_focus)
-
-        self.set_child(self.emoji_button)
-
-    def on_selection(self, event):
-        self.set_css_classes(['flowbox-selected'])
-        self.emoji_button.toggle_active()
-
-    def on_selection_leave(self, event):
-        self.set_css_classes([])
-
-        if not self.emoji_button.emoji_is_selected:
-            self.emoji_button.toggle_deselect()
 
 
 class Picker(Gtk.ApplicationWindow):
