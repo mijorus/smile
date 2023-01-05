@@ -1,4 +1,5 @@
 import gi
+from .CustomTagEntry import CustomTagEntry
 
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')

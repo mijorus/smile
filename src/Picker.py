@@ -240,7 +240,7 @@ class Picker(Gtk.ApplicationWindow):
                 self.show_skin_selector(focused_button)
                 return True
             elif focused_button and keyval == Gdk.KEY_t:
-                CustomTagEntry(focused_button)
+                CustomTagEntry(focused_widget, self.emoji_list)
                 return True
 
         if shift_key:
