@@ -4,26 +4,18 @@ import gi
 from ..assets.emoji_list import emojis
 from ..lib.custom_tags import set_custom_tags, get_custom_tags
 from ..lib.localized_tags import get_localized_tags, get_countries_list
-# from .FlowBoxChild import FlowBoxChild
 
+gi.require_version('Gtk', '4.0')
+gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Gdk, GLib, Adw
+from gi.repository import Gtk, Gio, Gdk, GLib, Adw  # noqa
 
 
 class CustomTagEntry(Adw.Window):
-    def __init__(self, flowbox_child: Gtk.FlowBoxChild, window):
-        super().__init__()
+    def __init__(self, flowbox_child: Gtk.FlowBoxChild, parent: Gtk.Window):
+        super().__init__(resizable=False, transient_for=parent, destroy_with_parent=True, modal=True)
 
         self.emoji_buttom = flowbox_child.emoji_button
-
-        # self.set_parent(window)
-        # alloc = flowbox_child.get_allocation()
-        # rect = Gdk.Rectangle(x, y, 0, 0)
-        # self.set_pointing_to(rect)
-        # print(alloc.x)
-        # print(alloc.y)
-        # print(window.get_height() - alloc.y)
-        # widget.set_child(self)
 
         popover_content = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, name='custom_tag_entry')
         self.relative_widget_hexcode = self.emoji_buttom.emoji_data['hexcode']
@@ -45,9 +37,10 @@ class CustomTagEntry(Adw.Window):
 
         popover_content.append(
             Gtk.Label(
-                label=f'<b>{self.emoji_buttom.emoji_data["emoji"]} Custom tags</b>', 
-                use_markup=True, 
-                margin_bottom=10
+                label=f'<b>{self.emoji_buttom.emoji_data["emoji"]} Custom tags</b>',
+                use_markup=True,
+                margin_bottom=10,
+                css_classes=['heading']
             )
         )
 
@@ -65,13 +58,15 @@ class CustomTagEntry(Adw.Window):
         if len(localized_tags) > 0:
             label_text += f"\n<small><b>{get_countries_list()[settings.get_string('tags-locale')]['language']} tags</b>: {localized_tags}</small>"
 
+        
         label = Gtk.Label(label=label_text, use_markup=True, margin_top=10)
         popover_content.append(label)
+        popover_content.append(
+            Gtk.Label(label="<small>Press Enter or ESC to close without saving</small>", use_markup=True, margin_top=10, css_classes=['dim-label'])
+        )
 
         self.set_content(popover_content)
         self.show()
-
-        self.connect('close-request', self.close)
 
     def handle_key_press(self, controller: Gtk.EventController, keyval: int, keycode: int, state: Gdk.ModifierType):
         if keyval == Gdk.KEY_Escape:
@@ -82,6 +77,3 @@ class CustomTagEntry(Adw.Window):
         set_custom_tags(self.relative_widget_hexcode, self.entry.get_text())
         self.destroy()
         return True
-
-    def close(self, widget):
-        pass
