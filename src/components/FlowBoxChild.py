@@ -9,10 +9,6 @@ gi.require_version('Adw', '1')
 from gi.repository import Gtk, Gio, Gdk, Adw  # noqa
 
 class FlowBoxChild(Gtk.FlowBoxChild):
-    emoji_button_css = ['emoji-button']
-    selected_emoji_button_css = [*emoji_button_css, 'selected']
-    active_emoji_button_css = [*selected_emoji_button_css, 'active']
-
     def __init__(self, emoji_button: EmojiButton, **kwargs):
         super().__init__(**kwargs)
         self.emoji_button = emoji_button

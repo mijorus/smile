@@ -27,9 +27,10 @@ class SkintoneSelector(CustomPopover):
         )
 
         skintone_emojis = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, hexpand=True, spacing=5)
+        skintone_emojis.set_size_request(250, -1)
 
         popover_container = Gtk.ScrolledWindow()
-        popover_container.set_max_content_width(500)
+        popover_container.set_max_content_width(350)
         popover_container.set_propagate_natural_width(True)
         popover_container.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.NEVER)
 
@@ -39,7 +40,8 @@ class SkintoneSelector(CustomPopover):
             button.connect('clicked', self.handle_activate)
             skintone_emojis.append(button)
 
-        popover_content.append(skintone_emojis)
+        popover_container.set_child(skintone_emojis)
+        popover_content.append(popover_container)
 
         popover_content.append(
             Gtk.Label(
@@ -50,7 +52,7 @@ class SkintoneSelector(CustomPopover):
             )
         )
         
-        self.connect('close-request', self.handle_close)
+        self.handle_close = self.on_close
         self.flowbox_child.lock_status = True
         self.flowbox_child.emoji_button.toggle_active()
 
@@ -59,7 +61,7 @@ class SkintoneSelector(CustomPopover):
 
     def handle_activate(self, _):
         self.click_handler(_)
-        self.destroy()
+        self.request_close()
         return True
 
     def check_skintone(flowbox_child):
@@ -70,6 +72,5 @@ class SkintoneSelector(CustomPopover):
 
         return False
 
-    def handle_close(self, user_data):
+    def on_close(self):
         self.flowbox_child.lock_status = False
-        return False

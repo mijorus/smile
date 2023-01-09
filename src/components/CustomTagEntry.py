@@ -49,7 +49,7 @@ class CustomTagEntry(CustomPopover):
         popover_content.append(self.entry)
 
         self.entry.connect('activate', self.handle_activate)
-        self.connect('close-request', self.handle_close)
+        self.handle_close = self.on_close
 
         label_text = f"<small><b>Default tags</b>: {default_tags}</small>"
         if len(localized_tags) > 0:
@@ -70,9 +70,8 @@ class CustomTagEntry(CustomPopover):
 
     def handle_activate(self, user_data):
         set_custom_tags(self.relative_widget_hexcode, self.entry.get_text())
-        self.destroy()
+        self.request_close()
         return True
 
-    def handle_close(self, user_data):
+    def on_close(self):
         self.flowbox_child.lock_status = False
-        return False
