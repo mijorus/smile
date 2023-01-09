@@ -91,6 +91,7 @@ class Picker(Gtk.ApplicationWindow):
         # Create search entry
         self.search_entry = Gtk.SearchEntry(hexpand=True, width_request=200)
         self.search_entry.connect('search_changed', self.search_emoji)
+        self.search_entry.grab_focus()
 
         self.header_bar.pack_start(self.search_entry)
         self.set_titlebar(self.header_bar)
@@ -224,9 +225,12 @@ class Picker(Gtk.ApplicationWindow):
         if isinstance(focused_widget, FlowBoxChild):
             focused_button = focused_widget.emoji_button
 
-        if self.search_entry.has_focus():
+        if self.search_entry is focused_widget.get_parent():
             if (keyval == Gdk.KEY_Down):
-                self.emoji_list.get_child_at_pos(0, 0).get_child().grab_focus()
+                self.load_first_row()
+                self.emoji_grid_first_row[0].grab_focus()
+                # self.emoji_list.emit('move-cursor', Gtk.MovementStep.VISUAL_POSITIONS, 0, False, True)
+
                 return True
 
             return False
@@ -365,38 +369,11 @@ class Picker(Gtk.ApplicationWindow):
             button.toggle_select()
             self.update_selection_content(self.selection)
 
-    def show_skin_selector(self, widget: Gtk.Button):
-        popover = Gtk.Popover(relative_to=widget)
-        popover_content = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, name='skin_selector', hexpand=True)
-
-        popover_container = Gtk.ScrolledWindow()
-        popover_container.set_max_content_width(500)
-        popover_container.set_propagate_natural_width(True)
-        popover_container.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.NEVER)
-
-        relative_widget_hexcode = widget.emoji_data['hexcode']
-        if ('skintones' in emojis[relative_widget_hexcode]):
-            for skintone in emojis[relative_widget_hexcode]['skintones']:
-                button = self.create_emoji_button(skintone)
-                popover_content.pack_end(button, False, True, 2)
-        else:
-            label = Gtk.Label(label='No skintones available')
-            popover_content.pack_end(label, False, True, 2)
-
-        popover.add(popover_container)
-        popover_container.add_with_viewport(popover_content)
-        popover_container.show_all()
-        popover.popup()
-
-        self.emoji_list.set_opacity(0.5)
-        popover.connect('closed', self.hide_skin_selector)
-        return True
-
-    def get_first_row(self):
+    def load_first_row(self):
         self.emoji_grid_first_row = []
-        for widget in self.emoji_list.get_children():
+        for widget in self.emoji_list_widgets:
             if (len(self.emoji_grid_first_row) < self.emoji_grid_col_n) and widget.props.visible:
-                self.emoji_grid_first_row.append(widget.get_children()[0])
+                self.emoji_grid_first_row.append(widget)
 
     def filter_for_category(self, widget: Gtk.Button):
         self.set_active_category(None)
@@ -415,7 +392,7 @@ class Picker(Gtk.ApplicationWindow):
             self.update_list_tip(None)
 
         self.emoji_list.invalidate_sort()
-        self.get_first_row()
+        self.load_first_row()
 
     def copy_and_quit(self, button: Gtk.Button = None):
         text = ''
@@ -482,7 +459,7 @@ class Picker(Gtk.ApplicationWindow):
 
         elif self.selected_category:
             if self.selected_category == 'recents':
-                filter_result = get_history().__contains__((widget.get_child()).hexcode)
+                filter_result = (widget.get_child()).hexcode in get_history()
             else:
                 filter_result = self.selected_category == e['group']
 
