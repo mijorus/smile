@@ -22,6 +22,7 @@ class FlowBoxChild(Gtk.FlowBoxChild):
         self.event_controller_focus = Gtk.EventControllerFocus()
         self.event_controller_focus.connect('enter', self.on_selection)
         self.event_controller_focus.connect('leave', self.on_selection_leave)
+        self.lock_status = False
         self.add_controller(self.event_controller_focus)
 
         self.set_child(self.emoji_button)
@@ -31,6 +32,9 @@ class FlowBoxChild(Gtk.FlowBoxChild):
         self.emoji_button.toggle_active()
 
     def on_selection_leave(self, event):
+        if self.lock_status:
+            return
+
         self.set_css_classes([])
 
         if not self.emoji_button.emoji_is_selected:

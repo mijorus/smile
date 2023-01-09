@@ -15,6 +15,7 @@ class CustomTagEntry(CustomPopover):
         super().__init__(parent=parent)
 
         self.emoji_buttom = flowbox_child.emoji_button
+        self.flowbox_child = flowbox_child
 
         popover_content = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, name='custom_tag_entry')
         self.relative_widget_hexcode = self.emoji_buttom.emoji_data['hexcode']
@@ -48,6 +49,7 @@ class CustomTagEntry(CustomPopover):
         popover_content.append(self.entry)
 
         self.entry.connect('activate', self.handle_activate)
+        self.connect('close-request', self.handle_close)
 
         label_text = f"<small><b>Default tags</b>: {default_tags}</small>"
         if len(localized_tags) > 0:
@@ -60,6 +62,9 @@ class CustomTagEntry(CustomPopover):
             Gtk.Label(label="<small>Press Enter or ESC to close without saving</small>", use_markup=True, margin_top=10, css_classes=['dim-label'])
         )
 
+        self.flowbox_child.lock_status = True
+        self.flowbox_child.emoji_button.toggle_active()
+
         self.set_content(popover_content)
         self.show()
 
@@ -67,3 +72,7 @@ class CustomTagEntry(CustomPopover):
         set_custom_tags(self.relative_widget_hexcode, self.entry.get_text())
         self.destroy()
         return True
+
+    def handle_close(self, user_data):
+        self.flowbox_child.lock_status = False
+        return False

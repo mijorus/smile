@@ -15,16 +15,17 @@ class SkintoneSelector(CustomPopover):
     def __init__(self, flowbox_child: Gtk.FlowBoxChild, parent: Gtk.Window, click_handler: callable):
         super().__init__(parent=parent)
         self.click_handler = click_handler
+        self.flowbox_child = flowbox_child
 
         popover_content = Gtk.Box(
-            orientation=Gtk.Orientation.VERTICAL, 
+            orientation=Gtk.Orientation.VERTICAL,
             hexpand=True,
             margin_top=5,
             margin_bottom=5,
             margin_start=5,
             margin_end=5,
         )
-        
+
         skintone_emojis = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, hexpand=True, spacing=5)
 
         popover_container = Gtk.ScrolledWindow()
@@ -37,17 +38,21 @@ class SkintoneSelector(CustomPopover):
             button = EmojiButton(skintone, width_request=55)
             button.connect('clicked', self.handle_activate)
             skintone_emojis.append(button)
-            
+
         popover_content.append(skintone_emojis)
 
         popover_content.append(
             Gtk.Label(
-                label="<small>Press Enter to select or ESC to close</small>", 
-                use_markup=True, 
-                margin_top=10, 
+                label="<small>Press Enter to select or ESC to close</small>",
+                use_markup=True,
+                margin_top=10,
                 css_classes=['dim-label']
             )
         )
+        
+        self.connect('close-request', self.handle_close)
+        self.flowbox_child.lock_status = True
+        self.flowbox_child.emoji_button.toggle_active()
 
         self.set_content(popover_content)
         self.show()
@@ -63,4 +68,8 @@ class SkintoneSelector(CustomPopover):
             for skintone in emojis[relative_widget_hexcode]['skintones']:
                 return True
 
+        return False
+
+    def handle_close(self, user_data):
+        self.flowbox_child.lock_status = False
         return False

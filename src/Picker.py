@@ -135,7 +135,7 @@ class Picker(Gtk.ApplicationWindow):
 
         return Gtk.MenuButton(popover=menu, icon_name='open-menu-symbolic')
 
-    def     create_emoji_button(self, data: dict):
+    def create_emoji_button(self, data: dict):
         button = EmojiButton(data)
         button.connect('clicked', self.handle_emoji_button_click)
         # button.connect('button_press_event', lambda w, e: self.show_skin_selector(w) if e.button == 3 else None)
@@ -210,8 +210,8 @@ class Picker(Gtk.ApplicationWindow):
         if (event.keyval == Gdk.KEY_Shift_L or event.keyval == Gdk.KEY_Shift_R):
             self.shift_key_pressed = False
 
+    # Handle every possible keypress here, returns True if the event was handled (prevent default)
     def handle_window_key_press(self, controller: Gtk.EventController, keyval: int, keycode: int, state: Gdk.ModifierType) -> bool:
-        """Handle every possible keypress here, returns True if the event was handled (prevent default)"""
         if (keyval == Gdk.KEY_Escape):
             self.default_hiding_action()
             return True
