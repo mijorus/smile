@@ -193,6 +193,7 @@ class Picker(Gtk.ApplicationWindow):
         self.categories_count = i
         return scrolled
 
+
     def create_emoji_list(self) -> Gtk.FlowBox:
         flowbox = Gtk.FlowBox(valign=Gtk.Align.START, 
             homogeneous=True, 
