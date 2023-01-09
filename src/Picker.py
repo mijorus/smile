@@ -327,7 +327,6 @@ class Picker(Gtk.ApplicationWindow):
                                     break
                             else:
                                 if f.emoji_button.emoji_data['group'] == self.selected_category:
-                                    print(f.emoji_button.hexcode)
                                     f.emoji_button.grab_focus()
                                     break
 
