@@ -39,16 +39,15 @@ from gi.repository import Gtk, Gio, Gdk, Adw  # noqa
 class Picker(Gtk.ApplicationWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(title="Smile", resizable=True, *args, **kwargs)
+        self.set_default_size(350, 350)
 
         self.event_controller_keys = Gtk.EventControllerKey()
+        self.event_controller_keys_lc = Gtk.EventControllerLegacy()
         self.event_controller_keys.connect('key-pressed', self.handle_window_key_press)
+
         self.add_controller(self.event_controller_keys)
 
-        # self.connect('key_press_event', self.handle_window_key_press)
-        # self.connect('key_release_event', self.handle_window_key_release)
-        self.set_default_size(-1, 350)
         self.settings: Gio.Settings = Gio.Settings.new('it.mijorus.smile')
-
         self.settings.connect('changed::skintone-modifier', self.update_emoji_skintones)
 
         self.emoji_grid_col_n = 5
@@ -65,9 +64,9 @@ class Picker(Gtk.ApplicationWindow):
 
         # Create the emoji list and category picker
         self.categories_count = 0
-        scrolled = Gtk.ScrolledWindow()
+        scrolled = Gtk.ScrolledWindow(min_content_height=350, propagate_natural_height=True)
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
-        scrolled.set_size_request(350, 350)
+
         self.viewport_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, css_classes=['viewport'])
 
         self.list_tip_revealer = Gtk.Revealer(reveal_child=False)
@@ -85,14 +84,15 @@ class Picker(Gtk.ApplicationWindow):
         self.viewport_box.append(self.category_picker)
 
         # Create an header bar
-        self.header_bar = Gtk.HeaderBar()
+        self.header_bar = Adw.HeaderBar(title_widget=Gtk.Box())
         self.menu_button = self.create_menu_button()
         self.header_bar.pack_end(self.menu_button)
 
         # Create search entry
-        self.search_entry = self.create_search_entry()
+        self.search_entry = Gtk.SearchEntry(hexpand=True, width_request=200)
+        self.search_entry.connect('search_changed', self.search_emoji)
 
-        # self.header_bar.prepend(self.search_entry)
+        self.header_bar.pack_start(self.search_entry)
         self.set_titlebar(self.header_bar)
 
         self.shortcut_window: ShortcutsWindow = None
@@ -107,6 +107,8 @@ class Picker(Gtk.ApplicationWindow):
         self.set_child(self.overlay)
         self.connect('show', self.on_show)
         self.set_active_category('smileys-emotion')
+
+        self.emoji_list.connect('move-cursor', lambda x, w, e, r, b: print('test'))
 
     def on_hide(self):
         self.search_entry.set_text('')
@@ -138,16 +140,8 @@ class Picker(Gtk.ApplicationWindow):
     def create_emoji_button(self, data: dict):
         button = EmojiButton(data)
         button.connect('clicked', self.handle_emoji_button_click)
-        # button.connect('button_press_event', lambda w, e: self.show_skin_selector(w) if e.button == 3 else None)
 
         return button
-
-    def create_search_entry(self) -> Gtk.SearchEntry:
-        search_entry = Gtk.SearchEntry()
-        search_entry.set_hexpand(True)
-        # search_entry.props.enable_emoji_completion = False
-        search_entry.connect('search_changed', self.search_emoji)
-        return search_entry
 
     def create_category_picker(self) -> Gtk.ScrolledWindow:
         scrolled = Gtk.ScrolledWindow(name='emoji_categories_box')
@@ -167,7 +161,6 @@ class Picker(Gtk.ApplicationWindow):
                 i += 1
 
         scrolled.set_child(box)
-        # scrolled.get_child().props.margin = 5
         self.categories_count = i
         return scrolled
 
@@ -273,6 +266,7 @@ class Picker(Gtk.ApplicationWindow):
                     return True
 
         if ctrl_key:
+            print('asd')
             if keyval == Gdk.KEY_Left:
                 next_sel = self.selected_category_index - 1 if (self.selected_category_index > 0) else 0
             elif keyval == Gdk.KEY_Right:
@@ -371,10 +365,6 @@ class Picker(Gtk.ApplicationWindow):
             button.toggle_select()
             self.update_selection_content(self.selection)
 
-    # def hide_skin_selector(self, widget: Gtk.Popover):
-    #     self.emoji_list.set_opacity(1)
-    #     widget.destroy()
-
     def show_skin_selector(self, widget: Gtk.Button):
         popover = Gtk.Popover(relative_to=widget)
         popover_content = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, name='skin_selector', hexpand=True)
@@ -448,19 +438,16 @@ class Picker(Gtk.ApplicationWindow):
 
     def search_emoji(self, search_entry: str):
         query = search_entry.get_text().strip()
-        if (len(query) == 0):
-            self.query = None
-            list_was_sorted = False
-        else:
-            self.query = query
-            list_was_sorted = True
+
+        self.query = query if query else None
+        list_was_sorted = self.query != None
 
         self.emoji_list.invalidate_filter()
 
         if (self.list_was_sorted != list_was_sorted):
             if query:
-                for child in self.emoji_list.get_children():
-                    if get_custom_tags((child.get_child().hexcode), True):
+                for child in self.emoji_list_widgets:
+                    if get_custom_tags(child.emoji_button.emoji_data['hexcode'], True):
                         child.changed()
             else:
                 self.emoji_list.invalidate_sort()
