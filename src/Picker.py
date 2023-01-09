@@ -38,7 +38,6 @@ class Picker(Gtk.ApplicationWindow):
         self.connect('key_press_event', self.handle_window_key_press)
         self.connect('key_release_event', self.handle_window_key_release)
         self.set_default_size(-1, 350)
-        self.set_position(Gtk.WindowPosition.MOUSE)
 
         self.settings: Gio.Settings = Gio.Settings.new('it.mijorus.smile')
         self.settings.connect('changed::open-on-mouse-position', lambda s, key:
