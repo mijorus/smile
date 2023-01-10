@@ -21,33 +21,22 @@ Note: Flathub and Github are the only official release channels for Smile. Any r
 
 Smile is a simple emoji picker for linux with **custom tags support**.
 
-### Localized tags + english fallback!
-In my daily routine, I alway mix Italian and English in my brain. One tab with Italian newspaper, the other with an English documentation; with Smile, you can finally use both English and localized tags at the same time!
+### Localized tags!
+Go to `Preferences > Localized tags`
 
+#### English fallback!
 Go to `Preferences > Localized tags > Merge localized tags`!
 
 ### Custom tags
-... Wait what?
-
-No matter how many tags we put, there is always going to be that one emoji you expect to show up, but it doesn't. 
-
-Smile wants to fix that, allowing the users to set their own custom tags.
-
-**An example?**  
-Do you want 🌐 when you search for "internet"? 
-
-Select the icon using the arrow keys and press `Alt + T` to insert "internet" as custom tag.
+Select the icon using the arrow keys and press `Alt + T` to insert one or more custom tags.
 
 <p align="center">
   <img width="500" src="https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot4.png">
 </p>
 
 ### Custom shortcut
-This app does not register its own system-wide shortcut, but you can create one simply by going in the system settings. Most, if not all, distrubutions let the user add shortcuts that trigger custom commands. 
 
-You can create a shortcut for Smile by launching this command: `flatpak run it.mijorus.smile`
-
-I believe that having all the shortcuts in once central panel is a much better user expecience than apps registering their own shortcuts separately.
+Please open your system settings and create a global shortcut for this command: `flatpak run it.mijorus.smile`
 
 ### Skintone selector
 
