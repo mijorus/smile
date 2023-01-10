@@ -76,6 +76,7 @@ class Picker(Gtk.ApplicationWindow):
         self.emoji_list_widgets: list[FlowBoxChild] = []
         self.emoji_list = self.create_emoji_list()
         self.category_count = 0  # will be set in create_category_picker()
+        self.category_picker_widgets: list[Gtk.Button] = []
         self.category_picker = self.create_category_picker()
         scrolled.set_child(self.emoji_list)
 
@@ -109,7 +110,7 @@ class Picker(Gtk.ApplicationWindow):
         self.connect('show', self.on_show)
         self.set_active_category('smileys-emotion')
 
-        self.emoji_list.connect('move-cursor', lambda x, w, e, r, b: print('test'))
+        # self.emoji_list.connect('move-cursor', lambda x, w, e, r, b: print('test'))
 
     def on_hide(self):
         self.search_entry.set_text('')
@@ -149,16 +150,15 @@ class Picker(Gtk.ApplicationWindow):
         box = Gtk.Box(spacing=4)
 
         i = 0
-        for c, cat in emoji_categories.items().__reversed__():
+        for c, cat in emoji_categories.items():
             if 'icon' in cat:
-                button = Gtk.Button(valign=Gtk.Align.CENTER)
-
+                button = Gtk.Button(label=cat['icon'], valign=Gtk.Align.CENTER)
                 button.category = c
                 button.index = i
-                button.set_label(cat['icon'])
                 button.connect('clicked', self.filter_for_category)
 
-                box.prepend(button)
+                box.append(button)
+                self.category_picker_widgets.append(button)
                 i += 1
 
         scrolled.set_child(box)
@@ -221,6 +221,7 @@ class Picker(Gtk.ApplicationWindow):
 
         focused_widget = self.get_focus()
         focused_button = None
+        
 
         if isinstance(focused_widget, FlowBoxChild):
             focused_button = focused_widget.emoji_button
@@ -233,7 +234,7 @@ class Picker(Gtk.ApplicationWindow):
 
                 return True
 
-            return False
+            # return False
 
         if alt_key:
             if focused_button and keyval == Gdk.KEY_e:
@@ -243,11 +244,27 @@ class Picker(Gtk.ApplicationWindow):
                     )
                 else:
                     SkintoneSelector(focused_widget, self, self.handle_emoji_button_click)
+                    return True
 
-                return True
             elif focused_button and keyval == Gdk.KEY_t:
                 CustomTagEntry(focused_widget, self)
                 return True
+
+            elif keyval in [Gdk.KEY_Left, Gdk.KEY_Right]:
+                next_sel = None
+                if keyval == Gdk.KEY_Left:
+                    next_sel = self.selected_category_index - 1 if (self.selected_category_index > 0) else 0
+                elif keyval == Gdk.KEY_Right:
+                    next_sel_index = (self.categories_count - 1)
+                    next_sel = self.selected_category_index + 1 if (self.selected_category_index < (next_sel_index)) else (next_sel_index)
+                    
+                if next_sel != None:
+                    for child in list(self.category_picker_widgets):
+                        if child.index == next_sel:
+                            self.filter_for_category(child)
+                            return True
+
+            return False
 
         if shift_key:
             if (keyval == Gdk.KEY_Return):
@@ -270,25 +287,9 @@ class Picker(Gtk.ApplicationWindow):
                     return True
 
         if ctrl_key:
-            print('asd')
-            if keyval == Gdk.KEY_Left:
-                next_sel = self.selected_category_index - 1 if (self.selected_category_index > 0) else 0
-            elif keyval == Gdk.KEY_Right:
-                next_sel_index = (self.categories_count - 1)
-                next_sel = self.selected_category_index + 1 if (self.selected_category_index < (next_sel_index)) else (next_sel_index)
-            elif keyval == Gdk.KEY_question:
+            if keyval == Gdk.KEY_question:
                 shortcut_window = ShortcutsWindow()
                 shortcut_window.open()
-
-            if ('next_sel' in locals()):
-                category_picker_box = self.category_picker.get_children()[0].get_children()[0]
-
-                for child in category_picker_box.get_children():
-                    if child.index == next_sel:
-                        self.filter_for_category(child)
-                        break
-
-                return True
 
             if (keyval == Gdk.KEY_Return):
                 if len(self.selection):
