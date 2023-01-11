@@ -64,10 +64,12 @@ class Picker(Gtk.ApplicationWindow):
 
         # Create the emoji list and category picker
         self.categories_count = 0
-        scrolled = Gtk.ScrolledWindow(min_content_height=350, propagate_natural_height=True)
+        scrolled = Gtk.ScrolledWindow(min_content_height=400, propagate_natural_height=True, propagate_natural_width=True)
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
+        scrolled_container = Adw.Clamp(maximum_size=600)
+        # scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
 
-        self.viewport_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, css_classes=['viewport'])
+        self.viewport_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, css_classes=['viewport'], vexpand=True)
 
         self.list_tip_revealer = Gtk.Revealer(reveal_child=False)
         self.list_tip_label = Gtk.Label(label='', opacity=0.7, justify=Gtk.Justification.CENTER)
@@ -75,10 +77,13 @@ class Picker(Gtk.ApplicationWindow):
 
         self.emoji_list_widgets: list[FlowBoxChild] = []
         self.emoji_list = self.create_emoji_list()
+        self.emoji_list.set_hexpand(True)
         self.category_count = 0  # will be set in create_category_picker()
         self.category_picker_widgets: list[Gtk.Button] = []
         self.category_picker = self.create_category_picker()
-        scrolled.set_child(self.emoji_list)
+        
+        scrolled_container.set_child(self.emoji_list)
+        scrolled.set_child(scrolled_container)
 
         self.viewport_box.append(self.list_tip_revealer)
         self.viewport_box.append(scrolled)
@@ -145,7 +150,7 @@ class Picker(Gtk.ApplicationWindow):
 
     def create_category_picker(self) -> Gtk.ScrolledWindow:
         scrolled = Gtk.ScrolledWindow(name='emoji_categories_box')
-        box = Gtk.Box(spacing=4)
+        box = Gtk.Box(spacing=4, halign=Gtk.Align.CENTER, hexpand=True)
 
         i = 0
         for c, cat in emoji_categories.items():
@@ -232,8 +237,6 @@ class Picker(Gtk.ApplicationWindow):
                     self.emoji_list.emit('move-cursor', Gtk.MovementStep.BUFFER_ENDS, -1, False, False)
 
                 return True
-
-            return False
 
         if alt_key:
             if focused_button and keyval == Gdk.KEY_e:
@@ -388,7 +391,10 @@ class Picker(Gtk.ApplicationWindow):
         self.emoji_list.invalidate_filter()
 
         if widget.category == 'recents':
-            self.update_list_tip('Recently used emojis' if (len(get_history())) else "Whoa, it's still empty! \nYour most used emojis will show up here\n")
+            self.update_list_tip("Whoa, it's still empty! \nYour most used emojis will show up here\n")
+
+            if (len(get_history())):
+                self.update_list_tip('Recently used emojis')
         elif len(self.selected_buttons) == 0:
             self.update_list_tip(None)
 
@@ -491,8 +497,8 @@ class Picker(Gtk.ApplicationWindow):
 
     def update_emoji_skintones(self, settings: Gio.Settings, key):
         modifier_settings = self.settings.get_string('skintone-modifier')
-        for child in self.emoji_list.get_children():
-            emoji_button = child.get_children()[0]
+        for child in self.emoji_list_widgets:
+            emoji_button = child.emoji_button
 
             if 'skintones' in emoji_button.emoji_data:
                 if len(modifier_settings):
