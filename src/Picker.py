@@ -209,6 +209,7 @@ class Picker(Gtk.ApplicationWindow):
             return True
 
         self.shift_key_pressed = (keyval == Gdk.KEY_Shift_L or keyval == Gdk.KEY_Shift_R)
+        print(keycode)
 
         ctrl_key = bool(state & Gdk.ModifierType.CONTROL_MASK)
         shift_key = bool(state & Gdk.ModifierType.SHIFT_MASK)
@@ -295,17 +296,21 @@ class Picker(Gtk.ApplicationWindow):
                     return True
 
         else:
-            # Focus is on an emoji button
-            if focused_button:
+            if (not is_modifier) and (keyval == Gdk.KEY_BackSpace):
+                self.search_entry.grab_focus()
+                return True
+
+            elif focused_button:
+                # Focus is on an emoji button
                 if (keyval == Gdk.KEY_Return):
                     self.copy_and_quit(focused_button)
                     return True
                 elif (not is_modifier) and (len(keyval_name) == 1) and re.match(r'\S', keyval_name):
                     self.search_entry.grab_focus()
                     return False
-    
-            # Focus is on a category button
+
             elif isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'category'):
+                # Focus is on a category button
                 # Triggers when we press arrow up on the category picker
                 az_re = re.compile(r"[a-z]", re.IGNORECASE)
                 if (keyval in [Gdk.KEY_Up, Gdk.KEY_Down, Gdk.KEY_Left, Gdk.KEY_Right]) and re.match(az_re, keyval_name):
