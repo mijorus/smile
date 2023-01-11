@@ -110,8 +110,6 @@ class Picker(Gtk.ApplicationWindow):
         self.connect('show', self.on_show)
         self.set_active_category('smileys-emotion')
 
-        # self.emoji_list.connect('move-cursor', lambda x, w, e, r, b: print('test'))
-
     def on_hide(self):
         self.search_entry.set_text('')
         self.query = None
@@ -217,11 +215,10 @@ class Picker(Gtk.ApplicationWindow):
         alt_key = bool(state & Gdk.ModifierType.ALT_MASK)
 
         is_modifier = ctrl_key or shift_key or alt_key
-        string = keycode
+        keyval_name = Gdk.keyval_name(keyval)
 
         focused_widget = self.get_focus()
         focused_button = None
-        
 
         if isinstance(focused_widget, FlowBoxChild):
             focused_button = focused_widget.emoji_button
@@ -229,12 +226,13 @@ class Picker(Gtk.ApplicationWindow):
         if self.search_entry is focused_widget.get_parent():
             if (keyval == Gdk.KEY_Down):
                 self.load_first_row()
-                self.emoji_grid_first_row[0].grab_focus()
-                # self.emoji_list.emit('move-cursor', Gtk.MovementStep.VISUAL_POSITIONS, 0, False, True)
+                if self.emoji_grid_first_row:
+                    self.emoji_grid_first_row[0].grab_focus()
+                    self.emoji_list.emit('move-cursor', Gtk.MovementStep.BUFFER_ENDS, -1, False, False)
 
                 return True
 
-            # return False
+            return False
 
         if alt_key:
             if focused_button and keyval == Gdk.KEY_e:
@@ -257,7 +255,7 @@ class Picker(Gtk.ApplicationWindow):
                 elif keyval == Gdk.KEY_Right:
                     next_sel_index = (self.categories_count - 1)
                     next_sel = self.selected_category_index + 1 if (self.selected_category_index < (next_sel_index)) else (next_sel_index)
-                    
+
                 if next_sel != None:
                     for child in list(self.category_picker_widgets):
                         if child.index == next_sel:
@@ -292,7 +290,7 @@ class Picker(Gtk.ApplicationWindow):
                 shortcut_window.open()
 
             if (keyval == Gdk.KEY_Return):
-                if len(self.selection):
+                if self.selection:
                     self.copy_and_quit()
                     return True
 
@@ -302,18 +300,15 @@ class Picker(Gtk.ApplicationWindow):
                 if (keyval == Gdk.KEY_Return):
                     self.copy_and_quit(focused_button)
                     return True
-                elif (keyval == Gdk.KEY_Up):
-                    if isinstance(focused_button.props.parent, Gtk.FlowBoxChild) and (focused_button in self.emoji_grid_first_row):
-                        self.search_entry.grab_focus()
-                        return False
-                elif (not is_modifier) and (keycode == 1) and re.match(r'\S', string):
+                elif (not is_modifier) and (len(keyval_name) == 1) and re.match(r'\S', keyval_name):
                     self.search_entry.grab_focus()
-
+                    return False
+    
             # Focus is on a category button
             elif isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'category'):
                 # Triggers when we press arrow up on the category picker
                 az_re = re.compile(r"[a-z]", re.IGNORECASE)
-                if (keyval in [Gdk.KEY_Up, Gdk.KEY_Down, Gdk.KEY_Left, Gdk.KEY_Right]) and re.match(az_re, string):
+                if (keyval in [Gdk.KEY_Up, Gdk.KEY_Down, Gdk.KEY_Left, Gdk.KEY_Right]) and re.match(az_re, keyval_name):
                     self.search_entry.grab_focus()
                 else:
                     if (keyval == Gdk.KEY_Up):
@@ -335,7 +330,7 @@ class Picker(Gtk.ApplicationWindow):
 
     def default_hiding_action(self):
         if (self.settings.get_boolean('iconify-on-esc')):
-            self.iconify()
+            self.minimize()
         else:
             self.hide()
 
