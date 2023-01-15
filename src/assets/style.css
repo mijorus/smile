@@ -1,4 +1,4 @@
-#emoji_list_box button, #skin_selector button, #emoji_categories_box button {
+.emoji_list_box button, #skin_selector button, #emoji_categories_box button {
     font-size: 20px;
 }
 
@@ -19,8 +19,8 @@
 
 /* Selected emoji button */
 .emoji-button.selected {
-    border-color: rgba(255, 0, 0, 0.75);
-    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 0.75);
+    border-color: rgba(255, 0, 0, 0.5);
+    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 0.5);
     outline: transparent;
 }
 

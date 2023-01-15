@@ -4,6 +4,7 @@ from ..lib.custom_tags import set_custom_tags, get_custom_tags
 from ..lib.localized_tags import get_localized_tags, get_countries_list
 from .CustomPopover import CustomPopover
 from .EmojiButton import EmojiButton
+from .FlowBoxChild import FlowBoxChild
 
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
@@ -26,7 +27,9 @@ class SkintoneSelector(CustomPopover):
             margin_end=5,
         )
 
-        skintone_emojis = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, hexpand=True, spacing=5)
+        skintone_emojis = Gtk.FlowBox(orientation=Gtk.Orientation.HORIZONTAL, hexpand=True)
+        skintone_emojis.set_max_children_per_line(100)
+        skintone_emojis.set_min_children_per_line(100)
         skintone_emojis.set_size_request(250, -1)
 
         popover_container = Gtk.ScrolledWindow()
@@ -38,7 +41,9 @@ class SkintoneSelector(CustomPopover):
         for skintone in emojis[relative_widget_hexcode]['skintones']:
             button = EmojiButton(skintone, width_request=55)
             button.connect('clicked', self.handle_activate)
-            skintone_emojis.append(button)
+
+            child = FlowBoxChild(emoji_button=button)
+            skintone_emojis.append(child)
 
         popover_container.set_child(skintone_emojis)
         popover_content.append(popover_container)

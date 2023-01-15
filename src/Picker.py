@@ -42,9 +42,7 @@ class Picker(Gtk.ApplicationWindow):
         self.set_default_size(350, 350)
 
         self.event_controller_keys = Gtk.EventControllerKey()
-        self.event_controller_keys_lc = Gtk.EventControllerLegacy()
         self.event_controller_keys.connect('key-pressed', self.handle_window_key_press)
-
         self.add_controller(self.event_controller_keys)
 
         self.settings: Gio.Settings = Gio.Settings.new('it.mijorus.smile')
@@ -67,7 +65,6 @@ class Picker(Gtk.ApplicationWindow):
         scrolled = Gtk.ScrolledWindow(min_content_height=350, propagate_natural_height=True, propagate_natural_width=True)
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
         scrolled_container = Adw.Clamp(maximum_size=600)
-        # scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
 
         self.viewport_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, css_classes=['viewport'], vexpand=True)
 
@@ -97,7 +94,6 @@ class Picker(Gtk.ApplicationWindow):
         # Create search entry
         self.search_entry = Gtk.SearchEntry(hexpand=True, width_request=200)
         self.search_entry.connect('search_changed', self.search_emoji)
-        self.search_entry.set_key_capture_widget(self.emoji_list)
         self.search_entry.grab_focus()
 
         self.header_bar.pack_start(self.search_entry)
@@ -173,7 +169,7 @@ class Picker(Gtk.ApplicationWindow):
         flowbox = Gtk.FlowBox(
             valign=Gtk.Align.START,
             homogeneous=True,
-            name='emoji_list_box',
+            css_classes=['emoji_list_box'],
             selection_mode=Gtk.SelectionMode.NONE,
             max_children_per_line=self.emoji_grid_col_n,
             min_children_per_line=self.emoji_grid_col_n
@@ -274,9 +270,10 @@ class Picker(Gtk.ApplicationWindow):
             if (keyval == Gdk.KEY_Return):
                 if focused_button:
                     self.select_button_emoji(focused_button)
+                    focused_button.set_as_active()
                     return True
 
-            elif (keyval == Gdk.KEY_BackSpace):
+            if (keyval == Gdk.KEY_BackSpace):
                 if focused_button:
                     if len(self.selection) > 0:
                         last_button = self.selected_buttons[-1]
@@ -290,7 +287,7 @@ class Picker(Gtk.ApplicationWindow):
 
                     return True
 
-        if ctrl_key:
+        elif ctrl_key:
             if keyval == Gdk.KEY_question:
                 shortcut_window = ShortcutsWindow()
                 shortcut_window.open()
@@ -301,32 +298,45 @@ class Picker(Gtk.ApplicationWindow):
                     return True
 
         else:
+            # handle key combinations without modifiers
+            if (not is_modifier) and (keyval == Gdk.KEY_BackSpace):
+                self.search_entry.grab_focus()
+                return True
+
             if focused_button:
                 # Focus is on an emoji button
                 if (keyval == Gdk.KEY_Return):
                     self.copy_and_quit(focused_button)
                     return True
+                elif (not is_modifier) and (len(keyval_name) == 1) and re.match(r'\S', keyval_name):
+                    self.search_entry.insert_text(keyval_name, -1)
+                    self.search_entry.set_position(-1)
+                    self.search_entry.grab_focus()
+                    return True
+                elif (keyval == Gdk.KEY_Up) and (focused_widget in self.emoji_grid_first_row):
+                    self.search_entry.grab_focus()
+                    
             elif isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'category'):
                 # Focus is on a category button
                 # Triggers when we press arrow up on the category picker
                 az_re = re.compile(r"[a-z]", re.IGNORECASE)
-                if (keyval in [Gdk.KEY_Up, Gdk.KEY_Down, Gdk.KEY_Left, Gdk.KEY_Right]) and re.match(az_re, keyval_name):
-                    self.search_entry.grab_focus()
-                else:
-                    if (keyval == Gdk.KEY_Up):
-                        self.set_active_category(focused_widget.category)
+                # if (keyval in [Gdk.KEY_Up, Gdk.KEY_Down, Gdk.KEY_Left, Gdk.KEY_Right]) and re.match(az_re, keyval_name):
+                #     self.search_entry.grab_focus()
+                # else:
+                if (keyval == Gdk.KEY_Up):
+                    self.set_active_category(focused_widget.category)
 
-                        for f in self.emoji_list_widgets:
-                            if self.selected_category == 'recents':
-                                if f.emoji_button.hexcode in get_history():
-                                    f.emoji_button.grab_focus()
-                                    break
-                            else:
-                                if f.emoji_button.emoji_data['group'] == self.selected_category:
-                                    f.emoji_button.grab_focus()
-                                    break
+                    for f in self.emoji_list_widgets:
+                        if self.selected_category == 'recents':
+                            if f.emoji_button.hexcode in get_history():
+                                f.emoji_button.grab_focus()
+                                break
+                        else:
+                            if f.emoji_button.emoji_data['group'] == self.selected_category:
+                                f.emoji_button.grab_focus()
+                                break
 
-                        return True
+                    return True
 
         return False
 
@@ -357,15 +367,14 @@ class Picker(Gtk.ApplicationWindow):
                 b.get_style_context().add_class('selected')
 
     def select_button_emoji(self, button: EmojiButton):
-        if not button.emoji_is_selected:
-            self.selection.append(button.get_label())
-            increament_emoji_usage_counter(button)
+        self.selection.append(button.get_label())
+        increament_emoji_usage_counter(button)
 
-            self.selected_buttons.append(button)
-            button.emoji_is_selected = True
+        self.selected_buttons.append(button)
+        button.emoji_is_selected = True
 
-            button.set_as_selected()
-            self.update_selection_content(self.selection)
+        button.set_as_selected()
+        self.update_selection_content(self.selection)
 
     def load_first_row(self):
         self.emoji_grid_first_row = []
