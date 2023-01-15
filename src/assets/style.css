@@ -18,9 +18,9 @@
 }
 
 /* Selected emoji button */
-.emoji-button.selected, #skin_selector button.selected {
-    border-color: rgb(175, 1, 1);
-    box-shadow: 0px 0px 2px 1px rgb(175, 1, 1);
+.emoji-button.selected {
+    border-color: rgba(255, 0, 0, 0.75);
+    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 0.75);
     outline: transparent;
 }
 

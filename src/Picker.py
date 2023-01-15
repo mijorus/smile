@@ -364,7 +364,7 @@ class Picker(Gtk.ApplicationWindow):
             self.selected_buttons.append(button)
             button.emoji_is_selected = True
 
-            button.toggle_select()
+            button.set_as_selected()
             self.update_selection_content(self.selection)
 
     def load_first_row(self):

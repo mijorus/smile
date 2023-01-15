@@ -25,7 +25,7 @@ class FlowBoxChild(Gtk.FlowBoxChild):
 
     def on_selection(self, event):
         self.set_css_classes(['flowbox-selected'])
-        self.emoji_button.toggle_active()
+        self.emoji_button.set_as_active()
 
     def on_selection_leave(self, event):
         if self.lock_status:
@@ -33,5 +33,8 @@ class FlowBoxChild(Gtk.FlowBoxChild):
 
         self.set_css_classes([])
 
-        if not self.emoji_button.emoji_is_selected:
-            self.emoji_button.toggle_deselect()
+        if self.emoji_button.emoji_is_selected:
+            self.emoji_button.set_as_selected()
+        else:
+            self.emoji_button.deselect()
+        

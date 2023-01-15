@@ -19,15 +19,15 @@ class EmojiButton(Gtk.Button):
         if ('skintones' in data) and data['skintones']:
             self.emoji_button_css.append('emoji-with-skintones')
             
-        self.toggle_deselect()
-        self.selected_emoji_button_css = [*self.emoji_button_css, 'selected']
-        self.active_emoji_button_css = [*self.emoji_button_css, 'active']
+        self.deselect()
 
-    def toggle_select(self):
-        self.set_css_classes(self.selected_emoji_button_css)
+    def set_as_selected(self):
+        self.get_style_context().remove_class('active')
+        self.get_style_context().add_class('selected')
 
-    def toggle_active(self):
-        self.set_css_classes(self.active_emoji_button_css)
+    def set_as_active(self):
+        self.get_style_context().remove_class('selected')
+        self.get_style_context().add_class('active')
 
-    def toggle_deselect(self):
+    def deselect(self):
         self.set_css_classes(self.emoji_button_css)

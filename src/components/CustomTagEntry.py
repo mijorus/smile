@@ -63,7 +63,7 @@ class CustomTagEntry(CustomPopover):
         )
 
         self.flowbox_child.lock_status = True
-        self.flowbox_child.emoji_button.toggle_active()
+        self.flowbox_child.emoji_button.set_as_active()
 
         self.set_content(popover_content)
         self.show()
