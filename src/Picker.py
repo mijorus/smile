@@ -64,7 +64,7 @@ class Picker(Gtk.ApplicationWindow):
 
         # Create the emoji list and category picker
         self.categories_count = 0
-        scrolled = Gtk.ScrolledWindow(min_content_height=400, propagate_natural_height=True, propagate_natural_width=True)
+        scrolled = Gtk.ScrolledWindow(min_content_height=350, propagate_natural_height=True, propagate_natural_width=True)
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
         scrolled_container = Adw.Clamp(maximum_size=600)
         # scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
@@ -81,7 +81,7 @@ class Picker(Gtk.ApplicationWindow):
         self.category_count = 0  # will be set in create_category_picker()
         self.category_picker_widgets: list[Gtk.Button] = []
         self.category_picker = self.create_category_picker()
-        
+
         scrolled_container.set_child(self.emoji_list)
         scrolled.set_child(scrolled_container)
 
@@ -97,6 +97,7 @@ class Picker(Gtk.ApplicationWindow):
         # Create search entry
         self.search_entry = Gtk.SearchEntry(hexpand=True, width_request=200)
         self.search_entry.connect('search_changed', self.search_emoji)
+        self.search_entry.set_key_capture_widget(self.emoji_list)
         self.search_entry.grab_focus()
 
         self.header_bar.pack_start(self.search_entry)
@@ -169,13 +170,14 @@ class Picker(Gtk.ApplicationWindow):
         return scrolled
 
     def create_emoji_list(self) -> Gtk.FlowBox:
-        flowbox = Gtk.FlowBox(valign=Gtk.Align.START,
-                              homogeneous=True,
-                              name='emoji_list_box',
-                              selection_mode=Gtk.SelectionMode.NONE,
-                              max_children_per_line=self.emoji_grid_col_n,
-                              min_children_per_line=self.emoji_grid_col_n
-                              )
+        flowbox = Gtk.FlowBox(
+            valign=Gtk.Align.START,
+            homogeneous=True,
+            name='emoji_list_box',
+            selection_mode=Gtk.SelectionMode.NONE,
+            max_children_per_line=self.emoji_grid_col_n,
+            min_children_per_line=self.emoji_grid_col_n
+        )
 
         flowbox.set_filter_func(self.filter_emoji_list, None)
         flowbox.set_sort_func(self.sort_emoji_list, None)
@@ -299,19 +301,11 @@ class Picker(Gtk.ApplicationWindow):
                     return True
 
         else:
-            if (not is_modifier) and (keyval == Gdk.KEY_BackSpace):
-                self.search_entry.grab_focus()
-                return True
-
-            elif focused_button:
+            if focused_button:
                 # Focus is on an emoji button
                 if (keyval == Gdk.KEY_Return):
                     self.copy_and_quit(focused_button)
                     return True
-                elif (not is_modifier) and (len(keyval_name) == 1) and re.match(r'\S', keyval_name):
-                    self.search_entry.grab_focus()
-                    return False
-
             elif isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'category'):
                 # Focus is on a category button
                 # Triggers when we press arrow up on the category picker
@@ -421,6 +415,7 @@ class Picker(Gtk.ApplicationWindow):
         self.default_hiding_action()
 
     def search_emoji(self, search_entry: str):
+        self.search_entry.grab_focus()
         query = search_entry.get_text().strip()
 
         self.query = query if query else None
