@@ -106,6 +106,8 @@ class Picker(Gtk.ApplicationWindow):
         # This variable the status of the sorted status
         self.list_was_sorted = False
 
+        self.skintone_selector = None
+
         self.overlay = Adw.ToastOverlay()
         self.overlay.set_child(self.viewport_box)
         self.set_child(self.overlay)
@@ -243,7 +245,13 @@ class Picker(Gtk.ApplicationWindow):
                         Adw.Toast(title="No skintones available", timeout=1)
                     )
                 else:
-                    SkintoneSelector(focused_widget, self, self.handle_emoji_button_click)
+                    self.skintone_selector = SkintoneSelector(
+                        focused_widget,
+                        parent=self,
+                        click_handler=self.handle_emoji_button_click,
+                        keypress_handler=self.handle_skintone_selector_key_press
+                    )
+
                     return True
 
             elif focused_button and keyval == Gdk.KEY_t:
@@ -281,8 +289,9 @@ class Picker(Gtk.ApplicationWindow):
                         self.selection.pop()
                         self.selected_buttons.pop()
 
-                        if not self.selection.__contains__(last_button.get_label()):
+                        if not last_button.get_label() in self.selection:
                             last_button.get_style_context().remove_class('selected')
+
                         self.update_selection_content(self.selection)
 
                     return True
@@ -315,7 +324,7 @@ class Picker(Gtk.ApplicationWindow):
                     return True
                 elif (keyval == Gdk.KEY_Up) and (focused_widget in self.emoji_grid_first_row):
                     self.search_entry.grab_focus()
-                    
+
             elif isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'category'):
                 # Focus is on a category button
                 # Triggers when we press arrow up on the category picker
@@ -340,6 +349,50 @@ class Picker(Gtk.ApplicationWindow):
 
         return False
 
+    def handle_skintone_selector_key_press(self, controller: Gtk.EventController, keyval: int, keycode: int, state: Gdk.ModifierType) -> bool:
+        shift_key = bool(state & Gdk.ModifierType.SHIFT_MASK)
+        focused_widget: FlowBoxChild = self.skintone_selector.get_focus()
+        print(focused_widget)
+
+        # if isinstance(focused_widget, FlowBoxChild):
+        #     focused_button = focused_widget.emoji_button
+
+        # if self.search_entry is focused_widget.get_parent():
+        #     if (keyval == Gdk.KEY_Down):
+        #         self.load_first_row()
+        #         if self.emoji_grid_first_row:
+        #             self.emoji_grid_first_row[0].grab_focus()
+        #             self.emoji_list.emit('move-cursor', Gtk.MovementStep.BUFFER_ENDS, -1, False, False)
+
+        #         return True
+
+        if shift_key:
+            if (keyval == Gdk.KEY_Return):
+                self.select_button_emoji(focused_widget.emoji_button)
+                focused_widget.emoji_button.set_as_active()
+                return True
+
+            elif (keyval == Gdk.KEY_BackSpace):
+                if len(self.selection) > 0:
+                    last_button = self.selected_buttons[-1]
+
+                    self.selection.pop()
+                    self.selected_buttons.pop()
+
+                    if not last_button.get_label() in self.selection:
+                        last_button.get_style_context().remove_class('selected')
+
+                    self.update_selection_content(self.selection)
+
+                    return True
+        else:
+            if (keyval == Gdk.KEY_Return):
+                self.skintone_selector.request_close()
+                self.copy_and_quit(focused_widget.emoji_button)
+                return True
+
+        return False
+
     def default_hiding_action(self):
         if (self.settings.get_boolean('iconify-on-esc')):
             self.minimize()
@@ -357,7 +410,10 @@ class Picker(Gtk.ApplicationWindow):
             self.list_tip_revealer.set_reveal_child(True)
 
     def update_selection_content(self, title: str = None):
-        self.update_list_tip('Selected: ' + ''.join(title[-8:]))
+        if not title: 
+            self.update_list_tip(None)
+        else:
+            self.update_list_tip('Selected: ' + ''.join(title[-8:]))
 
     def set_active_category(self, category: str):
         for b in []:

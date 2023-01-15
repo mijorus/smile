@@ -13,7 +13,7 @@ from gi.repository import Gtk, Gio, Gdk, GLib, Adw  # noqa
 
 
 class SkintoneSelector(CustomPopover):
-    def __init__(self, flowbox_child: Gtk.FlowBoxChild, parent: Gtk.Window, click_handler: callable):
+    def __init__(self, flowbox_child: Gtk.FlowBoxChild, parent: Gtk.Window, click_handler: callable, keypress_handler: callable):
         super().__init__(parent=parent)
         self.click_handler = click_handler
         self.flowbox_child = flowbox_child
@@ -27,9 +27,17 @@ class SkintoneSelector(CustomPopover):
             margin_end=5,
         )
 
-        skintone_emojis = Gtk.FlowBox(orientation=Gtk.Orientation.HORIZONTAL, hexpand=True)
-        skintone_emojis.set_max_children_per_line(100)
-        skintone_emojis.set_min_children_per_line(100)
+        skintone_emojis = Gtk.FlowBox(
+            orientation=Gtk.Orientation.HORIZONTAL, 
+            max_children_per_line=100,
+            min_children_per_line=100,
+            hexpand=True
+        )
+
+        event_controller_keys = Gtk.EventControllerKey()
+        event_controller_keys.connect('key-pressed', keypress_handler)
+        skintone_emojis.add_controller(event_controller_keys)
+
         skintone_emojis.set_size_request(250, -1)
 
         popover_container = Gtk.ScrolledWindow()
