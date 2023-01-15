@@ -320,21 +320,21 @@ class Picker(Gtk.ApplicationWindow):
                 # Focus is on a category button
                 # Triggers when we press arrow up on the category picker
                 az_re = re.compile(r"[a-z]", re.IGNORECASE)
-                # if (keyval in [Gdk.KEY_Up, Gdk.KEY_Down, Gdk.KEY_Left, Gdk.KEY_Right]) and re.match(az_re, keyval_name):
-                #     self.search_entry.grab_focus()
-                # else:
-                if (keyval == Gdk.KEY_Up):
-                    self.set_active_category(focused_widget.category)
+                if re.match(az_re, keyval_name):
+                    self.search_entry.grab_focus()
+                else:
+                    if (keyval == Gdk.KEY_Up):
+                        self.set_active_category(focused_widget.category)
 
-                    for f in self.emoji_list_widgets:
-                        if self.selected_category == 'recents':
-                            if f.emoji_button.hexcode in get_history():
-                                f.emoji_button.grab_focus()
-                                break
-                        else:
-                            if f.emoji_button.emoji_data['group'] == self.selected_category:
-                                f.emoji_button.grab_focus()
-                                break
+                        for f in self.emoji_list_widgets:
+                            if self.selected_category == 'recents':
+                                if f.emoji_button.hexcode in get_history():
+                                    f.emoji_button.grab_focus()
+                                    break
+                            else:
+                                if f.emoji_button.emoji_data['group'] == self.selected_category:
+                                    f.emoji_button.grab_focus()
+                                    break
 
                     return True
 
@@ -477,11 +477,7 @@ class Picker(Gtk.ApplicationWindow):
         else:
             filter_result = e['group'] == self.selected_category
 
-        if filter_result:
-            widget.show()
-        else:
-            widget.hide()
-
+        widget.show() if filter_result else widget.hide()
         return filter_result
 
     def sort_emoji_list(self, child1: Gtk.FlowBoxChild, child2: Gtk.FlowBoxChild, user_data):
