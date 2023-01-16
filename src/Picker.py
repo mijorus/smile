@@ -43,6 +43,7 @@ class Picker(Gtk.ApplicationWindow):
 
         self.event_controller_keys = Gtk.EventControllerKey()
         self.event_controller_keys.connect('key-pressed', self.handle_window_key_press)
+        self.event_controller_keys.connect('key-released', self.handle_window_key_release)
         self.add_controller(self.event_controller_keys)
 
         self.settings: Gio.Settings = Gio.Settings.new('it.mijorus.smile')
@@ -203,8 +204,8 @@ class Picker(Gtk.ApplicationWindow):
             self.copy_and_quit(widget)
 
     # Handle key-presses
-    def handle_window_key_release(self, widget, event: Gdk.Event):
-        if (event.keyval == Gdk.KEY_Shift_L or event.keyval == Gdk.KEY_Shift_R):
+    def handle_window_key_release(self, controller: Gtk.EventController, keyval: int, keycode: int, state: Gdk.ModifierType) -> bool:
+        if (keyval == Gdk.KEY_Shift_L or keyval == Gdk.KEY_Shift_R):
             self.shift_key_pressed = False
 
     # Handle every possible keypress here, returns True if the event was handled (prevent default)
