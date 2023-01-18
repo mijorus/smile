@@ -362,19 +362,6 @@ class Picker(Gtk.ApplicationWindow):
     def handle_skintone_selector_key_press(self, controller: Gtk.EventController, keyval: int, keycode: int, state: Gdk.ModifierType) -> bool:
         shift_key = bool(state & Gdk.ModifierType.SHIFT_MASK)
         focused_widget: FlowBoxChild = self.skintone_selector.get_focus()
-        print(focused_widget)
-
-        # if isinstance(focused_widget, FlowBoxChild):
-        #     focused_button = focused_widget.emoji_button
-
-        # if self.search_entry is focused_widget.get_parent():
-        #     if (keyval == Gdk.KEY_Down):
-        #         self.load_first_row()
-        #         if self.emoji_grid_first_row:
-        #             self.emoji_grid_first_row[0].grab_focus()
-        #             self.emoji_list.emit('move-cursor', Gtk.MovementStep.BUFFER_ENDS, -1, False, False)
-
-        #         return True
 
         if shift_key:
             if (keyval == Gdk.KEY_Return):
