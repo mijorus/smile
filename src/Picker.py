@@ -95,6 +95,15 @@ class Picker(Gtk.ApplicationWindow):
         # Create search entry
         self.search_entry = Gtk.SearchEntry(hexpand=True, width_request=200)
         self.search_entry.connect('search_changed', self.search_emoji)
+
+        search_controller_key = Gtk.EventControllerKey()
+        search_controller_key.connect(
+            'key-pressed',
+            lambda q, w, e, r: self.default_hiding_action() if w == Gdk.KEY_Escape else False
+        )
+
+        self.search_entry.add_controller(search_controller_key)
+
         self.search_entry.grab_focus()
 
         self.header_bar.pack_start(self.search_entry)
@@ -411,7 +420,7 @@ class Picker(Gtk.ApplicationWindow):
             self.list_tip_revealer.set_reveal_child(True)
 
     def update_selection_content(self, title: str = None):
-        if not title: 
+        if not title:
             self.update_list_tip(None)
         else:
             self.update_list_tip('Selected: ' + ''.join(title[-8:]))
