@@ -8,7 +8,7 @@ from dbus.mainloop.glib import DBusGMainLoop
 from .utils import make_option
 from .Picker import Picker
 from .ShortcutsWindow import ShortcutsWindow
-from .AboutDialog import AboutDialog
+# from .AboutDialog import AboutDialog
 from .Settings import Settings
 
 gi.require_version('Gtk', '4.0')
@@ -100,7 +100,18 @@ class Smile(Adw.Application):
         self.add_action(action)
 
     def on_about_action(self, widget, event):
-        about = AboutDialog(self.props.active_window, version=self.version)
+        about = Adw.AboutWindow(
+            version=self.version,
+            comments='An emoji picker',
+            application_name='Smile',
+            application_icon='it.mijorus.smile',
+            developer_name='Lorenzo Paderi',
+            website='https://smile.mijorus.it',
+            issue_url='https://github.com/mijorus/smile',
+            copyright='(C) 2022 Lorenzo Paderi\n\nLocalized tags by milesj/emojibase, licensed under the MIT License',
+        )
+        
+        about.set_transient_for(self.props.active_window)
         about.present()
 
 

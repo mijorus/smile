@@ -149,7 +149,7 @@ class Picker(Gtk.ApplicationWindow):
         builder.add_from_resource('/it/mijorus/smile/ui/menu.xml')
         menu = builder.get_object('primary_menu')
 
-        return Gtk.MenuButton(popover=menu, icon_name='open-menu-symbolic')
+        return Gtk.MenuButton(menu_model=menu, icon_name='open-menu-symbolic')
 
     def create_emoji_button(self, data: dict):
         button = EmojiButton(data)
