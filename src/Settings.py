@@ -151,18 +151,6 @@ class Settings(Adw.PreferencesWindow):
             for row in self.custom_tags_rows:
                 self.custom_tags_list_box.append(row)
 
-    def create_error_dialog(self, text: str):
-        dialog = Gtk.MessageDialog(
-            transient_for=self.window,
-            flags=0,
-            message_type=Gtk.MessageType.ERROR,
-            buttons=Gtk.ButtonsType.OK,
-            text=text,
-        )
-
-        dialog.run()
-        dialog.destroy()
-
     def create_modifiers_combo_boxes(self) -> Adw.ActionRow:
         row = Adw.ActionRow(title='Default skintone')
         skintones = [["", "👋"], ["1F3FB", "👋🏻"], ["1F3FC", "👋🏼"], ["1F3FD", "👋🏽"], ["1F3FE", "👋🏾"], ["1F3FF", "👋🏿"]]
