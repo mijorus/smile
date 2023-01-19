@@ -187,8 +187,7 @@ class Picker(Gtk.ApplicationWindow):
             min_children_per_line=self.emoji_grid_col_n
         )
 
-        flowbox.set_filter_func(self.filter_emoji_list, None)
-        flowbox.set_sort_func(self.sort_emoji_list, None)
+        
 
         start = time.time_ns()
         for i, e in emojis.items():
@@ -202,7 +201,9 @@ class Picker(Gtk.ApplicationWindow):
             if is_recent:
                 self.history_size += 1
 
-        print('Emoji list creation took ' + str((time.time_ns() - start) // 1000000) + 'ms')
+        flowbox.set_filter_func(self.filter_emoji_list, None)
+        flowbox.set_sort_func(self.sort_emoji_list, None)
+        print('Emoji list creation took ' + str((time.time_ns() - start) / 1000000) + 'ms')
         return flowbox
 
     # Handle events
@@ -224,7 +225,7 @@ class Picker(Gtk.ApplicationWindow):
             return True
 
         self.shift_key_pressed = (keyval == Gdk.KEY_Shift_L or keyval == Gdk.KEY_Shift_R)
-        print(keycode)
+        # print(keycode)
 
         ctrl_key = bool(state & Gdk.ModifierType.CONTROL_MASK)
         shift_key = bool(state & Gdk.ModifierType.SHIFT_MASK)
