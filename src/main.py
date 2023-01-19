@@ -92,7 +92,7 @@ class Smile(Adw.Application):
                     print(e)
 
         else:
-            self.window.show()
+            self.window.set_visible(True)
             self.window.on_activation()
 
     def create_action(self, name, callback):

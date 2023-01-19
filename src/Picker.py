@@ -137,6 +137,9 @@ class Picker(Gtk.ApplicationWindow):
         self.present_with_time(time.time())
         self.grab_focus()
 
+        if self.settings.get_boolean('iconify-on-esc'):
+            self.unminimize()
+
         self.set_focus(self.search_entry)
 
     # Create stuff
@@ -182,8 +185,6 @@ class Picker(Gtk.ApplicationWindow):
             max_children_per_line=self.emoji_grid_col_n,
             min_children_per_line=self.emoji_grid_col_n
         )
-
-        
 
         start = time.time_ns()
         for i, e in emojis.items():
@@ -393,7 +394,7 @@ class Picker(Gtk.ApplicationWindow):
         elif not self.settings.get_boolean('load-hidden-on-startup'):
             self.close()
         else:
-            self.hide()
+            self.set_visible(False)
 
     # # # # # #
     def update_list_tip(self, text: str = None):
