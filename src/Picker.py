@@ -391,12 +391,12 @@ class Picker(Gtk.ApplicationWindow):
         return False
 
     def default_hiding_action(self):
-        if (self.settings.get_boolean('iconify-on-esc')):
+        if self.settings.get_boolean('iconify-on-esc'):
             self.minimize()
+        elif not self.settings.get_boolean('load-hidden-on-startup'):
+            self.close()
         else:
             self.hide()
-
-        self.on_hide()
 
     # # # # # #
     def update_list_tip(self, text: str = None):
