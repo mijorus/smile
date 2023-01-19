@@ -27,10 +27,13 @@ def set_custom_tags(hexcode: str, tags: str):
 def get_custom_tags(hexcode: str, cache=False) -> str:
     global custom_tags_config
 
-    if not cache or not custom_tags_config:
+    if (not cache) or (not custom_tags_config):
         custom_tags_config = read_json_config('custom_tags')
-
-    return custom_tags_config[hexcode]['tags'] if (hexcode in custom_tags_config) else ''
+        
+    if (hexcode in custom_tags_config) and custom_tags_config[hexcode]['tags']:
+        return custom_tags_config[hexcode]['tags']
+    
+    return ''
 
 def get_all_custom_tags() -> dict:
     return read_json_config('custom_tags')

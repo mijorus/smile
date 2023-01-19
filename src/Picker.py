@@ -530,7 +530,6 @@ class Picker(Gtk.ApplicationWindow):
         else:
             filter_result = e['group'] == self.selected_category
 
-        widget.show() if filter_result else widget.hide()
         return filter_result
 
     def sort_emoji_list(self, child1: Gtk.FlowBoxChild, child2: Gtk.FlowBoxChild, user_data):
