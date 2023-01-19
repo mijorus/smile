@@ -10,6 +10,19 @@
         <p>Smile is a simple emoji picker for linux with custom tags support</p>
     </description>
     <releases>
+        <release type="stable" version="2.0.0" date="2023-01-20T00:00:00Z">
+            <description>
+                <p>- GTK4 + Adwaita rewrite!</p>
+                <p>- Reduced app size</p>
+                <p>- Updated localized tags</p>
+                <p></p>
+                <p>IMPORTANT NOTICE! The following features are changed or have been removed:</p>
+                <p>- REMOVED "open window at mouse position" (incompatible with Wayland and influenced by other system settings)</p>
+                <p>- CHANGED switching categories can now be achieved by pressing [ALT + ←] and [ALT +  →]</p>
+                <p>- CHANGED "Load in the backgroud" has been renamed to "Run in the backgroud"</p>
+                <p>- IMPROVEMENT To ensure compatibility with any desktop environment, when "Run in the backgroud" is set to OFF Smile will quit when selecting an emoji</p>
+            </description>
+        </release>
         <release type="stable" version="1.7.1" date="2022-10-20T00:00:00Z">
             <description>
                 <p>- Updated libs</p>
