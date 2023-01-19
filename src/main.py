@@ -71,19 +71,21 @@ class Smile(Adw.Application):
                 try:
                     last_run_version = self.settings.get_string('last-run-version') or '0.0.0'
                     last_run_version_split = last_run_version.split('.')
-
+                    
                     if last_run_version_split[0] != self.version.split('.')[0] or last_run_version_split[1] != self.version.split('.')[1]:
                         dialog = Gtk.MessageDialog(
                             transient_for=self.window,
-                            flags=0,
                             message_type=Gtk.MessageType.INFO,
                             buttons=Gtk.ButtonsType.OK,
                         )
 
-                        dialog.set_markup(f"Smile was updated to version {self.version}!\n\nSee the changelog on <b>Menu > What's new</b>\nor visit smile.mijorus.it/changelog")
+                        if self.version == '2.0.0':
+                            dialog.set_markup(f"""Smile was updated to version {self.version}!\n\n<b>LOTS OF THINGS HAVE CHANGED</b>, including some keyboard shortcuts!\n\nPlease see the changelog on <b>Menu > What's new</b>\nor visit smile.mijorus.it/changelog""")
+                        else:
+                            dialog.set_markup(f"Smile was updated to version {self.version}!\n\nSee the changelog on <b>Menu > What's new</b>\nor visit smile.mijorus.it/changelog")
 
-                        dialog.run()
-                        dialog.destroy()
+                        dialog.connect('response', lambda x, y: dialog.destroy())
+                        dialog.show()
 
                     self.settings.set_string('last-run-version', self.version)
                 except Exception as e:
