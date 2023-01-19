@@ -145,7 +145,6 @@ class Settings(Adw.PreferencesWindow):
     def delete_tag(self, hexcode: str):
         for r in self.custom_tags_rows:
             self.custom_tags_list_box.remove(r)
-            self.custom_tags_rows.remove(r)
 
         if delete_custom_tags(hexcode):
             self.custom_tags_rows = self.create_custom_tags_list()
