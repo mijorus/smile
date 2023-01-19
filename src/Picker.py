@@ -121,7 +121,6 @@ class Picker(Gtk.ApplicationWindow):
         self.overlay = Adw.ToastOverlay()
         self.overlay.set_child(self.viewport_box)
         self.set_child(self.overlay)
-        self.connect('show', self.on_show)
         self.set_active_category('smileys-emotion')
 
     def on_hide(self):
@@ -139,9 +138,6 @@ class Picker(Gtk.ApplicationWindow):
         self.grab_focus()
 
         self.set_focus(self.search_entry)
-
-    def on_show(self, widget: Gtk.Window):
-        pass
 
     # Create stuff
     def create_menu_button(self):
