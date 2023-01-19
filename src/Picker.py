@@ -63,7 +63,7 @@ class Picker(Gtk.ApplicationWindow):
 
         # Create the emoji list and category picker
         self.categories_count = 0
-        scrolled = Gtk.ScrolledWindow(min_content_height=350, propagate_natural_height=True, propagate_natural_width=True)
+        scrolled = Gtk.ScrolledWindow(min_content_height=350, propagate_natural_height=True, propagate_natural_width=True, vexpand=True)
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
         scrolled_container = Adw.Clamp(maximum_size=600)
 
