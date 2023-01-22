@@ -191,6 +191,10 @@ class Picker(Gtk.ApplicationWindow):
             emoji_button = self.create_emoji_button(e)
             flowbox_child = FlowBoxChild(emoji_button)
 
+            gesture = Gtk.GestureSingle(button=Gdk.BUTTON_SECONDARY)
+            gesture.connect('end', lambda e, _: self.show_skintone_selector(e.get_widget()))
+            flowbox_child.add_controller(gesture)
+
             is_recent = (e['hexcode'] in get_history())
             flowbox.append(flowbox_child)
             self.emoji_list_widgets.append(flowbox_child)
@@ -248,19 +252,8 @@ class Picker(Gtk.ApplicationWindow):
 
         if alt_key:
             if focused_button and keyval == Gdk.KEY_e:
-                if not SkintoneSelector.check_skintone(focused_widget):
-                    self.overlay.add_toast(
-                        Adw.Toast(title="No skintones available", timeout=1)
-                    )
-                else:
-                    self.skintone_selector = SkintoneSelector(
-                        focused_widget,
-                        parent=self,
-                        click_handler=self.handle_emoji_button_click,
-                        keypress_handler=self.handle_skintone_selector_key_press
-                    )
-
-                    return True
+                self.show_skintone_selector(focused_widget)
+                return True
 
             elif focused_button and keyval == Gdk.KEY_t:
                 CustomTagEntry(focused_widget, self)
@@ -397,6 +390,19 @@ class Picker(Gtk.ApplicationWindow):
             self.set_visible(False)
 
     # # # # # #
+    def show_skintone_selector(self, focused_widget: FlowBoxChild):
+        if not SkintoneSelector.check_skintone(focused_widget):
+            self.overlay.add_toast(
+                Adw.Toast(title="No skintones available", timeout=1)
+            )
+        else:
+            self.skintone_selector = SkintoneSelector(
+                focused_widget,
+                parent=self,
+                click_handler=self.handle_emoji_button_click,
+                keypress_handler=self.handle_skintone_selector_key_press
+            )
+
     def update_list_tip(self, text: str = None):
         if (text is None):
             self.list_tip_revealer.set_reveal_child(False)
