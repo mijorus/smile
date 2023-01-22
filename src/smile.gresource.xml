@@ -2,7 +2,6 @@
 <gresources>
     <gresource prefix="/it/mijorus/smile">
         <file>ui/shortcuts.xml</file>
-        <file>ui/settings.glade</file>
         <file>ui/menu.xml</file>
         <file>assets/style.css</file>
         <file>assets/smile.autostart.desktop</file>
