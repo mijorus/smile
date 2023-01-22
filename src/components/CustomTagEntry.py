@@ -62,8 +62,7 @@ class CustomTagEntry(CustomPopover):
             Gtk.Label(label="<small>Press Enter or ESC to close without saving</small>", use_markup=True, margin_top=10, css_classes=['dim-label'])
         )
 
-        self.flowbox_child.lock_status = True
-        self.flowbox_child.set_as_selected()
+        # self.flowbox_child.set_as_selected()
 
         self.set_content(popover_content)
         self.show()
@@ -74,5 +73,4 @@ class CustomTagEntry(CustomPopover):
         return True
 
     def on_close(self):
-        self.flowbox_child.lock_status = False
         self.flowbox_child.deselect()

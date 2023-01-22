@@ -13,7 +13,7 @@ from gi.repository import Gtk, Gio, Gdk, GLib, Adw  # noqa
 
 
 class SkintoneSelector(CustomPopover):
-    def __init__(self, flowbox_child: Gtk.FlowBoxChild, parent: Gtk.Window, click_handler: callable, keypress_handler: callable):
+    def __init__(self, flowbox_child: Gtk.FlowBoxChild, parent: Gtk.Window, click_handler: callable, keypress_handler: callable, emoji_active_selection: list[EmojiButton]):
         super().__init__(parent=parent)
         self.click_handler = click_handler
         self.flowbox_child = flowbox_child
@@ -28,7 +28,7 @@ class SkintoneSelector(CustomPopover):
         )
 
         skintone_emojis = Gtk.FlowBox(
-            orientation=Gtk.Orientation.HORIZONTAL, 
+            orientation=Gtk.Orientation.HORIZONTAL,
             max_children_per_line=100,
             min_children_per_line=100,
             hexpand=True,
@@ -55,6 +55,12 @@ class SkintoneSelector(CustomPopover):
             button.connect('clicked', self.handle_activate)
 
             child = FlowBoxChild(emoji_button=button)
+
+            for e in emoji_active_selection:
+                if e.hexcode == button.emoji_data['hexcode']:
+                    child.set_as_selected()
+                    break
+
             skintone_emojis.append(child)
 
         popover_container.set_child(skintone_emojis)
@@ -68,7 +74,7 @@ class SkintoneSelector(CustomPopover):
                 css_classes=['dim-label']
             )
         )
-        
+
         self.handle_close = self.on_close
         self.flowbox_child.set_as_active()
 
@@ -77,7 +83,6 @@ class SkintoneSelector(CustomPopover):
 
     def handle_activate(self, _):
         self.click_handler(_)
-        self.request_close()
         return True
 
     def check_skintone(flowbox_child):

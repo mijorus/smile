@@ -70,7 +70,7 @@ class Picker(Gtk.ApplicationWindow):
         self.viewport_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, css_classes=['viewport'], vexpand=True)
 
         self.list_tip_revealer = Gtk.Revealer(reveal_child=False)
-        self.list_tip_label = Gtk.Label(label='', opacity=0.7, justify=Gtk.Justification.CENTER)
+        self.list_tip_label = Gtk.Label(label='', opacity=0.7, justify=Gtk.Justification.CENTER, margin_bottom=2)
         self.list_tip_revealer.set_child(self.list_tip_label)
 
         self.emoji_list_widgets: list[FlowBoxChild] = []
@@ -121,16 +121,6 @@ class Picker(Gtk.ApplicationWindow):
         self.overlay.set_child(self.viewport_box)
         self.set_child(self.overlay)
         self.set_active_category('smileys-emotion')
-
-    # def on_hide(self):
-    #     self.search_entry.set_text('')
-    #     self.query = None
-    #     self.selection = []
-    #     self.update_list_tip(None)
-    #     for button in self.selected_buttons:
-    #         button.get_style_context().remove_class('selected')
-
-    #     self.selected_buttons = []
 
     def on_activation(self):
         self.present_with_time(time.time())
@@ -198,6 +188,10 @@ class Picker(Gtk.ApplicationWindow):
             gesture.connect('end', lambda e, _: self.show_skintone_selector(e.get_widget()))
             flowbox_child.add_controller(gesture)
 
+            gesture_mid_click = Gtk.GestureSingle(button=Gdk.BUTTON_MIDDLE)
+            gesture_mid_click.connect('end', lambda e, _: self.show_custom_tag_entry(e.get_widget()))
+            flowbox_child.add_controller(gesture_mid_click)
+
             is_recent = (e['hexcode'] in get_history())
             flowbox.append(flowbox_child)
             self.emoji_list_widgets.append(flowbox_child)
@@ -261,7 +255,7 @@ class Picker(Gtk.ApplicationWindow):
                 return True
 
             elif focused_button and keyval == Gdk.KEY_t:
-                CustomTagEntry(focused_widget, self)
+                self.show_custom_tag_entry(focused_widget)
                 return True
 
             elif keyval in [Gdk.KEY_Left, Gdk.KEY_Right]:
@@ -295,21 +289,28 @@ class Picker(Gtk.ApplicationWindow):
                         self.selected_buttons.pop()
 
                         if not last_button.get_label() in self.selection:
-                            last_button.get_style_context().remove_class('selected')
+                            last_button.get_parent().deselect()
 
                         self.update_selection_content(self.selection)
 
                     return True
 
         elif ctrl_key:
+            print('qwe')
             if keyval == Gdk.KEY_question:
                 shortcut_window = ShortcutsWindow()
                 shortcut_window.open()
 
-            if (keyval == Gdk.KEY_Return):
+            elif (keyval == Gdk.KEY_Return):
                 if self.selection:
                     self.copy_and_quit()
                     return True
+            
+            elif keyval == Gdk.KEY_BackSpace:
+                self.query = None
+                self.search_entry.set_text('')
+                self.search_entry.grab_focus()
+                return True
 
         else:
             # handle key combinations without modifiers
@@ -358,7 +359,10 @@ class Picker(Gtk.ApplicationWindow):
         shift_key = bool(state & Gdk.ModifierType.SHIFT_MASK)
         focused_widget: FlowBoxChild = self.skintone_selector.get_focus()
 
+        self.shift_key_pressed = (keyval == Gdk.KEY_Shift_L) or (keyval == Gdk.KEY_Shift_R)
+
         if shift_key:
+            self.shift_key_pressed = True
             if (keyval == Gdk.KEY_Return):
                 self.select_button_emoji(focused_widget.emoji_button)
                 return True
@@ -395,7 +399,7 @@ class Picker(Gtk.ApplicationWindow):
 
         for button in self.emoji_list_widgets:
             button.deselect()
-            
+
         self.selected_buttons = []
 
         if self.settings.get_boolean('iconify-on-esc'):
@@ -407,7 +411,6 @@ class Picker(Gtk.ApplicationWindow):
 
     # # # # # #
     def show_skintone_selector(self, focused_widget: FlowBoxChild):
-        focused_widget.grab_focus()
         self.emoji_list.select_child(focused_widget)
 
         if not SkintoneSelector.check_skintone(focused_widget):
@@ -419,8 +422,12 @@ class Picker(Gtk.ApplicationWindow):
                 focused_widget,
                 parent=self,
                 click_handler=self.handle_emoji_button_click,
-                keypress_handler=self.handle_skintone_selector_key_press
+                keypress_handler=self.handle_skintone_selector_key_press,
+                emoji_active_selection=self.selected_buttons
             )
+
+    def show_custom_tag_entry(self, focused_widget: FlowBoxChild):
+        CustomTagEntry(focused_widget, self)
 
     def update_list_tip(self, text: str = None):
         if (text is None):
@@ -449,7 +456,10 @@ class Picker(Gtk.ApplicationWindow):
 
         increment_emoji_usage_counter(button)
 
-        button.get_parent().set_as_active()
+        button.get_parent().set_as_selected()
+        if self.emoji_list.get_selected_children() and (button.get_parent() is not self.emoji_list.get_selected_children()[0]):
+            self.emoji_list.get_selected_children()[0].set_as_selected()
+
         self.update_selection_content(self.selection)
 
     def load_first_row(self):

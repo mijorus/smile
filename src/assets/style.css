@@ -12,39 +12,28 @@
     font-size: 20px;
 }
 
-/* Focused emoji button */
-.emoji-button.selected {
-    border-color: red;
-    box-shadow: 0px 0px 2px 1px red;
+.flowbox-child-custom {
+    border-color: transparent;
+    box-shadow: none;
+    outline: transparent;
+    background: transparent;
+}
+
+.flowbox-child-custom:focus button {
+    border-color: rgba(255, 0, 0, 1);
+    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 1);
     outline: transparent;
 }
 
-.flowbox-child-custom {
-    margin-left: 2px;
-    margin-right: 2px;
+.flowbox-child-custom.active button {
+    border-color: rgba(255, 0, 0, 1);
+    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 1);
+    outline: transparent;
 }
 
-.flowbox-child-custom.selected {
+.flowbox-child-custom.selected button {
     border-color: rgba(255, 0, 0, 0.5);
     box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 0.5);
-    outline: transparent;
-}
-
-.flowbox-child-custom:focus {
-    border-color: rgba(255, 0, 0, 1);
-    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 1);
-    outline: transparent;
-}
-
-.flowbox-child-custom.active {
-    border-color: rgba(255, 0, 0, 1);
-    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 1);
-    outline: transparent;
-}
-
-.flowbox-selected {
-    border-color: rgba(255, 0, 0, 0);
-    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 0);
     outline: transparent;
 }
 
@@ -61,18 +50,6 @@ button.selected {
 
 #custom_tag_entry {
     margin: 10px;
-}
-
-#preferences-listbox {
-    border-radius: 10px;
-}
-
-#modifiers-listbox {
-    border-radius: 10px;
-}
-
-.emoji_with_custom_tags_preferences {
-    font-size: 20px;
 }
 
 .viewport {

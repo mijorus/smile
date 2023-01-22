@@ -17,25 +17,20 @@ class FlowBoxChild(Gtk.FlowBoxChild):
 
         self._is_selected = False
         self.event_controller_focus = Gtk.EventControllerFocus()
-        # self.set_css_classes(['flowbox-child-custom'])
-        
+
         self.default_css = ['flowbox-child-custom']
         if ('skintones' in emoji_button.emoji_data) and emoji_button.emoji_data['skintones']:
             self.default_css.append('emoji-with-skintones')
 
         self.set_css_classes(self.default_css)
         
+        self.event_controller_focus.connect('enter', lambda x: self.set_css_classes(self.default_css))
         self.event_controller_focus.connect('leave', self.on_selection_leave)
-        self.lock_status = False
         self.add_controller(self.event_controller_focus)
 
         self.set_child(self.emoji_button)
 
-
     def on_selection_leave(self, event):
-        if self.lock_status:
-            return
-
         if self._is_selected:
             self.set_as_selected()
         else:
@@ -46,7 +41,6 @@ class FlowBoxChild(Gtk.FlowBoxChild):
         self.set_css_classes([*self.default_css, 'selected'])
 
     def set_as_active(self):
-        self._is_selected = True
         self.set_css_classes([*self.default_css, 'active'])
 
     def deselect(self):
