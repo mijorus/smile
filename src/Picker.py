@@ -27,7 +27,7 @@ from .components.FlowBoxChild import FlowBoxChild
 from .components.EmojiButton import EmojiButton
 from .lib.custom_tags import get_custom_tags
 from .lib.localized_tags import get_localized_tags
-from .lib.emoji_history import increament_emoji_usage_counter, get_history
+from .lib.emoji_history import increment_emoji_usage_counter, get_history
 from .utils import tag_list_contains, is_wayland
 
 gi.require_version('Gtk', '4.0')
@@ -136,6 +136,8 @@ class Picker(Gtk.ApplicationWindow):
     def on_activation(self):
         self.present_with_time(time.time())
         self.grab_focus()
+        
+        self.emoji_list.unselect_all()
 
         if self.settings.get_boolean('iconify-on-esc'):
             self.unminimize()
@@ -209,6 +211,8 @@ class Picker(Gtk.ApplicationWindow):
 
     # Handle events
     def handle_emoji_button_click(self, widget: Gtk.Button):
+        widget.get_parent().grab_focus()
+
         if (self.shift_key_pressed):
             self.select_button_emoji(widget)
         else:
@@ -391,6 +395,7 @@ class Picker(Gtk.ApplicationWindow):
 
     # # # # # #
     def show_skintone_selector(self, focused_widget: FlowBoxChild):
+        focused_widget.grab_focus()
         if not SkintoneSelector.check_skintone(focused_widget):
             self.overlay.add_toast(
                 Adw.Toast(title="No skintones available", timeout=1)
@@ -425,7 +430,7 @@ class Picker(Gtk.ApplicationWindow):
 
     def select_button_emoji(self, button: EmojiButton):
         self.selection.append(button.get_label())
-        increament_emoji_usage_counter(button)
+        increment_emoji_usage_counter(button)
 
         self.selected_buttons.append(button)
         button.emoji_is_selected = True
@@ -465,7 +470,7 @@ class Picker(Gtk.ApplicationWindow):
         text = ''
         if button:
             text = button.get_label()
-            increament_emoji_usage_counter(button)
+            increment_emoji_usage_counter(button)
 
         contx = Gdk.ContentProvider.new_for_value(''.join([*self.selection, text]))
         self.clipboard.set_content(contx)
