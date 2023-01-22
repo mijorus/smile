@@ -18,4 +18,4 @@ class ShortcutsWindow():
         self.shortcut_window.set_default_size(600, 400)
 
     def open(self):
-        self.shortcut_window.show_all()
+        self.shortcut_window.present_with_time(time.time())
