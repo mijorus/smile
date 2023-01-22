@@ -1,12 +1,13 @@
 import gi
-import dbus
-import time
 
+from dbus import Array as DBusArray
+from dbus import SessionBus
+from dbus import Interface as DBusInterface
 from dbus.mainloop.glib import DBusGMainLoop
 from .assets.emoji_list import emojis
 from .lib.custom_tags import set_custom_tags, get_all_custom_tags, delete_custom_tags
 from .lib.localized_tags import get_countries_list
-from .utils import read_text_resource, is_wayland
+from .utils import read_text_resource
 
 
 from gi.repository import Gtk, Gio, Gdk, GLib, Adw
@@ -206,7 +207,7 @@ class Settings(Adw.PreferencesWindow):
         if old_autostart_file.query_exists():
             old_autostart_file.delete()
 
-        bus = dbus.SessionBus()
+        bus = SessionBus()
         obj = bus.get_object("org.freedesktop.portal.Desktop", "/org/freedesktop/portal/desktop")
-        inter = dbus.Interface(obj, "org.freedesktop.portal.Background")
-        res = inter.RequestBackground('', {'reason': 'Smile autostart', 'autostart': value, 'background': value, 'commandline': dbus.Array(['smile', '--start-hidden'])})
+        inter = DBusInterface(obj, "org.freedesktop.portal.Background")
+        res = inter.RequestBackground('', {'reason': 'Smile autostart', 'autostart': value, 'background': value, 'commandline': DBusArray(['smile', '--start-hidden'])})

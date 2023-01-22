@@ -16,10 +16,10 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import gi
-import time
+from time import time, time_ns
 import re
 
-from .assets.emoji_list import emojis, emoji_categories
+# from .assets.emoji_list import emoji_categories, emojis
 from .ShortcutsWindow import ShortcutsWindow
 from .components.CustomTagEntry import CustomTagEntry
 from .components.SkintoneSelector import SkintoneSelector
@@ -28,7 +28,7 @@ from .components.EmojiButton import EmojiButton
 from .lib.custom_tags import get_custom_tags
 from .lib.localized_tags import get_localized_tags
 from .lib.emoji_history import increment_emoji_usage_counter, get_history
-from .utils import tag_list_contains, is_wayland
+from .utils import tag_list_contains
 
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
@@ -123,7 +123,7 @@ class Picker(Gtk.ApplicationWindow):
         self.set_active_category('smileys-emotion')
 
     def on_activation(self):
-        self.present_with_time(time.time())
+        self.present_with_time(time())
         self.grab_focus()
 
         self.emoji_list.unselect_all()
@@ -148,6 +148,8 @@ class Picker(Gtk.ApplicationWindow):
         return button
 
     def create_category_picker(self) -> Gtk.ScrolledWindow:
+        from .assets.emoji_list import emoji_categories
+        
         scrolled = Gtk.ScrolledWindow(name='emoji_categories_box')
         box = Gtk.Box(spacing=4, halign=Gtk.Align.CENTER, hexpand=True)
 
@@ -179,7 +181,10 @@ class Picker(Gtk.ApplicationWindow):
             min_children_per_line=self.emoji_grid_col_n
         )
 
-        start = time.time_ns()
+        start = time_ns()
+        
+        from .assets.emoji_list import emojis
+
         for i, e in emojis.items():
             emoji_button = self.create_emoji_button(e)
             flowbox_child = FlowBoxChild(emoji_button)
@@ -201,7 +206,8 @@ class Picker(Gtk.ApplicationWindow):
 
         flowbox.set_filter_func(self.filter_emoji_list, None)
         flowbox.set_sort_func(self.sort_emoji_list, None)
-        print('Emoji list creation took ' + str((time.time_ns() - start) / 1000000) + 'ms')
+        print('Emoji list creation took ' + str((time_ns() - start) / 1000000) + 'ms')
+
         return flowbox
 
     # Handle events

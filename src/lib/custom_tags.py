@@ -1,5 +1,4 @@
 from gi.repository import GLib
-from ..assets.emoji_list import emojis
 from .user_config import save_json_config, read_json_config
 
 custom_tags_config = None

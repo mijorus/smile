@@ -1,5 +1,4 @@
 import gi
-from ..assets.emoji_list import emojis
 from ..lib.custom_tags import set_custom_tags, get_custom_tags
 from ..lib.localized_tags import get_localized_tags, get_countries_list
 from .CustomPopover import CustomPopover
@@ -21,7 +20,10 @@ class CustomTagEntry(CustomPopover):
         self.relative_widget_hexcode = self.emoji_buttom.emoji_data['hexcode']
 
         max_tags_lengh = 30
+        
+        from ..assets.emoji_list import emojis
         default_tags = emojis[self.relative_widget_hexcode]['tags']
+
         localized_tags = []
 
         settings: Gio.Settings = Gio.Settings.new('it.mijorus.smile')

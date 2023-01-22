@@ -1,6 +1,5 @@
 import json
 from gi.repository import GLib
-from ..assets.emoji_list import emojis
 
 # These two helper functions can be used to 
 # read and write a json file in the user's configuration directory

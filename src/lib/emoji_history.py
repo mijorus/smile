@@ -1,5 +1,5 @@
 import gi
-import time
+from time import time
 from .user_config import read_json_config, save_json_config
 from gi.repository import Gtk, Gio, Gdk
 
@@ -18,7 +18,7 @@ def increment_emoji_usage_counter(button: Gtk.Button):
 
 
     history[emoji_hexcode]['count'] += 1
-    history[emoji_hexcode]['lastUsage'] = round(time.time())
+    history[emoji_hexcode]['lastUsage'] = round(time())
     
     if (len(history) > max_history_size):
         sorted_h = dict( sorted(history.items(), key=lambda kv:kv[1]['lastUsage']) )

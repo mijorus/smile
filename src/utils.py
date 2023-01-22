@@ -30,10 +30,3 @@ def read_text_resource(res: str) -> str:
     decoded = data.decode('utf-8')
     file.unref()
     return decoded
-
-def is_wayland() -> bool:
-    for k in [os.getenv('XDG_SESSION_TYPE', ''), os.getenv('XDG_SESSION_DESKTOP')]:
-        if 'wayland' in k:
-            return True
-
-    return False
