@@ -18,17 +18,35 @@
 }
 
 /* Selected emoji button */
-.emoji-button.selected {
+/* .emoji-button.active {
+    border-color: rgba(255, 0, 0, 0.5);
+    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 0.5);
+    outline: transparent;
+} */
+
+.flowbox-child-custom.selected {
     border-color: rgba(255, 0, 0, 0.5);
     box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 0.5);
     outline: transparent;
 }
 
-.emoji-button.active {
+.flowbox-child-custom:focus {
     border-color: rgba(255, 0, 0, 1);
     box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 1);
     outline: transparent;
 }
+
+.flowbox-child-custom.active {
+    border-color: rgba(255, 0, 0, 1);
+    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 1);
+    outline: transparent;
+}
+
+/* .emoji-button.active {
+    border-color: rgba(255, 0, 0, 1);
+    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 1);
+    outline: transparent;
+} */
 
 .flowbox-selected {
     border-color: rgba(255, 0, 0, 0);

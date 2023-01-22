@@ -8,15 +8,16 @@ gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Gdk, Adw  # noqa
 
+
 class FlowBoxChild(Gtk.FlowBoxChild):
     def __init__(self, emoji_button: EmojiButton, **kwargs):
         super().__init__(**kwargs)
         self.emoji_button = emoji_button
         self.emoji_button.set_can_focus(False)
 
-        self.emoji_button.emoji_is_selected = False
+        self._is_selected = False
         self.event_controller_focus = Gtk.EventControllerFocus()
-        self.event_controller_focus.connect('enter', self.on_selection)
+        self.set_css_classes(['flowbox-child-custom'])
         self.event_controller_focus.connect('leave', self.on_selection_leave)
         self.lock_status = False
         self.add_controller(self.event_controller_focus)
@@ -31,10 +32,16 @@ class FlowBoxChild(Gtk.FlowBoxChild):
         if self.lock_status:
             return
 
-        self.set_css_classes([])
-
-        if self.emoji_button.emoji_is_selected:
-            self.emoji_button.set_as_selected()
+        if self._is_selected:
+            self.set_as_selected()
         else:
-            self.emoji_button.deselect()
-        
+            self.deselect()
+
+    def set_as_selected(self):
+        self.set_css_classes(['flowbox-child-custom', 'selected'])
+
+    def set_as_active(self):
+        self.set_css_classes(['flowbox-child-custom', 'active'])
+
+    def deselect(self):
+        self.set_css_classes(['flowbox-child-custom'])

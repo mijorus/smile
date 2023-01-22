@@ -63,7 +63,7 @@ class CustomTagEntry(CustomPopover):
         )
 
         self.flowbox_child.lock_status = True
-        self.flowbox_child.emoji_button.set_as_active()
+        self.flowbox_child.set_as_selected()
 
         self.set_content(popover_content)
         self.show()
@@ -75,3 +75,4 @@ class CustomTagEntry(CustomPopover):
 
     def on_close(self):
         self.flowbox_child.lock_status = False
+        self.flowbox_child.deselect()
