@@ -39,7 +39,7 @@ from gi.repository import Gtk, Gio, Gdk, Adw  # noqa
 class Picker(Gtk.ApplicationWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(title="Smile", resizable=True, *args, **kwargs)
-        self.set_default_size(350, 350)
+        self.set_default_size(360, 350)
 
         self.event_controller_keys = Gtk.EventControllerKey()
         self.event_controller_keys.connect('key-pressed', self.handle_window_key_press)
@@ -115,7 +115,6 @@ class Picker(Gtk.ApplicationWindow):
         # Display custom tags at the top of the list when searching
         # This variable the status of the sorted status
         self.list_was_sorted = False
-
         self.skintone_selector = None
 
         self.overlay = Adw.ToastOverlay()
@@ -123,15 +122,15 @@ class Picker(Gtk.ApplicationWindow):
         self.set_child(self.overlay)
         self.set_active_category('smileys-emotion')
 
-    def on_hide(self):
-        self.search_entry.set_text('')
-        self.query = None
-        self.selection = []
-        self.update_list_tip(None)
-        for button in self.selected_buttons:
-            button.get_style_context().remove_class('selected')
+    # def on_hide(self):
+    #     self.search_entry.set_text('')
+    #     self.query = None
+    #     self.selection = []
+    #     self.update_list_tip(None)
+    #     for button in self.selected_buttons:
+    #         button.get_style_context().remove_class('selected')
 
-        self.selected_buttons = []
+    #     self.selected_buttons = []
 
     def on_activation(self):
         self.present_with_time(time.time())
@@ -183,6 +182,8 @@ class Picker(Gtk.ApplicationWindow):
             valign=Gtk.Align.START,
             homogeneous=True,
             css_classes=['emoji_list_box'],
+            margin_top=2,
+            margin_bottom=2,
             selection_mode=Gtk.SelectionMode.SINGLE,
             max_children_per_line=self.emoji_grid_col_n,
             min_children_per_line=self.emoji_grid_col_n
@@ -283,8 +284,6 @@ class Picker(Gtk.ApplicationWindow):
             if (keyval == Gdk.KEY_Return):
                 if focused_button:
                     self.select_button_emoji(focused_button)
-                    # focused_button.set_as_active()
-                    # self.emoji_list.select_child(focused_button.get_parent())
                     return True
 
             if (keyval == Gdk.KEY_BackSpace):
@@ -362,7 +361,6 @@ class Picker(Gtk.ApplicationWindow):
         if shift_key:
             if (keyval == Gdk.KEY_Return):
                 self.select_button_emoji(focused_widget.emoji_button)
-                focused_widget.emoji_button.set_as_active()
                 return True
 
             elif (keyval == Gdk.KEY_BackSpace):
@@ -387,6 +385,19 @@ class Picker(Gtk.ApplicationWindow):
         return False
 
     def default_hiding_action(self):
+        self.search_entry.set_text('')
+        self.query = None
+        self.selection = []
+        self.update_list_tip(None)
+
+        for button in self.selected_buttons:
+            button.get_parent().deselect()
+
+        for button in self.emoji_list_widgets:
+            button.deselect()
+            
+        self.selected_buttons = []
+
         if self.settings.get_boolean('iconify-on-esc'):
             self.minimize()
         elif not self.settings.get_boolean('load-hidden-on-startup'):
@@ -397,24 +408,19 @@ class Picker(Gtk.ApplicationWindow):
     # # # # # #
     def show_skintone_selector(self, focused_widget: FlowBoxChild):
         focused_widget.grab_focus()
-        # print(focused_widget.has_focus())
+        self.emoji_list.select_child(focused_widget)
 
-        # self.emoji_list.emit('move-cursor', Gtk.MovementStep.BUFFER_ENDS, -1, False, False)
-
-        # while :
-            # self.emoji_list.emit('move-cursor', Gtk.MovementStep.VISUAL_POSITIONS, 1, False, False)
-
-        # if not SkintoneSelector.check_skintone(focused_widget):
-        #     self.overlay.add_toast(
-        #         Adw.Toast(title="No skintones available", timeout=1)
-        #     )
-        # else:
-        #     self.skintone_selector = SkintoneSelector(
-        #         focused_widget,
-        #         parent=self,
-        #         click_handler=self.handle_emoji_button_click,
-        #         keypress_handler=self.handle_skintone_selector_key_press
-        #     )
+        if not SkintoneSelector.check_skintone(focused_widget):
+            self.overlay.add_toast(
+                Adw.Toast(title="No skintones available", timeout=1)
+            )
+        else:
+            self.skintone_selector = SkintoneSelector(
+                focused_widget,
+                parent=self,
+                click_handler=self.handle_emoji_button_click,
+                keypress_handler=self.handle_skintone_selector_key_press
+            )
 
     def update_list_tip(self, text: str = None):
         if (text is None):
@@ -439,11 +445,11 @@ class Picker(Gtk.ApplicationWindow):
     def select_button_emoji(self, button: EmojiButton):
         self.selected_buttons.append(button)
         self.selection.append(button.get_label())
+        self.emoji_list.select_child(button.get_parent())
 
         increment_emoji_usage_counter(button)
 
         button.get_parent().set_as_active()
-        button.get_parent()._is_selected = True
         self.update_selection_content(self.selection)
 
     def load_first_row(self):

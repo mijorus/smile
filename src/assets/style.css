@@ -1,4 +1,6 @@
-.emoji_list_box button, #skin_selector button, #emoji_categories_box button {
+.emoji_list_box button,
+#skin_selector button,
+#emoji_categories_box button {
     font-size: 20px;
 }
 
@@ -17,12 +19,10 @@
     outline: transparent;
 }
 
-/* Selected emoji button */
-/* .emoji-button.active {
-    border-color: rgba(255, 0, 0, 0.5);
-    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 0.5);
-    outline: transparent;
-} */
+.flowbox-child-custom {
+    margin-left: 2px;
+    margin-right: 2px;
+}
 
 .flowbox-child-custom.selected {
     border-color: rgba(255, 0, 0, 0.5);
@@ -42,12 +42,6 @@
     outline: transparent;
 }
 
-/* .emoji-button.active {
-    border-color: rgba(255, 0, 0, 1);
-    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 1);
-    outline: transparent;
-} */
-
 .flowbox-selected {
     border-color: rgba(255, 0, 0, 0);
     box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 0);
@@ -58,7 +52,8 @@
     margin: 1px;
 }
 
-#emoji_categories_box button:focus, button.selected {
+#emoji_categories_box button:focus,
+button.selected {
     border-color: rgb(12, 170, 12);
     box-shadow: 0px 0px 2px 1px rgb(12, 170, 12);
     outline: transparent;

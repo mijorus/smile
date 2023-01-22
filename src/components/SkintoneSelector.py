@@ -31,7 +31,11 @@ class SkintoneSelector(CustomPopover):
             orientation=Gtk.Orientation.HORIZONTAL, 
             max_children_per_line=100,
             min_children_per_line=100,
-            hexpand=True
+            hexpand=True,
+            margin_top=5,
+            margin_bottom=5,
+            margin_start=2,
+            margin_end=2,
         )
 
         event_controller_keys = Gtk.EventControllerKey()
@@ -66,8 +70,7 @@ class SkintoneSelector(CustomPopover):
         )
         
         self.handle_close = self.on_close
-        self.flowbox_child.lock_status = True
-        self.flowbox_child.emoji_button.set_as_active()
+        self.flowbox_child.set_as_active()
 
         self.set_content(popover_content)
         self.show()
@@ -86,4 +89,4 @@ class SkintoneSelector(CustomPopover):
         return False
 
     def on_close(self):
-        self.flowbox_child.lock_status = False
+        pass
