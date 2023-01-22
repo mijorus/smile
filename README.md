@@ -10,76 +10,94 @@
 </a>
 </p>
 
-## Download
+<!-- vscode-markdown-toc -->
+* 1. [Download](#Download)
+* 2. [Features](#Features)
+	* 2.1. [Localized tags + english fallback!](#Localizedtagsenglishfallback)
+	* 2.2. [Custom tags](#Customtags)
+	* 2.3. [Custom shortcut](#Customshortcut)
+	* 2.4. [Skintone selector](#Skintoneselector)
+	* 2.5. [Multi selection](#Multiselection)
+* 3. [Changelog](#Changelog)
+* 4. [Source](#Source)
+* 5. [Third party licences](#Thirdpartylicences)
+* 6. [Building](#Building)
+* 7. [Thanks to](#Thanksto)
+* 8. [Some more screenshots](#Somemorescreenshots)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+##  1. <a name='Download'></a>Download
 <a href="https://flathub.org/apps/details/it.mijorus.smile" align="center">
   <img width="200" src="https://flathub.org/assets/badges/flathub-badge-i-en.png">
 </a>
 
 Note: Flathub and Github are the only official release channels for Smile. Any release on external marketplaces or packaging formats are unofficial and not supported by me.
 
-## Features
+##  2. <a name='Features'></a>Features
 
 Smile is a simple emoji picker for linux with **custom tags support**.
 
-### Localized tags + english fallback!
-In my daily routine, I alway mix Italian and English in my brain. One tab with Italian newspaper, the other with an English documentation; with Smile, you can finally use both English and localized tags at the same time!
+###  2.1. <a name='Localizedtagsenglishfallback'></a>Localized tags + english fallback!
 
 Go to `Preferences > Localized tags > Merge localized tags`!
 
-### Custom tags
-... Wait what?
-
-No matter how many tags we put, there is always going to be that one emoji you use every day which you expect to show up when you enter a specific query, but it doesn't. Smile wants to fix that, allowing the users to set their own custom tags for a specific emoji.
+###  2.2. <a name='Customtags'></a>Custom tags
+No matter how many tags we put in, there is always going to be that one emoji which you expect to show up when you enter a specific query, but it doesn't.
 
 An example?  
-Do you want 🌐 to show up when you search for "internet", but it is only tagged as "globe"? Select the icon using the arrow keys and press `Alt + T` to insert "internet" as custom tag.
+Do you want 🌐 to show up when you search for "internet", but it is only tagged as "globe"? 
+
+Select the icon using the arrow keys and press `Alt + T` or middle click to insert "internet" as custom tag.
 
 <p align="center">
-  <img width="500" src="https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot4.png">
+  <img width="500" src="docs/screenshot4.png">
 </p>
 
-### Custom shortcut
-This app does not register its own system-wide shortcut, but you can create one simply by going in the system settings. Most, if not all, distrubutions let the user add shortcuts that trigger custom commands. 
+###  2.3. <a name='Customshortcut'></a>Custom shortcut
+This app does not register its own system-wide shortcut, but you can create your custom shortcut for Smile by launching this command: 
 
-You can create a shortcut for Smile by launching this command: `flatpak run it.mijorus.smile`
+`flatpak run it.mijorus.smile`
 
-I believe that having all the shortcuts in once central panel is a much better user expecience than apps registering their own shortcuts separately.
-
-### Skintone selector
+###  2.4. <a name='Skintoneselector'></a>Skintone selector
 
 Press `Alt + E` or `Right Click` on any emoji with the **rounded top-right** corner (see screenshot below).
 <p align="center">
-  <img width="500" src="https://user-images.githubusercontent.com/39067225/166464525-fb2a56ef-581d-4c08-ad23-4bcd245e7fdd.png">
+  <img width="500" src="docs/screenshot10.png">
 </p>
 
-### Multi selection
+###  2.5. <a name='Multiselection'></a>Multi selection
 Use `Shift + Enter` to select multiple emojis; use `Ctrl+Enter` to quit without selecting an additional emoji
 <p align="center">
-  <img width="500" src="https://user-images.githubusercontent.com/39067225/166487730-e1b6b686-5095-4ddb-8ba9-723b3d53101d.png">
+  <img width="500" src="docs/screenshot11.png">
 </p>
 
 
-## Changelog
+##  3. <a name='Changelog'></a>Changelog
 Please check out [https://smile.mijorus.it/changelog](https://smile.mijorus.it/changelog)
 
-## Source
+##  4. <a name='Source'></a>Source
 <a href="https://github.com/mijorus/smile" align="center">
   <img width="100" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png">
 </a>
 
-## Third party licences
+##  5. <a name='Thirdpartylicences'></a>Third party licences
 Awesome resources that made Smile possible:
 
 - [Openmoji](https://openmoji.org/) for the emoji list and english tags
 - [Emojibase](https://github.com/milesj/emojibase) for the translated tags available since version 1.70
 
-## Building 
+##  6. <a name='Building'></a>Building 
 You will need:
 - flatpak
 - flatpak-builder
 - flatpak-builder
-- org.gnome.Platform 41
-- org.gnome.Sdk 41
+- org.gnome.Platform 43
+- org.gnome.Sdk 43
 
 ```sh
 git clone https://github.com/mijorus/smile.git
@@ -96,21 +114,14 @@ flatpak-builder --run build/ it.mijorus.smile.json smile
 flatpak-builder build/ it.mijorus.smile.json --user --install --force-clean
 ```
 
-## Thanks to
+##  7. <a name='Thanksto'></a>Thanks to
 
 - [Emote](https://github.com/tom-james-watson/Emote) for the inspiration and some code
 
-## Some more screenshots
+##  8. <a name='Somemorescreenshots'></a>Some more screenshots
 <p align="center">
-  <img width="500" src="https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot1.png">
+  <img width="500" src="docs/screenshot1.png">
 </p>
 <p align="center">
-  <img width="500" src="https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot2.png">
+  <img width="500" src="docs/screenshot2.png">
 </p>
-<p align="center">
-  <img width="500" src="https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot3.png">
-</p>
-<p align="center">
-  <img width="500" src="https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot5.png">
-</p>
-

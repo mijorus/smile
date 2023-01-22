@@ -37,6 +37,46 @@
                                         <property name="width-request">190</property>
                                         <child>
                                             <object class="GtkLabel">
+                                                <property name="label">Right Click</property>
+                                                <property name="css-classes">keycap</property>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </child>
+                                <child>
+                                    <object class="GtkLabel">
+                                        <property name="label">Open the skintone selector (if available)</property>
+                                    </object>
+                                </child>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkBox">
+                                <child>
+                                    <object class="GtkShortcutLabel">
+                                        <property name="width-request">190</property>
+                                        <child>
+                                            <object class="GtkLabel">
+                                                <property name="label">Middle Click</property>
+                                                <property name="css-classes">keycap</property>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </child>
+                                <child>
+                                    <object class="GtkLabel">
+                                        <property name="label">Add a custom tag</property>
+                                    </object>
+                                </child>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkBox">
+                                <child>
+                                    <object class="GtkShortcutLabel">
+                                        <property name="width-request">190</property>
+                                        <child>
+                                            <object class="GtkLabel">
                                                 <property name="label">Shift</property>
                                                 <property name="css-classes">keycap</property>
                                             </object>
