@@ -5,7 +5,7 @@ from gi.repository import Gtk, Gio, Gdk
 
 history: dict = None
 
-def increament_emoji_usage_counter(button: Gtk.Button):
+def increment_emoji_usage_counter(button: Gtk.Button):
     global history
     max_history_size = 30
     
