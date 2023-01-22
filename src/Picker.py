@@ -225,7 +225,6 @@ class Picker(Gtk.ApplicationWindow):
             return True
 
         self.shift_key_pressed = (keyval == Gdk.KEY_Shift_L or keyval == Gdk.KEY_Shift_R)
-        # print(keycode)
 
         ctrl_key = bool(state & Gdk.ModifierType.CONTROL_MASK)
         shift_key = bool(state & Gdk.ModifierType.SHIFT_MASK)
@@ -296,7 +295,6 @@ class Picker(Gtk.ApplicationWindow):
                     return True
 
         elif ctrl_key:
-            print('qwe')
             if keyval == Gdk.KEY_question:
                 shortcut_window = ShortcutsWindow()
                 shortcut_window.open()
