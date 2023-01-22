@@ -9,7 +9,64 @@
                 <child>
                     <object class="GtkShortcutsGroup">
                         <property name="visible">True</property>
-                        <property name="title" translatable="yes">General</property>
+                        <property name="title" translatable="yes">Mouse</property>
+                        <child>
+                            <object class="GtkBox">
+                                <child>
+                                    <object class="GtkShortcutLabel">
+                                        <property name="width-request">190</property>
+                                        <child>
+                                            <object class="GtkLabel">
+                                                <property name="label">Left Click</property>
+                                                <property name="css-classes">keycap</property>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </child>
+                                <child>
+                                    <object class="GtkLabel">
+                                        <property name="label">Copy the selected emoji and hide the window</property>
+                                    </object>
+                                </child>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkBox">
+                                <child>
+                                    <object class="GtkShortcutLabel">
+                                        <property name="width-request">190</property>
+                                        <child>
+                                            <object class="GtkLabel">
+                                                <property name="label">Shift</property>
+                                                <property name="css-classes">keycap</property>
+                                            </object>
+                                        </child>
+                                        <child>
+                                            <object class="GtkLabel">
+                                                <property name="label">+</property>
+                                            </object>
+                                        </child>
+                                        <child>
+                                            <object class="GtkLabel">
+                                                <property name="label">Left Click</property>
+                                                <property name="css-classes">keycap</property>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </child>
+                                <child>
+                                    <object class="GtkLabel">
+                                        <property name="label">Add an emoji to selection</property>
+                                    </object>
+                                </child>
+                            </object>
+                        </child>
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkShortcutsGroup">
+                        <property name="visible">True</property>
+                        <property name="title" translatable="yes">Keyboard</property>
                         <child>
                             <object class="GtkShortcutsShortcut">
                                 <property name="visible">True</property>
@@ -20,24 +77,25 @@
                         <child>
                             <object class="GtkShortcutsShortcut">
                                 <property name="visible">True</property>
-                                <property name="accelerator">&lt;ctrl&gt;Right</property>
-                                <property name="title" translatable="yes">Move focus to the category on the right</property>
+                                <property name="accelerator">&lt;alt&gt;Right</property>
+                                <property name="title" translatable="yes">Show the category on the right</property>
                             </object>
                         </child>
                         <child>
                             <object class="GtkShortcutsShortcut">
                                 <property name="visible">True</property>
-                                <property name="accelerator">&lt;ctrl&gt;Left</property>
-                                <property name="title" translatable="yes">Move focus to the category on the left</property>
+                                <property name="accelerator">&lt;alt&gt;Left</property>
+                                <property name="title" translatable="yes">Show the category on the left</property>
                             </object>
                         </child>
                         <child>
                             <object class="GtkShortcutsShortcut">
                                 <property name="visible">True</property>
                                 <property name="accelerator">&lt;shift&gt;Return</property>
-                                <property name="title" translatable="yes">Add the emoji to the selection</property>
+                                <property name="title" translatable="yes">Add an emoji to selection</property>
                             </object>
                         </child>
+
                         <child>
                             <object class="GtkShortcutsShortcut">
                                 <property name="visible">True</property>
@@ -56,7 +114,7 @@
                             <object class="GtkShortcutsShortcut">
                                 <property name="visible">True</property>
                                 <property name="accelerator">&lt;alt&gt;E</property>
-                                <property name="title" translatable="yes">Open skintone selector (if available)</property>
+                                <property name="title" translatable="yes">Open the skintone selector (if available)</property>
                             </object>
                         </child>
                         <child>
