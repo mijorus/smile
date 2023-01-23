@@ -68,8 +68,7 @@ def append_skintone(skintone: dict, base_hex: str):
 def main():
     _path = os.path.dirname(os.path.abspath(__file__))
 
-    prefix = os.environ.get('MESON_INSTALL_PREFIX', '/usr/local')
-    destdir = os.path.join(prefix, 'share', sys.argv[1], sys.argv[1], 'assets')
+    destdir = os.path.dirname(os.path.abspath(__file__)) + '/../../src/assets'
 
     categ = set()
 
