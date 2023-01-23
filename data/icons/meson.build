@@ -14,7 +14,7 @@ install_data(
 
 action_dir = join_paths('hicolor', 'scalable', 'actions')
 action_icons = [
-    join_paths(action_dir, 'settings-symbolic.svg'),
+    join_paths(action_dir, 'smile-settings-symbolic.svg'),
     join_paths(action_dir, 'smile-symbolic.svg'),
 ]
 
