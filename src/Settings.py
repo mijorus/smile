@@ -194,7 +194,8 @@ class Settings(Adw.PreferencesWindow):
 
     def on_window_close(self, widget: Gtk.Window):
         for row in self.custom_tags_rows:
-            set_custom_tags(row.hexcode, row.__entry.get_text())
+            if hasattr(row, 'hexcode'):
+                set_custom_tags(row.hexcode, row.__entry.get_text())
 
     def on_use_localized_tags_changed(self, settings, key: str):
         if settings.get_boolean(key):
