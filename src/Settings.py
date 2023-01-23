@@ -19,7 +19,7 @@ class Settings(Adw.PreferencesWindow):
         self.application_id = application_id
         self.settings = Gio.Settings.new('it.mijorus.smile')
 
-        self.page1 = Adw.PreferencesPage(title='Settings', icon_name='settings-symbolic')
+        self.page1 = Adw.PreferencesPage(title='Settings', icon_name='smile-settings-symbolic')
         general_group = Adw.PreferencesGroup(title='General')
         general_group.add(
             self.create_boolean_settings_entry('Run in the background', 'load-hidden-on-startup', 'Keep Smile running in the background for a faster launch')
@@ -100,7 +100,9 @@ class Settings(Adw.PreferencesWindow):
 
         rows = []
         if not len(custom_tags):
-            rows.append(self.empty_list_label)
+            rows.append(
+                Adw.ActionRow(title="There are no custom tags yet: create one with Alt + T")
+            )
         else:
             for hexcode, config in custom_tags.items():
                 if not 'tags' in config or not config['tags']:
