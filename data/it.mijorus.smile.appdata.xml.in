@@ -17,10 +17,18 @@
                 <p>- Updated localized tags</p>
                 <p></p>
                 <p>IMPORTANT NOTICE! The following features are changed or have been removed:</p>
-                <p>- REMOVED "open window at mouse position" (incompatible with Wayland and influenced by other system settings)</p>
-                <p>- CHANGED switching categories can now be achieved by pressing [ALT + ←] and [ALT +  →]</p>
+                <p>- REMOVED "open window at mouse position" (incompatible with Wayland and
+                    influenced
+                    by other system settings)</p>
+                <p>- CHANGED switching categories can now be achieved by pressing [ALT + ←] and [ALT
+                    +
+                    →]</p>
                 <p>- CHANGED "Load in the backgroud" has been renamed to "Run in the backgroud"</p>
-                <p>- IMPROVEMENT To ensure compatibility with any desktop environment, when "Run in the backgroud" is set to OFF Smile will quit when selecting an emoji</p>
+                <p>- IMPROVEMENT To ensure compatibility with any desktop environment, when "Run in
+                    the
+                    backgroud" is set to OFF Smile will quit when selecting an emoji</p>
+            </description>
+        </release>
         <release type="stable" version="1.7.3" date="2023-01-09T00:00:00Z">
             <description>
                 <p>- Fix toggle "open window at mouse position" on X11</p>
@@ -36,7 +44,7 @@
                 <p>- Updated libs</p>
             </description>
         </release>
-      	<release type="stable" version="1.7.0" date="2022-08-01T00:00:00Z">
+        <release type="stable" version="1.7.0" date="2022-08-01T00:00:00Z">
             <description>
                 <p>- Added tags in multiple languages</p>
                 <p>- Use both translated tags and English ones at the same time</p>
@@ -44,7 +52,7 @@
                 <p>- Always show the selected category on startup</p>
             </description>
         </release>
-      	<release type="stable" version="1.6.2" date="2022-07-25T00:00:00Z">
+        <release type="stable" version="1.6.2" date="2022-07-25T00:00:00Z">
             <description>
                 <p>- Reduced app size</p>
             </description>
@@ -62,7 +70,8 @@
         </release>
         <release type="stable" version="1.5.7" date="2022-05-16T09:00:00Z">
             <description>
-                <p>- Find the corresponding emoji if searching an emoji (could be useful whem you are adding tags)</p>
+                <p>- Find the corresponding emoji if searching an emoji (could be useful whem you
+                    are adding tags)</p>
                 <p>- Let the window be resizable</p>
             </description>
         </release>
@@ -78,7 +87,8 @@
         </release>
         <release type="stable" version="1.5.3" date="2022-04-22T00:00:00Z">
             <description>
-                <p>- Fixed a bug that caused the wrong tags to be deleted when manually removing them from the preferences</p>
+                <p>- Fixed a bug that caused the wrong tags to be deleted when manually removing
+                    them from the preferences</p>
             </description>
         </release>
         <release type="stable" version="1.5.2" date="2022-04-04T00:00:00Z">
@@ -89,7 +99,8 @@
         </release>
         <release type="stable" version="1.5.1" date="2022-04-04T00:00:00Z">
             <description>
-                <p>- Removed the option to minimize the app (for now) as it was buggy and uncompatible with Wayland</p>
+                <p>- Removed the option to minimize the app (for now) as it was buggy and
+                    uncompatible with Wayland</p>
             </description>
         </release>
         <release type="stable" version="1.5.0" date="2022-04-01T00:00:00Z">
@@ -137,15 +148,18 @@
     <screenshots>
         <screenshot type="default">
             <caption>Application showcase</caption>
-            <image type="source">https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot7.png</image>
+            <image type="source">
+                https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot7.png</image>
         </screenshot>
         <screenshot>
             <caption>Application showcase</caption>
-            <image type="source">https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot8.png</image>
+            <image type="source">
+                https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot8.png</image>
         </screenshot>
         <screenshot>
             <caption>Application showcase</caption>
-            <image type="source">https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot9.png</image>
+            <image type="source">
+                https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot9.png</image>
         </screenshot>
     </screenshots>
     <content_rating type="oars-1.0" />
