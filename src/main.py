@@ -56,7 +56,6 @@ class Smile(Adw.Application):
             # Windows are associated with the application
             # when the last one is closed the application shuts down
             self.window = Picker(application=self)
-            # self.window.connect("destroy", Gtk.main_quit)
 
             self.create_action("preferences", lambda w, e: Settings(self.application_id))
             self.create_action("open_shortcuts", lambda w, e: ShortcutsWindow().open())
