@@ -44,6 +44,7 @@ Smile is a simple emoji picker for linux with **custom tags support**.
 
 ###  2.1. <a name='Localizedtagsenglishfallback'></a>Localized tags + english fallback!
 
+#### English fallback!
 Go to `Preferences > Localized tags > Merge localized tags`!
 
 ###  2.2. <a name='Customtags'></a>Custom tags

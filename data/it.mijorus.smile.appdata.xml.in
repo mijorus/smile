@@ -21,6 +21,14 @@
                 <p>- CHANGED switching categories can now be achieved by pressing [ALT + ←] and [ALT +  →]</p>
                 <p>- CHANGED "Load in the backgroud" has been renamed to "Run in the backgroud"</p>
                 <p>- IMPROVEMENT To ensure compatibility with any desktop environment, when "Run in the backgroud" is set to OFF Smile will quit when selecting an emoji</p>
+        <release type="stable" version="1.7.3" date="2023-01-09T00:00:00Z">
+            <description>
+                <p>- Fix toggle "open window at mouse position" on X11</p>
+            </description>
+        </release>
+        <release type="stable" version="1.7.2" date="2022-11-02T00:00:00Z">
+            <description>
+                <p>- Added some emojis</p>
             </description>
         </release>
         <release type="stable" version="1.7.1" date="2022-10-20T00:00:00Z">
@@ -129,7 +137,15 @@
     <screenshots>
         <screenshot type="default">
             <caption>Application showcase</caption>
-            <image type="source">https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot6.jpg</image>
+            <image type="source">https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot7.png</image>
+        </screenshot>
+        <screenshot>
+            <caption>Application showcase</caption>
+            <image type="source">https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot8.png</image>
+        </screenshot>
+        <screenshot>
+            <caption>Application showcase</caption>
+            <image type="source">https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot9.png</image>
         </screenshot>
     </screenshots>
     <content_rating type="oars-1.0" />
