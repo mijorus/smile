@@ -149,7 +149,7 @@ class Picker(Gtk.ApplicationWindow):
 
     def create_category_picker(self) -> Gtk.ScrolledWindow:
         from .assets.emoji_list import emoji_categories
-        
+
         scrolled = Gtk.ScrolledWindow(name='emoji_categories_box')
         box = Gtk.Box(spacing=4, halign=Gtk.Align.CENTER, hexpand=True)
 
@@ -182,7 +182,7 @@ class Picker(Gtk.ApplicationWindow):
         )
 
         start = time_ns()
-        
+
         from .assets.emoji_list import emojis
 
         for i, e in emojis.items():
@@ -215,7 +215,7 @@ class Picker(Gtk.ApplicationWindow):
         widget.get_parent().grab_focus()
 
         if (self.shift_key_pressed):
-            self.select_button_emoji(widget)
+            self.select_emoji_button(widget)
         else:
             self.copy_and_quit(widget)
 
@@ -282,21 +282,12 @@ class Picker(Gtk.ApplicationWindow):
         if shift_key:
             if (keyval == Gdk.KEY_Return):
                 if focused_button:
-                    self.select_button_emoji(focused_button)
+                    self.select_emoji_button(focused_button)
                     return True
 
             if (keyval == Gdk.KEY_BackSpace):
                 if focused_button:
-                    if len(self.selection) > 0:
-                        last_button = self.selected_buttons[-1]
-
-                        self.selection.pop()
-                        self.selected_buttons.pop()
-
-                        if not last_button.get_label() in self.selection:
-                            last_button.get_parent().deselect()
-
-                        self.update_selection_content(self.selection)
+                    self.deselect_emoji_button()
 
                     return True
 
@@ -309,7 +300,7 @@ class Picker(Gtk.ApplicationWindow):
                 if self.selection:
                     self.copy_and_quit()
                     return True
-            
+
             elif keyval == Gdk.KEY_BackSpace:
                 self.query = None
                 self.search_entry.set_text('')
@@ -368,22 +359,13 @@ class Picker(Gtk.ApplicationWindow):
         if shift_key:
             self.shift_key_pressed = True
             if (keyval == Gdk.KEY_Return):
-                self.select_button_emoji(focused_widget.emoji_button)
+                self.select_emoji_button(focused_widget.emoji_button)
                 return True
 
             elif (keyval == Gdk.KEY_BackSpace):
-                if len(self.selection) > 0:
-                    last_button = self.selected_buttons[-1]
+                self.deselect_emoji_button()
 
-                    self.selection.pop()
-                    self.selected_buttons.pop()
-
-                    if not last_button.get_label() in self.selection:
-                        last_button.get_style_context().remove_class('selected')
-
-                    self.update_selection_content(self.selection)
-
-                    return True
+                return True
         else:
             if (keyval == Gdk.KEY_Return):
                 self.skintone_selector.request_close()
@@ -453,7 +435,7 @@ class Picker(Gtk.ApplicationWindow):
             else:
                 b.get_style_context().add_class('selected')
 
-    def select_button_emoji(self, button: EmojiButton):
+    def select_emoji_button(self, button: EmojiButton):
         self.selected_buttons.append(button)
         self.selection.append(button.get_label())
         self.emoji_list.select_child(button.get_parent())
@@ -461,8 +443,35 @@ class Picker(Gtk.ApplicationWindow):
         increment_emoji_usage_counter(button)
 
         button.get_parent().set_as_selected()
-        if self.emoji_list.get_selected_children() and (button.get_parent() is not self.emoji_list.get_selected_children()[0]):
-            self.emoji_list.get_selected_children()[0].set_as_selected()
+        button.get_parent().set_as_active()
+
+        if button.base_skintone_widget:
+            button.base_skintone_widget.set_as_selected()
+
+        self.update_selection_content(self.selection)
+
+    def deselect_emoji_button(self):
+        if not self.selection:
+            return
+
+        last_button = self.selected_buttons[-1]
+
+        self.selection.pop()
+        self.selected_buttons.pop()
+
+        if not last_button.get_label() in self.selection:
+            last_button.get_parent().deselect()
+
+        if last_button.base_skintone_widget:
+            base_skintone_widget_is_selected = False
+
+            for sb in self.selected_buttons:
+                if sb.base_skintone_widget is last_button.base_skintone_widget:
+                    base_skintone_widget_is_selected = True
+                    break
+
+            if not base_skintone_widget_is_selected:
+                last_button.base_skintone_widget.deselect()
 
         self.update_selection_content(self.selection)
 

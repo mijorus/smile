@@ -52,6 +52,7 @@ class SkintoneSelector(CustomPopover):
         relative_widget_hexcode = flowbox_child.emoji_button.emoji_data['hexcode']
         for skintone in emojis[relative_widget_hexcode]['skintones']:
             button = EmojiButton(skintone, width_request=55)
+            button.base_skintone_widget = flowbox_child
             button.connect('clicked', self.handle_activate)
 
             child = FlowBoxChild(emoji_button=button)
@@ -76,7 +77,6 @@ class SkintoneSelector(CustomPopover):
         )
 
         self.handle_close = self.on_close
-        self.flowbox_child.set_as_active()
 
         self.set_content(popover_content)
         self.show()

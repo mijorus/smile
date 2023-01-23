@@ -13,6 +13,8 @@ class EmojiButton(Gtk.Button):
         self.hexcode = data['hexcode']
         self.history = None
         
+        self.base_skintone_widget = None
+        
         self.emoji_button_css = ['emoji-button']
 
         if ('skintones' in data) and data['skintones']:
