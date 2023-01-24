@@ -15,7 +15,6 @@
                 <p>- GTK4 + Adwaita rewrite!</p>
                 <p>- Reduced app size</p>
                 <p>- Updated localized tags</p>
-                <p></p>
                 <p>IMPORTANT NOTICE! The following features are changed or have been removed:</p>
                 <p>- REMOVED "open window at mouse position" (incompatible with Wayland and
                     influenced
@@ -159,7 +158,7 @@
         <screenshot>
             <caption>Application showcase</caption>
             <image type="source">
-                https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot9.png</image>
+                https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot2.png</image>
         </screenshot>
     </screenshots>
     <content_rating type="oars-1.0" />
