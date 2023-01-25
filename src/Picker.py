@@ -16,10 +16,10 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import gi
-from time import time, time_ns
+import threading
+from time import time, time_ns, sleep
 import re
 
-# from .assets.emoji_list import emoji_categories, emojis
 from .ShortcutsWindow import ShortcutsWindow
 from .components.CustomTagEntry import CustomTagEntry
 from .components.SkintoneSelector import SkintoneSelector
@@ -33,7 +33,7 @@ from .utils import tag_list_contains
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Gdk, Adw  # noqa
+from gi.repository import Gtk, Gio, Gdk, Adw, GLib  # noqa
 
 
 class Picker(Gtk.ApplicationWindow):
@@ -168,7 +168,6 @@ class Picker(Gtk.ApplicationWindow):
         scrolled.set_child(box)
         self.categories_count = i
         return scrolled
-
 
     def create_emoji_list(self) -> Gtk.FlowBox:
         flowbox = Gtk.FlowBox(
@@ -392,7 +391,13 @@ class Picker(Gtk.ApplicationWindow):
         if self.settings.get_boolean('iconify-on-esc'):
             self.minimize()
         elif not self.settings.get_boolean('load-hidden-on-startup'):
-            self.close()
+            # async to avoid blocking the main thread
+            def close_patch():
+                GLib.idle_add(lambda: self.hide())
+                sleep(0.5)
+                return GLib.idle_add(lambda: self.close())
+
+            threading.Thread(target=close_patch).start()
         else:
             self.set_visible(False)
 
