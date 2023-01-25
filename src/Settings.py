@@ -99,49 +99,49 @@ class Settings(Adw.PreferencesWindow):
         custom_tags = get_all_custom_tags()
 
         rows = []
-        if not len(custom_tags):
+        for hexcode, config in custom_tags.items():
+            if not 'tags' in config or not config['tags']:
+                continue
+
+            listbox_row = Gtk.ListBoxRow(selectable=False)
+
+            box = Gtk.Box(
+                spacing=10,
+                halign=Gtk.Align.CENTER,
+                orientation=Gtk.Orientation.HORIZONTAL,
+                margin_top=10,
+                margin_bottom=10,
+                margin_start=5,
+                margin_end=5,
+            )
+
+            for e, data in emojis.items():
+                if (e == hexcode):
+                    label = Gtk.Label(label=data['emoji'], halign=Gtk.Align.START, css_classes=['title-2'])
+                    box.append(label)
+
+                    entry = Gtk.Entry(text=config['tags'], width_chars=35)
+                    entry.hexcode = hexcode
+                    box.append(entry)
+
+                    delete_button = Gtk.Button(label="Remove", css_classes=['destructive-action'])
+                    delete_button.hexcode = e
+                    delete_button.connect('clicked', lambda w: self.delete_tag(w.hexcode))
+
+                    box.append(delete_button)
+
+                    listbox_row.__entry = entry
+                    listbox_row.hexcode = hexcode
+
+                    listbox_row.set_child(box)
+                    rows.append(listbox_row)
+
+                    break
+
+        if not rows:
             rows.append(
                 Adw.ActionRow(title="There are no custom tags yet: create one with Alt + T")
             )
-        else:
-            for hexcode, config in custom_tags.items():
-                if not 'tags' in config or not config['tags']:
-                    continue
-
-                listbox_row = Gtk.ListBoxRow(selectable=False)
-
-                box = Gtk.Box(
-                    spacing=10,
-                    halign=Gtk.Align.CENTER,
-                    orientation=Gtk.Orientation.HORIZONTAL,
-                    margin_top=10,
-                    margin_bottom=10,
-                    margin_start=5,
-                    margin_end=5,
-                )
-
-                for e, data in emojis.items():
-                    if (e == hexcode):
-                        label = Gtk.Label(label=data['emoji'], halign=Gtk.Align.START, css_classes=['title-2'])
-                        box.append(label)
-
-                        entry = Gtk.Entry(text=config['tags'], width_chars=35)
-                        entry.hexcode = hexcode
-                        box.append(entry)
-
-                        delete_button = Gtk.Button(label="Remove", css_classes=['destructive-action'])
-                        delete_button.hexcode = e
-                        delete_button.connect('clicked', lambda w: self.delete_tag(w.hexcode))
-
-                        box.append(delete_button)
-
-                        listbox_row.__entry = entry
-                        listbox_row.hexcode = hexcode
-
-                        listbox_row.set_child(box)
-                        rows.append(listbox_row)
-
-                        break
 
         return rows
 
