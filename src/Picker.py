@@ -95,6 +95,7 @@ class Picker(Gtk.ApplicationWindow):
         # Create search entry
         self.search_entry = Gtk.SearchEntry(hexpand=True, width_request=200)
         self.search_entry.connect('search_changed', self.search_emoji)
+        self.search_entry.connect('activate', self.handle_search_entry_activate)
 
         search_controller_key = Gtk.EventControllerKey()
         search_controller_key.connect(
@@ -374,6 +375,12 @@ class Picker(Gtk.ApplicationWindow):
 
         return False
 
+    def handle_search_entry_activate(self, entry: Gtk.Entry):
+        if self.query:
+            self.load_first_row()
+            if self.emoji_grid_first_row:
+                self.copy_and_quit(self.emoji_grid_first_row[0].emoji_button)
+
     def default_hiding_action(self):
         self.search_entry.set_text('')
         self.query = None
@@ -581,7 +588,8 @@ class Picker(Gtk.ApplicationWindow):
 
         else:
             filter_result = e['group'] == self.selected_category
-
+            
+        widget.set_visible(filter_result)
         return filter_result
 
     def sort_emoji_list(self, child1: Gtk.FlowBoxChild, child2: Gtk.FlowBoxChild, user_data):
