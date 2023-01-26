@@ -48,12 +48,12 @@ Smile is a simple emoji picker for linux with **custom tags support**.
 Go to `Preferences > Localized tags > Merge localized tags`!
 
 ###  2.2. <a name='Customtags'></a>Custom tags
-No matter how many tags we put in, there is always going to be that one emoji which you expect to show up when you enter a specific query, but it doesn't.
+No matter how many tags we put in, there is always going to be that one emoji which you expect to show up when you search, but it doesn't.
 
 An example?  
 Do you want 🌐 to show up when you search for "internet", but it is only tagged as "globe"? 
 
-Select the icon using the arrow keys and press `Alt + T` or middle click to insert "internet" as custom tag.
+Select the icon using the arrow keys and press `Alt + T` or `Middle Click` to open the custom tag manager.
 
 <p align="center">
   <img width="500" src="docs/screenshot4.png">
