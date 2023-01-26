@@ -111,7 +111,14 @@
                             <object class="GtkShortcutsShortcut">
                                 <property name="visible">True</property>
                                 <property name="accelerator">Return</property>
-                                <property name="title" translatable="yes">Copy the selected emoji and hide the window</property>
+                                <property name="title" translatable="yes">Copy the selected emoji and hide the window (When an emoji is highlighted)</property>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkShortcutsShortcut">
+                                <property name="visible">True</property>
+                                <property name="accelerator">Return</property>
+                                <property name="title" translatable="yes">Copy first emoji and hide the window (When using the search bar)</property>
                             </object>
                         </child>
                         <child>
