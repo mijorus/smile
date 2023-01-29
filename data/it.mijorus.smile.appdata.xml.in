@@ -12,7 +12,7 @@
     <releases>
         <release type="stable" version="2.0.5" date="2023-01-26T00:00:00Z">
             <description>
-                <p>- Press ENTER when using the search bar quickly copy the first result</p>
+                <p>- Press ENTER when using the search bar to quickly copy the first result</p>
             </description>
         </release>
         <release type="stable" version="2.0.0" date="2023-01-20T00:00:00Z">
@@ -20,7 +20,7 @@
                 <p>- GTK4 + Adwaita rewrite!</p>
                 <p>- Reduced app size</p>
                 <p>- Updated localized tags</p>
-                <p>IMPORTANT NOTICE! The following features are changed or have been removed:</p>
+                <p>- IMPORTANT NOTICE! The following features are changed or have been removed:</p>
                 <p>- REMOVED "open window at mouse position" (incompatible with Wayland and
                     influenced
                     by other system settings)</p>
