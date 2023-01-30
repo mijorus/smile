@@ -1,0 +1,8 @@
+data/it.mijorus.whisper.desktop.in
+data/it.mijorus.whisper.appdata.xml.in
+data/it.mijorus.whisper.gschema.xml
+src/main.py
+src/Picker.py
+src/Settings.py
+src/ui/menu.ui
+src/ui/shortcuts.ui

@@ -137,7 +137,7 @@ class Picker(Gtk.ApplicationWindow):
     # Create stuff
     def create_menu_button(self):
         builder = Gtk.Builder()
-        builder.add_from_resource('/it/mijorus/smile/ui/menu.xml')
+        builder.add_from_resource('/it/mijorus/smile/ui/menu.ui')
         menu = builder.get_object('primary_menu')
 
         return Gtk.MenuButton(menu_model=menu, icon_name='open-menu-symbolic')

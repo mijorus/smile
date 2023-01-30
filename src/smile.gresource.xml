@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
     <gresource prefix="/it/mijorus/smile">
-        <file>ui/shortcuts.xml</file>
-        <file>ui/menu.xml</file>
+        <file>ui/shortcuts.ui</file>
+        <file>ui/menu.ui</file>
         <file>assets/style.css</file>
         <file>assets/smile.autostart.desktop</file>
     </gresource>
