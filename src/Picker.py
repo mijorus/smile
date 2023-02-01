@@ -120,8 +120,11 @@ class Picker(Gtk.ApplicationWindow):
 
         self.overlay = Adw.ToastOverlay()
         self.overlay.set_child(self.viewport_box)
-        self.set_child(self.overlay)
+
+        self.update_emoji_skintones(self.settings, 'skintone-modifier')
         self.set_active_category('smileys-emotion')
+
+        self.set_child(self.overlay)
 
     def on_activation(self):
         self.present_with_time(time())
@@ -588,7 +591,7 @@ class Picker(Gtk.ApplicationWindow):
 
         else:
             filter_result = e['group'] == self.selected_category
-            
+
         widget.set_visible(filter_result)
         return filter_result
 
