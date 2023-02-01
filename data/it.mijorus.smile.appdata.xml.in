@@ -10,6 +10,11 @@
         <p>Smile is a simple emoji picker for linux with custom tags support</p>
     </description>
     <releases>
+        <release type="stable" version="2.0.7" date="2023-02-01T00:00:00Z">
+            <description>
+                <p>- Don't make the all "Localization" group opaque in the settings if Localized tags are OFF</p>
+            </description>
+        </release>
         <release type="stable" version="2.0.6" date="2023-02-01T00:00:00Z">
             <description>
                 <p>- Fixed an issue for which the default skintone would not be applied on restart</p>
