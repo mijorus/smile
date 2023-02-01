@@ -19,32 +19,32 @@ class Settings(Adw.PreferencesWindow):
         self.application_id = application_id
         self.settings = Gio.Settings.new('it.mijorus.smile')
 
-        self.page1 = Adw.PreferencesPage(title='Settings', icon_name='smile-settings-symbolic')
-        general_group = Adw.PreferencesGroup(title='General')
+        self.page1 = Adw.PreferencesPage(title=_('Settings'), icon_name='smile-settings-symbolic')
+        general_group = Adw.PreferencesGroup(title=_('General'))
         general_group.add(
-            self.create_boolean_settings_entry('Run in the background', 'load-hidden-on-startup', 'Keep Smile running in the background for a faster launch')
+            self.create_boolean_settings_entry(_('Run in the background'), 'load-hidden-on-startup', _('Keep Smile running in the background for a faster launch'))
         )
 
         general_group.add(
-            self.create_boolean_settings_entry('Minimize on exit', 'iconify-on-esc',  'Minimize the window when selecting an emoji')
+            self.create_boolean_settings_entry(_('Minimize on exit'), 'iconify-on-esc',  _('Minimize the window when selecting an emoji'))
         )
 
         general_group.add(self.create_launch_shortcut_settings_entry())
 
-        customization_group = Adw.PreferencesGroup(title='Customization')
+        customization_group = Adw.PreferencesGroup(title=('Customization'))
         customization_group.add(self.create_modifiers_combo_boxes())
 
-        self.localized_tags_group = Adw.PreferencesGroup(title='Localized tags')
+        self.localized_tags_group = Adw.PreferencesGroup(title=_('Localized tags'))
         self.localized_tags_group.add(
             self.create_boolean_settings_entry('Use localized tags', 'use-localized-tags', '',)
         )
 
         self.localized_tags_group.add(
             self.create_boolean_settings_entry(
-                'Merge localized and English tags',
+                _('Merge localized and English tags'),
                 'merge-english-tags',
-                'Use both localized tags and English ones at the same time'
-            )
+                _('Use both localized tags and English ones at the same time'),
+            ),
         )
 
         self.localized_tags_group.add(self.create_tags_locale_combo_boxes())
@@ -53,7 +53,7 @@ class Settings(Adw.PreferencesWindow):
         self.page1.add(customization_group)
         self.page1.add(self.localized_tags_group)
 
-        self.page2 = Adw.PreferencesPage(title='Custom tags', icon_name='smile-symbolic')
+        self.page2 = Adw.PreferencesPage(title=_('Custom tags'), icon_name='smile-symbolic')
         self.custom_tags_list_box = Gtk.ListBox(css_classes=['boxed-list'])
 
         self.custom_tags_rows = self.create_custom_tags_list()
@@ -87,8 +87,8 @@ class Settings(Adw.PreferencesWindow):
 
     def create_launch_shortcut_settings_entry(self) -> Adw.ActionRow:
         row = Adw.ActionRow(
-            title='Launch the app with a shortcut',
-            subtitle='Create a new keyboard shortcut in your system settings and paste the following code as a custom command'
+            title=_('Launch the app with a shortcut'),
+            subtitle=_('Create a new keyboard shortcut in your system settings and paste the following code as a custom command')
         )
 
         row.add_suffix(Gtk.Label(label=f'flatpak run {self.application_id}', selectable=True))
@@ -124,7 +124,7 @@ class Settings(Adw.PreferencesWindow):
                     entry.hexcode = hexcode
                     box.append(entry)
 
-                    delete_button = Gtk.Button(label="Remove", css_classes=['destructive-action'])
+                    delete_button = Gtk.Button(label=_("Remove"), css_classes=['destructive-action'])
                     delete_button.hexcode = e
                     delete_button.connect('clicked', lambda w: self.delete_tag(w.hexcode))
 
@@ -140,7 +140,7 @@ class Settings(Adw.PreferencesWindow):
 
         if not rows:
             rows.append(
-                Adw.ActionRow(title="There are no custom tags yet: create one with Alt + T")
+                Adw.ActionRow(title=_("There are no custom tags yet: create one with Alt + T"))
             )
 
         return rows
@@ -155,7 +155,7 @@ class Settings(Adw.PreferencesWindow):
                 self.custom_tags_list_box.append(row)
 
     def create_modifiers_combo_boxes(self) -> Adw.ActionRow:
-        row = Adw.ActionRow(title='Default skintone')
+        row = Adw.ActionRow(title=_('Default skintone'))
         skintones = [["", "👋"], ["1F3FB", "👋🏻"], ["1F3FC", "👋🏼"], ["1F3FD", "👋🏽"], ["1F3FE", "👋🏾"], ["1F3FF", "👋🏿"]]
         skintones_combo = Gtk.ComboBoxText(valign=Gtk.Align.CENTER)
 
@@ -170,7 +170,7 @@ class Settings(Adw.PreferencesWindow):
         return row
 
     def create_tags_locale_combo_boxes(self) -> Adw.ActionRow:
-        row = Adw.ActionRow(title='Localized tags')
+        row = Adw.ActionRow(title=_('Localized tags'))
         locales_combo = Gtk.ComboBoxText(valign=Gtk.Align.CENTER)
 
         i = 0
