@@ -6,10 +6,21 @@
     <url type="homepage">https://github.com/mijorus/smile</url>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0-or-later</project_license>
+    <developer_name>Lorenzo Paderi</developer_name>
     <description>
         <p>Smile is a simple emoji picker for linux with custom tags support</p>
     </description>
     <releases>
+        <release type="stable" version="2.0.7" date="2023-02-01T00:00:00Z">
+            <description>
+                <p>- Don't make the all "Localization" group opaque in the settings if Localized tags are OFF</p>
+            </description>
+        </release>
+        <release type="stable" version="2.0.6" date="2023-02-01T00:00:00Z">
+            <description>
+                <p>- Fixed an issue for which the default skintone would not be applied on restart</p>
+            </description>
+        </release>
         <release type="stable" version="2.0.5" date="2023-01-26T00:00:00Z">
             <description>
                 <p>- Press ENTER when using the search bar to quickly copy the first result</p>

@@ -38,16 +38,29 @@ class Settings(Adw.PreferencesWindow):
         self.localized_tags_group.add(
             self.create_boolean_settings_entry('Use localized tags', 'use-localized-tags', '',)
         )
-
-        self.localized_tags_group.add(
+        
+        self.localized_tags_group_items = [
             self.create_boolean_settings_entry(
                 _('Merge localized and English tags'),
                 'merge-english-tags',
-                _('Use both localized tags and English ones at the same time'),
+                'Use both localized tags and English ones at the same time'
             ),
-        )
+            self.create_tags_locale_combo_boxes()
+        ]
+        
+        for item in self.localized_tags_group_items:
+            self.localized_tags_group.add(item)
 
-        self.localized_tags_group.add(self.create_tags_locale_combo_boxes())
+
+        # self.localized_tags_group.add(
+        #     self.create_boolean_settings_entry(
+        #         'Merge localized and English tags',
+        #         'merge-english-tags',
+        #         'Use both localized tags and English ones at the same time'
+        #     )
+        # )
+
+        # self.localized_tags_group.add(self.create_tags_locale_combo_boxes())
 
         self.page1.add(general_group)
         self.page1.add(customization_group)
@@ -67,8 +80,7 @@ class Settings(Adw.PreferencesWindow):
         self.add(self.page1)
         self.add(self.page2)
 
-        if not self.settings.get_boolean('use-localized-tags'):
-            self.localized_tags_group.set_opacity(0.7)
+        self.on_use_localized_tags_changed(self.settings, 'use-localized-tags')
 
         self.custom_tags_entries: list[Gtk.Entry] = []
         self.settings.connect('changed', self.on_settings_changes)
@@ -199,9 +211,11 @@ class Settings(Adw.PreferencesWindow):
 
     def on_use_localized_tags_changed(self, settings, key: str):
         if settings.get_boolean(key):
-            self.localized_tags_group.set_opacity(1)
+            for item in self.localized_tags_group_items:
+                item.set_opacity(1)
         else:
-            self.localized_tags_group.set_opacity(0.7)
+            for item in self.localized_tags_group_items:
+                item.set_opacity(0.5)
 
     def on_load_hidden_on_startup_changed(self, settings, key: str):
         value: bool = settings.get_boolean(key)
