@@ -38,7 +38,7 @@ class Settings(Adw.PreferencesWindow):
         self.localized_tags_group.add(
             self.create_boolean_settings_entry('Use localized tags', 'use-localized-tags', '',)
         )
-        
+
         self.localized_tags_group_items = [
             self.create_boolean_settings_entry(
                 _('Merge localized and English tags'),
@@ -47,10 +47,9 @@ class Settings(Adw.PreferencesWindow):
             ),
             self.create_tags_locale_combo_boxes()
         ]
-        
+
         for item in self.localized_tags_group_items:
             self.localized_tags_group.add(item)
-
 
         # self.localized_tags_group.add(
         #     self.create_boolean_settings_entry(
