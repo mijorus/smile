@@ -16,6 +16,7 @@ gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Gdk, Adw  # noqa
 
+
 class Smile(Adw.Application):
     def __init__(self, **kwargs) -> None:
         self.application_id = "it.mijorus.smile"
@@ -30,6 +31,8 @@ class Smile(Adw.Application):
 
         self.datadir = kwargs['datadir']
         self.version = kwargs['version']
+        self.last_about_key_pressed = None
+        self.about = None
         self.start_hidden = False
         self.window = None
 
@@ -70,7 +73,7 @@ class Smile(Adw.Application):
                 try:
                     last_run_version = self.settings.get_string('last-run-version') or '0.0.0'
                     last_run_version_split = last_run_version.split('.')
-                    
+
                     if last_run_version_split[0] != self.version.split('.')[0] or last_run_version_split[1] != self.version.split('.')[1]:
                         dialog = Gtk.MessageDialog(
                             transient_for=self.window,
@@ -101,7 +104,7 @@ class Smile(Adw.Application):
         self.add_action(action)
 
     def on_about_action(self, widget, event):
-        about = Adw.AboutWindow(
+        self.about = Adw.AboutWindow(
             version=self.version,
             comments='An emoji picker',
             application_name='Smile',
@@ -109,13 +112,25 @@ class Smile(Adw.Application):
             developer_name='Lorenzo Paderi',
             website='https://smile.mijorus.it',
             issue_url='https://github.com/mijorus/smile',
+            debug_info='Type the answer to life, the universe, and everything',
             copyright='(C) 2022 Lorenzo Paderi\n\nLocalized tags by milesj/emojibase, licensed under the MIT License',
         )
 
-        about.add_credit_section('Icon by', ['Roman Morozov'])
+        event_controller_keys = Gtk.EventControllerKey()
+        event_controller_keys.connect('key-pressed', self.on_about_key_pressed)
+        self.about.add_controller(event_controller_keys)
 
-        about.set_transient_for(self.props.active_window)
-        about.present()
+        self.about.add_credit_section('Icon by', ['Roman Morozov'])
+
+        self.about.set_transient_for(self.props.active_window)
+        self.about.present()
+
+    def on_about_key_pressed(self, controller, keyval, keycode, state):
+        if (self.last_about_key_pressed == '4') and (Gdk.keyval_name(keyval) == '2'):
+            self.about.set_application_icon('it.mijorus.smile.crazy')
+
+        self.last_about_key_pressed = Gdk.keyval_name(keyval)
+
 
 def main(version: str, datadir: str) -> None:
     app = Smile(version=version, datadir=datadir)
