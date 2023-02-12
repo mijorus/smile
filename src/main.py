@@ -111,10 +111,11 @@ class Smile(Adw.Application):
             issue_url='https://github.com/mijorus/smile',
             copyright='(C) 2022 Lorenzo Paderi\n\nLocalized tags by milesj/emojibase, licensed under the MIT License',
         )
-        
+
+        about.add_credit_section('Icon by', ['Roman Morozov'])
+
         about.set_transient_for(self.props.active_window)
         about.present()
-
 
 def main(version: str, datadir: str) -> None:
     app = Smile(version=version, datadir=datadir)
