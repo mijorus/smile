@@ -401,13 +401,8 @@ class Picker(Gtk.ApplicationWindow):
         if self.settings.get_boolean('iconify-on-esc'):
             self.minimize()
         elif not self.settings.get_boolean('load-hidden-on-startup'):
-            # async to avoid blocking the main thread
-            def close_patch():
-                GLib.idle_add(lambda: self.hide())
-                sleep(0.5)
-                return GLib.idle_add(lambda: self.close())
-
-            threading.Thread(target=close_patch).start()
+            self.set_visible(False)
+            self.close()
         else:
             self.set_visible(False)
 
@@ -536,7 +531,7 @@ class Picker(Gtk.ApplicationWindow):
             Gio.Application.get_default().send_notification('copy-message', n)
             self.settings.set_boolean('is-first-run', False)
 
-        self.default_hiding_action()
+        GLib.idle_add(self.default_hiding_action)
 
     def search_emoji(self, search_entry: str):
         self.search_entry.grab_focus()
