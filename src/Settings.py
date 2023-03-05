@@ -21,6 +21,11 @@ class Settings(Adw.PreferencesWindow):
 
         self.page1 = Adw.PreferencesPage(title=_('Settings'), icon_name='smile-settings-symbolic')
         general_group = Adw.PreferencesGroup(title=_('General'))
+        if self.settings.get_string('tags-locale') == 'en':
+            self.settings.set_string('tags-locale', 'da')
+
+        self.page1 = Adw.PreferencesPage(title='Settings', icon_name='smile-settings-symbolic')
+        general_group = Adw.PreferencesGroup(title='General')
         general_group.add(
             self.create_boolean_settings_entry(_('Run in the background'), 'load-hidden-on-startup', _('Keep Smile running in the background for a faster launch'))
         )
@@ -84,6 +89,8 @@ class Settings(Adw.PreferencesWindow):
         self.custom_tags_entries: list[Gtk.Entry] = []
         self.settings.connect('changed', self.on_settings_changes)
         self.connect('close-request', self.on_window_close)
+        
+        
 
         self.present()
 

@@ -1,6 +1,6 @@
 # Smile
 <p align="center">
-  <img width="150" src="docs/it.mijorus.smile.png">
+  <img width="150" src="docs/it.mijorus.smile.svg">
 </p>
 
 

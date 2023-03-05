@@ -9,7 +9,7 @@
    height="128"
    id="svg11300"
    sodipodi:version="0.32"
-   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="it.mijorus.smile.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0"
@@ -312,8 +312,7 @@
        y1="243.99937"
        x2="115.50479"
        y2="243.99937"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.085806,0,0,1.085806,-5.491618,-24.593103)" />
+       gradientUnits="userSpaceOnUse" />
     <radialGradient
        inkscape:collect="always"
        xlink:href="#linearGradient4083"
@@ -323,8 +322,7 @@
        fx="64.000031"
        fy="236"
        r="51.504761"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.085806,0,0,1.085806,-5.491618,-24.593103)" />
+       gradientUnits="userSpaceOnUse" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient27415"
@@ -537,15 +535,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8284271"
-     inkscape:cx="110.66221"
-     inkscape:cy="71.771339"
+     inkscape:cx="110.13188"
+     inkscape:cy="71.771338"
      inkscape:current-layer="svg11300"
      showgrid="false"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:showpageshadow="false"
-     inkscape:window-width="1440"
-     inkscape:window-height="900"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
      inkscape:window-x="0"
      inkscape:window-y="0"
      width="400px"
@@ -555,7 +553,7 @@
      objecttolerance="7"
      gridtolerance="12"
      guidetolerance="13"
-     inkscape:window-maximized="0"
+     inkscape:window-maximized="1"
      inkscape:pagecheckerboard="false"
      showguides="false"
      inkscape:guide-bbox="true"
@@ -790,22 +788,22 @@
      style="display:inline"
      transform="translate(0,-172)">
     <circle
-       style="opacity:1;fill:url(#linearGradient5955);fill-opacity:1;stroke-width:4.34322"
+       style="opacity:1;fill:url(#linearGradient5955);fill-opacity:1;stroke-width:4"
        id="circle3019"
-       cx="64"
-       cy="240.3429"
-       inkscape:label="FaceShadow"
-       r="55.924179" />
+       cx="64.000031"
+       cy="243.99937"
+       r="51.504761"
+       inkscape:label="FaceShadow" />
     <circle
-       style="display:inline;opacity:1;fill:url(#radialGradient7449);fill-opacity:1;stroke-width:4.34322;enable-background:new"
+       style="display:inline;opacity:1;fill:url(#radialGradient7449);fill-opacity:1;stroke-width:4;enable-background:new"
        id="path1928"
-       cx="64"
-       cy="231.6571"
-       inkscape:label="Face"
-       r="55.924179" />
+       cx="64.000031"
+       cy="236"
+       r="51.504761"
+       inkscape:label="Face" />
     <g
        id="g71928"
-       transform="matrix(-1.085806,0,0,1.0043125,126.20052,-15.855862)"
+       transform="matrix(-1,0,0,0.92494652,121.28515,8.04678)"
        inkscape:label="EyeRGroup"
        style="display:inline;enable-background:new">
       <circle
@@ -834,7 +832,7 @@
     </g>
     <g
        id="g28884"
-       transform="matrix(1.085806,0,0,1.0043125,1.7994038,-15.855866)"
+       transform="matrix(1,0,0,0.92494652,6.7148476,8.046776)"
        inkscape:label="EyeLGroup">
       <circle
          style="display:inline;opacity:1;fill:url(#linearGradient27417);fill-opacity:1;stroke-width:4.55752;enable-background:new"
@@ -863,20 +861,22 @@
     <g
        id="g67510"
        inkscape:label="MouthGroup"
-       transform="matrix(1.085806,0,0,1.085806,-5.1744033,-30.760283)">
+       transform="translate(0.29214669,-5.6798166)">
       <path
-         style="color:#000000;display:inline;fill:#a51d2d;stroke-width:1.5;-inkscape-stroke:none;enable-background:new"
+         style="display:inline;enable-background:new;color:#000000;fill:#a51d2d;stroke-width:1.5;-inkscape-stroke:none"
          d="m 40.912186,251.98221 h 45.536533 c 1.656854,0 2.813382,1.33223 2.450809,2.94846 -1.526146,6.80304 -6.774755,23.16117 -22.200469,25.05053 -1.643446,0.20129 -4.341872,0.20126 -5.985425,2e-5 -15.430184,-1.88939 -20.708717,-18.24933 -22.24708,-25.05171 -0.365346,-1.61549 0.788778,-2.9473 2.445632,-2.9473 z"
          id="path3842"
-         inkscape:label="Mouth" />
+         inkscape:label="Mouth"
+         transform="translate(0)" />
       <ellipse
-         style="display:inline;opacity:1;fill:url(#radialGradient2978);fill-opacity:1;stroke:none;stroke-width:4.65246;enable-background:new"
+         style="display:inline;enable-background:new;opacity:1;fill:url(#radialGradient2978);fill-opacity:1;stroke:none;stroke-width:4.65246"
          id="ellipse83973"
          cx="64"
          cy="276.2236"
          rx="13.086914"
          ry="6.2236099"
          inkscape:label="Tongue"
+         transform="translate(0)"
          clip-path="url(#clipPath3916)" />
       <path
          id="path86422"
@@ -885,10 +885,11 @@
          inkscape:label="Teeth"
          clip-path="url(#clipPath3888)" />
       <path
-         style="color:#000000;display:inline;fill:url(#linearGradient61538-7);-inkscape-stroke:none;enable-background:new"
+         style="display:inline;enable-background:new;color:#000000;fill:url(#linearGradient61538-7);-inkscape-stroke:none"
          d="m 40.912109,251.23242 c -1.02938,0 -1.955783,0.42284 -2.554687,1.13477 -0.598904,0.71193 -0.85298,1.71179 -0.623047,2.72851 0.781356,3.45503 2.501252,9.32108 6.021484,14.61719 3.520233,5.29611 8.903132,10.03849 16.867188,11.01367 1.741838,0.21328 4.426184,0.21334 6.167969,0 7.961916,-0.97518 13.335052,-5.71763 16.845703,-11.01367 3.51065,-5.29604 5.218976,-11.16177 5.99414,-14.61719 0.228203,-1.01725 -0.02526,-2.01682 -0.625,-2.72851 -0.599743,-0.71169 -1.527196,-1.13477 -2.55664,-1.13477 z m 0,1.5 h 45.53711 c 0.627408,0 1.106112,0.24309 1.408203,0.60156 0.30209,0.35848 0.444917,0.83267 0.310547,1.43164 -0.75098,3.34762 -2.429638,9.06303 -5.78125,14.11915 -3.351612,5.05611 -8.315515,9.43739 -15.779297,10.35156 -1.545104,0.18924 -4.25747,0.1892 -5.802735,0 -7.466113,-0.91421 -12.437664,-5.29672 -15.798828,-10.35352 -3.361164,-5.05679 -5.051588,-10.77179 -5.808593,-14.11914 -0.135413,-0.59877 0.0076,-1.07379 0.308593,-1.43164 0.301034,-0.35784 0.778779,-0.59961 1.40625,-0.59961 z"
          id="path3844"
-         inkscape:label="MouthOutline" />
+         inkscape:label="MouthOutline"
+         transform="translate(0)" />
     </g>
   </g>
 </svg>
