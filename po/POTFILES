@@ -1,6 +1,3 @@
-data/it.mijorus.smile.desktop.in
-data/it.mijorus.smile.appdata.xml.in
-data/it.mijorus.smile.gschema.xml
 src/main.py
 src/Picker.py
 src/Settings.py

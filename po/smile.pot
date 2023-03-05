@@ -3,20 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-05 12:31+0100\n"
-"PO-Revision-Date: 2023-03-05 12:44+0100\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: it\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
 
 #: src/main.py:123
 msgid "translator_credits"
@@ -24,151 +23,141 @@ msgstr ""
 
 #: src/Picker.py:532
 msgid "Copied!"
-msgstr "Emoji copiata!"
+msgstr ""
 
 #: src/Picker.py:533
 msgid ""
 "I have copied the emoji to the clipboard. You can now paste it in any input "
 "field."
 msgstr ""
-"Ho copiato l'emoji nella clipboard. Ora è possibile incollarla in qualsiasi "
-"campo di testo."
 
 #: src/Settings.py:25
 msgid "Settings"
-msgstr "Impostazioni"
+msgstr ""
 
 #: src/Settings.py:26
 msgid "General"
-msgstr "Generale"
+msgstr ""
 
 #: src/Settings.py:28
 msgid "Run in the background"
-msgstr "Esegui in background"
+msgstr ""
 
 #: src/Settings.py:28
 msgid "Keep Smile running in the background for a faster launch"
-msgstr "Mantieni Smile in esecuzione sullo sfondo per un avvio più rapido"
+msgstr ""
 
 #: src/Settings.py:32
 msgid "Minimize on exit"
-msgstr "Minimizza all'uscita"
+msgstr ""
 
 #: src/Settings.py:32
 msgid "Minimize the window when selecting an emoji"
-msgstr "Riduci la finestra ad icona quando si seleziona un'emoji"
+msgstr ""
 
 #: src/Settings.py:37
 msgid "Customization"
-msgstr "Personalizzazione"
+msgstr ""
 
 #: src/Settings.py:40 src/Settings.py:179
 msgid "Localized tags"
-msgstr "Tag localizzati"
+msgstr ""
 
 #: src/Settings.py:42
 msgid "Use localized tags"
-msgstr "Usa tag localizzati"
+msgstr ""
 
 #: src/Settings.py:47
 msgid "Merge localized and English tags"
-msgstr "Unisci i tag in inglese e quelli localizzati"
+msgstr ""
 
 #: src/Settings.py:49
 msgid "Use both localized tags and English ones at the same time"
-msgstr "Usa i tag in inglese ed i tag localizzati allo stesso tempo"
+msgstr ""
 
 #: src/Settings.py:61
 msgid "Custom tags"
-msgstr "Tag personalizzati"
+msgstr ""
 
 #: src/Settings.py:96
 msgid "Launch the app with a shortcut"
-msgstr "Avvia l'app con una scorciatoia"
+msgstr ""
 
 #: src/Settings.py:97
 msgid ""
 "Create a new keyboard shortcut in your system settings and paste the "
 "following code as a custom command"
 msgstr ""
-"Crea una nuova scorciatoia nelle impostazioni di sistema incollando questo "
-"codice come comando personalizzato"
 
 #: src/Settings.py:133
 msgid "Remove"
-msgstr "Rimuovi"
+msgstr ""
 
 #: src/Settings.py:149
 msgid "There are no custom tags yet: create one with Alt + T"
-msgstr "Non ci sono ancora tag personalizzati; puoi crearne uno con Alt + T"
+msgstr ""
 
 #: src/Settings.py:164
 msgid "Default skintone"
-msgstr "Colore della pelle predefinito"
+msgstr ""
 
 #: src/ui/menu.ui:6
 msgid "Preferences"
-msgstr "Preferenze"
+msgstr ""
 
 #: src/ui/menu.ui:10
 msgid "Shortcuts"
-msgstr "Scorciatoie"
+msgstr ""
 
 #: src/ui/menu.ui:15
 msgid "What's new?"
-msgstr "Cosa c'è di nuovo?"
+msgstr ""
 
 #: src/ui/menu.ui:18
 msgid "About"
-msgstr "Informazioni su Smile"
+msgstr ""
 
 #: src/ui/shortcuts.ui:12
 msgid "Mouse"
-msgstr "Mouse"
+msgstr ""
 
 #: src/ui/shortcuts.ui:109
 msgid "Keyboard"
-msgstr "Tastiera"
+msgstr ""
 
 #: src/ui/shortcuts.ui:114
 msgid ""
 "Copy the selected emoji and hide the window (When an emoji is highlighted)"
 msgstr ""
-"Copia l'emoji selezionata e nasconde la finestra (quando un'emoji è "
-"evidenziata)"
 
 #: src/ui/shortcuts.ui:121
 msgid "Copy first emoji and hide the window (When using the search bar)"
 msgstr ""
-"Copia la prima emoji e nasconde la finestra (quando si usa la barra di "
-"ricerca)"
 
 #: src/ui/shortcuts.ui:128
 msgid "Show the category on the right"
-msgstr "Mostra la categoria a destra"
+msgstr ""
 
 #: src/ui/shortcuts.ui:135
 msgid "Show the category on the left"
-msgstr "Mostra la categoria a sinistra"
+msgstr ""
 
 #: src/ui/shortcuts.ui:142
 msgid "Add an emoji to selection"
-msgstr "Aggiungi un'emoji alla selezione"
+msgstr ""
 
 #: src/ui/shortcuts.ui:150
 msgid "Remove the last emoji from the selection"
-msgstr "Rimuovi l'ultima emoji dalla selezione"
+msgstr ""
 
 #: src/ui/shortcuts.ui:157
 msgid "Copy the selection and hide the window, without the highlighted emoji"
 msgstr ""
-"Copia la selezione e nascondi la finestra, senza selezionare l'emoji "
-"evidenziata"
 
 #: src/ui/shortcuts.ui:164
 msgid "Open the skintone selector (if available)"
-msgstr "Apri il selettore dei colori della pelle (se disponibile)"
+msgstr ""
 
 #: src/ui/shortcuts.ui:171
 msgid "Add a custom tag"
-msgstr "Aggiungi un tag personalizzato"
+msgstr ""

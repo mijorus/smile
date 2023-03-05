@@ -1,9 +1,8 @@
-desktop_file = i18n.merge_file(
-  input: 'it.mijorus.smile.desktop.in',
-  output: 'it.mijorus.smile.desktop',
-  type: 'desktop',
-  po_dir: '../po',
-  install: true,
+desktop_file = configure_file(
+        input: 'it.mijorus.smile.desktop.in',
+       output: 'it.mijorus.smile.desktop',
+      install: true,
+         copy: true,
   install_dir: join_paths(get_option('datadir'), 'applications')
 )
 
@@ -14,13 +13,14 @@ if desktop_utils.found()
   )
 endif
 
-appstream_file = i18n.merge_file(
-  input: 'it.mijorus.smile.appdata.xml.in',
-  output: 'it.mijorus.smile.appdata.xml',
-  po_dir: '../po',
-  install: true,
+appstream_file = configure_file(
+        input: 'it.mijorus.smile.appdata.xml.in',
+       output: 'it.mijorus.smile.appdata.xml',
+      install: true,
+         copy: true,
   install_dir: join_paths(get_option('datadir'), 'appdata')
 )
+
 
 appstream_util = find_program('appstream-util', required: false)
 if appstream_util.found()

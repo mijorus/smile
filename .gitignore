@@ -16,3 +16,4 @@ old_emoji_list.py
 .flatpak
 src/ui/settings.glade~
 .DS_Store
+po/*.mo

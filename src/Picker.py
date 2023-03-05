@@ -529,8 +529,8 @@ class Picker(Gtk.ApplicationWindow):
         self.clipboard.set_content(contx)
 
         if self.settings.get_boolean('is-first-run'):
-            n = Gio.Notification.new('Copied!')
-            n.set_body("I have copied the emoji to the clipboard. You can now paste it in any input field.")
+            n = Gio.Notification.new(_('Copied!'))
+            n.set_body(_("I have copied the emoji to the clipboard. You can now paste it in any input field."))
             n.set_icon(Gio.ThemedIcon.new('dialog-information'))
 
             Gio.Application.get_default().send_notification('copy-message', n)

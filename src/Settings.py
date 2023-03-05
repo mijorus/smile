@@ -19,13 +19,11 @@ class Settings(Adw.PreferencesWindow):
         self.application_id = application_id
         self.settings = Gio.Settings.new('it.mijorus.smile')
 
-        self.page1 = Adw.PreferencesPage(title=_('Settings'), icon_name='smile-settings-symbolic')
-        general_group = Adw.PreferencesGroup(title=_('General'))
         if self.settings.get_string('tags-locale') == 'en':
             self.settings.set_string('tags-locale', 'da')
 
-        self.page1 = Adw.PreferencesPage(title='Settings', icon_name='smile-settings-symbolic')
-        general_group = Adw.PreferencesGroup(title='General')
+        self.page1 = Adw.PreferencesPage(title=_('Settings'), icon_name='smile-settings-symbolic')
+        general_group = Adw.PreferencesGroup(title=_('General'))
         general_group.add(
             self.create_boolean_settings_entry(_('Run in the background'), 'load-hidden-on-startup', _('Keep Smile running in the background for a faster launch'))
         )
@@ -36,35 +34,25 @@ class Settings(Adw.PreferencesWindow):
 
         general_group.add(self.create_launch_shortcut_settings_entry())
 
-        customization_group = Adw.PreferencesGroup(title=('Customization'))
+        customization_group = Adw.PreferencesGroup(title=_('Customization'))
         customization_group.add(self.create_modifiers_combo_boxes())
 
         self.localized_tags_group = Adw.PreferencesGroup(title=_('Localized tags'))
         self.localized_tags_group.add(
-            self.create_boolean_settings_entry('Use localized tags', 'use-localized-tags', '',)
+            self.create_boolean_settings_entry(_('Use localized tags'), 'use-localized-tags', '',)
         )
 
         self.localized_tags_group_items = [
             self.create_boolean_settings_entry(
                 _('Merge localized and English tags'),
                 'merge-english-tags',
-                'Use both localized tags and English ones at the same time'
+                _('Use both localized tags and English ones at the same time')
             ),
             self.create_tags_locale_combo_boxes()
         ]
 
         for item in self.localized_tags_group_items:
             self.localized_tags_group.add(item)
-
-        # self.localized_tags_group.add(
-        #     self.create_boolean_settings_entry(
-        #         'Merge localized and English tags',
-        #         'merge-english-tags',
-        #         'Use both localized tags and English ones at the same time'
-        #     )
-        # )
-
-        # self.localized_tags_group.add(self.create_tags_locale_combo_boxes())
 
         self.page1.add(general_group)
         self.page1.add(customization_group)

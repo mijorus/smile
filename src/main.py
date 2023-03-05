@@ -120,6 +120,7 @@ class Smile(Adw.Application):
         event_controller_keys.connect('key-pressed', self.on_about_key_pressed)
         self.about.add_controller(event_controller_keys)
 
+        self.about.set_translator_credits(_("translator_credits"))
         self.about.add_credit_section('Icon by', ['Roman Morozov'])
 
         self.about.set_transient_for(self.props.active_window)

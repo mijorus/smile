@@ -1,24 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <interface>
-    
-    <menu id='primary_menu'>
+    <menu id="primary_menu">
         <section>
             <item>
-                <attribute name='label' translatable='yes'>Preferences</attribute>
-                <attribute name='action'>app.preferences</attribute>
+                <attribute name="label" translatable="yes">_Preferences</attribute>
+                <attribute name="action">app.preferences</attribute>
             </item>
             <item>
-                <attribute name='label' translatable='yes'>Shortcuts</attribute>
-                <attribute name='action'>app.open_shortcuts</attribute>
+                <attribute name="label" translatable="yes">Shortcuts</attribute>
+                <attribute name="action">app.open_shortcuts</attribute>
             </item>
             <item>
-                <attribute name='action'>app.open_changelog</attribute>
-                <attribute name='label' translatable='yes'>What's new?</attribute>
+                <attribute name="action">app.open_changelog</attribute>
+                <attribute name="label" translatable="yes">What"s new?</attribute>
             </item>
             <item>
-                <attribute name='label' translatable='yes'>About</attribute>
-                <attribute name='action'>app.about</attribute>
+                <attribute name="label" translatable="yes">About</attribute>
+                <attribute name="action">app.about</attribute>
             </item>
         </section>
     </menu>
-      
 </interface>
