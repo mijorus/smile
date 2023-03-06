@@ -20,6 +20,7 @@
 import os
 import sys
 import signal
+import locale
 import gettext
 
 VERSION = '@VERSION@'
@@ -28,6 +29,8 @@ localedir = '@localedir@'
 
 sys.path.insert(1, pkgdatadir)
 signal.signal(signal.SIGINT, signal.SIG_DFL)
+locale.bindtextdomain('smile', localedir)
+locale.textdomain('smile')
 gettext.install('smile', localedir)
 
 if __name__ == '__main__':
