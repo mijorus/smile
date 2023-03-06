@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-05 12:31+0100\n"
-"PO-Revision-Date: 2023-03-05 12:44+0100\n"
+"POT-Creation-Date: 2023-03-06 13:04+0100\n"
+"PO-Revision-Date: 2023-03-06 13:05+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: src/main.py:123
 msgid "translator_credits"
-msgstr ""
+msgstr "Lorenzo Paderi"
 
 #: src/Picker.py:532
 msgid "Copied!"
