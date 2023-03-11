@@ -63,7 +63,7 @@ class Smile(Adw.Application):
             self.create_action("preferences", lambda w, e: Settings(self.application_id))
             self.create_action("open_shortcuts", lambda w, e: ShortcutsWindow().open())
             self.create_action("open_changelog", lambda w, e: Gtk.show_uri(None, 'https://smile.mijorus.it/changelog', time.time()))
-            self.create_action("open_changelog", lambda w, e: Gtk.show_uri(None, 'https://github.com/mijorus/smile/tree/master/po', time.time()))
+            self.create_action("translate", lambda w, e: Gtk.show_uri(None, 'https://github.com/mijorus/smile/tree/master/po', time.time()))
 
             self.create_action("about", self.on_about_action)
 
