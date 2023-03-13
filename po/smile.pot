@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-06 13:04+0100\n"
+"POT-Creation-Date: 2023-03-13 10:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.py:123
+#: src/main.py:126
 msgid "translator_credits"
 msgstr ""
 
@@ -113,7 +113,11 @@ msgstr ""
 msgid "What's new?"
 msgstr ""
 
-#: src/ui/menu.ui:18
+#: src/ui/menu.ui:19
+msgid "Translate this app"
+msgstr ""
+
+#: src/ui/menu.ui:22
 msgid "About"
 msgstr ""
 
