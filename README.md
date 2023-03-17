@@ -36,6 +36,11 @@
   <img width="200" src="https://flathub.org/assets/badges/flathub-badge-i-en.png">
 </a>
 
+###  1.1 <a name='Source'></a>Source
+<a href="https://github.com/mijorus/smile" align="center">
+  <img width="100" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png">
+</a>
+
 Note: Flathub and Github are the only official release channels for Smile. Any release on external marketplaces or packaging formats are unofficial and not supported by me.
 
 ##  2. <a name='Features'></a>Features
@@ -80,11 +85,6 @@ Use `Shift + Enter` to select multiple emojis; use `Ctrl+Enter` to quit without 
 
 ##  3. <a name='Changelog'></a>Changelog
 Please check out [https://smile.mijorus.it/changelog](https://smile.mijorus.it/changelog)
-
-##  4. <a name='Source'></a>Source
-<a href="https://github.com/mijorus/smile" align="center">
-  <img width="100" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png">
-</a>
 
 ##  5. <a name='Thirdpartylicences'></a>Third party licences
 Awesome resources that made Smile possible:
