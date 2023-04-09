@@ -164,6 +164,7 @@ class Picker(Gtk.ApplicationWindow):
                 button.category = c
                 button.index = i
                 button.connect('clicked', self.filter_for_category)
+                button.set_css_classes(['emoji-button'])
 
                 box.append(button)
                 self.category_picker_widgets.append(button)

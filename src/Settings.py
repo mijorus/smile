@@ -36,6 +36,7 @@ class Settings(Adw.PreferencesWindow):
 
         customization_group = Adw.PreferencesGroup(title=_('Customization'))
         customization_group.add(self.create_modifiers_combo_boxes())
+        customization_group.add(self.create_emoji_sizes_combo_boxes())
 
         self.localized_tags_group = Adw.PreferencesGroup(title=_('Localized tags'))
         self.localized_tags_group.add(
@@ -173,6 +174,21 @@ class Settings(Adw.PreferencesWindow):
 
         skintones_combo.connect('changed', lambda w: self.settings.set_string('skintone-modifier', w.get_active_id()))
         row.add_suffix(skintones_combo)
+        return row
+    
+    def create_emoji_sizes_combo_boxes(self) -> Adw.ActionRow:
+        row = Adw.ActionRow(title=_('Emoji size'))
+        sizes = [["Default", "emoji-button"], ["Big", "emoji-button-lg"], ["Bigger", "emoji-button-xl"]]
+        emoji_size_combo = Gtk.ComboBoxText(valign=Gtk.Align.CENTER)
+
+        for i, j in enumerate(sizes):
+            emoji_size_combo.append(j[1], j[0])
+
+            if self.settings.get_string('emoji-size-class') == j[1]:
+                emoji_size_combo.set_active(i)
+
+        emoji_size_combo.connect('changed', lambda w: self.settings.set_string('emoji-size-class', w.get_active_id()))
+        row.add_suffix(emoji_size_combo)
         return row
 
     def create_tags_locale_combo_boxes(self) -> Adw.ActionRow:

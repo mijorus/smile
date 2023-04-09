@@ -1,15 +1,17 @@
-.emoji_list_box button,
-#skin_selector button,
-#emoji_categories_box button {
-    font-size: 20px;
-}
-
 .emoji-with-skintones {
     border-top-right-radius: 15px;
 }
 
 .emoji-button {
     font-size: 20px;
+}
+
+.emoji-button-lg {
+    font-size: 25px;
+}
+
+.emoji-button-xl {
+    font-size: 30px;
 }
 
 .flowbox-child-custom {
