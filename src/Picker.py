@@ -160,11 +160,10 @@ class Picker(Gtk.ApplicationWindow):
         i = 0
         for c, cat in emoji_categories.items():
             if 'icon' in cat:
-                button = Gtk.Button(label=cat['icon'], valign=Gtk.Align.CENTER)
+                button = EmojiButton(data={'emoji': cat['icon'], 'hexcode': None}, valign=Gtk.Align.CENTER)
                 button.category = c
                 button.index = i
                 button.connect('clicked', self.filter_for_category)
-                button.set_css_classes(['emoji-button'])
 
                 box.append(button)
                 self.category_picker_widgets.append(button)
