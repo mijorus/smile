@@ -178,7 +178,13 @@ class Settings(Adw.PreferencesWindow):
     
     def create_emoji_sizes_combo_boxes(self) -> Adw.ActionRow:
         row = Adw.ActionRow(title=_('Emoji size'))
-        sizes = [["Default", "emoji-button"], ["Big", "emoji-button-lg"], ["Bigger", "emoji-button-xl"]]
+        sizes = [
+            [_("Default"), "emoji-button"], 
+            [_("Big"), "emoji-button-lg"], 
+            [_("Bigger"), "emoji-button-xl"],
+            [_("Giant"), "emoji-button-xxl"]
+        ]
+
         emoji_size_combo = Gtk.ComboBoxText(valign=Gtk.Align.CENTER)
 
         for i, j in enumerate(sizes):

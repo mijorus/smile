@@ -7,11 +7,15 @@
 }
 
 .emoji-button-lg {
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .emoji-button-xl {
-    font-size: 30px;
+    font-size: 25px;
+}
+
+.emoji-button-xxl {
+    font-size: 28px;
 }
 
 .flowbox-child-custom {
