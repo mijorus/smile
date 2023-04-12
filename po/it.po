@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-06 13:04+0100\n"
-"PO-Revision-Date: 2023-03-06 13:05+0100\n"
+"POT-Creation-Date: 2023-04-12 19:34+0200\n"
+"PO-Revision-Date: 2023-04-12 19:38+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it\n"
@@ -16,9 +16,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.1.1\n"
 
-#: src/main.py:123
+#: src/main.py:126
 msgid "translator_credits"
 msgstr "Lorenzo Paderi"
 
@@ -62,31 +62,31 @@ msgstr "Riduci la finestra ad icona quando si seleziona un'emoji"
 msgid "Customization"
 msgstr "Personalizzazione"
 
-#: src/Settings.py:40 src/Settings.py:179
+#: src/Settings.py:41 src/Settings.py:201
 msgid "Localized tags"
 msgstr "Tag localizzati"
 
-#: src/Settings.py:42
+#: src/Settings.py:43
 msgid "Use localized tags"
 msgstr "Usa tag localizzati"
 
-#: src/Settings.py:47
+#: src/Settings.py:48
 msgid "Merge localized and English tags"
 msgstr "Unisci i tag in inglese e quelli localizzati"
 
-#: src/Settings.py:49
+#: src/Settings.py:50
 msgid "Use both localized tags and English ones at the same time"
 msgstr "Usa i tag in inglese ed i tag localizzati allo stesso tempo"
 
-#: src/Settings.py:61
+#: src/Settings.py:62
 msgid "Custom tags"
 msgstr "Tag personalizzati"
 
-#: src/Settings.py:96
+#: src/Settings.py:97
 msgid "Launch the app with a shortcut"
 msgstr "Avvia l'app con una scorciatoia"
 
-#: src/Settings.py:97
+#: src/Settings.py:98
 msgid ""
 "Create a new keyboard shortcut in your system settings and paste the "
 "following code as a custom command"
@@ -94,17 +94,37 @@ msgstr ""
 "Crea una nuova scorciatoia nelle impostazioni di sistema incollando questo "
 "codice come comando personalizzato"
 
-#: src/Settings.py:133
+#: src/Settings.py:134
 msgid "Remove"
 msgstr "Rimuovi"
 
-#: src/Settings.py:149
+#: src/Settings.py:150
 msgid "There are no custom tags yet: create one with Alt + T"
 msgstr "Non ci sono ancora tag personalizzati; puoi crearne uno con Alt + T"
 
-#: src/Settings.py:164
+#: src/Settings.py:165
 msgid "Default skintone"
 msgstr "Colore della pelle predefinito"
+
+#: src/Settings.py:180
+msgid "Emoji size"
+msgstr ""
+
+#: src/Settings.py:182
+msgid "Default"
+msgstr "Predefinito"
+
+#: src/Settings.py:183
+msgid "Big"
+msgstr "Grande"
+
+#: src/Settings.py:184
+msgid "Bigger"
+msgstr "Più grande"
+
+#: src/Settings.py:185
+msgid "Giant"
+msgstr "Gigante"
 
 #: src/ui/menu.ui:6
 msgid "Preferences"
@@ -118,7 +138,11 @@ msgstr "Scorciatoie"
 msgid "What's new?"
 msgstr "Cosa c'è di nuovo?"
 
-#: src/ui/menu.ui:18
+#: src/ui/menu.ui:19
+msgid "Translate this app"
+msgstr ""
+
+#: src/ui/menu.ui:22
 msgid "About"
 msgstr "Informazioni su Smile"
 
