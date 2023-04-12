@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-13 10:23+0100\n"
+"POT-Creation-Date: 2023-04-12 19:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,46 +59,66 @@ msgstr ""
 msgid "Customization"
 msgstr ""
 
-#: src/Settings.py:40 src/Settings.py:179
+#: src/Settings.py:41 src/Settings.py:201
 msgid "Localized tags"
 msgstr ""
 
-#: src/Settings.py:42
+#: src/Settings.py:43
 msgid "Use localized tags"
 msgstr ""
 
-#: src/Settings.py:47
+#: src/Settings.py:48
 msgid "Merge localized and English tags"
 msgstr ""
 
-#: src/Settings.py:49
+#: src/Settings.py:50
 msgid "Use both localized tags and English ones at the same time"
 msgstr ""
 
-#: src/Settings.py:61
+#: src/Settings.py:62
 msgid "Custom tags"
 msgstr ""
 
-#: src/Settings.py:96
+#: src/Settings.py:97
 msgid "Launch the app with a shortcut"
 msgstr ""
 
-#: src/Settings.py:97
+#: src/Settings.py:98
 msgid ""
 "Create a new keyboard shortcut in your system settings and paste the "
 "following code as a custom command"
 msgstr ""
 
-#: src/Settings.py:133
+#: src/Settings.py:134
 msgid "Remove"
 msgstr ""
 
-#: src/Settings.py:149
+#: src/Settings.py:150
 msgid "There are no custom tags yet: create one with Alt + T"
 msgstr ""
 
-#: src/Settings.py:164
+#: src/Settings.py:165
 msgid "Default skintone"
+msgstr ""
+
+#: src/Settings.py:180
+msgid "Emoji size"
+msgstr ""
+
+#: src/Settings.py:182
+msgid "Default"
+msgstr ""
+
+#: src/Settings.py:183
+msgid "Big"
+msgstr ""
+
+#: src/Settings.py:184
+msgid "Bigger"
+msgstr ""
+
+#: src/Settings.py:185
+msgid "Giant"
 msgstr ""
 
 #: src/ui/menu.ui:6
