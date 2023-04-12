@@ -86,6 +86,7 @@ def main():
         }
 
     for locale, locale_obj in locales.items():
+        print('loading: ' + locale)
         r = requests.get(f'https://cdn.jsdelivr.net/npm/emojibase-data@latest/{locale}/data.json')
         
         output = {}
