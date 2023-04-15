@@ -187,17 +187,17 @@
         <screenshot type="default">
             <caption>Application showcase</caption>
             <image type="source">
-                https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot7.png</image>
+                https://raw.githubusercontent.com/mijorus/smile/master/docs/preview1.png</image>
         </screenshot>
         <screenshot>
             <caption>Application showcase</caption>
             <image type="source">
-                https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot8.png</image>
+                https://raw.githubusercontent.com/mijorus/smile/master/docs/preview2.png</image>
         </screenshot>
         <screenshot>
             <caption>Application showcase</caption>
             <image type="source">
-                https://raw.githubusercontent.com/mijorus/smile/master/docs/screenshot2.png</image>
+                https://raw.githubusercontent.com/mijorus/smile/master/docs/preview3.png</image>
         </screenshot>
     </screenshots>
     <content_rating type="oars-1.0" />
