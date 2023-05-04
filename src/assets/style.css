@@ -44,14 +44,22 @@
 }
 
 #emoji_categories_box button {
-    margin: 1px;
+    margin: 0px;
+    background: transparent;
+    padding: 3px;
+}
+
+#emoji_categories_box {
+   border-top: 1px solid @borders;
+   margin-top: 3px;
 }
 
 #emoji_categories_box button:focus,
 button.selected {
-    border-color: rgb(12, 170, 12);
-    box-shadow: 0px 0px 2px 1px rgb(12, 170, 12);
+    border-bottom-color: rgb(12, 170, 12);
+    box-shadow: 0px 3px 0px 0px rgb(12, 170, 12);
     outline: transparent;
+    border-radius: 0;
 }
 
 #custom_tag_entry {
