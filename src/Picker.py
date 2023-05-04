@@ -157,13 +157,11 @@ class Picker(Gtk.ApplicationWindow):
     def create_category_picker(self) -> Gtk.ScrolledWindow:
         from .assets.emoji_list import emoji_categories
 
-        #scrolled = Gtk.ScrolledWindow(name='emoji_categories_box', overlay)
         box = Gtk.Box(spacing=4, halign=Gtk.Align.CENTER, hexpand=True, margin_top=5, margin_bottom=7, name='emoji_categories_box')
 
         i = 0
         for c, cat in emoji_categories.items():
             if 'icon' in cat:
-                print(cat['icon'])
                 button = Gtk.Button(icon_name=cat['icon'], valign=Gtk.Align.CENTER)
                 button.category = c
                 button.index = i
@@ -173,7 +171,6 @@ class Picker(Gtk.ApplicationWindow):
                 self.category_picker_widgets.append(button)
                 i += 1
 
-        #scrolled.set_child(box)
         self.categories_count = i
         return box
 
