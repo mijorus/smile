@@ -23,34 +23,34 @@ output = {}
 
 emoji_categories = {
     'recents': {
-        'icon': '🕖️',
+        'icon': 'history-undo-symbolic',
     },
     'smileys-emotion': {
-        'icon': '😀',
+        'icon': 'sentiment-very-satisfied-symbolic',
     },
     'animals-nature': {
-        'icon': '🐶'
+        'icon': 'bear-symbolic'
     },
     'food-drink': {
-        'icon': '🍔'
+        'icon': 'restaurant-symbolic'
     },
     'travel-places': {
-        'icon': '🚘️'
+        'icon': 'driving-symbolic'
     },
     'events': {
-        'icon': '🎁'
+        'icon': 'birthday-symbolic'
     },
     'activities': {
-        'icon': '⚽️'
+        'icon': 'baseball-symbolic'
     },
     'objects': {
-        'icon': '💡'
+        'icon': 'lightbulb-symbolic'
     },
     'symbols': {
-        'icon': '1️⃣'
+        'icon': 'input-keyboard-numlock-symbolic'
     },
     'flags': {
-        'icon': '🏳️'
+        'icon': 'flag-filled-symbolic'
     },
 }
 
