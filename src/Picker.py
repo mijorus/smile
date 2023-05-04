@@ -93,9 +93,12 @@ class Picker(Gtk.ApplicationWindow):
         self.header_bar.pack_end(self.menu_button)
 
         # Create search entry
+        search_container = Gtk.Box()
+
         self.search_entry = Gtk.SearchEntry(hexpand=True, width_request=200)
         self.search_entry.connect('search_changed', self.search_emoji)
         self.search_entry.connect('activate', self.handle_search_entry_activate)
+        search_container.append(self.search_entry)
 
         search_controller_key = Gtk.EventControllerKey()
         search_controller_key.connect(
@@ -107,7 +110,7 @@ class Picker(Gtk.ApplicationWindow):
 
         self.search_entry.grab_focus()
 
-        self.header_bar.pack_start(self.search_entry)
+        self.header_bar.set_title_widget(search_container)
         self.set_titlebar(self.header_bar)
 
         self.shortcut_window: ShortcutsWindow = None
@@ -154,13 +157,14 @@ class Picker(Gtk.ApplicationWindow):
     def create_category_picker(self) -> Gtk.ScrolledWindow:
         from .assets.emoji_list import emoji_categories
 
-        scrolled = Gtk.ScrolledWindow(name='emoji_categories_box')
-        box = Gtk.Box(spacing=4, halign=Gtk.Align.CENTER, hexpand=True)
+        #scrolled = Gtk.ScrolledWindow(name='emoji_categories_box', overlay)
+        box = Gtk.Box(spacing=4, halign=Gtk.Align.CENTER, hexpand=True, margin_top=5, margin_bottom=7, name='emoji_categories_box')
 
         i = 0
         for c, cat in emoji_categories.items():
             if 'icon' in cat:
-                button = EmojiButton(data={'emoji': cat['icon'], 'hexcode': None}, valign=Gtk.Align.CENTER)
+                print(cat['icon'])
+                button = Gtk.Button(icon_name=cat['icon'], valign=Gtk.Align.CENTER)
                 button.category = c
                 button.index = i
                 button.connect('clicked', self.filter_for_category)
@@ -169,9 +173,9 @@ class Picker(Gtk.ApplicationWindow):
                 self.category_picker_widgets.append(button)
                 i += 1
 
-        scrolled.set_child(box)
+        #scrolled.set_child(box)
         self.categories_count = i
-        return scrolled
+        return box
 
     def create_emoji_list(self) -> Gtk.FlowBox:
         flowbox = Gtk.FlowBox(
@@ -445,7 +449,7 @@ class Picker(Gtk.ApplicationWindow):
             self.update_list_tip('Selected: ' + ''.join(title[-8:]))
 
     def set_active_category(self, category: str):
-        for b in []:
+        for b in self.category_picker_widgets:
             if b.category != category:
                 b.get_style_context().remove_class('selected')
             else:
