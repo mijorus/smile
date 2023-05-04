@@ -60,7 +60,7 @@ class Smile(Adw.Application):
             # when the last one is closed the application shuts down
             self.window = Picker(application=self)
 
-            self.create_action("preferences", lambda w, e: Settings(self.application_id))
+            self.create_action("preferences", lambda w, e: self.on_preferences_action())
             self.create_action("open_shortcuts", lambda w, e: ShortcutsWindow().open())
             self.create_action("open_changelog", lambda w, e: Gtk.show_uri(None, 'https://smile.mijorus.it/changelog', time.time()))
             self.create_action("translate", lambda w, e: Gtk.show_uri(None, 'https://github.com/mijorus/smile/tree/master/po', time.time()))
@@ -81,6 +81,10 @@ class Smile(Adw.Application):
         else:
             self.window.set_visible(True)
             self.window.on_activation()
+
+    def on_preferences_action(self):
+        pref_window = Settings(self.application_id, transient_for=self.window)
+        pref_window.present()
 
     def create_action(self, name, callback):
         """ Add an Action and connect to a callback """

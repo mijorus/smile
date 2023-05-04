@@ -14,8 +14,8 @@ from gi.repository import Gtk, Gio, Gdk, GLib, Adw
 
 
 class Settings(Adw.PreferencesWindow):
-    def __init__(self, application_id: str):
-        super().__init__()
+    def __init__(self, application_id: str, **kwargs):
+        super().__init__(**kwargs)
         self.application_id = application_id
         self.settings = Gio.Settings.new('it.mijorus.smile')
 
@@ -78,10 +78,6 @@ class Settings(Adw.PreferencesWindow):
         self.custom_tags_entries: list[Gtk.Entry] = []
         self.settings.connect('changed', self.on_settings_changes)
         self.connect('close-request', self.on_window_close)
-        
-        
-
-        self.present()
 
     def create_boolean_settings_entry(self, label: str, key: str, subtitle: str = None, usable: bool = True, add_to=None) -> Adw.ActionRow:
         row = Adw.ActionRow(title=label, subtitle=subtitle)
