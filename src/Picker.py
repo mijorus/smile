@@ -499,7 +499,7 @@ class Picker(Gtk.ApplicationWindow):
                 self.emoji_grid_first_row.append(widget)
 
     def filter_for_category(self, widget: Gtk.Button):
-        self.set_active_category(None)
+        self.set_active_category(widget.category)
         widget.grab_focus()
 
         self.query = None
