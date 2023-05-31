@@ -83,7 +83,7 @@ class Settings(Adw.PreferencesWindow):
         row = Adw.ActionRow(title=label, subtitle=subtitle)
 
         switch = Gtk.Switch(valign=Gtk.Align.CENTER)
-        self.settings.bind(key, switch, 'state', Gio.SettingsBindFlags.DEFAULT)
+        self.settings.bind(key, switch, 'active', Gio.SettingsBindFlags.DEFAULT)
 
         row.add_suffix(switch)
         return row
