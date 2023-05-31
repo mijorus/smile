@@ -45,6 +45,7 @@ class Picker(Gtk.ApplicationWindow):
         self.event_controller_keys.connect('key-pressed', self.handle_window_key_press)
         self.event_controller_keys.connect('key-released', self.handle_window_key_release)
         self.add_controller(self.event_controller_keys)
+        self.data_dir = Gio.Application.get_default().datadir
 
         self.settings: Gio.Settings = Gio.Settings.new('it.mijorus.smile')
         self.settings.connect('changed::skintone-modifier', self.update_emoji_skintones)
@@ -562,25 +563,28 @@ class Picker(Gtk.ApplicationWindow):
         e = (widget.get_child()).emoji_data
         filter_result = True
 
-        localized_tags = []
-        if self.settings.get_boolean('use-localized-tags') and self.settings.get_string('tags-locale') != 'en':
-            localized_tags = get_localized_tags(self.settings.get_string('tags-locale'), e['hexcode'], Gio.Application.get_default().datadir)
+        use_localised_tags = self.settings.get_boolean('use-localized-tags')
 
-        merge_en_tags = self.settings.get_boolean('use-localized-tags') and self.settings.get_boolean('merge-english-tags')
+        localized_tags = []
+        if use_localised_tags and self.settings.get_string('tags-locale') != 'en':
+            localized_tags = get_localized_tags(self.settings.get_string('tags-locale'), e['hexcode'], self.data_dir)
 
         if self.query:
+            custom_tags = ''
+            if self.query != e['emoji']:
+                custom_tags = get_custom_tags(e['hexcode'], cache=True)
+
             if self.query == e['emoji']:
                 filter_result = True
-            elif get_custom_tags(e['hexcode'], cache=True) and tag_list_contains(get_custom_tags(e['hexcode'], cache=True), self.query):
+            elif custom_tags and tag_list_contains(custom_tags, self.query):
                 filter_result = True
-            elif (not self.settings.get_boolean('use-localized-tags')):
-                filter_result = tag_list_contains(e['tags'], self.query)
-            elif self.settings.get_boolean('use-localized-tags'):
+            elif use_localised_tags:
                 if self.settings.get_boolean('merge-english-tags'):
                     filter_result = tag_list_contains(','.join(localized_tags), self.query) or tag_list_contains(e['tags'], self.query)
                 else:
                     filter_result = tag_list_contains(','.join(localized_tags), self.query)
-
+            elif not use_localised_tags:
+                filter_result = tag_list_contains(e['tags'], self.query)
             else:
                 filter_result = False
 
@@ -593,7 +597,6 @@ class Picker(Gtk.ApplicationWindow):
         else:
             filter_result = e['group'] == self.selected_category
 
-        widget.set_visible(filter_result)
         return filter_result
 
     def sort_emoji_list(self, child1: Gtk.FlowBoxChild, child2: Gtk.FlowBoxChild, user_data):

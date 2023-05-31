@@ -1,12 +1,21 @@
-import os
 from gi.repository import GLib, Gio
 
-def tag_list_contains(tags: str, q: str) -> bool():
-    tags_arr = tags.replace(', ', ',').split(',')
-    for t in tags_arr:
-        if t.lower().startswith(q.lower()):
-            return True
+_tags_cache = {}
+def tag_list_contains(tags: str, q: str) -> bool:
+    global _tags_cache
 
+    q = q.lower()
+
+    if tags in _tags_cache:
+        tags_arr = _tags_cache[tags]
+    else:
+        tags_arr = tags.replace(', ', ',').split(',')
+        _tags_cache[tags] = tags_arr
+
+    for t in tags_arr:
+        if t.lower().startswith(q):
+            return True
+    
     return False
 
 # thank you mate ❤️
