@@ -1,7 +1,6 @@
 import json
-import sys
+import requests
 import os
-import subprocess
 from io import StringIO
 
 problematic = [
@@ -17,6 +16,9 @@ problematic = [
     "1F9B1",
     "1F9B3",
     "1F9B2",
+
+    # duplicated USA flag
+    "1F1FA-1F1F2"
 ]
 
 output = {}
@@ -72,6 +74,12 @@ def main():
 
     categ = set()
 
+    print('Downloading openmoji.json')
+    openmoji_json = requests.get('https://raw.githubusercontent.com/hfg-gmuend/openmoji/master/data/openmoji.json')
+
+    with open(_path + '/openmoji.json', 'w+') as f:
+        f.write(openmoji_json.text)
+
     emoji_list = json.load(open(_path + '/openmoji.json', 'r'))
     for i, el in enumerate(emoji_list):
         if el['group'] == 'component':
@@ -81,6 +89,7 @@ def main():
             components[el['subgroups']][el['hexcode']] = el
 
         # ignore if an emoji is misbehaving
+        
         if (el['hexcode'] in problematic) or (el['group'] == 'extras-openmoji'):
             continue
 
@@ -94,11 +103,15 @@ def main():
             # ignore if the emoji belongs to the aforementioned groups because they create caos and look bad
             continue
 
-        el['annotation'] = '' if (not el['annotation'].__contains__('flag')) else el['annotation'].replace('flag:', '').replace(' ', ',')
+        if 'flag:' in el['annotation']:
+            el['annotation'] = el['annotation'].replace('flag:', '')
+        elif ':' in el['annotation']:
+            el['annotation'] = el['annotation'].split(':')[0]
+        
+        el['annotation'] = el['annotation'].strip()
 
-        el['tags'] = el["tags"]
-        el['tags'] += f',{el["openmoji_tags"]}' if len(el["openmoji_tags"]) else ''
-        el['tags'] += f',{el["annotation"]}' if len(el["annotation"]) else ''
+        el['tags'] += f',{el["openmoji_tags"]}' if el["openmoji_tags"] else ''
+        el['tags'] += f',{el["annotation"]}' if el["annotation"] else ''
         el['tags'] = el["tags"].replace('“', '').replace('”', '')
 
         # re-order groups
@@ -133,6 +146,8 @@ def main():
 
     output_file = open(f"{destdir}/emoji_list.py", 'w+')
     output_file.write(output_dict.getvalue())
+
+    print(f"Generated {destdir}/emoji_list.py")
 
 if __name__ == '__main__':
     main()
