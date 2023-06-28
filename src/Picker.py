@@ -29,17 +29,20 @@ from .lib.custom_tags import get_custom_tags
 from .lib.localized_tags import get_localized_tags
 from .lib.emoji_history import increment_emoji_usage_counter, get_history
 from .utils import tag_list_contains
+from .lib.DbusService import DbusService, DBUS_SERVICE_INTERFACE, DBUS_SERVICE_PATH
 
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Gdk, Adw, GLib  # noqa
+from gi.repository import Gtk, Gio, Gdk, Adw, GLib, GObject  # noqa
 
 
 class Picker(Gtk.ApplicationWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(title="Smile", resizable=True, *args, **kwargs)
         self.set_default_size(360, 350)
+
+        self.last_copied_text = None
 
         self.event_controller_keys = Gtk.EventControllerKey()
         self.event_controller_keys.connect('key-pressed', self.handle_window_key_press)
@@ -131,7 +134,7 @@ class Picker(Gtk.ApplicationWindow):
         self.set_child(self.overlay)
 
     def on_activation(self):
-        self.present_with_time(time())
+        self.present_with_time(Gdk.CURRENT_TIME)
         self.grab_focus()
 
         self.emoji_list.unselect_all()
@@ -386,6 +389,10 @@ class Picker(Gtk.ApplicationWindow):
             if self.emoji_grid_first_row:
                 self.copy_and_quit(self.emoji_grid_first_row[0].emoji_button)
 
+    def send_paste_signal(self):
+        if DbusService.dbus_connection and self.last_copied_text:
+            DbusService.dbus_connection.emit_signal(None, DBUS_SERVICE_PATH, DBUS_SERVICE_INTERFACE, 'CopiedEmoji', GLib.Variant('(s)', (self.last_copied_text,)))
+
     def default_hiding_action(self):
         self.search_entry.set_text('')
         self.query = None
@@ -402,16 +409,20 @@ class Picker(Gtk.ApplicationWindow):
 
         if self.settings.get_boolean('iconify-on-esc'):
             self.minimize()
+            self.send_paste_signal()
         elif not self.settings.get_boolean('load-hidden-on-startup'):
             # async to avoid blocking the main thread
             def close_patch():
                 GLib.idle_add(lambda: self.hide())
                 sleep(0.5)
+                self.send_paste_signal()
+
                 return GLib.idle_add(lambda: self.close())
 
             threading.Thread(target=close_patch).start()
         else:
             self.set_visible(False)
+            self.send_paste_signal()
 
     # # # # # #
     def show_skintone_selector(self, focused_widget: FlowBoxChild):
@@ -529,6 +540,8 @@ class Picker(Gtk.ApplicationWindow):
 
         contx = Gdk.ContentProvider.new_for_value(''.join([*self.selection, text]))
         self.clipboard.set_content(contx)
+
+        self.last_copied_text = text
 
         if self.settings.get_boolean('is-first-run'):
             n = Gio.Notification.new(_('Copied!'))

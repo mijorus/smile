@@ -1,20 +1,17 @@
 import manimpango
 import sys
 import gi
-import time
-import dbus
 
-from dbus.mainloop.glib import DBusGMainLoop
 from .utils import make_option
 from .Picker import Picker
 from .ShortcutsWindow import ShortcutsWindow
-# from .AboutDialog import AboutDialog
 from .Settings import Settings
+from .lib.DbusService import DbusService 
 
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Gdk, Adw  # noqa
+from gi.repository import Gtk, Gio, Gdk, Adw, GLib  # noqa
 
 
 class Smile(Adw.Application):
@@ -62,8 +59,8 @@ class Smile(Adw.Application):
 
             self.create_action("preferences", lambda w, e: self.on_preferences_action())
             self.create_action("open_shortcuts", lambda w, e: ShortcutsWindow().open())
-            self.create_action("open_changelog", lambda w, e: Gtk.show_uri(None, 'https://smile.mijorus.it/changelog', time.time()))
-            self.create_action("translate", lambda w, e: Gtk.show_uri(None, 'https://github.com/mijorus/smile/tree/master/po', time.time()))
+            self.create_action("open_changelog", lambda w, e: Gtk.UriLauncher.new('https://smile.mijorus.it/changelog').launch())
+            self.create_action("translate", lambda w, e: Gtk.UriLauncher.new('https://github.com/mijorus/smile/tree/master/po').launch())
 
             self.create_action("about", self.on_about_action)
 
@@ -121,7 +118,10 @@ class Smile(Adw.Application):
 
         self.last_about_key_pressed = Gdk.keyval_name(keyval)
 
-
 def main(version: str, datadir: str) -> None:
     app = Smile(version=version, datadir=datadir)
+
+    dbus_service = DbusService()
+    dbus_service.connect()
+
     app.run(sys.argv)
