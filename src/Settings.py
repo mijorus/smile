@@ -3,7 +3,6 @@ import gi
 from dbus import Array as DBusArray
 from dbus import SessionBus
 from dbus import Interface as DBusInterface
-from dbus.mainloop.glib import DBusGMainLoop
 from .assets.emoji_list import emojis
 from .lib.custom_tags import set_custom_tags, get_all_custom_tags, delete_custom_tags
 from .lib.localized_tags import get_countries_list
