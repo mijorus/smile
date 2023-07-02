@@ -15,6 +15,10 @@
                 <attribute name="label" translatable="yes">What's new?</attribute>
             </item>
             <item>
+                <attribute name="action">app.gnome_extension</attribute>
+                <attribute name="label" translatable="yes">Install GNOME extension</attribute>
+            </item>
+            <item>
                 <attribute name="action">app.translate</attribute>
                 <attribute name="label" translatable="yes">Translate this app</attribute>
             </item>
