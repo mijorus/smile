@@ -2,11 +2,11 @@ import manimpango
 import sys
 import gi
 
-from .utils import make_option
+from .utils import make_option, portal
 from .Picker import Picker
 from .ShortcutsWindow import ShortcutsWindow
 from .Settings import Settings
-from .lib.DbusService import DbusService 
+from .lib.DbusService import DbusService, GNOME_EXTENSION_LINK
 
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
@@ -61,6 +61,7 @@ class Smile(Adw.Application):
             self.create_action("open_shortcuts", lambda w, e: ShortcutsWindow().open())
             self.create_action("open_changelog", lambda w, e: Gtk.UriLauncher.new('https://smile.mijorus.it/changelog').launch())
             self.create_action("translate", lambda w, e: Gtk.UriLauncher.new('https://github.com/mijorus/smile/tree/master/po').launch())
+            self.create_action("gnome_extension", lambda w, e: Gtk.UriLauncher.new(GNOME_EXTENSION_LINK).launch())
 
             self.create_action("about", self.on_about_action)
 
@@ -71,9 +72,21 @@ class Smile(Adw.Application):
                 last_run_version = int(self.settings.get_string('last-run-version').replace('.', ''))
 
                 # any migration scripts should run here...
-                if last_run_version < 240:
-                    sd
+                if last_run_version < 240 and DbusService.extension_status != 'unavailable':
+                    dialog = Adw.MessageDialog.new(
+                        self.window,
+                        _('Pro tip!'),
+                        _('You can now automatically paste emojis with the GNOME extension!'),
+                    )
 
+                    dialog.add_response('dismiss', _('Dismiss'))
+                    dialog.add_response('install', _('Install'))
+
+                    dialog.set_close_response('dismiss')
+                    dialog.set_response_appearance('install', Adw.ResponseAppearance.SUGGESTED)
+
+                    dialog.connect('response', lambda w, res_id: Gtk.UriLauncher.new(GNOME_EXTENSION_LINK).launch() if res_id == 'install' else None)
+                    dialog.present()
 
                 self.settings.set_string('last-run-version', self.version)
 
