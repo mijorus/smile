@@ -68,10 +68,12 @@ class Smile(Adw.Application):
                 self.window.show()
                 self.window.on_activation()
 
-                #
-                # self.settings.get_string('last-run-version') or '0.0.0'
+                last_run_version = int(self.settings.get_string('last-run-version').replace('.', ''))
+
                 # any migration scripts should run here...
-                #
+                if last_run_version < 240:
+                    sd
+
 
                 self.settings.set_string('last-run-version', self.version)
 
