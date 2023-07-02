@@ -1,3 +1,4 @@
+import dbus
 from gi.repository import GLib, Gio
 
 _tags_cache = {}
@@ -39,3 +40,10 @@ def read_text_resource(res: str) -> str:
     decoded = data.decode('utf-8')
     file.unref()
     return decoded
+
+def portal(interface: str, bus_name: str='org.freedesktop.portal.Desktop', object_path: str='/org/freedesktop/portal/desktop') -> dbus.Interface:
+    bus = dbus.SessionBus()
+    obj = bus.get_object(bus_name, object_path)
+    inter = dbus.Interface(obj, interface)
+
+    return inter
