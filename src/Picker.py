@@ -390,7 +390,7 @@ class Picker(Gtk.ApplicationWindow):
                 self.copy_and_quit(self.emoji_grid_first_row[0].emoji_button)
 
     def send_paste_signal(self):
-        if DbusService.dbus_connection and self.last_copied_text:
+        if DbusService.dbus_connection and self.last_copied_text and self.settings.get_boolean('auto-paste'):
             DbusService.dbus_connection.emit_signal(None, DBUS_SERVICE_PATH, DBUS_SERVICE_INTERFACE, 'CopiedEmoji', GLib.Variant('(s)', (self.last_copied_text,)))
 
     def default_hiding_action(self):
