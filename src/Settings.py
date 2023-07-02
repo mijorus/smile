@@ -1,12 +1,11 @@
 import gi
 
 from dbus import Array as DBusArray
-from dbus import SessionBus
-from dbus import Interface as DBusInterface
 from .assets.emoji_list import emojis
 from .lib.custom_tags import set_custom_tags, get_all_custom_tags, delete_custom_tags
 from .lib.localized_tags import get_countries_list
-from .utils import read_text_resource
+from .utils import portal
+from .lib.DbusService import DbusService
 
 
 from gi.repository import Gtk, Gio, Gdk, GLib, Adw
@@ -33,6 +32,16 @@ class Settings(Adw.PreferencesWindow):
 
         general_group.add(self.create_launch_shortcut_settings_entry())
 
+        gnome_ext_group = Adw.PreferencesGroup(title=(_('GNOME Extension') if DbusService.extension_status == 'installed' else _('GNOME Extension (Not Installed)')))
+        use_ext_row =  self.create_boolean_settings_entry(
+            _('Paste emojis automatically'), 
+            'auto-paste', 
+            _('Insert emojis when the complementary extension is installed.\nPlease note that the extension works by emulating the Ctrl+V keyboard shortcut')
+        )
+
+        use_ext_row.set_sensitive(DbusService.extension_status == 'installed')
+        gnome_ext_group.add(use_ext_row)
+
         customization_group = Adw.PreferencesGroup(title=_('Customization'))
         customization_group.add(self.create_modifiers_combo_boxes())
         customization_group.add(self.create_emoji_sizes_combo_boxes())
@@ -51,19 +60,14 @@ class Settings(Adw.PreferencesWindow):
             self.create_tags_locale_combo_boxes()
         ]
 
-        for item in self.localized_tags_group_items:
-            self.localized_tags_group.add(item)
-
-        self.page1.add(general_group)
-        self.page1.add(customization_group)
-        self.page1.add(self.localized_tags_group)
+        [self.localized_tags_group.add(item) for item in self.localized_tags_group_items]
+        [self.page1.add(el) for el in [general_group, gnome_ext_group, customization_group, self.localized_tags_group]]
 
         self.page2 = Adw.PreferencesPage(title=_('Custom tags'), icon_name='smile-symbolic')
         self.custom_tags_list_box = Gtk.ListBox(css_classes=['boxed-list'])
 
         self.custom_tags_rows = self.create_custom_tags_list()
-        for row in self.custom_tags_rows:
-            self.custom_tags_list_box.append(row)
+        [self.custom_tags_list_box.append(row) for row in self.custom_tags_rows]
 
         self.custom_tags_group = Adw.PreferencesGroup()
         self.custom_tags_group.add(self.custom_tags_list_box)
@@ -221,12 +225,7 @@ class Settings(Adw.PreferencesWindow):
                 set_custom_tags(row.hexcode, row.__entry.get_text())
 
     def on_use_localized_tags_changed(self, settings, key: str):
-        if settings.get_boolean(key):
-            for item in self.localized_tags_group_items:
-                item.set_opacity(1)
-        else:
-            for item in self.localized_tags_group_items:
-                item.set_opacity(0.5)
+        [item.set_sensitive(settings.get_boolean(key)) for item in self.localized_tags_group_items]
 
     def on_load_hidden_on_startup_changed(self, settings, key: str):
         value: bool = settings.get_boolean(key)
@@ -235,7 +234,5 @@ class Settings(Adw.PreferencesWindow):
         if old_autostart_file.query_exists():
             old_autostart_file.delete()
 
-        bus = SessionBus()
-        obj = bus.get_object("org.freedesktop.portal.Desktop", "/org/freedesktop/portal/desktop")
-        inter = DBusInterface(obj, "org.freedesktop.portal.Background")
+        inter = portal("org.freedesktop.portal.Background")
         res = inter.RequestBackground('', {'reason': 'Smile autostart', 'autostart': value, 'background': value, 'commandline': DBusArray(['smile', '--start-hidden'])})
