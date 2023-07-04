@@ -30,6 +30,7 @@ from .lib.localized_tags import get_localized_tags
 from .lib.emoji_history import increment_emoji_usage_counter, get_history
 from .utils import tag_list_contains
 from .lib.DbusService import DbusService, DBUS_SERVICE_INTERFACE, DBUS_SERVICE_PATH
+from .assets.emoji_list import emojis, emoji_categories
 
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
@@ -152,15 +153,7 @@ class Picker(Gtk.ApplicationWindow):
 
         return Gtk.MenuButton(menu_model=menu, icon_name='open-menu-symbolic')
 
-    def create_emoji_button(self, data: dict):
-        button = EmojiButton(data)
-        button.connect('clicked', self.handle_emoji_button_click)
-
-        return button
-
     def create_category_picker(self) -> Gtk.ScrolledWindow:
-        from .assets.emoji_list import emoji_categories
-
         box = Gtk.Box(spacing=4, halign=Gtk.Align.CENTER, hexpand=True, margin_top=5, margin_bottom=7, name='emoji_categories_box')
 
         i = 0
@@ -191,11 +184,12 @@ class Picker(Gtk.ApplicationWindow):
         )
 
         start = time_ns()
+        history = get_history()
 
-        from .assets.emoji_list import emojis
+        for key in emojis.keys():
+            emoji_button = EmojiButton(emojis[key])
+            emoji_button.connect('clicked', self.handle_emoji_button_click)
 
-        for i, e in emojis.items():
-            emoji_button = self.create_emoji_button(e)
             flowbox_child = FlowBoxChild(emoji_button)
 
             gesture = Gtk.GestureSingle(button=Gdk.BUTTON_SECONDARY)
@@ -206,7 +200,7 @@ class Picker(Gtk.ApplicationWindow):
             gesture_mid_click.connect('end', lambda e, _: self.show_custom_tag_entry(e.get_widget()))
             flowbox_child.add_controller(gesture_mid_click)
 
-            is_recent = (e['hexcode'] in get_history())
+            is_recent = (emojis[key]['hexcode'] in history)
             flowbox.append(flowbox_child)
             self.emoji_list_widgets.append(flowbox_child)
 
@@ -616,9 +610,11 @@ class Picker(Gtk.ApplicationWindow):
         child1 = child1.get_child()
         child2 = child2.get_child()
 
+        history = get_history()
+
         if (self.selected_category == 'recents'):
-            h1 = get_history()[child1.hexcode] if child1.hexcode in get_history() else None
-            h2 = get_history()[child2.hexcode] if child2.hexcode in get_history() else None
+            h1 = history[child1.hexcode] if child1.hexcode in history else None
+            h2 = history[child2.hexcode] if child2.hexcode in history else None
             return ((h2['lastUsage'] if h2 else 0) - (h1['lastUsage'] if h1 else 0))
 
         elif self.query:
