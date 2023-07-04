@@ -36,7 +36,7 @@ class Settings(Adw.PreferencesWindow):
         use_ext_row =  self.create_boolean_settings_entry(
             _('Paste emojis automatically'), 
             'auto-paste', 
-            _('Insert emojis when the complementary extension is installed.\nPlease note that the extension works by emulating the Ctrl+V keyboard shortcut')
+            _('Insert emojis when the complementary extension is installed.\nPlease note that the extension works by emulating the Ctrl+V keyboard shortcut and might NOT WORK on some programs')
         )
 
         use_ext_row.set_sensitive(DbusService.extension_status == 'installed')
