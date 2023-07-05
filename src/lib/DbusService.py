@@ -7,7 +7,7 @@ gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Gdk, Adw, GLib  # noqa
 
-GNOME_EXTENSION_LINK = 'https://extensions.gnome.org/extension/6093/smile-complementary-extension'
+GNOME_EXTENSION_LINK = 'https://extensions.gnome.org/extension/6096/smile-complementary-extension/'
 GNOME_EXTENSION_UUID = 'smile-extension@mijorus.it'
 
 DBUS_SERVICE_INTERFACE = 'it.mijorus.smile'
