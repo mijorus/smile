@@ -73,11 +73,11 @@ class Smile(Adw.Application):
                 last_run_version = int(last_run_version if len(last_run_version) else '-1')
 
                 # any migration scripts should run here...
-                if last_run_version > 0 and last_run_version < 240 and DbusService.extension_status != 'unavailable':
+                if last_run_version > 0 and last_run_version < 250 and DbusService.extension_status != 'unavailable':
                     dialog = Adw.MessageDialog.new(
                         self.window,
                         _('Pro tip!'),
-                        _('You can now automatically paste emojis with the GNOME extension!'),
+                        _('You can now automatically paste emojis on X11 systems and with the GNOME extension on Wayland!'),
                     )
 
                     dialog.add_response('dismiss', _('Dismiss'))
