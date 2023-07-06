@@ -71,9 +71,10 @@ class Smile(Adw.Application):
 
                 last_run_version = self.settings.get_string('last-run-version').replace('.', '')
                 last_run_version = int(last_run_version if len(last_run_version) else '-1')
+                print(last_run_version  )
 
                 # any migration scripts should run here...
-                if last_run_version > 0 and last_run_version < 250 and DbusService.extension_status != 'unavailable':
+                if last_run_version > 0 and last_run_version < 240:
                     dialog = Adw.MessageDialog.new(
                         self.window,
                         _('Pro tip!'),
