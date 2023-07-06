@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-12 19:34+0200\n"
-"PO-Revision-Date: 2023-04-12 19:38+0200\n"
+"POT-Creation-Date: 2023-07-04 22:20+0200\n"
+"PO-Revision-Date: 2023-07-04 22:25+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it\n"
@@ -16,17 +16,33 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.1\n"
 
-#: src/main.py:126
+#: src/main.py:79
+msgid "Pro tip!"
+msgstr "Suggerimento!"
+
+#: src/main.py:80
+msgid "You can now automatically paste emojis with the GNOME extension!"
+msgstr ""
+
+#: src/main.py:83
+msgid "Dismiss"
+msgstr "Ignora"
+
+#: src/main.py:84
+msgid "Install"
+msgstr "Installa"
+
+#: src/main.py:125
 msgid "translator_credits"
 msgstr "Lorenzo Paderi"
 
-#: src/Picker.py:532
+#: src/Picker.py:541
 msgid "Copied!"
 msgstr "Emoji copiata!"
 
-#: src/Picker.py:533
+#: src/Picker.py:542
 msgid ""
 "I have copied the emoji to the clipboard. You can now paste it in any input "
 "field."
@@ -34,59 +50,81 @@ msgstr ""
 "Ho copiato l'emoji nella clipboard. Ora è possibile incollarla in qualsiasi "
 "campo di testo."
 
-#: src/Settings.py:25
+#: src/Settings.py:23
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: src/Settings.py:26
+#: src/Settings.py:24
 msgid "General"
 msgstr "Generale"
 
-#: src/Settings.py:28
+#: src/Settings.py:26
 msgid "Run in the background"
 msgstr "Esegui in background"
 
-#: src/Settings.py:28
+#: src/Settings.py:26
 msgid "Keep Smile running in the background for a faster launch"
 msgstr "Mantieni Smile in esecuzione sullo sfondo per un avvio più rapido"
 
-#: src/Settings.py:32
+#: src/Settings.py:30
 msgid "Minimize on exit"
 msgstr "Minimizza all'uscita"
 
-#: src/Settings.py:32
+#: src/Settings.py:30
 msgid "Minimize the window when selecting an emoji"
 msgstr "Riduci la finestra ad icona quando si seleziona un'emoji"
 
+#: src/Settings.py:35
+msgid "GNOME Extension"
+msgstr "Estensione GNOME"
+
+#: src/Settings.py:35
+msgid "GNOME Extension (Not Installed)"
+msgstr "Estensione GNOME (Non installata)"
+
 #: src/Settings.py:37
+msgid "Paste emojis automatically"
+msgstr "Incolla le emoji automaticamente"
+
+#: src/Settings.py:39
+msgid ""
+"Insert emojis when the complementary extension is installed.\n"
+"Please note that the extension works by emulating the Ctrl+V keyboard "
+"shortcut and might NOT WORK on some programs"
+msgstr ""
+"Inserisci le emoji quando l'estensione complementare è installata.\n"
+"L'estensione emula la scorciatoia Ctrl+V della tastiera e potrebbe NON "
+"funzionare con alcune applicazioni"
+
+#: src/Settings.py:45
 msgid "Customization"
 msgstr "Personalizzazione"
 
-#: src/Settings.py:41 src/Settings.py:201
+#: src/Settings.py:49 src/Settings.py:200
 msgid "Localized tags"
 msgstr "Tag localizzati"
 
-#: src/Settings.py:43
+#: src/Settings.py:51
 msgid "Use localized tags"
 msgstr "Usa tag localizzati"
 
-#: src/Settings.py:48
+#: src/Settings.py:56
 msgid "Merge localized and English tags"
 msgstr "Unisci i tag in inglese e quelli localizzati"
 
-#: src/Settings.py:50
+#: src/Settings.py:58
 msgid "Use both localized tags and English ones at the same time"
 msgstr "Usa i tag in inglese ed i tag localizzati allo stesso tempo"
 
-#: src/Settings.py:62
+#: src/Settings.py:66
 msgid "Custom tags"
 msgstr "Tag personalizzati"
 
-#: src/Settings.py:97
+#: src/Settings.py:96
 msgid "Launch the app with a shortcut"
 msgstr "Avvia l'app con una scorciatoia"
 
-#: src/Settings.py:98
+#: src/Settings.py:97
 msgid ""
 "Create a new keyboard shortcut in your system settings and paste the "
 "following code as a custom command"
@@ -94,35 +132,35 @@ msgstr ""
 "Crea una nuova scorciatoia nelle impostazioni di sistema incollando questo "
 "codice come comando personalizzato"
 
-#: src/Settings.py:134
+#: src/Settings.py:133
 msgid "Remove"
 msgstr "Rimuovi"
 
-#: src/Settings.py:150
+#: src/Settings.py:149
 msgid "There are no custom tags yet: create one with Alt + T"
 msgstr "Non ci sono ancora tag personalizzati; puoi crearne uno con Alt + T"
 
-#: src/Settings.py:165
+#: src/Settings.py:164
 msgid "Default skintone"
 msgstr "Colore della pelle predefinito"
 
-#: src/Settings.py:180
+#: src/Settings.py:179
 msgid "Emoji size"
 msgstr ""
 
-#: src/Settings.py:182
+#: src/Settings.py:181
 msgid "Default"
 msgstr "Predefinito"
 
-#: src/Settings.py:183
+#: src/Settings.py:182
 msgid "Big"
 msgstr "Grande"
 
-#: src/Settings.py:184
+#: src/Settings.py:183
 msgid "Bigger"
 msgstr "Più grande"
 
-#: src/Settings.py:185
+#: src/Settings.py:184
 msgid "Giant"
 msgstr "Gigante"
 
@@ -139,10 +177,14 @@ msgid "What's new?"
 msgstr "Cosa c'è di nuovo?"
 
 #: src/ui/menu.ui:19
+msgid "Install GNOME extension"
+msgstr ""
+
+#: src/ui/menu.ui:23
 msgid "Translate this app"
 msgstr ""
 
-#: src/ui/menu.ui:22
+#: src/ui/menu.ui:26
 msgid "About"
 msgstr "Informazioni su Smile"
 

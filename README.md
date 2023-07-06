@@ -32,8 +32,18 @@
 <!-- /vscode-markdown-toc -->
 
 ##  1. <a name='Download'></a>Download
+
+### Get from Flathub
 <a href="https://flathub.org/apps/details/it.mijorus.smile" align="center">
   <img width="200" src="https://flathub.org/assets/badges/flathub-badge-i-en.png">
+</a>
+
+### Automatically paste with the GNOME Extension
+
+**Requires Smile 2.4.0+**
+
+<a href="https://extensions.gnome.org/extension/6096/smile-complementary-extension" align="center">
+  <img width="200" src="docs/gnome-extension.svg">
 </a>
 
 ###  1.1 <a name='Source'></a>Source
