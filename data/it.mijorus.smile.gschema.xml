@@ -38,5 +38,8 @@
          <key name="auto-paste" type="b">
             <default>true</default>
         </key>
+        <key name="auto-paste-xdotool" type="b">
+            <default>true</default>
+        </key>
     </schema>
 </schemalist>

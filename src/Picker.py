@@ -17,6 +17,7 @@
 
 import gi
 import threading
+import subprocess
 from time import time, time_ns, sleep
 import re
 
@@ -386,6 +387,8 @@ class Picker(Gtk.ApplicationWindow):
     def send_paste_signal(self):
         if DbusService.dbus_connection and self.last_copied_text and self.settings.get_boolean('auto-paste'):
             DbusService.dbus_connection.emit_signal(None, DBUS_SERVICE_PATH, DBUS_SERVICE_INTERFACE, 'CopiedEmoji', GLib.Variant('(s)', (self.last_copied_text,)))
+        else:
+            subprocess.check_output(['xdotool', 'key', 'ctrl+v'])
 
     def default_hiding_action(self):
         self.search_entry.set_text('')

@@ -1,3 +1,4 @@
+import os
 import gi
 
 from dbus import Array as DBusArray
@@ -32,15 +33,26 @@ class Settings(Adw.PreferencesWindow):
 
         general_group.add(self.create_launch_shortcut_settings_entry())
 
-        gnome_ext_group = Adw.PreferencesGroup(title=(_('GNOME Extension') if DbusService.extension_status == 'installed' else _('GNOME Extension (Not Installed)')))
+        paste_emoji_group = Adw.PreferencesGroup(title=_('Paste emojis automatically'))
+        
+        auto_paste_status = self.get_autopaste_status()
+        auto_paste_suff = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=3, valign=Gtk.Align.CENTER, tooltip_text=auto_paste_status[3])
+    
+        [auto_paste_suff.append(el) for el in [
+            Gtk.Label(label=_('Status:'), css_classes=['heading']), 
+            Gtk.Image(icon_name=auto_paste_status[1], css_classes=[auto_paste_status[2]])
+        ]]
+
         use_ext_row =  self.create_boolean_settings_entry(
-            _('Paste emojis automatically'), 
-            'auto-paste', 
-            _('Insert emojis when the complementary extension is installed.\nPlease note that the extension works by emulating the Ctrl+V keyboard shortcut and might NOT WORK on some programs')
+            _('Enabled'), 
+            'auto-paste',
+            _('Emulates the Ctrl+V keyboard shortcut; might NOT WORK on some programs')
         )
 
-        use_ext_row.set_sensitive(DbusService.extension_status == 'installed')
-        gnome_ext_group.add(use_ext_row)
+        # use_ext_row.set_sensitive(DbusService.extension_status == 'installed')
+        paste_emoji_group.set_header_suffix(auto_paste_suff)
+        use_ext_row.set_sensitive(auto_paste_status[0])
+        [paste_emoji_group.add(el) for el in [use_ext_row]]
 
         customization_group = Adw.PreferencesGroup(title=_('Customization'))
         customization_group.add(self.create_modifiers_combo_boxes())
@@ -61,7 +73,7 @@ class Settings(Adw.PreferencesWindow):
         ]
 
         [self.localized_tags_group.add(item) for item in self.localized_tags_group_items]
-        [self.page1.add(el) for el in [general_group, gnome_ext_group, customization_group, self.localized_tags_group]]
+        [self.page1.add(el) for el in [general_group, paste_emoji_group, customization_group, self.localized_tags_group]]
 
         self.page2 = Adw.PreferencesPage(title=_('Custom tags'), icon_name='smile-symbolic')
         self.custom_tags_list_box = Gtk.ListBox(css_classes=['boxed-list'])
@@ -81,6 +93,14 @@ class Settings(Adw.PreferencesWindow):
         self.custom_tags_entries: list[Gtk.Entry] = []
         self.settings.connect('changed', self.on_settings_changes)
         self.connect('close-request', self.on_window_close)
+
+    def get_autopaste_status(self):
+        if DbusService.extension_status == 'installed':
+            return (True, 'checkmark-symbolic', 'success', _('Available (using the GNOME extension)'))
+        elif os.getenv('XDG_SESSION_TYPE') == 'wayland':
+            return (False, 'warning-small-symbolic', 'warning', _('Requires the GNOME extension on Wayland'))
+        else:
+            return (True, 'checkmark-symbolic', 'success', _('Available (using xdotool on X11)'))
 
     def create_boolean_settings_entry(self, label: str, key: str, subtitle: str = None, usable: bool = True, add_to=None) -> Adw.ActionRow:
         row = Adw.ActionRow(title=label, subtitle=subtitle)
