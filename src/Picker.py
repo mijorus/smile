@@ -16,6 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import gi
+import os
 import threading
 import subprocess
 from time import time, time_ns, sleep
@@ -385,9 +386,12 @@ class Picker(Gtk.ApplicationWindow):
                 self.copy_and_quit(self.emoji_grid_first_row[0].emoji_button)
 
     def send_paste_signal(self):
-        if DbusService.dbus_connection and self.last_copied_text and self.settings.get_boolean('auto-paste'):
+        if not self.settings.get_boolean('auto-paste'):
+            return
+
+        if DbusService.dbus_connection and self.last_copied_text:
             DbusService.dbus_connection.emit_signal(None, DBUS_SERVICE_PATH, DBUS_SERVICE_INTERFACE, 'CopiedEmoji', GLib.Variant('(s)', (self.last_copied_text,)))
-        else:
+        elif os.getenv('XDG_SESSION_TYPE') != 'wayland':
             subprocess.check_output(['xdotool', 'key', 'ctrl+v'])
 
     def default_hiding_action(self):
