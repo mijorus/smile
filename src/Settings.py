@@ -47,7 +47,7 @@ class Settings(Adw.PreferencesWindow):
         use_ext_row =  self.create_boolean_settings_entry(
             _('Enabled'), 
             'auto-paste',
-            _('Emulates the Ctrl+V keyboard shortcut; might NOT WORK on some programs')
+            _('Emulates the Ctrl+V shortcut; might <b>not work</b> on some programs.\nIf using the extension, <b>please ensure that it is correctly ENABLED</b>.')
         )
 
         # use_ext_row.set_sensitive(DbusService.extension_status == 'installed')
