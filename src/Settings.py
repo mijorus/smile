@@ -6,7 +6,8 @@ from .assets.emoji_list import emojis
 from .lib.custom_tags import set_custom_tags, get_all_custom_tags, delete_custom_tags
 from .lib.localized_tags import get_countries_list
 from .utils import portal
-from .lib.DbusService import DbusService
+from .components.UrlRow import UriRow
+from .lib.DbusService import DbusService, GNOME_EXTENSION_LINK
 
 
 from gi.repository import Gtk, Gio, Gdk, GLib, Adw
@@ -52,7 +53,9 @@ class Settings(Adw.PreferencesWindow):
         # use_ext_row.set_sensitive(DbusService.extension_status == 'installed')
         paste_emoji_group.set_header_suffix(auto_paste_suff)
         use_ext_row.set_sensitive(auto_paste_status[0])
-        [paste_emoji_group.add(el) for el in [use_ext_row]]
+
+        get_ext_link_row = UriRow(website=GNOME_EXTENSION_LINK, title=_('Get the GNOME extension'), subtitle=_('Install the extension to paste automatically on X11 and Wayland'))
+        [paste_emoji_group.add(el) for el in [use_ext_row, get_ext_link_row]]
 
         customization_group = Adw.PreferencesGroup(title=_('Customization'))
         customization_group.add(self.create_modifiers_combo_boxes())
