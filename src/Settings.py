@@ -1,8 +1,11 @@
 import os
 import gi
+import json
+from datetime import datetime
 
 from dbus import Array as DBusArray
 from .assets.emoji_list import emojis
+from .lib.user_config import read_json_config, save_json_config
 from .lib.custom_tags import set_custom_tags, get_all_custom_tags, delete_custom_tags
 from .lib.localized_tags import get_countries_list
 from .utils import portal
@@ -50,7 +53,6 @@ class Settings(Adw.PreferencesWindow):
             _('Emulates the Ctrl+V shortcut; might <b>not work</b> on some programs.\nIf using the extension, <b>please ensure that it is correctly ENABLED</b>.')
         )
 
-        # use_ext_row.set_sensitive(DbusService.extension_status == 'installed')
         paste_emoji_group.set_header_suffix(auto_paste_suff)
         use_ext_row.set_sensitive(auto_paste_status[0])
 
@@ -86,6 +88,9 @@ class Settings(Adw.PreferencesWindow):
         bldr = Gtk.Builder()
         bldr.add_from_resource('/it/mijorus/smile/ui/importexport-customtags.ui')
         import_export_widget = bldr.get_object('importexport_group')
+
+        bldr.get_object('importexport_export_button').connect('clicked', self.on_export_tags_clicked)
+        bldr.get_object('importexport_import_button').connect('clicked', self.on_import_tags_clicked)
         self.page2.add(import_export_widget)
 
         self.custom_tags_rows = self.create_custom_tags_list()
@@ -183,13 +188,11 @@ class Settings(Adw.PreferencesWindow):
         return rows
 
     def delete_tag(self, hexcode: str):
-        for r in self.custom_tags_rows:
-            self.custom_tags_list_box.remove(r)
+        [self.custom_tags_list_box.remove(r) for r in self.custom_tags_rows]
 
         if delete_custom_tags(hexcode):
             self.custom_tags_rows = self.create_custom_tags_list()
-            for row in self.custom_tags_rows:
-                self.custom_tags_list_box.append(row)
+            [self.custom_tags_list_box.append(row) for row in self.custom_tags_rows]
 
     def create_modifiers_combo_boxes(self) -> Adw.ActionRow:
         row = Adw.ActionRow(title=_('Default skintone'))
@@ -267,3 +270,54 @@ class Settings(Adw.PreferencesWindow):
 
         inter = portal("org.freedesktop.portal.Background")
         res = inter.RequestBackground('', {'reason': 'Smile autostart', 'autostart': value, 'background': value, 'commandline': DBusArray(['smile', '--start-hidden'])})
+
+    def on_export_tags_clicked(self, w):
+        dialog = Gtk.FileDialog()
+        dialog.set_initial_name('smile-tag-export-' + datetime.now().strftime('%Y-%m-%d-%H%M') + '.json')
+        dialog.save(self, None, self.on_export_tags_done)
+
+    def on_import_tags_clicked(self, w):
+        dialog = Gtk.FileDialog()
+        dialog.open(self, None, self.on_import_tags_done)
+
+    def on_export_tags_done(self, source, res):
+        try:
+            filename = res.get_source_object().save_finish(res).get_path()
+
+            with open(filename, 'w+') as f:
+                f.write(json.dumps(read_json_config('custom_tags')))
+        except Exception as e:
+            print(e)
+
+    def on_import_tags_done(self, source, res):
+        try:
+            filename = res.get_source_object().open_finish(res).get_path()
+        except Exception as e:
+            return print(e)
+
+        try:
+            with open(filename, 'r') as f:
+                restore = json.loads(f.read())
+
+                if isinstance(restore, dict) and any(em in emojis.keys() for em in restore.keys()):
+                    print('Restoring from backup...')
+                    save_json_config(restore, 'custom_tags')
+
+                    [self.custom_tags_list_box.remove(r) for r in self.custom_tags_rows]
+
+                    self.custom_tags_rows = self.create_custom_tags_list()
+                    [self.custom_tags_list_box.append(row) for row in self.custom_tags_rows]
+                else:
+                    raise Exception('Invalid restore file')
+        except Exception as e:
+            print(e)
+
+            dialog = Adw.MessageDialog.new(
+                self,
+                _('Invalid file selected'),
+                _('The configuration file that you selected is not a valid backup.'),
+            )
+
+            dialog.add_response('close', _('Close'))
+            dialog.set_close_response('close')
+            dialog.present()

@@ -8,8 +8,8 @@ from gi.repository import GLib
 
 def save_json_config(content: dict or List, filename: str):
     """Saves in a configuration file"""
-    config_dir = GLib.get_user_config_dir()
-    return GLib.file_set_contents(f"{config_dir}/{filename}.json", json.dumps(content).encode())
+    with open(f"{GLib.get_user_config_dir()}/{filename}.json", 'w+') as f:
+        f.write(json.dumps(content))
 
 def read_json_config(filename: str) -> dict or list or False:
     """Reads from a configuration file"""
