@@ -78,8 +78,15 @@ class Settings(Adw.PreferencesWindow):
         [self.localized_tags_group.add(item) for item in self.localized_tags_group_items]
         [self.page1.add(el) for el in [general_group, paste_emoji_group, customization_group, self.localized_tags_group]]
 
+        # Page 2
+
         self.page2 = Adw.PreferencesPage(title=_('Custom tags'), icon_name='smile-symbolic')
         self.custom_tags_list_box = Gtk.ListBox(css_classes=['boxed-list'])
+        
+        bldr = Gtk.Builder()
+        bldr.add_from_resource('/it/mijorus/smile/ui/importexport-customtags.ui')
+        import_export_widget = bldr.get_object('importexport_group')
+        self.page2.add(import_export_widget)
 
         self.custom_tags_rows = self.create_custom_tags_list()
         [self.custom_tags_list_box.append(row) for row in self.custom_tags_rows]
@@ -87,6 +94,7 @@ class Settings(Adw.PreferencesWindow):
         self.custom_tags_group = Adw.PreferencesGroup()
         self.custom_tags_group.add(self.custom_tags_list_box)
         self.page2.add(self.custom_tags_group)
+
 
         self.add(self.page1)
         self.add(self.page2)
