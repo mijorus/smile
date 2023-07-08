@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-08 10:34+0200\n"
-"PO-Revision-Date: 2023-07-08 10:41+0200\n"
+"PO-Revision-Date: 2023-07-08 10:45+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it\n"
@@ -214,7 +214,7 @@ msgstr "Cosa c'è di nuovo?"
 
 #: src/ui/menu.ui:19
 msgid "Install GNOME extension"
-msgstr "Installa l'estensione per GNOME"
+msgstr "Installa estensione GNOME"
 
 #: src/ui/menu.ui:23
 msgid "Translate this app"
