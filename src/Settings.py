@@ -89,11 +89,13 @@ class Settings(Adw.PreferencesWindow):
         bldr.add_from_resource('/it/mijorus/smile/ui/importexport-customtags.ui')
         import_export_widget = bldr.get_object('importexport_group')
 
-        bldr.get_object('importexport_export_button').connect('clicked', self.on_export_tags_clicked)
+        self.export_button = bldr.get_object('importexport_export_button')
+        self.export_button.connect('clicked', self.on_export_tags_clicked)
         bldr.get_object('importexport_import_button').connect('clicked', self.on_import_tags_clicked)
         self.page2.add(import_export_widget)
 
         self.custom_tags_rows = self.create_custom_tags_list()
+        
         [self.custom_tags_list_box.append(row) for row in self.custom_tags_rows]
 
         self.custom_tags_group = Adw.PreferencesGroup()
@@ -114,7 +116,7 @@ class Settings(Adw.PreferencesWindow):
         if DbusService.extension_status == 'installed':
             return (True, 'checkmark-symbolic', 'success', _('Available (using the GNOME extension)'))
         elif os.getenv('XDG_SESSION_TYPE') == 'wayland':
-            return (False, 'warning-small-symbolic', 'warning', _('Requires the GNOME extension on Wayland'))
+            return (False, 'smile-warning-small-symbolic', 'warning', _('Requires the GNOME extension on Wayland'))
         else:
             return (True, 'checkmark-symbolic', 'success', _('Available (using xdotool on X11)'))
 
@@ -179,6 +181,8 @@ class Settings(Adw.PreferencesWindow):
                     rows.append(listbox_row)
 
                     break
+
+        self.export_button.set_sensitive(len(rows) > 0)
 
         if not rows:
             rows.append(
