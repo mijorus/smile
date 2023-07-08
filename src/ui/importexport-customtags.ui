@@ -2,7 +2,6 @@
 <interface>
   <requires lib="gtk" version="4.0"/>
   <object class="AdwPreferencesGroup" id="importexport_group">
-    <property name="title" translatable="yes">Export and Import</property>
     <child>
         <object class="AdwActionRow">
         <property name="title" translatable="yes">Export and import custom tags</property>
