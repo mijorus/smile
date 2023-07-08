@@ -10,27 +10,6 @@
 </a>
 </p>
 
-<!-- vscode-markdown-toc -->
-* 1. [Download](#Download)
-* 2. [Features](#Features)
-	* 2.1. [Localized tags + english fallback!](#Localizedtagsenglishfallback)
-	* 2.2. [Custom tags](#Customtags)
-	* 2.3. [Custom shortcut](#Customshortcut)
-	* 2.4. [Skintone selector](#Skintoneselector)
-	* 2.5. [Multi selection](#Multiselection)
-* 3. [Changelog](#Changelog)
-* 4. [Source](#Source)
-* 5. [Third party licences](#Thirdpartylicences)
-* 6. [Building](#Building)
-* 7. [Thanks to](#Thanksto)
-* 8. [Some more screenshots](#Somemorescreenshots)
-
-<!-- vscode-markdown-toc-config
-	numbering=true
-	autoSave=true
-	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc -->
-
 ##  1. <a name='Download'></a>Download
 
 ### Get from Flathub
@@ -52,6 +31,13 @@
 </a>
 
 Note: Flathub and Github are the only official release channels for Smile. Any release on external marketplaces or packaging formats are unofficial and not supported by me.
+
+### 1.2 Center new windows on GNOME
+
+Use the following command to make Smile and any new window be centered:
+```
+gsettings set org.gnome.mutter center-new-windows true
+```
 
 ##  2. <a name='Features'></a>Features
 
