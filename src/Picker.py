@@ -95,9 +95,9 @@ class Picker(Gtk.ApplicationWindow):
         self.viewport_box.append(self.category_picker)
 
         # Create an header bar
-        self.header_bar = Adw.HeaderBar(title_widget=Gtk.Box())
+        self.header_bar = Adw.HeaderBar(title_widget=Gtk.Box(), decoration_layout='icon:close', css_classes=['flat'])
         self.menu_button = self.create_menu_button()
-        self.header_bar.pack_end(self.menu_button)
+        self.header_bar.pack_start(self.menu_button)
 
         # Create search entry
         search_container = Gtk.Box()
