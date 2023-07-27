@@ -93,8 +93,8 @@ You will need:
 - flatpak
 - flatpak-builder
 - flatpak-builder
-- org.gnome.Platform 43
-- org.gnome.Sdk 43
+- org.gnome.Platform 44
+- org.gnome.Sdk 44
 
 ```sh
 git clone https://github.com/mijorus/smile.git
@@ -104,7 +104,7 @@ cd smile
 flatpak kill it.mijorus.smile
 
 # to run the app:
-flatpak-builder build/ it.mijorus.smile.json --user --force-clean
+  flatpak-builder build/ it.mijorus.smile.json --user --force-clean
 flatpak-builder --run build/ it.mijorus.smile.json smile
 
 # to install the app
