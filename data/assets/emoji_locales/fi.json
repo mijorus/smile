@@ -4521,6 +4521,12 @@
             "turkoosi"
         ]
     },
+    "1F426-200D-2B1B": {
+        "emoji": "🐦‍⬛",
+        "tags": [
+            "mustarastas"
+        ]
+    },
     "1F427": {
         "emoji": "🐧",
         "tags": [
@@ -6671,8 +6677,7 @@
             "nousu",
             "pankki",
             "raha",
-            "valuutta",
-            "yen"
+            "valuutta"
         ]
     },
     "1F4BA": {
@@ -7958,8 +7963,8 @@
     "1F55E": {
         "emoji": "🕞️",
         "tags": [
-            "14.30",
-            "2.30",
+            "15.30",
+            "3.30",
             "30",
             "aika",
             "kello",
@@ -8002,9 +8007,9 @@
     "1F562": {
         "emoji": "🕢️",
         "tags": [
-            "18.30",
+            "19.30",
             "30",
-            "6.30",
+            "7.30",
             "aika",
             "kello",
             "kellonaika"
@@ -9967,6 +9972,15 @@
         "emoji": "🛗",
         "tags": [
             "esteettömyys"
+        ]
+    },
+    "1F6DC": {
+        "emoji": "🛜",
+        "tags": [
+            "internet",
+            "netti",
+            "tietokone",
+            "verkko"
         ]
     },
     "1F6DD": {
@@ -12859,6 +12873,34 @@
             "varvastossut"
         ]
     },
+    "1FA75": {
+        "emoji": "🩵",
+        "tags": [
+            "sinivihreä",
+            "syaani",
+            "sydän",
+            "vaaleansininen"
+        ]
+    },
+    "1FA76": {
+        "emoji": "🩶",
+        "tags": [
+            "harmaa",
+            "hopea",
+            "siniharmaa",
+            "sydän"
+        ]
+    },
+    "1FA77": {
+        "emoji": "🩷",
+        "tags": [
+            "pinkki",
+            "rakkaus",
+            "sydän",
+            "söpö",
+            "tykkäys"
+        ]
+    },
     "1FA78": {
         "emoji": "🩸",
         "tags": [
@@ -12952,6 +12994,29 @@
             "maatuska",
             "nukke",
             "venäläinen"
+        ]
+    },
+    "1FA87": {
+        "emoji": "🪇",
+        "tags": [
+            "instrumentti",
+            "kalina",
+            "lyömäsoittimet",
+            "musiikki",
+            "ravista",
+            "rämistä",
+            "soitin"
+        ]
+    },
+    "1FA88": {
+        "emoji": "🪈",
+        "tags": [
+            "musiikki",
+            "nokkahuilu",
+            "pilli",
+            "puupuhallin",
+            "säkkipilli",
+            "urkupilli"
         ]
     },
     "1FA90": {
@@ -13199,6 +13264,36 @@
             "suojelu"
         ]
     },
+    "1FAAD": {
+        "emoji": "🪭",
+        "tags": [
+            "arka",
+            "jäähdytys",
+            "kuuma",
+            "lepatus",
+            "tanssi",
+            "ujo",
+            "viuhka"
+        ]
+    },
+    "1FAAE": {
+        "emoji": "🪮",
+        "tags": [
+            "afrokampaus",
+            "harva",
+            "hiukset",
+            "kampa",
+            "tukka"
+        ]
+    },
+    "1FAAF": {
+        "emoji": "🪯",
+        "tags": [
+            "sikhi",
+            "sikhiläinen",
+            "uskonto"
+        ]
+    },
     "1FAB0": {
         "emoji": "🪰",
         "tags": [
@@ -13297,6 +13392,46 @@
             "pesintä"
         ]
     },
+    "1FABB": {
+        "emoji": "🪻",
+        "tags": [
+            "kukka",
+            "laventeli",
+            "leijonankita",
+            "lupiini",
+            "sinilupiini"
+        ]
+    },
+    "1FABC": {
+        "emoji": "🪼",
+        "tags": [
+            "auts",
+            "hyytelö",
+            "kirvely",
+            "pistävä",
+            "polte",
+            "selkärangaton"
+        ]
+    },
+    "1FABD": {
+        "emoji": "🪽",
+        "tags": [
+            "enkeli",
+            "lentäminen",
+            "lentää",
+            "lintu",
+            "mytologia"
+        ]
+    },
+    "1FABF": {
+        "emoji": "🪿",
+        "tags": [
+            "hanhen huuto",
+            "hassu",
+            "lintu",
+            "siivekäs"
+        ]
+    },
     "1FAC0": {
         "emoji": "🫀",
         "tags": [
@@ -13353,6 +13488,23 @@
             "kuninkaallinen",
             "monarkki",
             "ruhtinaallinen"
+        ]
+    },
+    "1FACE": {
+        "emoji": "🫎",
+        "tags": [
+            "eläin",
+            "nisäkäs",
+            "sarvet"
+        ]
+    },
+    "1FACF": {
+        "emoji": "🫏",
+        "tags": [
+            "eläin",
+            "itsepäinen",
+            "muuli",
+            "nisäkäs"
         ]
     },
     "1FAD0": {
@@ -13441,6 +13593,25 @@
             "mauste",
             "säilytys",
             "tyhjä"
+        ]
+    },
+    "1FADA": {
+        "emoji": "🫚",
+        "tags": [
+            "juuri",
+            "mauste",
+            "olut"
+        ]
+    },
+    "1FADB": {
+        "emoji": "🫛",
+        "tags": [
+            "edamame",
+            "herne",
+            "palko",
+            "palkokasvi",
+            "pavut",
+            "vihannes"
         ]
     },
     "1FAE0": {
@@ -13533,6 +13704,16 @@
             "vedenalainen"
         ]
     },
+    "1FAE8": {
+        "emoji": "🫨",
+        "tags": [
+            "maanjäristys",
+            "naama",
+            "tärähdys",
+            "vapiseva",
+            "värisevä"
+        ]
+    },
     "1FAF0": {
         "emoji": "🫰",
         "tags": [
@@ -13540,9 +13721,7 @@
             "hinta",
             "kallis",
             "napsautus",
-            "raha",
-            "rakkaus",
-            "sydän"
+            "raha"
         ]
     },
     "1FAF1": {
@@ -13599,6 +13778,30 @@
             "rakastaa",
             "rakkaus",
             "sydänkädet"
+        ]
+    },
+    "1FAF7": {
+        "emoji": "🫷",
+        "tags": [
+            "kieltäytyä",
+            "odota",
+            "seis",
+            "stop",
+            "työntö",
+            "vasemmalle",
+            "ylävitonen"
+        ]
+    },
+    "1FAF8": {
+        "emoji": "🫸",
+        "tags": [
+            "kieltäytyä",
+            "odota",
+            "oikealle",
+            "seis",
+            "stop",
+            "työntö",
+            "ylävitonen"
         ]
     },
     "203C": {

@@ -4506,6 +4506,16 @@
             "madár"
         ]
     },
+    "1F426-200D-2B1B": {
+        "emoji": "🐦‍⬛",
+        "tags": [
+            "bird",
+            "black",
+            "crow",
+            "raven",
+            "rook"
+        ]
+    },
     "1F427": {
         "emoji": "🐧",
         "tags": [
@@ -9852,6 +9862,14 @@
             "felvonó"
         ]
     },
+    "1F6DC": {
+        "emoji": "🛜",
+        "tags": [
+            "hálózat",
+            "internet",
+            "számítógép"
+        ]
+    },
     "1F6DD": {
         "emoji": "🛝",
         "tags": [
@@ -12535,6 +12553,34 @@
             "szandál"
         ]
     },
+    "1FA75": {
+        "emoji": "🩵",
+        "tags": [
+            "cián",
+            "pávakék",
+            "szív",
+            "világoskék"
+        ]
+    },
+    "1FA76": {
+        "emoji": "🩶",
+        "tags": [
+            "ezüst",
+            "pala",
+            "szív",
+            "szürke"
+        ]
+    },
+    "1FA77": {
+        "emoji": "🩷",
+        "tags": [
+            "cuki",
+            "rózsaszín",
+            "szerelem",
+            "szív",
+            "tetszik"
+        ]
+    },
     "1FA78": {
         "emoji": "🩸",
         "tags": [
@@ -12625,6 +12671,26 @@
             "baba",
             "egymásba rakható",
             "orosz"
+        ]
+    },
+    "1FA87": {
+        "emoji": "🪇",
+        "tags": [
+            "csörgő",
+            "hangszer",
+            "ráz",
+            "zene",
+            "ütőhangszer"
+        ]
+    },
+    "1FA88": {
+        "emoji": "🪈",
+        "tags": [
+            "blockflöte",
+            "fafúvós",
+            "fife",
+            "furulya",
+            "zene"
         ]
     },
     "1FA90": {
@@ -12872,6 +12938,34 @@
             "védelem"
         ]
     },
+    "1FAAD": {
+        "emoji": "🪭",
+        "tags": [
+            "forróság",
+            "félénk",
+            "hűtés",
+            "legyez",
+            "legyező",
+            "tánc"
+        ]
+    },
+    "1FAAE": {
+        "emoji": "🪮",
+        "tags": [
+            "afro",
+            "fogú",
+            "fésű",
+            "haj",
+            "hosszú"
+        ]
+    },
+    "1FAAF": {
+        "emoji": "🪯",
+        "tags": [
+            "szikh",
+            "vallás"
+        ]
+    },
     "1FAB0": {
         "emoji": "🪰",
         "tags": [
@@ -12961,6 +13055,46 @@
             "fészekrakás"
         ]
     },
+    "1FABB": {
+        "emoji": "🪻",
+        "tags": [
+            "búzavirág",
+            "csillagfürt",
+            "levendula",
+            "tátika",
+            "virág"
+        ]
+    },
+    "1FABC": {
+        "emoji": "🪼",
+        "tags": [
+            "csíp",
+            "gerinctelen",
+            "jaj",
+            "kocsonyás",
+            "szúrószerv",
+            "tengeri"
+        ]
+    },
+    "1FABD": {
+        "emoji": "🪽",
+        "tags": [
+            "angyal",
+            "madár",
+            "mitológia",
+            "repül",
+            "repülés"
+        ]
+    },
+    "1FABF": {
+        "emoji": "🪿",
+        "tags": [
+            "bolondos",
+            "gágog",
+            "madár",
+            "szárnyas"
+        ]
+    },
     "1FAC0": {
         "emoji": "🫀",
         "tags": [
@@ -13015,6 +13149,24 @@
             "nemes",
             "uralkodó",
             "uralkodói"
+        ]
+    },
+    "1FACE": {
+        "emoji": "🫎",
+        "tags": [
+            "agancs",
+            "emlős",
+            "állat"
+        ]
+    },
+    "1FACF": {
+        "emoji": "🫏",
+        "tags": [
+            "csacsi",
+            "emlős",
+            "makacs",
+            "állat",
+            "öszvér"
         ]
     },
     "1FAD0": {
@@ -13096,6 +13248,25 @@
             "üres"
         ]
     },
+    "1FADA": {
+        "emoji": "🫚",
+        "tags": [
+            "fűszer",
+            "gyökér",
+            "sör"
+        ]
+    },
+    "1FADB": {
+        "emoji": "🫛",
+        "tags": [
+            "bab",
+            "borsó",
+            "edamame",
+            "hüvely",
+            "hüvelyes",
+            "zöldség"
+        ]
+    },
     "1FAE0": {
         "emoji": "🫠",
         "tags": [
@@ -13137,10 +13308,10 @@
     "1FAE4": {
         "emoji": "🫤",
         "tags": [
-            "azta",
             "bizonytalan",
             "csalódott",
-            "kétkedő"
+            "kétkedő",
+            "meh"
         ]
     },
     "1FAE5": {
@@ -13171,6 +13342,16 @@
             "szappan",
             "tiszta",
             "víz alatti"
+        ]
+    },
+    "1FAE8": {
+        "emoji": "🫨",
+        "tags": [
+            "arc",
+            "földrengés",
+            "meglepődés",
+            "rezeg",
+            "rázkódó"
         ]
     },
     "1FAF0": {
@@ -13227,6 +13408,28 @@
         "emoji": "🫶",
         "tags": [
             "szeretet"
+        ]
+    },
+    "1FAF7": {
+        "emoji": "🫷",
+        "tags": [
+            "balra",
+            "elutasít",
+            "pacsi",
+            "stop",
+            "tol",
+            "vár"
+        ]
+    },
+    "1FAF8": {
+        "emoji": "🫸",
+        "tags": [
+            "elutasít",
+            "jobbra",
+            "pacsi",
+            "stop",
+            "tol",
+            "vár"
         ]
     },
     "203C": {

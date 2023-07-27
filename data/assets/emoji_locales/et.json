@@ -4412,6 +4412,16 @@
             "lind"
         ]
     },
+    "1F426-200D-2B1B": {
+        "emoji": "🐦‍⬛",
+        "tags": [
+            "bird",
+            "black",
+            "crow",
+            "raven",
+            "rook"
+        ]
+    },
     "1F427": {
         "emoji": "🐧",
         "tags": [
@@ -8153,6 +8163,7 @@
         "emoji": "😃",
         "tags": [
             "avatud",
+            "avatud suuga naerunägu",
             "lahti",
             "naeratus",
             "nägu",
@@ -9633,6 +9644,14 @@
             "elevaator",
             "ligipääs",
             "tõstuk"
+        ]
+    },
+    "1F6DC": {
+        "emoji": "🛜",
+        "tags": [
+            "arvuti",
+            "internet",
+            "võrk"
         ]
     },
     "1F6DD": {
@@ -12330,6 +12349,34 @@
             "sandaalid"
         ]
     },
+    "1FA75": {
+        "emoji": "🩵",
+        "tags": [
+            "helesinine",
+            "rohekassinine",
+            "sinakasroheline",
+            "süda"
+        ]
+    },
+    "1FA76": {
+        "emoji": "🩶",
+        "tags": [
+            "hall",
+            "hõbedane",
+            "paehall",
+            "süda"
+        ]
+    },
+    "1FA77": {
+        "emoji": "🩷",
+        "tags": [
+            "armas",
+            "armastus",
+            "meeldib",
+            "roosa",
+            "süda"
+        ]
+    },
     "1FA78": {
         "emoji": "🩸",
         "tags": [
@@ -12426,6 +12473,26 @@
             "matrjoškad",
             "nukk",
             "vene"
+        ]
+    },
+    "1FA87": {
+        "emoji": "🪇",
+        "tags": [
+            "instrument",
+            "kõristi",
+            "löökpill",
+            "muusika",
+            "raputus"
+        ]
+    },
+    "1FA88": {
+        "emoji": "🪈",
+        "tags": [
+            "muusika",
+            "puhkpill",
+            "puupuhkpill",
+            "vile",
+            "vilepill"
         ]
     },
     "1FA90": {
@@ -12672,6 +12739,33 @@
             "miriam"
         ]
     },
+    "1FAAD": {
+        "emoji": "🪭",
+        "tags": [
+            "häbelik",
+            "jahutus",
+            "kuum",
+            "tants",
+            "tuul"
+        ]
+    },
+    "1FAAE": {
+        "emoji": "🪮",
+        "tags": [
+            "afro",
+            "hark",
+            "juuksed",
+            "kamm"
+        ]
+    },
+    "1FAAF": {
+        "emoji": "🪯",
+        "tags": [
+            "religioon",
+            "sikh",
+            "sikhism"
+        ]
+    },
     "1FAB0": {
         "emoji": "🪰",
         "tags": [
@@ -12761,6 +12855,44 @@
             "pesitsemine"
         ]
     },
+    "1FABB": {
+        "emoji": "🪻",
+        "tags": [
+            "lavendel",
+            "lill",
+            "lupiin",
+            "lõvilõug"
+        ]
+    },
+    "1FABC": {
+        "emoji": "🪼",
+        "tags": [
+            "kõrvetus",
+            "mereelukas",
+            "mollusk",
+            "põletus",
+            "selgrootu"
+        ]
+    },
+    "1FABD": {
+        "emoji": "🪽",
+        "tags": [
+            "ingel",
+            "lend",
+            "lendamine",
+            "lind",
+            "mütoloogia"
+        ]
+    },
+    "1FABF": {
+        "emoji": "🪿",
+        "tags": [
+            "jaht",
+            "lind",
+            "prääks",
+            "tobe"
+        ]
+    },
     "1FAC0": {
         "emoji": "🫀",
         "tags": [
@@ -12814,6 +12946,25 @@
             "kuninglik",
             "monarh",
             "valitseja"
+        ]
+    },
+    "1FACE": {
+        "emoji": "🫎",
+        "tags": [
+            "hirv",
+            "imetaja",
+            "loom",
+            "sarved"
+        ]
+    },
+    "1FACF": {
+        "emoji": "🫏",
+        "tags": [
+            "imetaja",
+            "jonnakas",
+            "kangekaelne",
+            "loom",
+            "muul"
         ]
     },
     "1FAD0": {
@@ -12899,6 +13050,25 @@
             "tühi"
         ]
     },
+    "1FADA": {
+        "emoji": "🫚",
+        "tags": [
+            "ingverijuur",
+            "vürts",
+            "õlu"
+        ]
+    },
+    "1FADB": {
+        "emoji": "🫛",
+        "tags": [
+            "edamame",
+            "hernes",
+            "kaun",
+            "kaunvili",
+            "köögivili",
+            "oad"
+        ]
+    },
     "1FAE0": {
         "emoji": "🫠",
         "tags": [
@@ -12975,6 +13145,16 @@
             "vee all"
         ]
     },
+    "1FAE8": {
+        "emoji": "🫨",
+        "tags": [
+            "maavärin",
+            "nägu",
+            "vibratsioon",
+            "värin",
+            "šokk"
+        ]
+    },
     "1FAF0": {
         "emoji": "🫰",
         "tags": [
@@ -13029,6 +13209,28 @@
         "emoji": "🫶",
         "tags": [
             "armastus"
+        ]
+    },
+    "1FAF7": {
+        "emoji": "🫷",
+        "tags": [
+            "keeldu",
+            "lükka",
+            "oota",
+            "stopp",
+            "vasakue",
+            "viska viis"
+        ]
+    },
+    "1FAF8": {
+        "emoji": "🫸",
+        "tags": [
+            "keeldu",
+            "lükka",
+            "oota",
+            "paremale",
+            "stopp",
+            "viska viis"
         ]
     },
     "203C": {

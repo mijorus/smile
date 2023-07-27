@@ -4463,6 +4463,16 @@
             "animale"
         ]
     },
+    "1F426-200D-2B1B": {
+        "emoji": "🐦‍⬛",
+        "tags": [
+            "bird",
+            "black",
+            "crow",
+            "raven",
+            "rook"
+        ]
+    },
     "1F427": {
         "emoji": "🐧",
         "tags": [
@@ -6335,7 +6345,7 @@
     "1F499": {
         "emoji": "💙",
         "tags": [
-            "azzurro",
+            "blu",
             "cuore",
             "emozione"
         ]
@@ -9732,6 +9742,14 @@
             "montacarichi"
         ]
     },
+    "1F6DC": {
+        "emoji": "🛜",
+        "tags": [
+            "computer",
+            "internet",
+            "rete"
+        ]
+    },
     "1F6DD": {
         "emoji": "🛝",
         "tags": [
@@ -10852,7 +10870,10 @@
     "1F969": {
         "emoji": "🥩",
         "tags": [
-            "taglio di carne"
+            "bistecca",
+            "costoletta di maiale",
+            "costoletta d’agnello",
+            "taglio"
         ]
     },
     "1F96A": {
@@ -12456,6 +12477,32 @@
             "spiaggia"
         ]
     },
+    "1FA75": {
+        "emoji": "🩵",
+        "tags": [
+            "azzurro",
+            "celeste",
+            "cuore"
+        ]
+    },
+    "1FA76": {
+        "emoji": "🩶",
+        "tags": [
+            "ardesia",
+            "argento",
+            "cuore",
+            "grigio"
+        ]
+    },
+    "1FA77": {
+        "emoji": "🩷",
+        "tags": [
+            "amore",
+            "cuore",
+            "emozione",
+            "rosa"
+        ]
+    },
     "1FA78": {
         "emoji": "🩸",
         "tags": [
@@ -12558,6 +12605,26 @@
         "tags": [
             "bambola",
             "russia"
+        ]
+    },
+    "1FA87": {
+        "emoji": "🪇",
+        "tags": [
+            "agitare",
+            "musica",
+            "percussioni",
+            "scuotere",
+            "strumento"
+        ]
+    },
+    "1FA88": {
+        "emoji": "🪈",
+        "tags": [
+            "fiato",
+            "legno",
+            "musica",
+            "piffero",
+            "strumento"
         ]
     },
     "1FA90": {
@@ -12817,6 +12884,31 @@
             "protezione"
         ]
     },
+    "1FAAD": {
+        "emoji": "🪭",
+        "tags": [
+            "aria",
+            "caldo",
+            "rinfrescare",
+            "sventolare",
+            "timidezza"
+        ]
+    },
+    "1FAAE": {
+        "emoji": "🪮",
+        "tags": [
+            "afro",
+            "capelli",
+            "pettine"
+        ]
+    },
+    "1FAAF": {
+        "emoji": "🪯",
+        "tags": [
+            "religione",
+            "sikh"
+        ]
+    },
     "1FAB0": {
         "emoji": "🪰",
         "tags": [
@@ -12908,6 +13000,45 @@
             "nidificazione"
         ]
     },
+    "1FABB": {
+        "emoji": "🪻",
+        "tags": [
+            "bocca di leone",
+            "fiore",
+            "lavanda",
+            "lupino"
+        ]
+    },
+    "1FABC": {
+        "emoji": "🪼",
+        "tags": [
+            "bruciatura",
+            "dolore",
+            "invertebrato",
+            "mare",
+            "trasparente",
+            "urticante"
+        ]
+    },
+    "1FABD": {
+        "emoji": "🪽",
+        "tags": [
+            "angelo",
+            "aviazione",
+            "mitologia",
+            "uccello",
+            "volare"
+        ]
+    },
+    "1FABF": {
+        "emoji": "🪿",
+        "tags": [
+            "pollame",
+            "starnazzare",
+            "stupidità",
+            "uccello"
+        ]
+    },
     "1FAC0": {
         "emoji": "🫀",
         "tags": [
@@ -12965,6 +13096,24 @@
             "re",
             "regale",
             "regina"
+        ]
+    },
+    "1FACE": {
+        "emoji": "🫎",
+        "tags": [
+            "animale",
+            "corna",
+            "mammifero"
+        ]
+    },
+    "1FACF": {
+        "emoji": "🫏",
+        "tags": [
+            "animale",
+            "mammifero",
+            "mulo",
+            "somaro",
+            "testardo"
         ]
     },
     "1FAD0": {
@@ -13046,6 +13195,24 @@
             "salsa",
             "sugo",
             "vuoto"
+        ]
+    },
+    "1FADA": {
+        "emoji": "🫚",
+        "tags": [
+            "birra",
+            "radice",
+            "spezia"
+        ]
+    },
+    "1FADB": {
+        "emoji": "🫛",
+        "tags": [
+            "baccello",
+            "edamame",
+            "legume",
+            "pisello",
+            "vegetale"
         ]
     },
     "1FAE0": {
@@ -13136,6 +13303,16 @@
             "subacqueo"
         ]
     },
+    "1FAE8": {
+        "emoji": "🫨",
+        "tags": [
+            "faccina",
+            "shock",
+            "terremoto",
+            "tremante",
+            "tremare"
+        ]
+    },
     "1FAF0": {
         "emoji": "🫰",
         "tags": [
@@ -13196,6 +13373,28 @@
             "cuore",
             "ti amo",
             "ti voglio bene"
+        ]
+    },
+    "1FAF7": {
+        "emoji": "🫷",
+        "tags": [
+            "aspettare",
+            "fermare",
+            "palmo",
+            "rifiutare",
+            "sinistra",
+            "spingere"
+        ]
+    },
+    "1FAF8": {
+        "emoji": "🫸",
+        "tags": [
+            "aspettare",
+            "destra",
+            "fermare",
+            "palmo",
+            "rifiutare",
+            "spingere"
         ]
     },
     "203C": {

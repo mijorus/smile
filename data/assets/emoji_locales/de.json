@@ -4708,6 +4708,16 @@
             "vogel"
         ]
     },
+    "1F426-200D-2B1B": {
+        "emoji": "🐦‍⬛",
+        "tags": [
+            "bird",
+            "black",
+            "crow",
+            "raven",
+            "rook"
+        ]
+    },
     "1F427": {
         "emoji": "🐧",
         "tags": [
@@ -10139,6 +10149,17 @@
             "lift"
         ]
     },
+    "1F6DC": {
+        "emoji": "🛜",
+        "tags": [
+            "computer",
+            "drahtlos",
+            "internet",
+            "kabellos",
+            "netzwerk",
+            "wlan"
+        ]
+    },
     "1F6DD": {
         "emoji": "🛝",
         "tags": [
@@ -11482,13 +11503,12 @@
         "emoji": "🥹",
         "tags": [
             "aufgebracht",
-            "erbost",
             "gesicht",
             "gesicht, das tränen zurückhält",
+            "stolz",
             "traurig",
             "tränen zurückhalten",
-            "weinen",
-            "zurückhalten"
+            "weinen"
         ]
     },
     "1F97A": {
@@ -11737,7 +11757,6 @@
     "1F998": {
         "emoji": "🦘",
         "tags": [
-            "australien",
             "hüpfen",
             "känguru"
         ]
@@ -12005,7 +12024,6 @@
         "emoji": "🦸",
         "tags": [
             "comic",
-            "gut",
             "held",
             "superheld",
             "superheld(in)",
@@ -13148,6 +13166,37 @@
             "zehensandalen"
         ]
     },
+    "1FA75": {
+        "emoji": "🩵",
+        "tags": [
+            "aquamarin",
+            "hellblau",
+            "hellblaues herz",
+            "herz",
+            "türkis"
+        ]
+    },
+    "1FA76": {
+        "emoji": "🩶",
+        "tags": [
+            "grau",
+            "graues herz",
+            "herz",
+            "schieferfarben",
+            "silberfarben"
+        ]
+    },
+    "1FA77": {
+        "emoji": "🩷",
+        "tags": [
+            "flirten",
+            "herz",
+            "pink",
+            "pinkes herz",
+            "süß",
+            "verliebt"
+        ]
+    },
     "1FA78": {
         "emoji": "🩸",
         "tags": [
@@ -13222,7 +13271,6 @@
     "1FA83": {
         "emoji": "🪃",
         "tags": [
-            "australien",
             "boomerang",
             "bumerang"
         ]
@@ -13253,6 +13301,18 @@
             "matroschka",
             "puppe",
             "russland"
+        ]
+    },
+    "1FA87": {
+        "emoji": "🪇",
+        "tags": [
+            "maracas"
+        ]
+    },
+    "1FA88": {
+        "emoji": "🪈",
+        "tags": [
+            "flöte"
         ]
     },
     "1FA90": {
@@ -13524,10 +13584,30 @@
             "fatima",
             "glückssymbol",
             "hamsa",
-            "hand",
             "maria",
             "miriam",
             "schutz"
+        ]
+    },
+    "1FAAD": {
+        "emoji": "🪭",
+        "tags": [
+            "faltfächer"
+        ]
+    },
+    "1FAAE": {
+        "emoji": "🪮",
+        "tags": [
+            "haarkamm"
+        ]
+    },
+    "1FAAF": {
+        "emoji": "🪯",
+        "tags": [
+            "khanda",
+            "religion",
+            "schwert",
+            "sikhismus"
         ]
     },
     "1FAB0": {
@@ -13599,10 +13679,8 @@
             "blume",
             "buddhismus",
             "hinduismus",
-            "indien",
             "lotusblüte",
-            "reinheit",
-            "vietnam"
+            "reinheit"
         ]
     },
     "1FAB8": {
@@ -13632,6 +13710,50 @@
             "nestbau",
             "nisten",
             "vogelnest"
+        ]
+    },
+    "1FABB": {
+        "emoji": "🪻",
+        "tags": [
+            "blaue wiesenlupine",
+            "blume",
+            "blüte",
+            "hyazinthe",
+            "lupine",
+            "löwenmaul"
+        ]
+    },
+    "1FABC": {
+        "emoji": "🪼",
+        "tags": [
+            "autsch",
+            "brennen",
+            "gallert",
+            "glibber",
+            "meerestier",
+            "nesseltier",
+            "qualle"
+        ]
+    },
+    "1FABD": {
+        "emoji": "🪽",
+        "tags": [
+            "engelsflügel",
+            "federn",
+            "fliegen",
+            "flügel",
+            "mythologie",
+            "vogel"
+        ]
+    },
+    "1FABF": {
+        "emoji": "🪿",
+        "tags": [
+            "blöd",
+            "dumm",
+            "gans",
+            "geflügel",
+            "vogel"
         ]
     },
     "1FAC0": {
@@ -13697,6 +13819,27 @@
             "monarch",
             "monarchin",
             "person mit krone"
+        ]
+    },
+    "1FACE": {
+        "emoji": "🫎",
+        "tags": [
+            "elch",
+            "geweih",
+            "säugetier",
+            "tier"
+        ]
+    },
+    "1FACF": {
+        "emoji": "🫏",
+        "tags": [
+            "dummkopf",
+            "esel",
+            "maultier",
+            "stur",
+            "störrisch",
+            "säugetier",
+            "tier"
         ]
     },
     "1FAD0": {
@@ -13771,7 +13914,6 @@
             "gießen",
             "glas",
             "leer",
-            "trinken",
             "verschütten"
         ]
     },
@@ -13796,6 +13938,27 @@
             "marmeladeglas"
         ]
     },
+    "1FADA": {
+        "emoji": "🫚",
+        "tags": [
+            "gewürz",
+            "ginger ale",
+            "ingwer",
+            "ingwerbier",
+            "wurzel"
+        ]
+    },
+    "1FADB": {
+        "emoji": "🫛",
+        "tags": [
+            "edamame",
+            "erbsen",
+            "erbsenschote",
+            "gemüse",
+            "hülsenfrucht",
+            "schote"
+        ]
+    },
     "1FAE0": {
         "emoji": "🫠",
         "tags": [
@@ -13812,12 +13975,11 @@
         "tags": [
             "aye, aye",
             "gesicht",
-            "grüßendes gesicht",
-            "jawohl",
             "militär",
             "ok",
             "respekt",
-            "salutieren"
+            "salutieren",
+            "salutierendes gesicht"
         ]
     },
     "1FAE2": {
@@ -13825,7 +13987,6 @@
         "tags": [
             "erschrecken",
             "erstaunen",
-            "furcht",
             "gesicht",
             "gesicht mit offenen augen und hand über dem mund",
             "unglauben",
@@ -13859,9 +14020,9 @@
     "1FAE5": {
         "emoji": "🫥",
         "tags": [
-            "depressiv",
+            "deprimiert",
             "gesicht",
-            "gesicht mit gestrichelter linie",
+            "gestricheltes gesicht",
             "introvertiert",
             "unsichtbar",
             "verschwinden",
@@ -13889,6 +14050,16 @@
             "seifenblasen",
             "unter wasser",
             "wasserblasen"
+        ]
+    },
+    "1FAE8": {
+        "emoji": "🫨",
+        "tags": [
+            "erdbeben",
+            "gesicht",
+            "schock",
+            "zittern",
+            "zitterndes doppelgesicht"
         ]
     },
     "1FAF0": {
@@ -13926,7 +14097,6 @@
             "hand mit handfläche nach unten",
             "handgeste",
             "hau ab",
-            "scheuchen",
             "von sich weisen",
             "wegscheuchen",
             "wegschicken"
@@ -13936,7 +14106,6 @@
         "emoji": "🫴",
         "tags": [
             "anbieten",
-            "bieten",
             "darbieten",
             "einladen",
             "hand mit handfläche nach oben",
@@ -13965,6 +14134,29 @@
             "hände, die herz bilden",
             "händeherz",
             "liebe"
+        ]
+    },
+    "1FAF7": {
+        "emoji": "🫷",
+        "tags": [
+            "high five",
+            "nach links",
+            "nach links schiebende hand",
+            "schieben",
+            "stopp",
+            "warte mal"
+        ]
+    },
+    "1FAF8": {
+        "emoji": "🫸",
+        "tags": [
+            "high 5",
+            "high five",
+            "nach rechts",
+            "nach rechts schiebende hand",
+            "schieben",
+            "stopp",
+            "warte mal"
         ]
     },
     "203C": {

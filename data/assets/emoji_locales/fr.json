@@ -3265,6 +3265,7 @@
         "emoji": "🎱",
         "tags": [
             "billard",
+            "boule magique",
             "jeu",
             "pool"
         ]
@@ -4167,6 +4168,16 @@
         "emoji": "🐦️",
         "tags": [
             "animal"
+        ]
+    },
+    "1F426-200D-2B1B": {
+        "emoji": "🐦‍⬛",
+        "tags": [
+            "bird",
+            "black",
+            "crow",
+            "raven",
+            "rook"
         ]
     },
     "1F427": {
@@ -8894,6 +8905,15 @@
             "monte-personnes"
         ]
     },
+    "1F6DC": {
+        "emoji": "🛜",
+        "tags": [
+            "internet",
+            "ordinateur",
+            "réseau",
+            "wi-fi"
+        ]
+    },
     "1F6DD": {
         "emoji": "🛝",
         "tags": [
@@ -9024,6 +9044,7 @@
             "glisse",
             "longboard",
             "roulettes",
+            "skate",
             "skateboard"
         ]
     },
@@ -9810,7 +9831,6 @@
     "1F94F": {
         "emoji": "🥏",
         "tags": [
-            "discoplane",
             "frisbee",
             "sport",
             "ultimate",
@@ -10056,8 +10076,7 @@
             "amour",
             "amoureux",
             "béguin",
-            "cœurs",
-            "sourire"
+            "cœurs"
         ]
     },
     "1F971": {
@@ -10137,9 +10156,11 @@
     "1F979": {
         "emoji": "🥹",
         "tags": [
+            "gratitude",
             "pleurs",
             "retenir ses larmes",
-            "triste"
+            "triste",
+            "ému"
         ]
     },
     "1F97A": {
@@ -10365,7 +10386,6 @@
     "1F998": {
         "emoji": "🦘",
         "tags": [
-            "australie",
             "joey",
             "marsupial",
             "saut"
@@ -11665,6 +11685,31 @@
             "tongs"
         ]
     },
+    "1FA75": {
+        "emoji": "🩵",
+        "tags": [
+            "bleu clair",
+            "bleu sarcelle",
+            "cyan"
+        ]
+    },
+    "1FA76": {
+        "emoji": "🩶",
+        "tags": [
+            "ardoise",
+            "argent",
+            "gris"
+        ]
+    },
+    "1FA77": {
+        "emoji": "🩷",
+        "tags": [
+            "aimer",
+            "amour",
+            "mignon",
+            "rose"
+        ]
+    },
     "1FA78": {
         "emoji": "🩸",
         "tags": [
@@ -11695,10 +11740,10 @@
     "1FA7B": {
         "emoji": "🩻",
         "tags": [
+            "cage thoracique",
             "docteur",
             "médical",
             "os",
-            "poumons",
             "rayons x",
             "squelette"
         ]
@@ -11739,7 +11784,6 @@
     "1FA83": {
         "emoji": "🪃",
         "tags": [
-            "australie",
             "répercussion"
         ]
     },
@@ -11766,6 +11810,25 @@
             "emboîté",
             "matriochka",
             "russe"
+        ]
+    },
+    "1FA87": {
+        "emoji": "🪇",
+        "tags": [
+            "instrument",
+            "musique",
+            "percussion",
+            "secouer"
+        ]
+    },
+    "1FA88": {
+        "emoji": "🪈",
+        "tags": [
+            "bois",
+            "fifre",
+            "flûte à bec",
+            "instrument",
+            "musique"
         ]
     },
     "1FA90": {
@@ -12009,6 +12072,7 @@
         "emoji": "🪫",
         "tags": [
             "batterie",
+            "batterie faible",
             "déchargé",
             "électronique",
             "énergie faible"
@@ -12024,6 +12088,31 @@
             "main de fatma",
             "myriam",
             "protection"
+        ]
+    },
+    "1FAAD": {
+        "emoji": "🪭",
+        "tags": [
+            "chaleur",
+            "danse",
+            "rafraîchir",
+            "timide",
+            "éventer"
+        ]
+    },
+    "1FAAE": {
+        "emoji": "🪮",
+        "tags": [
+            "afro",
+            "cheveux",
+            "démêler"
+        ]
+    },
+    "1FAAF": {
+        "emoji": "🪯",
+        "tags": [
+            "religion",
+            "sikh"
         ]
     },
     "1FAB0": {
@@ -12091,9 +12180,7 @@
             "bouddhisme",
             "fleur",
             "hindouisme",
-            "inde",
-            "pureté",
-            "viêt nam"
+            "pureté"
         ]
     },
     "1FAB8": {
@@ -12113,6 +12200,45 @@
         "emoji": "🪺",
         "tags": [
             "faire son nid"
+        ]
+    },
+    "1FABB": {
+        "emoji": "🪻",
+        "tags": [
+            "fleur",
+            "lavande",
+            "lupin",
+            "muflier"
+        ]
+    },
+    "1FABC": {
+        "emoji": "🪼",
+        "tags": [
+            "aïe",
+            "brûlure",
+            "invertébré",
+            "marin",
+            "mou",
+            "piqûre"
+        ]
+    },
+    "1FABD": {
+        "emoji": "🪽",
+        "tags": [
+            "angélique",
+            "aviation",
+            "mythologie",
+            "oiseau",
+            "voler"
+        ]
+    },
+    "1FABF": {
+        "emoji": "🪿",
+        "tags": [
+            "bête",
+            "cacarder",
+            "oiseau",
+            "volaille"
         ]
     },
     "1FAC0": {
@@ -12149,6 +12275,7 @@
         "tags": [
             "enceinte",
             "grossesse",
+            "homme enceinte",
             "ventre"
         ]
     },
@@ -12167,6 +12294,27 @@
             "noble",
             "royal",
             "royauté"
+        ]
+    },
+    "1FACE": {
+        "emoji": "🫎",
+        "tags": [
+            "animal",
+            "bois",
+            "cervidé",
+            "mammifère",
+            "orignal",
+            "ramure"
+        ]
+    },
+    "1FACF": {
+        "emoji": "🫏",
+        "tags": [
+            "animal",
+            "bourricot",
+            "mammifère",
+            "mule",
+            "têtu"
         ]
     },
     "1FAD0": {
@@ -12254,6 +12402,24 @@
             "vide"
         ]
     },
+    "1FADA": {
+        "emoji": "🫚",
+        "tags": [
+            "bière",
+            "épice"
+        ]
+    },
+    "1FADB": {
+        "emoji": "🫛",
+        "tags": [
+            "edamame",
+            "fève",
+            "haricot",
+            "légume",
+            "légumineuse",
+            "pois"
+        ]
+    },
     "1FAE0": {
         "emoji": "🫠",
         "tags": [
@@ -12297,6 +12463,7 @@
     "1FAE4": {
         "emoji": "🫤",
         "tags": [
+            "bof",
             "déçu",
             "euh",
             "incertain",
@@ -12329,6 +12496,15 @@
             "propre",
             "savon",
             "sous l’eau"
+        ]
+    },
+    "1FAE8": {
+        "emoji": "🫨",
+        "tags": [
+            "choc",
+            "secoué",
+            "tremblement de terre",
+            "vibration"
         ]
     },
     "1FAF0": {
@@ -12386,6 +12562,28 @@
         "tags": [
             "amour",
             "cœur"
+        ]
+    },
+    "1FAF7": {
+        "emoji": "🫷",
+        "tags": [
+            "arrêter",
+            "attendre",
+            "gauche",
+            "high five",
+            "pousser",
+            "refuser"
+        ]
+    },
+    "1FAF8": {
+        "emoji": "🫸",
+        "tags": [
+            "arrêter",
+            "attendre",
+            "droite",
+            "high five",
+            "pousser",
+            "refuser"
         ]
     },
     "203C": {

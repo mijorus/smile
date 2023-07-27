@@ -2591,8 +2591,7 @@
         "emoji": "🌸",
         "tags": [
             "cerezo",
-            "flor",
-            "primavera"
+            "flor"
         ]
     },
     "1F339": {
@@ -2611,18 +2610,14 @@
     "1F33B": {
         "emoji": "🌻",
         "tags": [
-            "pipas",
-            "planta",
-            "semillas",
+            "flor",
             "sol"
         ]
     },
     "1F33C": {
         "emoji": "🌼",
         "tags": [
-            "campo",
-            "planta",
-            "primavera"
+            "flor"
         ]
     },
     "1F33D": {
@@ -3596,6 +3591,7 @@
             "instrumento",
             "instrumento musical",
             "música",
+            "piano",
             "teclado"
         ]
     },
@@ -3642,9 +3638,9 @@
     "1F3BF": {
         "emoji": "🎿",
         "tags": [
-            "deporte",
             "esquí",
-            "esquíes"
+            "esquíes",
+            "nieve"
         ]
     },
     "1F3C0": {
@@ -3668,7 +3664,7 @@
     "1F3C2": {
         "emoji": "🏂️",
         "tags": [
-            "deporte",
+            "nieve",
             "snowboard"
         ]
     },
@@ -3701,8 +3697,8 @@
     "1F3C4": {
         "emoji": "🏄️",
         "tags": [
-            "deporte",
-            "surf"
+            "surf",
+            "surfear"
         ]
     },
     "1F3C4-200D-2640-FE0F": {
@@ -3764,7 +3760,6 @@
     "1F3CA": {
         "emoji": "🏊️",
         "tags": [
-            "deporte",
             "nadar",
             "natación"
         ]
@@ -3814,6 +3809,7 @@
         "emoji": "🏌️",
         "tags": [
             "golf",
+            "golfista",
             "pelota"
         ]
     },
@@ -3860,7 +3856,8 @@
         "tags": [
             "balón",
             "juego",
-            "pelota"
+            "pelota",
+            "voleibol"
         ]
     },
     "1F3D1": {
@@ -4072,7 +4069,7 @@
         "emoji": "🏫",
         "tags": [
             "edificio",
-            "edificio de colegio"
+            "escuela"
         ]
     },
     "1F3EC": {
@@ -4285,7 +4282,7 @@
     "1F403": {
         "emoji": "🐃",
         "tags": [
-            "animal",
+            "agua",
             "búfalo"
         ]
     },
@@ -4333,7 +4330,6 @@
     "1F409": {
         "emoji": "🐉",
         "tags": [
-            "animal",
             "cuento",
             "fantasía"
         ]
@@ -4369,8 +4365,8 @@
     "1F40E": {
         "emoji": "🐎",
         "tags": [
-            "caballo corriendo",
-            "caballo de carrera",
+            "caballo de carreras",
+            "carreras de caballos",
             "ecuestre"
         ]
     },
@@ -4471,15 +4467,15 @@
     "1F41A": {
         "emoji": "🐚",
         "tags": [
-            "animal",
-            "concha"
+            "concha",
+            "mar"
         ]
     },
     "1F41B": {
         "emoji": "🐛",
         "tags": [
-            "bicho",
-            "gusano"
+            "gusano",
+            "insecto"
         ]
     },
     "1F41C": {
@@ -4492,7 +4488,6 @@
     "1F41D": {
         "emoji": "🐝",
         "tags": [
-            "flores",
             "insecto",
             "miel"
         ]
@@ -4500,7 +4495,8 @@
     "1F41E": {
         "emoji": "🐞",
         "tags": [
-            "cochinilla"
+            "cochinilla",
+            "insecto"
         ]
     },
     "1F41F": {
@@ -4515,15 +4511,13 @@
     "1F420": {
         "emoji": "🐠",
         "tags": [
-            "animal",
-            "pescado",
-            "pez"
+            "pez",
+            "tropical"
         ]
     },
     "1F421": {
         "emoji": "🐡",
         "tags": [
-            "animal",
             "globo",
             "pez"
         ]
@@ -4546,7 +4540,6 @@
     "1F424": {
         "emoji": "🐤",
         "tags": [
-            "animal",
             "ave",
             "pollo",
             "polluelo"
@@ -4555,7 +4548,6 @@
     "1F425": {
         "emoji": "🐥",
         "tags": [
-            "animal",
             "ave",
             "pollito",
             "pollo"
@@ -4568,6 +4560,16 @@
             "pajarillo"
         ]
     },
+    "1F426-200D-2B1B": {
+        "emoji": "🐦‍⬛",
+        "tags": [
+            "bird",
+            "black",
+            "crow",
+            "raven",
+            "rook"
+        ]
+    },
     "1F427": {
         "emoji": "🐧",
         "tags": [
@@ -4577,7 +4579,8 @@
     "1F428": {
         "emoji": "🐨",
         "tags": [
-            "bambú"
+            "cara",
+            "marsupial"
         ]
     },
     "1F429": {
@@ -4613,7 +4616,6 @@
     "1F42D": {
         "emoji": "🐭",
         "tags": [
-            "animal",
             "cara",
             "ratón"
         ]
@@ -4621,7 +4623,6 @@
     "1F42E": {
         "emoji": "🐮",
         "tags": [
-            "animal",
             "cara",
             "vaca"
         ]
@@ -4629,24 +4630,24 @@
     "1F42F": {
         "emoji": "🐯",
         "tags": [
-            "animal",
+            "cara",
             "tigre"
         ]
     },
     "1F430": {
         "emoji": "🐰",
         "tags": [
-            "animal",
             "cara",
-            "conejo"
+            "conejo",
+            "mascota"
         ]
     },
     "1F431": {
         "emoji": "🐱",
         "tags": [
-            "animal",
             "cara",
-            "gato"
+            "gato",
+            "mascota"
         ]
     },
     "1F432": {
@@ -4661,7 +4662,6 @@
     "1F433": {
         "emoji": "🐳",
         "tags": [
-            "animal",
             "ballena",
             "chorro de agua"
         ]
@@ -4669,7 +4669,6 @@
     "1F434": {
         "emoji": "🐴",
         "tags": [
-            "animal",
             "caballo",
             "cara"
         ]
@@ -4677,7 +4676,6 @@
     "1F435": {
         "emoji": "🐵",
         "tags": [
-            "animal",
             "cara",
             "mono"
         ]
@@ -4685,30 +4683,28 @@
     "1F436": {
         "emoji": "🐶",
         "tags": [
-            "animal",
             "cara",
+            "mascota",
             "perro"
         ]
     },
     "1F437": {
         "emoji": "🐷",
         "tags": [
-            "animal",
             "cara",
-            "cerdo"
+            "cerdo",
+            "gorrino"
         ]
     },
     "1F438": {
         "emoji": "🐸",
         "tags": [
-            "animal",
             "cara"
         ]
     },
     "1F439": {
         "emoji": "🐹",
         "tags": [
-            "animal",
             "cara",
             "mascota"
         ]
@@ -4722,7 +4718,6 @@
     "1F43B": {
         "emoji": "🐻",
         "tags": [
-            "animal",
             "cara"
         ]
     },
@@ -4738,7 +4733,6 @@
     "1F43C": {
         "emoji": "🐼",
         "tags": [
-            "animal",
             "cara",
             "oso panda"
         ]
@@ -4755,7 +4749,6 @@
     "1F43E": {
         "emoji": "🐾",
         "tags": [
-            "animal",
             "huellas",
             "pezuñas"
         ]
@@ -4763,7 +4756,7 @@
     "1F43F": {
         "emoji": "🐿️",
         "tags": [
-            "animal"
+            "ardilla"
         ]
     },
     "1F440": {
@@ -4801,8 +4794,6 @@
     "1F444": {
         "emoji": "👄",
         "tags": [
-            "cara",
-            "cuerpo",
             "labios"
         ]
     },
@@ -4988,16 +4979,14 @@
         "tags": [
             "accesorios",
             "cartera",
-            "complementos",
-            "mujer"
+            "complementos"
         ]
     },
     "1F45C": {
         "emoji": "👜",
         "tags": [
             "accesorios",
-            "complementos",
-            "mujer"
+            "complementos"
         ]
     },
     "1F45D": {
@@ -5056,7 +5045,6 @@
     "1F463": {
         "emoji": "👣",
         "tags": [
-            "cuerpo",
             "huellas",
             "pies"
         ]
@@ -5065,7 +5053,6 @@
         "emoji": "👤",
         "tags": [
             "busto",
-            "personas",
             "silueta"
         ]
     },
@@ -5073,7 +5060,6 @@
         "emoji": "👥",
         "tags": [
             "bustos",
-            "personas",
             "siluetas"
         ]
     },
@@ -5178,10 +5164,7 @@
         "tags": [
             "familia",
             "hombre",
-            "madre",
-            "niño",
-            "padre",
-            "personas"
+            "niño"
         ]
     },
     "1F468-200D-1F466-200D-1F466": {
@@ -5189,10 +5172,7 @@
         "tags": [
             "familia",
             "hombre",
-            "madre",
-            "niño",
-            "padre",
-            "personas"
+            "niño"
         ]
     },
     "1F468-200D-1F467": {
@@ -5200,11 +5180,7 @@
         "tags": [
             "familia",
             "hombre",
-            "madre",
-            "niña",
-            "niño",
-            "padre",
-            "personas"
+            "niña"
         ]
     },
     "1F468-200D-1F467-200D-1F466": {
@@ -5212,11 +5188,8 @@
         "tags": [
             "familia",
             "hombre",
-            "madre",
             "niña",
-            "niño",
-            "padre",
-            "personas"
+            "niño"
         ]
     },
     "1F468-200D-1F467-200D-1F467": {
@@ -5224,11 +5197,7 @@
         "tags": [
             "familia",
             "hombre",
-            "madre",
-            "niña",
-            "niño",
-            "padre",
-            "personas"
+            "niña"
         ]
     },
     "1F468-200D-1F468-200D-1F466": {
@@ -5236,10 +5205,7 @@
         "tags": [
             "familia",
             "hombre",
-            "madre",
-            "niño",
-            "padre",
-            "personas"
+            "niño"
         ]
     },
     "1F468-200D-1F468-200D-1F466-200D-1F466": {
@@ -5247,10 +5213,7 @@
         "tags": [
             "familia",
             "hombre",
-            "madre",
-            "niño",
-            "padre",
-            "personas"
+            "niño"
         ]
     },
     "1F468-200D-1F468-200D-1F467": {
@@ -5258,11 +5221,7 @@
         "tags": [
             "familia",
             "hombre",
-            "madre",
-            "niña",
-            "niño",
-            "padre",
-            "personas"
+            "niña"
         ]
     },
     "1F468-200D-1F468-200D-1F467-200D-1F466": {
@@ -5270,11 +5229,8 @@
         "tags": [
             "familia",
             "hombre",
-            "madre",
             "niña",
-            "niño",
-            "padre",
-            "personas"
+            "niño"
         ]
     },
     "1F468-200D-1F468-200D-1F467-200D-1F467": {
@@ -5282,11 +5238,7 @@
         "tags": [
             "familia",
             "hombre",
-            "madre",
-            "niña",
-            "niño",
-            "padre",
-            "personas"
+            "niña"
         ]
     },
     "1F468-200D-1F469-200D-1F466": {
@@ -5294,11 +5246,8 @@
         "tags": [
             "familia",
             "hombre",
-            "madre",
             "mujer",
-            "niño",
-            "padre",
-            "personas"
+            "niño"
         ]
     },
     "1F468-200D-1F469-200D-1F466-200D-1F466": {
@@ -5306,11 +5255,8 @@
         "tags": [
             "familia",
             "hombre",
-            "madre",
             "mujer",
-            "niño",
-            "padre",
-            "personas"
+            "niño"
         ]
     },
     "1F468-200D-1F469-200D-1F467": {
@@ -5318,12 +5264,8 @@
         "tags": [
             "familia",
             "hombre",
-            "madre",
             "mujer",
-            "niña",
-            "niño",
-            "padre",
-            "personas"
+            "niña"
         ]
     },
     "1F468-200D-1F469-200D-1F467-200D-1F466": {
@@ -5331,12 +5273,9 @@
         "tags": [
             "familia",
             "hombre",
-            "madre",
             "mujer",
             "niña",
-            "niño",
-            "padre",
-            "personas"
+            "niño"
         ]
     },
     "1F468-200D-1F469-200D-1F467-200D-1F467": {
@@ -5344,12 +5283,8 @@
         "tags": [
             "familia",
             "hombre",
-            "madre",
             "mujer",
-            "niña",
-            "niño",
-            "padre",
-            "personas"
+            "niña"
         ]
     },
     "1F468-200D-1F4BB": {
@@ -5502,12 +5437,10 @@
         "emoji": "👨‍❤️‍👨",
         "tags": [
             "amor",
-            "corazón",
             "hombre",
-            "hombre y mujer enamorados",
             "pareja",
             "pareja enamorada",
-            "personas"
+            "personas enamoradas"
         ]
     },
     "1F468-200D-2764-FE0F-200D-1F48B-200D-1F468": {
@@ -5606,116 +5539,82 @@
         "emoji": "👩‍👦",
         "tags": [
             "familia",
-            "madre",
             "mujer",
-            "niño",
-            "padre",
-            "personas"
+            "niño"
         ]
     },
     "1F469-200D-1F466-200D-1F466": {
         "emoji": "👩‍👦‍👦",
         "tags": [
             "familia",
-            "madre",
             "mujer",
-            "niño",
-            "padre",
-            "personas"
+            "niño"
         ]
     },
     "1F469-200D-1F467": {
         "emoji": "👩‍👧",
         "tags": [
             "familia",
-            "madre",
             "mujer",
-            "niña",
-            "niño",
-            "padre",
-            "personas"
+            "niña"
         ]
     },
     "1F469-200D-1F467-200D-1F466": {
         "emoji": "👩‍👧‍👦",
         "tags": [
             "familia",
-            "madre",
             "mujer",
             "niña",
-            "niño",
-            "padre",
-            "personas"
+            "niño"
         ]
     },
     "1F469-200D-1F467-200D-1F467": {
         "emoji": "👩‍👧‍👧",
         "tags": [
             "familia",
-            "madre",
             "mujer",
-            "niña",
-            "niño",
-            "padre",
-            "personas"
+            "niña"
         ]
     },
     "1F469-200D-1F469-200D-1F466": {
         "emoji": "👩‍👩‍👦",
         "tags": [
             "familia",
-            "madre",
             "mujer",
-            "niño",
-            "padre",
-            "personas"
+            "niño"
         ]
     },
     "1F469-200D-1F469-200D-1F466-200D-1F466": {
         "emoji": "👩‍👩‍👦‍👦",
         "tags": [
             "familia",
-            "madre",
             "mujer",
-            "niño",
-            "padre",
-            "personas"
+            "niño"
         ]
     },
     "1F469-200D-1F469-200D-1F467": {
         "emoji": "👩‍👩‍👧",
         "tags": [
             "familia",
-            "madre",
             "mujer",
-            "niña",
-            "niño",
-            "padre",
-            "personas"
+            "niña"
         ]
     },
     "1F469-200D-1F469-200D-1F467-200D-1F466": {
         "emoji": "👩‍👩‍👧‍👦",
         "tags": [
             "familia",
-            "madre",
             "mujer",
             "niña",
-            "niño",
-            "padre",
-            "personas"
+            "niño"
         ]
     },
     "1F469-200D-1F469-200D-1F467-200D-1F467": {
         "emoji": "👩‍👩‍👧‍👧",
         "tags": [
             "familia",
-            "madre",
             "mujer",
-            "niña",
-            "niño",
-            "padre",
-            "personas"
+            "niña"
         ]
     },
     "1F469-200D-1F4BB": {
@@ -5868,25 +5767,21 @@
         "emoji": "👩‍❤️‍👨",
         "tags": [
             "amor",
-            "corazón",
             "hombre",
-            "hombre y mujer enamorados",
             "mujer",
             "pareja",
             "pareja enamorada",
-            "personas"
+            "personas enamoradas"
         ]
     },
     "1F469-200D-2764-FE0F-200D-1F469": {
         "emoji": "👩‍❤️‍👩",
         "tags": [
             "amor",
-            "corazón",
-            "hombre y mujer enamorados",
             "mujer",
             "pareja",
             "pareja enamorada",
-            "personas"
+            "personas enamoradas"
         ]
     },
     "1F469-200D-2764-FE0F-200D-1F48B-200D-1F468": {
@@ -5911,10 +5806,7 @@
     "1F46A": {
         "emoji": "👪️",
         "tags": [
-            "madre",
-            "niño",
-            "padre",
-            "personas"
+            "familia"
         ]
     },
     "1F46B": {
@@ -5974,8 +5866,8 @@
     "1F46F": {
         "emoji": "👯",
         "tags": [
+            "bailar",
             "fiesta",
-            "mujeres",
             "orejas de conejo",
             "personas"
         ]
@@ -6055,15 +5947,14 @@
         "tags": [
             "gorro",
             "gua",
-            "hombre",
-            "mao"
+            "gua pi mao",
+            "mao",
+            "persona"
         ]
     },
     "1F473": {
         "emoji": "👳",
         "tags": [
-            "hombre",
-            "personas",
             "turbante"
         ]
     },
@@ -6108,7 +5999,6 @@
             "casco",
             "construcción",
             "obrero",
-            "personas",
             "trabajador"
         ]
     },
@@ -6245,7 +6135,7 @@
     "1F482": {
         "emoji": "💂",
         "tags": [
-            "personas"
+            "guardia real británica"
         ]
     },
     "1F482-200D-2640-FE0F": {
@@ -6415,18 +6305,15 @@
         "tags": [
             "bouquet",
             "flores",
-            "ramo",
-            "romance"
+            "ramo"
         ]
     },
     "1F491": {
         "emoji": "💑",
         "tags": [
             "amor",
-            "corazón",
-            "hombre y mujer enamorados",
             "pareja",
-            "personas"
+            "personas enamoradas"
         ]
     },
     "1F492": {
@@ -6995,7 +6882,7 @@
     "1F4DA": {
         "emoji": "📚️",
         "tags": [
-            "libros"
+            "libro"
         ]
     },
     "1F4DB": {
@@ -7524,6 +7411,8 @@
     "1F51E": {
         "emoji": "🔞",
         "tags": [
+            "18",
+            "no apto para menores",
             "prohibido",
             "prohibido para menores de 18 años"
         ]
@@ -7776,7 +7665,7 @@
     "1F54A": {
         "emoji": "🕊️",
         "tags": [
-            "animal",
+            "ave",
             "paz",
             "pájaro"
         ]
@@ -8012,9 +7901,9 @@
     "1F574": {
         "emoji": "🕴️",
         "tags": [
-            "hombre",
             "levitar",
             "negocios",
+            "persona",
             "traje"
         ]
     },
@@ -8057,7 +7946,6 @@
     "1F577": {
         "emoji": "🕷️",
         "tags": [
-            "animal",
             "insecto"
         ]
     },
@@ -9162,9 +9050,11 @@
     "1F64F": {
         "emoji": "🙏",
         "tags": [
+            "gracias",
             "mano",
             "oración",
             "orar",
+            "por favor",
             "rezar"
         ]
     },
@@ -9204,6 +9094,7 @@
     "1F684": {
         "emoji": "🚄",
         "tags": [
+            "ave",
             "ferrocarril",
             "rápido",
             "tren",
@@ -9884,6 +9775,15 @@
             "montacargas"
         ]
     },
+    "1F6DC": {
+        "emoji": "🛜",
+        "tags": [
+            "conexión",
+            "internet",
+            "red",
+            "wi-fi"
+        ]
+    },
     "1F6DD": {
         "emoji": "🛝",
         "tags": [
@@ -10222,6 +10122,7 @@
         "emoji": "🤔",
         "tags": [
             "cara",
+            "duda",
             "pensando"
         ]
     },
@@ -10616,19 +10517,16 @@
     "1F93A": {
         "emoji": "🤺",
         "tags": [
-            "deporte",
+            "esgrima",
             "esgrimista",
-            "espada",
-            "persona"
+            "espada"
         ]
     },
     "1F93C": {
         "emoji": "🤼",
         "tags": [
-            "deporte",
             "lucha",
-            "luchador",
-            "persona"
+            "luchador"
         ]
     },
     "1F93C-200D-2640-FE0F": {
@@ -10652,8 +10550,6 @@
     "1F93D": {
         "emoji": "🤽",
         "tags": [
-            "deporte",
-            "persona",
             "waterpolista",
             "waterpolo"
         ]
@@ -10680,9 +10576,7 @@
         "emoji": "🤾",
         "tags": [
             "balonmanista",
-            "balonmano",
-            "deporte",
-            "persona"
+            "balonmano"
         ]
     },
     "1F93E-200D-2640-FE0F": {
@@ -10719,8 +10613,7 @@
             "flor",
             "marchita",
             "marchitada",
-            "marchitarse",
-            "tristeza"
+            "marchitarse"
         ]
     },
     "1F941": {
@@ -11183,9 +11076,9 @@
     "1F979": {
         "emoji": "🥹",
         "tags": [
-            "dolor",
             "emocionado",
-            "enfadado",
+            "emoción",
+            "llorar",
             "orgulloso",
             "resistir",
             "triste"
@@ -11239,7 +11132,6 @@
         "emoji": "🥿",
         "tags": [
             "calzado",
-            "mujer",
             "zapato"
         ]
     },
@@ -11269,7 +11161,6 @@
     "1F983": {
         "emoji": "🦃",
         "tags": [
-            "animal",
             "ave"
         ]
     },
@@ -11294,7 +11185,6 @@
     "1F987": {
         "emoji": "🦇",
         "tags": [
-            "animal",
             "vampiro"
         ]
     },
@@ -11315,7 +11205,6 @@
     "1F98A": {
         "emoji": "🦊",
         "tags": [
-            "animal",
             "cara"
         ]
     },
@@ -11329,15 +11218,15 @@
     "1F98C": {
         "emoji": "🦌",
         "tags": [
-            "animal",
-            "cara"
+            "bambi",
+            "cervatillo"
         ]
     },
     "1F98D": {
         "emoji": "🦍",
         "tags": [
-            "animal",
-            "cara"
+            "primate",
+            "simio"
         ]
     },
     "1F98E": {
@@ -11350,8 +11239,7 @@
     "1F98F": {
         "emoji": "🦏",
         "tags": [
-            "animal",
-            "cabeza"
+            "paquidermo"
         ]
     },
     "1F990": {
@@ -11413,7 +11301,6 @@
     "1F998": {
         "emoji": "🦘",
         "tags": [
-            "australia",
             "marsupial",
             "salto"
         ]
@@ -12220,7 +12107,6 @@
         "tags": [
             "barbas",
             "barbudo",
-            "hombre",
             "persona"
         ]
     },
@@ -12382,7 +12268,8 @@
     "1F9DC": {
         "emoji": "🧜",
         "tags": [
-            "sirena"
+            "sirena",
+            "tritón"
         ]
     },
     "1F9DC-200D-2640-FE0F": {
@@ -12442,7 +12329,6 @@
     "1F9DF": {
         "emoji": "🧟",
         "tags": [
-            "caminante",
             "muerto viviente",
             "no muerto"
         ]
@@ -12770,6 +12656,35 @@
             "sandalia"
         ]
     },
+    "1FA75": {
+        "emoji": "🩵",
+        "tags": [
+            "azul",
+            "celeste",
+            "cián",
+            "claro",
+            "corazón"
+        ]
+    },
+    "1FA76": {
+        "emoji": "🩶",
+        "tags": [
+            "corazón",
+            "gris",
+            "pizarra",
+            "plata"
+        ]
+    },
+    "1FA77": {
+        "emoji": "🩷",
+        "tags": [
+            "amor",
+            "bonito",
+            "corazón",
+            "gustar",
+            "rosa"
+        ]
+    },
     "1FA78": {
         "emoji": "🩸",
         "tags": [
@@ -12849,7 +12764,6 @@
     "1FA83": {
         "emoji": "🪃",
         "tags": [
-            "australia",
             "boomerang",
             "rebotar"
         ]
@@ -12880,6 +12794,25 @@
             "mamushka",
             "matrioska",
             "rusia"
+        ]
+    },
+    "1FA87": {
+        "emoji": "🪇",
+        "tags": [
+            "agitar",
+            "brasil",
+            "instrumento",
+            "movimiento",
+            "música",
+            "percusión"
+        ]
+    },
+    "1FA88": {
+        "emoji": "🪈",
+        "tags": [
+            "flautín",
+            "instrumento",
+            "música"
         ]
     },
     "1FA90": {
@@ -13151,6 +13084,34 @@
             "protección"
         ]
     },
+    "1FAAD": {
+        "emoji": "🪭",
+        "tags": [
+            "abanico",
+            "airear",
+            "bailar",
+            "calor",
+            "feria",
+            "flamenco"
+        ]
+    },
+    "1FAAE": {
+        "emoji": "🪮",
+        "tags": [
+            "afro",
+            "peine",
+            "pelo"
+        ]
+    },
+    "1FAAF": {
+        "emoji": "🪯",
+        "tags": [
+            "religión",
+            "sij",
+            "sijismo",
+            "sikh"
+        ]
+    },
     "1FAB0": {
         "emoji": "🪰",
         "tags": [
@@ -13218,9 +13179,7 @@
             "budismo",
             "flor",
             "hinduismo",
-            "india",
-            "pureza",
-            "vietnam"
+            "pureza"
         ]
     },
     "1FAB8": {
@@ -13246,13 +13205,53 @@
             "anidar"
         ]
     },
+    "1FABB": {
+        "emoji": "🪻",
+        "tags": [
+            "boca de dragón",
+            "flor",
+            "jacinto",
+            "lavanda",
+            "lila",
+            "lupino"
+        ]
+    },
+    "1FABC": {
+        "emoji": "🪼",
+        "tags": [
+            "invertebrado",
+            "marino",
+            "picadura",
+            "picar"
+        ]
+    },
+    "1FABD": {
+        "emoji": "🪽",
+        "tags": [
+            "angelical",
+            "ave",
+            "mitología",
+            "pájaro",
+            "volar",
+            "ángel"
+        ]
+    },
+    "1FABF": {
+        "emoji": "🪿",
+        "tags": [
+            "ave",
+            "ganso",
+            "graznar",
+            "pájaro"
+        ]
+    },
     "1FAC0": {
         "emoji": "🫀",
         "tags": [
-            "anatómico",
-            "centro",
+            "anatomía",
+            "cardiología",
+            "corazón",
             "latido",
-            "núcleo",
             "pulso",
             "órgano"
         ]
@@ -13300,11 +13299,34 @@
     "1FAC5": {
         "emoji": "🫅",
         "tags": [
+            "majestad",
             "monarca",
             "monarquía",
             "noble",
             "real",
             "realeza"
+        ]
+    },
+    "1FACE": {
+        "emoji": "🫎",
+        "tags": [
+            "animal",
+            "asta",
+            "ciervo canadiense",
+            "cuernos",
+            "mamífero",
+            "uapití"
+        ]
+    },
+    "1FACF": {
+        "emoji": "🫏",
+        "tags": [
+            "animal",
+            "asno",
+            "borrico",
+            "mamífero",
+            "mula",
+            "terco"
         ]
     },
     "1FAD0": {
@@ -13401,6 +13423,24 @@
             "vacío"
         ]
     },
+    "1FADA": {
+        "emoji": "🫚",
+        "tags": [
+            "cerveza",
+            "especia",
+            "garganta",
+            "raíz"
+        ]
+    },
+    "1FADB": {
+        "emoji": "🫛",
+        "tags": [
+            "guisante",
+            "legumbre",
+            "soja",
+            "verdura"
+        ]
+    },
     "1FAE0": {
         "emoji": "🫠",
         "tags": [
@@ -13457,10 +13497,11 @@
         "emoji": "🫥",
         "tags": [
             "depresivo",
+            "deprimido",
             "desaparecer",
             "esconderse",
-            "indivisible",
-            "introvertido"
+            "introvertido",
+            "invisible"
         ]
     },
     "1FAE6": {
@@ -13481,6 +13522,16 @@
             "eructar",
             "jabón",
             "limpiar"
+        ]
+    },
+    "1FAE8": {
+        "emoji": "🫨",
+        "tags": [
+            "cara",
+            "doble",
+            "shock",
+            "terremoto",
+            "vibrar"
         ]
     },
     "1FAF0": {
@@ -13542,6 +13593,30 @@
         "emoji": "🫶",
         "tags": [
             "amor"
+        ]
+    },
+    "1FAF7": {
+        "emoji": "🫷",
+        "tags": [
+            "choca esos cinco",
+            "detener",
+            "empujar",
+            "hacia la izquierda",
+            "parar",
+            "rechazar",
+            "stop"
+        ]
+    },
+    "1FAF8": {
+        "emoji": "🫸",
+        "tags": [
+            "choca esos cinco",
+            "detener",
+            "empujar",
+            "hacia la derecha",
+            "parar",
+            "rechazar",
+            "stop"
         ]
     },
     "203C": {
@@ -13691,6 +13766,7 @@
             "flecha",
             "flecha doble a la izquierda",
             "izquierda",
+            "rebobinado",
             "rebobinar"
         ]
     },
@@ -14287,9 +14363,9 @@
     "26A1": {
         "emoji": "⚡️",
         "tags": [
+            "electricidad",
             "peligro",
             "peligro de alto voltaje",
-            "señal",
             "señal de alto voltaje",
             "voltaje"
         ]
@@ -14469,6 +14545,7 @@
     "26F7": {
         "emoji": "⛷️",
         "tags": [
+            "esquiador",
             "esquí",
             "nieve"
         ]
@@ -14566,6 +14643,7 @@
     "270B": {
         "emoji": "✋",
         "tags": [
+            "choca esos cinco",
             "levantada",
             "mano"
         ]
@@ -14581,7 +14659,6 @@
     "270D": {
         "emoji": "✍️",
         "tags": [
-            "cuerpo",
             "escribir",
             "lápiz",
             "mano"
@@ -14883,7 +14960,7 @@
     "2B50": {
         "emoji": "⭐️",
         "tags": [
-            "estrella"
+            "estelar"
         ]
     },
     "2B55": {

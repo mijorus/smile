@@ -4585,6 +4585,16 @@
             "dyr"
         ]
     },
+    "1F426-200D-2B1B": {
+        "emoji": "🐦‍⬛",
+        "tags": [
+            "bird",
+            "black",
+            "crow",
+            "raven",
+            "rook"
+        ]
+    },
     "1F427": {
         "emoji": "🐧",
         "tags": [
@@ -10004,6 +10014,14 @@
             "tilgjengelighet"
         ]
     },
+    "1F6DC": {
+        "emoji": "🛜",
+        "tags": [
+            "datamaskin",
+            "internett",
+            "nettverk"
+        ]
+    },
     "1F6DD": {
         "emoji": "🛝",
         "tags": [
@@ -10029,7 +10047,6 @@
             "flyte",
             "livbøyle",
             "livredning",
-            "redningsaksjon",
             "redningsbøye",
             "redningsbøyle"
         ]
@@ -12826,6 +12843,34 @@
             "zoori"
         ]
     },
+    "1FA75": {
+        "emoji": "🩵",
+        "tags": [
+            "blågrønt",
+            "cyan",
+            "hjerte",
+            "lyseblått"
+        ]
+    },
+    "1FA76": {
+        "emoji": "🩶",
+        "tags": [
+            "grått",
+            "hjerte",
+            "skifer",
+            "sølv"
+        ]
+    },
+    "1FA77": {
+        "emoji": "🩷",
+        "tags": [
+            "elsker",
+            "hjerte",
+            "liker",
+            "rosa",
+            "søtt"
+        ]
+    },
     "1FA78": {
         "emoji": "🩸",
         "tags": [
@@ -12858,8 +12903,7 @@
             "lege",
             "ribbein",
             "ribben",
-            "skjelett",
-            "undersøkelse"
+            "skjelett"
         ]
     },
     "1FA7C": {
@@ -12930,6 +12974,24 @@
             "matruska",
             "russisk",
             "russland"
+        ]
+    },
+    "1FA87": {
+        "emoji": "🪇",
+        "tags": [
+            "instrument",
+            "musikk",
+            "perkusjon",
+            "riste",
+            "rytmeinstrument"
+        ]
+    },
+    "1FA88": {
+        "emoji": "🪈",
+        "tags": [
+            "blokkfløyte",
+            "musikk",
+            "treblåser"
         ]
     },
     "1FA90": {
@@ -13173,7 +13235,6 @@
             "id",
             "id-kort",
             "identifikasjon",
-            "leg",
             "legitimasjon",
             "sikkerhet"
         ]
@@ -13193,9 +13254,34 @@
             "beskyttelse",
             "fatima",
             "hånd",
-            "lykkebringer",
             "maria",
             "miriam"
+        ]
+    },
+    "1FAAD": {
+        "emoji": "🪭",
+        "tags": [
+            "avkjøling",
+            "blafre",
+            "blyg",
+            "dans",
+            "varmt",
+            "vifte"
+        ]
+    },
+    "1FAAE": {
+        "emoji": "🪮",
+        "tags": [
+            "afro",
+            "hår",
+            "kam"
+        ]
+    },
+    "1FAAF": {
+        "emoji": "🪯",
+        "tags": [
+            "religion",
+            "sikh"
         ]
     },
     "1FAB0": {
@@ -13295,6 +13381,44 @@
             "slå seg ned"
         ]
     },
+    "1FABB": {
+        "emoji": "🪻",
+        "tags": [
+            "blomst",
+            "klokkeblåstjerne",
+            "lavendel",
+            "lupin",
+            "svibel"
+        ]
+    },
+    "1FABC": {
+        "emoji": "🪼",
+        "tags": [
+            "au",
+            "brennmanet",
+            "glassmanet",
+            "havdyr"
+        ]
+    },
+    "1FABD": {
+        "emoji": "🪽",
+        "tags": [
+            "engleaktig",
+            "fly",
+            "flyr",
+            "fugl",
+            "mytologi"
+        ]
+    },
+    "1FABF": {
+        "emoji": "🪿",
+        "tags": [
+            "dum",
+            "fjærkre",
+            "fugl",
+            "tute"
+        ]
+    },
     "1FAC0": {
         "emoji": "🫀",
         "tags": [
@@ -13355,6 +13479,23 @@
             "kongelig",
             "majestetisk",
             "monark"
+        ]
+    },
+    "1FACE": {
+        "emoji": "🫎",
+        "tags": [
+            "dyr",
+            "gevir",
+            "pattedyr"
+        ]
+    },
+    "1FACF": {
+        "emoji": "🫏",
+        "tags": [
+            "dyr",
+            "muldyr",
+            "pattedyr",
+            "sta"
         ]
     },
     "1FAD0": {
@@ -13444,6 +13585,23 @@
             "tom"
         ]
     },
+    "1FADA": {
+        "emoji": "🫚",
+        "tags": [
+            "krydder",
+            "rot",
+            "øl"
+        ]
+    },
+    "1FADB": {
+        "emoji": "🫛",
+        "tags": [
+            "belg",
+            "bønner",
+            "erter",
+            "grønnsak"
+        ]
+    },
     "1FAE0": {
         "emoji": "🫠",
         "tags": [
@@ -13524,6 +13682,17 @@
             "vaske"
         ]
     },
+    "1FAE8": {
+        "emoji": "🫨",
+        "tags": [
+            "ansikt",
+            "fjes",
+            "jordskjelv",
+            "riste",
+            "sjokk",
+            "skjelvende"
+        ]
+    },
     "1FAF0": {
         "emoji": "🫰",
         "tags": [
@@ -13580,6 +13749,28 @@
         "tags": [
             "hender som lager hjerte",
             "kjærlighet"
+        ]
+    },
+    "1FAF7": {
+        "emoji": "🫷",
+        "tags": [
+            "high five",
+            "mot venstre",
+            "nekte",
+            "skyv",
+            "stopp",
+            "vent"
+        ]
+    },
+    "1FAF8": {
+        "emoji": "🫸",
+        "tags": [
+            "high five",
+            "mot høyre",
+            "nekte",
+            "skyv",
+            "stopp",
+            "vent"
         ]
     },
     "203C": {

@@ -2050,7 +2050,12 @@
         "tags": [
             "ideogram",
             "japoński",
-            "sa"
+            "opłata serwisowa",
+            "opłata za usługę",
+            "sa",
+            "sa w katakanie",
+            "usługa",
+            "zapłata za usługę"
         ]
     },
     "1F21A": {
@@ -4439,6 +4444,16 @@
             "ptaszek"
         ]
     },
+    "1F426-200D-2B1B": {
+        "emoji": "🐦‍⬛",
+        "tags": [
+            "bird",
+            "black",
+            "crow",
+            "raven",
+            "rook"
+        ]
+    },
     "1F427": {
         "emoji": "🐧",
         "tags": [
@@ -5808,7 +5823,7 @@
             "miłość",
             "para",
             "za ręce",
-            "zakochani"
+            "zakochane"
         ]
     },
     "1F46E": {
@@ -8049,7 +8064,8 @@
         "tags": [
             "gra",
             "gra komputerowa",
-            "gra wideo"
+            "gra wideo",
+            "joystick"
         ]
     },
     "1F57A": {
@@ -8114,6 +8130,7 @@
         "tags": [
             "dłoń",
             "palce",
+            "spock",
             "wolkański"
         ]
     },
@@ -9796,6 +9813,14 @@
             "dostępność"
         ]
     },
+    "1F6DC": {
+        "emoji": "🛜",
+        "tags": [
+            "internet",
+            "komputer",
+            "sieć"
+        ]
+    },
     "1F6DD": {
         "emoji": "🛝",
         "tags": [
@@ -9807,7 +9832,9 @@
     "1F6DE": {
         "emoji": "🛞",
         "tags": [
-            "koło pojazdu"
+            "koło",
+            "kręcić",
+            "opona"
         ]
     },
     "1F6DF": {
@@ -12511,6 +12538,34 @@
             "sandały na plażę"
         ]
     },
+    "1FA75": {
+        "emoji": "🩵",
+        "tags": [
+            "jasnoniebieskie",
+            "serce",
+            "turkusowe",
+            "zielononiebieskie"
+        ]
+    },
+    "1FA76": {
+        "emoji": "🩶",
+        "tags": [
+            "ciemnoszare",
+            "serce",
+            "srebrne",
+            "szare"
+        ]
+    },
+    "1FA77": {
+        "emoji": "🩷",
+        "tags": [
+            "lubić",
+            "miłość",
+            "różowe",
+            "serce",
+            "urocze"
+        ]
+    },
     "1FA78": {
         "emoji": "🩸",
         "tags": [
@@ -12607,6 +12662,26 @@
             "lalka",
             "matrioszka",
             "rosyjska"
+        ]
+    },
+    "1FA87": {
+        "emoji": "🪇",
+        "tags": [
+            "grzechotać",
+            "instrument",
+            "muzyka",
+            "perkusja",
+            "potrząsać"
+        ]
+    },
+    "1FA88": {
+        "emoji": "🪈",
+        "tags": [
+            "flet prosty",
+            "gwizdać",
+            "instrument dęty drewniany",
+            "muzyka",
+            "piszczałka"
         ]
     },
     "1FA90": {
@@ -12859,6 +12934,33 @@
             "ręka z okiem"
         ]
     },
+    "1FAAD": {
+        "emoji": "🪭",
+        "tags": [
+            "gorąco",
+            "nieśmiałość",
+            "ochłoda",
+            "taniec",
+            "wachlowanie",
+            "wachlować"
+        ]
+    },
+    "1FAAE": {
+        "emoji": "🪮",
+        "tags": [
+            "afro",
+            "grzebień",
+            "rozczesywanie",
+            "włosy"
+        ]
+    },
+    "1FAAF": {
+        "emoji": "🪯",
+        "tags": [
+            "religia",
+            "sikh"
+        ]
+    },
     "1FAB0": {
         "emoji": "🪰",
         "tags": [
@@ -12953,6 +13055,46 @@
             "gnieżdżenie"
         ]
     },
+    "1FABB": {
+        "emoji": "🪻",
+        "tags": [
+            "bławatek",
+            "chaber",
+            "kwiat",
+            "lawenda",
+            "lwia paszcza",
+            "łubin"
+        ]
+    },
+    "1FABC": {
+        "emoji": "🪼",
+        "tags": [
+            "ał",
+            "bezkręgowiec",
+            "galareta",
+            "morski",
+            "parzyć"
+        ]
+    },
+    "1FABD": {
+        "emoji": "🪽",
+        "tags": [
+            "anielskie",
+            "latający",
+            "latanie",
+            "mitologia",
+            "ptak"
+        ]
+    },
+    "1FABF": {
+        "emoji": "🪿",
+        "tags": [
+            "drób",
+            "gęganie",
+            "głuptas",
+            "ptak"
+        ]
+    },
     "1FAC0": {
         "emoji": "🫀",
         "tags": [
@@ -13010,6 +13152,24 @@
             "królewski",
             "monarcha",
             "szlachta"
+        ]
+    },
+    "1FACE": {
+        "emoji": "🫎",
+        "tags": [
+            "poroże",
+            "ssak",
+            "zwierzę"
+        ]
+    },
+    "1FACF": {
+        "emoji": "🫏",
+        "tags": [
+            "muł",
+            "osiołek",
+            "ssak",
+            "uparty",
+            "zwierzę"
         ]
     },
     "1FAD0": {
@@ -13098,6 +13258,26 @@
             "zapas"
         ]
     },
+    "1FADA": {
+        "emoji": "🫚",
+        "tags": [
+            "korzeń",
+            "piwo",
+            "przyprawa"
+        ]
+    },
+    "1FADB": {
+        "emoji": "🫛",
+        "tags": [
+            "edamam",
+            "edamame",
+            "fasola",
+            "groch",
+            "strąk",
+            "warzywo",
+            "łuskać"
+        ]
+    },
     "1FAE0": {
         "emoji": "🫠",
         "tags": [
@@ -13173,6 +13353,16 @@
             "pod wodą"
         ]
     },
+    "1FAE8": {
+        "emoji": "🫨",
+        "tags": [
+            "szok",
+            "trzęsienie ziemi",
+            "twarz",
+            "wibracje",
+            "wstrząs"
+        ]
+    },
     "1FAF0": {
         "emoji": "🫰",
         "tags": [
@@ -13227,6 +13417,28 @@
         "emoji": "🫶",
         "tags": [
             "miłość"
+        ]
+    },
+    "1FAF7": {
+        "emoji": "🫷",
+        "tags": [
+            "czekać",
+            "odmawiać",
+            "pchać",
+            "piątka",
+            "stop",
+            "w lewo"
+        ]
+    },
+    "1FAF8": {
+        "emoji": "🫸",
+        "tags": [
+            "czekać",
+            "odmawiać",
+            "pchać",
+            "piątka",
+            "stop",
+            "w prawo"
         ]
     },
     "203C": {
@@ -13591,6 +13803,8 @@
     "2603": {
         "emoji": "☃️",
         "tags": [
+            "bałwan",
+            "bałwan i płatki śniegu",
             "pogoda",
             "zabawa na śniegu",
             "zimno",
@@ -14079,6 +14293,7 @@
         "emoji": "⛄️",
         "tags": [
             "bałwan",
+            "bałwan bez śniegu",
             "pogoda",
             "zabawa na śniegu",
             "zimno",
@@ -14382,7 +14597,7 @@
     "2728": {
         "emoji": "✨",
         "tags": [
-            "* gwiazdki",
+            "*",
             "gwiazda",
             "gwiazdy"
         ]
