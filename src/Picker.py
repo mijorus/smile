@@ -77,7 +77,7 @@ class Picker(Gtk.ApplicationWindow):
         self.viewport_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, css_classes=['viewport'], vexpand=True)
 
         self.list_tip_revealer = Gtk.Revealer(reveal_child=False)
-        self.list_tip_label = Gtk.Label(label='', opacity=0.7, justify=Gtk.Justification.CENTER, margin_bottom=2)
+        self.list_tip_label = Gtk.Label(label='', justify=Gtk.Justification.CENTER, margin_bottom=2, css_classes=['dim-label'])
         self.list_tip_revealer.set_child(self.list_tip_label)
 
         self.emoji_list_widgets: list[FlowBoxChild] = []
@@ -90,6 +90,7 @@ class Picker(Gtk.ApplicationWindow):
         scrolled_container.set_child(self.emoji_list)
         scrolled.set_child(scrolled_container)
 
+        
         self.viewport_box.append(self.list_tip_revealer)
         self.viewport_box.append(scrolled)
         self.viewport_box.append(self.category_picker)
@@ -135,6 +136,8 @@ class Picker(Gtk.ApplicationWindow):
         self.set_active_category('smileys-emotion')
 
         self.set_child(self.overlay)
+
+        #self.update_list_tip('')
 
     def on_activation(self):
         self.present_with_time(Gdk.CURRENT_TIME)
@@ -219,10 +222,16 @@ class Picker(Gtk.ApplicationWindow):
     def handle_emoji_button_click(self, widget: Gtk.Button):
         widget.get_parent().grab_focus()
 
-        if (self.shift_key_pressed):
-            self.select_emoji_button(widget)
+        if self.settings.get_boolean('mouse-multi-select'):
+            if self.shift_key_pressed:
+                self.copy_and_quit(widget)
+            else:
+                self.select_emoji_button(widget)
         else:
-            self.copy_and_quit(widget)
+            if not self.shift_key_pressed:
+                self.copy_and_quit(widget)
+            else:
+                self.select_emoji_button(widget)
 
     # Handle key-presses
     def handle_window_key_release(self, controller: Gtk.EventController, keyval: int, keycode: int, state: Gdk.ModifierType) -> bool:
@@ -522,13 +531,15 @@ class Picker(Gtk.ApplicationWindow):
 
         self.emoji_list.invalidate_filter()
 
-        if widget.category == 'recents':
-            self.update_list_tip("Whoa, it's still empty! \nYour most used emojis will show up here\n")
+        if not self.selected_buttons:
+            if widget.category == 'recents':
+                if get_history():
+                    self.update_list_tip('Recently used emojis')
+                else:
+                    self.update_list_tip("Whoa, it's still empty! \nYour most used emojis will show up here\n")
+            else:
+                self.update_list_tip(None)
 
-            if (len(get_history())):
-                self.update_list_tip('Recently used emojis')
-        elif len(self.selected_buttons) == 0:
-            self.update_list_tip(None)
 
         self.emoji_list.invalidate_sort()
         self.load_first_row()

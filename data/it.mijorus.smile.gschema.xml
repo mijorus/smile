@@ -41,5 +41,8 @@
         <key name="auto-paste-xdotool" type="b">
             <default>true</default>
         </key>
+        <key name="mouse-multi-select" type="b">
+            <default>false</default>
+        </key>
     </schema>
 </schemalist>

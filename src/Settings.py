@@ -35,6 +35,10 @@ class Settings(Adw.PreferencesWindow):
             self.create_boolean_settings_entry(_('Minimize on exit'), 'iconify-on-esc',  _('Minimize the window when selecting an emoji'))
         )
 
+        general_group.add(
+            self.create_boolean_settings_entry(_('Mouse multi select'), 'mouse-multi-select',  _('Minimize the window when selecting an emoji'))
+        )
+
         general_group.add(self.create_launch_shortcut_settings_entry())
 
         paste_emoji_group = Adw.PreferencesGroup(title=_('Paste emojis automatically'))

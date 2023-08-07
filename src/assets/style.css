@@ -83,3 +83,8 @@
     margin: 10px;
     margin-bottom: 0;
 }
+
+.border-top {
+    border-top: 1px solid @borders;
+    padding-top: 2px;
+}
