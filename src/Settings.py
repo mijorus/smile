@@ -26,6 +26,8 @@ class Settings(Adw.PreferencesWindow):
             self.settings.set_string('tags-locale', 'da')
 
         self.page1 = Adw.PreferencesPage(title=_('Settings'), icon_name='smile-settings-symbolic')
+
+        # General group
         general_group = Adw.PreferencesGroup(title=_('General'))
         general_group.add(
             self.create_boolean_settings_entry(_('Run in the background'), 'load-hidden-on-startup', _('Keep Smile running in the background for a faster launch'))
@@ -35,12 +37,15 @@ class Settings(Adw.PreferencesWindow):
             self.create_boolean_settings_entry(_('Minimize on exit'), 'iconify-on-esc',  _('Minimize the window when selecting an emoji'))
         )
 
-        general_group.add(
-            self.create_boolean_settings_entry(_('Mouse multi select'), 'mouse-multi-select',  _('Minimize the window when selecting an emoji'))
-        )
-
         general_group.add(self.create_launch_shortcut_settings_entry())
 
+        # Mouse group
+        shortcuts_group = Adw.PreferencesGroup(title=_('Mouse behaviour'))
+        shortcuts_group.add(
+            self.create_boolean_settings_entry(_('Mouse multi select'), 'mouse-multi-select',  _('Select multiple emojis with a single mouse click, replacing Shift + Click; press Enter to confirm and Esc to dismiss.'))
+        )
+
+        # Paste emoji group
         paste_emoji_group = Adw.PreferencesGroup(title=_('Paste emojis automatically'))
         
         auto_paste_status = self.get_autopaste_status()
@@ -63,6 +68,7 @@ class Settings(Adw.PreferencesWindow):
         get_ext_link_row = UriRow(website=GNOME_EXTENSION_LINK, title=_('Get the GNOME extension'), subtitle=_('Install the extension to paste automatically on X11 and Wayland'))
         [paste_emoji_group.add(el) for el in [use_ext_row, get_ext_link_row]]
 
+        # Customization group
         customization_group = Adw.PreferencesGroup(title=_('Customization'))
         customization_group.add(self.create_modifiers_combo_boxes())
         customization_group.add(self.create_emoji_sizes_combo_boxes())
@@ -82,10 +88,9 @@ class Settings(Adw.PreferencesWindow):
         ]
 
         [self.localized_tags_group.add(item) for item in self.localized_tags_group_items]
-        [self.page1.add(el) for el in [general_group, paste_emoji_group, customization_group, self.localized_tags_group]]
+        [self.page1.add(el) for el in [general_group, shortcuts_group, paste_emoji_group, customization_group, self.localized_tags_group]]
 
         # Page 2
-
         self.page2 = Adw.PreferencesPage(title=_('Custom tags'), icon_name='smile-symbolic')
         self.custom_tags_list_box = Gtk.ListBox(css_classes=['boxed-list'])
         
