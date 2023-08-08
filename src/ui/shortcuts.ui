@@ -24,8 +24,8 @@
                                     </object>
                                 </child>
                                 <child>
-                                    <object class="GtkLabel">
-                                        <property name="label">Copy the selected emoji and hide the window</property>
+                                    <object id="left-click-label" class="GtkLabel">
+                                        <property name="label"></property>
                                     </object>
                                 </child>
                             </object>
@@ -95,8 +95,8 @@
                                     </object>
                                 </child>
                                 <child>
-                                    <object class="GtkLabel">
-                                        <property name="label">Add an emoji to selection</property>
+                                    <object id="shift-left-click-label" class="GtkLabel">
+                                        <property name="label"></property>
                                     </object>
                                 </child>
                             </object>
