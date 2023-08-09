@@ -84,7 +84,8 @@
     margin-bottom: 0;
 }
 
-.border-top {
+.selected-emojis-box {
     border-top: 1px solid @borders;
-    padding-top: 2px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }

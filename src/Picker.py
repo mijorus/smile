@@ -77,8 +77,11 @@ class Picker(Gtk.ApplicationWindow):
         self.viewport_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, css_classes=['viewport'], vexpand=True)
 
         self.list_tip_revealer = Gtk.Revealer(reveal_child=False)
-        self.list_tip_label = Gtk.Label(label='', justify=Gtk.Justification.CENTER, margin_bottom=2, css_classes=['dim-label'])
+        self.list_tip_label = Gtk.Label(margin_bottom=2, css_classes=['dim-label'])
         self.list_tip_revealer.set_child(self.list_tip_label)
+
+        self.select_buffer_label = Gtk.Label(margin_bottom=2, css_classes=['title-1', 'selected-emojis-box'], hexpand=True)
+        self.select_buffer_revealer = Gtk.Revealer(reveal_child=False, css_classes=[''], child=self.select_buffer_label)
 
         self.emoji_list_widgets: list[FlowBoxChild] = []
         self.emoji_list = self.create_emoji_list()
@@ -90,10 +93,10 @@ class Picker(Gtk.ApplicationWindow):
         scrolled_container.set_child(self.emoji_list)
         scrolled.set_child(scrolled_container)
 
-        
         self.viewport_box.append(self.list_tip_revealer)
         self.viewport_box.append(scrolled)
         self.viewport_box.append(self.category_picker)
+        self.viewport_box.append(self.select_buffer_revealer)
 
         # Create an header bar
         self.header_bar = Adw.HeaderBar(title_widget=Gtk.Box(), decoration_layout='icon:close', css_classes=['flat'])
@@ -136,8 +139,6 @@ class Picker(Gtk.ApplicationWindow):
         self.set_active_category('smileys-emotion')
 
         self.set_child(self.overlay)
-
-        #self.update_list_tip('')
 
     def on_activation(self):
         self.present_with_time(Gdk.CURRENT_TIME)
@@ -461,11 +462,13 @@ class Picker(Gtk.ApplicationWindow):
             self.list_tip_label.set_label(text)
             self.list_tip_revealer.set_reveal_child(True)
 
-    def update_selection_content(self, title: str = None):
-        if not title:
-            self.update_list_tip(None)
+    def update_selection_content(self, selection: str = None):
+        if selection:
+            self.select_buffer_label.set_label(''.join(selection[-8:]))
         else:
-            self.update_list_tip('Selected: ' + ''.join(title[-8:]))
+            self.select_buffer_label.set_label('')
+
+        self.select_buffer_revealer.set_reveal_child(True if selection else False)
 
     def set_active_category(self, category: str):
         for b in self.category_picker_widgets:
