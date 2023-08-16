@@ -80,8 +80,13 @@ class Picker(Gtk.ApplicationWindow):
         self.list_tip_label = Gtk.Label(margin_bottom=2, css_classes=['dim-label'])
         self.list_tip_revealer.set_child(self.list_tip_label)
 
-        self.select_buffer_label = Gtk.Label(margin_bottom=2, css_classes=['title-1', 'selected-emojis-box'], hexpand=True)
-        self.select_buffer_revealer = Gtk.Revealer(reveal_child=False, css_classes=[''], child=self.select_buffer_label)
+        self.select_buffer_label = Gtk.Label(margin_bottom=2, css_classes=['title-1'], hexpand=True, halign=Gtk.Align.START)
+        select_buffer_button = Gtk.Button(icon_name='arrow2-right-symbolic', valign=Gtk.Align.CENTER)
+        select_buffer_button.connect('clicked', lambda w: self.copy_and_quit())
+        select_buffer_container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, css_classes=['selected-emojis-box'])
+        [select_buffer_container.append(w) for w in [self.select_buffer_label, select_buffer_button]]
+
+        self.select_buffer_revealer = Gtk.Revealer(reveal_child=False, css_classes=[''], child=select_buffer_container)
 
         self.emoji_list_widgets: list[FlowBoxChild] = []
         self.emoji_list = self.create_emoji_list()
@@ -406,6 +411,8 @@ class Picker(Gtk.ApplicationWindow):
 
     def default_hiding_action(self):
         self.search_entry.set_text('')
+        self.select_buffer_label.set_text('')
+        self.select_buffer_revealer.set_revealed(False)
         self.query = None
         self.selection = []
         self.update_list_tip(None)
