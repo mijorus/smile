@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-08 10:34+0200\n"
+"POT-Creation-Date: 2023-08-17 16:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,33 +17,29 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.py:79
-msgid "Pro tip!"
-msgstr ""
-
-#: src/main.py:80
-msgid ""
-"You can now automatically paste emojis on X11 systems and with the GNOME "
-"extension on Wayland!"
-msgstr ""
-
-#: src/main.py:83
+#: src/main.py:94
 msgid "Dismiss"
 msgstr ""
 
-#: src/main.py:84
-msgid "Install"
-msgstr ""
-
-#: src/main.py:125
+#: src/main.py:132
 msgid "translator_credits"
 msgstr ""
 
-#: src/Picker.py:548
+#: src/Picker.py:550
+msgid "Recently used emojis"
+msgstr ""
+
+#: src/Picker.py:552
+msgid ""
+"Whoa, it's still empty! \n"
+"Your most used emojis will show up here\n"
+msgstr ""
+
+#: src/Picker.py:572
 msgid "Copied!"
 msgstr ""
 
-#: src/Picker.py:549
+#: src/Picker.py:573
 msgid ""
 "I have copied the emoji to the clipboard. You can now paste it in any input "
 "field."
@@ -53,139 +49,153 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: src/Settings.py:29
+#: src/Settings.py:31
 msgid "General"
 msgstr ""
 
-#: src/Settings.py:31
+#: src/Settings.py:33
 msgid "Run in the background"
 msgstr ""
 
-#: src/Settings.py:31
+#: src/Settings.py:33
 msgid "Keep Smile running in the background for a faster launch"
 msgstr ""
 
-#: src/Settings.py:35
+#: src/Settings.py:37
 msgid "Minimize on exit"
 msgstr ""
 
-#: src/Settings.py:35
+#: src/Settings.py:37
 msgid "Minimize the window when selecting an emoji"
 msgstr ""
 
-#: src/Settings.py:40
+#: src/Settings.py:43
+msgid "Mouse behaviour"
+msgstr ""
+
+#: src/Settings.py:45
+msgid "Mouse multi select"
+msgstr ""
+
+#: src/Settings.py:45
+msgid ""
+"Select multiple emojis with a single mouse click, replacing Shift + Click; "
+"press Enter to confirm and Esc to dismiss."
+msgstr ""
+
+#: src/Settings.py:49
 msgid "Paste emojis automatically"
 msgstr ""
 
-#: src/Settings.py:46
+#: src/Settings.py:55
 msgid "Status:"
 msgstr ""
 
-#: src/Settings.py:51
+#: src/Settings.py:60
 msgid "Enabled"
 msgstr ""
 
-#: src/Settings.py:53
+#: src/Settings.py:62
 msgid ""
 "Emulates the Ctrl+V shortcut; might <b>not work</b> on some programs.\n"
 "If using the extension, <b>please ensure that it is correctly ENABLED</b>."
 msgstr ""
 
-#: src/Settings.py:59
+#: src/Settings.py:68
 msgid "Get the GNOME extension"
 msgstr ""
 
-#: src/Settings.py:59
+#: src/Settings.py:68
 msgid "Install the extension to paste automatically on X11 and Wayland"
 msgstr ""
 
-#: src/Settings.py:62
+#: src/Settings.py:72
 msgid "Customization"
 msgstr ""
 
-#: src/Settings.py:66 src/Settings.py:238
+#: src/Settings.py:76 src/Settings.py:247
 msgid "Localized tags"
 msgstr ""
 
-#: src/Settings.py:68
+#: src/Settings.py:78
 msgid "Use localized tags"
 msgstr ""
 
-#: src/Settings.py:73
+#: src/Settings.py:83
 msgid "Merge localized and English tags"
 msgstr ""
 
-#: src/Settings.py:75
+#: src/Settings.py:85
 msgid "Use both localized tags and English ones at the same time"
 msgstr ""
 
-#: src/Settings.py:85
+#: src/Settings.py:94
 msgid "Custom tags"
 msgstr ""
 
-#: src/Settings.py:117
+#: src/Settings.py:126
 msgid "Available (using the GNOME extension)"
 msgstr ""
 
-#: src/Settings.py:119
+#: src/Settings.py:128
 msgid "Requires the GNOME extension on Wayland"
 msgstr ""
 
-#: src/Settings.py:121
+#: src/Settings.py:130
 msgid "Available (using xdotool on X11)"
 msgstr ""
 
-#: src/Settings.py:134
+#: src/Settings.py:143
 msgid "Launch the app with a shortcut"
 msgstr ""
 
-#: src/Settings.py:135
+#: src/Settings.py:144
 msgid ""
 "Create a new keyboard shortcut in your system settings and paste the "
 "following code as a custom command"
 msgstr ""
 
-#: src/Settings.py:171
+#: src/Settings.py:180
 msgid "Remove"
 msgstr ""
 
-#: src/Settings.py:189
+#: src/Settings.py:198
 msgid "There are no custom tags yet: create one with Alt + T"
 msgstr ""
 
-#: src/Settings.py:202
+#: src/Settings.py:211
 msgid "Default skintone"
 msgstr ""
 
-#: src/Settings.py:217
+#: src/Settings.py:226
 msgid "Emoji size"
 msgstr ""
 
-#: src/Settings.py:219
+#: src/Settings.py:228
 msgid "Default"
 msgstr ""
 
-#: src/Settings.py:220
+#: src/Settings.py:229
 msgid "Big"
 msgstr ""
 
-#: src/Settings.py:221
+#: src/Settings.py:230
 msgid "Bigger"
 msgstr ""
 
-#: src/Settings.py:222
+#: src/Settings.py:231
 msgid "Giant"
 msgstr ""
 
-#: src/Settings.py:321
+#: src/Settings.py:330
 msgid "Invalid file selected"
 msgstr ""
 
-#: src/Settings.py:322
+#: src/Settings.py:331
 msgid "The configuration file that you selected is not a valid backup."
 msgstr ""
 
-#: src/Settings.py:325
+#: src/Settings.py:334
 msgid "Close"
 msgstr ""
 
