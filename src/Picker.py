@@ -37,7 +37,7 @@ from .assets.emoji_list import emojis, emoji_categories
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Gdk, Adw, GLib, GObject  # noqa
+from gi.repository import Gtk, Gio, Gdk, Adw, GLib, Pango  # noqa
 
 
 class Picker(Gtk.ApplicationWindow):
@@ -80,11 +80,14 @@ class Picker(Gtk.ApplicationWindow):
         self.list_tip_label = Gtk.Label(margin_bottom=2, css_classes=['dim-label'])
         self.list_tip_revealer.set_child(self.list_tip_label)
 
-        self.select_buffer_label = Gtk.Label(margin_bottom=2, css_classes=['title-1'], hexpand=True, halign=Gtk.Align.START)
+        self.select_buffer_label = Gtk.Label(margin_bottom=2, css_classes=['title-2'], hexpand=True, halign=Gtk.Align.START, ellipsize=Pango.EllipsizeMode.START)
         select_buffer_button = Gtk.Button(icon_name='arrow2-right-symbolic', valign=Gtk.Align.CENTER)
+        pop_buffer_btn = Gtk.Button(icon_name='smile-entry-clear-symbolic', valign=Gtk.Align.CENTER, css_classes=['flat'])
+
         select_buffer_button.connect('clicked', lambda w: self.copy_and_quit())
-        select_buffer_container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, css_classes=['selected-emojis-box'])
-        [select_buffer_container.append(w) for w in [self.select_buffer_label, select_buffer_button]]
+        pop_buffer_btn.connect('clicked', lambda w: self.deselect_emoji_button())
+        select_buffer_container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, css_classes=['selected-emojis-box'], spacing=2)
+        [select_buffer_container.append(w) for w in [self.select_buffer_label, pop_buffer_btn, select_buffer_button]]
 
         self.select_buffer_revealer = Gtk.Revealer(reveal_child=False, css_classes=[''], child=select_buffer_container)
 
@@ -100,8 +103,8 @@ class Picker(Gtk.ApplicationWindow):
 
         self.viewport_box.append(self.list_tip_revealer)
         self.viewport_box.append(scrolled)
-        self.viewport_box.append(self.category_picker)
         self.viewport_box.append(self.select_buffer_revealer)
+        self.viewport_box.append(self.category_picker)
 
         # Create an header bar
         self.header_bar = Adw.HeaderBar(title_widget=Gtk.Box(), decoration_layout='icon:close', css_classes=['flat'])
@@ -165,7 +168,7 @@ class Picker(Gtk.ApplicationWindow):
         return Gtk.MenuButton(menu_model=menu, icon_name='open-menu-symbolic')
 
     def create_category_picker(self) -> Gtk.ScrolledWindow:
-        box = Gtk.Box(spacing=4, halign=Gtk.Align.CENTER, hexpand=True, margin_top=5, margin_bottom=7, name='emoji_categories_box')
+        box = Gtk.Box(spacing=4, halign=Gtk.Align.CENTER, hexpand=True, name='emoji_categories_box')
 
         i = 0
         for c, cat in emoji_categories.items():
@@ -401,10 +404,10 @@ class Picker(Gtk.ApplicationWindow):
                 self.copy_and_quit(self.emoji_grid_first_row[0].emoji_button)
 
     def send_paste_signal(self):
-        if not self.settings.get_boolean('auto-paste'):
+        if not self.settings.get_boolean('auto-paste') or not self.last_copied_text:
             return
 
-        if DbusService.dbus_connection and self.last_copied_text:
+        if DbusService.dbus_connection:
             DbusService.dbus_connection.emit_signal(None, DBUS_SERVICE_PATH, DBUS_SERVICE_INTERFACE, 'CopiedEmoji', GLib.Variant('(s)', (self.last_copied_text,)))
         elif os.getenv('XDG_SESSION_TYPE') != 'wayland':
             subprocess.check_output(['xdotool', 'key', 'ctrl+v'])
@@ -412,7 +415,7 @@ class Picker(Gtk.ApplicationWindow):
     def default_hiding_action(self):
         self.search_entry.set_text('')
         self.select_buffer_label.set_text('')
-        self.select_buffer_revealer.set_revealed(False)
+        self.select_buffer_revealer.set_reveal_child(False)
         self.query = None
         self.selection = []
         self.update_list_tip(None)
@@ -471,7 +474,7 @@ class Picker(Gtk.ApplicationWindow):
 
     def update_selection_content(self, selection: str = None):
         if selection:
-            self.select_buffer_label.set_label(''.join(selection[-8:]))
+            self.select_buffer_label.set_label(''.join(selection))
         else:
             self.select_buffer_label.set_label('')
 
@@ -541,15 +544,14 @@ class Picker(Gtk.ApplicationWindow):
 
         self.emoji_list.invalidate_filter()
 
-        if not self.selected_buttons:
-            if widget.category == 'recents':
-                if get_history():
-                    self.update_list_tip('Recently used emojis')
-                else:
-                    self.update_list_tip("Whoa, it's still empty! \nYour most used emojis will show up here\n")
+        new_list_tip = None
+        if widget.category == 'recents':
+            if get_history():
+                new_list_tip = _('Recently used emojis')
             else:
-                self.update_list_tip(None)
+                new_list_tip = _("Whoa, it's still empty! \nYour most used emojis will show up here\n")
 
+        self.update_list_tip(new_list_tip)
 
         self.emoji_list.invalidate_sort()
         self.load_first_row()
@@ -560,10 +562,11 @@ class Picker(Gtk.ApplicationWindow):
             text = button.get_label()
             increment_emoji_usage_counter(button)
 
-        contx = Gdk.ContentProvider.new_for_value(''.join([*self.selection, text]))
+        copied_text = ''.join([*self.selection, text])
+        contx = Gdk.ContentProvider.new_for_value(copied_text)
         self.clipboard.set_content(contx)
 
-        self.last_copied_text = text
+        self.last_copied_text = copied_text
 
         if self.settings.get_boolean('is-first-run'):
             n = Gio.Notification.new(_('Copied!'))

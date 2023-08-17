@@ -43,15 +43,16 @@
     outline: transparent;
 }
 
+#emoji_categories_box {
+   border-top: 1px solid @borders;
+   margin-top: 5px;
+   margin-bottom: 7px;
+}
+
 #emoji_categories_box button {
     margin: 0px;
     background: transparent;
     padding: 3px;
-}
-
-#emoji_categories_box {
-   border-top: 1px solid @borders;
-   margin-top: 3px;
 }
 
 #emoji_categories_box button:focus {
@@ -86,6 +87,7 @@
 
 .selected-emojis-box {
     border-top: 1px solid @borders;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    margin-top: 3px;
+    padding-top: 5px;
+    padding-bottom: 0px;
 }

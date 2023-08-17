@@ -73,20 +73,27 @@ class Smile(Adw.Application):
                 last_run_version = int(last_run_version if len(last_run_version) else '-1')
 
                 # any migration scripts should run here...
-                if last_run_version > 0 and last_run_version < 240:
+                new_features_messages = [
+                    # (from version, to version, message)
+                    (0, 240, '- Automatically paste emojis on X11 systems and with the GNOME extension on Wayland!'),
+                    (240, 280, '- Added an option to select multiple emojis on mouse click')
+                ]
+
+                modal_messages = []
+                for m in new_features_messages:
+                    if last_run_version >= m[0] and last_run_version < m[1]:
+                        modal_messages.append(m[2])
+
+                if modal_messages:
                     dialog = Adw.MessageDialog.new(
                         self.window,
-                        _('Pro tip!'),
-                        _('You can now automatically paste emojis on X11 systems and with the GNOME extension on Wayland!'),
+                        'New features!',
+                        '\n'.join(modal_messages),
                     )
 
                     dialog.add_response('dismiss', _('Dismiss'))
-                    dialog.add_response('install', _('Install'))
-
                     dialog.set_close_response('dismiss')
-                    dialog.set_response_appearance('install', Adw.ResponseAppearance.SUGGESTED)
 
-                    dialog.connect('response', lambda w, res_id: Gtk.UriLauncher.new(GNOME_EXTENSION_LINK).launch() if res_id == 'install' else None)
                     dialog.present()
 
                 self.settings.set_string('last-run-version', self.version)
