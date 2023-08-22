@@ -10,6 +10,13 @@
 </a>
 </p>
 
+
+##  Support me
+
+<a href="https://ko-fi.com/mijorus" align="center">
+  <img width="250" src="https://mijorus.it/kofi-support.png">
+</a>
+
 ##  1. <a name='Download'></a>Download
 
 ### Get from Flathub
