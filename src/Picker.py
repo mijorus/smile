@@ -122,7 +122,7 @@ class Picker(Gtk.ApplicationWindow):
         search_controller_key = Gtk.EventControllerKey()
         search_controller_key.connect(
             'key-pressed',
-            lambda q, w, e, r: self.default_hiding_action() if w == Gdk.KEY_Escape else False
+            lambda q, w, e, r: self.default_hiding_action(paste_on_exit=False) if w == Gdk.KEY_Escape else False
         )
 
         self.search_entry.add_controller(search_controller_key)
@@ -250,7 +250,7 @@ class Picker(Gtk.ApplicationWindow):
     # Handle every possible keypress here, returns True if the event was handled (prevent default)
     def handle_window_key_press(self, controller: Gtk.EventController, keyval: int, keycode: int, state: Gdk.ModifierType) -> bool:
         if (keyval == Gdk.KEY_Escape):
-            self.default_hiding_action()
+            self.default_hiding_action(paste_on_exit=False)
             return True
 
         self.shift_key_pressed = (keyval == Gdk.KEY_Shift_L or keyval == Gdk.KEY_Shift_R)
@@ -412,7 +412,7 @@ class Picker(Gtk.ApplicationWindow):
         elif os.getenv('XDG_SESSION_TYPE') != 'wayland':
             subprocess.check_output(['xdotool', 'key', 'ctrl+v'])
 
-    def default_hiding_action(self):
+    def default_hiding_action(self, paste_on_exit=True):
         self.search_entry.set_text('')
         self.select_buffer_label.set_text('')
         self.select_buffer_revealer.set_reveal_child(False)
@@ -430,20 +430,20 @@ class Picker(Gtk.ApplicationWindow):
 
         if self.settings.get_boolean('iconify-on-esc'):
             self.minimize()
-            self.send_paste_signal()
+            if paste_on_exit: self.send_paste_signal()
         elif not self.settings.get_boolean('load-hidden-on-startup'):
             # async to avoid blocking the main thread
             def close_patch():
                 GLib.idle_add(lambda: self.hide())
                 sleep(0.5)
-                self.send_paste_signal()
+                if paste_on_exit: self.send_paste_signal()
 
                 return GLib.idle_add(lambda: self.close())
 
             threading.Thread(target=close_patch).start()
         else:
             self.set_visible(False)
-            self.send_paste_signal()
+            if paste_on_exit: self.send_paste_signal()
 
     # # # # # #
     def show_skintone_selector(self, focused_widget: FlowBoxChild):

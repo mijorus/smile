@@ -13,6 +13,11 @@
         <p>Smile is a simple emoji picker for linux with custom tags support</p>
     </description>
     <releases>
+        <release type="stable" version="2.8.1" date="2023-09-07T00:00:00Z">
+            <description>
+                <p>- Fixed an issue causing emojis to be pasted when pressing ESC</p>
+            </description>
+        </release>
         <release type="stable" version="2.8.0" date="2023-07-27T00:00:00Z">
             <description>
                 <p>- Added an option in the preferences to use multi selection on mouse click</p>
