@@ -151,6 +151,7 @@ class Picker(Gtk.ApplicationWindow):
     def on_activation(self):
         self.present_with_time(Gdk.CURRENT_TIME)
         self.grab_focus()
+        self.query = None
 
         self.emoji_list.unselect_all()
 
