@@ -72,7 +72,7 @@ class Picker(Gtk.ApplicationWindow):
         self.categories_count = 0
         scrolled = Gtk.ScrolledWindow(min_content_height=350, propagate_natural_height=True, propagate_natural_width=True, vexpand=True)
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
-        scrolled_container = Adw.Clamp(maximum_size=600)
+        self.scrolled_container = Adw.Clamp(maximum_size=600)
 
         self.viewport_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, css_classes=['viewport'], vexpand=True)
 
@@ -92,14 +92,26 @@ class Picker(Gtk.ApplicationWindow):
         self.select_buffer_revealer = Gtk.Revealer(reveal_child=False, css_classes=[''], child=select_buffer_container)
 
         self.emoji_list_widgets: list[FlowBoxChild] = []
-        self.emoji_list = self.create_emoji_list()
-        self.emoji_list.set_hexpand(True)
+        self.emoji_list = Gtk.FlowBox(
+            valign=Gtk.Align.START,
+            homogeneous=True,
+            css_classes=['emoji_list_box'],
+            margin_top=2,
+            margin_bottom=2,
+            selection_mode=Gtk.SelectionMode.SINGLE,
+            max_children_per_line=self.emoji_grid_col_n,
+            min_children_per_line=self.emoji_grid_col_n
+        )
+
+        # self.create_emoji_list()
+        self.refresh_emoji_list()
+        # self.emoji_list.set_hexpand(True)
         self.category_count = 0  # will be set in create_category_picker()
         self.category_picker_widgets: list[Gtk.Button] = []
         self.category_picker = self.create_category_picker()
 
-        scrolled_container.set_child(self.emoji_list)
-        scrolled.set_child(scrolled_container)
+        self.scrolled_container.set_child(self.emoji_list)
+        scrolled.set_child(self.scrolled_container)
 
         self.viewport_box.append(self.list_tip_revealer)
         self.viewport_box.append(scrolled)
@@ -167,41 +179,88 @@ class Picker(Gtk.ApplicationWindow):
 
         return Gtk.MenuButton(menu_model=menu, icon_name='open-menu-symbolic')
 
+    def on_category_btn_clicked(self, w):
+        self.refresh_emoji_list()
+        # self.scrolled_container.set_child(self.emoji_list)
+
     def create_category_picker(self) -> Gtk.ScrolledWindow:
         box = Gtk.Box(spacing=4, halign=Gtk.Align.CENTER, hexpand=True, name='emoji_categories_box')
 
         i = 0
         for c, cat in emoji_categories.items():
-            if 'icon' in cat:
-                button = Gtk.Button(icon_name=cat['icon'], valign=Gtk.Align.CENTER)
-                button.category = c
-                button.index = i
-                button.connect('clicked', self.filter_for_category)
+            if not 'icon' in cat:
+                continue
 
-                box.append(button)
-                self.category_picker_widgets.append(button)
-                i += 1
+            button = Gtk.Button(icon_name=cat['icon'], valign=Gtk.Align.CENTER)
+            button.category = c
+            button.index = i
+            button.connect('clicked', self.filter_for_category)
+            #button.connect('clicked', self.on_category_btn_clicked)
+
+            box.append(button)
+            self.category_picker_widgets.append(button)
+            i += 1
 
         self.categories_count = i
         return box
 
-    def create_emoji_list(self) -> Gtk.FlowBox:
-        flowbox = Gtk.FlowBox(
-            valign=Gtk.Align.START,
-            homogeneous=True,
-            css_classes=['emoji_list_box'],
-            margin_top=2,
-            margin_bottom=2,
-            selection_mode=Gtk.SelectionMode.SINGLE,
-            max_children_per_line=self.emoji_grid_col_n,
-            min_children_per_line=self.emoji_grid_col_n
-        )
+    def refresh_emoji_list(self) -> Gtk.FlowBox:
+        # flowbox = Gtk.FlowBox(
+        #     valign=Gtk.Align.START,
+        #     homogeneous=True,
+        #     css_classes=['emoji_list_box'],
+        #     margin_top=2,
+        #     margin_bottom=2,
+        #     selection_mode=Gtk.SelectionMode.SINGLE,
+        #     max_children_per_line=self.emoji_grid_col_n,
+        #     min_children_per_line=self.emoji_grid_col_n
+        # )
+        self.emoji_list.remove_all()
 
         start = time_ns()
         history = get_history()
+        filter_for_recents = self.selected_category == 'recents'
 
-        for key in emojis.keys():
-            emoji_button = EmojiButton(emojis[key])
+        use_localised_tags = self.settings.get_boolean('use-localized-tags') if self.query else False
+
+        for key, emoji in emojis.items():
+            is_recent = (emoji['hexcode'] in history)
+
+            if self.query:
+                localized_tags = []
+                filter_result = True
+
+                if use_localised_tags and self.settings.get_string('tags-locale') != 'en':
+                    localized_tags = get_localized_tags(self.settings.get_string('tags-locale'), emoji['hexcode'], self.data_dir)
+                
+                custom_tags = ''
+                if self.query != emoji['emoji']:
+                    custom_tags = get_custom_tags(emoji['hexcode'], cache=True)
+
+                if self.query == emoji['emoji']:
+                    filter_result = True
+                elif custom_tags and tag_list_contains(custom_tags, self.query):
+                    filter_result = True
+                elif use_localised_tags:
+                    if self.settings.get_boolean('merge-english-tags'):
+                        filter_result = tag_list_contains(','.join(localized_tags), self.query) or tag_list_contains(emoji['tags'], self.query)
+                    else:
+                        filter_result = tag_list_contains(','.join(localized_tags), self.query)
+                elif not use_localised_tags:
+                    filter_result = tag_list_contains(emoji['tags'], self.query)
+                else:
+                    filter_result = False
+                
+                if not filter_result: 
+                    continue
+            else:
+                if filter_for_recents:
+                    if not is_recent:
+                        continue
+                elif emoji['group'] != self.selected_category:
+                    continue
+
+            emoji_button = EmojiButton(emoji)
             emoji_button.connect('clicked', self.handle_emoji_button_click)
 
             flowbox_child = FlowBoxChild(emoji_button)
@@ -214,18 +273,14 @@ class Picker(Gtk.ApplicationWindow):
             gesture_mid_click.connect('end', lambda e, _: self.show_custom_tag_entry(e.get_widget()))
             flowbox_child.add_controller(gesture_mid_click)
 
-            is_recent = (emojis[key]['hexcode'] in history)
-            flowbox.append(flowbox_child)
+            self.emoji_list.append(flowbox_child)
             self.emoji_list_widgets.append(flowbox_child)
 
             if is_recent:
                 self.history_size += 1
 
-        flowbox.set_filter_func(self.filter_emoji_list, None)
-        flowbox.set_sort_func(self.sort_emoji_list, None)
-        print('Emoji list creation took ' + str((time_ns() - start) / 1000000) + 'ms')
-
-        return flowbox
+        self.emoji_list.set_sort_func(self.sort_emoji_list, None)
+        # print('Emoji list creation took ' + str((time_ns() - start) / 1000000) + 'ms')
 
     # Handle events
     def handle_emoji_button_click(self, widget: Gtk.Button):
@@ -542,18 +597,19 @@ class Picker(Gtk.ApplicationWindow):
         self.selected_category_index = widget.index
         self.category_picker.set_opacity(1)
 
-        self.emoji_list.invalidate_filter()
+        # self.emoji_list.invalidate_filter()
 
-        new_list_tip = None
-        if widget.category == 'recents':
-            if get_history():
-                new_list_tip = _('Recently used emojis')
-            else:
-                new_list_tip = _("Whoa, it's still empty! \nYour most used emojis will show up here\n")
+        # new_list_tip = None
+        # if widget.category == 'recents':
+        #     if get_history():
+        #         new_list_tip = _('Recently used emojis')
+        #     else:
+        #         new_list_tip = _("Whoa, it's still empty! \nYour most used emojis will show up here\n")
 
-        self.update_list_tip(new_list_tip)
+        # self.update_list_tip(new_list_tip)
 
-        self.emoji_list.invalidate_sort()
+        # self.emoji_list.invalidate_sort()
+        self.refresh_emoji_list()
         self.load_first_row()
 
     def copy_and_quit(self, button: Gtk.Button = None):
@@ -585,7 +641,8 @@ class Picker(Gtk.ApplicationWindow):
         self.query = query if query else None
         list_was_sorted = self.query != None
 
-        self.emoji_list.invalidate_filter()
+        # self.emoji_list.invalidate_filter()
+        self.refresh_emoji_list()
 
         if (self.list_was_sorted != list_was_sorted):
             if query:
@@ -597,45 +654,44 @@ class Picker(Gtk.ApplicationWindow):
 
         self.list_was_sorted = list_was_sorted
 
-    def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
-        e = (widget.get_child()).emoji_data
-        filter_result = True
+    # def filter_emoji_list(self, widget: Gtk.FlowBoxChild, user_data):
+    #     e = (widget.get_child()).emoji_data
+    #     filter_result = True
 
-        use_localised_tags = self.settings.get_boolean('use-localized-tags')
+    #     use_localised_tags = self.settings.get_boolean('use-localized-tags')
 
-        localized_tags = []
-        if use_localised_tags and self.settings.get_string('tags-locale') != 'en':
-            localized_tags = get_localized_tags(self.settings.get_string('tags-locale'), e['hexcode'], self.data_dir)
+    #     localized_tags = []
+    #     if use_localised_tags and self.settings.get_string('tags-locale') != 'en':
+    #         localized_tags = get_localized_tags(self.settings.get_string('tags-locale'), e['hexcode'], self.data_dir)
 
-        if self.query:
-            custom_tags = ''
-            if self.query != e['emoji']:
-                custom_tags = get_custom_tags(e['hexcode'], cache=True)
+    #     if self.query:
+    #         custom_tags = ''
+    #         if self.query != e['emoji']:
+    #             custom_tags = get_custom_tags(e['hexcode'], cache=True)
 
-            if self.query == e['emoji']:
-                filter_result = True
-            elif custom_tags and tag_list_contains(custom_tags, self.query):
-                filter_result = True
-            elif use_localised_tags:
-                if self.settings.get_boolean('merge-english-tags'):
-                    filter_result = tag_list_contains(','.join(localized_tags), self.query) or tag_list_contains(e['tags'], self.query)
-                else:
-                    filter_result = tag_list_contains(','.join(localized_tags), self.query)
-            elif not use_localised_tags:
-                filter_result = tag_list_contains(e['tags'], self.query)
-            else:
-                filter_result = False
+    #         if self.query == e['emoji']:
+    #             filter_result = True
+    #         elif custom_tags and tag_list_contains(custom_tags, self.query):
+    #             filter_result = True
+    #         elif use_localised_tags:
+    #             if self.settings.get_boolean('merge-english-tags'):
+    #                 filter_result = tag_list_contains(','.join(localized_tags), self.query) or tag_list_contains(e['tags'], self.query)
+    #             else:
+    #                 filter_result = tag_list_contains(','.join(localized_tags), self.query)
+    #         elif not use_localised_tags:
+    #             filter_result = tag_list_contains(e['tags'], self.query)
+    #         else:
+    #             filter_result = False
 
-        elif self.selected_category:
-            if self.selected_category == 'recents':
-                filter_result = (widget.get_child()).hexcode in get_history()
-            else:
-                filter_result = self.selected_category == e['group']
+    #     elif self.selected_category:
+    #         if self.selected_category == 'recents':
+    #             filter_result = (widget.get_child()).hexcode in get_history()
+    #         else:
+    #             filter_result = self.selected_category == e['group']
+    #     else:
+    #         filter_result = e['group'] == self.selected_category
 
-        else:
-            filter_result = e['group'] == self.selected_category
-
-        return filter_result
+    #     return filter_result
 
     def sort_emoji_list(self, child1: Gtk.FlowBoxChild, child2: Gtk.FlowBoxChild, user_data):
         child1 = child1.get_child()
