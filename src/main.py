@@ -6,6 +6,7 @@ from .utils import make_option, portal
 from .Picker import Picker
 from .ShortcutsWindow import ShortcutsWindow
 from .Settings import Settings
+from .components.UpdateDialog import UpdateDialog
 from .lib.DbusService import DbusService, GNOME_EXTENSION_LINK
 
 gi.require_version('Gtk', '4.0')
@@ -72,29 +73,7 @@ class Smile(Adw.Application):
                 last_run_version = self.settings.get_string('last-run-version').replace('.', '')
                 last_run_version = int(last_run_version if len(last_run_version) else '-1')
 
-                # any migration scripts should run here...
-                new_features_messages = [
-                    # (from version, to version, message)
-                    (0, 240, '- Automatically paste emojis on X11 systems and with the GNOME extension on Wayland!'),
-                    (240, 280, '- Added an option to select multiple emojis on mouse click')
-                ]
-
-                modal_messages = []
-                for m in new_features_messages:
-                    if last_run_version >= m[0] and last_run_version < m[1]:
-                        modal_messages.append(m[2])
-
-                if modal_messages:
-                    dialog = Adw.MessageDialog.new(
-                        self.window,
-                        'New features!',
-                        '\n'.join(modal_messages),
-                    )
-
-                    dialog.add_response('dismiss', _('Dismiss'))
-                    dialog.set_close_response('dismiss')
-
-                    dialog.present()
+                UpdateDialog.show(self.window, last_run_version, self.version)
 
                 self.settings.set_string('last-run-version', self.version)
 
