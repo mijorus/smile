@@ -1,4 +1,5 @@
 import dbus
+from threading import Timer
 from gi.repository import GLib, Gio
 
 _tags_cache = {}
@@ -47,3 +48,26 @@ def portal(interface: str, bus_name: str='org.freedesktop.portal.Desktop', objec
     inter = dbus.Interface(obj, interface)
 
     return inter
+
+def debounce(wait):
+    """ Decorator that will postpone a functions
+        execution until after wait seconds
+        have elapsed since the last time it was invoked. """
+    def decorator(fn):
+        def debounced(*args, **kwargs):
+            def call_it():
+                fn(*args, **kwargs)
+            try:
+                debounced.t.cancel()
+            except(AttributeError):
+                pass
+            debounced.t = Timer(wait, call_it)
+            debounced.t.start()
+        return debounced
+    return decorator
+
+# Used as a decorator to run things in the main loop, from another thread
+def idle(func):
+    def wrapper(*args, **kwargs):
+        GLib.idle_add(func, *args)
+    return wrapper
