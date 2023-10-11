@@ -1,0 +1,286 @@
+# Occitan translation file.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Quentin PAGÈS, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-17 16:09+0200\n"
+"PO-Revision-Date: 2023-10-07 11:18+0200\n"
+"Last-Translator: Quentin PAGÈS\n"
+"Language-Team: \n"
+"Language: oc\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4\n"
+
+#: src/main.py:94
+msgid "Dismiss"
+msgstr "Ignorar"
+
+#: src/main.py:132
+msgid "translator_credits"
+msgstr "Quentin PAGÈS"
+
+#: src/Picker.py:550
+msgid "Recently used emojis"
+msgstr "Emojis utilizats recentament"
+
+#: src/Picker.py:552
+msgid ""
+"Whoa, it's still empty! \n"
+"Your most used emojis will show up here\n"
+msgstr ""
+"Òh, es encara void !\n"
+"Los emojis qu’utilizatz sovent apreissaràn aicí\n"
+
+#: src/Picker.py:572
+msgid "Copied!"
+msgstr "Copiat !"
+
+#: src/Picker.py:573
+msgid ""
+"I have copied the emoji to the clipboard. You can now paste it in any input "
+"field."
+msgstr ""
+"Ai copiat l’emoji al quichapapièrs. Lo podètz ara pegar dins un camp tèxt."
+
+#: src/Settings.py:28
+msgid "Settings"
+msgstr "Paramètres"
+
+#: src/Settings.py:31
+msgid "General"
+msgstr "General"
+
+#: src/Settings.py:33
+msgid "Run in the background"
+msgstr "Lançar en rèireplan"
+
+#: src/Settings.py:33
+msgid "Keep Smile running in the background for a faster launch"
+msgstr "Gardar Smile en execucion en rèireplan per una aviada mai rapida"
+
+#: src/Settings.py:37
+msgid "Minimize on exit"
+msgstr "Minimizar en quitant"
+
+#: src/Settings.py:37
+msgid "Minimize the window when selecting an emoji"
+msgstr "Minimizar la fenèstra en seleccionant un emoji"
+
+#: src/Settings.py:43
+msgid "Mouse behaviour"
+msgstr "Compòrtament de la mirga"
+
+#: src/Settings.py:45
+msgid "Mouse multi select"
+msgstr "Seleccion multipla de la mirga"
+
+#: src/Settings.py:45
+msgid ""
+"Select multiple emojis with a single mouse click, replacing Shift + Click; "
+"press Enter to confirm and Esc to dismiss."
+msgstr ""
+"Seleccionar mantun emoji amb un sol clic de mirga, remplaça lo Cntr + "
+"Clic ; quichar Entrada per confirmar e Esc per ignorar."
+
+#: src/Settings.py:49
+msgid "Paste emojis automatically"
+msgstr "Pegar los emojis automaticament"
+
+#: src/Settings.py:55
+msgid "Status:"
+msgstr "Estat :"
+
+#: src/Settings.py:60
+msgid "Enabled"
+msgstr "Activat"
+
+#: src/Settings.py:62
+msgid ""
+"Emulates the Ctrl+V shortcut; might <b>not work</b> on some programs.\n"
+"If using the extension, <b>please ensure that it is correctly ENABLED</b>."
+msgstr ""
+"Simula l’acorchi Ctrl+V ; poiriá <b>foncionar pas</b> amb d’unes "
+"programas.\n"
+"S’utilizatz l’extensionn, <b>asseguratz-vos que siá corrèctament ACTIVADA</"
+"b>"
+
+#: src/Settings.py:68
+msgid "Get the GNOME extension"
+msgstr "Obténer l’extension GNOME"
+
+#: src/Settings.py:68
+msgid "Install the extension to paste automatically on X11 and Wayland"
+msgstr "Installar l’extension per pegar automaticament sus X11 e Wayland"
+
+#: src/Settings.py:72
+msgid "Customization"
+msgstr "Personalisacion"
+
+#: src/Settings.py:76 src/Settings.py:247
+msgid "Localized tags"
+msgstr "Etiquetas localizadas"
+
+#: src/Settings.py:78
+msgid "Use localized tags"
+msgstr "Utilizar las etiquetas localizadas"
+
+#: src/Settings.py:83
+msgid "Merge localized and English tags"
+msgstr "Fusionar las etiquetas localizadas e en anglés"
+
+#: src/Settings.py:85
+msgid "Use both localized tags and English ones at the same time"
+msgstr "Utilizar tan las etiquetas localizadas que las en anglés a l’encòp"
+
+#: src/Settings.py:94
+msgid "Custom tags"
+msgstr "Etiquetas personalizadas"
+
+#: src/Settings.py:126
+msgid "Available (using the GNOME extension)"
+msgstr "Disponible (en utilizant l’extension GNOME)"
+
+#: src/Settings.py:128
+msgid "Requires the GNOME extension on Wayland"
+msgstr "Requerís l’extension GNOME sus Wayland"
+
+#: src/Settings.py:130
+msgid "Available (using xdotool on X11)"
+msgstr "Disponible (en utilizant xdotool sus X11)"
+
+#: src/Settings.py:143
+msgid "Launch the app with a shortcut"
+msgstr "Lançar l’aplicacion amb un acorchi"
+
+#: src/Settings.py:144
+msgid ""
+"Create a new keyboard shortcut in your system settings and paste the "
+"following code as a custom command"
+msgstr ""
+"Creatz un acorchi de clavièr novèl als paramètres sistèma e pegatz lo còdi "
+"seguent coma comanda personalizada"
+
+#: src/Settings.py:180
+msgid "Remove"
+msgstr "Suprimir"
+
+#: src/Settings.py:198
+msgid "There are no custom tags yet: create one with Alt + T"
+msgstr "I a pas encara d’etiquetas personalizadas : creatz-ne una amb Alt +T"
+
+#: src/Settings.py:211
+msgid "Default skintone"
+msgstr "Ton de pèl per defaut"
+
+#: src/Settings.py:226
+msgid "Emoji size"
+msgstr "Talha emoji"
+
+#: src/Settings.py:228
+msgid "Default"
+msgstr "Per defaut"
+
+#: src/Settings.py:229
+msgid "Big"
+msgstr "Granda"
+
+#: src/Settings.py:230
+msgid "Bigger"
+msgstr "Grandassa"
+
+#: src/Settings.py:231
+msgid "Giant"
+msgstr "Giganta"
+
+#: src/Settings.py:330
+msgid "Invalid file selected"
+msgstr "Fichièr seleccionat invalid"
+
+#: src/Settings.py:331
+msgid "The configuration file that you selected is not a valid backup."
+msgstr ""
+"Lo fichièr de configuracion qu’avètz seleccionat es pas una salvagarda "
+"valida."
+
+#: src/Settings.py:334
+msgid "Close"
+msgstr "Tampar"
+
+#: src/ui/menu.ui:6
+msgid "Preferences"
+msgstr "Preferéncias"
+
+#: src/ui/menu.ui:10
+msgid "Shortcuts"
+msgstr "Acorchis de clavièr"
+
+#: src/ui/menu.ui:15
+msgid "What's new?"
+msgstr "Qué de nòu ?"
+
+#: src/ui/menu.ui:19
+msgid "Install GNOME extension"
+msgstr "Installar l’extension GNOME"
+
+#: src/ui/menu.ui:23
+msgid "Translate this app"
+msgstr "Traduire aquesta app"
+
+#: src/ui/menu.ui:26
+msgid "About"
+msgstr "A prepaus"
+
+#: src/ui/shortcuts.ui:12
+msgid "Mouse"
+msgstr "Mirga"
+
+#: src/ui/shortcuts.ui:109
+msgid "Keyboard"
+msgstr "Clavièr"
+
+#: src/ui/shortcuts.ui:114
+msgid ""
+"Copy the selected emoji and hide the window (When an emoji is highlighted)"
+msgstr ""
+"Copiar l’emoji seleccionada e rescondre la fenèstra (quand l’emoji es en "
+"enlusit)"
+
+#: src/ui/shortcuts.ui:121
+msgid "Copy first emoji and hide the window (When using the search bar)"
+msgstr ""
+"Copiar lo premièr emoji e rescondre la fenèstra (en utilizant la barra de "
+"recèrca)"
+
+#: src/ui/shortcuts.ui:128
+msgid "Show the category on the right"
+msgstr "Afichar la categoria a man drecha"
+
+#: src/ui/shortcuts.ui:135
+msgid "Show the category on the left"
+msgstr "Afichar la categoria a man esquèrra"
+
+#: src/ui/shortcuts.ui:142
+msgid "Add an emoji to selection"
+msgstr "Ajustar un emoji a la seleccion"
+
+#: src/ui/shortcuts.ui:150
+msgid "Remove the last emoji from the selection"
+msgstr "Suprimir lo darrièr emoji de la seleccion"
+
+#: src/ui/shortcuts.ui:157
+msgid "Copy the selection and hide the window, without the highlighted emoji"
+msgstr "Copiar la seleccion e rescondre la fenèstra, sens enlusir los emoji"
+
+#: src/ui/shortcuts.ui:164
+msgid "Open the skintone selector (if available)"
+msgstr "Dobrir lo selector de ton de pèl (se disponible)"
+
+#: src/ui/shortcuts.ui:171
+msgid "Add a custom tag"
+msgstr "Ajustar una etiqueta personalizada"
