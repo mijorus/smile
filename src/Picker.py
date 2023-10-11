@@ -44,7 +44,10 @@ from gi.repository import Gtk, Gio, Gdk, Adw, GLib, Pango  # noqa
 class Picker(Gtk.ApplicationWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(title="Smile", resizable=True, *args, **kwargs)
-        self.set_default_size(360, 350)
+
+        EMOJI_LIST_MIN_HEIGHT = 320
+
+        self.set_default_size(1, 1)
 
         self.last_copied_text = None
 
@@ -57,7 +60,7 @@ class Picker(Gtk.ApplicationWindow):
         self.settings: Gio.Settings = Gio.Settings.new('it.mijorus.smile')
         self.settings.connect('changed::skintone-modifier', self.update_emoji_skintones)
 
-        self.emoji_grid_col_n = 5
+        self.EMOJI_GRID_COL_N = 5
         self.emoji_grid_first_row = []
 
         self.selected_category_index = 0
@@ -75,8 +78,20 @@ class Picker(Gtk.ApplicationWindow):
         self.categories_count = 0
         self.viewport_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, css_classes=['viewport'], vexpand=True)
 
-        self.list_tip_revealer = Gtk.Revealer(reveal_child=False)
-        self.list_tip_label = Gtk.Label(margin_bottom=2, css_classes=['dim-label'])
+        self.list_tip_revealer = Gtk.Revealer(
+            reveal_child=False, 
+            transition_type=Gtk.RevealerTransitionType.NONE, 
+            css_classes=['solid-overlay'],
+            visible=False
+            # valign=Gtk.Align.START,
+        )
+
+        self.list_tip_label = Gtk.Label(
+            label= _("Whoa, it's still empty! \nYour most used emojis will show up here\n"),
+            css_classes=['dim-label'], 
+            justify=Gtk.Justification.CENTER
+        )
+
         self.list_tip_revealer.set_child(self.list_tip_label)
 
         self.select_buffer_label = Gtk.Label(margin_bottom=2, css_classes=['title-2'], hexpand=True, halign=Gtk.Align.START, ellipsize=Pango.EllipsizeMode.START)
@@ -88,7 +103,12 @@ class Picker(Gtk.ApplicationWindow):
         select_buffer_container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, css_classes=['selected-emojis-box'], spacing=2)
         [select_buffer_container.append(w) for w in [self.select_buffer_label, pop_buffer_btn, select_buffer_button]]
 
-        self.select_buffer_revealer = Gtk.Revealer(reveal_child=False, css_classes=[''], child=select_buffer_container)
+        self.select_buffer_revealer = Gtk.Revealer(
+            reveal_child=False, 
+            css_classes=['solid-overlay'],
+            child=select_buffer_container, 
+            valign=Gtk.Align.END
+        )
 
         self.emoji_list_widgets: list[FlowBoxChild] = []
         self.emoji_list = Gtk.FlowBox(
@@ -98,30 +118,36 @@ class Picker(Gtk.ApplicationWindow):
             margin_top=2,
             margin_bottom=2,
             selection_mode=Gtk.SelectionMode.SINGLE,
-            max_children_per_line=self.emoji_grid_col_n,
-            min_children_per_line=self.emoji_grid_col_n
+            max_children_per_line=self.EMOJI_GRID_COL_N,
+            min_children_per_line=self.EMOJI_GRID_COL_N
         )
 
         self.refresh_emoji_list()
         self.category_picker_widgets: list[Gtk.Button] = []
         self.category_picker = self.create_category_picker()
 
-        scrolled_window = Gtk.ScrolledWindow(
-            min_content_height=350, 
+        scrolled_emoji_window = Gtk.ScrolledWindow(
+            min_content_height=EMOJI_LIST_MIN_HEIGHT, 
             propagate_natural_height=True, 
             propagate_natural_width=True, 
             vexpand=True
         )
 
-        scrolled_window.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
+        scrolled_emoji_window.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
         scrolled_container = Adw.Clamp(maximum_size=600)
 
-        scrolled_container.set_child(self.emoji_list)
-        scrolled_window.set_child(scrolled_container)
 
-        self.viewport_box.append(self.list_tip_revealer)
-        self.viewport_box.append(scrolled_window)
-        self.viewport_box.append(self.select_buffer_revealer)
+        scrolled_container.set_child(self.emoji_list)
+        scrolled_emoji_window.set_child(scrolled_container)
+
+        emoji_list_overlay_container = Gtk.Overlay(child=scrolled_emoji_window)
+
+        emoji_list_overlay_container.add_overlay(self.list_tip_revealer)
+        emoji_list_overlay_container.add_overlay(self.select_buffer_revealer)
+
+        # self.viewport_box.append(self.list_tip_revealer)
+        # self.viewport_box.append(self.select_buffer_revealer)
+        self.viewport_box.append(emoji_list_overlay_container)
         self.viewport_box.append(self.category_picker)
 
         # Create search entry
@@ -183,8 +209,8 @@ class Picker(Gtk.ApplicationWindow):
 
         return Gtk.MenuButton(menu_model=menu, icon_name='open-menu-symbolic')
 
-    def create_category_picker(self) -> Gtk.ScrolledWindow:
-        box = Gtk.Box(spacing=4, halign=Gtk.Align.CENTER, hexpand=True, name='emoji_categories_box')
+    def create_category_picker(self) -> Gtk.Box:
+        box = Gtk.Box(spacing=0, halign=Gtk.Align.CENTER, hexpand=True, name='emoji_categories_box')
 
         i = 0
         for c, cat in emoji_categories.items():
@@ -201,6 +227,7 @@ class Picker(Gtk.ApplicationWindow):
             i += 1
 
         self.categories_count = i
+
         return box
 
     def refresh_emoji_list(self):
@@ -464,7 +491,7 @@ class Picker(Gtk.ApplicationWindow):
         self.select_buffer_revealer.set_reveal_child(False)
         self.query = None
         self.selection = []
-        self.update_list_tip(None)
+        self.set_empty_recent_tip(None)
 
         for button in self.selected_buttons:
             button.get_parent().deselect()
@@ -511,12 +538,9 @@ class Picker(Gtk.ApplicationWindow):
     def show_custom_tag_entry(self, focused_widget: FlowBoxChild):
         CustomTagEntry(focused_widget, self)
 
-    def update_list_tip(self, text: str = None):
-        if (text is None):
-            self.list_tip_revealer.set_reveal_child(False)
-        else:
-            self.list_tip_label.set_label(text)
-            self.list_tip_revealer.set_reveal_child(True)
+    def set_empty_recent_tip(self, enabled: bool):
+        self.list_tip_revealer.set_visible(enabled)
+        self.list_tip_revealer.set_reveal_child(enabled)
 
     def update_selection_content(self, selection: str = None):
         if selection:
@@ -576,7 +600,7 @@ class Picker(Gtk.ApplicationWindow):
     def load_first_row(self):
         self.emoji_grid_first_row = []
         for widget in self.emoji_list_widgets:
-            if (len(self.emoji_grid_first_row) < self.emoji_grid_col_n) and widget.props.visible:
+            if (len(self.emoji_grid_first_row) < self.EMOJI_GRID_COL_N) and widget.props.visible:
                 self.emoji_grid_first_row.append(widget)
 
     def filter_for_category(self, widget: Gtk.Button):
@@ -586,12 +610,9 @@ class Picker(Gtk.ApplicationWindow):
         self.query = None
         self.selected_category = widget.category
         self.selected_category_index = widget.index
-        self.category_picker.set_opacity(1)
 
-
-        if widget.category == 'recents' and not get_history():
-            new_list_tip = _("Whoa, it's still empty! \nYour most used emojis will show up here\n")
-            self.update_list_tip(new_list_tip)
+        show_empty_recent_tip = widget.category == 'recents' and not get_history()
+        self.set_empty_recent_tip(show_empty_recent_tip)
 
         self.refresh_emoji_list()
         self.load_first_row()
@@ -618,7 +639,7 @@ class Picker(Gtk.ApplicationWindow):
 
         self.default_hiding_action()
 
-    @debounce(0.3)
+    @debounce(0.2)
     @idle
     def search_emoji(self, search_entry: str):
         start = time_ns()
