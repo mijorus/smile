@@ -1,0 +1,291 @@
+# Smile is a simple emoji picker for linux with custom tags support.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Sergio Varela <sergiovg01@outlook.com>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-17 16:09+0200\n"
+"PO-Revision-Date: 2023-10-12 00:55+0200\n"
+"Last-Translator: Sergio Varela <sergiovg01@outlook.com>\n"
+"Language-Team: Spanish - Spain <sergiovg01@outlook.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 45.2\n"
+"X-DL-Lang: Spanish (Spain)\n"
+"X-DL-Module: \n"
+"X-DL-Branch: \n"
+"X-DL-Domain: \n"
+
+#: src/main.py:94
+msgid "Dismiss"
+msgstr "Descartar"
+
+#: src/main.py:132
+msgid "translator_credits"
+msgstr "Sergio Varela https://ingrownmink4.tumblr.com"
+
+#: src/Picker.py:550
+msgid "Recently used emojis"
+msgstr "Emojis utilizados recientemente"
+
+#: src/Picker.py:552
+msgid ""
+"Whoa, it's still empty! \n"
+"Your most used emojis will show up here\n"
+msgstr ""
+"Vaya. ¡Esto todavía está vacío! \n"
+"Tus emojis más usados aparecerán aquí\n"
+
+#: src/Picker.py:572
+msgid "Copied!"
+msgstr "¡Copiado!"
+
+#: src/Picker.py:573
+msgid ""
+"I have copied the emoji to the clipboard. You can now paste it in any input "
+"field."
+msgstr ""
+"He copiado el emoji en el portapapeles. Ahora puedes pegarlo en cualquier "
+"campo de entrada de texto."
+
+#: src/Settings.py:28
+msgid "Settings"
+msgstr "Configuración"
+
+#: src/Settings.py:31
+msgid "General"
+msgstr "General"
+
+#: src/Settings.py:33
+msgid "Run in the background"
+msgstr "Ejecutar en segundo plano"
+
+#: src/Settings.py:33
+msgid "Keep Smile running in the background for a faster launch"
+msgstr "Mantener Smile ejecutándose en segundo plano para un inicio más rápido"
+
+#: src/Settings.py:37
+msgid "Minimize on exit"
+msgstr "Minimizar al salir"
+
+#: src/Settings.py:37
+msgid "Minimize the window when selecting an emoji"
+msgstr "Minimizar la ventana al seleccionar un emoji"
+
+#: src/Settings.py:43
+msgid "Mouse behaviour"
+msgstr "Comportamiento del ratón"
+
+#: src/Settings.py:45
+msgid "Mouse multi select"
+msgstr "Selección múltiple con el ratón"
+
+#: src/Settings.py:45
+msgid ""
+"Select multiple emojis with a single mouse click, replacing Shift + Click; "
+"press Enter to confirm and Esc to dismiss."
+msgstr ""
+"Selecciona varios emojis con un solo clic del ratón, sustituyendo a Mayús + "
+"Clic; pulsa Intro para confirmar y Esc para descartar."
+
+#: src/Settings.py:49
+msgid "Paste emojis automatically"
+msgstr "Pegar emojis automáticamente"
+
+#: src/Settings.py:55
+msgid "Status:"
+msgstr "Estado:"
+
+#: src/Settings.py:60
+msgid "Enabled"
+msgstr "Activado"
+
+#: src/Settings.py:62
+msgid ""
+"Emulates the Ctrl+V shortcut; might <b>not work</b> on some programs.\n"
+"If using the extension, <b>please ensure that it is correctly ENABLED</b>."
+msgstr ""
+"Emula el atajo Ctrl+V; puede que <b>no funcione</b> en algunos programas.\n"
+"Si utiliza la extensión, por favor, <b>asegúrese de que está correctamente "
+"HABILITADA</b>."
+
+#: src/Settings.py:68
+msgid "Get the GNOME extension"
+msgstr "Obtener la extensión de GNOME"
+
+#: src/Settings.py:68
+msgid "Install the extension to paste automatically on X11 and Wayland"
+msgstr "Instala la extensión para pegar automáticamente en X11 y Wayland"
+
+#: src/Settings.py:72
+msgid "Customization"
+msgstr "Personalización"
+
+#: src/Settings.py:76 src/Settings.py:247
+msgid "Localized tags"
+msgstr "Etiquetas localizadas"
+
+#: src/Settings.py:78
+msgid "Use localized tags"
+msgstr "Utilizar etiquetas localizadas"
+
+#: src/Settings.py:83
+msgid "Merge localized and English tags"
+msgstr "Fusionar etiquetas localizadas e inglesas"
+
+#: src/Settings.py:85
+msgid "Use both localized tags and English ones at the same time"
+msgstr "Utilizar etiquetas localizadas y en inglés al mismo tiempo"
+
+#: src/Settings.py:94
+msgid "Custom tags"
+msgstr "Etiquetas personalizadas"
+
+#: src/Settings.py:126
+msgid "Available (using the GNOME extension)"
+msgstr "Disponible (utilizando la extensión de GNOME)"
+
+#: src/Settings.py:128
+msgid "Requires the GNOME extension on Wayland"
+msgstr "Requiere la extensión de GNOME en Wayland"
+
+#: src/Settings.py:130
+msgid "Available (using xdotool on X11)"
+msgstr "Disponible (utilizando xdotool en X11)"
+
+#: src/Settings.py:143
+msgid "Launch the app with a shortcut"
+msgstr "Iniciar la aplicación con un acceso directo"
+
+#: src/Settings.py:144
+msgid ""
+"Create a new keyboard shortcut in your system settings and paste the "
+"following code as a custom command"
+msgstr ""
+"Crea un nuevo atajo de teclado en la configuración del sistema y pega el "
+"siguiente código como comando personalizado"
+
+#: src/Settings.py:180
+msgid "Remove"
+msgstr "Eliminar"
+
+#: src/Settings.py:198
+msgid "There are no custom tags yet: create one with Alt + T"
+msgstr "Aún no hay etiquetas personalizadas: crea una con Alt + T"
+
+#: src/Settings.py:211
+msgid "Default skintone"
+msgstr "Tono de piel predeterminado"
+
+#: src/Settings.py:226
+msgid "Emoji size"
+msgstr "Tamaño del emoji"
+
+#: src/Settings.py:228
+msgid "Default"
+msgstr "Predeterminado"
+
+#: src/Settings.py:229
+msgid "Big"
+msgstr "Grande"
+
+#: src/Settings.py:230
+msgid "Bigger"
+msgstr "Muy grande"
+
+#: src/Settings.py:231
+msgid "Giant"
+msgstr "Gigante"
+
+#: src/Settings.py:330
+msgid "Invalid file selected"
+msgstr "Archivo seleccionado no válido"
+
+#: src/Settings.py:331
+msgid "The configuration file that you selected is not a valid backup."
+msgstr ""
+"El archivo de configuración que ha seleccionado no es una copia de seguridad "
+"válida."
+
+#: src/Settings.py:334
+msgid "Close"
+msgstr "Cerrar"
+
+#: src/ui/menu.ui:6
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: src/ui/menu.ui:10
+msgid "Shortcuts"
+msgstr "Atajos de teclado"
+
+#: src/ui/menu.ui:15
+msgid "What's new?"
+msgstr "¿Cuáles son las novedades?"
+
+#: src/ui/menu.ui:19
+msgid "Install GNOME extension"
+msgstr "Instalar extensión de GNOME"
+
+#: src/ui/menu.ui:23
+msgid "Translate this app"
+msgstr "¡Traduzca esta aplicación!"
+
+#: src/ui/menu.ui:26
+msgid "About"
+msgstr "Acerca de Smile"
+
+#: src/ui/shortcuts.ui:12
+msgid "Mouse"
+msgstr "Ratón"
+
+#: src/ui/shortcuts.ui:109
+msgid "Keyboard"
+msgstr "Teclado"
+
+#: src/ui/shortcuts.ui:114
+msgid ""
+"Copy the selected emoji and hide the window (When an emoji is highlighted)"
+msgstr ""
+"Copiar el emoji seleccionado y ocultar la ventana (Cuando un emoji está "
+"resaltado)"
+
+#: src/ui/shortcuts.ui:121
+msgid "Copy first emoji and hide the window (When using the search bar)"
+msgstr ""
+"Copiar el primer emoji y ocultar la ventana (Al utilizar la barra de "
+"búsqueda)"
+
+#: src/ui/shortcuts.ui:128
+msgid "Show the category on the right"
+msgstr "Mostrar la categoría a la derecha"
+
+#: src/ui/shortcuts.ui:135
+msgid "Show the category on the left"
+msgstr "Mostrar la categoría a la izquierda"
+
+#: src/ui/shortcuts.ui:142
+msgid "Add an emoji to selection"
+msgstr "Añadir un emoji a la selección"
+
+#: src/ui/shortcuts.ui:150
+msgid "Remove the last emoji from the selection"
+msgstr "Eliminar el último emoji de la selección"
+
+#: src/ui/shortcuts.ui:157
+msgid "Copy the selection and hide the window, without the highlighted emoji"
+msgstr "Copiar la selección y ocultar la ventana, sin el emoji resaltado"
+
+#: src/ui/shortcuts.ui:164
+msgid "Open the skintone selector (if available)"
+msgstr "Abrir el selector de tonos de piel (si está disponible)"
+
+#: src/ui/shortcuts.ui:171
+msgid "Add a custom tag"
+msgstr "Añadir una etiqueta personalizada"
