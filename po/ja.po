@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-17 16:09+0200\n"
-"PO-Revision-Date: 2023-10-21 18:42+0900\n"
+"PO-Revision-Date: 2023-10-21 18:57+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -65,7 +65,7 @@ msgstr "Smile をバックグランドで実行したままにすることで、
 
 #: src/Settings.py:37
 msgid "Minimize on exit"
-msgstr "終了時に最小化する"
+msgstr "終了時に最小化"
 
 #: src/Settings.py:37
 msgid "Minimize the window when selecting an emoji"
@@ -130,7 +130,7 @@ msgstr "ローカライズされたタグを使う"
 
 #: src/Settings.py:83
 msgid "Merge localized and English tags"
-msgstr "ローカライズされたタグと英語のタグを統合する"
+msgstr "ローカライズされたタグと英語のタグを統合"
 
 #: src/Settings.py:85
 msgid "Use both localized tags and English ones at the same time"
@@ -230,7 +230,7 @@ msgstr "このアプリを翻訳"
 
 #: src/ui/menu.ui:26
 msgid "About"
-msgstr "このアプリについて"
+msgstr "Smile について"
 
 #: src/ui/shortcuts.ui:12
 msgid "Mouse"
