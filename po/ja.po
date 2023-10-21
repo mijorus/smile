@@ -1,0 +1,282 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-17 16:09+0200\n"
+"PO-Revision-Date: 2023-10-21 18:42+0900\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main.py:94
+msgid "Dismiss"
+msgstr "閉じる"
+
+#: src/main.py:132
+msgid "translator_credits"
+msgstr "Ryo Nakano"
+
+#: src/Picker.py:550
+msgid "Recently used emojis"
+msgstr "最近使用した絵文字"
+
+#: src/Picker.py:552
+msgid ""
+"Whoa, it's still empty! \n"
+"Your most used emojis will show up here\n"
+msgstr ""
+"おっと、ここにはまだ何もありません！\n"
+"最も使用する絵文字がここに表示されます\n"
+
+#: src/Picker.py:572
+msgid "Copied!"
+msgstr "コピーしました！"
+
+#: src/Picker.py:573
+msgid ""
+"I have copied the emoji to the clipboard. You can now paste it in any input "
+"field."
+msgstr ""
+"絵文字をクリップボードにコピーしました。お好きな入力欄に貼り付けできます。"
+
+#: src/Settings.py:28
+msgid "Settings"
+msgstr "設定"
+
+#: src/Settings.py:31
+msgid "General"
+msgstr "一般"
+
+#: src/Settings.py:33
+msgid "Run in the background"
+msgstr "バックグラウンドで実行"
+
+#: src/Settings.py:33
+msgid "Keep Smile running in the background for a faster launch"
+msgstr "Smile をバックグランドで実行したままにすることで、起動を速くします"
+
+#: src/Settings.py:37
+msgid "Minimize on exit"
+msgstr "終了時に最小化する"
+
+#: src/Settings.py:37
+msgid "Minimize the window when selecting an emoji"
+msgstr "絵文字を選択すると、ウィンドウを最小化します"
+
+#: src/Settings.py:43
+msgid "Mouse behaviour"
+msgstr "マウスの挙動"
+
+#: src/Settings.py:45
+msgid "Mouse multi select"
+msgstr "マウスで複数選択"
+
+#: src/Settings.py:45
+msgid ""
+"Select multiple emojis with a single mouse click, replacing Shift + Click; "
+"press Enter to confirm and Esc to dismiss."
+msgstr ""
+"Shift + クリックの代わりに、クリックで複数の絵文字を選択します。Enter で確"
+"定、Esc で閉じます。"
+
+#: src/Settings.py:49
+msgid "Paste emojis automatically"
+msgstr "絵文字を自動的に貼り付ける"
+
+#: src/Settings.py:55
+msgid "Status:"
+msgstr "状態:"
+
+#: src/Settings.py:60
+msgid "Enabled"
+msgstr "有効"
+
+#: src/Settings.py:62
+msgid ""
+"Emulates the Ctrl+V shortcut; might <b>not work</b> on some programs.\n"
+"If using the extension, <b>please ensure that it is correctly ENABLED</b>."
+msgstr ""
+"Ctrl+V ショートカットをエミュレートします。一部のプログラムでは<b>機能しない"
+"</b>可能性があります。\n"
+"拡張機能使用時は<b>必ず有効にしてください</b>。"
+
+#: src/Settings.py:68
+msgid "Get the GNOME extension"
+msgstr "GNOME 拡張機能を入手"
+
+#: src/Settings.py:68
+msgid "Install the extension to paste automatically on X11 and Wayland"
+msgstr "X11 と Wayland 上で自動的に貼り付けを行う拡張機能をインストールします"
+
+#: src/Settings.py:72
+msgid "Customization"
+msgstr "カスタマイズ"
+
+#: src/Settings.py:76 src/Settings.py:247
+msgid "Localized tags"
+msgstr "ローカライズされたタグ"
+
+#: src/Settings.py:78
+msgid "Use localized tags"
+msgstr "ローカライズされたタグを使う"
+
+#: src/Settings.py:83
+msgid "Merge localized and English tags"
+msgstr "ローカライズされたタグと英語のタグを統合する"
+
+#: src/Settings.py:85
+msgid "Use both localized tags and English ones at the same time"
+msgstr "ローカライズされたタグと英語のタグの両方を同時に使います"
+
+#: src/Settings.py:94
+msgid "Custom tags"
+msgstr "カスタムタグ"
+
+#: src/Settings.py:126
+msgid "Available (using the GNOME extension)"
+msgstr "利用可能 (GNOME 拡張機能を使用中)"
+
+#: src/Settings.py:128
+msgid "Requires the GNOME extension on Wayland"
+msgstr "Wayland 上では GNOME 拡張機能が必要"
+
+#: src/Settings.py:130
+msgid "Available (using xdotool on X11)"
+msgstr "利用可能 (X11 上で xdotool を使用中)"
+
+#: src/Settings.py:143
+msgid "Launch the app with a shortcut"
+msgstr "ショートカットを使ってアプリを起動"
+
+#: src/Settings.py:144
+msgid ""
+"Create a new keyboard shortcut in your system settings and paste the "
+"following code as a custom command"
+msgstr ""
+"システム設定で新しいキーボードショートカットを作成して、次のコードをカスタム"
+"コマンドとして貼り付けてください"
+
+#: src/Settings.py:180
+msgid "Remove"
+msgstr "削除"
+
+#: src/Settings.py:198
+msgid "There are no custom tags yet: create one with Alt + T"
+msgstr "カスタムタグがまだ登録されていません。Alt + T で作成します"
+
+#: src/Settings.py:211
+msgid "Default skintone"
+msgstr "デフォルトの肌の色"
+
+#: src/Settings.py:226
+msgid "Emoji size"
+msgstr "絵文字の大きさ"
+
+#: src/Settings.py:228
+msgid "Default"
+msgstr "デフォルト"
+
+#: src/Settings.py:229
+msgid "Big"
+msgstr "大"
+
+#: src/Settings.py:230
+msgid "Bigger"
+msgstr "特大"
+
+#: src/Settings.py:231
+msgid "Giant"
+msgstr "極大"
+
+#: src/Settings.py:330
+msgid "Invalid file selected"
+msgstr "無効なファイルが選択されました"
+
+#: src/Settings.py:331
+msgid "The configuration file that you selected is not a valid backup."
+msgstr "選択された設定ファイルは有効なバックアップではありません。"
+
+#: src/Settings.py:334
+msgid "Close"
+msgstr "閉じる"
+
+#: src/ui/menu.ui:6
+msgid "Preferences"
+msgstr "設定"
+
+#: src/ui/menu.ui:10
+msgid "Shortcuts"
+msgstr "ショートカット"
+
+#: src/ui/menu.ui:15
+msgid "What's new?"
+msgstr "新機能"
+
+#: src/ui/menu.ui:19
+msgid "Install GNOME extension"
+msgstr "GNOME 拡張機能をインストール"
+
+#: src/ui/menu.ui:23
+msgid "Translate this app"
+msgstr "このアプリを翻訳"
+
+#: src/ui/menu.ui:26
+msgid "About"
+msgstr "このアプリについて"
+
+#: src/ui/shortcuts.ui:12
+msgid "Mouse"
+msgstr "マウス"
+
+#: src/ui/shortcuts.ui:109
+msgid "Keyboard"
+msgstr "キーボード"
+
+#: src/ui/shortcuts.ui:114
+msgid ""
+"Copy the selected emoji and hide the window (When an emoji is highlighted)"
+msgstr ""
+"選択中の絵文字をコピーしてウィンドウを非表示にする (絵文字がハイライトされて"
+"いる場合)"
+
+#: src/ui/shortcuts.ui:121
+msgid "Copy first emoji and hide the window (When using the search bar)"
+msgstr "最初の絵文字をコピーしてウィンドウを非表示にする (検索バー使用時)"
+
+#: src/ui/shortcuts.ui:128
+msgid "Show the category on the right"
+msgstr "右のカテゴリーを表示"
+
+#: src/ui/shortcuts.ui:135
+msgid "Show the category on the left"
+msgstr "左のカテゴリーを表示"
+
+#: src/ui/shortcuts.ui:142
+msgid "Add an emoji to selection"
+msgstr "絵文字を選択対象に追加"
+
+#: src/ui/shortcuts.ui:150
+msgid "Remove the last emoji from the selection"
+msgstr "最後の絵文字を選択対象から削除"
+
+#: src/ui/shortcuts.ui:157
+msgid "Copy the selection and hide the window, without the highlighted emoji"
+msgstr ""
+"選択対象をコピーしてウィンドウを非表示にする　(ハイライトされた絵文字は含ま"
+"ない)"
+
+#: src/ui/shortcuts.ui:164
+msgid "Open the skintone selector (if available)"
+msgstr "肌の色ピッカーを開く (利用可能な場合)"
+
+#: src/ui/shortcuts.ui:171
+msgid "Add a custom tag"
+msgstr "カスタムタグを追加"
