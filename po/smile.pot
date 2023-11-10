@@ -25,6 +25,10 @@ msgstr ""
 msgid "translator_credits"
 msgstr ""
 
+#: src/Picker.py:527
+msgid "No skintones available"
+msgstr ""
+
 #: src/Picker.py:550
 msgid "Recently used emojis"
 msgstr ""
