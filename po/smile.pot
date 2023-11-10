@@ -199,6 +199,23 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
+#: src/ui/importexport-customtags.ui:7
+msgid "Export and import custom tags"
+msgstr ""
+
+#: src/ui/importexport-customtags.ui:8
+msgid ""
+"Use the buttons below to create or restore custom tags from another machine"
+msgstr ""
+
+#: src/ui/importexport-customtags.ui:23
+msgid "Export to file"
+msgstr ""
+
+#: src/ui/importexport-customtags.ui:29
+msgid "Import from file"
+msgstr ""
+
 #: src/ui/menu.ui:6
 msgid "Preferences"
 msgstr ""
@@ -227,6 +244,22 @@ msgstr ""
 msgid "Mouse"
 msgstr ""
 
+#: src/ui/shortcuts.ui:28
+msgid "Copy the selected emoji and hide the window"
+msgstr ""
+
+#: src/ui/shortcuts.ui:48 src/ui/shortcuts.ui:164
+msgid "Open the skintone selector (if available)"
+msgstr ""
+
+#: src/ui/shortcuts.ui:68 src/ui/shortcuts.ui:171
+msgid "Add a custom tag"
+msgstr ""
+
+#: src/ui/shortcuts.ui:99 src/ui/shortcuts.ui:142
+msgid "Add an emoji to selection"
+msgstr ""
+
 #: src/ui/shortcuts.ui:109
 msgid "Keyboard"
 msgstr ""
@@ -248,22 +281,10 @@ msgstr ""
 msgid "Show the category on the left"
 msgstr ""
 
-#: src/ui/shortcuts.ui:142
-msgid "Add an emoji to selection"
-msgstr ""
-
 #: src/ui/shortcuts.ui:150
 msgid "Remove the last emoji from the selection"
 msgstr ""
 
 #: src/ui/shortcuts.ui:157
 msgid "Copy the selection and hide the window, without the highlighted emoji"
-msgstr ""
-
-#: src/ui/shortcuts.ui:164
-msgid "Open the skintone selector (if available)"
-msgstr ""
-
-#: src/ui/shortcuts.ui:171
-msgid "Add a custom tag"
 msgstr ""
