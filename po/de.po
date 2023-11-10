@@ -27,6 +27,10 @@ msgstr "Verwerfen"
 msgid "translator_credits"
 msgstr "Sebin Nyshkim <sebin.nyshkim@icloud.com>"
 
+#: src/Picker.py:527
+msgid "No skintones available"
+msgstr "Keine Hauttöne verfügbar"
+
 #: src/Picker.py:550
 msgid "Recently used emojis"
 msgstr "Zuletzt benutzte Emoji"
