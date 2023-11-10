@@ -25,7 +25,7 @@
                                 </child>
                                 <child>
                                     <object id="left-click-label" class="GtkLabel">
-                                        <property name="label"></property>
+                                        <property name="label" translatable="yes"></property>
                                     </object>
                                 </child>
                             </object>
@@ -45,7 +45,7 @@
                                 </child>
                                 <child>
                                     <object class="GtkLabel">
-                                        <property name="label">Open the skintone selector (if available)</property>
+                                        <property name="label" translatable="yes">Open the skintone selector (if available)</property>
                                     </object>
                                 </child>
                             </object>
@@ -65,7 +65,7 @@
                                 </child>
                                 <child>
                                     <object class="GtkLabel">
-                                        <property name="label">Add a custom tag</property>
+                                        <property name="label" translatable="yes">Add a custom tag</property>
                                     </object>
                                 </child>
                             </object>
@@ -96,7 +96,7 @@
                                 </child>
                                 <child>
                                     <object id="shift-left-click-label" class="GtkLabel">
-                                        <property name="label"></property>
+                                        <property name="label" translatable="yes"></property>
                                     </object>
                                 </child>
                             </object>
