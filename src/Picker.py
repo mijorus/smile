@@ -524,7 +524,7 @@ class Picker(Gtk.ApplicationWindow):
 
         if not SkintoneSelector.check_skintone(focused_widget):
             self.overlay.add_toast(
-                Adw.Toast(title="No skintones available", timeout=1)
+                Adw.Toast(title=_("No skintones available"), timeout=1)
             )
         else:
             self.skintone_selector = SkintoneSelector(
