@@ -126,6 +126,3 @@ flatpak-builder build/ it.mijorus.smile.json --user --install --force-clean
 <p align="center">
   <img width="500" src="docs/screenshot1.png">
 </p>
-<p align="center">
-  <img width="500" src="docs/screenshot2.png">
-</p>
