@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-08 10:34+0200\n"
-"PO-Revision-Date: 2023-07-08 10:45+0200\n"
+"POT-Creation-Date: 2023-08-17 16:09+0200\n"
+"PO-Revision-Date: 2023-11-11 20:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it\n"
@@ -16,37 +16,35 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.4.1\n"
 
-#: src/main.py:79
-msgid "Pro tip!"
-msgstr "Suggerimento!"
-
-#: src/main.py:80
-msgid ""
-"You can now automatically paste emojis on X11 systems and with the GNOME "
-"extension on Wayland!"
-msgstr ""
-"Ora puoi incollare le emoji automaticamente su X11, e su Wayland usando "
-"l'estensione GNOME!"
-
-#: src/main.py:83
+#: src/main.py:94
 msgid "Dismiss"
 msgstr "Ignora"
 
-#: src/main.py:84
-msgid "Install"
-msgstr "Installa"
-
-#: src/main.py:125
+#: src/main.py:132
 msgid "translator_credits"
 msgstr "Lorenzo Paderi"
 
-#: src/Picker.py:548
+#: src/Picker.py:527
+msgid "No skintones available"
+msgstr "Colori della pelle non disponibili"
+
+#: src/Picker.py:550
+msgid "Recently used emojis"
+msgstr "Emoji usati di recente"
+
+#: src/Picker.py:552
+msgid ""
+"Whoa, it's still empty! \n"
+"Your most used emojis will show up here\n"
+msgstr "È ancora tutto vuoto! Le tue emoji più utilizzate appariranno qui\n"
+
+#: src/Picker.py:572
 msgid "Copied!"
 msgstr "Emoji copiata!"
 
-#: src/Picker.py:549
+#: src/Picker.py:573
 msgid ""
 "I have copied the emoji to the clipboard. You can now paste it in any input "
 "field."
@@ -58,39 +56,55 @@ msgstr ""
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: src/Settings.py:29
+#: src/Settings.py:31
 msgid "General"
 msgstr "Generale"
 
-#: src/Settings.py:31
+#: src/Settings.py:33
 msgid "Run in the background"
 msgstr "Esegui in background"
 
-#: src/Settings.py:31
+#: src/Settings.py:33
 msgid "Keep Smile running in the background for a faster launch"
 msgstr "Mantieni Smile in esecuzione sullo sfondo per un avvio più rapido"
 
-#: src/Settings.py:35
+#: src/Settings.py:37
 msgid "Minimize on exit"
 msgstr "Minimizza all'uscita"
 
-#: src/Settings.py:35
+#: src/Settings.py:37
 msgid "Minimize the window when selecting an emoji"
 msgstr "Riduci la finestra ad icona quando si seleziona un'emoji"
 
-#: src/Settings.py:40
+#: src/Settings.py:43
+msgid "Mouse behaviour"
+msgstr "Comportamento del mouse"
+
+#: src/Settings.py:45
+msgid "Mouse multi select"
+msgstr "Selezione multipla con il mouse"
+
+#: src/Settings.py:45
+msgid ""
+"Select multiple emojis with a single mouse click, replacing Shift + Click; "
+"press Enter to confirm and Esc to dismiss."
+msgstr ""
+"Seleziona più emoji con un singolo click, rimpiazzando Shift + Click; premi "
+"Invio per confermare ed Esc per annullare."
+
+#: src/Settings.py:49
 msgid "Paste emojis automatically"
 msgstr "Incolla le emoji automaticamente"
 
-#: src/Settings.py:46
+#: src/Settings.py:55
 msgid "Status:"
 msgstr "Stato:"
 
-#: src/Settings.py:51
+#: src/Settings.py:60
 msgid "Enabled"
 msgstr "Attiva"
 
-#: src/Settings.py:53
+#: src/Settings.py:62
 msgid ""
 "Emulates the Ctrl+V shortcut; might <b>not work</b> on some programs.\n"
 "If using the extension, <b>please ensure that it is correctly ENABLED</b>."
@@ -100,55 +114,55 @@ msgstr ""
 "Se si sta usando l'estensione, <b>si prega di verificare che sia "
 "correttamente ATTIVATA</b>."
 
-#: src/Settings.py:59
+#: src/Settings.py:68
 msgid "Get the GNOME extension"
 msgstr "Estensione GNOME"
 
-#: src/Settings.py:59
+#: src/Settings.py:68
 msgid "Install the extension to paste automatically on X11 and Wayland"
 msgstr "Installa l'estensione per incollare automaticamente su X11 e Wayland"
 
-#: src/Settings.py:62
+#: src/Settings.py:72
 msgid "Customization"
 msgstr "Personalizzazione"
 
-#: src/Settings.py:66 src/Settings.py:238
+#: src/Settings.py:76 src/Settings.py:247
 msgid "Localized tags"
 msgstr "Tag localizzati"
 
-#: src/Settings.py:68
+#: src/Settings.py:78
 msgid "Use localized tags"
 msgstr "Usa tag localizzati"
 
-#: src/Settings.py:73
+#: src/Settings.py:83
 msgid "Merge localized and English tags"
 msgstr "Unisci i tag in inglese e quelli localizzati"
 
-#: src/Settings.py:75
+#: src/Settings.py:85
 msgid "Use both localized tags and English ones at the same time"
 msgstr "Usa i tag in inglese ed i tag localizzati allo stesso tempo"
 
-#: src/Settings.py:85
+#: src/Settings.py:94
 msgid "Custom tags"
 msgstr "Tag personalizzati"
 
-#: src/Settings.py:117
+#: src/Settings.py:126
 msgid "Available (using the GNOME extension)"
 msgstr "Disponibile (usando l'estensione di GNOME)"
 
-#: src/Settings.py:119
+#: src/Settings.py:128
 msgid "Requires the GNOME extension on Wayland"
 msgstr "Richiede l'estensione di GNOME su Wayland"
 
-#: src/Settings.py:121
+#: src/Settings.py:130
 msgid "Available (using xdotool on X11)"
 msgstr "Disponibile (usando xdotool su X11)"
 
-#: src/Settings.py:134
+#: src/Settings.py:143
 msgid "Launch the app with a shortcut"
 msgstr "Avvia l'app con una scorciatoia"
 
-#: src/Settings.py:135
+#: src/Settings.py:144
 msgid ""
 "Create a new keyboard shortcut in your system settings and paste the "
 "following code as a custom command"
@@ -156,49 +170,68 @@ msgstr ""
 "Crea una nuova scorciatoia nelle impostazioni di sistema incollando questo "
 "codice come comando personalizzato"
 
-#: src/Settings.py:171
+#: src/Settings.py:180
 msgid "Remove"
 msgstr "Rimuovi"
 
-#: src/Settings.py:189
+#: src/Settings.py:198
 msgid "There are no custom tags yet: create one with Alt + T"
 msgstr "Non ci sono ancora tag personalizzati; puoi crearne uno con Alt + T"
 
-#: src/Settings.py:202
+#: src/Settings.py:211
 msgid "Default skintone"
 msgstr "Colore della pelle predefinito"
 
-#: src/Settings.py:217
+#: src/Settings.py:226
 msgid "Emoji size"
 msgstr "Dimensione emoji"
 
-#: src/Settings.py:219
+#: src/Settings.py:228
 msgid "Default"
 msgstr "Predefinito"
 
-#: src/Settings.py:220
+#: src/Settings.py:229
 msgid "Big"
 msgstr "Grande"
 
-#: src/Settings.py:221
+#: src/Settings.py:230
 msgid "Bigger"
 msgstr "Più grande"
 
-#: src/Settings.py:222
+#: src/Settings.py:231
 msgid "Giant"
 msgstr "Gigante"
 
-#: src/Settings.py:321
+#: src/Settings.py:330
 msgid "Invalid file selected"
 msgstr "File non valido"
 
-#: src/Settings.py:322
+#: src/Settings.py:331
 msgid "The configuration file that you selected is not a valid backup."
 msgstr "Il file di configurazione selezionato non è un backup valido."
 
-#: src/Settings.py:325
+#: src/Settings.py:334
 msgid "Close"
 msgstr "Chiudi"
+
+#: src/ui/importexport-customtags.ui:7
+msgid "Export and import custom tags"
+msgstr "Esporta ed importa i tag personalizzati"
+
+#: src/ui/importexport-customtags.ui:8
+msgid ""
+"Use the buttons below to create or restore custom tags from another machine"
+msgstr ""
+"Usa i pulsanti sottostanti per creare o ripristinare l'elenco dei tag "
+"personalizzati"
+
+#: src/ui/importexport-customtags.ui:23
+msgid "Export to file"
+msgstr "Esporta"
+
+#: src/ui/importexport-customtags.ui:29
+msgid "Import from file"
+msgstr "Importa"
 
 #: src/ui/menu.ui:6
 msgid "Preferences"
@@ -228,6 +261,22 @@ msgstr "Informazioni su Smile"
 msgid "Mouse"
 msgstr "Mouse"
 
+#: src/ui/shortcuts.ui:28
+msgid "Copy the selected emoji and hide the window"
+msgstr "Copia l'emoji selezionata e nasconde la finestra"
+
+#: src/ui/shortcuts.ui:48 src/ui/shortcuts.ui:164
+msgid "Open the skintone selector (if available)"
+msgstr "Apri il selettore dei colori della pelle (se disponibile)"
+
+#: src/ui/shortcuts.ui:68 src/ui/shortcuts.ui:171
+msgid "Add a custom tag"
+msgstr "Aggiungi un tag personalizzato"
+
+#: src/ui/shortcuts.ui:99 src/ui/shortcuts.ui:142
+msgid "Add an emoji to selection"
+msgstr "Aggiungi un'emoji alla selezione"
+
 #: src/ui/shortcuts.ui:109
 msgid "Keyboard"
 msgstr "Tastiera"
@@ -253,10 +302,6 @@ msgstr "Mostra la categoria a destra"
 msgid "Show the category on the left"
 msgstr "Mostra la categoria a sinistra"
 
-#: src/ui/shortcuts.ui:142
-msgid "Add an emoji to selection"
-msgstr "Aggiungi un'emoji alla selezione"
-
 #: src/ui/shortcuts.ui:150
 msgid "Remove the last emoji from the selection"
 msgstr "Rimuovi l'ultima emoji dalla selezione"
@@ -267,13 +312,18 @@ msgstr ""
 "Copia la selezione e nascondi la finestra, senza selezionare l'emoji "
 "evidenziata"
 
-#: src/ui/shortcuts.ui:164
-msgid "Open the skintone selector (if available)"
-msgstr "Apri il selettore dei colori della pelle (se disponibile)"
+#~ msgid "Pro tip!"
+#~ msgstr "Suggerimento!"
 
-#: src/ui/shortcuts.ui:171
-msgid "Add a custom tag"
-msgstr "Aggiungi un tag personalizzato"
+#~ msgid ""
+#~ "You can now automatically paste emojis on X11 systems and with the GNOME "
+#~ "extension on Wayland!"
+#~ msgstr ""
+#~ "Ora puoi incollare le emoji automaticamente su X11, e su Wayland usando "
+#~ "l'estensione GNOME!"
+
+#~ msgid "Install"
+#~ msgstr "Installa"
 
 #~ msgid "GNOME Extension (Not Installed)"
 #~ msgstr "Estensione GNOME (Non installata)"
