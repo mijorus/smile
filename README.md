@@ -17,7 +17,7 @@
   <img width="250" src="https://mijorus.it/kofi-support.png">
 </a>
 
-##  1. <a name='Download'></a>Download
+##  1. Download
 
 ### Get from Flathub
 <a href="https://flathub.org/apps/details/it.mijorus.smile" align="center">
@@ -32,7 +32,7 @@
   <img width="200" src="docs/gnome-extension.svg">
 </a>
 
-###  1.1 <a name='Source'></a>Source
+###  1.1 Source
 <a href="https://github.com/mijorus/smile" align="center">
   <img width="100" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png">
 </a>
@@ -46,16 +46,16 @@ Use the following command to make Smile and any new window be centered:
 gsettings set org.gnome.mutter center-new-windows true
 ```
 
-##  2. <a name='Features'></a>Features
+##  2. Features
 
 Smile is a simple emoji picker for linux with **custom tags support**.
 
-###  2.1. <a name='Localizedtagsenglishfallback'></a>Localized tags + english fallback!
+###  2.1. Localized tags + english fallback!
 
 #### English fallback!
 Go to `Preferences > Localized tags > Merge localized tags`!
 
-###  2.2. <a name='Customtags'></a>Custom tags
+###  2.2. Custom tags
 No matter how many tags we put in, there is always going to be that one emoji which you expect to show up when you search, but it doesn't.
 
 An example?  
@@ -67,35 +67,35 @@ Select the icon using the arrow keys and press `Alt + T` or `Middle Click` to op
   <img width="500" src="docs/screenshot4.png">
 </p>
 
-###  2.3. <a name='Customshortcut'></a>Custom shortcut
+###  2.3. Custom shortcut
 This app does not register its own system-wide shortcut, but you can create your custom shortcut for Smile by launching this command: 
 
 `flatpak run it.mijorus.smile`
 
-###  2.4. <a name='Skintoneselector'></a>Skintone selector
+###  2.4. Skintone selector
 
 Press `Alt + E` or `Right Click` on any emoji with the **rounded top-right** corner (see screenshot below).
 <p align="center">
   <img width="500" src="docs/screenshot10.png">
 </p>
 
-###  2.5. <a name='Multiselection'></a>Multi selection
+###  2.5. Multi selection
 Use `Shift + Enter` to select multiple emojis; use `Ctrl+Enter` to quit without selecting an additional emoji
 <p align="center">
   <img width="500" src="docs/screenshot11.png">
 </p>
 
 
-##  3. <a name='Changelog'></a>Changelog
+##  3. Changelog
 Please check out [https://smile.mijorus.it/changelog](https://smile.mijorus.it/changelog)
 
-##  5. <a name='Thirdpartylicences'></a>Third party licences
+##  5. Third party licences
 Awesome resources that made Smile possible:
 
 - [Openmoji](https://openmoji.org/) for the emoji list and english tags
 - [Emojibase](https://github.com/milesj/emojibase) for the translated tags available since version 1.70
 
-##  6. <a name='Building'></a>Building 
+##  6. Building 
 You will need:
 - flatpak
 - flatpak-builder
@@ -118,11 +118,11 @@ flatpak-builder --run build/ it.mijorus.smile.json smile
 flatpak-builder build/ it.mijorus.smile.json --user --install --force-clean
 ```
 
-##  7. <a name='Thanksto'></a>Thanks to
+##  7. Thanks to
 
 - [Emote](https://github.com/tom-james-watson/Emote) for the inspiration and some code
 
-##  8. <a name='Somemorescreenshots'></a>Some more screenshots
+##  8. Some more screenshots
 <p align="center">
   <img width="500" src="docs/screenshot1.png">
 </p>
