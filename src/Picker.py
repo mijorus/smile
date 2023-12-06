@@ -34,6 +34,7 @@ from .lib.custom_tags import get_custom_tags
 from .lib.localized_tags import get_localized_tags
 from .lib.emoji_history import increment_emoji_usage_counter, get_history
 from .utils import tag_list_contains, debounce, idle
+from .lib.widget_utils import create_flowbox_child, flowbox_child_set_as_selected, flowbox_child_set_as_active, flowbox_child_deselect, create_emoji_button
 from .lib.DbusService import DbusService, DBUS_SERVICE_INTERFACE, DBUS_SERVICE_PATH
 from .assets.emoji_list import emojis, emoji_categories
 
@@ -104,7 +105,7 @@ class Picker(Gtk.ApplicationWindow):
         pop_buffer_btn = Gtk.Button(icon_name='smile-entry-clear-symbolic', valign=Gtk.Align.CENTER, css_classes=['flat'])
 
         select_buffer_button.connect('clicked', lambda w: self.copy_and_quit())
-        pop_buffer_btn.connect('clicked', lambda w: self.deselect_emoji_button())
+        pop_buffer_btn.connect('clicked', lambda w: self.deselect_last_selected_emoji())
         select_buffer_container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, css_classes=['selected-emojis-box'], spacing=2)
         [select_buffer_container.append(w) for w in [self.select_buffer_label, pop_buffer_btn, select_buffer_button]]
 
@@ -286,10 +287,14 @@ class Picker(Gtk.ApplicationWindow):
                 elif emoji['group'] != self.selected_category:
                     continue
 
-            emoji_button = self.create_emoji_button(emoji)
+            emoji_button = create_emoji_button(emoji, click_handler=self.handle_emoji_button_click)
             self.emoji_button_update_css_classes(emoji_button)
 
-            flowbox_child = self.create_flowbox_child(emoji_button)
+            flowbox_child = create_flowbox_child(emoji_button, 
+                secondary_click_geture_callback=self.flowbox_child_secondary_btn_gesture_end, 
+                middle_click_gesture_callback=self.flowbox_child_middle_btn_gesture_end
+            )
+
             self.emoji_list.append(flowbox_child)
             self.emoji_list_widgets.append(flowbox_child)
 
@@ -379,7 +384,7 @@ class Picker(Gtk.ApplicationWindow):
 
             if (keyval == Gdk.KEY_BackSpace):
                 if focused_button:
-                    self.deselect_emoji_button()
+                    self.deselect_last_selected_emoji()
 
                     return True
 
@@ -451,17 +456,17 @@ class Picker(Gtk.ApplicationWindow):
         if shift_key:
             self.shift_key_pressed = True
             if (keyval == Gdk.KEY_Return):
-                self.select_emoji_button(focused_widget.emoji_button)
+                self.select_emoji_button(focused_widget.get_child())
                 return True
 
             elif (keyval == Gdk.KEY_BackSpace):
-                self.deselect_emoji_button()
+                self.deselect_last_selected_emoji()
 
                 return True
         else:
             if (keyval == Gdk.KEY_Return):
                 self.skintone_selector.request_close()
-                self.copy_and_quit(focused_widget.emoji_button)
+                self.copy_and_quit(focused_widget.get_child())
                 return True
 
         return False
@@ -490,10 +495,10 @@ class Picker(Gtk.ApplicationWindow):
         self.set_empty_recent_tip(None)
 
         for button in self.selected_buttons:
-            self.flowbox_child_deselect(button)
+            flowbox_child_deselect(button)
 
         for flowbox_child in self.emoji_list_widgets:
-            self.flowbox_child_deselect(flowbox_child)
+            flowbox_child_deselect(flowbox_child)
 
         self.selected_buttons = []
 
@@ -531,6 +536,11 @@ class Picker(Gtk.ApplicationWindow):
                 emoji_active_selection=self.selected_buttons
             )
 
+            for widget in self.skintone_selector.flowbox_widgets:
+                self.emoji_button_update_css_classes(widget.get_child())
+
+            self.skintone_selector.show()
+
     def show_custom_tag_entry(self, focused_widget: Gtk.FlowBoxChild):
         popup = CustomTagEntry(focused_widget, self)
         popup.show()
@@ -562,15 +572,15 @@ class Picker(Gtk.ApplicationWindow):
 
         increment_emoji_usage_counter(button)
 
-        self.flowbox_child_set_as_selected(None, widget=flowbox_child)
-        self.flowbox_child_set_as_active(flowbox_child)
+        flowbox_child_set_as_selected(None, widget=flowbox_child)
+        flowbox_child_set_as_active(flowbox_child)
 
         if button.base_skintone_widget:
-            self.flowbox_child_set_as_selected(None, widget=button.base_skintone_widget)
+            flowbox_child_set_as_selected(None, widget=button.base_skintone_widget)
 
         self.update_selection_content(self.selection)
 
-    def deselect_emoji_button(self):
+    def deselect_last_selected_emoji(self):
         if not self.selection:
             return
 
@@ -580,7 +590,7 @@ class Picker(Gtk.ApplicationWindow):
         self.selected_buttons.pop()
 
         if not last_button.get_label() in self.selection:
-            self.flowbox_child_deselect(last_button.get_parent())
+            flowbox_child_deselect(last_button.get_parent())
 
         if last_button.base_skintone_widget:
             base_skintone_widget_is_selected = False
@@ -591,7 +601,7 @@ class Picker(Gtk.ApplicationWindow):
                     break
 
             if not base_skintone_widget_is_selected:
-                self.flowbox_child_deselect(last_button.base_skintone_widget)
+                flowbox_child_deselect(last_button.base_skintone_widget)
 
         self.update_selection_content(self.selection)
 
@@ -662,7 +672,10 @@ class Picker(Gtk.ApplicationWindow):
             return ((h2['lastUsage'] if h2 else 0) - (h1['lastUsage'] if h1 else 0))
 
         elif self.query:
-            return -1 if get_custom_tags(child1.hexcode, True) else 1
+            if get_custom_tags(child2.hexcode, True):
+                return 1
+            else:
+                return (child1.emoji_data['order'] - child2.emoji_data['order'])
 
         else:
             return (child1.emoji_data['order'] - child2.emoji_data['order'])
@@ -685,69 +698,7 @@ class Picker(Gtk.ApplicationWindow):
         for widget in self.emoji_list_widgets:
             self.emoji_button_update_css_classes(widget.get_child())
 
-    # Create flowbox components
-    
-    def create_emoji_button(self, emoji_data: dict) -> Gtk.Button:
-        emoji_button = Gtk.Button(label=emoji_data['emoji'])
-        emoji_button.emoji_data = emoji_data
-        emoji_button.hexcode = emoji_data['hexcode']
-        emoji_button.connect('clicked', self.handle_emoji_button_click)
-        emoji_button.base_skintone_widget = None
-
-        return emoji_button
-
-    def create_flowbox_child(self, emoji_button: Gtk.Button) -> Gtk.FlowBoxChild:
-        flowbox_child = Gtk.FlowBoxChild(child=emoji_button)
-        flowbox_child._is_selected = False
-        flowbox_child.set_css_classes(self.flowbox_child_default_css)
-
-        event_controller_focus = Gtk.EventControllerFocus()
-        flowbox_child.add_controller(event_controller_focus)
-
-        event_controller_focus.connect('enter', self.flowbox_child_on_selection_enter)
-        event_controller_focus.connect('leave', self.flowbox_child_on_selection_leave)
-
-        gesture = Gtk.GestureSingle(button=Gdk.BUTTON_SECONDARY)
-        gesture.connect('end', self.flowbox_child_secondary_btn_gesture_end)
-        flowbox_child.add_controller(gesture)
-
-        gesture_mid_click = Gtk.GestureSingle(button=Gdk.BUTTON_MIDDLE)
-        gesture_mid_click.connect('end', self.flowbox_child_middle_btn_gesture_end)
-        flowbox_child.add_controller(gesture_mid_click)
-
-        return flowbox_child
-
-
     # Modify behavior of button widgets
-
-    def flowbox_child_on_selection_enter(self, controller, widget=None):
-        if not widget:
-            widget = controller.get_widget()
-        
-        widget.set_css_classes(self.flowbox_child_default_css)
-
-    def flowbox_child_on_selection_leave(self, controller, widget=None):
-        if not widget:
-            widget = controller.get_widget()
-
-        if widget._is_selected:
-            self.flowbox_child_set_as_selected(None, widget)
-        else:
-            self.flowbox_child_deselect(widget)
-
-    def flowbox_child_set_as_selected(self, controller, widget=None):
-        if not widget:
-            widget = controller.get_widget()
-
-        widget._is_selected = True
-        widget.set_css_classes([*self.flowbox_child_default_css, 'selected'])
-
-    def flowbox_child_set_as_active(self, widget: Gtk.FlowBoxChild):
-        widget.set_css_classes([*self.flowbox_child_default_css, 'active'])
-
-    def flowbox_child_deselect(self, widget: Gtk.FlowBoxChild):
-        widget._is_selected = False
-        widget.set_css_classes([*self.flowbox_child_default_css])
 
     def flowbox_child_secondary_btn_gesture_end(self, gesture: Gtk.GestureSingle, data):
         self.show_skintone_selector(gesture.get_widget())

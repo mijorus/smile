@@ -1,5 +1,6 @@
 import gi
 from ..assets.emoji_list import emojis
+from ..lib.widget_utils import create_emoji_button, create_flowbox_child
 from ..lib.custom_tags import set_custom_tags, get_custom_tags
 from ..lib.localized_tags import get_localized_tags, get_countries_list
 from .CustomPopover import CustomPopover
@@ -11,10 +12,11 @@ from gi.repository import Gtk, Gio, Gdk, GLib, Adw  # noqa
 
 
 class SkintoneSelector(CustomPopover):
-    def __init__(self, flowbox_child: Gtk.FlowBoxChild, parent: Gtk.Window, click_handler: callable, keypress_handler: callable, emoji_active_selection: list[Gtk.Button]):
+    def __init__(self, parent_flowbox_child: Gtk.FlowBoxChild, parent: Gtk.Window, click_handler: callable, keypress_handler: callable, emoji_active_selection: list[Gtk.Button]):
         super().__init__(parent=parent)
         self.click_handler = click_handler
-        self.flowbox_child = flowbox_child
+        self.parent_flowbox_child = parent_flowbox_child
+        self.flowbox_widgets: [Gtk.FlowBoxChild] = []
 
         popover_content = Gtk.Box(
             orientation=Gtk.Orientation.VERTICAL,
@@ -47,15 +49,12 @@ class SkintoneSelector(CustomPopover):
         popover_container.set_propagate_natural_width(True)
         popover_container.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.NEVER)
 
-        relative_widget_hexcode = flowbox_child.get_child().emoji_data['hexcode']
+        relative_widget_hexcode = self.parent_flowbox_child.get_child().emoji_data['hexcode']
         for skintone in emojis[relative_widget_hexcode]['skintones']:
-            button = Gtk.Button(label=skintone['emoji'], width_request=55)
-            button.base_skintone_widget = flowbox_child
-            button.hexcode = skintone['hexcode']
+            button = create_emoji_button(skintone, self.handle_activate)
+            button.base_skintone_widget = self.parent_flowbox_child
 
-            button.connect('clicked', self.handle_activate)
-
-            child = Gtk.FlowBoxChild(child=button)
+            child = create_flowbox_child(button)
 
             for e in emoji_active_selection:
                 if e.hexcode == button.emoji_data['hexcode']:
@@ -64,6 +63,7 @@ class SkintoneSelector(CustomPopover):
                     break
 
             skintone_emojis.append(child)
+            self.flowbox_widgets.append(child)
 
         popover_container.set_child(skintone_emojis)
         popover_content.append(popover_container)
@@ -80,7 +80,7 @@ class SkintoneSelector(CustomPopover):
         self.handle_close = self.on_close
 
         self.set_content(popover_content)
-        self.show()
+        # self.show()
 
     def handle_activate(self, event):
         self.click_handler(event)
