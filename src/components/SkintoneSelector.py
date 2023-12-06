@@ -3,8 +3,6 @@ from ..assets.emoji_list import emojis
 from ..lib.custom_tags import set_custom_tags, get_custom_tags
 from ..lib.localized_tags import get_localized_tags, get_countries_list
 from .CustomPopover import CustomPopover
-# from .EmojiButton import EmojiButton
-# from .FlowBoxChild import FlowBoxChild
 
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
@@ -61,8 +59,8 @@ class SkintoneSelector(CustomPopover):
 
             for e in emoji_active_selection:
                 if e.hexcode == button.emoji_data['hexcode']:
-                    # TODO:
-                    # child.set_as_selected()
+                    child._is_selected = True
+                    child.set_css_classes(['flowbox-child-custom', 'selected'])
                     break
 
             skintone_emojis.append(child)
