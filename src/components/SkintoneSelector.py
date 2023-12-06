@@ -3,8 +3,8 @@ from ..assets.emoji_list import emojis
 from ..lib.custom_tags import set_custom_tags, get_custom_tags
 from ..lib.localized_tags import get_localized_tags, get_countries_list
 from .CustomPopover import CustomPopover
-from .EmojiButton import EmojiButton
-from .FlowBoxChild import FlowBoxChild
+# from .EmojiButton import EmojiButton
+# from .FlowBoxChild import FlowBoxChild
 
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
@@ -13,7 +13,7 @@ from gi.repository import Gtk, Gio, Gdk, GLib, Adw  # noqa
 
 
 class SkintoneSelector(CustomPopover):
-    def __init__(self, flowbox_child: Gtk.FlowBoxChild, parent: Gtk.Window, click_handler: callable, keypress_handler: callable, emoji_active_selection: list[EmojiButton]):
+    def __init__(self, flowbox_child: Gtk.FlowBoxChild, parent: Gtk.Window, click_handler: callable, keypress_handler: callable, emoji_active_selection: list[Gtk.Button]):
         super().__init__(parent=parent)
         self.click_handler = click_handler
         self.flowbox_child = flowbox_child
@@ -51,15 +51,18 @@ class SkintoneSelector(CustomPopover):
 
         relative_widget_hexcode = flowbox_child.get_child().emoji_data['hexcode']
         for skintone in emojis[relative_widget_hexcode]['skintones']:
-            button = EmojiButton(skintone, width_request=55)
+            button = Gtk.Button(label=skintone['emoji'], width_request=55)
             button.base_skintone_widget = flowbox_child
+            button.hexcode = skintone['hexcode']
+
             button.connect('clicked', self.handle_activate)
 
-            child = FlowBoxChild(emoji_button=button)
+            child = Gtk.FlowBoxChild(child=button)
 
             for e in emoji_active_selection:
                 if e.hexcode == button.emoji_data['hexcode']:
-                    child.set_as_selected()
+                    # TODO:
+                    # child.set_as_selected()
                     break
 
             skintone_emojis.append(child)
@@ -81,8 +84,8 @@ class SkintoneSelector(CustomPopover):
         self.set_content(popover_content)
         self.show()
 
-    def handle_activate(self, _):
-        self.click_handler(_)
+    def handle_activate(self, event):
+        self.click_handler(event)
         return True
 
     def check_skintone(flowbox_child):

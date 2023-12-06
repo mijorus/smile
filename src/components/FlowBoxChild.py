@@ -28,8 +28,6 @@ class FlowBoxChild(Gtk.FlowBoxChild):
         self.event_controller_focus.connect('leave', self.on_selection_leave)
         self.add_controller(self.event_controller_focus)
 
-        self.connect('unrealize', lambda w: print('destroy'))
-
         self.set_child(emoji_button)
 
     def on_selection_leave(self, event):
