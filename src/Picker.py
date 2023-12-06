@@ -19,9 +19,13 @@ import gi
 import os
 import threading
 import subprocess
+import re
+import sys
+import gc
+import copy
+from memory_profiler import profile
 from time import time, time_ns, sleep
 from typing import Optional
-import re
 
 from .ShortcutsWindow import ShortcutsWindow
 from .components.CustomTagEntry import CustomTagEntry
@@ -44,6 +48,8 @@ from gi.repository import Gtk, Gio, Gdk, Adw, GLib, Pango  # noqa
 class Picker(Gtk.ApplicationWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(title="Smile", resizable=True, *args, **kwargs)
+
+        self.flowbox_child_default_css = ['flowbox-child-custom']
 
         EMOJI_LIST_MIN_HEIGHT = 320
 
@@ -184,7 +190,7 @@ class Picker(Gtk.ApplicationWindow):
         self.overlay = Adw.ToastOverlay()
         self.overlay.set_child(self.viewport_box)
 
-        self.update_emoji_skintones(self.settings, 'skintone-modifier')
+        # self.update_emoji_skintones(self.settings, 'skintone-modifier')
         self.set_active_category('smileys-emotion')
 
         self.set_child(self.overlay)
@@ -236,6 +242,8 @@ class Picker(Gtk.ApplicationWindow):
         self.emoji_list.remove_all()
         self.emoji_list_widgets = []
 
+        gc.collect()
+
         self.history = get_history()
         filter_for_recents = self.selected_category == 'recents'
         tags_locale = self.settings.get_string('tags-locale')
@@ -281,10 +289,18 @@ class Picker(Gtk.ApplicationWindow):
                 elif emoji['group'] != self.selected_category:
                     continue
 
-            emoji_button = EmojiButton(emoji)
+            emoji_button = Gtk.Button(label=emoji['emoji'])
             emoji_button.connect('clicked', self.handle_emoji_button_click)
 
-            flowbox_child = FlowBoxChild(emoji_button)
+            flowbox_child = Gtk.FlowBoxChild(child=emoji_button)
+            flowbox_child._is_selected = False
+            flowbox_child.set_css_classes(self.flowbox_child_default_css)
+
+            event_controller_focus = Gtk.EventControllerFocus()
+            flowbox_child.add_controller(event_controller_focus)
+
+            event_controller_focus.connect('enter', lambda w: w.set_css_classes(self.default_css))
+            event_controller_focus.connect('leave', self.on_selection_leave)
 
             gesture = Gtk.GestureSingle(button=Gdk.BUTTON_SECONDARY)
             gesture.connect('end', lambda e, _: self.show_skintone_selector(e.get_widget()))
@@ -297,7 +313,7 @@ class Picker(Gtk.ApplicationWindow):
             self.emoji_list.append(flowbox_child)
             self.emoji_list_widgets.append(flowbox_child)
 
-        self.emoji_list.set_sort_func(self.sort_emoji_list, None)
+        # self.emoji_list.set_sort_func(self.sort_emoji_list, None)
         # print('Emoji list creation took ' + str((time_ns() - start) / 1000000) + 'ms')
 
     # Handle events
@@ -641,6 +657,7 @@ class Picker(Gtk.ApplicationWindow):
 
     @debounce(0.2)
     @idle
+    @profile
     def search_emoji(self, search_entry: str):
         start = time_ns()
 
@@ -651,7 +668,7 @@ class Picker(Gtk.ApplicationWindow):
 
         self.refresh_emoji_list()
         self.emoji_list.invalidate_sort()
-        # print('Search took ' + str((time_ns() - start) / 1000000) + 'ms')
+        print('Search took ' + str((time_ns() - start) / 1000000) + 'ms')
 
     def sort_emoji_list(self, child1: Gtk.FlowBoxChild, child2: Gtk.FlowBoxChild, user_data):
         child1 = child1.get_child()
@@ -681,3 +698,20 @@ class Picker(Gtk.ApplicationWindow):
                             break
                 else:
                     emoji_button.set_label(emoji_button.emoji_data['emoji'])
+
+    def on_selection_leave(self, widget):
+        if self._is_selected:
+            self.set_as_selected()
+        else:
+            self.deselect()
+
+    def set_as_selected(self, widget):
+        self._is_selected = True
+        self.set_css_classes([*self.flowbox_child_default_css, 'selected'])
+
+    def set_as_active(self, widget):
+        self.set_css_classes([*self.flowbox_child_default_css, 'active'])
+
+    def deselect(self, widget):
+        self._is_selected = False
+        self.set_css_classes([*self.flowbox_child_default_css])

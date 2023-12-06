@@ -99,11 +99,17 @@ Awesome resources that made Smile possible:
 You will need:
 - flatpak
 - flatpak-builder
-- flatpak-builder
 - org.gnome.Platform 44
 - org.gnome.Sdk 44
+- pango devel kit
 
 ```sh
+# Fedora
+sudo dnf install pango-devel
+
+# Ubuntu
+sudo apt-get install libsdl-pango-dev 
+
 git clone https://github.com/mijorus/smile.git
 cd smile
 
@@ -111,7 +117,7 @@ cd smile
 flatpak kill it.mijorus.smile
 
 # to run the app:
-  flatpak-builder build/ it.mijorus.smile.json --user --force-clean
+flatpak-builder build/ it.mijorus.smile.json --user --force-clean
 flatpak-builder --run build/ it.mijorus.smile.json smile
 
 # to install the app

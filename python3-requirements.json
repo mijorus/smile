@@ -7,13 +7,13 @@
             "name": "python3-manimpango",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"manimpango==0.4.0\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"manimpango==0.5.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/73/e7/3f8c94bff2c44747292f26e6a666a1728b0d3c7b48de978c237b063607ae/ManimPango-0.4.0.tar.gz",
-                    "sha256": "2e40eb7ae7ad500961113a0a0e3f61ac462e693db28112a8c96f4f17022bb62c"
+                    "url": "https://files.pythonhosted.org/packages/48/5b/d1249c3d90324a1d4dce4711e507c8ec87addca61d1304ffa55513783ba3/ManimPango-0.5.0.tar.gz",
+                    "sha256": "299913bbccb0f15954b64401cf9df24607e1a01edda589ea77de1ed4cc2bc284"
                 }
             ]
         },
@@ -32,16 +32,21 @@
             ]
         },
         {
-            "name": "python3-pyperclip",
+            "name": "python3-memory-profiler",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyperclip==1.8.2\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"memory-profiler==0.61.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a7/2c/4c64579f847bd5d539803c8b909e54ba087a79d01bb3aba433a95879a6c5/pyperclip-1.8.2.tar.gz",
-                    "sha256": "105254a8b04934f0bc84e9c24eb360a591aaf6535c9def5f29d92af107a9bf57"
+                    "url": "https://files.pythonhosted.org/packages/49/26/aaca612a0634ceede20682e692a6c55e35a94c21ba36b807cc40fe910ae1/memory_profiler-0.61.0-py3-none-any.whl",
+                    "sha256": "400348e61031e3942ad4d4109d18753b2fb08c2f6fb8290671c5513a34182d84"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/2d/01/beb7331fc6c8d1c49dd051e3611379bfe379e915c808e1301506027fce9d/psutil-5.9.6.tar.gz",
+                    "sha256": "e4b92ddcd7dd4cdd3f900180ea1e104932c7bce234fb88976e2a3b296441225a"
                 }
             ]
         }
