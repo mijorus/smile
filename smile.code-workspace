@@ -11,11 +11,14 @@
             "**/node_modules/*/**": true,
             "**/.hg/store/**": true,
             ".flatpak/**": true,
+            "build/**": true,
             "_build/**": true
         },
         "[python]": {
-            "editor.defaultFormatter": "ms-python.autopep8"
+            "editor.defaultFormatter": null
         },
-        "python.formatting.provider": "none"
+        "mypy.targets": [
+            "src/"
+        ],
     }
 }

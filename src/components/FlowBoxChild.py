@@ -12,21 +12,21 @@ from gi.repository import Gtk, Gio, Gdk, Adw  # noqa
 class FlowBoxChild(Gtk.FlowBoxChild):
     def __init__(self, emoji_button: EmojiButton, **kwargs):
         super().__init__(**kwargs)
-        # self.emoji_button = emoji_button
-        # self.emoji_button.set_can_focus(False)
+        self.emoji_button = emoji_button
+        self.emoji_button.set_can_focus(False)
 
-        # self._is_selected = False
-        # self.event_controller_focus = Gtk.EventControllerFocus()
+        self._is_selected = False
+        self.event_controller_focus = Gtk.EventControllerFocus()
 
-        # self.default_css = ['flowbox-child-custom']
-        # if ('skintones' in emoji_button.emoji_data) and emoji_button.emoji_data['skintones']:
-        #     self.default_css.append('emoji-with-skintones')
+        self.default_css = ['flowbox-child-custom']
+        if ('skintones' in emoji_button.emoji_data) and emoji_button.emoji_data['skintones']:
+            self.default_css.append('emoji-with-skintones')
 
-        # self.set_css_classes(self.default_css)
+        self.set_css_classes(self.default_css)
         
-        # self.event_controller_focus.connect('enter', lambda x: self.set_css_classes(self.default_css))
-        # self.event_controller_focus.connect('leave', self.on_selection_leave)
-        # self.add_controller(self.event_controller_focus)
+        self.event_controller_focus.connect('enter', lambda x: self.set_css_classes(self.default_css))
+        self.event_controller_focus.connect('leave', self.on_selection_leave)
+        self.add_controller(self.event_controller_focus)
 
         self.set_child(emoji_button)
 

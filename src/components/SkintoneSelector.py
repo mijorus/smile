@@ -49,7 +49,7 @@ class SkintoneSelector(CustomPopover):
         popover_container.set_propagate_natural_width(True)
         popover_container.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.NEVER)
 
-        relative_widget_hexcode = flowbox_child.emoji_button.emoji_data['hexcode']
+        relative_widget_hexcode = flowbox_child.get_child().emoji_data['hexcode']
         for skintone in emojis[relative_widget_hexcode]['skintones']:
             button = EmojiButton(skintone, width_request=55)
             button.base_skintone_widget = flowbox_child
@@ -86,7 +86,7 @@ class SkintoneSelector(CustomPopover):
         return True
 
     def check_skintone(flowbox_child):
-        relative_widget_hexcode = flowbox_child.emoji_button.emoji_data['hexcode']
+        relative_widget_hexcode = flowbox_child.get_child().emoji_data['hexcode']
         if ('skintones' in emojis[relative_widget_hexcode]):
             for skintone in emojis[relative_widget_hexcode]['skintones']:
                 return True

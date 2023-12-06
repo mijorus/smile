@@ -290,7 +290,10 @@ class Picker(Gtk.ApplicationWindow):
                     continue
 
             emoji_button = Gtk.Button(label=emoji['emoji'])
+            emoji_button.emoji_data = emoji
+            emoji_button.hexcode = emoji['hexcode']
             emoji_button.connect('clicked', self.handle_emoji_button_click)
+            self.emoji_button_update_css_classes(emoji_button)
 
             flowbox_child = Gtk.FlowBoxChild(child=emoji_button)
             flowbox_child._is_selected = False
@@ -299,8 +302,8 @@ class Picker(Gtk.ApplicationWindow):
             event_controller_focus = Gtk.EventControllerFocus()
             flowbox_child.add_controller(event_controller_focus)
 
-            event_controller_focus.connect('enter', lambda w: w.set_css_classes(self.default_css))
-            event_controller_focus.connect('leave', self.on_selection_leave)
+            # event_controller_focus.connect('enter', self.flowbox_child_on_selection_leave)
+            event_controller_focus.connect('leave', self.flowbox_child_on_selection_leave)
 
             gesture = Gtk.GestureSingle(button=Gdk.BUTTON_SECONDARY)
             gesture.connect('end', lambda e, _: self.show_skintone_selector(e.get_widget()))
@@ -552,7 +555,8 @@ class Picker(Gtk.ApplicationWindow):
             )
 
     def show_custom_tag_entry(self, focused_widget: FlowBoxChild):
-        CustomTagEntry(focused_widget, self)
+        popup = CustomTagEntry(focused_widget, self)
+        popup.show()
 
     def set_empty_recent_tip(self, enabled: bool):
         self.list_tip_revealer.set_visible(enabled)
@@ -580,8 +584,8 @@ class Picker(Gtk.ApplicationWindow):
 
         increment_emoji_usage_counter(button)
 
-        button.get_parent().set_as_selected()
-        button.get_parent().set_as_active()
+        self.flowbox_child_set_as_selected(button.get_parent())
+        self.flowbox_child_set_as_active(button.get_parent())
 
         if button.base_skintone_widget:
             button.base_skintone_widget.set_as_selected()
@@ -655,9 +659,9 @@ class Picker(Gtk.ApplicationWindow):
 
         self.default_hiding_action()
 
-    @debounce(0.2)
+    @debounce(0.1)
     @idle
-    @profile
+    # @profile
     def search_emoji(self, search_entry: str):
         start = time_ns()
 
@@ -699,19 +703,35 @@ class Picker(Gtk.ApplicationWindow):
                 else:
                     emoji_button.set_label(emoji_button.emoji_data['emoji'])
 
-    def on_selection_leave(self, widget):
-        if self._is_selected:
-            self.set_as_selected()
+    # Helper functions
+
+    def flowbox_child_on_selection_leave(self, controller, widget=None):
+        if not widget:
+            widget = controller.get_widget()
+
+        if widget._is_selected:
+            self.flowbox_child_set_as_selected()
         else:
-            self.deselect()
+            self.flowbox_child_deselect(widget)
 
-    def set_as_selected(self, widget):
-        self._is_selected = True
-        self.set_css_classes([*self.flowbox_child_default_css, 'selected'])
+    def flowbox_child_set_as_selected(self, controller, widget=None):
+        if not widget:
+            widget = controller.get_widget()
 
-    def set_as_active(self, widget):
+        widget._is_selected = True
+        widget.set_css_classes([*self.flowbox_child_default_css, 'selected'])
+
+    def flowbox_child_set_as_active(self, widget):
         self.set_css_classes([*self.flowbox_child_default_css, 'active'])
 
-    def deselect(self, widget):
-        self._is_selected = False
-        self.set_css_classes([*self.flowbox_child_default_css])
+    def flowbox_child_deselect(self, widget):
+        widget._is_selected = False
+        widget.set_css_classes([*self.flowbox_child_default_css])
+
+    def emoji_button_update_css_classes(self, widget):
+        emoji_button_css = [self.settings.get_string('emoji-size-class')]
+
+        if ('skintones' in widget.emoji_data) and widget.emoji_data['skintones']:
+            emoji_button_css.append('emoji-with-skintones')
+            
+        widget.set_css_classes(emoji_button_css)
