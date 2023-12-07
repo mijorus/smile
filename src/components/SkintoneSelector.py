@@ -77,10 +77,7 @@ class SkintoneSelector(CustomPopover):
             )
         )
 
-        self.handle_close = self.on_close
-
         self.set_content(popover_content)
-        # self.show()
 
     def handle_activate(self, event):
         self.click_handler(event)
@@ -93,6 +90,3 @@ class SkintoneSelector(CustomPopover):
                 return True
 
         return False
-
-    def on_close(self):
-        pass

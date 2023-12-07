@@ -46,12 +46,13 @@ class CustomTagEntry(CustomPopover):
             )
         )
 
-        self.entry = Gtk.Entry(text=get_custom_tags(self.emoji_button.hexcode))
-        self.entry.set_placeholder_text("List of custom tags, separated  by comma")
-        popover_content.append(self.entry)
+        self.entry = Gtk.Entry(
+            text=get_custom_tags(self.emoji_button.hexcode),
+            placeholder_text=_("List of custom tags, separated  by comma")
+        )
 
+        popover_content.append(self.entry)
         self.entry.connect('activate', self.handle_activate)
-        # self.handle_close = self.on_close
 
         label_text = f"<small><b>Default tags</b>: {default_tags}</small>"
         if len(localized_tags) > 0:
@@ -72,6 +73,3 @@ class CustomTagEntry(CustomPopover):
         set_custom_tags(self.relative_widget_hexcode, self.entry.get_text())
         self.request_close()
         return True
-
-    # def on_close(self):
-    #     self.flowbox_child.deselect()

@@ -20,11 +20,8 @@ import os
 import threading
 import subprocess
 import re
-import sys
 import gc
-import copy
-from memory_profiler import profile
-from time import time, time_ns, sleep
+from time import time_ns, sleep
 from typing import Optional
 
 from .ShortcutsWindow import ShortcutsWindow
@@ -43,12 +40,9 @@ gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Gdk, Adw, GLib, Pango  # noqa
 
-
 class Picker(Gtk.ApplicationWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(title="Smile", resizable=True, *args, **kwargs)
-
-        self.flowbox_child_default_css = ['flowbox-child-custom']
 
         EMOJI_LIST_MIN_HEIGHT = 320
 
@@ -238,19 +232,20 @@ class Picker(Gtk.ApplicationWindow):
         start = time_ns()
 
         self.emoji_list.remove_all()
-        self.emoji_list_widgets = []
-
-        gc.collect()
+        self.emoji_list_widgets = []        
 
         self.history = get_history()
         filter_for_recents = self.selected_category == 'recents'
         tags_locale = self.settings.get_string('tags-locale')
         merge_english_tags = self.settings.get_boolean('merge-english-tags')
-        tags_locale_is_en = tags_locale == 'en'
+        tags_locale_is_en = (tags_locale == 'en')
 
-        use_localised_tags = self.settings.get_boolean('use-localized-tags') if self.query else False
+        use_localised_tags = False
 
-        for key, emoji in emojis.items():
+        if self.query:
+            use_localised_tags = self.settings.get_boolean('use-localized-tags')
+
+        for emoji in emojis.values():
             is_recent = (emoji['hexcode'] in self.history)
 
             if self.query:
@@ -433,14 +428,15 @@ class Picker(Gtk.ApplicationWindow):
                     if (keyval == Gdk.KEY_Up):
                         self.set_active_category(focused_widget.category)
 
-                        for f in self.emoji_list_widgets:
+                        for flexbox_child in self.emoji_list_widgets:
+                            button = flexbox_child.get_child()
                             if self.selected_category == 'recents':
-                                if f.emoji_button.hexcode in get_history():
-                                    f.emoji_button.grab_focus()
+                                if button.hexcode in get_history():
+                                    button.grab_focus()
                                     break
                             else:
-                                if f.emoji_button.emoji_data['group'] == self.selected_category:
-                                    f.emoji_button.grab_focus()
+                                if button.emoji_data['group'] == self.selected_category:
+                                    button.grab_focus()
                                     break
 
                     return True
@@ -475,7 +471,7 @@ class Picker(Gtk.ApplicationWindow):
         if self.query:
             self.load_first_row()
             if self.emoji_grid_first_row:
-                self.copy_and_quit(self.emoji_grid_first_row[0].emoji_button)
+                self.copy_and_quit(self.emoji_grid_first_row[0].get_child())
 
     def send_paste_signal(self):
         if not self.settings.get_boolean('auto-paste') or not self.last_copied_text:
@@ -638,18 +634,17 @@ class Picker(Gtk.ApplicationWindow):
         self.last_copied_text = copied_text
 
         if self.settings.get_boolean('is-first-run'):
-            n = Gio.Notification.new(_('Copied!'))
-            n.set_body(_("I have copied the emoji to the clipboard. You can now paste it in any input field."))
-            n.set_icon(Gio.ThemedIcon.new('dialog-information'))
+            notification = Gio.Notification.new(_('Copied!'))
+            notification.set_body(_("I have copied the emoji to the clipboard. You can now paste it in any input field."))
+            notification.set_icon(Gio.ThemedIcon.new('dialog-information'))
 
-            Gio.Application.get_default().send_notification('copy-message', n)
+            Gio.Application.get_default().send_notification('copy-message', notification)
             self.settings.set_boolean('is-first-run', False)
 
         self.default_hiding_action()
 
     @debounce(0.1)
     @idle
-    @profile
     def search_emoji(self, search_entry: str):
         start = time_ns()
 
@@ -660,6 +655,8 @@ class Picker(Gtk.ApplicationWindow):
 
         self.refresh_emoji_list()
         self.emoji_list.invalidate_sort()
+
+        gc.collect()
         print('Search took ' + str((time_ns() - start) / 1000000) + 'ms')
 
     def sort_emoji_list(self, child1: Gtk.FlowBoxChild, child2: Gtk.FlowBoxChild, user_data):

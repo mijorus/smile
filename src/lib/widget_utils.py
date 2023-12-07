@@ -6,10 +6,11 @@ from gi.repository import Gtk, Gio, Gdk  # noqa
 
 FLOWBOX_CHILD_DEFAULT_CSS = ['flowbox-child-custom']
 
+# Create widgets
+
 def create_flowbox_child(emoji_button: Gtk.Button, secondary_click_geture_callback=None, middle_click_gesture_callback=None) -> Gtk.FlowBoxChild:
-    flowbox_child = Gtk.FlowBoxChild(child=emoji_button)
+    flowbox_child = Gtk.FlowBoxChild(child=emoji_button, css_classes=FLOWBOX_CHILD_DEFAULT_CSS)
     flowbox_child._is_selected = False
-    flowbox_child.set_css_classes(FLOWBOX_CHILD_DEFAULT_CSS)
 
     event_controller_focus = Gtk.EventControllerFocus()
     flowbox_child.add_controller(event_controller_focus)
@@ -31,7 +32,7 @@ def create_flowbox_child(emoji_button: Gtk.Button, secondary_click_geture_callba
 
 
 def create_emoji_button(emoji_data: dict, click_handler=None) -> Gtk.Button:
-    emoji_button = Gtk.Button(label=emoji_data['emoji'])
+    emoji_button = Gtk.Button(label=emoji_data['emoji'], can_focus=False)
     emoji_button.emoji_data = emoji_data
     emoji_button.hexcode = emoji_data['hexcode']
     emoji_button.base_skintone_widget = None
@@ -41,6 +42,7 @@ def create_emoji_button(emoji_data: dict, click_handler=None) -> Gtk.Button:
 
     return emoji_button
 
+# Helper functions
 
 def flowbox_child_on_selection_enter(controller, widget=None):
     if not widget:
