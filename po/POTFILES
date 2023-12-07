@@ -3,3 +3,10 @@ src/Picker.py
 src/Settings.py
 src/ui/menu.ui
 src/ui/shortcuts.ui
+src/ui/importexport-customtags.ui
+src/components/SkintoneSelector.py
+src/components/CustomPopover.py
+src/components/CustomTagEntry.py
+src/components/SkintoneSelector.py
+src/components/UpdateDialog.py
+src/components/UrlRow.py

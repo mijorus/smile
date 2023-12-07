@@ -70,7 +70,7 @@ class SkintoneSelector(CustomPopover):
 
         popover_content.append(
             Gtk.Label(
-                label="<small>Press Enter to select or ESC to close</small>",
+                label=_("<small>Press Enter to select or ESC to close</small>"),
                 use_markup=True,
                 margin_top=10,
                 css_classes=['dim-label']

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-17 16:09+0200\n"
+"POT-Creation-Date: 2023-12-07 11:00+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,33 +17,25 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.py:94
-msgid "Dismiss"
-msgstr ""
-
-#: src/main.py:132
+#: src/main.py:111
 msgid "translator_credits"
 msgstr ""
 
-#: src/Picker.py:527
-msgid "No skintones available"
-msgstr ""
-
-#: src/Picker.py:550
-msgid "Recently used emojis"
-msgstr ""
-
-#: src/Picker.py:552
+#: src/Picker.py:90
 msgid ""
 "Whoa, it's still empty! \n"
 "Your most used emojis will show up here\n"
 msgstr ""
 
-#: src/Picker.py:572
+#: src/Picker.py:524
+msgid "No skintones available"
+msgstr ""
+
+#: src/Picker.py:637
 msgid "Copied!"
 msgstr ""
 
-#: src/Picker.py:573
+#: src/Picker.py:638
 msgid ""
 "I have copied the emoji to the clipboard. You can now paste it in any input "
 "field."
@@ -203,23 +195,6 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: src/ui/importexport-customtags.ui:7
-msgid "Export and import custom tags"
-msgstr ""
-
-#: src/ui/importexport-customtags.ui:8
-msgid ""
-"Use the buttons below to create or restore custom tags from another machine"
-msgstr ""
-
-#: src/ui/importexport-customtags.ui:23
-msgid "Export to file"
-msgstr ""
-
-#: src/ui/importexport-customtags.ui:29
-msgid "Import from file"
-msgstr ""
-
 #: src/ui/menu.ui:6
 msgid "Preferences"
 msgstr ""
@@ -248,20 +223,12 @@ msgstr ""
 msgid "Mouse"
 msgstr ""
 
-#: src/ui/shortcuts.ui:28
-msgid "Copy the selected emoji and hide the window"
-msgstr ""
-
 #: src/ui/shortcuts.ui:48 src/ui/shortcuts.ui:164
 msgid "Open the skintone selector (if available)"
 msgstr ""
 
 #: src/ui/shortcuts.ui:68 src/ui/shortcuts.ui:171
 msgid "Add a custom tag"
-msgstr ""
-
-#: src/ui/shortcuts.ui:99 src/ui/shortcuts.ui:142
-msgid "Add an emoji to selection"
 msgstr ""
 
 #: src/ui/shortcuts.ui:109
@@ -285,10 +252,61 @@ msgstr ""
 msgid "Show the category on the left"
 msgstr ""
 
+#: src/ui/shortcuts.ui:142
+msgid "Add an emoji to selection"
+msgstr ""
+
 #: src/ui/shortcuts.ui:150
 msgid "Remove the last emoji from the selection"
 msgstr ""
 
 #: src/ui/shortcuts.ui:157
 msgid "Copy the selection and hide the window, without the highlighted emoji"
+msgstr ""
+
+#: src/ui/importexport-customtags.ui:7
+msgid "Export and import custom tags"
+msgstr ""
+
+#: src/ui/importexport-customtags.ui:8
+msgid ""
+"Use the buttons below to create or restore custom tags from another machine"
+msgstr ""
+
+#: src/ui/importexport-customtags.ui:23
+msgid "Export to file"
+msgstr ""
+
+#: src/ui/importexport-customtags.ui:29
+msgid "Import from file"
+msgstr ""
+
+#: src/components/SkintoneSelector.py:73
+msgid "<small>Press Enter to select or ESC to close</small>"
+msgstr ""
+
+#: src/components/CustomTagEntry.py:42
+#, python-brace-format
+msgid "<b>{emoji} Edit custom tags</b>"
+msgstr ""
+
+#: src/components/CustomTagEntry.py:51
+msgid "List of custom tags, separated  by comma"
+msgstr ""
+
+#: src/components/CustomTagEntry.py:57
+#, python-brace-format
+msgid "<small><b>Default tags</b>: {default_tags}</small>"
+msgstr ""
+
+#: src/components/CustomTagEntry.py:65
+msgid "<small>Press Enter or ESC to close without saving</small>"
+msgstr ""
+
+#: src/components/UpdateDialog.py:29
+msgid "New features!"
+msgstr ""
+
+#: src/components/UpdateDialog.py:33
+msgid "Dismiss"
 msgstr ""

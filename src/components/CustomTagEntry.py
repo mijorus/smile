@@ -39,7 +39,7 @@ class CustomTagEntry(CustomPopover):
 
         popover_content.append(
             Gtk.Label(
-                label=f'<b>{self.emoji_button.emoji_data["emoji"]} Edit custom tags</b>',
+                label=_('<b>{emoji} Edit custom tags</b>').format(emoji={self.emoji_button.emoji_data["emoji"]}),
                 use_markup=True,
                 margin_bottom=10,
                 css_classes=['heading']
@@ -54,7 +54,7 @@ class CustomTagEntry(CustomPopover):
         popover_content.append(self.entry)
         self.entry.connect('activate', self.handle_activate)
 
-        label_text = f"<small><b>Default tags</b>: {default_tags}</small>"
+        label_text = _("<small><b>Default tags</b>: {default_tags}</small>").format(default_tags=default_tags)
         if len(localized_tags) > 0:
             label_text += f"\n<small><b>{get_countries_list()[settings.get_string('tags-locale')]['language']} tags</b>: {localized_tags}</small>"
 
@@ -62,7 +62,7 @@ class CustomTagEntry(CustomPopover):
         label = Gtk.Label(label=label_text, use_markup=True, margin_top=10)
         popover_content.append(label)
         popover_content.append(
-            Gtk.Label(label="<small>Press Enter or ESC to close without saving</small>", use_markup=True, margin_top=10, css_classes=['dim-label'])
+            Gtk.Label(label=_("<small>Press Enter or ESC to close without saving</small>"), use_markup=True, margin_top=10, css_classes=['dim-label'])
         )
 
         # self.flowbox_child.set_as_selected()
