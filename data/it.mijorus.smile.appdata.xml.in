@@ -13,6 +13,14 @@
         <p>Smile is a simple emoji picker for linux with custom tags support</p>
     </description>
     <releases>
+        <release type="stable" version="2.9.0" date="2023-12-07T00:00:00Z">
+            <description>
+                <p>- Improved responsivness of the search bar</p>
+                <p>- Fixed a bug causing Smile to use a lot of system memory when using the search bar</p>
+                <p>- Fixed an error that caused the order of the emojis to be reversed when using the search bar</p>
+                <p>- Added translatable fields in many pop-up windows that were previously always displayed in English</p>
+            </description>
+        </release>
         <release type="stable" version="2.8.3" date="2023-10-11T00:00:00Z">
             <description>
                 <p>- Slightly reduced the default size of the window to look better on smaller screens</p>
