@@ -1,3 +1,2 @@
 manimpango == 0.5.0
 dbus-python == 1.2.18
-memory-profiler == 0.61.0
