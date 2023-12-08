@@ -294,7 +294,7 @@ class Picker(Gtk.ApplicationWindow):
             self.emoji_list_widgets.append(flowbox_child)
 
         self.emoji_list.set_sort_func(self.sort_emoji_list, None)
-        print('Emoji list creation took ' + str((time_ns() - start) / 1000000) + 'ms')
+        # print('Emoji list creation took ' + str((time_ns() - start) / 1000000) + 'ms')
 
     # Handle events
     def handle_emoji_button_click(self, widget: Gtk.Button):
@@ -315,6 +315,8 @@ class Picker(Gtk.ApplicationWindow):
     def handle_window_key_release(self, controller: Gtk.EventController, keyval: int, keycode: int, state: Gdk.ModifierType) -> bool:
         if (keyval == Gdk.KEY_Shift_L or keyval == Gdk.KEY_Shift_R):
             self.shift_key_pressed = False
+
+        return False
 
     # Handle every possible keypress here, returns True if the event was handled (prevent default)
     def handle_window_key_press(self, controller: Gtk.EventController, keyval: int, keycode: int, state: Gdk.ModifierType) -> bool:
@@ -657,7 +659,7 @@ class Picker(Gtk.ApplicationWindow):
         self.emoji_list.invalidate_sort()
 
         gc.collect()
-        print('Search took ' + str((time_ns() - start) / 1000000) + 'ms')
+        # print('Search took ' + str((time_ns() - start) / 1000000) + 'ms')
 
     def sort_emoji_list(self, child1: Gtk.FlowBoxChild, child2: Gtk.FlowBoxChild, user_data):
         child1 = child1.get_child()

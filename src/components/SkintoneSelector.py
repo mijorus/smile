@@ -16,7 +16,7 @@ class SkintoneSelector(CustomPopover):
         super().__init__(parent=parent)
         self.click_handler = click_handler
         self.parent_flowbox_child = parent_flowbox_child
-        self.flowbox_widgets: [Gtk.FlowBoxChild] = []
+        self.flowbox_widgets: list[Gtk.FlowBoxChild] = []
 
         popover_content = Gtk.Box(
             orientation=Gtk.Orientation.VERTICAL,
