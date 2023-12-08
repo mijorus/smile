@@ -49,33 +49,30 @@ class Picker(Gtk.ApplicationWindow):
         self.set_default_size(1, 1)
 
         self.last_copied_text = None
-
-        self.event_controller_keys = Gtk.EventControllerKey()
-        self.event_controller_keys.connect('key-pressed', self.handle_window_key_press)
-        self.event_controller_keys.connect('key-released', self.handle_window_key_release)
-        self.add_controller(self.event_controller_keys)
         self.data_dir = Gio.Application.get_default().datadir
-
-        self.settings: Gio.Settings = Gio.Settings.new('it.mijorus.smile')
-        self.settings.connect('changed::skintone-modifier', self.update_emoji_skintones)
-        self.settings.connect('changed::emoji-size-class', self.update_emoji_size)
-
         self.EMOJI_GRID_COL_N = 5
         self.emoji_grid_first_row = []
-
         self.selected_category_index = 0
         self.selected_category = 'smileys-emotion'
         self.query: str = None
         self.selection: list[str] = []
         self.selected_buttons: list[Gtk.Button] = []
-        
-        self.history = []
-        # self.history_size = 0
-
         self.clipboard = Gdk.Display.get_default().get_clipboard()
-
-        # Create the emoji list and category picker
         self.categories_count = 0
+        self.history = []
+        self.shortcut_window: Optional[ShortcutsWindow] = None
+        self.shift_key_pressed = False
+        self.skintone_selector: Optional[SkintoneSelector] = None
+
+        event_controller_keys = Gtk.EventControllerKey()
+        event_controller_keys.connect('key-pressed', self.handle_window_key_press)
+        event_controller_keys.connect('key-released', self.handle_window_key_release)
+        self.add_controller(event_controller_keys)
+
+        self.settings: Gio.Settings = Gio.Settings.new('it.mijorus.smile')
+        self.settings.connect('changed::skintone-modifier', self.update_emoji_skintones)
+        self.settings.connect('changed::emoji-size-class', self.update_emoji_size)
+
         self.viewport_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, css_classes=['viewport'], vexpand=True)
 
         self.list_tip_revealer = Gtk.Revealer(
@@ -95,11 +92,13 @@ class Picker(Gtk.ApplicationWindow):
         self.list_tip_revealer.set_child(self.list_tip_label)
 
         self.select_buffer_label = Gtk.Label(margin_bottom=2, css_classes=['title-2'], hexpand=True, halign=Gtk.Align.START, ellipsize=Pango.EllipsizeMode.START)
-        select_buffer_button = Gtk.Button(icon_name='arrow2-right-symbolic', valign=Gtk.Align.CENTER)
-        pop_buffer_btn = Gtk.Button(icon_name='smile-entry-clear-symbolic', valign=Gtk.Align.CENTER, css_classes=['flat'])
 
+        select_buffer_button = Gtk.Button(icon_name='arrow2-right-symbolic', valign=Gtk.Align.CENTER)
         select_buffer_button.connect('clicked', lambda w: self.copy_and_quit())
+        
+        pop_buffer_btn = Gtk.Button(icon_name='smile-entry-clear-symbolic', valign=Gtk.Align.CENTER, css_classes=['flat'])
         pop_buffer_btn.connect('clicked', lambda w: self.deselect_last_selected_emoji())
+
         select_buffer_container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, css_classes=['selected-emojis-box'], spacing=2)
         [select_buffer_container.append(w) for w in [self.select_buffer_label, pop_buffer_btn, select_buffer_button]]
 
@@ -171,13 +170,6 @@ class Picker(Gtk.ApplicationWindow):
 
         self.set_titlebar(header_bar)
 
-        self.shortcut_window: ShortcutsWindow = None
-        self.shift_key_pressed = False
-
-        # Display custom tags at the top of the list when searching
-        # This variable the status of the sorted status
-        self.skintone_selector: Optional[SkintoneSelector] = None
-
         self.overlay = Adw.ToastOverlay()
         self.overlay.set_child(self.viewport_box)
 
@@ -214,9 +206,10 @@ class Picker(Gtk.ApplicationWindow):
                 continue
 
             button = Gtk.Button(icon_name=cat['icon'], valign=Gtk.Align.CENTER)
+            button.connect('clicked', self.filter_for_category)
+
             button.category = c
             button.index = i
-            button.connect('clicked', self.filter_for_category)
 
             box.append(button)
             self.category_picker_widgets.append(button)
@@ -546,7 +539,7 @@ class Picker(Gtk.ApplicationWindow):
         self.list_tip_revealer.set_visible(enabled)
         self.list_tip_revealer.set_reveal_child(enabled)
 
-    def update_selection_content(self, selection: str = None):
+    def update_selection_content(self, selection: Optional[str] = None):
         if selection:
             self.select_buffer_label.set_label(''.join(selection))
         else:
@@ -622,7 +615,7 @@ class Picker(Gtk.ApplicationWindow):
         self.refresh_emoji_list()
         self.load_first_row()
 
-    def copy_and_quit(self, button: Gtk.Button = None):
+    def copy_and_quit(self, button: Optional[Gtk.Button] = None):
         text = ''
         if button:
             text = button.get_label()
@@ -702,7 +695,7 @@ class Picker(Gtk.ApplicationWindow):
             emoji_button = widget.get_child()
             self.update_emoji_button_skintone(emoji_button, modifier_settings)
 
-    def update_emoji_size(self, settigns: Gio.Settings, key):
+    def update_emoji_size(self, settings: Gio.Settings, key):
         for widget in self.emoji_list_widgets:
             self.emoji_button_update_css_classes(widget.get_child())
 
