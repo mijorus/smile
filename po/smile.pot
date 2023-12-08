@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-07 11:00+0100\n"
+"POT-Creation-Date: 2023-12-08 15:14+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,15 +27,15 @@ msgid ""
 "Your most used emojis will show up here\n"
 msgstr ""
 
-#: src/Picker.py:524
+#: src/Picker.py:525
 msgid "No skintones available"
 msgstr ""
 
-#: src/Picker.py:637
+#: src/Picker.py:638
 msgid "Copied!"
 msgstr ""
 
-#: src/Picker.py:638
+#: src/Picker.py:639
 msgid ""
 "I have copied the emoji to the clipboard. You can now paste it in any input "
 "field."
@@ -281,7 +281,7 @@ msgstr ""
 msgid "Import from file"
 msgstr ""
 
-#: src/components/SkintoneSelector.py:73
+#: src/components/SkintoneSelector.py:89
 msgid "<small>Press Enter to select or ESC to close</small>"
 msgstr ""
 
@@ -300,7 +300,7 @@ msgid "<small><b>Default tags</b>: {default_tags}</small>"
 msgstr ""
 
 #: src/components/CustomTagEntry.py:65
-msgid "<small>Press Enter or ESC to close without saving</small>"
+msgid "<small>Press Enter to save or ESC to dismiss</small>"
 msgstr ""
 
 #: src/components/UpdateDialog.py:29
