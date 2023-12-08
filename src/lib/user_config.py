@@ -6,7 +6,7 @@ from gi.repository import GLib
 #
 # If the file does not exits, it will be created
 
-def save_json_config(content: dict or List, filename: str):
+def save_json_config(content: dict or list, filename: str):
     """Saves in a configuration file"""
     with open(f"{GLib.get_user_config_dir()}/{filename}.json", 'w+') as f:
         f.write(json.dumps(content))
