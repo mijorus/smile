@@ -14,9 +14,6 @@
             "build/**": true,
             "_build/**": true
         },
-        "[python]": {
-            "editor.defaultFormatter": null
-        },
         "mypy.targets": [
             "src/"
         ],

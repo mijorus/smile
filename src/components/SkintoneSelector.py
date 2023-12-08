@@ -17,6 +17,8 @@ class SkintoneSelector(CustomPopover):
         self.click_handler = click_handler
         self.parent_flowbox_child = parent_flowbox_child
         self.flowbox_widgets: list[Gtk.FlowBoxChild] = []
+        settings: Gio.Settings = Gio.Settings.new('it.mijorus.smile')
+        skintone_modifier = settings.get_string('skintone-modifier')
 
         popover_content = Gtk.Box(
             orientation=Gtk.Orientation.VERTICAL,
@@ -49,21 +51,35 @@ class SkintoneSelector(CustomPopover):
         popover_container.set_propagate_natural_width(True)
         popover_container.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.NEVER)
 
-        relative_widget_hexcode = self.parent_flowbox_child.get_child().emoji_data['hexcode']
-        for skintone in emojis[relative_widget_hexcode]['skintones']:
+        emoji_data = self.parent_flowbox_child.get_child().emoji_data
+        relative_widget_hexcode = emoji_data['hexcode']
+        available_skintones = [
+            emoji_data,
+            *emojis[relative_widget_hexcode]['skintones']
+        ]
+
+        for skintone in available_skintones:
+            if not skintone_modifier and not skintone['skintone']:
+                continue
+
+            elif skintone_modifier and (f'-{skintone_modifier}' in skintone['hexcode']):
+                continue
+
             button = create_emoji_button(skintone, self.handle_activate)
             button.base_skintone_widget = self.parent_flowbox_child
 
             child = create_flowbox_child(button)
 
-            for e in emoji_active_selection:
-                if e.hexcode == button.emoji_data['hexcode']:
-                    child._is_selected = True
-                    child.set_css_classes(['flowbox-child-custom', 'selected'])
-                    break
-
             skintone_emojis.append(child)
             self.flowbox_widgets.append(child)
+        
+
+        for e in emoji_active_selection:
+            for widget in self.flowbox_widgets:
+                if e.hexcode == widget.get_child().emoji_data['hexcode']:
+                    widget._is_selected = True
+                    widget.set_css_classes(['flowbox-child-custom', 'selected'])
+                    break
 
         popover_container.set_child(skintone_emojis)
         popover_content.append(popover_container)

@@ -76,12 +76,3 @@ def flowbox_child_set_as_active(widget: Gtk.FlowBoxChild):
 def flowbox_child_deselect(widget: Gtk.FlowBoxChild):
     widget._is_selected = False
     widget.set_css_classes([*FLOWBOX_CHILD_DEFAULT_CSS])
-
-
-def emoji_button_update_css_classes(widget: Gtk.Button, emoji_size_class):
-    emoji_button_css = [emoji_size_class]
-
-    if ('skintones' in widget.emoji_data) and widget.emoji_data['skintones']:
-        emoji_button_css.append('emoji-with-skintones')
-        
-    widget.set_css_classes(emoji_button_css)

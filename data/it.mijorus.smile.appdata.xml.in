@@ -16,8 +16,10 @@
         <release type="stable" version="2.9.0" date="2023-12-07T00:00:00Z">
             <description>
                 <p>- Improved responsivness of the search bar</p>
-                <p>- Fixed a bug causing Smile to use a lot of system memory when using the search bar</p>
-                <p>- Fixed an error that caused the order of the emojis to be reversed when using the search bar</p>
+                <p>- Fixed: Smile using a lot of system memory when searching</p>
+                <p>- Fixed: yellow skintone variant not showing up in the selector when a custom skintone color was set</p>
+                <p>- Fixed: custom tags not showing up in search results when a custom skintone was set</p>
+                <p>- Fixed: an error that caused the order of the emojis to be reversed when searching</p>
                 <p>- Added translatable fields in many pop-up windows that were previously always displayed in English</p>
             </description>
         </release>
