@@ -109,10 +109,10 @@ msgid ""
 "Emulates the Ctrl+V shortcut; might <b>not work</b> on some programs.\n"
 "If using the extension, <b>please ensure that it is correctly ENABLED</b>."
 msgstr ""
-"Emula la scorciatoia Ctrl+V; potrevve <b>non funzionare</b> in alcune "
+"Emula la scorciatoia Ctrl+V; potrebbe <b>non funzionare</b> in alcune "
 "applicazioni.\n"
 "Se si sta usando l'estensione, <b>si prega di verificare che sia "
-"correttamente ATTIVATA</b>."
+"correttamente attivata</b>."
 
 #: src/Settings.py:68
 msgid "Get the GNOME extension"
