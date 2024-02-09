@@ -1,0 +1,317 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-08 15:14+0100\n"
+"PO-Revision-Date: 2024-02-08 20:06+0800\n"
+"Last-Translator: shizhang<lrshizhang@qq.com>\n"
+"Language-Team: \n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#: src/main.py:111
+msgid "translator_credits"
+msgstr "世长<lrshizhang@qq.com>"
+
+#: src/Picker.py:90
+msgid ""
+"Whoa, it's still empty! \n"
+"Your most used emojis will show up here\n"
+msgstr ""
+"哎呀，这里还什么都没有！\n"
+"您最常用的表情符号将显示在此处\n"
+
+#: src/Picker.py:525
+msgid "No skintones available"
+msgstr "肤色不可用"
+
+#: src/Picker.py:638
+msgid "Copied!"
+msgstr "已复制！"
+
+#: src/Picker.py:639
+msgid ""
+"I have copied the emoji to the clipboard. You can now paste it in any input "
+"field."
+msgstr "我已将表情符号复制到剪贴板。现在可以将其粘贴到任何输入字段中。"
+
+#: src/Settings.py:28
+msgid "Settings"
+msgstr "设置"
+
+#: src/Settings.py:31
+msgid "General"
+msgstr "常规"
+
+#: src/Settings.py:33
+msgid "Run in the background"
+msgstr "在后台运行"
+
+#: src/Settings.py:33
+msgid "Keep Smile running in the background for a faster launch"
+msgstr "保持微笑在后台运行，以更快地启动"
+
+#: src/Settings.py:37
+msgid "Minimize on exit"
+msgstr "退出时最小化"
+
+#: src/Settings.py:37
+msgid "Minimize the window when selecting an emoji"
+msgstr "选择表情符号时最小化窗口"
+
+#: src/Settings.py:43
+msgid "Mouse behaviour"
+msgstr "鼠标行为"
+
+#: src/Settings.py:45
+msgid "Mouse multi select"
+msgstr "鼠标多选"
+
+#: src/Settings.py:45
+msgid ""
+"Select multiple emojis with a single mouse click, replacing Shift + Click; "
+"press Enter to confirm and Esc to dismiss."
+msgstr ""
+"用鼠标单击选择多个表情符号而不是Shift+单击；按Enter键确认，按Esc键取消。"
+
+#: src/Settings.py:49
+msgid "Paste emojis automatically"
+msgstr "自动粘贴表情符号"
+
+#: src/Settings.py:55
+msgid "Status:"
+msgstr "状态："
+
+#: src/Settings.py:60
+msgid "Enabled"
+msgstr "已启用"
+
+#: src/Settings.py:62
+msgid ""
+"Emulates the Ctrl+V shortcut; might <b>not work</b> on some programs.\n"
+"If using the extension, <b>please ensure that it is correctly ENABLED</b>."
+msgstr ""
+"模拟Ctrl+V快捷键；可能在某些程序上<b>无法工作</b>。\n"
+"如果正在使用此扩展，<b>请确保它已正确启用</b>。"
+
+#: src/Settings.py:68
+msgid "Get the GNOME extension"
+msgstr "获取GNOME扩展"
+
+#: src/Settings.py:68
+msgid "Install the extension to paste automatically on X11 and Wayland"
+msgstr "安装扩展以实现在X11和Wayland上的自动粘贴"
+
+#: src/Settings.py:72
+msgid "Customization"
+msgstr "个性化"
+
+#: src/Settings.py:76 src/Settings.py:247
+msgid "Localized tags"
+msgstr "本地化标签"
+
+#: src/Settings.py:78
+msgid "Use localized tags"
+msgstr "使用本地化标签"
+
+#: src/Settings.py:83
+msgid "Merge localized and English tags"
+msgstr "合并本地化和英文标签"
+
+#: src/Settings.py:85
+msgid "Use both localized tags and English ones at the same time"
+msgstr "同时使用本地化标签和英文标签"
+
+#: src/Settings.py:94
+msgid "Custom tags"
+msgstr "自定义标签"
+
+#: src/Settings.py:126
+msgid "Available (using the GNOME extension)"
+msgstr "可用（使用GNOME扩展）"
+
+#: src/Settings.py:128
+msgid "Requires the GNOME extension on Wayland"
+msgstr "在Wayland上需要GNOME扩展"
+
+#: src/Settings.py:130
+msgid "Available (using xdotool on X11)"
+msgstr "可用（在X11上使用xdotool）"
+
+#: src/Settings.py:143
+msgid "Launch the app with a shortcut"
+msgstr "使用快捷方式启动应用程序"
+
+#: src/Settings.py:144
+msgid ""
+"Create a new keyboard shortcut in your system settings and paste the "
+"following code as a custom command"
+msgstr "在系统设置中创建一个新的键盘快捷键，并将以下代码粘贴为自定义命令"
+
+#: src/Settings.py:180
+msgid "Remove"
+msgstr "删除"
+
+#: src/Settings.py:198
+msgid "There are no custom tags yet: create one with Alt + T"
+msgstr "没有自定义标签：使用Alt + T创建一个"
+
+#: src/Settings.py:211
+msgid "Default skintone"
+msgstr "默认肤色"
+
+#: src/Settings.py:226
+msgid "Emoji size"
+msgstr "表情符号大小"
+
+#: src/Settings.py:228
+msgid "Default"
+msgstr "默认"
+
+#: src/Settings.py:229
+msgid "Big"
+msgstr "大"
+
+#: src/Settings.py:230
+msgid "Bigger"
+msgstr "超大"
+
+#: src/Settings.py:231
+msgid "Giant"
+msgstr "特大"
+
+#: src/Settings.py:330
+msgid "Invalid file selected"
+msgstr "选择的文件无效"
+
+#: src/Settings.py:331
+msgid "The configuration file that you selected is not a valid backup."
+msgstr "您选择的配置文件不是有效的备份。"
+
+#: src/Settings.py:334
+msgid "Close"
+msgstr "关闭"
+
+#: src/ui/menu.ui:6
+msgid "Preferences"
+msgstr "首选项"
+
+#: src/ui/menu.ui:10
+msgid "Shortcuts"
+msgstr "快捷操作"
+
+#: src/ui/menu.ui:15
+msgid "What's new?"
+msgstr "新功能"
+
+#: src/ui/menu.ui:19
+msgid "Install GNOME extension"
+msgstr "安装GNOME扩展"
+
+#: src/ui/menu.ui:23
+msgid "Translate this app"
+msgstr "翻译此应用"
+
+#: src/ui/menu.ui:26
+msgid "About"
+msgstr "关于"
+
+#: src/ui/shortcuts.ui:12
+msgid "Mouse"
+msgstr "鼠标"
+
+#: src/ui/shortcuts.ui:48 src/ui/shortcuts.ui:164
+msgid "Open the skintone selector (if available)"
+msgstr "打开肤色选择器（如果可用）"
+
+#: src/ui/shortcuts.ui:68 src/ui/shortcuts.ui:171
+msgid "Add a custom tag"
+msgstr "添加自定义标签"
+
+#: src/ui/shortcuts.ui:109
+msgid "Keyboard"
+msgstr "键盘"
+
+#: src/ui/shortcuts.ui:114
+msgid ""
+"Copy the selected emoji and hide the window (When an emoji is highlighted)"
+msgstr "复制选中的表情符号并隐藏窗口（当表情符号被高亮显示时）"
+
+#: src/ui/shortcuts.ui:121
+msgid "Copy first emoji and hide the window (When using the search bar)"
+msgstr "复制第一个表情并隐藏窗口（使用搜索栏时）"
+
+#: src/ui/shortcuts.ui:128
+msgid "Show the category on the right"
+msgstr "在右侧显示类别"
+
+#: src/ui/shortcuts.ui:135
+msgid "Show the category on the left"
+msgstr "在左侧显示类别"
+
+#: src/ui/shortcuts.ui:142
+msgid "Add an emoji to selection"
+msgstr "将表情符号添加到所选内容"
+
+#: src/ui/shortcuts.ui:150
+msgid "Remove the last emoji from the selection"
+msgstr "从所选内容中删除最后一个表情符号"
+
+#: src/ui/shortcuts.ui:157
+msgid "Copy the selection and hide the window, without the highlighted emoji"
+msgstr "复制所选内容并隐藏窗口，不包括高亮的表情"
+
+#: src/ui/importexport-customtags.ui:7
+msgid "Export and import custom tags"
+msgstr "导出和导入自定义标签"
+
+#: src/ui/importexport-customtags.ui:8
+msgid ""
+"Use the buttons below to create or restore custom tags from another machine"
+msgstr "使用下方的按钮从其他设备创建或恢复自定义标签"
+
+#: src/ui/importexport-customtags.ui:23
+msgid "Export to file"
+msgstr "导出到文件"
+
+#: src/ui/importexport-customtags.ui:29
+msgid "Import from file"
+msgstr "从文件导入"
+
+#: src/components/SkintoneSelector.py:89
+msgid "<small>Press Enter to select or ESC to close</small>"
+msgstr "<small>按 Enter 键选择或按 ESC 键关闭</small>"
+
+#: src/components/CustomTagEntry.py:42
+#, python-brace-format
+msgid "<b>{emoji} Edit custom tags</b>"
+msgstr "<b>{emoji} 编辑自定义标签</b>"
+
+#: src/components/CustomTagEntry.py:51
+msgid "List of custom tags, separated  by comma"
+msgstr "由逗号分隔的自定义标签列表"
+
+#: src/components/CustomTagEntry.py:57
+#, python-brace-format
+msgid "<small><b>Default tags</b>: {default_tags}</small>"
+msgstr "<small><b>默认标签</b>: {default_tags}</small>"
+
+#: src/components/CustomTagEntry.py:65
+msgid "<small>Press Enter to save or ESC to dismiss</small>"
+msgstr "<small>按 Enter 键保存或按 ESC 键取消</small>"
+
+#: src/components/UpdateDialog.py:29
+msgid "New features!"
+msgstr "新功能！"
+
+#: src/components/UpdateDialog.py:33
+msgid "Dismiss"
+msgstr "取消"
