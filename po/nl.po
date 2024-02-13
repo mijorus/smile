@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-13 10:23+0100\n"
-"PO-Revision-Date: 2023-03-17 11:39+0100\n"
+"POT-Creation-Date: 2023-12-08 15:14+0100\n"
+"PO-Revision-Date: 2024-02-13 17:38+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
@@ -15,96 +15,199 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Poedit 3.4.2\n"
 
-#: src/main.py:126
+#: src/main.py:111
 msgid "translator_credits"
 msgstr "Heimen Stoffels <vistausss@fastmail.com>"
 
-#: src/Picker.py:532
+#: src/Picker.py:90
+msgid ""
+"Whoa, it's still empty! \n"
+"Your most used emojis will show up here\n"
+msgstr ""
+"Mierekriebels, het is hier wel erg leeg!\n"
+"De meestgebruikte emoji's worden hier getoond.\n"
+
+#: src/Picker.py:525
+msgid "No skintones available"
+msgstr "Er is geen huidskleurkeuze"
+
+#: src/Picker.py:638
 msgid "Copied!"
 msgstr "Gekopieerd!"
 
-#: src/Picker.py:533
+#: src/Picker.py:639
 msgid ""
 "I have copied the emoji to the clipboard. You can now paste it in any input "
 "field."
 msgstr ""
-"De emoji is naar het klembord gekopieerd. U kunt deze nu op de door u"
-" gewenste locatie plakken."
+"De emoji is naar het klembord gekopieerd. U kunt deze nu op de door u "
+"gewenste locatie plakken."
 
-#: src/Settings.py:25
+#: src/Settings.py:28
 msgid "Settings"
 msgstr "Voorkeuren"
 
-#: src/Settings.py:26
+#: src/Settings.py:31
 msgid "General"
 msgstr "Algemeen"
 
-#: src/Settings.py:28
+#: src/Settings.py:33
 msgid "Run in the background"
 msgstr "Uitvoeren op achtergrond"
 
-#: src/Settings.py:28
+#: src/Settings.py:33
 msgid "Keep Smile running in the background for a faster launch"
 msgstr ""
 "Voer Smile uit op de achtergrond om sneller toegang te hebben tot emoji's"
 
-#: src/Settings.py:32
+#: src/Settings.py:37
 msgid "Minimize on exit"
 msgstr "Minimaliseren in plaats van afsluiten"
 
-#: src/Settings.py:32
+#: src/Settings.py:37
 msgid "Minimize the window when selecting an emoji"
 msgstr "Minimaliseer het venster na het kiezen van een emoji"
 
-#: src/Settings.py:37
+#: src/Settings.py:43
+msgid "Mouse behaviour"
+msgstr "Muisgedrag"
+
+#: src/Settings.py:45
+msgid "Mouse multi select"
+msgstr "Meerdere selecteren met muis"
+
+#: src/Settings.py:45
+msgid ""
+"Select multiple emojis with a single mouse click, replacing Shift + Click; "
+"press Enter to confirm and Esc to dismiss."
+msgstr ""
+"Selecteer meerdere emoji's met één muisklik - hierdoor wordt Shift+klik "
+"vervangen. Druk op enter om te bevestigen of op escape om af te breken."
+
+#: src/Settings.py:49
+msgid "Paste emojis automatically"
+msgstr "Emoji's automatisch plakken"
+
+#: src/Settings.py:55
+msgid "Status:"
+msgstr "Status:"
+
+#: src/Settings.py:60
+msgid "Enabled"
+msgstr "Ingeschakeld"
+
+#: src/Settings.py:62
+msgid ""
+"Emulates the Ctrl+V shortcut; might <b>not work</b> on some programs.\n"
+"If using the extension, <b>please ensure that it is correctly ENABLED</b>."
+msgstr ""
+"Bootst de sneltoets Ctrl+V na. Let op: is sommige toepassingen werkt dit "
+"<b>niet</b>.\n"
+"Als u gebruikmaakt van de uitbreiding, <b>zorg er dan voor dat deze is "
+"INGESCHAKELD</b>."
+
+#: src/Settings.py:68
+msgid "Get the GNOME extension"
+msgstr "GNOME-uitbreiding installeren"
+
+#: src/Settings.py:68
+msgid "Install the extension to paste automatically on X11 and Wayland"
+msgstr ""
+"Installeer de uitbreiding om automatisch te kunnen plakken op X11 en Wayland"
+
+#: src/Settings.py:72
 msgid "Customization"
 msgstr "Aanpassen"
 
-#: src/Settings.py:40 src/Settings.py:179
+#: src/Settings.py:76 src/Settings.py:247
 msgid "Localized tags"
 msgstr "Beschrijvingen in eigen taal tonen"
 
-#: src/Settings.py:42
+#: src/Settings.py:78
 msgid "Use localized tags"
 msgstr "Toon de emojibeschrijvingen in de eigen taal"
 
-#: src/Settings.py:47
+#: src/Settings.py:83
 msgid "Merge localized and English tags"
 msgstr "Beschrijvingen in eigen taal en het Engels tonen"
 
-#: src/Settings.py:49
+#: src/Settings.py:85
 msgid "Use both localized tags and English ones at the same time"
 msgstr "Toon de emojibeschrijvingen zowel in de eigen als de Engelse taal"
 
-#: src/Settings.py:61
+#: src/Settings.py:94
 msgid "Custom tags"
 msgstr "Eigen beschrijvingen"
 
-#: src/Settings.py:96
+#: src/Settings.py:126
+msgid "Available (using the GNOME extension)"
+msgstr "Beschikbaar (middels de GNOME-uitbreiding)"
+
+#: src/Settings.py:128
+msgid "Requires the GNOME extension on Wayland"
+msgstr "Op Wayland is de GNOME-uitbreiding vereist"
+
+#: src/Settings.py:130
+msgid "Available (using xdotool on X11)"
+msgstr "Beschikbaar (middels xdotool op X11)"
+
+#: src/Settings.py:143
 msgid "Launch the app with a shortcut"
 msgstr "Toepassing openen met sneltoets"
 
-#: src/Settings.py:97
+#: src/Settings.py:144
 msgid ""
 "Create a new keyboard shortcut in your system settings and paste the "
 "following code as a custom command"
 msgstr ""
-"Open de systeemvoorkeuren, maak een nieuwe sneltoets aan en gebruik de"
-" volgende code als aangepaste opdracht"
+"Open de systeemvoorkeuren, maak een nieuwe sneltoets aan en gebruik de "
+"volgende code als aangepaste opdracht"
 
-#: src/Settings.py:133
+#: src/Settings.py:180
 msgid "Remove"
 msgstr "Verwijderen"
 
-#: src/Settings.py:149
+#: src/Settings.py:198
 msgid "There are no custom tags yet: create one with Alt + T"
 msgstr "Er zijn nog geen eigen beschrijvingen - maak deze aan met Alt + T"
 
-#: src/Settings.py:164
+#: src/Settings.py:211
 msgid "Default skintone"
 msgstr "Standaard huidskleur"
+
+#: src/Settings.py:226
+msgid "Emoji size"
+msgstr "Emojigrootte"
+
+#: src/Settings.py:228
+msgid "Default"
+msgstr "Standaard"
+
+#: src/Settings.py:229
+msgid "Big"
+msgstr "Groot"
+
+#: src/Settings.py:230
+msgid "Bigger"
+msgstr "Groter"
+
+#: src/Settings.py:231
+msgid "Giant"
+msgstr "Enorm"
+
+#: src/Settings.py:330
+msgid "Invalid file selected"
+msgstr "Onjuist bestand gekozen"
+
+#: src/Settings.py:331
+msgid "The configuration file that you selected is not a valid backup."
+msgstr "Het gekozen voorkeurenbestand is geen geldige reservekopie."
+
+#: src/Settings.py:334
+msgid "Close"
+msgstr "Sluiten"
 
 #: src/ui/menu.ui:6
 msgid "Preferences"
@@ -119,16 +222,28 @@ msgid "What's new?"
 msgstr "Wijzigingslog"
 
 #: src/ui/menu.ui:19
+msgid "Install GNOME extension"
+msgstr "GNOME-uitbreiding installeren"
+
+#: src/ui/menu.ui:23
 msgid "Translate this app"
 msgstr "Helpen met vertalen"
 
-#: src/ui/menu.ui:22
+#: src/ui/menu.ui:26
 msgid "About"
 msgstr "Over"
 
 #: src/ui/shortcuts.ui:12
 msgid "Mouse"
 msgstr "Muis"
+
+#: src/ui/shortcuts.ui:48 src/ui/shortcuts.ui:164
+msgid "Open the skintone selector (if available)"
+msgstr "Toon de huidskleurkeuze (indien beschikbaar)"
+
+#: src/ui/shortcuts.ui:68 src/ui/shortcuts.ui:171
+msgid "Add a custom tag"
+msgstr "Voeg eigen beschrijving toe"
 
 #: src/ui/shortcuts.ui:109
 msgid "Keyboard"
@@ -138,14 +253,14 @@ msgstr "Toetsenbord"
 msgid ""
 "Copy the selected emoji and hide the window (When an emoji is highlighted)"
 msgstr ""
-"Minimaliseer het venster na het kiezen van een emoji (als een emoji"
-" gemarkeerd is)"
+"Minimaliseer het venster na het kiezen van een emoji (als een emoji "
+"gemarkeerd is)"
 
 #: src/ui/shortcuts.ui:121
 msgid "Copy first emoji and hide the window (When using the search bar)"
 msgstr ""
-"Minimaliseer het venster na het kiezen van de eerste emoji (bij gebruik van"
-" de zoekbalk)"
+"Minimaliseer het venster na het kiezen van de eerste emoji (bij gebruik van "
+"de zoekbalk)"
 
 #: src/ui/shortcuts.ui:128
 msgid "Show the category on the right"
@@ -167,10 +282,51 @@ msgstr "Verwijder de recentste emoji uit de selectie"
 msgid "Copy the selection and hide the window, without the highlighted emoji"
 msgstr "Kopieer de selectie en minimaliseer het venster"
 
-#: src/ui/shortcuts.ui:164
-msgid "Open the skintone selector (if available)"
-msgstr "Toon de huidskleurkeuze (indien beschikbaar)"
+#: src/ui/importexport-customtags.ui:7
+msgid "Export and import custom tags"
+msgstr "Ex- en importeer eigen labels"
 
-#: src/ui/shortcuts.ui:171
-msgid "Add a custom tag"
-msgstr "Voeg eigen beschrijving toe"
+#: src/ui/importexport-customtags.ui:8
+msgid ""
+"Use the buttons below to create or restore custom tags from another machine"
+msgstr ""
+"Gebruik onderstaande knoppen om eigen labels van een ander apparaat aan te "
+"maken of te herstellen"
+
+#: src/ui/importexport-customtags.ui:23
+msgid "Export to file"
+msgstr "Exporteren naar bestand"
+
+#: src/ui/importexport-customtags.ui:29
+msgid "Import from file"
+msgstr "Importeren uit bestand"
+
+#: src/components/SkintoneSelector.py:89
+msgid "<small>Press Enter to select or ESC to close</small>"
+msgstr "<small>Druk op enter om te selecteren of escape om te sluiten</small>"
+
+#: src/components/CustomTagEntry.py:42
+#, python-brace-format
+msgid "<b>{emoji} Edit custom tags</b>"
+msgstr "<b>{emoji} Eigen labels bewerken</b>"
+
+#: src/components/CustomTagEntry.py:51
+msgid "List of custom tags, separated  by comma"
+msgstr "Kommagescheiden lijst met eigen labels"
+
+#: src/components/CustomTagEntry.py:57
+#, python-brace-format
+msgid "<small><b>Default tags</b>: {default_tags}</small>"
+msgstr "<small><b>Standaardlabels</b>: {default_tags}</small>"
+
+#: src/components/CustomTagEntry.py:65
+msgid "<small>Press Enter to save or ESC to dismiss</small>"
+msgstr "<small>Druk op enter om te bewaren of escape om af te breken</small>"
+
+#: src/components/UpdateDialog.py:29
+msgid "New features!"
+msgstr "Nieuwe functies!"
+
+#: src/components/UpdateDialog.py:33
+msgid "Dismiss"
+msgstr "Negeren"
