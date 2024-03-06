@@ -82,10 +82,6 @@ def main():
 
     emoji_list = json.load(open(_path + '/openmoji.json', 'r'))
 
-    emoji_list.extend(
-        json.load(open(_path + '/openmoji_unicode_15.json', 'r'))
-    )
-
     for i, el in enumerate(emoji_list):
         if el['group'] == 'component':
             if not el['subgroups'] in components:

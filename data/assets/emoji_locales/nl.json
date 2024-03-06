@@ -104,23 +104,20 @@
         "emoji": "🅰️",
         "tags": [
             "a",
-            "bloedgroep",
-            "bloedgroep a"
+            "bloedgroep"
         ]
     },
     "1F171": {
         "emoji": "🅱️",
         "tags": [
             "b",
-            "bloedgroep",
-            "bloedgroep b"
+            "bloedgroep"
         ]
     },
     "1F17E": {
         "emoji": "🅾️",
         "tags": [
             "bloedgroep",
-            "bloedgroep o",
             "o"
         ]
     },
@@ -135,8 +132,7 @@
         "emoji": "🆎",
         "tags": [
             "ab",
-            "bloedgroep",
-            "bloedgroep ab"
+            "bloedgroep"
         ]
     },
     "1F191": {
@@ -217,1806 +213,2064 @@
         "emoji": "🇦🇨",
         "tags": [
             "AC",
-            "vlag"
+            "vlag",
+            "vlag: ascension"
         ]
     },
     "1F1E6-1F1E9": {
         "emoji": "🇦🇩",
         "tags": [
             "AD",
-            "vlag"
+            "vlag",
+            "vlag: andorra"
         ]
     },
     "1F1E6-1F1EA": {
         "emoji": "🇦🇪",
         "tags": [
             "AE",
-            "vlag"
+            "vlag",
+            "vlag: verenigde arabische emiraten"
         ]
     },
     "1F1E6-1F1EB": {
         "emoji": "🇦🇫",
         "tags": [
             "AF",
-            "vlag"
+            "vlag",
+            "vlag: afghanistan"
         ]
     },
     "1F1E6-1F1EC": {
         "emoji": "🇦🇬",
         "tags": [
             "AG",
-            "vlag"
+            "vlag",
+            "vlag: antigua en barbuda"
         ]
     },
     "1F1E6-1F1EE": {
         "emoji": "🇦🇮",
         "tags": [
             "AI",
-            "vlag"
+            "vlag",
+            "vlag: anguilla"
         ]
     },
     "1F1E6-1F1F1": {
         "emoji": "🇦🇱",
         "tags": [
             "AL",
-            "vlag"
+            "vlag",
+            "vlag: albanië"
         ]
     },
     "1F1E6-1F1F2": {
         "emoji": "🇦🇲",
         "tags": [
             "AM",
-            "vlag"
+            "vlag",
+            "vlag: armenië"
         ]
     },
     "1F1E6-1F1F4": {
         "emoji": "🇦🇴",
         "tags": [
             "AO",
-            "vlag"
+            "vlag",
+            "vlag: angola"
         ]
     },
     "1F1E6-1F1F6": {
         "emoji": "🇦🇶",
         "tags": [
             "AQ",
-            "vlag"
+            "vlag",
+            "vlag: antarctica"
         ]
     },
     "1F1E6-1F1F7": {
         "emoji": "🇦🇷",
         "tags": [
             "AR",
-            "vlag"
+            "vlag",
+            "vlag: argentinië"
         ]
     },
     "1F1E6-1F1F8": {
         "emoji": "🇦🇸",
         "tags": [
             "AS",
-            "vlag"
+            "vlag",
+            "vlag: amerikaans-samoa"
         ]
     },
     "1F1E6-1F1F9": {
         "emoji": "🇦🇹",
         "tags": [
             "AT",
-            "vlag"
+            "vlag",
+            "vlag: oostenrijk"
         ]
     },
     "1F1E6-1F1FA": {
         "emoji": "🇦🇺",
         "tags": [
             "AU",
-            "vlag"
+            "vlag",
+            "vlag: australië"
         ]
     },
     "1F1E6-1F1FC": {
         "emoji": "🇦🇼",
         "tags": [
             "AW",
-            "vlag"
+            "vlag",
+            "vlag: aruba"
         ]
     },
     "1F1E6-1F1FD": {
         "emoji": "🇦🇽",
         "tags": [
             "AX",
-            "vlag"
+            "vlag",
+            "vlag: åland"
         ]
     },
     "1F1E6-1F1FF": {
         "emoji": "🇦🇿",
         "tags": [
             "AZ",
-            "vlag"
+            "vlag",
+            "vlag: azerbeidzjan"
         ]
     },
     "1F1E7-1F1E6": {
         "emoji": "🇧🇦",
         "tags": [
             "BA",
-            "vlag"
+            "vlag",
+            "vlag: bosnië en herzegovina"
         ]
     },
     "1F1E7-1F1E7": {
         "emoji": "🇧🇧",
         "tags": [
             "BB",
-            "vlag"
+            "vlag",
+            "vlag: barbados"
         ]
     },
     "1F1E7-1F1E9": {
         "emoji": "🇧🇩",
         "tags": [
             "BD",
-            "vlag"
+            "vlag",
+            "vlag: bangladesh"
         ]
     },
     "1F1E7-1F1EA": {
         "emoji": "🇧🇪",
         "tags": [
             "BE",
-            "vlag"
+            "vlag",
+            "vlag: belgië"
         ]
     },
     "1F1E7-1F1EB": {
         "emoji": "🇧🇫",
         "tags": [
             "BF",
-            "vlag"
+            "vlag",
+            "vlag: burkina faso"
         ]
     },
     "1F1E7-1F1EC": {
         "emoji": "🇧🇬",
         "tags": [
             "BG",
-            "vlag"
+            "vlag",
+            "vlag: bulgarije"
         ]
     },
     "1F1E7-1F1ED": {
         "emoji": "🇧🇭",
         "tags": [
             "BH",
-            "vlag"
+            "vlag",
+            "vlag: bahrein"
         ]
     },
     "1F1E7-1F1EE": {
         "emoji": "🇧🇮",
         "tags": [
             "BI",
-            "vlag"
+            "vlag",
+            "vlag: burundi"
         ]
     },
     "1F1E7-1F1EF": {
         "emoji": "🇧🇯",
         "tags": [
             "BJ",
-            "vlag"
+            "vlag",
+            "vlag: benin"
         ]
     },
     "1F1E7-1F1F1": {
         "emoji": "🇧🇱",
         "tags": [
             "BL",
-            "vlag"
+            "vlag",
+            "vlag: saint-barthélemy"
         ]
     },
     "1F1E7-1F1F2": {
         "emoji": "🇧🇲",
         "tags": [
             "BM",
-            "vlag"
+            "vlag",
+            "vlag: bermuda"
         ]
     },
     "1F1E7-1F1F3": {
         "emoji": "🇧🇳",
         "tags": [
             "BN",
-            "vlag"
+            "vlag",
+            "vlag: brunei"
         ]
     },
     "1F1E7-1F1F4": {
         "emoji": "🇧🇴",
         "tags": [
             "BO",
-            "vlag"
+            "vlag",
+            "vlag: bolivia"
         ]
     },
     "1F1E7-1F1F6": {
         "emoji": "🇧🇶",
         "tags": [
             "BQ",
-            "vlag"
+            "vlag",
+            "vlag: caribisch nederland"
         ]
     },
     "1F1E7-1F1F7": {
         "emoji": "🇧🇷",
         "tags": [
             "BR",
-            "vlag"
+            "vlag",
+            "vlag: brazilië"
         ]
     },
     "1F1E7-1F1F8": {
         "emoji": "🇧🇸",
         "tags": [
             "BS",
-            "vlag"
+            "vlag",
+            "vlag: bahama’s"
         ]
     },
     "1F1E7-1F1F9": {
         "emoji": "🇧🇹",
         "tags": [
             "BT",
-            "vlag"
+            "vlag",
+            "vlag: bhutan"
         ]
     },
     "1F1E7-1F1FB": {
         "emoji": "🇧🇻",
         "tags": [
             "BV",
-            "vlag"
+            "vlag",
+            "vlag: bouveteiland"
         ]
     },
     "1F1E7-1F1FC": {
         "emoji": "🇧🇼",
         "tags": [
             "BW",
-            "vlag"
+            "vlag",
+            "vlag: botswana"
         ]
     },
     "1F1E7-1F1FE": {
         "emoji": "🇧🇾",
         "tags": [
             "BY",
-            "vlag"
+            "vlag",
+            "vlag: belarus"
         ]
     },
     "1F1E7-1F1FF": {
         "emoji": "🇧🇿",
         "tags": [
             "BZ",
-            "vlag"
+            "vlag",
+            "vlag: belize"
         ]
     },
     "1F1E8-1F1E6": {
         "emoji": "🇨🇦",
         "tags": [
             "CA",
-            "vlag"
+            "vlag",
+            "vlag: canada"
         ]
     },
     "1F1E8-1F1E8": {
         "emoji": "🇨🇨",
         "tags": [
             "CC",
-            "vlag"
+            "vlag",
+            "vlag: cocoseilanden"
         ]
     },
     "1F1E8-1F1E9": {
         "emoji": "🇨🇩",
         "tags": [
             "CD",
-            "vlag"
+            "vlag",
+            "vlag: congo-kinshasa"
         ]
     },
     "1F1E8-1F1EB": {
         "emoji": "🇨🇫",
         "tags": [
             "CF",
-            "vlag"
+            "vlag",
+            "vlag: centraal-afrikaanse republiek"
         ]
     },
     "1F1E8-1F1EC": {
         "emoji": "🇨🇬",
         "tags": [
             "CG",
-            "vlag"
+            "vlag",
+            "vlag: congo-brazzaville"
         ]
     },
     "1F1E8-1F1ED": {
         "emoji": "🇨🇭",
         "tags": [
             "CH",
-            "vlag"
+            "vlag",
+            "vlag: zwitserland"
         ]
     },
     "1F1E8-1F1EE": {
         "emoji": "🇨🇮",
         "tags": [
             "CI",
-            "vlag"
+            "vlag",
+            "vlag: ivoorkust"
         ]
     },
     "1F1E8-1F1F0": {
         "emoji": "🇨🇰",
         "tags": [
             "CK",
-            "vlag"
+            "vlag",
+            "vlag: cookeilanden"
         ]
     },
     "1F1E8-1F1F1": {
         "emoji": "🇨🇱",
         "tags": [
             "CL",
-            "vlag"
+            "vlag",
+            "vlag: chili"
         ]
     },
     "1F1E8-1F1F2": {
         "emoji": "🇨🇲",
         "tags": [
             "CM",
-            "vlag"
+            "vlag",
+            "vlag: kameroen"
         ]
     },
     "1F1E8-1F1F3": {
         "emoji": "🇨🇳",
         "tags": [
             "CN",
-            "vlag"
+            "vlag",
+            "vlag: china"
         ]
     },
     "1F1E8-1F1F4": {
         "emoji": "🇨🇴",
         "tags": [
             "CO",
-            "vlag"
+            "vlag",
+            "vlag: colombia"
         ]
     },
     "1F1E8-1F1F5": {
         "emoji": "🇨🇵",
         "tags": [
             "CP",
-            "vlag"
+            "vlag",
+            "vlag: clipperton"
         ]
     },
     "1F1E8-1F1F7": {
         "emoji": "🇨🇷",
         "tags": [
             "CR",
-            "vlag"
+            "vlag",
+            "vlag: costa rica"
         ]
     },
     "1F1E8-1F1FA": {
         "emoji": "🇨🇺",
         "tags": [
             "CU",
-            "vlag"
+            "vlag",
+            "vlag: cuba"
         ]
     },
     "1F1E8-1F1FB": {
         "emoji": "🇨🇻",
         "tags": [
             "CV",
-            "vlag"
+            "vlag",
+            "vlag: kaapverdië"
         ]
     },
     "1F1E8-1F1FC": {
         "emoji": "🇨🇼",
         "tags": [
             "CW",
-            "vlag"
+            "vlag",
+            "vlag: curaçao"
         ]
     },
     "1F1E8-1F1FD": {
         "emoji": "🇨🇽",
         "tags": [
             "CX",
-            "vlag"
+            "vlag",
+            "vlag: christmaseiland"
         ]
     },
     "1F1E8-1F1FE": {
         "emoji": "🇨🇾",
         "tags": [
             "CY",
-            "vlag"
+            "vlag",
+            "vlag: cyprus"
         ]
     },
     "1F1E8-1F1FF": {
         "emoji": "🇨🇿",
         "tags": [
             "CZ",
-            "vlag"
+            "vlag",
+            "vlag: tsjechië"
         ]
     },
     "1F1E9-1F1EA": {
         "emoji": "🇩🇪",
         "tags": [
             "DE",
-            "vlag"
+            "vlag",
+            "vlag: duitsland"
         ]
     },
     "1F1E9-1F1EC": {
         "emoji": "🇩🇬",
         "tags": [
             "DG",
-            "vlag"
+            "vlag",
+            "vlag: diego garcia"
         ]
     },
     "1F1E9-1F1EF": {
         "emoji": "🇩🇯",
         "tags": [
             "DJ",
-            "vlag"
+            "vlag",
+            "vlag: djibouti"
         ]
     },
     "1F1E9-1F1F0": {
         "emoji": "🇩🇰",
         "tags": [
             "DK",
-            "vlag"
+            "vlag",
+            "vlag: denemarken"
         ]
     },
     "1F1E9-1F1F2": {
         "emoji": "🇩🇲",
         "tags": [
             "DM",
-            "vlag"
+            "vlag",
+            "vlag: dominica"
         ]
     },
     "1F1E9-1F1F4": {
         "emoji": "🇩🇴",
         "tags": [
             "DO",
-            "vlag"
+            "vlag",
+            "vlag: dominicaanse republiek"
         ]
     },
     "1F1E9-1F1FF": {
         "emoji": "🇩🇿",
         "tags": [
             "DZ",
-            "vlag"
+            "vlag",
+            "vlag: algerije"
         ]
     },
     "1F1EA-1F1E6": {
         "emoji": "🇪🇦",
         "tags": [
             "EA",
-            "vlag"
+            "vlag",
+            "vlag: ceuta en melilla"
         ]
     },
     "1F1EA-1F1E8": {
         "emoji": "🇪🇨",
         "tags": [
             "EC",
-            "vlag"
+            "vlag",
+            "vlag: ecuador"
         ]
     },
     "1F1EA-1F1EA": {
         "emoji": "🇪🇪",
         "tags": [
             "EE",
-            "vlag"
+            "vlag",
+            "vlag: estland"
         ]
     },
     "1F1EA-1F1EC": {
         "emoji": "🇪🇬",
         "tags": [
             "EG",
-            "vlag"
+            "vlag",
+            "vlag: egypte"
         ]
     },
     "1F1EA-1F1ED": {
         "emoji": "🇪🇭",
         "tags": [
             "EH",
-            "vlag"
+            "vlag",
+            "vlag: westelijke sahara"
         ]
     },
     "1F1EA-1F1F7": {
         "emoji": "🇪🇷",
         "tags": [
             "ER",
-            "vlag"
+            "vlag",
+            "vlag: eritrea"
         ]
     },
     "1F1EA-1F1F8": {
         "emoji": "🇪🇸",
         "tags": [
             "ES",
-            "vlag"
+            "vlag",
+            "vlag: spanje"
         ]
     },
     "1F1EA-1F1F9": {
         "emoji": "🇪🇹",
         "tags": [
             "ET",
-            "vlag"
+            "vlag",
+            "vlag: ethiopië"
         ]
     },
     "1F1EA-1F1FA": {
         "emoji": "🇪🇺",
         "tags": [
             "EU",
-            "vlag"
+            "vlag",
+            "vlag: europese unie"
         ]
     },
     "1F1EB-1F1EE": {
         "emoji": "🇫🇮",
         "tags": [
             "FI",
-            "vlag"
+            "vlag",
+            "vlag: finland"
         ]
     },
     "1F1EB-1F1EF": {
         "emoji": "🇫🇯",
         "tags": [
             "FJ",
-            "vlag"
+            "vlag",
+            "vlag: fiji"
         ]
     },
     "1F1EB-1F1F0": {
         "emoji": "🇫🇰",
         "tags": [
             "FK",
-            "vlag"
+            "vlag",
+            "vlag: falklandeilanden"
         ]
     },
     "1F1EB-1F1F2": {
         "emoji": "🇫🇲",
         "tags": [
             "FM",
-            "vlag"
+            "vlag",
+            "vlag: micronesia"
         ]
     },
     "1F1EB-1F1F4": {
         "emoji": "🇫🇴",
         "tags": [
             "FO",
-            "vlag"
+            "vlag",
+            "vlag: faeröer"
         ]
     },
     "1F1EB-1F1F7": {
         "emoji": "🇫🇷",
         "tags": [
             "FR",
-            "vlag"
+            "vlag",
+            "vlag: frankrijk"
         ]
     },
     "1F1EC-1F1E6": {
         "emoji": "🇬🇦",
         "tags": [
             "GA",
-            "vlag"
+            "vlag",
+            "vlag: gabon"
         ]
     },
     "1F1EC-1F1E7": {
         "emoji": "🇬🇧",
         "tags": [
             "GB",
-            "vlag"
+            "vlag",
+            "vlag: verenigd koninkrijk"
         ]
     },
     "1F1EC-1F1E9": {
         "emoji": "🇬🇩",
         "tags": [
             "GD",
-            "vlag"
+            "vlag",
+            "vlag: grenada"
         ]
     },
     "1F1EC-1F1EA": {
         "emoji": "🇬🇪",
         "tags": [
             "GE",
-            "vlag"
+            "vlag",
+            "vlag: georgië"
         ]
     },
     "1F1EC-1F1EB": {
         "emoji": "🇬🇫",
         "tags": [
             "GF",
-            "vlag"
+            "vlag",
+            "vlag: frans-guyana"
         ]
     },
     "1F1EC-1F1EC": {
         "emoji": "🇬🇬",
         "tags": [
             "GG",
-            "vlag"
+            "vlag",
+            "vlag: guernsey"
         ]
     },
     "1F1EC-1F1ED": {
         "emoji": "🇬🇭",
         "tags": [
             "GH",
-            "vlag"
+            "vlag",
+            "vlag: ghana"
         ]
     },
     "1F1EC-1F1EE": {
         "emoji": "🇬🇮",
         "tags": [
             "GI",
-            "vlag"
+            "vlag",
+            "vlag: gibraltar"
         ]
     },
     "1F1EC-1F1F1": {
         "emoji": "🇬🇱",
         "tags": [
             "GL",
-            "vlag"
+            "vlag",
+            "vlag: groenland"
         ]
     },
     "1F1EC-1F1F2": {
         "emoji": "🇬🇲",
         "tags": [
             "GM",
-            "vlag"
+            "vlag",
+            "vlag: gambia"
         ]
     },
     "1F1EC-1F1F3": {
         "emoji": "🇬🇳",
         "tags": [
             "GN",
-            "vlag"
+            "vlag",
+            "vlag: guinee"
         ]
     },
     "1F1EC-1F1F5": {
         "emoji": "🇬🇵",
         "tags": [
             "GP",
-            "vlag"
+            "vlag",
+            "vlag: guadeloupe"
         ]
     },
     "1F1EC-1F1F6": {
         "emoji": "🇬🇶",
         "tags": [
             "GQ",
-            "vlag"
+            "vlag",
+            "vlag: equatoriaal-guinea"
         ]
     },
     "1F1EC-1F1F7": {
         "emoji": "🇬🇷",
         "tags": [
             "GR",
-            "vlag"
+            "vlag",
+            "vlag: griekenland"
         ]
     },
     "1F1EC-1F1F8": {
         "emoji": "🇬🇸",
         "tags": [
             "GS",
-            "vlag"
+            "vlag",
+            "vlag: zuid-georgia en zuidelijke sandwicheilanden"
         ]
     },
     "1F1EC-1F1F9": {
         "emoji": "🇬🇹",
         "tags": [
             "GT",
-            "vlag"
+            "vlag",
+            "vlag: guatemala"
         ]
     },
     "1F1EC-1F1FA": {
         "emoji": "🇬🇺",
         "tags": [
             "GU",
-            "vlag"
+            "vlag",
+            "vlag: guam"
         ]
     },
     "1F1EC-1F1FC": {
         "emoji": "🇬🇼",
         "tags": [
             "GW",
-            "vlag"
+            "vlag",
+            "vlag: guinee-bissau"
         ]
     },
     "1F1EC-1F1FE": {
         "emoji": "🇬🇾",
         "tags": [
             "GY",
-            "vlag"
+            "vlag",
+            "vlag: guyana"
         ]
     },
     "1F1ED-1F1F0": {
         "emoji": "🇭🇰",
         "tags": [
             "HK",
-            "vlag"
+            "vlag",
+            "vlag: hongkong sar van china"
         ]
     },
     "1F1ED-1F1F2": {
         "emoji": "🇭🇲",
         "tags": [
             "HM",
-            "vlag"
+            "vlag",
+            "vlag: heard en mcdonaldeilanden"
         ]
     },
     "1F1ED-1F1F3": {
         "emoji": "🇭🇳",
         "tags": [
             "HN",
-            "vlag"
+            "vlag",
+            "vlag: honduras"
         ]
     },
     "1F1ED-1F1F7": {
         "emoji": "🇭🇷",
         "tags": [
             "HR",
-            "vlag"
+            "vlag",
+            "vlag: kroatië"
         ]
     },
     "1F1ED-1F1F9": {
         "emoji": "🇭🇹",
         "tags": [
             "HT",
-            "vlag"
+            "vlag",
+            "vlag: haïti"
         ]
     },
     "1F1ED-1F1FA": {
         "emoji": "🇭🇺",
         "tags": [
             "HU",
-            "vlag"
+            "vlag",
+            "vlag: hongarije"
         ]
     },
     "1F1EE-1F1E8": {
         "emoji": "🇮🇨",
         "tags": [
             "IC",
-            "vlag"
+            "vlag",
+            "vlag: canarische eilanden"
         ]
     },
     "1F1EE-1F1E9": {
         "emoji": "🇮🇩",
         "tags": [
             "ID",
-            "vlag"
+            "vlag",
+            "vlag: indonesië"
         ]
     },
     "1F1EE-1F1EA": {
         "emoji": "🇮🇪",
         "tags": [
             "IE",
-            "vlag"
+            "vlag",
+            "vlag: ierland"
         ]
     },
     "1F1EE-1F1F1": {
         "emoji": "🇮🇱",
         "tags": [
             "IL",
-            "vlag"
+            "vlag",
+            "vlag: israël"
         ]
     },
     "1F1EE-1F1F2": {
         "emoji": "🇮🇲",
         "tags": [
             "IM",
-            "vlag"
+            "vlag",
+            "vlag: isle of man"
         ]
     },
     "1F1EE-1F1F3": {
         "emoji": "🇮🇳",
         "tags": [
             "IN",
-            "vlag"
+            "vlag",
+            "vlag: india"
         ]
     },
     "1F1EE-1F1F4": {
         "emoji": "🇮🇴",
         "tags": [
             "IO",
-            "vlag"
+            "vlag",
+            "vlag: brits indische oceaanterritorium"
         ]
     },
     "1F1EE-1F1F6": {
         "emoji": "🇮🇶",
         "tags": [
             "IQ",
-            "vlag"
+            "vlag",
+            "vlag: irak"
         ]
     },
     "1F1EE-1F1F7": {
         "emoji": "🇮🇷",
         "tags": [
             "IR",
-            "vlag"
+            "vlag",
+            "vlag: iran"
         ]
     },
     "1F1EE-1F1F8": {
         "emoji": "🇮🇸",
         "tags": [
             "IS",
-            "vlag"
+            "vlag",
+            "vlag: ijsland"
         ]
     },
     "1F1EE-1F1F9": {
         "emoji": "🇮🇹",
         "tags": [
             "IT",
-            "vlag"
+            "vlag",
+            "vlag: italië"
         ]
     },
     "1F1EF-1F1EA": {
         "emoji": "🇯🇪",
         "tags": [
             "JE",
-            "vlag"
+            "vlag",
+            "vlag: jersey"
         ]
     },
     "1F1EF-1F1F2": {
         "emoji": "🇯🇲",
         "tags": [
             "JM",
-            "vlag"
+            "vlag",
+            "vlag: jamaica"
         ]
     },
     "1F1EF-1F1F4": {
         "emoji": "🇯🇴",
         "tags": [
             "JO",
-            "vlag"
+            "vlag",
+            "vlag: jordanië"
         ]
     },
     "1F1EF-1F1F5": {
         "emoji": "🇯🇵",
         "tags": [
             "JP",
-            "vlag"
+            "vlag",
+            "vlag: japan"
         ]
     },
     "1F1F0-1F1EA": {
         "emoji": "🇰🇪",
         "tags": [
             "KE",
-            "vlag"
+            "vlag",
+            "vlag: kenia"
         ]
     },
     "1F1F0-1F1EC": {
         "emoji": "🇰🇬",
         "tags": [
             "KG",
-            "vlag"
+            "vlag",
+            "vlag: kirgizië"
         ]
     },
     "1F1F0-1F1ED": {
         "emoji": "🇰🇭",
         "tags": [
             "KH",
-            "vlag"
+            "vlag",
+            "vlag: cambodja"
         ]
     },
     "1F1F0-1F1EE": {
         "emoji": "🇰🇮",
         "tags": [
             "KI",
-            "vlag"
+            "vlag",
+            "vlag: kiribati"
         ]
     },
     "1F1F0-1F1F2": {
         "emoji": "🇰🇲",
         "tags": [
             "KM",
-            "vlag"
+            "vlag",
+            "vlag: comoren"
         ]
     },
     "1F1F0-1F1F3": {
         "emoji": "🇰🇳",
         "tags": [
             "KN",
-            "vlag"
+            "vlag",
+            "vlag: saint kitts en nevis"
         ]
     },
     "1F1F0-1F1F5": {
         "emoji": "🇰🇵",
         "tags": [
             "KP",
-            "vlag"
+            "vlag",
+            "vlag: noord-korea"
         ]
     },
     "1F1F0-1F1F7": {
         "emoji": "🇰🇷",
         "tags": [
             "KR",
-            "vlag"
+            "vlag",
+            "vlag: zuid-korea"
         ]
     },
     "1F1F0-1F1FC": {
         "emoji": "🇰🇼",
         "tags": [
             "KW",
-            "vlag"
+            "vlag",
+            "vlag: koeweit"
         ]
     },
     "1F1F0-1F1FE": {
         "emoji": "🇰🇾",
         "tags": [
             "KY",
-            "vlag"
+            "vlag",
+            "vlag: kaaimaneilanden"
         ]
     },
     "1F1F0-1F1FF": {
         "emoji": "🇰🇿",
         "tags": [
             "KZ",
-            "vlag"
+            "vlag",
+            "vlag: kazachstan"
         ]
     },
     "1F1F1-1F1E6": {
         "emoji": "🇱🇦",
         "tags": [
             "LA",
-            "vlag"
+            "vlag",
+            "vlag: laos"
         ]
     },
     "1F1F1-1F1E7": {
         "emoji": "🇱🇧",
         "tags": [
             "LB",
-            "vlag"
+            "vlag",
+            "vlag: libanon"
         ]
     },
     "1F1F1-1F1E8": {
         "emoji": "🇱🇨",
         "tags": [
             "LC",
-            "vlag"
+            "vlag",
+            "vlag: saint lucia"
         ]
     },
     "1F1F1-1F1EE": {
         "emoji": "🇱🇮",
         "tags": [
             "LI",
-            "vlag"
+            "vlag",
+            "vlag: liechtenstein"
         ]
     },
     "1F1F1-1F1F0": {
         "emoji": "🇱🇰",
         "tags": [
             "LK",
-            "vlag"
+            "vlag",
+            "vlag: sri lanka"
         ]
     },
     "1F1F1-1F1F7": {
         "emoji": "🇱🇷",
         "tags": [
             "LR",
-            "vlag"
+            "vlag",
+            "vlag: liberia"
         ]
     },
     "1F1F1-1F1F8": {
         "emoji": "🇱🇸",
         "tags": [
             "LS",
-            "vlag"
+            "vlag",
+            "vlag: lesotho"
         ]
     },
     "1F1F1-1F1F9": {
         "emoji": "🇱🇹",
         "tags": [
             "LT",
-            "vlag"
+            "vlag",
+            "vlag: litouwen"
         ]
     },
     "1F1F1-1F1FA": {
         "emoji": "🇱🇺",
         "tags": [
             "LU",
-            "vlag"
+            "vlag",
+            "vlag: luxemburg"
         ]
     },
     "1F1F1-1F1FB": {
         "emoji": "🇱🇻",
         "tags": [
             "LV",
-            "vlag"
+            "vlag",
+            "vlag: letland"
         ]
     },
     "1F1F1-1F1FE": {
         "emoji": "🇱🇾",
         "tags": [
             "LY",
-            "vlag"
+            "vlag",
+            "vlag: libië"
         ]
     },
     "1F1F2-1F1E6": {
         "emoji": "🇲🇦",
         "tags": [
             "MA",
-            "vlag"
+            "vlag",
+            "vlag: marokko"
         ]
     },
     "1F1F2-1F1E8": {
         "emoji": "🇲🇨",
         "tags": [
             "MC",
-            "vlag"
+            "vlag",
+            "vlag: monaco"
         ]
     },
     "1F1F2-1F1E9": {
         "emoji": "🇲🇩",
         "tags": [
             "MD",
-            "vlag"
+            "vlag",
+            "vlag: moldavië"
         ]
     },
     "1F1F2-1F1EA": {
         "emoji": "🇲🇪",
         "tags": [
             "ME",
-            "vlag"
+            "vlag",
+            "vlag: montenegro"
         ]
     },
     "1F1F2-1F1EB": {
         "emoji": "🇲🇫",
         "tags": [
             "MF",
-            "vlag"
+            "vlag",
+            "vlag: saint-martin"
         ]
     },
     "1F1F2-1F1EC": {
         "emoji": "🇲🇬",
         "tags": [
             "MG",
-            "vlag"
+            "vlag",
+            "vlag: madagaskar"
         ]
     },
     "1F1F2-1F1ED": {
         "emoji": "🇲🇭",
         "tags": [
             "MH",
-            "vlag"
+            "vlag",
+            "vlag: marshalleilanden"
         ]
     },
     "1F1F2-1F1F0": {
         "emoji": "🇲🇰",
         "tags": [
             "MK",
-            "vlag"
+            "vlag",
+            "vlag: noord-macedonië"
         ]
     },
     "1F1F2-1F1F1": {
         "emoji": "🇲🇱",
         "tags": [
             "ML",
-            "vlag"
+            "vlag",
+            "vlag: mali"
         ]
     },
     "1F1F2-1F1F2": {
         "emoji": "🇲🇲",
         "tags": [
             "MM",
-            "vlag"
+            "vlag",
+            "vlag: myanmar (birma)"
         ]
     },
     "1F1F2-1F1F3": {
         "emoji": "🇲🇳",
         "tags": [
             "MN",
-            "vlag"
+            "vlag",
+            "vlag: mongolië"
         ]
     },
     "1F1F2-1F1F4": {
         "emoji": "🇲🇴",
         "tags": [
             "MO",
-            "vlag"
+            "vlag",
+            "vlag: macau sar van china"
         ]
     },
     "1F1F2-1F1F5": {
         "emoji": "🇲🇵",
         "tags": [
             "MP",
-            "vlag"
+            "vlag",
+            "vlag: noordelijke marianen"
         ]
     },
     "1F1F2-1F1F6": {
         "emoji": "🇲🇶",
         "tags": [
             "MQ",
-            "vlag"
+            "vlag",
+            "vlag: martinique"
         ]
     },
     "1F1F2-1F1F7": {
         "emoji": "🇲🇷",
         "tags": [
             "MR",
-            "vlag"
+            "vlag",
+            "vlag: mauritanië"
         ]
     },
     "1F1F2-1F1F8": {
         "emoji": "🇲🇸",
         "tags": [
             "MS",
-            "vlag"
+            "vlag",
+            "vlag: montserrat"
         ]
     },
     "1F1F2-1F1F9": {
         "emoji": "🇲🇹",
         "tags": [
             "MT",
-            "vlag"
+            "vlag",
+            "vlag: malta"
         ]
     },
     "1F1F2-1F1FA": {
         "emoji": "🇲🇺",
         "tags": [
             "MU",
-            "vlag"
+            "vlag",
+            "vlag: mauritius"
         ]
     },
     "1F1F2-1F1FB": {
         "emoji": "🇲🇻",
         "tags": [
             "MV",
-            "vlag"
+            "vlag",
+            "vlag: maldiven"
         ]
     },
     "1F1F2-1F1FC": {
         "emoji": "🇲🇼",
         "tags": [
             "MW",
-            "vlag"
+            "vlag",
+            "vlag: malawi"
         ]
     },
     "1F1F2-1F1FD": {
         "emoji": "🇲🇽",
         "tags": [
             "MX",
-            "vlag"
+            "vlag",
+            "vlag: mexico"
         ]
     },
     "1F1F2-1F1FE": {
         "emoji": "🇲🇾",
         "tags": [
             "MY",
-            "vlag"
+            "vlag",
+            "vlag: maleisië"
         ]
     },
     "1F1F2-1F1FF": {
         "emoji": "🇲🇿",
         "tags": [
             "MZ",
-            "vlag"
+            "vlag",
+            "vlag: mozambique"
         ]
     },
     "1F1F3-1F1E6": {
         "emoji": "🇳🇦",
         "tags": [
             "NA",
-            "vlag"
+            "vlag",
+            "vlag: namibië"
         ]
     },
     "1F1F3-1F1E8": {
         "emoji": "🇳🇨",
         "tags": [
             "NC",
-            "vlag"
+            "vlag",
+            "vlag: nieuw-caledonië"
         ]
     },
     "1F1F3-1F1EA": {
         "emoji": "🇳🇪",
         "tags": [
             "NE",
-            "vlag"
+            "vlag",
+            "vlag: niger"
         ]
     },
     "1F1F3-1F1EB": {
         "emoji": "🇳🇫",
         "tags": [
             "NF",
-            "vlag"
+            "vlag",
+            "vlag: norfolk"
         ]
     },
     "1F1F3-1F1EC": {
         "emoji": "🇳🇬",
         "tags": [
             "NG",
-            "vlag"
+            "vlag",
+            "vlag: nigeria"
         ]
     },
     "1F1F3-1F1EE": {
         "emoji": "🇳🇮",
         "tags": [
             "NI",
-            "vlag"
+            "vlag",
+            "vlag: nicaragua"
         ]
     },
     "1F1F3-1F1F1": {
         "emoji": "🇳🇱",
         "tags": [
             "NL",
-            "vlag"
+            "vlag",
+            "vlag: nederland"
         ]
     },
     "1F1F3-1F1F4": {
         "emoji": "🇳🇴",
         "tags": [
             "NO",
-            "vlag"
+            "vlag",
+            "vlag: noorwegen"
         ]
     },
     "1F1F3-1F1F5": {
         "emoji": "🇳🇵",
         "tags": [
             "NP",
-            "vlag"
+            "vlag",
+            "vlag: nepal"
         ]
     },
     "1F1F3-1F1F7": {
         "emoji": "🇳🇷",
         "tags": [
             "NR",
-            "vlag"
+            "vlag",
+            "vlag: nauru"
         ]
     },
     "1F1F3-1F1FA": {
         "emoji": "🇳🇺",
         "tags": [
             "NU",
-            "vlag"
+            "vlag",
+            "vlag: niue"
         ]
     },
     "1F1F3-1F1FF": {
         "emoji": "🇳🇿",
         "tags": [
             "NZ",
-            "vlag"
+            "vlag",
+            "vlag: nieuw-zeeland"
         ]
     },
     "1F1F4-1F1F2": {
         "emoji": "🇴🇲",
         "tags": [
             "OM",
-            "vlag"
+            "vlag",
+            "vlag: oman"
         ]
     },
     "1F1F5-1F1E6": {
         "emoji": "🇵🇦",
         "tags": [
             "PA",
-            "vlag"
+            "vlag",
+            "vlag: panama"
         ]
     },
     "1F1F5-1F1EA": {
         "emoji": "🇵🇪",
         "tags": [
             "PE",
-            "vlag"
+            "vlag",
+            "vlag: peru"
         ]
     },
     "1F1F5-1F1EB": {
         "emoji": "🇵🇫",
         "tags": [
             "PF",
-            "vlag"
+            "vlag",
+            "vlag: frans-polynesië"
         ]
     },
     "1F1F5-1F1EC": {
         "emoji": "🇵🇬",
         "tags": [
             "PG",
-            "vlag"
+            "vlag",
+            "vlag: papoea-nieuw-guinea"
         ]
     },
     "1F1F5-1F1ED": {
         "emoji": "🇵🇭",
         "tags": [
             "PH",
-            "vlag"
+            "vlag",
+            "vlag: filipijnen"
         ]
     },
     "1F1F5-1F1F0": {
         "emoji": "🇵🇰",
         "tags": [
             "PK",
-            "vlag"
+            "vlag",
+            "vlag: pakistan"
         ]
     },
     "1F1F5-1F1F1": {
         "emoji": "🇵🇱",
         "tags": [
             "PL",
-            "vlag"
+            "vlag",
+            "vlag: polen"
         ]
     },
     "1F1F5-1F1F2": {
         "emoji": "🇵🇲",
         "tags": [
             "PM",
-            "vlag"
+            "vlag",
+            "vlag: saint-pierre en miquelon"
         ]
     },
     "1F1F5-1F1F3": {
         "emoji": "🇵🇳",
         "tags": [
             "PN",
-            "vlag"
+            "vlag",
+            "vlag: pitcairneilanden"
         ]
     },
     "1F1F5-1F1F7": {
         "emoji": "🇵🇷",
         "tags": [
             "PR",
-            "vlag"
+            "vlag",
+            "vlag: puerto rico"
         ]
     },
     "1F1F5-1F1F8": {
         "emoji": "🇵🇸",
         "tags": [
             "PS",
-            "vlag"
+            "vlag",
+            "vlag: palestijnse gebieden"
         ]
     },
     "1F1F5-1F1F9": {
         "emoji": "🇵🇹",
         "tags": [
             "PT",
-            "vlag"
+            "vlag",
+            "vlag: portugal"
         ]
     },
     "1F1F5-1F1FC": {
         "emoji": "🇵🇼",
         "tags": [
             "PW",
-            "vlag"
+            "vlag",
+            "vlag: palau"
         ]
     },
     "1F1F5-1F1FE": {
         "emoji": "🇵🇾",
         "tags": [
             "PY",
-            "vlag"
+            "vlag",
+            "vlag: paraguay"
         ]
     },
     "1F1F6-1F1E6": {
         "emoji": "🇶🇦",
         "tags": [
             "QA",
-            "vlag"
+            "vlag",
+            "vlag: qatar"
         ]
     },
     "1F1F7-1F1EA": {
         "emoji": "🇷🇪",
         "tags": [
             "RE",
-            "vlag"
+            "vlag",
+            "vlag: réunion"
         ]
     },
     "1F1F7-1F1F4": {
         "emoji": "🇷🇴",
         "tags": [
             "RO",
-            "vlag"
+            "vlag",
+            "vlag: roemenië"
         ]
     },
     "1F1F7-1F1F8": {
         "emoji": "🇷🇸",
         "tags": [
             "RS",
-            "vlag"
+            "vlag",
+            "vlag: servië"
         ]
     },
     "1F1F7-1F1FA": {
         "emoji": "🇷🇺",
         "tags": [
             "RU",
-            "vlag"
+            "vlag",
+            "vlag: rusland"
         ]
     },
     "1F1F7-1F1FC": {
         "emoji": "🇷🇼",
         "tags": [
             "RW",
-            "vlag"
+            "vlag",
+            "vlag: rwanda"
         ]
     },
     "1F1F8-1F1E6": {
         "emoji": "🇸🇦",
         "tags": [
             "SA",
-            "vlag"
+            "vlag",
+            "vlag: saoedi-arabië"
         ]
     },
     "1F1F8-1F1E7": {
         "emoji": "🇸🇧",
         "tags": [
             "SB",
-            "vlag"
+            "vlag",
+            "vlag: salomonseilanden"
         ]
     },
     "1F1F8-1F1E8": {
         "emoji": "🇸🇨",
         "tags": [
             "SC",
-            "vlag"
+            "vlag",
+            "vlag: seychellen"
         ]
     },
     "1F1F8-1F1E9": {
         "emoji": "🇸🇩",
         "tags": [
             "SD",
-            "vlag"
+            "vlag",
+            "vlag: soedan"
         ]
     },
     "1F1F8-1F1EA": {
         "emoji": "🇸🇪",
         "tags": [
             "SE",
-            "vlag"
+            "vlag",
+            "vlag: zweden"
         ]
     },
     "1F1F8-1F1EC": {
         "emoji": "🇸🇬",
         "tags": [
             "SG",
-            "vlag"
+            "vlag",
+            "vlag: singapore"
         ]
     },
     "1F1F8-1F1ED": {
         "emoji": "🇸🇭",
         "tags": [
             "SH",
-            "vlag"
+            "vlag",
+            "vlag: sint-helena"
         ]
     },
     "1F1F8-1F1EE": {
         "emoji": "🇸🇮",
         "tags": [
             "SI",
-            "vlag"
+            "vlag",
+            "vlag: slovenië"
         ]
     },
     "1F1F8-1F1EF": {
         "emoji": "🇸🇯",
         "tags": [
             "SJ",
-            "vlag"
+            "vlag",
+            "vlag: spitsbergen en jan mayen"
         ]
     },
     "1F1F8-1F1F0": {
         "emoji": "🇸🇰",
         "tags": [
             "SK",
-            "vlag"
+            "vlag",
+            "vlag: slowakije"
         ]
     },
     "1F1F8-1F1F1": {
         "emoji": "🇸🇱",
         "tags": [
             "SL",
-            "vlag"
+            "vlag",
+            "vlag: sierra leone"
         ]
     },
     "1F1F8-1F1F2": {
         "emoji": "🇸🇲",
         "tags": [
             "SM",
-            "vlag"
+            "vlag",
+            "vlag: san marino"
         ]
     },
     "1F1F8-1F1F3": {
         "emoji": "🇸🇳",
         "tags": [
             "SN",
-            "vlag"
+            "vlag",
+            "vlag: senegal"
         ]
     },
     "1F1F8-1F1F4": {
         "emoji": "🇸🇴",
         "tags": [
             "SO",
-            "vlag"
+            "vlag",
+            "vlag: somalië"
         ]
     },
     "1F1F8-1F1F7": {
         "emoji": "🇸🇷",
         "tags": [
             "SR",
-            "vlag"
+            "vlag",
+            "vlag: suriname"
         ]
     },
     "1F1F8-1F1F8": {
         "emoji": "🇸🇸",
         "tags": [
             "SS",
-            "vlag"
+            "vlag",
+            "vlag: zuid-soedan"
         ]
     },
     "1F1F8-1F1F9": {
         "emoji": "🇸🇹",
         "tags": [
             "ST",
-            "vlag"
+            "vlag",
+            "vlag: sao tomé en principe"
         ]
     },
     "1F1F8-1F1FB": {
         "emoji": "🇸🇻",
         "tags": [
             "SV",
-            "vlag"
+            "vlag",
+            "vlag: el salvador"
         ]
     },
     "1F1F8-1F1FD": {
         "emoji": "🇸🇽",
         "tags": [
             "SX",
-            "vlag"
+            "vlag",
+            "vlag: sint-maarten"
         ]
     },
     "1F1F8-1F1FE": {
         "emoji": "🇸🇾",
         "tags": [
             "SY",
-            "vlag"
+            "vlag",
+            "vlag: syrië"
         ]
     },
     "1F1F8-1F1FF": {
         "emoji": "🇸🇿",
         "tags": [
             "SZ",
-            "vlag"
+            "vlag",
+            "vlag: eswatini"
         ]
     },
     "1F1F9-1F1E6": {
         "emoji": "🇹🇦",
         "tags": [
             "TA",
-            "vlag"
+            "vlag",
+            "vlag: tristan da cunha"
         ]
     },
     "1F1F9-1F1E8": {
         "emoji": "🇹🇨",
         "tags": [
             "TC",
-            "vlag"
+            "vlag",
+            "vlag: turks- en caicoseilanden"
         ]
     },
     "1F1F9-1F1E9": {
         "emoji": "🇹🇩",
         "tags": [
             "TD",
-            "vlag"
+            "vlag",
+            "vlag: tsjaad"
         ]
     },
     "1F1F9-1F1EB": {
         "emoji": "🇹🇫",
         "tags": [
             "TF",
-            "vlag"
+            "vlag",
+            "vlag: franse gebieden in de zuidelijke indische oceaan"
         ]
     },
     "1F1F9-1F1EC": {
         "emoji": "🇹🇬",
         "tags": [
             "TG",
-            "vlag"
+            "vlag",
+            "vlag: togo"
         ]
     },
     "1F1F9-1F1ED": {
         "emoji": "🇹🇭",
         "tags": [
             "TH",
-            "vlag"
+            "vlag",
+            "vlag: thailand"
         ]
     },
     "1F1F9-1F1EF": {
         "emoji": "🇹🇯",
         "tags": [
             "TJ",
-            "vlag"
+            "vlag",
+            "vlag: tadzjikistan"
         ]
     },
     "1F1F9-1F1F0": {
         "emoji": "🇹🇰",
         "tags": [
             "TK",
-            "vlag"
+            "vlag",
+            "vlag: tokelau"
         ]
     },
     "1F1F9-1F1F1": {
         "emoji": "🇹🇱",
         "tags": [
             "TL",
-            "vlag"
+            "vlag",
+            "vlag: oost-timor"
         ]
     },
     "1F1F9-1F1F2": {
         "emoji": "🇹🇲",
         "tags": [
             "TM",
-            "vlag"
+            "vlag",
+            "vlag: turkmenistan"
         ]
     },
     "1F1F9-1F1F3": {
         "emoji": "🇹🇳",
         "tags": [
             "TN",
-            "vlag"
+            "vlag",
+            "vlag: tunesië"
         ]
     },
     "1F1F9-1F1F4": {
         "emoji": "🇹🇴",
         "tags": [
             "TO",
-            "vlag"
+            "vlag",
+            "vlag: tonga"
         ]
     },
     "1F1F9-1F1F7": {
         "emoji": "🇹🇷",
         "tags": [
             "TR",
-            "vlag"
+            "vlag",
+            "vlag: turkije"
         ]
     },
     "1F1F9-1F1F9": {
         "emoji": "🇹🇹",
         "tags": [
             "TT",
-            "vlag"
+            "vlag",
+            "vlag: trinidad en tobago"
         ]
     },
     "1F1F9-1F1FB": {
         "emoji": "🇹🇻",
         "tags": [
             "TV",
-            "vlag"
+            "vlag",
+            "vlag: tuvalu"
         ]
     },
     "1F1F9-1F1FC": {
         "emoji": "🇹🇼",
         "tags": [
             "TW",
-            "vlag"
+            "vlag",
+            "vlag: taiwan"
         ]
     },
     "1F1F9-1F1FF": {
         "emoji": "🇹🇿",
         "tags": [
             "TZ",
-            "vlag"
+            "vlag",
+            "vlag: tanzania"
         ]
     },
     "1F1FA-1F1E6": {
         "emoji": "🇺🇦",
         "tags": [
             "UA",
-            "vlag"
+            "vlag",
+            "vlag: oekraïne"
         ]
     },
     "1F1FA-1F1EC": {
         "emoji": "🇺🇬",
         "tags": [
             "UG",
-            "vlag"
+            "vlag",
+            "vlag: oeganda"
         ]
     },
     "1F1FA-1F1F2": {
         "emoji": "🇺🇲",
         "tags": [
             "UM",
-            "vlag"
+            "vlag",
+            "vlag: kleine afgelegen eilanden van de verenigde staten"
         ]
     },
     "1F1FA-1F1F3": {
         "emoji": "🇺🇳",
         "tags": [
             "UN",
-            "vlag"
+            "vlag",
+            "vlag: verenigde naties"
         ]
     },
     "1F1FA-1F1F8": {
         "emoji": "🇺🇸",
         "tags": [
             "US",
-            "vlag"
+            "vlag",
+            "vlag: verenigde staten"
         ]
     },
     "1F1FA-1F1FE": {
         "emoji": "🇺🇾",
         "tags": [
             "UY",
-            "vlag"
+            "vlag",
+            "vlag: uruguay"
         ]
     },
     "1F1FA-1F1FF": {
         "emoji": "🇺🇿",
         "tags": [
             "UZ",
-            "vlag"
+            "vlag",
+            "vlag: oezbekistan"
         ]
     },
     "1F1FB-1F1E6": {
         "emoji": "🇻🇦",
         "tags": [
             "VA",
-            "vlag"
+            "vlag",
+            "vlag: vaticaanstad"
         ]
     },
     "1F1FB-1F1E8": {
         "emoji": "🇻🇨",
         "tags": [
             "VC",
-            "vlag"
+            "vlag",
+            "vlag: saint vincent en de grenadines"
         ]
     },
     "1F1FB-1F1EA": {
         "emoji": "🇻🇪",
         "tags": [
             "VE",
-            "vlag"
+            "vlag",
+            "vlag: venezuela"
         ]
     },
     "1F1FB-1F1EC": {
         "emoji": "🇻🇬",
         "tags": [
             "VG",
-            "vlag"
+            "vlag",
+            "vlag: britse maagdeneilanden"
         ]
     },
     "1F1FB-1F1EE": {
         "emoji": "🇻🇮",
         "tags": [
             "VI",
-            "vlag"
+            "vlag",
+            "vlag: amerikaanse maagdeneilanden"
         ]
     },
     "1F1FB-1F1F3": {
         "emoji": "🇻🇳",
         "tags": [
             "VN",
-            "vlag"
+            "vlag",
+            "vlag: vietnam"
         ]
     },
     "1F1FB-1F1FA": {
         "emoji": "🇻🇺",
         "tags": [
             "VU",
-            "vlag"
+            "vlag",
+            "vlag: vanuatu"
         ]
     },
     "1F1FC-1F1EB": {
         "emoji": "🇼🇫",
         "tags": [
             "WF",
-            "vlag"
+            "vlag",
+            "vlag: wallis en futuna"
         ]
     },
     "1F1FC-1F1F8": {
         "emoji": "🇼🇸",
         "tags": [
             "WS",
-            "vlag"
+            "vlag",
+            "vlag: samoa"
         ]
     },
     "1F1FD-1F1F0": {
         "emoji": "🇽🇰",
         "tags": [
             "XK",
-            "vlag"
+            "vlag",
+            "vlag: kosovo"
         ]
     },
     "1F1FE-1F1EA": {
         "emoji": "🇾🇪",
         "tags": [
             "YE",
-            "vlag"
+            "vlag",
+            "vlag: jemen"
         ]
     },
     "1F1FE-1F1F9": {
         "emoji": "🇾🇹",
         "tags": [
             "YT",
-            "vlag"
+            "vlag",
+            "vlag: mayotte"
         ]
     },
     "1F1FF-1F1E6": {
         "emoji": "🇿🇦",
         "tags": [
             "ZA",
-            "vlag"
+            "vlag",
+            "vlag: zuid-afrika"
         ]
     },
     "1F1FF-1F1F2": {
         "emoji": "🇿🇲",
         "tags": [
             "ZM",
-            "vlag"
+            "vlag",
+            "vlag: zambia"
         ]
     },
     "1F1FF-1F1FC": {
         "emoji": "🇿🇼",
         "tags": [
             "ZW",
-            "vlag"
+            "vlag",
+            "vlag: zimbabwe"
         ]
     },
     "1F201": {
@@ -2093,10 +2347,12 @@
     "1F235": {
         "emoji": "🈵",
         "tags": [
+            "geen plaats’",
             "ideogram",
             "japans",
+            "japans teken voor ‘vol",
             "japans teken voor ‘vol, geen plaats’",
-            "‘vol, geen plaats’",
+            "‘vol",
             "満"
         ]
     },
@@ -2668,6 +2924,15 @@
             "zwam"
         ]
     },
+    "1F344-200D-1F7EB": {
+        "emoji": "🍄‍🟫",
+        "tags": [
+            "eten",
+            "groente",
+            "natuur",
+            "schimmel"
+        ]
+    },
     "1F345": {
         "emoji": "🍅",
         "tags": [
@@ -2712,6 +2977,14 @@
         "tags": [
             "citrus",
             "fruit"
+        ]
+    },
+    "1F34B-200D-1F7E9": {
+        "emoji": "🍋‍🟩",
+        "tags": [
+            "citrus",
+            "fruit",
+            "tropisch"
         ]
     },
     "1F34C": {
@@ -2852,7 +3125,6 @@
     "1F35F": {
         "emoji": "🍟",
         "tags": [
-            "frans",
             "frietjes"
         ]
     },
@@ -3265,7 +3537,6 @@
         "tags": [
             "bel",
             "feest",
-            "klokkenspel",
             "wind"
         ]
     },
@@ -3632,6 +3903,21 @@
             "vrouw"
         ]
     },
+    "1F3C3-200D-2640-FE0F-200D-27A1-FE0F": {
+        "emoji": "🏃‍♀️‍➡️",
+        "tags": [
+            "hardlopen",
+            "hardloper",
+            "marathon",
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "vrouw",
+            "vrouwelijkheidssymbool",
+            "windrichting"
+        ]
+    },
     "1F3C3-200D-2642-FE0F": {
         "emoji": "🏃‍♂️",
         "tags": [
@@ -3639,6 +3925,34 @@
             "man",
             "marathon",
             "rennen"
+        ]
+    },
+    "1F3C3-200D-2642-FE0F-200D-27A1-FE0F": {
+        "emoji": "🏃‍♂️‍➡️",
+        "tags": [
+            "hardlopen",
+            "hardloper",
+            "man",
+            "mannelijkheidssymbool",
+            "marathon",
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "windrichting"
+        ]
+    },
+    "1F3C3-200D-27A1-FE0F": {
+        "emoji": "🏃‍➡️",
+        "tags": [
+            "hardlopen",
+            "hardloper",
+            "marathon",
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "windrichting"
         ]
     },
     "1F3C4": {
@@ -4053,21 +4367,24 @@
         "emoji": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "tags": [
             "gbeng",
-            "vlag"
+            "vlag",
+            "vlag: engeland"
         ]
     },
     "1F3F4-E0067-E0062-E0073-E0063-E0074-E007F": {
         "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "tags": [
             "gbsct",
-            "vlag"
+            "vlag",
+            "vlag: schotland"
         ]
     },
     "1F3F4-E0067-E0062-E0077-E006C-E0073-E007F": {
         "emoji": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "tags": [
             "gbwls",
-            "vlag"
+            "vlag",
+            "vlag: wales"
         ]
     },
     "1F3F5": {
@@ -4422,14 +4739,23 @@
             "vogel"
         ]
     },
+    "1F426-200D-1F525": {
+        "emoji": "🐦‍🔥",
+        "tags": [
+            "fantasie",
+            "hergeboorte",
+            "reïncarnatie",
+            "vuurvogel"
+        ]
+    },
     "1F426-200D-2B1B": {
         "emoji": "🐦‍⬛",
         "tags": [
-            "bird",
-            "black",
-            "crow",
-            "raven",
-            "rook"
+            "kauw",
+            "kraai",
+            "raaf",
+            "vogel",
+            "zwart"
         ]
     },
     "1F427": {
@@ -4630,8 +4956,11 @@
     "1F441-FE0F-200D-1F5E8-FE0F": {
         "emoji": "👁️‍🗨️",
         "tags": [
+            "ballon",
             "getuige",
             "oog",
+            "oog in tekstballon",
+            "spraak",
             "spraakballon"
         ]
     },
@@ -5266,6 +5595,20 @@
             "toegankelijkheid"
         ]
     },
+    "1F468-200D-1F9AF-200D-27A1-FE0F": {
+        "emoji": "👨‍🦯‍➡️",
+        "tags": [
+            "blind",
+            "man",
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "taststok",
+            "toegankelijkheid",
+            "windrichting"
+        ]
+    },
     "1F468-200D-1F9B0": {
         "emoji": "👨‍🦰",
         "tags": [
@@ -5302,12 +5645,38 @@
             "toegankelijkheid"
         ]
     },
+    "1F468-200D-1F9BC-200D-27A1-FE0F": {
+        "emoji": "👨‍🦼‍➡️",
+        "tags": [
+            "elektrische rolstoel",
+            "man",
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "toegankelijkheid",
+            "windrichting"
+        ]
+    },
     "1F468-200D-1F9BD": {
         "emoji": "👨‍🦽",
         "tags": [
             "man",
             "rolstoel",
             "toegankelijkheid"
+        ]
+    },
+    "1F468-200D-1F9BD-200D-27A1-FE0F": {
+        "emoji": "👨‍🦽‍➡️",
+        "tags": [
+            "man",
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "rolstoel",
+            "toegankelijkheid",
+            "windrichting"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -5606,6 +5975,20 @@
             "vrouw"
         ]
     },
+    "1F469-200D-1F9AF-200D-27A1-FE0F": {
+        "emoji": "👩‍🦯‍➡️",
+        "tags": [
+            "blind",
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "taststok",
+            "toegankelijkheid",
+            "vrouw",
+            "windrichting"
+        ]
+    },
     "1F469-200D-1F9B0": {
         "emoji": "👩‍🦰",
         "tags": [
@@ -5642,12 +6025,38 @@
             "vrouw"
         ]
     },
+    "1F469-200D-1F9BC-200D-27A1-FE0F": {
+        "emoji": "👩‍🦼‍➡️",
+        "tags": [
+            "elektrische rolstoel",
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "toegankelijkheid",
+            "vrouw",
+            "windrichting"
+        ]
+    },
     "1F469-200D-1F9BD": {
         "emoji": "👩‍🦽",
         "tags": [
             "rolstoel",
             "toegankelijkheid",
             "vrouw"
+        ]
+    },
+    "1F469-200D-1F9BD-200D-27A1-FE0F": {
+        "emoji": "👩‍🦽‍➡️",
+        "tags": [
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "rolstoel",
+            "toegankelijkheid",
+            "vrouw",
+            "windrichting"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -5785,7 +6194,7 @@
     "1F46F-200D-2640-FE0F": {
         "emoji": "👯‍♀️",
         "tags": [
-            "danser",
+            "danseres",
             "feesten",
             "konijnenoor",
             "vrouwen"
@@ -5794,7 +6203,7 @@
     "1F46F-200D-2642-FE0F": {
         "emoji": "👯‍♂️",
         "tags": [
-            "dansen",
+            "danser",
             "feesten",
             "konijnenoor",
             "mannen"
@@ -8117,8 +8526,8 @@
             "gezicht",
             "hoofd",
             "silhouet",
-            "spreken",
-            "sprekend"
+            "spreek",
+            "spreken"
         ]
     },
     "1F5E8": {
@@ -8802,6 +9211,20 @@
         "tags": [
             "gezicht",
             "glimlach"
+        ]
+    },
+    "1F642-200D-2194-FE0F": {
+        "emoji": "🙂‍↔️",
+        "tags": [
+            "nee",
+            "schudden"
+        ]
+    },
+    "1F642-200D-2195-FE0F": {
+        "emoji": "🙂‍↕️",
+        "tags": [
+            "ja",
+            "knikken"
         ]
     },
     "1F643": {
@@ -9504,12 +9927,58 @@
             "wandelen"
         ]
     },
+    "1F6B6-200D-2640-FE0F-200D-27A1-FE0F": {
+        "emoji": "🚶‍♀️‍➡️",
+        "tags": [
+            "lopen",
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "voetganger",
+            "vrouw",
+            "vrouwelijkheidssymbool",
+            "wandelaar",
+            "wandelen",
+            "windrichting"
+        ]
+    },
     "1F6B6-200D-2642-FE0F": {
         "emoji": "🚶‍♂️",
         "tags": [
             "lopen",
             "man",
             "wandelen"
+        ]
+    },
+    "1F6B6-200D-2642-FE0F-200D-27A1-FE0F": {
+        "emoji": "🚶‍♂️‍➡️",
+        "tags": [
+            "lopen",
+            "man",
+            "mannelijkheidssymbool",
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "voetganger",
+            "wandelaar",
+            "wandelen",
+            "windrichting"
+        ]
+    },
+    "1F6B6-200D-27A1-FE0F": {
+        "emoji": "🚶‍➡️",
+        "tags": [
+            "lopen",
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "voetganger",
+            "wandelaar",
+            "wandelen",
+            "windrichting"
         ]
     },
     "1F6B7": {
@@ -10063,10 +10532,12 @@
     "1F917": {
         "emoji": "🤗",
         "tags": [
-            "blij gezicht met handen uitgestoken voor een knuffel",
+            "blij gezicht",
+            "blij gezicht met open handen",
             "gezicht",
             "knuffel",
-            "knuffelen"
+            "knuffelen",
+            "uitgestoken handen"
         ]
     },
     "1F918": {
@@ -10686,9 +11157,9 @@
         "tags": [
             "falafel",
             "gevuld",
-            "gyro",
+            "gyros",
             "kebab",
-            "pitabrood",
+            "pitabroodje",
             "voedsel"
         ]
     },
@@ -11619,11 +12090,54 @@
             "vrouw"
         ]
     },
+    "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
+        "emoji": "🧎‍♀️‍➡️",
+        "tags": [
+            "kniel",
+            "knielen",
+            "knielende persoon",
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "vrouw",
+            "vrouwelijkheidssymbool",
+            "windrichting"
+        ]
+    },
     "1F9CE-200D-2642-FE0F": {
         "emoji": "🧎‍♂️",
         "tags": [
             "knielend",
             "man"
+        ]
+    },
+    "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
+        "emoji": "🧎‍♂️‍➡️",
+        "tags": [
+            "kniel",
+            "knielen",
+            "knielende persoon",
+            "man",
+            "mannelijkheidssymbool",
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "windrichting"
+        ]
+    },
+    "1F9CE-200D-27A1-FE0F": {
+        "emoji": "🧎‍➡️",
+        "tags": [
+            "kniel",
+            "knielen",
+            "knielende persoon",
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "windrichting"
         ]
     },
     "1F9CF": {
@@ -11686,7 +12200,8 @@
     "1F9D1-200D-1F384": {
         "emoji": "🧑‍🎄",
         "tags": [
-            "kerstman, kerst"
+            "kerst",
+            "kerstman"
         ]
     },
     "1F9D1-200D-1F393": {
@@ -11789,6 +12304,21 @@
             "toegankelijkheid"
         ]
     },
+    "1F9D1-200D-1F9AF-200D-27A1-FE0F": {
+        "emoji": "🧑‍🦯‍➡️",
+        "tags": [
+            "blind",
+            "genderneutraal",
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "taststok",
+            "toegankelijkheid",
+            "volwassene",
+            "windrichting"
+        ]
+    },
     "1F9D1-200D-1F9B0": {
         "emoji": "🧑‍🦰",
         "tags": [
@@ -11828,11 +12358,69 @@
             "toegankelijkheid"
         ]
     },
+    "1F9D1-200D-1F9BC-200D-27A1-FE0F": {
+        "emoji": "🧑‍🦼‍➡️",
+        "tags": [
+            "elektrische rolstoel",
+            "genderneutraal",
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "toegankelijkheid",
+            "volwassene",
+            "windrichting"
+        ]
+    },
     "1F9D1-200D-1F9BD": {
         "emoji": "🧑‍🦽",
         "tags": [
             "rolstoel",
             "toegankelijkheid"
+        ]
+    },
+    "1F9D1-200D-1F9BD-200D-27A1-FE0F": {
+        "emoji": "🧑‍🦽‍➡️",
+        "tags": [
+            "genderneutraal",
+            "oost",
+            "pijl",
+            "pijl naar rechts",
+            "richting",
+            "rolstoel",
+            "toegankelijkheid",
+            "volwassene",
+            "windrichting"
+        ]
+    },
+    "1F9D1-200D-1F9D1-200D-1F9D2": {
+        "emoji": "🧑‍🧑‍🧒",
+        "tags": [
+            "gezin: volwassene",
+            "kind",
+            "volwassene"
+        ]
+    },
+    "1F9D1-200D-1F9D1-200D-1F9D2-200D-1F9D2": {
+        "emoji": "🧑‍🧑‍🧒‍🧒",
+        "tags": [
+            "gezin: volwassene",
+            "kind",
+            "volwassene"
+        ]
+    },
+    "1F9D1-200D-1F9D2": {
+        "emoji": "🧑‍🧒",
+        "tags": [
+            "gezin: volwassene",
+            "kind"
+        ]
+    },
+    "1F9D1-200D-1F9D2-200D-1F9D2": {
+        "emoji": "🧑‍🧒‍🧒",
+        "tags": [
+            "gezin: volwassene",
+            "kind"
         ]
     },
     "1F9D1-200D-2695-FE0F": {
@@ -11847,6 +12435,7 @@
     "1F9D1-200D-2696-FE0F": {
         "emoji": "🧑‍⚖️",
         "tags": [
+            "recht",
             "weegschaal"
         ]
     },
@@ -12886,9 +13475,7 @@
             "bloem",
             "boeddhisme",
             "hindoeïsme",
-            "india",
-            "puurheid",
-            "vietnam"
+            "puurheid"
         ]
     },
     "1FAB8": {
@@ -13120,10 +13707,10 @@
         "emoji": "🫛",
         "tags": [
             "bonen",
+            "dop",
             "edamame",
             "erwt",
             "groente",
-            "peul",
             "peulvrucht"
         ]
     },
@@ -13150,7 +13737,6 @@
         "emoji": "🫢",
         "tags": [
             "bang",
-            "gezicht met open ogen en hand over de mond",
             "ongeloof",
             "ontzag",
             "schaamte",
@@ -13433,14 +14019,14 @@
         ]
     },
     "23EB": {
-        "emoji": "⏫",
+        "emoji": "⏫️",
         "tags": [
             "dubbel",
             "pijl"
         ]
     },
     "23EC": {
-        "emoji": "⏬",
+        "emoji": "⏬️",
         "tags": [
             "dubbel",
             "omlaag",
@@ -13476,7 +14062,7 @@
         ]
     },
     "23F0": {
-        "emoji": "⏰",
+        "emoji": "⏰️",
         "tags": [
             "alarm",
             "klok"
@@ -14088,7 +14674,7 @@
         ]
     },
     "26CE": {
-        "emoji": "⛎",
+        "emoji": "⛎️",
         "tags": [
             "dierenriem",
             "drager",
@@ -14118,6 +14704,16 @@
         "emoji": "⛓️",
         "tags": [
             "ketting"
+        ]
+    },
+    "26D3-FE0F-200D-1F4A5": {
+        "emoji": "⛓️‍💥",
+        "tags": [
+            "boeien",
+            "breek",
+            "gebroken",
+            "ketting",
+            "vrijheid"
         ]
     },
     "26D4": {
@@ -14245,7 +14841,7 @@
         ]
     },
     "2705": {
-        "emoji": "✅",
+        "emoji": "✅️",
         "tags": [
             "knop",
             "teken",
@@ -14267,7 +14863,7 @@
         ]
     },
     "270A": {
-        "emoji": "✊",
+        "emoji": "✊️",
         "tags": [
             "gebald",
             "hand",
@@ -14276,7 +14872,7 @@
         ]
     },
     "270B": {
-        "emoji": "✋",
+        "emoji": "✋️",
         "tags": [
             "hand"
         ]
@@ -14345,7 +14941,7 @@
         ]
     },
     "2728": {
-        "emoji": "✨",
+        "emoji": "✨️",
         "tags": [
             "*",
             "glinsteren",
@@ -14381,7 +14977,7 @@
         ]
     },
     "274C": {
-        "emoji": "❌",
+        "emoji": "❌️",
         "tags": [
             "annuleren",
             "kruis",
@@ -14393,7 +14989,7 @@
         ]
     },
     "274E": {
-        "emoji": "❎",
+        "emoji": "❎️",
         "tags": [
             "teken",
             "vierkant",
@@ -14411,7 +15007,7 @@
         ]
     },
     "2754": {
-        "emoji": "❔",
+        "emoji": "❔️",
         "tags": [
             "?",
             "contour",
@@ -14421,7 +15017,7 @@
         ]
     },
     "2755": {
-        "emoji": "❕",
+        "emoji": "❕️",
         "tags": [
             "!",
             "contour",
@@ -14475,7 +15071,7 @@
         ]
     },
     "2795": {
-        "emoji": "➕",
+        "emoji": "➕️",
         "tags": [
             "+",
             "teken",
@@ -14483,7 +15079,7 @@
         ]
     },
     "2796": {
-        "emoji": "➖",
+        "emoji": "➖️",
         "tags": [
             "-",
             "teken",
@@ -14492,7 +15088,7 @@
         ]
     },
     "2797": {
-        "emoji": "➗",
+        "emoji": "➗️",
         "tags": [
             "teken",
             "wiskunde",
@@ -14509,14 +15105,14 @@
         ]
     },
     "27B0": {
-        "emoji": "➰",
+        "emoji": "➰️",
         "tags": [
             "gedraaid",
             "lus"
         ]
     },
     "27BF": {
-        "emoji": "➿",
+        "emoji": "➿️",
         "tags": [
             "dubbel",
             "krul",
