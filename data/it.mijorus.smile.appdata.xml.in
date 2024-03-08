@@ -3,6 +3,7 @@
     <id>it.mijorus.smile.desktop</id>
     <name>Smile</name>
     <summary>An emoji picker</summary>
+    <launchable type="desktop-id">it.mijorus.smile.desktop</launchable>
     <url type="donation">https://ko-fi.com/mijorus</url>
     <url type="homepage">https://mijorus.it/projects/smile</url>
     <url type="bugtracker">https://github.com/mijorus/smile/issues</url>
