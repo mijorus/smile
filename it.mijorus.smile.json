@@ -1,5 +1,5 @@
 {
-    "app-id": "it.mijorus.smile",
+    "id": "it.mijorus.smile",
     "runtime": "org.gnome.Platform",
     "runtime-version": "45",
     "sdk": "org.gnome.Sdk",
