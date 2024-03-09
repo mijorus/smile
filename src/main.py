@@ -1,4 +1,3 @@
-import manimpango
 import sys
 import gi
 
@@ -45,7 +44,6 @@ class Smile(Adw.Application):
     def do_startup(self):
         Adw.Application.do_startup(self)
 
-        manimpango.register_font(self.datadir + '/assets/NotoColorEmoji.ttf')
         css_provider = Gtk.CssProvider()
         css_provider.load_from_resource('/it/mijorus/smile/assets/style.css')
         Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
