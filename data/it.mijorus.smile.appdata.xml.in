@@ -14,6 +14,11 @@
         <p>Smile is a simple emoji picker for linux with custom tags support</p>
     </description>
     <releases>
+        <release type="stable" version="2.9.3" date="2024-03-18T00:00:00Z">
+            <description>
+                <p>- Use wl-clipboard backend for clipboard action under wayland</p>
+            </description>
+        </release>
         <release type="stable" version="2.9.1" date="2024-03-09T00:00:00Z">
             <description>
                 <p>- Fixed slowdowns caused by the TTF font</p>
