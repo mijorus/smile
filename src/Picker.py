@@ -20,6 +20,7 @@ import os
 import threading
 import subprocess
 import re
+import subprocess
 import gc
 from time import time_ns, sleep
 from typing import Optional
@@ -496,15 +497,9 @@ class Picker(Gtk.ApplicationWindow):
             self.minimize()
             if paste_on_exit: self.send_paste_signal()
         elif not self.settings.get_boolean('load-hidden-on-startup'):
-            # async to avoid blocking the main thread
-            def close_patch():
-                GLib.idle_add(lambda: self.hide())
-                sleep(0.5)
-                if paste_on_exit: self.send_paste_signal()
-
-                return GLib.idle_add(lambda: self.close())
-
-            threading.Thread(target=close_patch).start()
+            self.hide()
+            self.send_paste_signal()
+            self.close()
         else:
             self.set_visible(False)
             if paste_on_exit: self.send_paste_signal()
@@ -622,8 +617,11 @@ class Picker(Gtk.ApplicationWindow):
             increment_emoji_usage_counter(button)
 
         copied_text = ''.join([*self.selection, text])
-        contx = Gdk.ContentProvider.new_for_value(copied_text)
-        self.clipboard.set_content(contx)
+        if os.getenv('XDG_SESSION_TYPE') == 'wayland':
+            subprocess.run(['wl-copy', copied_text])
+        else:
+            contx = Gdk.ContentProvider.new_for_value(copied_text)
+            self.clipboard.set_content(contx)
 
         self.last_copied_text = copied_text
 
