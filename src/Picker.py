@@ -485,9 +485,6 @@ class Picker(Gtk.ApplicationWindow):
         self.selection = []
         self.set_empty_recent_tip(None)
 
-        for button in self.selected_buttons:
-            flowbox_child_deselect(button)
-
         for flowbox_child in self.emoji_list_widgets:
             flowbox_child_deselect(flowbox_child)
 
