@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the smile package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: smile\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-08 15:14+0100\n"
+"POT-Creation-Date: 2024-04-14 15:46+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,25 +17,25 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.py:111
+#: src/main.py:109
 msgid "translator_credits"
 msgstr ""
 
-#: src/Picker.py:90
+#: src/Picker.py:88
 msgid ""
 "Whoa, it's still empty! \n"
 "Your most used emojis will show up here\n"
 msgstr ""
 
-#: src/Picker.py:525
+#: src/Picker.py:510
 msgid "No skintones available"
 msgstr ""
 
-#: src/Picker.py:638
+#: src/Picker.py:626
 msgid "Copied!"
 msgstr ""
 
-#: src/Picker.py:639
+#: src/Picker.py:627
 msgid ""
 "I have copied the emoji to the clipboard. You can now paste it in any input "
 "field."
@@ -45,6 +45,7 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
+#. General group
 #: src/Settings.py:31
 msgid "General"
 msgstr ""
@@ -65,6 +66,7 @@ msgstr ""
 msgid "Minimize the window when selecting an emoji"
 msgstr ""
 
+#. Mouse group
 #: src/Settings.py:43
 msgid "Mouse behaviour"
 msgstr ""
@@ -79,6 +81,7 @@ msgid ""
 "press Enter to confirm and Esc to dismiss."
 msgstr ""
 
+#. Paste emoji group
 #: src/Settings.py:49
 msgid "Paste emojis automatically"
 msgstr ""
@@ -105,6 +108,7 @@ msgstr ""
 msgid "Install the extension to paste automatically on X11 and Wayland"
 msgstr ""
 
+#. Customization group
 #: src/Settings.py:72
 msgid "Customization"
 msgstr ""
@@ -125,6 +129,7 @@ msgstr ""
 msgid "Use both localized tags and English ones at the same time"
 msgstr ""
 
+#. Page 2
 #: src/Settings.py:94
 msgid "Custom tags"
 msgstr ""
@@ -252,7 +257,7 @@ msgstr ""
 msgid "Show the category on the left"
 msgstr ""
 
-#: src/ui/shortcuts.ui:142
+#: src/ui/shortcuts.ui:142 src/ShortcutsWindow.py:22
 msgid "Add an emoji to selection"
 msgstr ""
 
@@ -309,4 +314,8 @@ msgstr ""
 
 #: src/components/UpdateDialog.py:33
 msgid "Dismiss"
+msgstr ""
+
+#: src/ShortcutsWindow.py:23
+msgid "Copy the selected emoji and hide the window"
 msgstr ""
