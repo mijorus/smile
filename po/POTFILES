@@ -10,3 +10,4 @@ src/components/CustomTagEntry.py
 src/components/SkintoneSelector.py
 src/components/UpdateDialog.py
 src/components/UrlRow.py
+src/ShortcutsWindow.py
