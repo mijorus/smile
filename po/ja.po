@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Ryo Nakano <ryonakaknock3@gmail.com>, 2023.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2023, 2024.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: smile\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-17 16:09+0200\n"
-"PO-Revision-Date: 2023-10-21 18:57+0900\n"
+"POT-Creation-Date: 2024-04-14 15:46+0900\n"
+"PO-Revision-Date: 2024-04-14 15:49+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -16,31 +16,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.py:94
-msgid "Dismiss"
-msgstr "閉じる"
-
-#: src/main.py:132
+#: src/main.py:109
 msgid "translator_credits"
 msgstr "Ryo Nakano"
 
-#: src/Picker.py:550
-msgid "Recently used emojis"
-msgstr "最近使用した絵文字"
-
-#: src/Picker.py:552
+#: src/Picker.py:88
 msgid ""
 "Whoa, it's still empty! \n"
 "Your most used emojis will show up here\n"
 msgstr ""
-"おっと、ここにはまだ何もありません！\n"
+"おっと、ここにはまだ何もありません!\n"
 "最も使用する絵文字がここに表示されます\n"
 
-#: src/Picker.py:572
-msgid "Copied!"
-msgstr "コピーしました！"
+#: src/Picker.py:510
+msgid "No skintones available"
+msgstr "肌の色は選択できません"
 
-#: src/Picker.py:573
+#: src/Picker.py:626
+msgid "Copied!"
+msgstr "コピーしました!"
+
+#: src/Picker.py:627
 msgid ""
 "I have copied the emoji to the clipboard. You can now paste it in any input "
 "field."
@@ -51,6 +47,7 @@ msgstr ""
 msgid "Settings"
 msgstr "設定"
 
+#. General group
 #: src/Settings.py:31
 msgid "General"
 msgstr "一般"
@@ -71,6 +68,7 @@ msgstr "終了時に最小化"
 msgid "Minimize the window when selecting an emoji"
 msgstr "絵文字を選択すると、ウィンドウを最小化します"
 
+#. Mouse group
 #: src/Settings.py:43
 msgid "Mouse behaviour"
 msgstr "マウスの挙動"
@@ -87,9 +85,10 @@ msgstr ""
 "Shift + クリックの代わりに、クリックで複数の絵文字を選択します。Enter で確"
 "定、Esc で閉じます。"
 
+#. Paste emoji group
 #: src/Settings.py:49
 msgid "Paste emojis automatically"
-msgstr "絵文字を自動的に貼り付ける"
+msgstr "絵文字を自動的に貼り付け"
 
 #: src/Settings.py:55
 msgid "Status:"
@@ -116,6 +115,7 @@ msgstr "GNOME 拡張機能を入手"
 msgid "Install the extension to paste automatically on X11 and Wayland"
 msgstr "X11 と Wayland 上で自動的に貼り付けを行う拡張機能をインストールします"
 
+#. Customization group
 #: src/Settings.py:72
 msgid "Customization"
 msgstr "カスタマイズ"
@@ -136,6 +136,7 @@ msgstr "ローカライズされたタグと英語のタグを統合"
 msgid "Use both localized tags and English ones at the same time"
 msgstr "ローカライズされたタグと英語のタグの両方を同時に使います"
 
+#. Page 2
 #: src/Settings.py:94
 msgid "Custom tags"
 msgstr "カスタムタグ"
@@ -170,7 +171,7 @@ msgstr "削除"
 
 #: src/Settings.py:198
 msgid "There are no custom tags yet: create one with Alt + T"
-msgstr "カスタムタグがまだ登録されていません。Alt + T で作成します"
+msgstr "カスタムタグがまだありません。Alt + T で作成してください"
 
 #: src/Settings.py:211
 msgid "Default skintone"
@@ -236,6 +237,14 @@ msgstr "Smile について"
 msgid "Mouse"
 msgstr "マウス"
 
+#: src/ui/shortcuts.ui:48 src/ui/shortcuts.ui:164
+msgid "Open the skintone selector (if available)"
+msgstr "肌の色ピッカーを開く (利用可能な場合)"
+
+#: src/ui/shortcuts.ui:68 src/ui/shortcuts.ui:171
+msgid "Add a custom tag"
+msgstr "カスタムタグを追加する"
+
 #: src/ui/shortcuts.ui:109
 msgid "Keyboard"
 msgstr "キーボード"
@@ -253,19 +262,19 @@ msgstr "最初の絵文字をコピーしてウィンドウを非表示にする
 
 #: src/ui/shortcuts.ui:128
 msgid "Show the category on the right"
-msgstr "右のカテゴリーを表示"
+msgstr "右のカテゴリーを表示する"
 
 #: src/ui/shortcuts.ui:135
 msgid "Show the category on the left"
-msgstr "左のカテゴリーを表示"
+msgstr "左のカテゴリーを表示する"
 
-#: src/ui/shortcuts.ui:142
+#: src/ui/shortcuts.ui:142 src/ShortcutsWindow.py:22
 msgid "Add an emoji to selection"
-msgstr "絵文字を選択対象に追加"
+msgstr "絵文字を選択対象に追加する"
 
 #: src/ui/shortcuts.ui:150
 msgid "Remove the last emoji from the selection"
-msgstr "最後の絵文字を選択対象から削除"
+msgstr "最後の絵文字を選択対象から削除する"
 
 #: src/ui/shortcuts.ui:157
 msgid "Copy the selection and hide the window, without the highlighted emoji"
@@ -273,10 +282,55 @@ msgstr ""
 "選択対象をコピーしてウィンドウを非表示にする　(ハイライトされた絵文字は含ま"
 "ない)"
 
-#: src/ui/shortcuts.ui:164
-msgid "Open the skintone selector (if available)"
-msgstr "肌の色ピッカーを開く (利用可能な場合)"
+#: src/ui/importexport-customtags.ui:7
+msgid "Export and import custom tags"
+msgstr "カスタムタグをエクスポート/インポート"
 
-#: src/ui/shortcuts.ui:171
-msgid "Add a custom tag"
-msgstr "カスタムタグを追加"
+#: src/ui/importexport-customtags.ui:8
+msgid ""
+"Use the buttons below to create or restore custom tags from another machine"
+msgstr ""
+"カスタムタグを作成したり別のマシンから復元したりするには、以下のボタンを使用"
+"してください"
+
+#: src/ui/importexport-customtags.ui:23
+msgid "Export to file"
+msgstr "ファイルにエクスポート"
+
+#: src/ui/importexport-customtags.ui:29
+msgid "Import from file"
+msgstr "ファイルからインポート"
+
+#: src/components/SkintoneSelector.py:89
+msgid "<small>Press Enter to select or ESC to close</small>"
+msgstr "<small>Enter で選択、ESC で閉じる</small>"
+
+#: src/components/CustomTagEntry.py:42
+#, python-brace-format
+msgid "<b>{emoji} Edit custom tags</b>"
+msgstr "<b>{emoji} カスタムタグを編集</b>"
+
+#: src/components/CustomTagEntry.py:51
+msgid "List of custom tags, separated  by comma"
+msgstr "カスタムタグのリスト (カンマ区切り)"
+
+#: src/components/CustomTagEntry.py:57
+#, python-brace-format
+msgid "<small><b>Default tags</b>: {default_tags}</small>"
+msgstr "<small><b>デフォルトのタグ</b>: {default_tags}</small>"
+
+#: src/components/CustomTagEntry.py:65
+msgid "<small>Press Enter to save or ESC to dismiss</small>"
+msgstr "<small>Enter で保存、ESC でキャンセル</small>"
+
+#: src/components/UpdateDialog.py:29
+msgid "New features!"
+msgstr "新機能"
+
+#: src/components/UpdateDialog.py:33
+msgid "Dismiss"
+msgstr "閉じる"
+
+#: src/ShortcutsWindow.py:23
+msgid "Copy the selected emoji and hide the window"
+msgstr "選択中の絵文字をコピーしてウィンドウを非表示にする"
