@@ -239,10 +239,11 @@ class Picker(Gtk.ApplicationWindow):
         if self.query:
             use_localised_tags = self.settings.get_boolean('use-localized-tags')
 
-        # for v in values.fetchall():
-        #     print(v['hexcode'])
+        self.emoji_list_db_conn.row_factory = sqlite3.Row
+
+        values = self.emoji_list_db_conn.execute('SELECT * FROM emojis')
         
-        for emoji in emojis.values():
+        for emoji in values.fetchall():
             is_recent = (emoji['hexcode'] in self.history)
 
             if self.query:
@@ -280,7 +281,6 @@ class Picker(Gtk.ApplicationWindow):
                     continue
 
             emoji_button = create_emoji_button(emoji, click_handler=self.handle_emoji_button_click)
-            continue
             self.emoji_button_update_css_classes(emoji_button)
             self.update_emoji_button_skintone(emoji_button, skintone_modifier)
 
