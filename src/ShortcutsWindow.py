@@ -4,7 +4,6 @@ import time
 import os
 import csv
 import re
-from .assets.emoji_list import emojis
 
 gi.require_version('Gtk', '4.0')
 

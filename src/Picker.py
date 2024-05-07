@@ -24,6 +24,7 @@ import subprocess
 import gc
 from time import time_ns, sleep
 from typing import Optional
+import sqlite3
 
 from .ShortcutsWindow import ShortcutsWindow
 from .components.CustomTagEntry import CustomTagEntry
@@ -46,11 +47,12 @@ class Picker(Gtk.ApplicationWindow):
         super().__init__(title="Smile", resizable=True, *args, **kwargs)
 
         EMOJI_LIST_MIN_HEIGHT = 320
-
         self.set_default_size(1, 1)
 
-        self.last_copied_text = None
         self.data_dir = Gio.Application.get_default().datadir
+        self.emoji_list_db_conn = sqlite3.connect(os.path.join(self.data_dir, 'assets', 'emoji_list.db'))
+
+        self.last_copied_text = None
         self.EMOJI_GRID_COL_N = 5
         self.emoji_grid_first_row = []
         self.selected_category_index = 0
@@ -237,6 +239,9 @@ class Picker(Gtk.ApplicationWindow):
         if self.query:
             use_localised_tags = self.settings.get_boolean('use-localized-tags')
 
+        # for v in values.fetchall():
+        #     print(v['hexcode'])
+        
         for emoji in emojis.values():
             is_recent = (emoji['hexcode'] in self.history)
 
@@ -275,6 +280,7 @@ class Picker(Gtk.ApplicationWindow):
                     continue
 
             emoji_button = create_emoji_button(emoji, click_handler=self.handle_emoji_button_click)
+            continue
             self.emoji_button_update_css_classes(emoji_button)
             self.update_emoji_button_skintone(emoji_button, skintone_modifier)
 
@@ -287,7 +293,7 @@ class Picker(Gtk.ApplicationWindow):
             self.emoji_list_widgets.append(flowbox_child)
 
         self.emoji_list.set_sort_func(self.sort_emoji_list, None)
-        # print('Emoji list creation took ' + str((time_ns() - start) / 1000000) + 'ms')
+        print('Emoji list creation took ' + str((time_ns() - start) / 1000000) + 'ms')
 
     # Handle events
     def handle_emoji_button_click(self, widget: Gtk.Button):

@@ -1,6 +1,7 @@
 import json
 import requests
 import os
+import sqlite3
 from io import StringIO
 
 problematic = [
@@ -70,7 +71,8 @@ def append_skintone(skintone: dict, base_hex: str):
 def main():
     _path = os.path.dirname(os.path.abspath(__file__))
 
-    destdir = os.path.dirname(os.path.abspath(__file__)) + '/../../src/assets'
+    destdir = _path + '/../../src/assets'
+    datadir = _path + '/../../data'
 
     categ = set()
 
@@ -149,6 +151,46 @@ def main():
     output_file.write(output_dict.getvalue())
 
     print(f"Generated {destdir}/emoji_list.py")
+
+
+    # Create sqlite db
+    sql_file = f'{datadir}/assets/emoji_list.db'
+    sql_conn = sqlite3.connect(sql_file)
+
+    # Create a cursor object
+    cursor = sql_conn.cursor()
+
+    # Drop the table if it already exists (optional)
+    cursor.execute("DROP TABLE IF EXISTS emojis")
+
+    # Create the emoji table
+    cursor.execute("""
+        CREATE TABLE emojis (
+        "key" TEXT,
+        "emoji" TEXT,
+        "hexcode" TEXT,
+        "group" TEXT,
+        "subgroups" TEXT,
+        "tags" TEXT,
+        "skintone" TEXT,
+        "skintone_base_emoji" TEXT,
+        "skintone_base_hexcode" TEXT,
+        "unicode" INTEGER,
+        "order" INTEGER)
+    """);
+
+    # Insert data into the table (modify for multiple entries in your data)
+    for key, value in output.items():
+        cursor.execute("""
+        INSERT INTO emojis (key, emoji, hexcode, "group", subgroups, tags, skintone, skintone_base_emoji, skintone_base_hexcode, unicode, "order")
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, (key, value['emoji'], value['hexcode'], value['group'], value['subgroups'], value['tags'], value['skintone'], value['skintone_base_emoji'], value['skintone_base_hexcode'], value['unicode'], value['order']))
+
+    # Save changes and close the connection
+    sql_conn.commit()
+    sql_conn.close()
+
+    print("SQLITEDatabase and table created successfully!")
 
 if __name__ == '__main__':
     main()
