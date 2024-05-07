@@ -18,5 +18,5 @@ class UriRow(Adw.ActionRow):
 
         self.add_suffix(row_btn)
     
-    def on_web_browser_open_btn_clicked(self):
+    def on_web_browser_open_btn_clicked(self, *args):
         Gtk.UriLauncher.new(self.website).launch()
