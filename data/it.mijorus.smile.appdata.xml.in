@@ -10,6 +10,10 @@
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0-or-later</project_license>
     <developer_name>Lorenzo Paderi</developer_name>
+    <branding>
+      <color type="primary" scheme_preference="light">#fffce2</color>
+      <color type="primary" scheme_preference="dark">#28210a</color>
+    </branding>
     <description>
         <p>Smile is a simple emoji picker for linux with custom tags support</p>
     </description>
