@@ -4,20 +4,6 @@
     "build-commands": [],
     "modules": [
         {
-            "name": "python3-manimpango",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"manimpango==0.5.0\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/48/5b/d1249c3d90324a1d4dce4711e507c8ec87addca61d1304ffa55513783ba3/ManimPango-0.5.0.tar.gz",
-                    "sha256": "299913bbccb0f15954b64401cf9df24607e1a01edda589ea77de1ed4cc2bc284"
-                }
-            ]
-        },
-        {
             "name": "python3-dbus-python",
             "buildsystem": "simple",
             "build-commands": [
