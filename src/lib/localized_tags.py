@@ -60,6 +60,11 @@ def get_countries_list() -> dict:
                 'name': 'Japan',
                 'language': 'Japanese',
             },
+            'ko': {
+                'flag': '🇰🇷',
+                'name': 'Korea',
+                'language': 'Korean',
+            },
             'nb': {
                 'flag': '🇳🇴',
                 'name': 'Norway',

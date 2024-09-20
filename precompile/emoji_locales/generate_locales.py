@@ -58,6 +58,11 @@ def main():
                 'name': 'Japan',
                 'language': 'Japanese',
             },
+            'ko': {
+                'flag': '🇰🇷',
+                'name': 'Korea',
+                'language': 'Korean',
+            },
             'nb': {
                 'flag': '🇳🇴',
                 'name': 'Norway',
