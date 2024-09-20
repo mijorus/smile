@@ -3970,17 +3970,12 @@
     "1F3C3-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♀️‍➡️",
         "tags": [
+            "fut",
             "futás",
-            "futó",
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
+            "futó nő",
             "maraton",
-            "nem",
-            "nyíl",
-            "női",
-            "női nem jelképe"
+            "nő",
+            "verseny"
         ]
     },
     "1F3C3-200D-2642-FE0F": {
@@ -3996,17 +3991,12 @@
     "1F3C3-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♂️‍➡️",
         "tags": [
+            "fut",
             "futás",
-            "futó",
+            "futó férfi",
             "férfi",
-            "férfi nem jelképe",
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
             "maraton",
-            "nem",
-            "nyíl"
+            "verseny"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
@@ -4014,12 +4004,7 @@
         "tags": [
             "futás",
             "futó",
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
-            "maraton",
-            "nyíl"
+            "maraton"
         ]
     },
     "1F3C4": {
@@ -5724,13 +5709,8 @@
         "emoji": "👨‍🦯‍➡️",
         "tags": [
             "akadálymentesség",
-            "fehér bot",
             "férfi",
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
-            "nyíl",
+            "férfi fehér bottal",
             "vak"
         ]
     },
@@ -5775,12 +5755,8 @@
         "tags": [
             "akadálymentesség",
             "férfi",
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
-            "motoros kerekesszék",
-            "nyíl"
+            "férfi motoros kerekesszékben",
+            "kerekesszék"
         ]
     },
     "1F468-200D-1F9BD": {
@@ -5796,12 +5772,8 @@
         "tags": [
             "akadálymentesség",
             "férfi",
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
-            "kézi hajtású kerekesszék",
-            "nyíl"
+            "férfi kézi hajtású kerekesszékben",
+            "kerekesszék"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -6120,13 +6092,8 @@
         "emoji": "👩‍🦯‍➡️",
         "tags": [
             "akadálymentesség",
-            "fehér bot",
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
-            "nyíl",
             "nő",
+            "nő fehér bottal",
             "vak"
         ]
     },
@@ -6170,13 +6137,9 @@
         "emoji": "👩‍🦼‍➡️",
         "tags": [
             "akadálymentesség",
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
-            "motoros kerekesszék",
-            "nyíl",
-            "nő"
+            "kerekesszék",
+            "nő",
+            "nő motoros kerekesszékben"
         ]
     },
     "1F469-200D-1F9BD": {
@@ -6191,13 +6154,9 @@
         "emoji": "👩‍🦽‍➡️",
         "tags": [
             "akadálymentesség",
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
-            "kézi hajtású kerekesszék",
-            "nyíl",
-            "nő"
+            "kerekesszék",
+            "nő",
+            "nő kézi hajtású kerekesszékben"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -10110,17 +10069,10 @@
     "1F6B6-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♀️‍➡️",
         "tags": [
-            "gyaloglás",
-            "gyalogos",
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
-            "nem",
-            "nyíl",
-            "női",
-            "női nem jelképe",
-            "séta"
+            "nő",
+            "séta",
+            "sétáló",
+            "túra"
         ]
     },
     "1F6B6-200D-2642-FE0F": {
@@ -10136,16 +10088,9 @@
         "emoji": "🚶‍♂️‍➡️",
         "tags": [
             "férfi",
-            "férfi nem jelképe",
-            "gyaloglás",
-            "gyalogos",
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
-            "nem",
-            "nyíl",
-            "séta"
+            "séta",
+            "sétáló",
+            "túra"
         ]
     },
     "1F6B6-200D-27A1-FE0F": {
@@ -10153,11 +10098,6 @@
         "tags": [
             "gyaloglás",
             "gyalogos",
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
-            "nyíl",
             "séta"
         ]
     },
@@ -12271,17 +12211,9 @@
     "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
-            "nem",
-            "nyíl",
-            "női",
-            "női nem jelképe",
+            "nő",
             "térdel",
-            "térdelő",
-            "térdelő ember"
+            "térdelő nő"
         ]
     },
     "1F9CE-200D-2642-FE0F": {
@@ -12295,26 +12227,13 @@
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
             "férfi",
-            "férfi nem jelképe",
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
-            "nem",
-            "nyíl",
             "térdel",
-            "térdelő",
-            "térdelő ember"
+            "térdelő férfi"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
         "emoji": "🧎‍➡️",
         "tags": [
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
-            "nyíl",
             "térdel",
             "térdelő",
             "térdelő ember"
@@ -12494,13 +12413,7 @@
         "emoji": "🧑‍🦯‍➡️",
         "tags": [
             "akadálymentesség",
-            "fehér bot",
-            "felnőtt",
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
-            "nyíl",
+            "ember fehér bottal",
             "vak"
         ]
     },
@@ -12543,13 +12456,8 @@
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
             "akadálymentesség",
-            "felnőtt",
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
-            "motoros kerekesszék",
-            "nyíl"
+            "ember motoros kerekesszékben",
+            "kerekesszék"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -12563,13 +12471,8 @@
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
             "akadálymentesség",
-            "felnőtt",
-            "irány",
-            "jobbra",
-            "jobbra mutató nyíl",
-            "kelet",
-            "kézi hajtású kerekesszék",
-            "nyíl"
+            "kerekesszék",
+            "kerekesszékes ember"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {

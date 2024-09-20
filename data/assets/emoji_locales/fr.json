@@ -3687,17 +3687,11 @@
     "1F3C3-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♀️‍➡️",
         "tags": [
-            "coureur",
             "course à pied",
-            "direction",
-            "est",
             "femme",
-            "flèche",
-            "flèche droite",
+            "femme qui court",
             "jogging",
-            "marathon",
-            "personne qui court",
-            "symbole de la femme"
+            "marathon"
         ]
     },
     "1F3C3-200D-2642-FE0F": {
@@ -3712,17 +3706,11 @@
     "1F3C3-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♂️‍➡️",
         "tags": [
-            "coureur",
             "course à pied",
-            "direction",
-            "est",
-            "flèche",
-            "flèche droite",
             "homme",
+            "homme qui court",
             "jogging",
-            "marathon",
-            "personne qui court",
-            "symbole de l’homme"
+            "marathon"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
@@ -3730,10 +3718,6 @@
         "tags": [
             "coureur",
             "course à pied",
-            "direction",
-            "est",
-            "flèche",
-            "flèche droite",
             "jogging",
             "marathon",
             "personne qui court"
@@ -5294,13 +5278,9 @@
         "tags": [
             "accessibilité",
             "aveugle",
-            "canne blanche",
-            "direction",
             "déficient visuel",
-            "est",
-            "flèche",
-            "flèche droite",
             "homme",
+            "homme avec canne blanche",
             "malvoyant"
         ]
     },
@@ -5344,13 +5324,9 @@
         "emoji": "👨‍🦼‍➡️",
         "tags": [
             "accessibilité",
-            "direction",
-            "est",
-            "fauteuil motorisé",
             "fauteuil roulant",
-            "flèche",
-            "flèche droite",
-            "homme"
+            "homme",
+            "homme en fauteuil motorisé"
         ]
     },
     "1F468-200D-1F9BD": {
@@ -5365,12 +5341,9 @@
         "emoji": "👨‍🦽‍➡️",
         "tags": [
             "accessibilité",
-            "direction",
-            "est",
-            "fauteuil roulant manuel",
-            "flèche",
-            "flèche droite",
-            "homme"
+            "fauteuil roulant",
+            "homme",
+            "homme en fauteuil roulant manuel"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -5666,14 +5639,10 @@
         "tags": [
             "accessibilité",
             "aveugle",
-            "canne blanche",
-            "direction",
-            "déficient visuel",
-            "est",
+            "déficiente visuelle",
             "femme",
-            "flèche",
-            "flèche droite",
-            "malvoyant"
+            "femme avec canne blanche",
+            "malvoyante"
         ]
     },
     "1F469-200D-1F9B0": {
@@ -5716,13 +5685,9 @@
         "emoji": "👩‍🦼‍➡️",
         "tags": [
             "accessibilité",
-            "direction",
-            "est",
-            "fauteuil motorisé",
             "fauteuil roulant",
             "femme",
-            "flèche",
-            "flèche droite"
+            "femme en fauteuil motorisé"
         ]
     },
     "1F469-200D-1F9BD": {
@@ -5737,12 +5702,9 @@
         "emoji": "👩‍🦽‍➡️",
         "tags": [
             "accessibilité",
-            "direction",
-            "est",
-            "fauteuil roulant manuel",
+            "fauteuil roulant",
             "femme",
-            "flèche",
-            "flèche droite"
+            "femme en fauteuil roulant manuel"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -9143,15 +9105,10 @@
     "1F6B6-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♀️‍➡️",
         "tags": [
-            "direction",
-            "est",
             "femme",
-            "flèche",
-            "flèche droite",
+            "femme qui marche",
             "marche",
-            "personne qui marche",
-            "piéton",
-            "symbole de la femme"
+            "piétonne"
         ]
     },
     "1F6B6-200D-2642-FE0F": {
@@ -9165,24 +9122,15 @@
     "1F6B6-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♂️‍➡️",
         "tags": [
-            "direction",
-            "est",
-            "flèche",
-            "flèche droite",
             "homme",
+            "homme qui marche",
             "marche",
-            "personne qui marche",
-            "piéton",
-            "symbole de l’homme"
+            "piéton"
         ]
     },
     "1F6B6-200D-27A1-FE0F": {
         "emoji": "🚶‍➡️",
         "tags": [
-            "direction",
-            "est",
-            "flèche",
-            "flèche droite",
             "marche",
             "personne qui marche",
             "piéton"
@@ -11350,13 +11298,8 @@
     "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
-            "direction",
-            "est",
             "femme",
-            "flèche",
-            "flèche droite",
-            "personne à genoux",
-            "symbole de la femme",
+            "femme à genoux",
             "à genoux"
         ]
     },
@@ -11370,23 +11313,14 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
-            "direction",
-            "est",
-            "flèche",
-            "flèche droite",
             "homme",
-            "personne à genoux",
-            "symbole de l’homme",
+            "homme à genoux",
             "à genoux"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
         "emoji": "🧎‍➡️",
         "tags": [
-            "direction",
-            "est",
-            "flèche",
-            "flèche droite",
             "personne à genoux",
             "à genoux"
         ]
@@ -11581,16 +11515,8 @@
         "emoji": "🧑‍🦯‍➡️",
         "tags": [
             "accessibilité",
-            "adulte",
             "aveugle",
-            "canne blanche",
-            "direction",
-            "déficient visuel",
-            "est",
-            "flèche",
-            "flèche droite",
-            "genre neutre",
-            "malvoyant"
+            "personne avec une canne blanche"
         ]
     },
     "1F9D1-200D-1F9B0": {
@@ -11636,14 +11562,8 @@
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
             "accessibilité",
-            "adulte",
-            "direction",
-            "est",
-            "fauteuil motorisé",
             "fauteuil roulant",
-            "flèche",
-            "flèche droite",
-            "genre neutre"
+            "personne en fauteuil motorisé"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -11657,13 +11577,8 @@
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
             "accessibilité",
-            "adulte",
-            "direction",
-            "est",
-            "fauteuil roulant manuel",
-            "flèche",
-            "flèche droite",
-            "genre neutre"
+            "fauteuil roulant",
+            "personne en fauteuil roulant manuel"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {

@@ -3891,19 +3891,10 @@
     "1F3C3-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♀️‍➡️",
         "tags": [
+            "correre",
             "corsa",
-            "direzione",
             "donna",
-            "est",
-            "femmina",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
-            "maratona",
-            "persona che corre",
-            "punto cardinale",
-            "simbolo di femmina",
-            "simbolo genere femminile",
+            "donna che corre",
             "sport"
         ]
     },
@@ -3919,34 +3910,19 @@
     "1F3C3-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♂️‍➡️",
         "tags": [
+            "correre",
             "corsa",
-            "direzione",
-            "est",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
-            "maratona",
-            "maschio",
-            "persona che corre",
-            "punto cardinale",
-            "simbolo di maschio",
-            "simbolo genere maschile",
             "sport",
-            "uomo"
+            "uomo",
+            "uomo che corre"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
         "emoji": "🏃‍➡️",
         "tags": [
             "corsa",
-            "direzione",
-            "est",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
             "maratona",
             "persona che corre",
-            "punto cardinale",
             "sport"
         ]
     },
@@ -5643,18 +5619,12 @@
         "emoji": "👨‍🦯‍➡️",
         "tags": [
             "accessibilità",
-            "bastone bianco",
-            "bastone per ipovedenti",
-            "bastone per non vedenti",
-            "direzione",
-            "est",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
-            "maschio",
-            "persone",
-            "punto cardinale",
-            "uomo"
+            "ipovedente",
+            "ipovedenti",
+            "non vedente",
+            "non vedenti",
+            "uomo",
+            "uomo con bastone bianco di orientamento"
         ]
     },
     "1F468-200D-1F9B0": {
@@ -5705,17 +5675,9 @@
         "emoji": "👨‍🦼‍➡️",
         "tags": [
             "accessibilità",
-            "carrozzina motorizzata",
-            "direzione",
-            "est",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
-            "maschio",
-            "persone",
-            "punto cardinale",
-            "sedia a rotelle motorizzata",
-            "uomo"
+            "uomo in carrozzina",
+            "uomo in sedia a rotelle",
+            "uomo su sedia a rotelle motorizzata"
         ]
     },
     "1F468-200D-1F9BD": {
@@ -5730,17 +5692,9 @@
         "emoji": "👨‍🦽‍➡️",
         "tags": [
             "accessibilità",
-            "carrozzina manuale",
-            "direzione",
-            "est",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
-            "maschio",
-            "persone",
-            "punto cardinale",
-            "sedia a rotelle manuale",
-            "uomo"
+            "uomo in carrozzina",
+            "uomo in sedia a rotelle",
+            "uomo su sedia a rotelle manuale"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -6052,18 +6006,12 @@
         "emoji": "👩‍🦯‍➡️",
         "tags": [
             "accessibilità",
-            "bastone bianco",
-            "bastone per ipovedenti",
-            "bastone per non vedenti",
-            "direzione",
             "donna",
-            "est",
-            "femmina",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
-            "persone",
-            "punto cardinale"
+            "donna con bastone bianco di orientamento",
+            "ipovedente",
+            "ipovedenti",
+            "non vedente",
+            "non vedenti"
         ]
     },
     "1F469-200D-1F9B0": {
@@ -6114,17 +6062,9 @@
         "emoji": "👩‍🦼‍➡️",
         "tags": [
             "accessibilità",
-            "carrozzina motorizzata",
-            "direzione",
-            "donna",
-            "est",
-            "femmina",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
-            "persone",
-            "punto cardinale",
-            "sedia a rotelle motorizzata"
+            "donna in carrozzina",
+            "donna in sedia a rotelle",
+            "donna su sedia a rotelle motorizzata"
         ]
     },
     "1F469-200D-1F9BD": {
@@ -6139,17 +6079,9 @@
         "emoji": "👩‍🦽‍➡️",
         "tags": [
             "accessibilità",
-            "carrozzina manuale",
-            "direzione",
-            "donna",
-            "est",
-            "femmina",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
-            "persone",
-            "punto cardinale",
-            "sedia a rotelle manuale"
+            "donna in carrozzina",
+            "donna in sedia a rotelle",
+            "donna su sedia a rotelle manuale"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -9997,19 +9929,10 @@
         "emoji": "🚶‍♀️‍➡️",
         "tags": [
             "camminare",
-            "direzione",
             "donna",
-            "est",
-            "femmina",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
+            "donna che cammina",
             "passeggiata",
-            "pedone",
-            "punto cardinale",
-            "simbolo di femmina",
-            "simbolo genere femminile",
-            "uomo"
+            "pedone"
         ]
     },
     "1F6B6-200D-2642-FE0F": {
@@ -10025,32 +9948,18 @@
         "emoji": "🚶‍♂️‍➡️",
         "tags": [
             "camminare",
-            "direzione",
-            "est",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
-            "maschio",
             "passeggiata",
             "pedone",
-            "punto cardinale",
-            "simbolo di maschio",
-            "simbolo genere maschile",
-            "uomo"
+            "uomo",
+            "uomo che cammina"
         ]
     },
     "1F6B6-200D-27A1-FE0F": {
         "emoji": "🚶‍➡️",
         "tags": [
             "camminare",
-            "direzione",
-            "est",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
             "passeggiata",
             "pedone",
-            "punto cardinale",
             "uomo"
         ]
     },
@@ -12215,19 +12124,10 @@
     "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
-            "direzione",
             "donna",
-            "est",
-            "femmina",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
+            "donna inginocchiata",
             "in ginocchio",
-            "inginocchiarsi",
-            "persona inginocchiata",
-            "punto cardinale",
-            "simbolo di femmina",
-            "simbolo genere femminile"
+            "inginocchiarsi"
         ]
     },
     "1F9CE-200D-2642-FE0F": {
@@ -12241,33 +12141,18 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
-            "direzione",
-            "est",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
             "in ginocchio",
             "inginocchiarsi",
-            "maschio",
-            "persona inginocchiata",
-            "punto cardinale",
-            "simbolo di maschio",
-            "simbolo genere maschile",
-            "uomo"
+            "uomo",
+            "uomo inginocchiato"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
         "emoji": "🧎‍➡️",
         "tags": [
-            "direzione",
-            "est",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
             "in ginocchio",
             "inginocchiarsi",
-            "persona inginocchiata",
-            "punto cardinale"
+            "persona inginocchiata"
         ]
     },
     "1F9CF": {
@@ -12450,17 +12335,8 @@
         "emoji": "🧑‍🦯‍➡️",
         "tags": [
             "accessibilità",
-            "adulto",
-            "bastone bianco",
-            "bastone per ipovedenti",
-            "bastone per non vedenti",
-            "direzione",
-            "est",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
-            "persona",
-            "punto cardinale"
+            "cecità",
+            "persona con bastone di orientamento"
         ]
     },
     "1F9D1-200D-1F9B0": {
@@ -12506,16 +12382,8 @@
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
             "accessibilità",
-            "adulto",
-            "carrozzina motorizzata",
-            "direzione",
-            "est",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
-            "persona",
-            "punto cardinale",
-            "sedia a rotelle motorizzata"
+            "persona su sedia a rotelle motorizzata",
+            "sedia a rotelle"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -12529,16 +12397,8 @@
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
             "accessibilità",
-            "adulto",
-            "carrozzina manuale",
-            "direzione",
-            "est",
-            "freccia",
-            "freccia a destra",
-            "freccia rivolta verso destra",
-            "persona",
-            "punto cardinale",
-            "sedia a rotelle manuale"
+            "persona su sedia a rotelle manuale",
+            "sedia a rotelle"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {

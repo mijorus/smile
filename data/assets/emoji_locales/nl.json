@@ -3907,15 +3907,10 @@
         "emoji": "🏃‍♀️‍➡️",
         "tags": [
             "hardlopen",
-            "hardloper",
             "marathon",
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
-            "vrouw",
-            "vrouwelijkheidssymbool",
-            "windrichting"
+            "rennen",
+            "rennende vrouw",
+            "vrouw"
         ]
     },
     "1F3C3-200D-2642-FE0F": {
@@ -3931,15 +3926,10 @@
         "emoji": "🏃‍♂️‍➡️",
         "tags": [
             "hardlopen",
-            "hardloper",
             "man",
-            "mannelijkheidssymbool",
             "marathon",
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
-            "windrichting"
+            "rennen",
+            "rennende man"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
@@ -3947,12 +3937,7 @@
         "tags": [
             "hardlopen",
             "hardloper",
-            "marathon",
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
-            "windrichting"
+            "marathon"
         ]
     },
     "1F3C4": {
@@ -5600,13 +5585,8 @@
         "tags": [
             "blind",
             "man",
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
-            "taststok",
-            "toegankelijkheid",
-            "windrichting"
+            "man met taststok",
+            "toegankelijkheid"
         ]
     },
     "1F468-200D-1F9B0": {
@@ -5648,14 +5628,10 @@
     "1F468-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "👨‍🦼‍➡️",
         "tags": [
-            "elektrische rolstoel",
             "man",
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
-            "toegankelijkheid",
-            "windrichting"
+            "man in elektrische rolstoel",
+            "rolstoel",
+            "toegankelijkheid"
         ]
     },
     "1F468-200D-1F9BD": {
@@ -5670,13 +5646,9 @@
         "emoji": "👨‍🦽‍➡️",
         "tags": [
             "man",
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
+            "man in rolstoel",
             "rolstoel",
-            "toegankelijkheid",
-            "windrichting"
+            "toegankelijkheid"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -5979,14 +5951,9 @@
         "emoji": "👩‍🦯‍➡️",
         "tags": [
             "blind",
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
-            "taststok",
             "toegankelijkheid",
             "vrouw",
-            "windrichting"
+            "vrouw met taststok"
         ]
     },
     "1F469-200D-1F9B0": {
@@ -6028,14 +5995,10 @@
     "1F469-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "👩‍🦼‍➡️",
         "tags": [
-            "elektrische rolstoel",
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
+            "rolstoel",
             "toegankelijkheid",
             "vrouw",
-            "windrichting"
+            "vrouw in elektrische rolstoel"
         ]
     },
     "1F469-200D-1F9BD": {
@@ -6049,14 +6012,10 @@
     "1F469-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "👩‍🦽‍➡️",
         "tags": [
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
             "rolstoel",
             "toegankelijkheid",
             "vrouw",
-            "windrichting"
+            "vrouw in rolstoel"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -9931,16 +9890,9 @@
         "emoji": "🚶‍♀️‍➡️",
         "tags": [
             "lopen",
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
-            "voetganger",
             "vrouw",
-            "vrouwelijkheidssymbool",
-            "wandelaar",
             "wandelen",
-            "windrichting"
+            "wandelende vrouw"
         ]
     },
     "1F6B6-200D-2642-FE0F": {
@@ -9956,29 +9908,17 @@
         "tags": [
             "lopen",
             "man",
-            "mannelijkheidssymbool",
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
-            "voetganger",
-            "wandelaar",
             "wandelen",
-            "windrichting"
+            "wandelende man"
         ]
     },
     "1F6B6-200D-27A1-FE0F": {
         "emoji": "🚶‍➡️",
         "tags": [
             "lopen",
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
             "voetganger",
             "wandelaar",
-            "wandelen",
-            "windrichting"
+            "wandelen"
         ]
     },
     "1F6B7": {
@@ -12093,16 +12033,9 @@
     "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
-            "kniel",
-            "knielen",
-            "knielende persoon",
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
-            "vrouw",
-            "vrouwelijkheidssymbool",
-            "windrichting"
+            "knielend",
+            "knielende vrouw",
+            "vrouw"
         ]
     },
     "1F9CE-200D-2642-FE0F": {
@@ -12115,16 +12048,9 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
-            "kniel",
-            "knielen",
-            "knielende persoon",
-            "man",
-            "mannelijkheidssymbool",
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
-            "windrichting"
+            "knielend",
+            "knielende man",
+            "man"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
@@ -12132,12 +12058,7 @@
         "tags": [
             "kniel",
             "knielen",
-            "knielende persoon",
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
-            "windrichting"
+            "knielende persoon"
         ]
     },
     "1F9CF": {
@@ -12308,15 +12229,8 @@
         "emoji": "🧑‍🦯‍➡️",
         "tags": [
             "blind",
-            "genderneutraal",
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
-            "taststok",
-            "toegankelijkheid",
-            "volwassene",
-            "windrichting"
+            "persoon met taststok",
+            "toegankelijkheid"
         ]
     },
     "1F9D1-200D-1F9B0": {
@@ -12361,15 +12275,9 @@
     "1F9D1-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
-            "elektrische rolstoel",
-            "genderneutraal",
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
-            "toegankelijkheid",
-            "volwassene",
-            "windrichting"
+            "persoon in elektrische rolstoel",
+            "rolstoel",
+            "toegankelijkheid"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -12382,15 +12290,9 @@
     "1F9D1-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
-            "genderneutraal",
-            "oost",
-            "pijl",
-            "pijl naar rechts",
-            "richting",
+            "persoon in rolstoel",
             "rolstoel",
-            "toegankelijkheid",
-            "volwassene",
-            "windrichting"
+            "toegankelijkheid"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {

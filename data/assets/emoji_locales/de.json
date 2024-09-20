@@ -4051,19 +4051,12 @@
     "1F3C3-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♀️‍➡️",
         "tags": [
-            "frau",
-            "frauensymbol",
+            "joggen",
+            "joggerin",
             "laufen",
-            "laufende person",
-            "marathon",
-            "nach rechts",
-            "osten",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil",
-            "sport",
-            "weiblich",
-            "zeichen"
+            "laufende frau",
+            "laufende frau nach rechts",
+            "marathon"
         ]
     },
     "1F3C3-200D-2642-FE0F": {
@@ -4079,19 +4072,12 @@
     "1F3C3-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♂️‍➡️",
         "tags": [
+            "joggen",
+            "jogger",
             "laufen",
-            "laufende person",
-            "mann",
-            "marathon",
-            "männersymbol",
-            "nach rechts",
-            "osten",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil",
-            "sport",
-            "symbol",
-            "zeichen"
+            "laufender mann",
+            "laufender mann nach rechts",
+            "marathon"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
@@ -4099,12 +4085,8 @@
         "tags": [
             "laufen",
             "laufende person",
+            "laufende person nach rechts",
             "marathon",
-            "nach rechts",
-            "osten",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil",
             "sport"
         ]
     },
@@ -5974,13 +5956,11 @@
         "tags": [
             "barrierefreiheit",
             "blind",
-            "blindenstock",
             "mann",
-            "nach rechts",
-            "osten",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil"
+            "mann mit blindenstock",
+            "mann mit langstock",
+            "mann mit langstock nach rechts",
+            "sehbehindert"
         ]
     },
     "1F468-200D-1F9B0": {
@@ -6028,13 +6008,10 @@
         "emoji": "👨‍🦼‍➡️",
         "tags": [
             "barrierefreiheit",
-            "elektrischer rollstuhl",
             "mann",
-            "nach rechts",
-            "osten",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil"
+            "mann in elektrischem rollstuhl",
+            "mann in elektrischem rollstuhl nach rechts",
+            "rollstuhl"
         ]
     },
     "1F468-200D-1F9BD": {
@@ -6051,12 +6028,9 @@
         "tags": [
             "barrierefreiheit",
             "mann",
-            "manueller rollstuhl",
-            "nach rechts",
-            "osten",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil"
+            "mann in manuellem rollstuhl",
+            "mann in manuellem rollstuhl nach rechts",
+            "rollstuhl"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -6365,13 +6339,10 @@
         "tags": [
             "barrierefreiheit",
             "blind",
-            "blindenstock",
             "frau",
-            "nach rechts",
-            "osten",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil"
+            "frau mit blindenstock",
+            "frau mit langstock",
+            "frau mit langstock nach rechts"
         ]
     },
     "1F469-200D-1F9B0": {
@@ -6419,13 +6390,10 @@
         "emoji": "👩‍🦼‍➡️",
         "tags": [
             "barrierefreiheit",
-            "elektrischer rollstuhl",
             "frau",
-            "nach rechts",
-            "osten",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil"
+            "frau in elektrischem rollstuhl",
+            "frau in elektrischem rollstuhl nach rechts",
+            "rollstuhl"
         ]
     },
     "1F469-200D-1F9BD": {
@@ -6442,12 +6410,9 @@
         "tags": [
             "barrierefreiheit",
             "frau",
-            "manueller rollstuhl",
-            "nach rechts",
-            "osten",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil"
+            "frau in manuellem rollstuhl",
+            "frau in manuellem rollstuhl nach rechts",
+            "rollstuhl"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -10449,18 +10414,10 @@
         "emoji": "🚶‍♀️‍➡️",
         "tags": [
             "frau",
-            "frauensymbol",
-            "fußgänger(in)",
+            "fußgängerin",
+            "fußgängerin nach rechts",
             "gehen",
-            "gehend",
-            "nach rechts",
-            "osten",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil",
-            "wandern",
-            "weiblich",
-            "zeichen"
+            "spaziergang"
         ]
     },
     "1F6B6-200D-2642-FE0F": {
@@ -10475,32 +10432,20 @@
     "1F6B6-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♂️‍➡️",
         "tags": [
-            "fußgänger(in)",
+            "fußgänger",
+            "fußgänger nach rechts",
             "gehen",
-            "gehend",
             "mann",
-            "männersymbol",
-            "nach rechts",
-            "osten",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil",
-            "symbol",
-            "wandern",
-            "zeichen"
+            "spaziergang"
         ]
     },
     "1F6B6-200D-27A1-FE0F": {
         "emoji": "🚶‍➡️",
         "tags": [
             "fußgänger(in)",
+            "fußgänger(in) nach rechts",
             "gehen",
             "gehend",
-            "nach rechts",
-            "osten",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil",
             "wandern"
         ]
     },
@@ -12823,17 +12768,9 @@
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
             "frau",
-            "frauensymbol",
-            "knien",
             "kniend",
-            "kniende person",
-            "nach rechts",
-            "osten",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil",
-            "weiblich",
-            "zeichen"
+            "kniende frau",
+            "kniende frau nach rechts"
         ]
     },
     "1F9CE-200D-2642-FE0F": {
@@ -12847,18 +12784,10 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
-            "knien",
             "kniend",
-            "kniende person",
-            "mann",
-            "männersymbol",
-            "nach rechts",
-            "osten",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil",
-            "symbol",
-            "zeichen"
+            "kniender mann",
+            "kniender mann nach rechts",
+            "mann"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
@@ -12867,11 +12796,7 @@
             "knien",
             "kniend",
             "kniende person",
-            "nach rechts",
-            "osten",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil"
+            "kniende person nach rechts"
         ]
     },
     "1F9CF": {
@@ -13071,17 +12996,9 @@
         "tags": [
             "barrierefreiheit",
             "blind",
-            "blindenstock",
-            "erwachsene person",
-            "geschlechtsneutral",
-            "mensch",
-            "nach rechts",
-            "ohne eindeutiges geschlecht",
-            "osten",
-            "person",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil"
+            "person mit blindenstock",
+            "person mit langstock",
+            "person mit langstock nach rechts"
         ]
     },
     "1F9D1-200D-1F9B0": {
@@ -13144,17 +13061,9 @@
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
             "barrierefreiheit",
-            "elektrischer rollstuhl",
-            "erwachsene person",
-            "geschlechtsneutral",
-            "mensch",
-            "nach rechts",
-            "ohne eindeutiges geschlecht",
-            "osten",
-            "person",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil"
+            "person in elektrischem rollstuhl",
+            "person in elektrischem rollstuhl nach rechts",
+            "rollstuhl"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -13169,17 +13078,9 @@
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
             "barrierefreiheit",
-            "erwachsene person",
-            "geschlechtsneutral",
-            "manueller rollstuhl",
-            "mensch",
-            "nach rechts",
-            "ohne eindeutiges geschlecht",
-            "osten",
-            "person",
-            "pfeil",
-            "pfeil nach rechts",
-            "rechtspfeil"
+            "person in manuellem rollstuhl",
+            "person in manuellem rollstuhl nach rechts",
+            "rollstuhl"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {
