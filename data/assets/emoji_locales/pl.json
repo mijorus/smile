@@ -3889,17 +3889,9 @@
         "tags": [
             "bieg",
             "bieganie",
-            "biegnąca osoba",
-            "kierunek",
+            "biegnąca kobieta",
             "kobieta",
-            "maraton",
-            "pośpiech",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód",
-            "znak",
-            "znak kobiety",
-            "żeński"
+            "maraton"
         ]
     },
     "1F3C3-200D-2642-FE0F": {
@@ -3916,17 +3908,9 @@
         "tags": [
             "bieg",
             "bieganie",
-            "biegnąca osoba",
-            "kierunek",
+            "biegnący mężczyzna",
             "maraton",
-            "męski",
-            "mężczyzna",
-            "pośpiech",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód",
-            "znak",
-            "znak mężczyzny"
+            "mężczyzna"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
@@ -3935,12 +3919,8 @@
             "bieg",
             "bieganie",
             "biegnąca osoba",
-            "kierunek",
             "maraton",
-            "pośpiech",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód"
+            "pośpiech"
         ]
     },
     "1F3C4": {
@@ -5659,14 +5639,10 @@
     "1F468-200D-1F9AF-200D-27A1-FE0F": {
         "emoji": "👨‍🦯‍➡️",
         "tags": [
-            "biała laska",
             "dostępność",
-            "kierunek",
             "mężczyzna",
-            "niewidomy",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód"
+            "mężczyzna z białą laską",
+            "niewidomy"
         ]
     },
     "1F468-200D-1F9B0": {
@@ -5709,12 +5685,9 @@
         "emoji": "👨‍🦼‍➡️",
         "tags": [
             "dostępność",
-            "kierunek",
             "mężczyzna",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód",
-            "wózek inwalidzki elektryczny"
+            "mężczyzna na elektrycznym wózku inwalidzkim",
+            "wózek inwalidzki"
         ]
     },
     "1F468-200D-1F9BD": {
@@ -5729,12 +5702,9 @@
         "emoji": "👨‍🦽‍➡️",
         "tags": [
             "dostępność",
-            "kierunek",
             "mężczyzna",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód",
-            "wózek inwalidzki ręczny"
+            "mężczyzna na wózku inwalidzkim",
+            "wózek inwalidzki"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -6053,14 +6023,10 @@
     "1F469-200D-1F9AF-200D-27A1-FE0F": {
         "emoji": "👩‍🦯‍➡️",
         "tags": [
-            "biała laska",
             "dostępność",
-            "kierunek",
             "kobieta",
-            "niewidomy",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód"
+            "kobieta z białą laską",
+            "niewidoma"
         ]
     },
     "1F469-200D-1F9B0": {
@@ -6103,12 +6069,9 @@
         "emoji": "👩‍🦼‍➡️",
         "tags": [
             "dostępność",
-            "kierunek",
             "kobieta",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód",
-            "wózek inwalidzki elektryczny"
+            "kobieta na elektrycznym wózku inwalidzkim",
+            "wózek inwalidzki"
         ]
     },
     "1F469-200D-1F9BD": {
@@ -6123,12 +6086,9 @@
         "emoji": "👩‍🦽‍➡️",
         "tags": [
             "dostępność",
-            "kierunek",
             "kobieta",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód",
-            "wózek inwalidzki ręczny"
+            "kobieta na wózku inwalidzkim",
+            "wózek inwalidzki"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -10018,20 +9978,11 @@
     "1F6B6-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♀️‍➡️",
         "tags": [
-            "idąca osoba",
-            "iść",
-            "kierunek",
+            "chodzenie",
+            "idąca kobieta",
             "kobieta",
-            "na piechotę",
             "piechur",
-            "pieszo",
-            "spacer",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód",
-            "znak",
-            "znak kobiety",
-            "żeński"
+            "spacer"
         ]
     },
     "1F6B6-200D-2642-FE0F": {
@@ -10046,20 +9997,11 @@
     "1F6B6-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♂️‍➡️",
         "tags": [
-            "idąca osoba",
-            "iść",
-            "kierunek",
-            "męski",
+            "chodzenie",
+            "idący mężczyzna",
             "mężczyzna",
-            "na piechotę",
             "piechur",
-            "pieszo",
-            "spacer",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód",
-            "znak",
-            "znak mężczyzny"
+            "spacer"
         ]
     },
     "1F6B6-200D-27A1-FE0F": {
@@ -10067,14 +10009,10 @@
         "tags": [
             "idąca osoba",
             "iść",
-            "kierunek",
             "na piechotę",
             "piechur",
             "pieszo",
-            "spacer",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód"
+            "spacer"
         ]
     },
     "1F6B7": {
@@ -12241,17 +12179,9 @@
     "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
-            "kierunek",
             "klęczeć",
-            "klęcząca osoba",
-            "kobieta",
-            "na kolanach",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód",
-            "znak",
-            "znak kobiety",
-            "żeński"
+            "klęcząca kobieta",
+            "kobieta"
         ]
     },
     "1F9CE-200D-2642-FE0F": {
@@ -12264,29 +12194,17 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
-            "kierunek",
             "klęczeć",
-            "klęcząca osoba",
-            "męski",
-            "mężczyzna",
-            "na kolanach",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód",
-            "znak",
-            "znak mężczyzny"
+            "klęczący mężczyzna",
+            "mężczyzna"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
         "emoji": "🧎‍➡️",
         "tags": [
-            "kierunek",
             "klęczeć",
             "klęcząca osoba",
-            "na kolanach",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód"
+            "na kolanach"
         ]
     },
     "1F9CF": {
@@ -12459,15 +12377,10 @@
     "1F9D1-200D-1F9AF-200D-27A1-FE0F": {
         "emoji": "🧑‍🦯‍➡️",
         "tags": [
-            "biała laska",
-            "dorosły",
             "dostępność",
-            "kierunek",
+            "niewidoma",
             "niewidomy",
-            "płeć neutralna",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód"
+            "osoba z białą laską"
         ]
     },
     "1F9D1-200D-1F9B0": {
@@ -12512,14 +12425,9 @@
     "1F9D1-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
-            "dorosły",
             "dostępność",
-            "kierunek",
-            "płeć neutralna",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód",
-            "wózek inwalidzki elektryczny"
+            "osoba na elektrycznym wózku inwalidzkim",
+            "wózek inwalidzki"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -12532,14 +12440,9 @@
     "1F9D1-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
-            "dorosły",
             "dostępność",
-            "kierunek",
-            "płeć neutralna",
-            "strzałka",
-            "strzałka w prawo",
-            "wschód",
-            "wózek inwalidzki ręczny"
+            "osoba na wózku inwalidzkim",
+            "wózek inwalidzki"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {

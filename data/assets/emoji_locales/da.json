@@ -3251,19 +3251,11 @@
         "emoji": "🏃‍♀️‍➡️",
         "tags": [
             "kvinde",
-            "kvindesymbol",
-            "kvindetegn",
-            "løber",
+            "kvinde løber",
+            "løb",
             "løbetræning",
-            "maraton",
-            "pil",
-            "pil mod højre",
-            "retning",
-            "sport",
-            "symbol",
-            "tegn",
-            "verdenshjørne",
-            "øst"
+            "løbetur",
+            "maraton"
         ]
     },
     "1F3C3-200D-2642-FE0F": {
@@ -3279,20 +3271,12 @@
     "1F3C3-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♂️‍➡️",
         "tags": [
-            "løber",
+            "løb",
             "løbetræning",
+            "løbetur",
             "mand",
-            "mandesymbol",
-            "mandetegn",
-            "maraton",
-            "pil",
-            "pil mod højre",
-            "retning",
-            "sport",
-            "symbol",
-            "tegn",
-            "verdenshjørne",
-            "øst"
+            "mand løber",
+            "maraton"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
@@ -3301,12 +3285,7 @@
             "løber",
             "løbetræning",
             "maraton",
-            "pil",
-            "pil mod højre",
-            "retning",
-            "sport",
-            "verdenshjørne",
-            "øst"
+            "sport"
         ]
     },
     "1F3C4": {
@@ -4947,17 +4926,12 @@
     "1F468-200D-1F9AF-200D-27A1-FE0F": {
         "emoji": "👨‍🦯‍➡️",
         "tags": [
+            "adgangsforhold",
             "blind",
-            "blindestok",
             "handicap",
             "mand",
-            "menneske",
-            "person",
-            "pil",
-            "pil mod højre",
-            "retning",
-            "verdenshjørne",
-            "øst"
+            "mand med blindestok",
+            "synshandicap"
         ]
     },
     "1F468-200D-1F9B0": {
@@ -5010,16 +4984,13 @@
     "1F468-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "👨‍🦼‍➡️",
         "tags": [
-            "elektrisk kørestol",
-            "handikap",
+            "adgang",
+            "adgangsforhold",
+            "handicap",
+            "kørestol",
             "mand",
-            "menneske",
-            "person",
-            "pil",
-            "pil mod højre",
-            "retning",
-            "verdenshjørne",
-            "øst"
+            "mand i elektrisk kørestol",
+            "mand i elkørestol"
         ]
     },
     "1F468-200D-1F9BD": {
@@ -5035,16 +5006,12 @@
     "1F468-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "👨‍🦽‍➡️",
         "tags": [
-            "handikap",
+            "adgang",
+            "adgangsforhold",
+            "handicap",
+            "kørestol",
             "mand",
-            "manuel kørestol",
-            "menneske",
-            "person",
-            "pil",
-            "pil mod højre",
-            "retning",
-            "verdenshjørne",
-            "øst"
+            "mand i manuel kørestol"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -5373,17 +5340,12 @@
     "1F469-200D-1F9AF-200D-27A1-FE0F": {
         "emoji": "👩‍🦯‍➡️",
         "tags": [
+            "adgangsforhold",
             "blind",
-            "blindestok",
             "handicap",
             "kvinde",
-            "menneske",
-            "person",
-            "pil",
-            "pil mod højre",
-            "retning",
-            "verdenshjørne",
-            "øst"
+            "kvinde med blindestok",
+            "synshandicap"
         ]
     },
     "1F469-200D-1F9B0": {
@@ -5436,16 +5398,13 @@
     "1F469-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "👩‍🦼‍➡️",
         "tags": [
-            "elektrisk kørestol",
-            "handikap",
+            "adgang",
+            "adgangsforhold",
+            "handicap",
             "kvinde",
-            "menneske",
-            "person",
-            "pil",
-            "pil mod højre",
-            "retning",
-            "verdenshjørne",
-            "øst"
+            "kvinde i elektrisk kørestol",
+            "kvinde i elkørestol",
+            "kørestol"
         ]
     },
     "1F469-200D-1F9BD": {
@@ -5461,16 +5420,12 @@
     "1F469-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "👩‍🦽‍➡️",
         "tags": [
-            "handikap",
+            "adgang",
+            "adgangsforhold",
+            "handicap",
             "kvinde",
-            "manuel kørestol",
-            "menneske",
-            "person",
-            "pil",
-            "pil mod højre",
-            "retning",
-            "verdenshjørne",
-            "øst"
+            "kvinde i manuel kørestol",
+            "kørestol"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -9018,19 +8973,13 @@
             "fodgænger",
             "gang",
             "gå",
+            "gåtur",
             "hike",
             "kvinde",
-            "kvindesymbol",
-            "kvindetegn",
-            "pil",
-            "pil mod højre",
-            "retning",
-            "symbol",
-            "tegn",
+            "kvinde går",
             "vandre",
-            "vandring",
-            "verdenshjørne",
-            "øst"
+            "vandretur",
+            "vandring"
         ]
     },
     "1F6B6-200D-2642-FE0F": {
@@ -9053,19 +9002,13 @@
             "fodgænger",
             "gang",
             "gå",
+            "gåtur",
             "hike",
             "mand",
-            "mandesymbol",
-            "mandetegn",
-            "pil",
-            "pil mod højre",
-            "retning",
-            "symbol",
-            "tegn",
+            "mand går",
             "vandre",
-            "vandring",
-            "verdenshjørne",
-            "øst"
+            "vandretur",
+            "vandring"
         ]
     },
     "1F6B6-200D-27A1-FE0F": {
@@ -9075,13 +9018,8 @@
             "gang",
             "gå",
             "hike",
-            "pil",
-            "pil mod højre",
-            "retning",
             "vandre",
-            "vandring",
-            "verdenshjørne",
-            "øst"
+            "vandring"
         ]
     },
     "1F6B7": {
@@ -11335,19 +11273,8 @@
     "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
-            "knælende",
-            "knælende person",
-            "kvinde",
-            "kvindesymbol",
-            "kvindetegn",
-            "pil",
-            "pil mod højre",
-            "på knæ",
-            "retning",
-            "symbol",
-            "tegn",
-            "verdenshjørne",
-            "øst"
+            "knælende kvinde",
+            "kvinde"
         ]
     },
     "1F9CE-200D-2642-FE0F": {
@@ -11359,19 +11286,8 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
-            "knælende",
-            "knælende person",
-            "mand",
-            "mandesymbol",
-            "mandetegn",
-            "pil",
-            "pil mod højre",
-            "på knæ",
-            "retning",
-            "symbol",
-            "tegn",
-            "verdenshjørne",
-            "øst"
+            "knælende mand",
+            "mand"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
@@ -11379,12 +11295,7 @@
         "tags": [
             "knælende",
             "knælende person",
-            "pil",
-            "pil mod højre",
-            "på knæ",
-            "retning",
-            "verdenshjørne",
-            "øst"
+            "på knæ"
         ]
     },
     "1F9CF": {
@@ -11580,16 +11491,11 @@
     "1F9D1-200D-1F9AF-200D-27A1-FE0F": {
         "emoji": "🧑‍🦯‍➡️",
         "tags": [
+            "adgangsforhold",
             "blind",
-            "blindestok",
             "handicap",
-            "person",
-            "pil",
-            "pil mod højre",
-            "retning",
-            "verdenshjørne",
-            "voksen",
-            "øst"
+            "person med blindestok",
+            "synshandicap"
         ]
     },
     "1F9D1-200D-1F9B0": {
@@ -11636,15 +11542,11 @@
     "1F9D1-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
-            "elektrisk kørestol",
-            "handikap",
-            "person",
-            "pil",
-            "pil mod højre",
-            "retning",
-            "verdenshjørne",
-            "voksen",
-            "øst"
+            "adgang",
+            "adgangsforhold",
+            "handicap",
+            "kørestol",
+            "person i elkørestol"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -11659,15 +11561,11 @@
     "1F9D1-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
-            "handikap",
-            "manuel kørestol",
-            "person",
-            "pil",
-            "pil mod højre",
-            "retning",
-            "verdenshjørne",
-            "voksen",
-            "øst"
+            "adgang",
+            "adgangsforhold",
+            "handicap",
+            "kørestol",
+            "person i manuel kørestol"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {

@@ -3831,17 +3831,11 @@
     "1F3C3-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♀️‍➡️",
         "tags": [
-            "högerpil",
+            "jogga",
             "kvinna",
-            "kvinnlig",
-            "kvinnosymbol",
-            "löpare",
-            "löpning",
-            "person som springer",
-            "pil",
-            "riktning",
-            "väderstreck",
-            "öster"
+            "kvinna som springer",
+            "kvinna springer",
+            "löpa"
         ]
     },
     "1F3C3-200D-2642-FE0F": {
@@ -3856,30 +3850,19 @@
     "1F3C3-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♂️‍➡️",
         "tags": [
-            "högerpil",
-            "löpare",
-            "löpning",
+            "jogga",
+            "löpa",
             "man",
-            "manlig",
-            "manssymbol",
-            "person som springer",
-            "pil",
-            "riktning",
-            "väderstreck",
-            "öster"
+            "man som springer",
+            "man springer"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
         "emoji": "🏃‍➡️",
         "tags": [
-            "högerpil",
             "löpare",
             "löpning",
-            "person som springer",
-            "pil",
-            "riktning",
-            "väderstreck",
-            "öster"
+            "person som springer"
         ]
     },
     "1F3C4": {
@@ -5504,14 +5487,9 @@
         "tags": [
             "blind",
             "blindkäpp",
-            "högerpil",
             "man",
-            "pil",
-            "riktning",
-            "tillgänglighet",
-            "vuxen",
-            "väderstreck",
-            "öster"
+            "man med vit käpp",
+            "vit käpp"
         ]
     },
     "1F468-200D-1F9B0": {
@@ -5557,15 +5535,10 @@
     "1F468-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "👨‍🦼‍➡️",
         "tags": [
-            "eldriven rullstol",
-            "högerpil",
             "man",
-            "pil",
-            "riktning",
-            "tillgänglighet",
-            "vuxen",
-            "väderstreck",
-            "öster"
+            "man i permobil",
+            "permobil",
+            "rullstol"
         ]
     },
     "1F468-200D-1F9BD": {
@@ -5578,15 +5551,9 @@
     "1F468-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "👨‍🦽‍➡️",
         "tags": [
-            "högerpil",
             "man",
-            "manuell rullstol",
-            "pil",
-            "riktning",
-            "tillgänglighet",
-            "vuxen",
-            "väderstreck",
-            "öster"
+            "man i manuell rullstol",
+            "rullstol"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -5905,14 +5872,9 @@
         "tags": [
             "blind",
             "blindkäpp",
-            "högerpil",
             "kvinna",
-            "pil",
-            "riktning",
-            "tillgänglighet",
-            "vuxen",
-            "väderstreck",
-            "öster"
+            "kvinna med vit käpp",
+            "vit käpp"
         ]
     },
     "1F469-200D-1F9B0": {
@@ -5958,15 +5920,10 @@
     "1F469-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "👩‍🦼‍➡️",
         "tags": [
-            "eldriven rullstol",
-            "högerpil",
             "kvinna",
-            "pil",
-            "riktning",
-            "tillgänglighet",
-            "vuxen",
-            "väderstreck",
-            "öster"
+            "kvinna i permobil",
+            "permobil",
+            "rullstol"
         ]
     },
     "1F469-200D-1F9BD": {
@@ -5979,15 +5936,9 @@
     "1F469-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "👩‍🦽‍➡️",
         "tags": [
-            "högerpil",
             "kvinna",
-            "manuell rullstol",
-            "pil",
-            "riktning",
-            "tillgänglighet",
-            "vuxen",
-            "väderstreck",
-            "öster"
+            "kvinna i manuell rullstol",
+            "rullstol"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -9491,15 +9442,10 @@
         "emoji": "🚶‍♀️‍➡️",
         "tags": [
             "fotgängare",
-            "högerpil",
+            "gå",
             "kvinna",
-            "kvinnlig",
-            "kvinnosymbol",
-            "pil",
-            "promenerar",
-            "riktning",
-            "väderstreck",
-            "öster"
+            "kvinna går",
+            "kvinna som går"
         ]
     },
     "1F6B6-200D-2642-FE0F": {
@@ -9515,27 +9461,17 @@
         "emoji": "🚶‍♂️‍➡️",
         "tags": [
             "fotgängare",
-            "högerpil",
+            "gå",
             "man",
-            "manlig",
-            "manssymbol",
-            "pil",
-            "promenerar",
-            "riktning",
-            "väderstreck",
-            "öster"
+            "man går",
+            "man som går"
         ]
     },
     "1F6B6-200D-27A1-FE0F": {
         "emoji": "🚶‍➡️",
         "tags": [
             "fotgängare",
-            "högerpil",
-            "pil",
-            "promenerar",
-            "riktning",
-            "väderstreck",
-            "öster"
+            "promenerar"
         ]
     },
     "1F6B7": {
@@ -11656,17 +11592,9 @@
     "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
-            "högerpil",
             "knäsittande",
             "knästående",
-            "kvinna",
-            "kvinnlig",
-            "kvinnosymbol",
-            "person",
-            "pil",
-            "riktning",
-            "väderstreck",
-            "öster"
+            "kvinna"
         ]
     },
     "1F9CE-200D-2642-FE0F": {
@@ -11680,30 +11608,17 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
-            "högerpil",
             "knäsittande",
             "knästående",
-            "man",
-            "manlig",
-            "manssymbol",
-            "person",
-            "pil",
-            "riktning",
-            "väderstreck",
-            "öster"
+            "man"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
         "emoji": "🧎‍➡️",
         "tags": [
-            "högerpil",
             "knäsittande",
             "knästående",
-            "person",
-            "pil",
-            "riktning",
-            "väderstreck",
-            "öster"
+            "person"
         ]
     },
     "1F9CF": {
@@ -11871,17 +11786,9 @@
     "1F9D1-200D-1F9AF-200D-27A1-FE0F": {
         "emoji": "🧑‍🦯‍➡️",
         "tags": [
-            "blind",
-            "blindkäpp",
-            "högerpil",
-            "könsneutral",
-            "person",
-            "pil",
-            "riktning",
-            "tillgänglighet",
-            "vuxen",
-            "väderstreck",
-            "öster"
+            "hjälpmedel",
+            "person med vit käpp",
+            "synskadad"
         ]
     },
     "1F9D1-200D-1F9B0": {
@@ -11932,15 +11839,9 @@
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
             "eldriven rullstol",
-            "högerpil",
-            "könsneutral",
-            "person",
-            "pil",
-            "riktning",
-            "tillgänglighet",
-            "vuxen",
-            "väderstreck",
-            "öster"
+            "elektrisk rullstol",
+            "person i permobil",
+            "tillträde"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -11953,16 +11854,9 @@
     "1F9D1-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
-            "högerpil",
-            "könsneutral",
-            "manuell rullstol",
-            "person",
-            "pil",
-            "riktning",
-            "tillgänglighet",
-            "vuxen",
-            "väderstreck",
-            "öster"
+            "person i manuell rullstol",
+            "rullstol",
+            "tillträde"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {
