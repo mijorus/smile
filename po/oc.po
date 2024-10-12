@@ -7,21 +7,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-08 15:14+0100\n"
-"PO-Revision-Date: 2023-12-09 08:50+0100\n"
+"POT-Creation-Date: 2024-04-14 15:46+0900\n"
+"PO-Revision-Date: 2024-07-07 12:47+0200\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: \n"
 "Language: oc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.4.3\n"
 
-#: src/main.py:111
+#: src/main.py:109
 msgid "translator_credits"
 msgstr "Quentin PAGÈS"
 
-#: src/Picker.py:90
+#: src/Picker.py:88
 msgid ""
 "Whoa, it's still empty! \n"
 "Your most used emojis will show up here\n"
@@ -29,15 +29,15 @@ msgstr ""
 "Òh, es encara void !\n"
 "Los emojis qu’utilizatz sovent apreissaràn aicí\n"
 
-#: src/Picker.py:525
+#: src/Picker.py:510
 msgid "No skintones available"
 msgstr "Cap de ton de pèl pas disponible"
 
-#: src/Picker.py:638
+#: src/Picker.py:626
 msgid "Copied!"
 msgstr "Copiat !"
 
-#: src/Picker.py:639
+#: src/Picker.py:627
 msgid ""
 "I have copied the emoji to the clipboard. You can now paste it in any input "
 "field."
@@ -48,6 +48,7 @@ msgstr ""
 msgid "Settings"
 msgstr "Paramètres"
 
+#. General group
 #: src/Settings.py:31
 msgid "General"
 msgstr "General"
@@ -68,6 +69,7 @@ msgstr "Minimizar en quitant"
 msgid "Minimize the window when selecting an emoji"
 msgstr "Minimizar la fenèstra en seleccionant un emoji"
 
+#. Mouse group
 #: src/Settings.py:43
 msgid "Mouse behaviour"
 msgstr "Compòrtament de la mirga"
@@ -84,6 +86,7 @@ msgstr ""
 "Seleccionar mantun emoji amb un sol clic de mirga, remplaça lo Cntr + Clic ; "
 "quichar Entrada per confirmar e Esc per ignorar."
 
+#. Paste emoji group
 #: src/Settings.py:49
 msgid "Paste emojis automatically"
 msgstr "Pegar los emojis automaticament"
@@ -113,6 +116,7 @@ msgstr "Obténer l’extension GNOME"
 msgid "Install the extension to paste automatically on X11 and Wayland"
 msgstr "Installar l’extension per pegar automaticament sus X11 e Wayland"
 
+#. Customization group
 #: src/Settings.py:72
 msgid "Customization"
 msgstr "Personalizacion"
@@ -133,6 +137,7 @@ msgstr "Fusionar las etiquetas localizadas e en anglés"
 msgid "Use both localized tags and English ones at the same time"
 msgstr "Utilizar tan las etiquetas localizadas que las en anglés a l’encòp"
 
+#. Page 2
 #: src/Settings.py:94
 msgid "Custom tags"
 msgstr "Etiquetas personalas"
@@ -268,7 +273,7 @@ msgstr "Afichar la categoria a man drecha"
 msgid "Show the category on the left"
 msgstr "Afichar la categoria a man esquèrra"
 
-#: src/ui/shortcuts.ui:142
+#: src/ui/shortcuts.ui:142 src/ShortcutsWindow.py:22
 msgid "Add an emoji to selection"
 msgstr "Ajustar un emoji a la seleccion"
 
@@ -329,8 +334,9 @@ msgstr "Foncionalitats novèlas !"
 msgid "Dismiss"
 msgstr "Ignorar"
 
+#: src/ShortcutsWindow.py:23
+msgid "Copy the selected emoji and hide the window"
+msgstr "Copiar l’emoji seleccionada e rescondre la fenèstra"
+
 #~ msgid "Recently used emojis"
 #~ msgstr "Emojis utilizats recentament"
-
-#~ msgid "Copy the selected emoji and hide the window"
-#~ msgstr "Copiar l’emoji seleccionada e rescondre la fenèstra"
