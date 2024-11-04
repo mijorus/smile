@@ -3974,18 +3974,10 @@
         "emoji": "🏃‍♀️‍➡️",
         "tags": [
             "carrera",
-            "deporte",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
+            "correr",
             "maratón",
             "mujer",
-            "persona corriendo",
-            "signo",
-            "signo femenino",
-            "símbolo"
+            "mujer corriendo"
         ]
     },
     "1F3C3-200D-2642-FE0F": {
@@ -4001,18 +3993,10 @@
         "emoji": "🏃‍♂️‍➡️",
         "tags": [
             "carrera",
-            "deporte",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
+            "correr",
             "hombre",
-            "maratón",
-            "persona corriendo",
-            "signo",
-            "signo masculino",
-            "símbolo"
+            "hombre corriendo",
+            "maratón"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
@@ -4020,11 +4004,6 @@
         "tags": [
             "carrera",
             "deporte",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
             "maratón",
             "persona corriendo"
         ]
@@ -5708,17 +5687,10 @@
         "emoji": "👨‍🦯‍➡️",
         "tags": [
             "accesibilidad",
-            "adulto",
             "bastón",
-            "ceguera",
-            "ciega",
             "ciego",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
             "hombre",
+            "hombre con bastón",
             "invidente"
         ]
     },
@@ -5766,14 +5738,9 @@
         "emoji": "👨‍🦼‍➡️",
         "tags": [
             "accesibilidad",
-            "adulto",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
             "hombre",
-            "silla de ruedas eléctrica"
+            "hombre en silla de ruedas eléctrica",
+            "silla de ruedas"
         ]
     },
     "1F468-200D-1F9BD": {
@@ -5788,14 +5755,9 @@
         "emoji": "👨‍🦽‍➡️",
         "tags": [
             "accesibilidad",
-            "adulto",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
             "hombre",
-            "silla de ruedas manual"
+            "hombre en silla de ruedas manual",
+            "silla de ruedas"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -6084,18 +6046,11 @@
         "emoji": "👩‍🦯‍➡️",
         "tags": [
             "accesibilidad",
-            "adulta",
             "bastón",
-            "ceguera",
             "ciega",
-            "ciego",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
             "invidente",
-            "mujer"
+            "mujer",
+            "mujer con bastón"
         ]
     },
     "1F469-200D-1F9B0": {
@@ -6142,14 +6097,9 @@
         "emoji": "👩‍🦼‍➡️",
         "tags": [
             "accesibilidad",
-            "adulta",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
             "mujer",
-            "silla de ruedas eléctrica"
+            "mujer en silla de ruedas eléctrica",
+            "silla de ruedas"
         ]
     },
     "1F469-200D-1F9BD": {
@@ -6164,14 +6114,9 @@
         "emoji": "👩‍🦽‍➡️",
         "tags": [
             "accesibilidad",
-            "adulta",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
             "mujer",
-            "silla de ruedas manual"
+            "mujer en silla de ruedas manual",
+            "silla de ruedas"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -10019,18 +9964,10 @@
         "emoji": "🚶‍♀️‍➡️",
         "tags": [
             "andar",
-            "caminando",
-            "caminar",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
+            "caminata",
+            "marcha",
             "mujer",
-            "persona caminando",
-            "signo",
-            "signo femenino",
-            "símbolo"
+            "mujer caminando"
         ]
     },
     "1F6B6-200D-2642-FE0F": {
@@ -10046,18 +9983,10 @@
         "emoji": "🚶‍♂️‍➡️",
         "tags": [
             "andar",
-            "caminando",
-            "caminar",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
+            "caminata",
             "hombre",
-            "persona caminando",
-            "signo",
-            "signo masculino",
-            "símbolo"
+            "hombre caminando",
+            "marcha"
         ]
     },
     "1F6B6-200D-27A1-FE0F": {
@@ -10066,11 +9995,6 @@
             "andar",
             "caminando",
             "caminar",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
             "persona caminando"
         ]
     },
@@ -12317,19 +12241,10 @@
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
             "arrodillada",
-            "arrodillado",
             "arrodillarse",
             "de rodillas",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
             "mujer",
-            "persona de rodillas",
-            "signo",
-            "signo femenino",
-            "símbolo"
+            "mujer de rodillas"
         ]
     },
     "1F9CE-200D-2642-FE0F": {
@@ -12344,20 +12259,11 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
-            "arrodillada",
             "arrodillado",
             "arrodillarse",
             "de rodillas",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
             "hombre",
-            "persona de rodillas",
-            "signo",
-            "signo masculino",
-            "símbolo"
+            "hombre de rodillas"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
@@ -12367,11 +12273,6 @@
             "arrodillado",
             "arrodillarse",
             "de rodillas",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
             "persona de rodillas"
         ]
     },
@@ -12568,19 +12469,9 @@
         "emoji": "🧑‍🦯‍➡️",
         "tags": [
             "accesibilidad",
-            "bastón",
-            "ceguera",
-            "ciega",
             "ciego",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
-            "género",
             "invidente",
-            "neutro",
-            "persona adulta"
+            "persona con bastón"
         ]
     },
     "1F9D1-200D-1F9B0": {
@@ -12630,15 +12521,8 @@
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
             "accesibilidad",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
-            "género",
-            "neutro",
-            "persona adulta",
-            "silla de ruedas eléctrica"
+            "persona en silla de ruedas eléctrica",
+            "silla de ruedas"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -12652,15 +12536,8 @@
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
             "accesibilidad",
-            "derecha",
-            "dirección",
-            "este",
-            "flecha",
-            "flecha hacia la derecha",
-            "género",
-            "neutro",
-            "persona adulta",
-            "silla de ruedas manual"
+            "persona en silla de ruedas manual",
+            "silla de ruedas"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {

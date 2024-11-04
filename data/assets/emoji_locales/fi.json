@@ -3965,16 +3965,11 @@
     "1F3C3-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♀️‍➡️",
         "tags": [
-            "ilmansuunta",
-            "itä",
             "juokseminen",
+            "juokseva nainen",
             "juoksija",
-            "maratoni",
-            "naissymboli",
-            "nuoli",
-            "nuoli oikealle",
-            "pääilmansuunta",
-            "venus-symboli"
+            "lenkki",
+            "nainen"
         ]
     },
     "1F3C3-200D-2642-FE0F": {
@@ -3989,29 +3984,19 @@
     "1F3C3-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♂️‍➡️",
         "tags": [
-            "ilmansuunta",
-            "itä",
             "juokseminen",
+            "juokseva mies",
             "juoksija",
-            "maratoni",
-            "mars-symboli",
-            "miessymboli",
-            "nuoli",
-            "nuoli oikealle",
-            "pääilmansuunta"
+            "lenkki",
+            "mies"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
         "emoji": "🏃‍➡️",
         "tags": [
-            "ilmansuunta",
-            "itä",
             "juokseminen",
             "juoksija",
-            "maratoni",
-            "nuoli",
-            "nuoli oikealle",
-            "pääilmansuunta"
+            "maratoni"
         ]
     },
     "1F3C4": {
@@ -5718,15 +5703,9 @@
         "emoji": "👨‍🦯‍➡️",
         "tags": [
             "esteettömyys",
-            "ilmansuunta",
-            "itä",
             "mies",
-            "miespuolinen",
-            "nuoli",
-            "nuoli oikealle",
-            "pääilmansuunta",
-            "sokea",
-            "valkoinen keppi"
+            "mies ja valkoinen keppi",
+            "sokea"
         ]
     },
     "1F468-200D-1F9B0": {
@@ -5773,14 +5752,9 @@
         "emoji": "👨‍🦼‍➡️",
         "tags": [
             "esteettömyys",
-            "ilmansuunta",
-            "itä",
             "mies",
-            "miespuolinen",
-            "moottoroitu pyörätuoli",
-            "nuoli",
-            "nuoli oikealle",
-            "pääilmansuunta"
+            "mies moottoroidussa pyörätuolissa",
+            "pyörätuoli"
         ]
     },
     "1F468-200D-1F9BD": {
@@ -5795,14 +5769,9 @@
         "emoji": "👨‍🦽‍➡️",
         "tags": [
             "esteettömyys",
-            "ilmansuunta",
-            "itä",
-            "käsikäyttöinen pyörätuoli",
             "mies",
-            "miespuolinen",
-            "nuoli",
-            "nuoli oikealle",
-            "pääilmansuunta"
+            "mies käsikäyttöisessä pyörätuolissa",
+            "pyörätuoli"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -6108,15 +6077,9 @@
         "emoji": "👩‍🦯‍➡️",
         "tags": [
             "esteettömyys",
-            "ilmansuunta",
-            "itä",
             "nainen",
-            "naispuolinen",
-            "nuoli",
-            "nuoli oikealle",
-            "pääilmansuunta",
-            "sokea",
-            "valkoinen keppi"
+            "nainen ja valkoinen keppi",
+            "sokea"
         ]
     },
     "1F469-200D-1F9B0": {
@@ -6163,14 +6126,9 @@
         "emoji": "👩‍🦼‍➡️",
         "tags": [
             "esteettömyys",
-            "ilmansuunta",
-            "itä",
-            "moottoroitu pyörätuoli",
             "nainen",
-            "naispuolinen",
-            "nuoli",
-            "nuoli oikealle",
-            "pääilmansuunta"
+            "nainen moottoroidussa pyörätuolissa",
+            "pyörätuoli"
         ]
     },
     "1F469-200D-1F9BD": {
@@ -6185,14 +6143,9 @@
         "emoji": "👩‍🦽‍➡️",
         "tags": [
             "esteettömyys",
-            "ilmansuunta",
-            "itä",
-            "käsikäyttöinen pyörätuoli",
             "nainen",
-            "naispuolinen",
-            "nuoli",
-            "nuoli oikealle",
-            "pääilmansuunta"
+            "nainen käsikäyttöisessä pyörätuolissa",
+            "pyörätuoli"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -10217,18 +10170,10 @@
     "1F6B6-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♀️‍➡️",
         "tags": [
-            "ilmansuunta",
-            "itä",
-            "jalankulkija",
-            "kävelijä",
-            "kävellä",
+            "kävelevä nainen",
             "kävely",
-            "naissymboli",
-            "nuoli",
-            "nuoli oikealle",
-            "patikointi",
-            "pääilmansuunta",
-            "venus-symboli"
+            "nainen",
+            "patikointi"
         ]
     },
     "1F6B6-200D-2642-FE0F": {
@@ -10242,33 +10187,20 @@
     "1F6B6-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♂️‍➡️",
         "tags": [
-            "ilmansuunta",
-            "itä",
-            "jalankulkija",
-            "kävelijä",
-            "kävellä",
+            "kävelevä mies",
             "kävely",
-            "mars-symboli",
-            "miessymboli",
-            "nuoli",
-            "nuoli oikealle",
-            "patikointi",
-            "pääilmansuunta"
+            "mies",
+            "patikointi"
         ]
     },
     "1F6B6-200D-27A1-FE0F": {
         "emoji": "🚶‍➡️",
         "tags": [
-            "ilmansuunta",
-            "itä",
             "jalankulkija",
             "kävelijä",
             "kävellä",
             "kävely",
-            "nuoli",
-            "nuoli oikealle",
-            "patikointi",
-            "pääilmansuunta"
+            "patikointi"
         ]
     },
     "1F6B7": {
@@ -12437,16 +12369,8 @@
     "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
-            "ilmansuunta",
-            "itä",
-            "naissymboli",
-            "nuoli",
-            "nuoli oikealle",
-            "polvistua",
-            "polvistuminen",
-            "polvistuva ihminen",
-            "pääilmansuunta",
-            "venus-symboli"
+            "nainen",
+            "polvistuva"
         ]
     },
     "1F9CE-200D-2642-FE0F": {
@@ -12459,29 +12383,16 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
-            "ilmansuunta",
-            "itä",
-            "mars-symboli",
-            "miessymboli",
-            "nuoli",
-            "nuoli oikealle",
-            "polvistua",
-            "polvistuminen",
-            "polvistuva ihminen",
-            "pääilmansuunta"
+            "mies",
+            "polvistuva"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
         "emoji": "🧎‍➡️",
         "tags": [
-            "ilmansuunta",
-            "itä",
-            "nuoli",
-            "nuoli oikealle",
             "polvistua",
             "polvistuminen",
-            "polvistuva ihminen",
-            "pääilmansuunta"
+            "polvistuva ihminen"
         ]
     },
     "1F9CF": {
@@ -12659,20 +12570,9 @@
     "1F9D1-200D-1F9AF-200D-27A1-FE0F": {
         "emoji": "🧑‍🦯‍➡️",
         "tags": [
-            "aikaihminen",
-            "aikuinen",
-            "aikuisuus",
             "esteettömyys",
-            "ilmansuunta",
-            "itä",
-            "keski-ikäinen",
-            "nuoli",
-            "nuoli oikealle",
-            "pääilmansuunta",
-            "sokea",
-            "sukupuolineutraali",
-            "täysikasvuinen",
-            "valkoinen keppi"
+            "henkilö ja valkoinen keppi",
+            "sokea"
         ]
     },
     "1F9D1-200D-1F9B0": {
@@ -12733,19 +12633,9 @@
     "1F9D1-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
-            "aikaihminen",
-            "aikuinen",
-            "aikuisuus",
             "esteettömyys",
-            "ilmansuunta",
-            "itä",
-            "keski-ikäinen",
-            "moottoroitu pyörätuoli",
-            "nuoli",
-            "nuoli oikealle",
-            "pääilmansuunta",
-            "sukupuolineutraali",
-            "täysikasvuinen"
+            "henkilö moottoroidussa pyörätuolissa",
+            "pyörätuoli"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -12758,19 +12648,9 @@
     "1F9D1-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
-            "aikaihminen",
-            "aikuinen",
-            "aikuisuus",
             "esteettömyys",
-            "ilmansuunta",
-            "itä",
-            "keski-ikäinen",
-            "käsikäyttöinen pyörätuoli",
-            "nuoli",
-            "nuoli oikealle",
-            "pääilmansuunta",
-            "sukupuolineutraali",
-            "täysikasvuinen"
+            "henkilö käsikäyttöisessä pyörätuolissa",
+            "pyörätuoli"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {

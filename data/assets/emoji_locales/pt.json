@@ -3938,18 +3938,10 @@
         "emoji": "🏃‍♀️‍➡️",
         "tags": [
             "corrida",
-            "direita",
-            "direção",
             "esporte",
-            "feminino",
-            "leste",
             "maratona",
-            "maratonista",
             "mulher",
-            "pessoa correndo",
-            "seta",
-            "seta para a direita",
-            "símbolo de feminino"
+            "mulher correndo"
         ]
     },
     "1F3C3-200D-2642-FE0F": {
@@ -3965,33 +3957,20 @@
         "emoji": "🏃‍♂️‍➡️",
         "tags": [
             "corrida",
-            "direita",
-            "direção",
             "esporte",
             "homem",
-            "leste",
-            "maratona",
-            "maratonista",
-            "masculino",
-            "pessoa correndo",
-            "seta",
-            "seta para a direita",
-            "símbolo de masculino"
+            "homem correndo",
+            "maratona"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
         "emoji": "🏃‍➡️",
         "tags": [
             "corrida",
-            "direita",
-            "direção",
             "esporte",
-            "leste",
             "maratona",
             "maratonista",
-            "pessoa correndo",
-            "seta",
-            "seta para a direita"
+            "pessoa correndo"
         ]
     },
     "1F3C4": {
@@ -5662,16 +5641,10 @@
     "1F468-200D-1F9AF-200D-27A1-FE0F": {
         "emoji": "👨‍🦯‍➡️",
         "tags": [
-            "acessibilidade",
-            "adulto",
-            "bengala para cegos",
-            "cegueira",
-            "direita",
-            "direção",
+            "accessibilidade",
+            "cego",
             "homem",
-            "leste",
-            "seta",
-            "seta para a direita"
+            "homem com bengala para cego"
         ]
     },
     "1F468-200D-1F9B0": {
@@ -5718,14 +5691,9 @@
         "emoji": "👨‍🦼‍➡️",
         "tags": [
             "acessibilidade",
-            "adulto",
-            "cadeira de rodas motorizada",
-            "direita",
-            "direção",
+            "cadeira de rodas",
             "homem",
-            "leste",
-            "seta",
-            "seta para a direita"
+            "homem em cadeira de rodas motorizada"
         ]
     },
     "1F468-200D-1F9BD": {
@@ -5740,14 +5708,9 @@
         "emoji": "👨‍🦽‍➡️",
         "tags": [
             "acessibilidade",
-            "adulto",
-            "cadeira de rodas manual",
-            "direita",
-            "direção",
+            "cadeira de rodas",
             "homem",
-            "leste",
-            "seta",
-            "seta para a direita"
+            "homem em cadeira de rodas manual"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -6057,16 +6020,10 @@
     "1F469-200D-1F9AF-200D-27A1-FE0F": {
         "emoji": "👩‍🦯‍➡️",
         "tags": [
-            "acessibilidade",
-            "adulta",
-            "bengala para cegos",
-            "cegueira",
-            "direita",
-            "direção",
-            "leste",
+            "accessibilidade",
+            "cega",
             "mulher",
-            "seta",
-            "seta para a direita"
+            "mulher com bengala para cego"
         ]
     },
     "1F469-200D-1F9B0": {
@@ -6113,14 +6070,9 @@
         "emoji": "👩‍🦼‍➡️",
         "tags": [
             "acessibilidade",
-            "adulta",
-            "cadeira de rodas motorizada",
-            "direita",
-            "direção",
-            "leste",
+            "cadeira de rodas",
             "mulher",
-            "seta",
-            "seta para a direita"
+            "mulher em cadeira de rodas motorizada"
         ]
     },
     "1F469-200D-1F9BD": {
@@ -6135,14 +6087,9 @@
         "emoji": "👩‍🦽‍➡️",
         "tags": [
             "acessibilidade",
-            "adulta",
-            "cadeira de rodas manual",
-            "direita",
-            "direção",
-            "leste",
+            "cadeira de rodas",
             "mulher",
-            "seta",
-            "seta para a direita"
+            "mulher em cadeira de rodas manual"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -9973,16 +9920,8 @@
         "tags": [
             "andar",
             "caminhar",
-            "direita",
-            "direção",
-            "feminino",
-            "leste",
-            "mulher",
-            "pessoa andando",
-            "pessoa caminhando",
-            "seta",
-            "seta para a direita",
-            "símbolo de feminino"
+            "mulher andando",
+            "mulher caminhando"
         ]
     },
     "1F6B6-200D-2642-FE0F": {
@@ -9998,16 +9937,8 @@
         "tags": [
             "andar",
             "caminhar",
-            "direita",
-            "direção",
-            "homem",
-            "leste",
-            "masculino",
-            "pessoa andando",
-            "pessoa caminhando",
-            "seta",
-            "seta para a direita",
-            "símbolo de masculino"
+            "homem andando",
+            "homem caminhando"
         ]
     },
     "1F6B6-200D-27A1-FE0F": {
@@ -10015,13 +9946,8 @@
         "tags": [
             "andar",
             "caminhar",
-            "direita",
-            "direção",
-            "leste",
             "pessoa andando",
-            "pessoa caminhando",
-            "seta",
-            "seta para a direita"
+            "pessoa caminhando"
         ]
     },
     "1F6B7": {
@@ -12162,17 +12088,8 @@
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
             "ajoelhada",
-            "ajoelhar",
-            "direita",
-            "direção",
-            "feminino",
-            "leste",
             "mulher",
-            "pessoa ajoelhada",
-            "pessoa ajoelhando",
-            "seta",
-            "seta para a direita",
-            "símbolo de feminino"
+            "mulher ajoelhando"
         ]
     },
     "1F9CE-200D-2642-FE0F": {
@@ -12185,18 +12102,9 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
-            "ajoelhada",
-            "ajoelhar",
-            "direita",
-            "direção",
+            "ajoelhado",
             "homem",
-            "leste",
-            "masculino",
-            "pessoa ajoelhada",
-            "pessoa ajoelhando",
-            "seta",
-            "seta para a direita",
-            "símbolo de masculino"
+            "homem ajoelhando"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
@@ -12204,13 +12112,8 @@
         "tags": [
             "ajoelhada",
             "ajoelhar",
-            "direita",
-            "direção",
-            "leste",
             "pessoa ajoelhada",
-            "pessoa ajoelhando",
-            "seta",
-            "seta para a direita"
+            "pessoa ajoelhando"
         ]
     },
     "1F9CF": {
@@ -12385,16 +12288,8 @@
         "emoji": "🧑‍🦯‍➡️",
         "tags": [
             "acessibilidade",
-            "adulto",
-            "bengala para cegos",
-            "cegueira",
-            "direita",
-            "direção",
-            "gênero não especificado",
-            "leste",
-            "pessoa",
-            "seta",
-            "seta para a direita"
+            "cego",
+            "pessoa com bengala para cego"
         ]
     },
     "1F9D1-200D-1F9B0": {
@@ -12444,15 +12339,8 @@
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
             "acessibilidade",
-            "adulto",
-            "cadeira de rodas motorizada",
-            "direita",
-            "direção",
-            "gênero não especificado",
-            "leste",
-            "pessoa",
-            "seta",
-            "seta para a direita"
+            "cadeira de rodas",
+            "pessoa em cadeira de rodas motorizada"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -12466,15 +12354,8 @@
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
             "acessibilidade",
-            "adulto",
-            "cadeira de rodas manual",
-            "direita",
-            "direção",
-            "gênero não especificado",
-            "leste",
-            "pessoa",
-            "seta",
-            "seta para a direita"
+            "cadeira de rodas",
+            "pessoa em cadeira de rodas manual"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {

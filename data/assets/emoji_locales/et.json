@@ -3896,16 +3896,11 @@
     "1F3C3-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♀️‍➡️",
         "tags": [
-            "ida",
-            "jooks",
+            "jooksev naine",
             "jooksja",
             "maraton",
             "naine",
-            "naisesümbol",
-            "nool",
-            "nool paremale",
-            "suund",
-            "sümbol"
+            "võistlus"
         ]
     },
     "1F3C3-200D-2642-FE0F": {
@@ -3920,28 +3915,19 @@
     "1F3C3-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♂️‍➡️",
         "tags": [
-            "ida",
-            "jooks",
+            "jooksev mees",
             "jooksja",
             "maraton",
             "mees",
-            "mehesümbol",
-            "nool",
-            "nool paremale",
-            "suund",
-            "sümbol"
+            "võistlus"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
         "emoji": "🏃‍➡️",
         "tags": [
-            "ida",
             "jooks",
             "jooksja",
-            "maraton",
-            "nool",
-            "nool paremale",
-            "suund"
+            "maraton"
         ]
     },
     "1F3C4": {
@@ -5566,15 +5552,10 @@
     "1F468-200D-1F9AF-200D-27A1-FE0F": {
         "emoji": "👨‍🦯‍➡️",
         "tags": [
-            "ida",
-            "kohalejõudmine",
             "ligipääs",
             "mees",
-            "nool",
-            "nool paremale",
             "pime",
-            "suund",
-            "valge kepp"
+            "valge kepiga mees"
         ]
     },
     "1F468-200D-1F9B0": {
@@ -5617,15 +5598,11 @@
     "1F468-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "👨‍🦼‍➡️",
         "tags": [
-            "elektriratastool",
-            "ida",
-            "juurdepääs",
+            "elektriratastoolis mees",
+            "elektriratastoolis olev mees",
             "ligipääs",
             "mees",
-            "nool",
-            "nool paremale",
-            "ratastool",
-            "suund"
+            "ratastool"
         ]
     },
     "1F468-200D-1F9BD": {
@@ -5640,15 +5617,11 @@
     "1F468-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "👨‍🦽‍➡️",
         "tags": [
-            "ida",
-            "juurdepääs",
             "ligipääs",
-            "manuaalratastool",
+            "manuaalratastoolis mees",
+            "manuaalratastoolis olev mees",
             "mees",
-            "nool",
-            "nool paremale",
-            "ratastool",
-            "suund"
+            "ratastool"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -5945,15 +5918,10 @@
     "1F469-200D-1F9AF-200D-27A1-FE0F": {
         "emoji": "👩‍🦯‍➡️",
         "tags": [
-            "ida",
-            "kohalejõudmine",
             "ligipääs",
             "naine",
-            "nool",
-            "nool paremale",
             "pime",
-            "suund",
-            "valge kepp"
+            "valge kepiga naine"
         ]
     },
     "1F469-200D-1F9B0": {
@@ -5996,15 +5964,11 @@
     "1F469-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "👩‍🦼‍➡️",
         "tags": [
-            "elektriratastool",
-            "ida",
-            "juurdepääs",
+            "elektriratastoolis naine",
+            "elektriratastoolis olev naine",
             "ligipääs",
             "naine",
-            "nool",
-            "nool paremale",
-            "ratastool",
-            "suund"
+            "ratastool"
         ]
     },
     "1F469-200D-1F9BD": {
@@ -6019,15 +5983,11 @@
     "1F469-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "👩‍🦽‍➡️",
         "tags": [
-            "ida",
             "juurdepääs",
-            "ligipääs",
-            "manuaalratastool",
+            "manuaalratastoolis naine",
+            "manuaalratastoolis olev naine",
             "naine",
-            "nool",
-            "nool paremale",
-            "ratastool",
-            "suund"
+            "ratastool"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -9874,16 +9834,11 @@
     "1F6B6-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♀️‍➡️",
         "tags": [
-            "ida",
             "jalakäija",
             "jalutamine",
             "kõndimine",
-            "naine",
-            "naisesümbol",
-            "nool",
-            "nool paremale",
-            "suund",
-            "sümbol"
+            "kõndiv naine",
+            "naine"
         ]
     },
     "1F6B6-200D-2642-FE0F": {
@@ -9898,28 +9853,19 @@
     "1F6B6-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♂️‍➡️",
         "tags": [
-            "ida",
             "jalakäija",
             "jalutamine",
             "kõndimine",
-            "mees",
-            "mehesümbol",
-            "nool",
-            "nool paremale",
-            "suund",
-            "sümbol"
+            "kõndiv mees",
+            "mees"
         ]
     },
     "1F6B6-200D-27A1-FE0F": {
         "emoji": "🚶‍➡️",
         "tags": [
-            "ida",
             "jalakäija",
             "jalutamine",
-            "kõndimine",
-            "nool",
-            "nool paremale",
-            "suund"
+            "kõndimine"
         ]
     },
     "1F6B7": {
@@ -12047,16 +11993,9 @@
     "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
-            "ida",
-            "inimene",
             "naine",
-            "naisesümbol",
-            "nool",
-            "nool paremale",
             "põlvili",
-            "põlvitav",
-            "suund",
-            "sümbol"
+            "põlvitav"
         ]
     },
     "1F9CE-200D-2642-FE0F": {
@@ -12070,28 +12009,17 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
-            "ida",
-            "inimene",
             "mees",
-            "mehesümbol",
-            "nool",
-            "nool paremale",
             "põlvili",
-            "põlvitav",
-            "suund",
-            "sümbol"
+            "põlvitav"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
         "emoji": "🧎‍➡️",
         "tags": [
-            "ida",
             "inimene",
-            "nool",
-            "nool paremale",
             "põlvili",
-            "põlvitav",
-            "suund"
+            "põlvitav"
         ]
     },
     "1F9CF": {
@@ -12260,16 +12188,9 @@
     "1F9D1-200D-1F9AF-200D-27A1-FE0F": {
         "emoji": "🧑‍🦯‍➡️",
         "tags": [
-            "ida",
-            "kohalejõudmine",
             "ligipääs",
-            "nool",
-            "nool paremale",
             "pime",
-            "sooliselt neutraalne",
-            "suund",
-            "täiskasvanu",
-            "valge kepp"
+            "valge kepiga inimene"
         ]
     },
     "1F9D1-200D-1F9B0": {
@@ -12314,16 +12235,9 @@
     "1F9D1-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
-            "elektriratastool",
-            "ida",
-            "juurdepääs",
-            "ligipääs",
-            "nool",
-            "nool paremale",
-            "ratastool",
-            "sooliselt neutraalne",
-            "suund",
-            "täiskasvanu"
+            "elektrilises ratastoolis inimene",
+            "ligipääsetavus",
+            "ratastool"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -12336,16 +12250,9 @@
     "1F9D1-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
-            "ida",
-            "juurdepääs",
-            "ligipääs",
-            "manuaalratastool",
-            "nool",
-            "nool paremale",
-            "ratastool",
-            "sooliselt neutraalne",
-            "suund",
-            "täiskasvanu"
+            "ligipääsetavus",
+            "manuaalses ratastoolis inimene",
+            "ratastool"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {
