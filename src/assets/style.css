@@ -26,20 +26,20 @@
 }
 
 .flowbox-child-custom:focus button {
-    border-color: rgba(255, 0, 0, 1);
-    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 1);
+    border-color: var(--accent-color);
+    box-shadow: 0px 0px 2px 1px var(--accent-color);
     outline: transparent;
 }
 
 .flowbox-child-custom.active button {
-    border-color: rgba(255, 0, 0, 1);
-    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 1);
+    border-color: var(--accent-color);
+    box-shadow: 0px 0px 2px 1px var(--accent-color);
     outline: transparent;
 }
 
 .flowbox-child-custom.selected button {
-    border-color: rgba(255, 0, 0, 0.5);
-    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 0.5);
+    border-color: var(--accent-bg-color);
+    box-shadow: 0px 0px 2px 1px var(--accent-bg-color);
     outline: transparent;
 }
 
@@ -56,15 +56,15 @@
 }
 
 #emoji_categories_box button:focus {
-    border-bottom-color: rgb(12, 170, 12);
-    box-shadow: 0px 3px 0px 0px rgb(12, 170, 12);
+    border-bottom-color: var(--accent-color);
+    box-shadow: 0px 3px 0px 0px var(--accent-color);
     outline: transparent;
     border-radius: 0;
 }
 
 #emoji_categories_box button.selected {
-    border-bottom-color: rgb(12, 170, 12);
-    box-shadow: 0px 3px 0px 0px rgb(12, 170, 12);
+    border-bottom-color: var(--accent-color);
+    box-shadow: 0px 3px 0px 0px var(--accent-color);
     outline: transparent;
     border-radius: 0;
 }
