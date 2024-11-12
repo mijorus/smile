@@ -34,6 +34,7 @@ class SkintoneSelector(CustomPopover):
             max_children_per_line=100,
             min_children_per_line=100,
             hexpand=True,
+            halign=Gtk.Align.CENTER,
             margin_top=5,
             margin_bottom=5,
             margin_start=2,
@@ -93,6 +94,7 @@ class SkintoneSelector(CustomPopover):
             )
         )
 
+        self.set_size_request(-1, -1)
         self.set_content(popover_content)
 
     def handle_activate(self, event):
