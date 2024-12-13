@@ -21,6 +21,7 @@
 .flowbox-child-custom {
     border-color: transparent;
     box-shadow: none;
+    padding: 0;
     outline: transparent;
     background: transparent;
 }
