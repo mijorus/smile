@@ -45,7 +45,7 @@ class Picker(Gtk.ApplicationWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(title="Smile", resizable=True, *args, **kwargs)
 
-        EMOJI_LIST_MIN_HEIGHT = 320
+        EMOJI_LIST_MIN_HEIGHT = 314
 
         self.set_default_size(1, 1)
 
@@ -114,9 +114,9 @@ class Picker(Gtk.ApplicationWindow):
         self.emoji_list = Gtk.FlowBox(
             valign=Gtk.Align.START,
             homogeneous=True,
+            row_spacing=6,
+            column_spacing=6,
             css_classes=['emoji_list_box'],
-            margin_top=2,
-            margin_bottom=2,
             selection_mode=Gtk.SelectionMode.SINGLE,
             max_children_per_line=self.EMOJI_GRID_COL_N,
             min_children_per_line=self.EMOJI_GRID_COL_N
