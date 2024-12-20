@@ -1,0 +1,340 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the smile package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: smile\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-14 15:46+0900\n"
+"PO-Revision-Date: 2024-12-18 18:01+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#: src/main.py:109
+msgid "translator_credits"
+msgstr "skantek"
+
+#: src/Picker.py:88
+msgid ""
+"Whoa, it's still empty! \n"
+"Your most used emojis will show up here\n"
+msgstr ""
+"Ojej, nadal tu pusto!\n"
+"Twoje najbardziej używane emotikony pojawią się tutaj\n"
+
+#: src/Picker.py:510
+msgid "No skintones available"
+msgstr "Brak dostępnych odcieni skóry"
+
+#: src/Picker.py:626
+msgid "Copied!"
+msgstr "Skopiowane!"
+
+#: src/Picker.py:627
+msgid ""
+"I have copied the emoji to the clipboard. You can now paste it in any input "
+"field."
+msgstr ""
+"Skopiowałem emotikon do schowka. Możesz go teraz wkleić do jakiegokolwiek "
+"pola tekstowego."
+
+#: src/Settings.py:28
+msgid "Settings"
+msgstr "Ustawienia"
+
+#. General group
+#: src/Settings.py:31
+msgid "General"
+msgstr "Główne"
+
+#: src/Settings.py:33
+msgid "Run in the background"
+msgstr "Działaj w tle"
+
+#: src/Settings.py:33
+msgid "Keep Smile running in the background for a faster launch"
+msgstr "Pozostaw Smile działającego w tle dla szybszego otwierania"
+
+#: src/Settings.py:37
+msgid "Minimize on exit"
+msgstr "Zminimalizuj na wyjściu"
+
+#: src/Settings.py:37
+msgid "Minimize the window when selecting an emoji"
+msgstr "Zminimalizuj okno po wybraniu emotikonu"
+
+#. Mouse group
+#: src/Settings.py:43
+msgid "Mouse behaviour"
+msgstr "Zachowanie myszy"
+
+#: src/Settings.py:45
+msgid "Mouse multi select"
+msgstr "Wielokrotne zaznaczanie myszą"
+
+#: src/Settings.py:45
+msgid ""
+"Select multiple emojis with a single mouse click, replacing Shift + Click; "
+"press Enter to confirm and Esc to dismiss."
+msgstr ""
+"Wybierz kilka emotikonów pojedynczym naciśnięciem myszy, zamieniając Shift "
+"+ LPM; naciśnij Enter, aby potwierdzić lub Esc, aby anulować."
+
+#. Paste emoji group
+#: src/Settings.py:49
+msgid "Paste emojis automatically"
+msgstr "Wklejaj emotikony automatycznie"
+
+#: src/Settings.py:55
+msgid "Status:"
+msgstr "Status:"
+
+#: src/Settings.py:60
+msgid "Enabled"
+msgstr "Włączone"
+
+#: src/Settings.py:62
+msgid ""
+"Emulates the Ctrl+V shortcut; might <b>not work</b> on some programs.\n"
+"If using the extension, <b>please ensure that it is correctly ENABLED</b>."
+msgstr ""
+"Emuluje skrót Ctrl + V; może <b>nie działać</b> na niektórych aplikacjach.\n"
+"Jeśli korzystasz z rozszerzenia, <b>proszę upewnić się, że jest ono "
+"poprawnie WŁĄCZONE</b>."
+
+#: src/Settings.py:68
+msgid "Get the GNOME extension"
+msgstr "Pobierz rozszerzenie powłoki GNOME"
+
+#: src/Settings.py:68
+msgid "Install the extension to paste automatically on X11 and Wayland"
+msgstr ""
+"Zainstaluj rozszerzenie, aby wklejać automatycznie na X11 oraz Wayland"
+
+#. Customization group
+#: src/Settings.py:72
+msgid "Customization"
+msgstr "Personalizacja"
+
+#: src/Settings.py:76 src/Settings.py:247
+msgid "Localized tags"
+msgstr "Zlokalizowane tagi"
+
+#: src/Settings.py:78
+msgid "Use localized tags"
+msgstr "Wykorzystuj zlokalizowane tagi"
+
+#: src/Settings.py:83
+msgid "Merge localized and English tags"
+msgstr "Połącz zlokalizowane i angielskie tagi"
+
+#: src/Settings.py:85
+msgid "Use both localized tags and English ones at the same time"
+msgstr "Wykorzystuj zlokalizowane tagi wraz z angielskimi w tym samym czasie"
+
+#. Page 2
+#: src/Settings.py:94
+msgid "Custom tags"
+msgstr "Własne tagi"
+
+#: src/Settings.py:126
+msgid "Available (using the GNOME extension)"
+msgstr "Dostępne (za pomocą rozszerzenia powłoki GNOME)"
+
+#: src/Settings.py:128
+msgid "Requires the GNOME extension on Wayland"
+msgstr "Wymaga rozszerzenie powłoki GNOME na Wayland"
+
+#: src/Settings.py:130
+msgid "Available (using xdotool on X11)"
+msgstr "Dostępne (za pomocą xdotool na X11)"
+
+#: src/Settings.py:143
+msgid "Launch the app with a shortcut"
+msgstr "Otwórz aplikację za pomocą skrótu"
+
+#: src/Settings.py:144
+msgid ""
+"Create a new keyboard shortcut in your system settings and paste the "
+"following code as a custom command"
+msgstr ""
+"Utwórz nowy skrót klawiszowy w twoich ustawianiach systemu i wklej poniższy "
+"kod jako niestandardową komendę"
+
+#: src/Settings.py:180
+msgid "Remove"
+msgstr "Usuń"
+
+#: src/Settings.py:198
+msgid "There are no custom tags yet: create one with Alt + T"
+msgstr ""
+"Nie ma jeszcze żadnych niestandardowych tagów: utwórz taki za pomocą Alt + T"
+
+#: src/Settings.py:211
+msgid "Default skintone"
+msgstr "Domyślny odcień skóry"
+
+#: src/Settings.py:226
+msgid "Emoji size"
+msgstr "Wielkość emotikonów"
+
+#: src/Settings.py:228
+msgid "Default"
+msgstr "Domyślna"
+
+#: src/Settings.py:229
+msgid "Big"
+msgstr "Duża"
+
+#: src/Settings.py:230
+msgid "Bigger"
+msgstr "Większa"
+
+#: src/Settings.py:231
+msgid "Giant"
+msgstr "Gigantyczna"
+
+#: src/Settings.py:330
+msgid "Invalid file selected"
+msgstr "Wybrano niepoprawny plik"
+
+#: src/Settings.py:331
+msgid "The configuration file that you selected is not a valid backup."
+msgstr ""
+"Plik konfiguracji, który wybrałeś, nie jest prawidłową kopią zapasową."
+
+#: src/Settings.py:334
+msgid "Close"
+msgstr "Zamknij"
+
+#: src/ui/menu.ui:6
+msgid "Preferences"
+msgstr "Ustawienia"
+
+#: src/ui/menu.ui:10
+msgid "Shortcuts"
+msgstr "Skróty"
+
+#: src/ui/menu.ui:15
+msgid "What's new?"
+msgstr "Co nowego?"
+
+#: src/ui/menu.ui:19
+msgid "Install GNOME extension"
+msgstr "Zainstaluj rozszerzenie GNOME"
+
+#: src/ui/menu.ui:23
+msgid "Translate this app"
+msgstr "Przetłumacz tą aplikację"
+
+#: src/ui/menu.ui:26
+msgid "About"
+msgstr "O"
+
+#: src/ui/shortcuts.ui:12
+msgid "Mouse"
+msgstr "Mysz"
+
+#: src/ui/shortcuts.ui:48 src/ui/shortcuts.ui:164
+msgid "Open the skintone selector (if available)"
+msgstr "Otwórz wybieranie odcienia skóry (jeśli dostępne)"
+
+#: src/ui/shortcuts.ui:68 src/ui/shortcuts.ui:171
+msgid "Add a custom tag"
+msgstr "Dodaj niestandardowy tag"
+
+#: src/ui/shortcuts.ui:109
+msgid "Keyboard"
+msgstr "Klawiatura"
+
+#: src/ui/shortcuts.ui:114
+msgid ""
+"Copy the selected emoji and hide the window (When an emoji is highlighted)"
+msgstr ""
+"Skopiuj wybrany emotikon i ukryj okno (Kiedy emotikon jest zaznaczony)"
+
+#: src/ui/shortcuts.ui:121
+msgid "Copy first emoji and hide the window (When using the search bar)"
+msgstr ""
+"Skopiuj pierwszy emotikon i ukryj okno (Podczas używania paska wyszukiwania)"
+
+#: src/ui/shortcuts.ui:128
+msgid "Show the category on the right"
+msgstr "Pokaż kategorię po prawej"
+
+#: src/ui/shortcuts.ui:135
+msgid "Show the category on the left"
+msgstr "Pokaż kategorię po lewej"
+
+#: src/ui/shortcuts.ui:142 src/ShortcutsWindow.py:22
+msgid "Add an emoji to selection"
+msgstr "Dodaj emotikon do zaznaczenia"
+
+#: src/ui/shortcuts.ui:150
+msgid "Remove the last emoji from the selection"
+msgstr "Usuń ostatni emotikon z zaznaczenia"
+
+#: src/ui/shortcuts.ui:157
+msgid "Copy the selection and hide the window, without the highlighted emoji"
+msgstr "Skopiuj zaznaczenie i ukryj okno, bez zaznaczonego emotikona"
+
+#: src/ui/importexport-customtags.ui:7
+msgid "Export and import custom tags"
+msgstr "Eksportuj i importuj niestandardowe tagi"
+
+#: src/ui/importexport-customtags.ui:8
+msgid ""
+"Use the buttons below to create or restore custom tags from another machine"
+msgstr ""
+"Wykorzystaj przyciski poniżej, aby tworzyć lub przywracać niestandardowe "
+"tagi z innego urządzenia"
+
+#: src/ui/importexport-customtags.ui:23
+msgid "Export to file"
+msgstr "Eksportuj do pliku"
+
+#: src/ui/importexport-customtags.ui:29
+msgid "Import from file"
+msgstr "Importuj z pliku"
+
+#: src/components/SkintoneSelector.py:89
+msgid "<small>Press Enter to select or ESC to close</small>"
+msgstr "<small>Naciśnij Enter, aby wybrać lub Esc aby zamknąć</small>"
+
+#: src/components/CustomTagEntry.py:42
+#, python-brace-format
+msgid "<b>{emoji} Edit custom tags</b>"
+msgstr "<b>{emoji} Edytuj niestandardowe tagi</b>"
+
+#: src/components/CustomTagEntry.py:51
+msgid "List of custom tags, separated  by comma"
+msgstr "Lista niestandardowych tagów, podzielona przecinkami"
+
+#: src/components/CustomTagEntry.py:57
+#, python-brace-format
+msgid "<small><b>Default tags</b>: {default_tags}</small>"
+msgstr "<small><b>Domyślne tagi</b>: {default_tags}</small>"
+
+#: src/components/CustomTagEntry.py:65
+msgid "<small>Press Enter to save or ESC to dismiss</small>"
+msgstr "<small>Naciśnij Enter, aby zapisać, lub Esc, aby anulować</small>"
+
+#: src/components/UpdateDialog.py:29
+msgid "New features!"
+msgstr "Nowe funkcje!"
+
+#: src/components/UpdateDialog.py:33
+msgid "Dismiss"
+msgstr "Zamknij"
+
+#: src/ShortcutsWindow.py:23
+msgid "Copy the selected emoji and hide the window"
+msgstr "Skopiuj wybrany emotikon i ukryj okno"
