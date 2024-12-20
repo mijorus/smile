@@ -164,7 +164,7 @@ class Picker(Gtk.ApplicationWindow):
         self.search_entry.add_controller(search_controller_key)
 
         # Create an header bar
-        header_bar = Adw.HeaderBar(title_widget=Gtk.Box(), decoration_layout='icon:close', css_classes=['flat'])
+        header_bar = Adw.HeaderBar(title_widget=Gtk.Box(), decoration_layout='menu:close', css_classes=['flat'])
         menu_button = self.create_menu_button()
         header_bar.pack_start(menu_button)
         header_bar.set_title_widget(search_container)
