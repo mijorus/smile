@@ -403,7 +403,11 @@ class Picker(Gtk.ApplicationWindow):
             if focused_button:
                 # Focus is on an emoji button
                 if (keyval == Gdk.KEY_Return):
-                    self.copy_and_quit(focused_button)
+                    if self.settings.get_boolean('mouse-multi-select') and self.selection:
+                        self.copy_and_quit()
+                    else:
+                        self.copy_and_quit(focused_button)
+
                     return True
                 elif (not is_modifier) and (len(keyval_name) == 1) and re.match(r'\S', keyval_name):
                     self.search_entry.insert_text(keyval_name, -1)
