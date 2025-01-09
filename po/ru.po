@@ -1,65 +1,63 @@
-# Russian translation for Smile
+# Russian translation for Smile.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the smile package.
 # Сергей Ворон <voron@duck.com>, 2023.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: smile\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-17 16:09+0200\n"
-"PO-Revision-Date: 2023-08-17 23:04+0300\n"
-"Last-Translator: Сергей Ворон <voron@duck.com>\n"
+"POT-Creation-Date: 2024-04-14 15:46+0900\n"
+"PO-Revision-Date: 2025-01-09 03:08+0300\n"
+"Last-Translator: Pavel Ovchinnikov <opavel@internet.ru>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
-#: src/main.py:94
-msgid "Dismiss"
-msgstr "Отклонить"
-
-#: src/main.py:132
+#: src/main.py:109
 msgid "translator_credits"
-msgstr "Сергей Ворон <voron@duck.com>"
+msgstr "Pavel Ovchinnikov <opavel@internet.ru>"
 
-#: src/Picker.py:550
-msgid "Recently used emojis"
-msgstr "Недавно использованные эмодзи"
-
-#: src/Picker.py:552
+#: src/Picker.py:88
 msgid ""
 "Whoa, it's still empty! \n"
 "Your most used emojis will show up here\n"
 msgstr ""
-"Ого, здесь еще пусто! \n"
-"Здесь будут отображаться ваши наиболее часто используемые эмодзи\n"
+"Ого, здесь всё ещё пусто!\n"
+"Здесь будут отображаться часто используемые вами эмодзи\n"
 
-#: src/Picker.py:572
+#: src/Picker.py:510
+msgid "No skintones available"
+msgstr "Нет доступных оттенков кожи"
+
+#: src/Picker.py:626
 msgid "Copied!"
 msgstr "Скопировано!"
 
-#: src/Picker.py:573
+#: src/Picker.py:627
 msgid ""
 "I have copied the emoji to the clipboard. You can now paste it in any input "
 "field."
 msgstr ""
 "Я скопировал эмодзи в буфер обмена. Теперь вы можете вставить его в любое "
-"поле ввода."
+"место."
 
 #: src/Settings.py:28
 msgid "Settings"
 msgstr "Настройки"
 
+#. General group
 #: src/Settings.py:31
 msgid "General"
-msgstr "Общие"
+msgstr "Основные"
 
 #: src/Settings.py:33
 msgid "Run in the background"
-msgstr "Запускать в фоновом режиме"
+msgstr "Запустить в фоновом режиме"
 
 #: src/Settings.py:33
 msgid "Keep Smile running in the background for a faster launch"
@@ -73,22 +71,24 @@ msgstr "Свернуть при выходе"
 msgid "Minimize the window when selecting an emoji"
 msgstr "Свернуть окно при выборе эмодзи"
 
+#. Mouse group
 #: src/Settings.py:43
 msgid "Mouse behaviour"
 msgstr "Поведение мыши"
 
 #: src/Settings.py:45
 msgid "Mouse multi select"
-msgstr "Множественный выбор мышью"
+msgstr "Мульти-выбор мышью"
 
 #: src/Settings.py:45
 msgid ""
 "Select multiple emojis with a single mouse click, replacing Shift + Click; "
 "press Enter to confirm and Esc to dismiss."
 msgstr ""
-"Выберите несколько эмодзи одним щелчком мыши, заменив Shift + Click; "
-"нажмите Enter, чтобы подтвердить, и Esc, чтобы отклонить."
+"Выберите несколько эмодзи щелчком мыши, заменив Shift + клик; нажмите Enter "
+"для подтверждения и Esc для отклонения"
 
+#. Paste emoji group
 #: src/Settings.py:49
 msgid "Paste emojis automatically"
 msgstr "Вставлять эмодзи автоматически"
@@ -106,19 +106,18 @@ msgid ""
 "Emulates the Ctrl+V shortcut; might <b>not work</b> on some programs.\n"
 "If using the extension, <b>please ensure that it is correctly ENABLED</b>."
 msgstr ""
-"Эмулирует сочетание клавиш Ctrl+V; может <b>не работать</b> в некоторых "
-"программах.\n"
-"Если вы используете расширение, <b>убедитесь, что оно правильно ВКЛЮЧЕНО</"
-"b>."
+"Эмулирует Ctrl+V; может <b>не работать</b> в некоторых программах.\n"
+"Если вы используете расширение, <b>убедитесь, что оно правильно ВКЛЮЧЕНО<b>."
 
 #: src/Settings.py:68
 msgid "Get the GNOME extension"
-msgstr "Получить расширение GNOME"
+msgstr "Установить расширение GNOME"
 
 #: src/Settings.py:68
 msgid "Install the extension to paste automatically on X11 and Wayland"
 msgstr "Установите расширение для автоматической вставки в X11 и Wayland"
 
+#. Customization group
 #: src/Settings.py:72
 msgid "Customization"
 msgstr "Персонализация"
@@ -137,8 +136,9 @@ msgstr "Объединить локализованные и английски�
 
 #: src/Settings.py:85
 msgid "Use both localized tags and English ones at the same time"
-msgstr "Использовать одновременно как локализованные теги, так и английские"
+msgstr "Использовать одновременно локализованные и английские теги"
 
+#. Page 2
 #: src/Settings.py:94
 msgid "Custom tags"
 msgstr "Пользовательские теги"
@@ -149,23 +149,23 @@ msgstr "Доступно (с расширением GNOME)"
 
 #: src/Settings.py:128
 msgid "Requires the GNOME extension on Wayland"
-msgstr "Требуется расширение GNOME для Wayland"
+msgstr "Необходимо расширение GNOME для Wayland"
 
 #: src/Settings.py:130
 msgid "Available (using xdotool on X11)"
-msgstr "Доступно (с помощью xdotool в X11)"
+msgstr "Доступно (с xdotool на X11)"
 
 #: src/Settings.py:143
 msgid "Launch the app with a shortcut"
-msgstr "Запуск приложение с помощью ярлыка"
+msgstr "Запустить приложение с помощью ярлыка"
 
 #: src/Settings.py:144
 msgid ""
 "Create a new keyboard shortcut in your system settings and paste the "
 "following code as a custom command"
 msgstr ""
-"Создайте новое сочетание клавиш в настройках системы и вставьте следующий "
-"код в качестве пользовательской команды"
+"Создать новое сочетание клавиш в параметрах системы и вставьте этот код в "
+"качестве команды"
 
 #: src/Settings.py:180
 msgid "Remove"
@@ -173,7 +173,7 @@ msgstr "Удалить"
 
 #: src/Settings.py:198
 msgid "There are no custom tags yet: create one with Alt + T"
-msgstr "Пользовательских тегов пока нет: создайте их с помощью Alt + T"
+msgstr "Здесь пока пользовательских тегов: создайте их с помощью Alt + T"
 
 #: src/Settings.py:211
 msgid "Default skintone"
@@ -193,11 +193,11 @@ msgstr "Большой"
 
 #: src/Settings.py:230
 msgid "Bigger"
-msgstr "Огромный"
+msgstr "Очень большой"
 
 #: src/Settings.py:231
 msgid "Giant"
-msgstr "Гигантский"
+msgstr "Огромный"
 
 #: src/Settings.py:330
 msgid "Invalid file selected"
@@ -205,7 +205,7 @@ msgstr "Выбран неверный файл"
 
 #: src/Settings.py:331
 msgid "The configuration file that you selected is not a valid backup."
-msgstr "Выбранный файл конфигурации не является действующей резервной копией."
+msgstr "Выбранный вами конфигурационный файл не является резервной копией."
 
 #: src/Settings.py:334
 msgid "Close"
@@ -217,7 +217,7 @@ msgstr "Настройки"
 
 #: src/ui/menu.ui:10
 msgid "Shortcuts"
-msgstr "Комбинации клавиш"
+msgstr "Сочетания клавиш"
 
 #: src/ui/menu.ui:15
 msgid "What's new?"
@@ -239,6 +239,14 @@ msgstr "О программе"
 msgid "Mouse"
 msgstr "Мышь"
 
+#: src/ui/shortcuts.ui:48 src/ui/shortcuts.ui:164
+msgid "Open the skintone selector (if available)"
+msgstr "Открыть выбор тона кожи"
+
+#: src/ui/shortcuts.ui:68 src/ui/shortcuts.ui:171
+msgid "Add a custom tag"
+msgstr "Добавить пользовательский тег"
+
 #: src/ui/shortcuts.ui:109
 msgid "Keyboard"
 msgstr "Клавиатура"
@@ -246,37 +254,81 @@ msgstr "Клавиатура"
 #: src/ui/shortcuts.ui:114
 msgid ""
 "Copy the selected emoji and hide the window (When an emoji is highlighted)"
-msgstr "Скопировать выбранный эмодзи и скрыть окно (когда эмодзи выделен)"
+msgstr "Скопировать первый эмодзи и закрыть окно (когда эмодзи выделен)"
 
 #: src/ui/shortcuts.ui:121
 msgid "Copy first emoji and hide the window (When using the search bar)"
-msgstr ""
-"Скопировать первый эмодзи и скрыть окно (при использовании панели поиска)"
+msgstr "Скопировать первый эмодзи и скрыть окно (когда используется поиск)"
 
 #: src/ui/shortcuts.ui:128
 msgid "Show the category on the right"
-msgstr "Показывать категорию справа"
+msgstr "Показать категорию справа"
 
 #: src/ui/shortcuts.ui:135
 msgid "Show the category on the left"
-msgstr "Показывать категорию слева"
+msgstr "Показать категорию слева"
 
-#: src/ui/shortcuts.ui:142
+#: src/ui/shortcuts.ui:142 src/ShortcutsWindow.py:22
 msgid "Add an emoji to selection"
-msgstr "Добавить эмодзи в подборку"
+msgstr "Добавить эмодзи в выборку"
 
 #: src/ui/shortcuts.ui:150
 msgid "Remove the last emoji from the selection"
-msgstr "Удалить последний эмодзи из подборки"
+msgstr "Удалить последний эмодзи из выборки"
 
 #: src/ui/shortcuts.ui:157
 msgid "Copy the selection and hide the window, without the highlighted emoji"
-msgstr "Скопировать выбранное и скрыть окно без выделенного эмодзи"
+msgstr "Скопировать выбранное и скрыть окно, без выделенного эмодзи"
 
-#: src/ui/shortcuts.ui:164
-msgid "Open the skintone selector (if available)"
-msgstr "Открыть выбор тона кожи (если доступно)"
+#: src/ui/importexport-customtags.ui:7
+msgid "Export and import custom tags"
+msgstr "Экспорт и импорт пользовательских тегов"
 
-#: src/ui/shortcuts.ui:171
-msgid "Add a custom tag"
-msgstr "Добавить пользовательский тег"
+#: src/ui/importexport-customtags.ui:8
+msgid ""
+"Use the buttons below to create or restore custom tags from another machine"
+msgstr ""
+"Используйте кнопки ниже, чтобы создать или восстановить пользовательские "
+"теги с другого устройства"
+
+#: src/ui/importexport-customtags.ui:23
+msgid "Export to file"
+msgstr "Экспортировать в файл"
+
+#: src/ui/importexport-customtags.ui:29
+msgid "Import from file"
+msgstr "Импортировать из файла"
+
+#: src/components/SkintoneSelector.py:89
+msgid "<small>Press Enter to select or ESC to close</small>"
+msgstr "<small>Нажмите Enter для выбор или ESC для закрытия</small>"
+
+#: src/components/CustomTagEntry.py:42
+#, python-brace-format
+msgid "<b>{emoji} Edit custom tags</b>"
+msgstr "<b>{emoji} Редакировать пользовательские теги</b>"
+
+#: src/components/CustomTagEntry.py:51
+msgid "List of custom tags, separated  by comma"
+msgstr "Список пользовательских тегов, разделённых запятой"
+
+#: src/components/CustomTagEntry.py:57
+#, python-brace-format
+msgid "<small><b>Default tags</b>: {default_tags}</small>"
+msgstr "<small><b>Теги по умолчанию</b>: {default_tags}</small>"
+
+#: src/components/CustomTagEntry.py:65
+msgid "<small>Press Enter to save or ESC to dismiss</small>"
+msgstr "<small>Нажмите Enter для сохранения или ESC для отмены</small>"
+
+#: src/components/UpdateDialog.py:29
+msgid "New features!"
+msgstr "Новые возможности!"
+
+#: src/components/UpdateDialog.py:33
+msgid "Dismiss"
+msgstr "Отменить"
+
+#: src/ShortcutsWindow.py:23
+msgid "Copy the selected emoji and hide the window"
+msgstr "Скопировать выбранный эмодзи и скрыть окно"
