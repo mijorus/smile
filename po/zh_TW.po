@@ -320,7 +320,7 @@ msgstr "新功能！"
 
 #: src/components/UpdateDialog.py:33
 msgid "Dismiss"
-msgstr "關閉"
+msgstr "取消"
 
 #: src/ShortcutsWindow.py:23
 msgid "Copy the selected emoji and hide the window"
