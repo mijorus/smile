@@ -98,7 +98,8 @@
         "emoji": "🃏",
         "tags": [
             "kortti",
-            "korttipeli"
+            "korttipeli",
+            "peli"
         ]
     },
     "1F170": {
@@ -165,7 +166,9 @@
             "free",
             "ilmainen",
             "laatikko",
-            "teksti"
+            "painike",
+            "teksti",
+            "vapaa"
         ]
     },
     "1F194": {
@@ -181,6 +184,7 @@
         "tags": [
             "laatikko",
             "new",
+            "painike",
             "teksti",
             "uusi",
             "uutta"
@@ -223,7 +227,8 @@
             "päivitys",
             "up",
             "up!",
-            "uutta"
+            "uutta",
+            "ylös"
         ]
     },
     "1F19A": {
@@ -238,2064 +243,1813 @@
         "emoji": "🇦🇨",
         "tags": [
             "AC",
-            "lippu",
-            "lippu: ascension-saari"
+            "lippu"
         ]
     },
     "1F1E6-1F1E9": {
         "emoji": "🇦🇩",
         "tags": [
             "AD",
-            "lippu",
-            "lippu: andorra"
+            "lippu"
         ]
     },
     "1F1E6-1F1EA": {
         "emoji": "🇦🇪",
         "tags": [
             "AE",
-            "lippu",
-            "lippu: arabiemiirikunnat"
+            "lippu"
         ]
     },
     "1F1E6-1F1EB": {
         "emoji": "🇦🇫",
         "tags": [
             "AF",
-            "lippu",
-            "lippu: afganistan"
+            "lippu"
         ]
     },
     "1F1E6-1F1EC": {
         "emoji": "🇦🇬",
         "tags": [
             "AG",
-            "lippu",
-            "lippu: antigua ja barbuda"
+            "lippu"
         ]
     },
     "1F1E6-1F1EE": {
         "emoji": "🇦🇮",
         "tags": [
             "AI",
-            "lippu",
-            "lippu: anguilla"
+            "lippu"
         ]
     },
     "1F1E6-1F1F1": {
         "emoji": "🇦🇱",
         "tags": [
             "AL",
-            "lippu",
-            "lippu: albania"
+            "lippu"
         ]
     },
     "1F1E6-1F1F2": {
         "emoji": "🇦🇲",
         "tags": [
             "AM",
-            "lippu",
-            "lippu: armenia"
+            "lippu"
         ]
     },
     "1F1E6-1F1F4": {
         "emoji": "🇦🇴",
         "tags": [
             "AO",
-            "lippu",
-            "lippu: angola"
+            "lippu"
         ]
     },
     "1F1E6-1F1F6": {
         "emoji": "🇦🇶",
         "tags": [
             "AQ",
-            "lippu",
-            "lippu: antarktis"
+            "lippu"
         ]
     },
     "1F1E6-1F1F7": {
         "emoji": "🇦🇷",
         "tags": [
             "AR",
-            "lippu",
-            "lippu: argentiina"
+            "lippu"
         ]
     },
     "1F1E6-1F1F8": {
         "emoji": "🇦🇸",
         "tags": [
             "AS",
-            "lippu",
-            "lippu: amerikan samoa"
+            "lippu"
         ]
     },
     "1F1E6-1F1F9": {
         "emoji": "🇦🇹",
         "tags": [
             "AT",
-            "lippu",
-            "lippu: itävalta"
+            "lippu"
         ]
     },
     "1F1E6-1F1FA": {
         "emoji": "🇦🇺",
         "tags": [
             "AU",
-            "lippu",
-            "lippu: australia"
+            "lippu"
         ]
     },
     "1F1E6-1F1FC": {
         "emoji": "🇦🇼",
         "tags": [
             "AW",
-            "lippu",
-            "lippu: aruba"
+            "lippu"
         ]
     },
     "1F1E6-1F1FD": {
         "emoji": "🇦🇽",
         "tags": [
             "AX",
-            "lippu",
-            "lippu: ahvenanmaa"
+            "lippu"
         ]
     },
     "1F1E6-1F1FF": {
         "emoji": "🇦🇿",
         "tags": [
             "AZ",
-            "lippu",
-            "lippu: azerbaidžan"
+            "lippu"
         ]
     },
     "1F1E7-1F1E6": {
         "emoji": "🇧🇦",
         "tags": [
             "BA",
-            "lippu",
-            "lippu: bosnia ja hertsegovina"
+            "lippu"
         ]
     },
     "1F1E7-1F1E7": {
         "emoji": "🇧🇧",
         "tags": [
             "BB",
-            "lippu",
-            "lippu: barbados"
+            "lippu"
         ]
     },
     "1F1E7-1F1E9": {
         "emoji": "🇧🇩",
         "tags": [
             "BD",
-            "lippu",
-            "lippu: bangladesh"
+            "lippu"
         ]
     },
     "1F1E7-1F1EA": {
         "emoji": "🇧🇪",
         "tags": [
             "BE",
-            "lippu",
-            "lippu: belgia"
+            "lippu"
         ]
     },
     "1F1E7-1F1EB": {
         "emoji": "🇧🇫",
         "tags": [
             "BF",
-            "lippu",
-            "lippu: burkina faso"
+            "lippu"
         ]
     },
     "1F1E7-1F1EC": {
         "emoji": "🇧🇬",
         "tags": [
             "BG",
-            "lippu",
-            "lippu: bulgaria"
+            "lippu"
         ]
     },
     "1F1E7-1F1ED": {
         "emoji": "🇧🇭",
         "tags": [
             "BH",
-            "lippu",
-            "lippu: bahrain"
+            "lippu"
         ]
     },
     "1F1E7-1F1EE": {
         "emoji": "🇧🇮",
         "tags": [
             "BI",
-            "lippu",
-            "lippu: burundi"
+            "lippu"
         ]
     },
     "1F1E7-1F1EF": {
         "emoji": "🇧🇯",
         "tags": [
             "BJ",
-            "lippu",
-            "lippu: benin"
+            "lippu"
         ]
     },
     "1F1E7-1F1F1": {
         "emoji": "🇧🇱",
         "tags": [
             "BL",
-            "lippu",
-            "lippu: saint-barthélemy"
+            "lippu"
         ]
     },
     "1F1E7-1F1F2": {
         "emoji": "🇧🇲",
         "tags": [
             "BM",
-            "lippu",
-            "lippu: bermuda"
+            "lippu"
         ]
     },
     "1F1E7-1F1F3": {
         "emoji": "🇧🇳",
         "tags": [
             "BN",
-            "lippu",
-            "lippu: brunei"
+            "lippu"
         ]
     },
     "1F1E7-1F1F4": {
         "emoji": "🇧🇴",
         "tags": [
             "BO",
-            "lippu",
-            "lippu: bolivia"
+            "lippu"
         ]
     },
     "1F1E7-1F1F6": {
         "emoji": "🇧🇶",
         "tags": [
             "BQ",
-            "lippu",
-            "lippu: karibian alankomaat"
+            "lippu"
         ]
     },
     "1F1E7-1F1F7": {
         "emoji": "🇧🇷",
         "tags": [
             "BR",
-            "lippu",
-            "lippu: brasilia"
+            "lippu"
         ]
     },
     "1F1E7-1F1F8": {
         "emoji": "🇧🇸",
         "tags": [
             "BS",
-            "lippu",
-            "lippu: bahama"
+            "lippu"
         ]
     },
     "1F1E7-1F1F9": {
         "emoji": "🇧🇹",
         "tags": [
             "BT",
-            "lippu",
-            "lippu: bhutan"
+            "lippu"
         ]
     },
     "1F1E7-1F1FB": {
         "emoji": "🇧🇻",
         "tags": [
             "BV",
-            "lippu",
-            "lippu: bouvet’nsaari"
+            "lippu"
         ]
     },
     "1F1E7-1F1FC": {
         "emoji": "🇧🇼",
         "tags": [
             "BW",
-            "lippu",
-            "lippu: botswana"
+            "lippu"
         ]
     },
     "1F1E7-1F1FE": {
         "emoji": "🇧🇾",
         "tags": [
             "BY",
-            "lippu",
-            "lippu: valko-venäjä"
+            "lippu"
         ]
     },
     "1F1E7-1F1FF": {
         "emoji": "🇧🇿",
         "tags": [
             "BZ",
-            "lippu",
-            "lippu: belize"
+            "lippu"
         ]
     },
     "1F1E8-1F1E6": {
         "emoji": "🇨🇦",
         "tags": [
             "CA",
-            "lippu",
-            "lippu: kanada"
+            "lippu"
         ]
     },
     "1F1E8-1F1E8": {
         "emoji": "🇨🇨",
         "tags": [
             "CC",
-            "lippu",
-            "lippu: kookossaaret (keelingsaaret)"
+            "lippu"
         ]
     },
     "1F1E8-1F1E9": {
         "emoji": "🇨🇩",
         "tags": [
             "CD",
-            "lippu",
-            "lippu: kongon demokraattinen tasavalta"
+            "lippu"
         ]
     },
     "1F1E8-1F1EB": {
         "emoji": "🇨🇫",
         "tags": [
             "CF",
-            "lippu",
-            "lippu: keski-afrikan tasavalta"
+            "lippu"
         ]
     },
     "1F1E8-1F1EC": {
         "emoji": "🇨🇬",
         "tags": [
             "CG",
-            "lippu",
-            "lippu: kongon tasavalta"
+            "lippu"
         ]
     },
     "1F1E8-1F1ED": {
         "emoji": "🇨🇭",
         "tags": [
             "CH",
-            "lippu",
-            "lippu: sveitsi"
+            "lippu"
         ]
     },
     "1F1E8-1F1EE": {
         "emoji": "🇨🇮",
         "tags": [
             "CI",
-            "lippu",
-            "lippu: norsunluurannikko"
+            "lippu"
         ]
     },
     "1F1E8-1F1F0": {
         "emoji": "🇨🇰",
         "tags": [
             "CK",
-            "lippu",
-            "lippu: cookinsaaret"
+            "lippu"
         ]
     },
     "1F1E8-1F1F1": {
         "emoji": "🇨🇱",
         "tags": [
             "CL",
-            "lippu",
-            "lippu: chile"
+            "lippu"
         ]
     },
     "1F1E8-1F1F2": {
         "emoji": "🇨🇲",
         "tags": [
             "CM",
-            "lippu",
-            "lippu: kamerun"
+            "lippu"
         ]
     },
     "1F1E8-1F1F3": {
         "emoji": "🇨🇳",
         "tags": [
             "CN",
-            "lippu",
-            "lippu: kiina"
+            "lippu"
         ]
     },
     "1F1E8-1F1F4": {
         "emoji": "🇨🇴",
         "tags": [
             "CO",
-            "lippu",
-            "lippu: kolumbia"
+            "lippu"
         ]
     },
     "1F1E8-1F1F5": {
         "emoji": "🇨🇵",
         "tags": [
             "CP",
-            "lippu",
-            "lippu: clippertoninsaari"
+            "lippu"
+        ]
+    },
+    "1F1E8-1F1F6": {
+        "emoji": "🇨🇶",
+        "tags": [
+            "CQ",
+            "lippu"
         ]
     },
     "1F1E8-1F1F7": {
         "emoji": "🇨🇷",
         "tags": [
             "CR",
-            "lippu",
-            "lippu: costa rica"
+            "lippu"
         ]
     },
     "1F1E8-1F1FA": {
         "emoji": "🇨🇺",
         "tags": [
             "CU",
-            "lippu",
-            "lippu: kuuba"
+            "lippu"
         ]
     },
     "1F1E8-1F1FB": {
         "emoji": "🇨🇻",
         "tags": [
             "CV",
-            "lippu",
-            "lippu: kap verde"
+            "lippu"
         ]
     },
     "1F1E8-1F1FC": {
         "emoji": "🇨🇼",
         "tags": [
             "CW",
-            "lippu",
-            "lippu: curaçao"
+            "lippu"
         ]
     },
     "1F1E8-1F1FD": {
         "emoji": "🇨🇽",
         "tags": [
             "CX",
-            "lippu",
-            "lippu: joulusaari"
+            "lippu"
         ]
     },
     "1F1E8-1F1FE": {
         "emoji": "🇨🇾",
         "tags": [
             "CY",
-            "lippu",
-            "lippu: kypros"
+            "lippu"
         ]
     },
     "1F1E8-1F1FF": {
         "emoji": "🇨🇿",
         "tags": [
             "CZ",
-            "lippu",
-            "lippu: tšekki"
+            "lippu"
         ]
     },
     "1F1E9-1F1EA": {
         "emoji": "🇩🇪",
         "tags": [
             "DE",
-            "lippu",
-            "lippu: saksa"
+            "lippu"
         ]
     },
     "1F1E9-1F1EC": {
         "emoji": "🇩🇬",
         "tags": [
             "DG",
-            "lippu",
-            "lippu: diego garcia"
+            "lippu"
         ]
     },
     "1F1E9-1F1EF": {
         "emoji": "🇩🇯",
         "tags": [
             "DJ",
-            "lippu",
-            "lippu: djibouti"
+            "lippu"
         ]
     },
     "1F1E9-1F1F0": {
         "emoji": "🇩🇰",
         "tags": [
             "DK",
-            "lippu",
-            "lippu: tanska"
+            "lippu"
         ]
     },
     "1F1E9-1F1F2": {
         "emoji": "🇩🇲",
         "tags": [
             "DM",
-            "lippu",
-            "lippu: dominica"
+            "lippu"
         ]
     },
     "1F1E9-1F1F4": {
         "emoji": "🇩🇴",
         "tags": [
             "DO",
-            "lippu",
-            "lippu: dominikaaninen tasavalta"
+            "lippu"
         ]
     },
     "1F1E9-1F1FF": {
         "emoji": "🇩🇿",
         "tags": [
             "DZ",
-            "lippu",
-            "lippu: algeria"
+            "lippu"
         ]
     },
     "1F1EA-1F1E6": {
         "emoji": "🇪🇦",
         "tags": [
             "EA",
-            "lippu",
-            "lippu: ceuta ja melilla"
+            "lippu"
         ]
     },
     "1F1EA-1F1E8": {
         "emoji": "🇪🇨",
         "tags": [
             "EC",
-            "lippu",
-            "lippu: ecuador"
+            "lippu"
         ]
     },
     "1F1EA-1F1EA": {
         "emoji": "🇪🇪",
         "tags": [
             "EE",
-            "lippu",
-            "lippu: viro"
+            "lippu"
         ]
     },
     "1F1EA-1F1EC": {
         "emoji": "🇪🇬",
         "tags": [
             "EG",
-            "lippu",
-            "lippu: egypti"
+            "lippu"
         ]
     },
     "1F1EA-1F1ED": {
         "emoji": "🇪🇭",
         "tags": [
             "EH",
-            "lippu",
-            "lippu: länsi-sahara"
+            "lippu"
         ]
     },
     "1F1EA-1F1F7": {
         "emoji": "🇪🇷",
         "tags": [
             "ER",
-            "lippu",
-            "lippu: eritrea"
+            "lippu"
         ]
     },
     "1F1EA-1F1F8": {
         "emoji": "🇪🇸",
         "tags": [
             "ES",
-            "lippu",
-            "lippu: espanja"
+            "lippu"
         ]
     },
     "1F1EA-1F1F9": {
         "emoji": "🇪🇹",
         "tags": [
             "ET",
-            "lippu",
-            "lippu: etiopia"
+            "lippu"
         ]
     },
     "1F1EA-1F1FA": {
         "emoji": "🇪🇺",
         "tags": [
             "EU",
-            "lippu",
-            "lippu: euroopan unioni"
+            "lippu"
         ]
     },
     "1F1EB-1F1EE": {
         "emoji": "🇫🇮",
         "tags": [
             "FI",
-            "lippu",
-            "lippu: suomi"
+            "lippu"
         ]
     },
     "1F1EB-1F1EF": {
         "emoji": "🇫🇯",
         "tags": [
             "FJ",
-            "lippu",
-            "lippu: fidži"
+            "lippu"
         ]
     },
     "1F1EB-1F1F0": {
         "emoji": "🇫🇰",
         "tags": [
             "FK",
-            "lippu",
-            "lippu: falklandinsaaret"
+            "lippu"
         ]
     },
     "1F1EB-1F1F2": {
         "emoji": "🇫🇲",
         "tags": [
             "FM",
-            "lippu",
-            "lippu: mikronesia"
+            "lippu"
         ]
     },
     "1F1EB-1F1F4": {
         "emoji": "🇫🇴",
         "tags": [
             "FO",
-            "lippu",
-            "lippu: färsaaret"
+            "lippu"
         ]
     },
     "1F1EB-1F1F7": {
         "emoji": "🇫🇷",
         "tags": [
             "FR",
-            "lippu",
-            "lippu: ranska"
+            "lippu"
         ]
     },
     "1F1EC-1F1E6": {
         "emoji": "🇬🇦",
         "tags": [
             "GA",
-            "lippu",
-            "lippu: gabon"
+            "lippu"
         ]
     },
     "1F1EC-1F1E7": {
         "emoji": "🇬🇧",
         "tags": [
             "GB",
-            "lippu",
-            "lippu: iso-britannia"
+            "lippu"
         ]
     },
     "1F1EC-1F1E9": {
         "emoji": "🇬🇩",
         "tags": [
             "GD",
-            "lippu",
-            "lippu: grenada"
+            "lippu"
         ]
     },
     "1F1EC-1F1EA": {
         "emoji": "🇬🇪",
         "tags": [
             "GE",
-            "lippu",
-            "lippu: georgia"
+            "lippu"
         ]
     },
     "1F1EC-1F1EB": {
         "emoji": "🇬🇫",
         "tags": [
             "GF",
-            "lippu",
-            "lippu: ranskan guayana"
+            "lippu"
         ]
     },
     "1F1EC-1F1EC": {
         "emoji": "🇬🇬",
         "tags": [
             "GG",
-            "lippu",
-            "lippu: guernsey"
+            "lippu"
         ]
     },
     "1F1EC-1F1ED": {
         "emoji": "🇬🇭",
         "tags": [
             "GH",
-            "lippu",
-            "lippu: ghana"
+            "lippu"
         ]
     },
     "1F1EC-1F1EE": {
         "emoji": "🇬🇮",
         "tags": [
             "GI",
-            "lippu",
-            "lippu: gibraltar"
+            "lippu"
         ]
     },
     "1F1EC-1F1F1": {
         "emoji": "🇬🇱",
         "tags": [
             "GL",
-            "lippu",
-            "lippu: grönlanti"
+            "lippu"
         ]
     },
     "1F1EC-1F1F2": {
         "emoji": "🇬🇲",
         "tags": [
             "GM",
-            "lippu",
-            "lippu: gambia"
+            "lippu"
         ]
     },
     "1F1EC-1F1F3": {
         "emoji": "🇬🇳",
         "tags": [
             "GN",
-            "lippu",
-            "lippu: guinea"
+            "lippu"
         ]
     },
     "1F1EC-1F1F5": {
         "emoji": "🇬🇵",
         "tags": [
             "GP",
-            "lippu",
-            "lippu: guadeloupe"
+            "lippu"
         ]
     },
     "1F1EC-1F1F6": {
         "emoji": "🇬🇶",
         "tags": [
             "GQ",
-            "lippu",
-            "lippu: päiväntasaajan guinea"
+            "lippu"
         ]
     },
     "1F1EC-1F1F7": {
         "emoji": "🇬🇷",
         "tags": [
             "GR",
-            "lippu",
-            "lippu: kreikka"
+            "lippu"
         ]
     },
     "1F1EC-1F1F8": {
         "emoji": "🇬🇸",
         "tags": [
             "GS",
-            "lippu",
-            "lippu: etelä-georgia ja eteläiset sandwichinsaaret"
+            "lippu"
         ]
     },
     "1F1EC-1F1F9": {
         "emoji": "🇬🇹",
         "tags": [
             "GT",
-            "lippu",
-            "lippu: guatemala"
+            "lippu"
         ]
     },
     "1F1EC-1F1FA": {
         "emoji": "🇬🇺",
         "tags": [
             "GU",
-            "lippu",
-            "lippu: guam"
+            "lippu"
         ]
     },
     "1F1EC-1F1FC": {
         "emoji": "🇬🇼",
         "tags": [
             "GW",
-            "lippu",
-            "lippu: guinea-bissau"
+            "lippu"
         ]
     },
     "1F1EC-1F1FE": {
         "emoji": "🇬🇾",
         "tags": [
             "GY",
-            "lippu",
-            "lippu: guyana"
+            "lippu"
         ]
     },
     "1F1ED-1F1F0": {
         "emoji": "🇭🇰",
         "tags": [
             "HK",
-            "lippu",
-            "lippu: hongkong – kiinan erityishallintoalue"
+            "lippu"
         ]
     },
     "1F1ED-1F1F2": {
         "emoji": "🇭🇲",
         "tags": [
             "HM",
-            "lippu",
-            "lippu: heard ja mcdonaldinsaaret"
+            "lippu"
         ]
     },
     "1F1ED-1F1F3": {
         "emoji": "🇭🇳",
         "tags": [
             "HN",
-            "lippu",
-            "lippu: honduras"
+            "lippu"
         ]
     },
     "1F1ED-1F1F7": {
         "emoji": "🇭🇷",
         "tags": [
             "HR",
-            "lippu",
-            "lippu: kroatia"
+            "lippu"
         ]
     },
     "1F1ED-1F1F9": {
         "emoji": "🇭🇹",
         "tags": [
             "HT",
-            "lippu",
-            "lippu: haiti"
+            "lippu"
         ]
     },
     "1F1ED-1F1FA": {
         "emoji": "🇭🇺",
         "tags": [
             "HU",
-            "lippu",
-            "lippu: unkari"
+            "lippu"
         ]
     },
     "1F1EE-1F1E8": {
         "emoji": "🇮🇨",
         "tags": [
             "IC",
-            "lippu",
-            "lippu: kanariansaaret"
+            "lippu"
         ]
     },
     "1F1EE-1F1E9": {
         "emoji": "🇮🇩",
         "tags": [
             "ID",
-            "lippu",
-            "lippu: indonesia"
+            "lippu"
         ]
     },
     "1F1EE-1F1EA": {
         "emoji": "🇮🇪",
         "tags": [
             "IE",
-            "lippu",
-            "lippu: irlanti"
+            "lippu"
         ]
     },
     "1F1EE-1F1F1": {
         "emoji": "🇮🇱",
         "tags": [
             "IL",
-            "lippu",
-            "lippu: israel"
+            "lippu"
         ]
     },
     "1F1EE-1F1F2": {
         "emoji": "🇮🇲",
         "tags": [
             "IM",
-            "lippu",
-            "lippu: mansaari"
+            "lippu"
         ]
     },
     "1F1EE-1F1F3": {
         "emoji": "🇮🇳",
         "tags": [
             "IN",
-            "lippu",
-            "lippu: intia"
+            "lippu"
         ]
     },
     "1F1EE-1F1F4": {
         "emoji": "🇮🇴",
         "tags": [
             "IO",
-            "lippu",
-            "lippu: brittiläinen intian valtameren alue"
+            "lippu"
         ]
     },
     "1F1EE-1F1F6": {
         "emoji": "🇮🇶",
         "tags": [
             "IQ",
-            "lippu",
-            "lippu: irak"
+            "lippu"
         ]
     },
     "1F1EE-1F1F7": {
         "emoji": "🇮🇷",
         "tags": [
             "IR",
-            "lippu",
-            "lippu: iran"
+            "lippu"
         ]
     },
     "1F1EE-1F1F8": {
         "emoji": "🇮🇸",
         "tags": [
             "IS",
-            "lippu",
-            "lippu: islanti"
+            "lippu"
         ]
     },
     "1F1EE-1F1F9": {
         "emoji": "🇮🇹",
         "tags": [
             "IT",
-            "lippu",
-            "lippu: italia"
+            "lippu"
         ]
     },
     "1F1EF-1F1EA": {
         "emoji": "🇯🇪",
         "tags": [
             "JE",
-            "lippu",
-            "lippu: jersey"
+            "lippu"
         ]
     },
     "1F1EF-1F1F2": {
         "emoji": "🇯🇲",
         "tags": [
             "JM",
-            "lippu",
-            "lippu: jamaika"
+            "lippu"
         ]
     },
     "1F1EF-1F1F4": {
         "emoji": "🇯🇴",
         "tags": [
             "JO",
-            "lippu",
-            "lippu: jordania"
+            "lippu"
         ]
     },
     "1F1EF-1F1F5": {
         "emoji": "🇯🇵",
         "tags": [
             "JP",
-            "lippu",
-            "lippu: japani"
+            "lippu"
         ]
     },
     "1F1F0-1F1EA": {
         "emoji": "🇰🇪",
         "tags": [
             "KE",
-            "lippu",
-            "lippu: kenia"
+            "lippu"
         ]
     },
     "1F1F0-1F1EC": {
         "emoji": "🇰🇬",
         "tags": [
             "KG",
-            "lippu",
-            "lippu: kirgisia"
+            "lippu"
         ]
     },
     "1F1F0-1F1ED": {
         "emoji": "🇰🇭",
         "tags": [
             "KH",
-            "lippu",
-            "lippu: kambodža"
+            "lippu"
         ]
     },
     "1F1F0-1F1EE": {
         "emoji": "🇰🇮",
         "tags": [
             "KI",
-            "lippu",
-            "lippu: kiribati"
+            "lippu"
         ]
     },
     "1F1F0-1F1F2": {
         "emoji": "🇰🇲",
         "tags": [
             "KM",
-            "lippu",
-            "lippu: komorit"
+            "lippu"
         ]
     },
     "1F1F0-1F1F3": {
         "emoji": "🇰🇳",
         "tags": [
             "KN",
-            "lippu",
-            "lippu: saint kitts ja nevis"
+            "lippu"
         ]
     },
     "1F1F0-1F1F5": {
         "emoji": "🇰🇵",
         "tags": [
             "KP",
-            "lippu",
-            "lippu: pohjois-korea"
+            "lippu"
         ]
     },
     "1F1F0-1F1F7": {
         "emoji": "🇰🇷",
         "tags": [
             "KR",
-            "lippu",
-            "lippu: etelä-korea"
+            "lippu"
         ]
     },
     "1F1F0-1F1FC": {
         "emoji": "🇰🇼",
         "tags": [
             "KW",
-            "lippu",
-            "lippu: kuwait"
+            "lippu"
         ]
     },
     "1F1F0-1F1FE": {
         "emoji": "🇰🇾",
         "tags": [
             "KY",
-            "lippu",
-            "lippu: caymansaaret"
+            "lippu"
         ]
     },
     "1F1F0-1F1FF": {
         "emoji": "🇰🇿",
         "tags": [
             "KZ",
-            "lippu",
-            "lippu: kazakstan"
+            "lippu"
         ]
     },
     "1F1F1-1F1E6": {
         "emoji": "🇱🇦",
         "tags": [
             "LA",
-            "lippu",
-            "lippu: laos"
+            "lippu"
         ]
     },
     "1F1F1-1F1E7": {
         "emoji": "🇱🇧",
         "tags": [
             "LB",
-            "lippu",
-            "lippu: libanon"
+            "lippu"
         ]
     },
     "1F1F1-1F1E8": {
         "emoji": "🇱🇨",
         "tags": [
             "LC",
-            "lippu",
-            "lippu: saint lucia"
+            "lippu"
         ]
     },
     "1F1F1-1F1EE": {
         "emoji": "🇱🇮",
         "tags": [
             "LI",
-            "lippu",
-            "lippu: liechtenstein"
+            "lippu"
         ]
     },
     "1F1F1-1F1F0": {
         "emoji": "🇱🇰",
         "tags": [
             "LK",
-            "lippu",
-            "lippu: sri lanka"
+            "lippu"
         ]
     },
     "1F1F1-1F1F7": {
         "emoji": "🇱🇷",
         "tags": [
             "LR",
-            "lippu",
-            "lippu: liberia"
+            "lippu"
         ]
     },
     "1F1F1-1F1F8": {
         "emoji": "🇱🇸",
         "tags": [
             "LS",
-            "lippu",
-            "lippu: lesotho"
+            "lippu"
         ]
     },
     "1F1F1-1F1F9": {
         "emoji": "🇱🇹",
         "tags": [
             "LT",
-            "lippu",
-            "lippu: liettua"
+            "lippu"
         ]
     },
     "1F1F1-1F1FA": {
         "emoji": "🇱🇺",
         "tags": [
             "LU",
-            "lippu",
-            "lippu: luxemburg"
+            "lippu"
         ]
     },
     "1F1F1-1F1FB": {
         "emoji": "🇱🇻",
         "tags": [
             "LV",
-            "lippu",
-            "lippu: latvia"
+            "lippu"
         ]
     },
     "1F1F1-1F1FE": {
         "emoji": "🇱🇾",
         "tags": [
             "LY",
-            "lippu",
-            "lippu: libya"
+            "lippu"
         ]
     },
     "1F1F2-1F1E6": {
         "emoji": "🇲🇦",
         "tags": [
             "MA",
-            "lippu",
-            "lippu: marokko"
+            "lippu"
         ]
     },
     "1F1F2-1F1E8": {
         "emoji": "🇲🇨",
         "tags": [
             "MC",
-            "lippu",
-            "lippu: monaco"
+            "lippu"
         ]
     },
     "1F1F2-1F1E9": {
         "emoji": "🇲🇩",
         "tags": [
             "MD",
-            "lippu",
-            "lippu: moldova"
+            "lippu"
         ]
     },
     "1F1F2-1F1EA": {
         "emoji": "🇲🇪",
         "tags": [
             "ME",
-            "lippu",
-            "lippu: montenegro"
+            "lippu"
         ]
     },
     "1F1F2-1F1EB": {
         "emoji": "🇲🇫",
         "tags": [
             "MF",
-            "lippu",
-            "lippu: saint-martin"
+            "lippu"
         ]
     },
     "1F1F2-1F1EC": {
         "emoji": "🇲🇬",
         "tags": [
             "MG",
-            "lippu",
-            "lippu: madagaskar"
+            "lippu"
         ]
     },
     "1F1F2-1F1ED": {
         "emoji": "🇲🇭",
         "tags": [
             "MH",
-            "lippu",
-            "lippu: marshallinsaaret"
+            "lippu"
         ]
     },
     "1F1F2-1F1F0": {
         "emoji": "🇲🇰",
         "tags": [
             "MK",
-            "lippu",
-            "lippu: pohjois-makedonia"
+            "lippu"
         ]
     },
     "1F1F2-1F1F1": {
         "emoji": "🇲🇱",
         "tags": [
             "ML",
-            "lippu",
-            "lippu: mali"
+            "lippu"
         ]
     },
     "1F1F2-1F1F2": {
         "emoji": "🇲🇲",
         "tags": [
             "MM",
-            "lippu",
-            "lippu: myanmar (burma)"
+            "lippu"
         ]
     },
     "1F1F2-1F1F3": {
         "emoji": "🇲🇳",
         "tags": [
             "MN",
-            "lippu",
-            "lippu: mongolia"
+            "lippu"
         ]
     },
     "1F1F2-1F1F4": {
         "emoji": "🇲🇴",
         "tags": [
             "MO",
-            "lippu",
-            "lippu: macao – kiinan erityishallintoalue"
+            "lippu"
         ]
     },
     "1F1F2-1F1F5": {
         "emoji": "🇲🇵",
         "tags": [
             "MP",
-            "lippu",
-            "lippu: pohjois-mariaanit"
+            "lippu"
         ]
     },
     "1F1F2-1F1F6": {
         "emoji": "🇲🇶",
         "tags": [
             "MQ",
-            "lippu",
-            "lippu: martinique"
+            "lippu"
         ]
     },
     "1F1F2-1F1F7": {
         "emoji": "🇲🇷",
         "tags": [
             "MR",
-            "lippu",
-            "lippu: mauritania"
+            "lippu"
         ]
     },
     "1F1F2-1F1F8": {
         "emoji": "🇲🇸",
         "tags": [
             "MS",
-            "lippu",
-            "lippu: montserrat"
+            "lippu"
         ]
     },
     "1F1F2-1F1F9": {
         "emoji": "🇲🇹",
         "tags": [
             "MT",
-            "lippu",
-            "lippu: malta"
+            "lippu"
         ]
     },
     "1F1F2-1F1FA": {
         "emoji": "🇲🇺",
         "tags": [
             "MU",
-            "lippu",
-            "lippu: mauritius"
+            "lippu"
         ]
     },
     "1F1F2-1F1FB": {
         "emoji": "🇲🇻",
         "tags": [
             "MV",
-            "lippu",
-            "lippu: malediivit"
+            "lippu"
         ]
     },
     "1F1F2-1F1FC": {
         "emoji": "🇲🇼",
         "tags": [
             "MW",
-            "lippu",
-            "lippu: malawi"
+            "lippu"
         ]
     },
     "1F1F2-1F1FD": {
         "emoji": "🇲🇽",
         "tags": [
             "MX",
-            "lippu",
-            "lippu: meksiko"
+            "lippu"
         ]
     },
     "1F1F2-1F1FE": {
         "emoji": "🇲🇾",
         "tags": [
             "MY",
-            "lippu",
-            "lippu: malesia"
+            "lippu"
         ]
     },
     "1F1F2-1F1FF": {
         "emoji": "🇲🇿",
         "tags": [
             "MZ",
-            "lippu",
-            "lippu: mosambik"
+            "lippu"
         ]
     },
     "1F1F3-1F1E6": {
         "emoji": "🇳🇦",
         "tags": [
             "NA",
-            "lippu",
-            "lippu: namibia"
+            "lippu"
         ]
     },
     "1F1F3-1F1E8": {
         "emoji": "🇳🇨",
         "tags": [
             "NC",
-            "lippu",
-            "lippu: uusi-kaledonia"
+            "lippu"
         ]
     },
     "1F1F3-1F1EA": {
         "emoji": "🇳🇪",
         "tags": [
             "NE",
-            "lippu",
-            "lippu: niger"
+            "lippu"
         ]
     },
     "1F1F3-1F1EB": {
         "emoji": "🇳🇫",
         "tags": [
             "NF",
-            "lippu",
-            "lippu: norfolkinsaari"
+            "lippu"
         ]
     },
     "1F1F3-1F1EC": {
         "emoji": "🇳🇬",
         "tags": [
             "NG",
-            "lippu",
-            "lippu: nigeria"
+            "lippu"
         ]
     },
     "1F1F3-1F1EE": {
         "emoji": "🇳🇮",
         "tags": [
             "NI",
-            "lippu",
-            "lippu: nicaragua"
+            "lippu"
         ]
     },
     "1F1F3-1F1F1": {
         "emoji": "🇳🇱",
         "tags": [
             "NL",
-            "lippu",
-            "lippu: alankomaat"
+            "lippu"
         ]
     },
     "1F1F3-1F1F4": {
         "emoji": "🇳🇴",
         "tags": [
             "NO",
-            "lippu",
-            "lippu: norja"
+            "lippu"
         ]
     },
     "1F1F3-1F1F5": {
         "emoji": "🇳🇵",
         "tags": [
             "NP",
-            "lippu",
-            "lippu: nepal"
+            "lippu"
         ]
     },
     "1F1F3-1F1F7": {
         "emoji": "🇳🇷",
         "tags": [
             "NR",
-            "lippu",
-            "lippu: nauru"
+            "lippu"
         ]
     },
     "1F1F3-1F1FA": {
         "emoji": "🇳🇺",
         "tags": [
             "NU",
-            "lippu",
-            "lippu: niue"
+            "lippu"
         ]
     },
     "1F1F3-1F1FF": {
         "emoji": "🇳🇿",
         "tags": [
             "NZ",
-            "lippu",
-            "lippu: uusi-seelanti"
+            "lippu"
         ]
     },
     "1F1F4-1F1F2": {
         "emoji": "🇴🇲",
         "tags": [
             "OM",
-            "lippu",
-            "lippu: oman"
+            "lippu"
         ]
     },
     "1F1F5-1F1E6": {
         "emoji": "🇵🇦",
         "tags": [
             "PA",
-            "lippu",
-            "lippu: panama"
+            "lippu"
         ]
     },
     "1F1F5-1F1EA": {
         "emoji": "🇵🇪",
         "tags": [
             "PE",
-            "lippu",
-            "lippu: peru"
+            "lippu"
         ]
     },
     "1F1F5-1F1EB": {
         "emoji": "🇵🇫",
         "tags": [
             "PF",
-            "lippu",
-            "lippu: ranskan polynesia"
+            "lippu"
         ]
     },
     "1F1F5-1F1EC": {
         "emoji": "🇵🇬",
         "tags": [
             "PG",
-            "lippu",
-            "lippu: papua-uusi-guinea"
+            "lippu"
         ]
     },
     "1F1F5-1F1ED": {
         "emoji": "🇵🇭",
         "tags": [
             "PH",
-            "lippu",
-            "lippu: filippiinit"
+            "lippu"
         ]
     },
     "1F1F5-1F1F0": {
         "emoji": "🇵🇰",
         "tags": [
             "PK",
-            "lippu",
-            "lippu: pakistan"
+            "lippu"
         ]
     },
     "1F1F5-1F1F1": {
         "emoji": "🇵🇱",
         "tags": [
             "PL",
-            "lippu",
-            "lippu: puola"
+            "lippu"
         ]
     },
     "1F1F5-1F1F2": {
         "emoji": "🇵🇲",
         "tags": [
             "PM",
-            "lippu",
-            "lippu: saint-pierre ja miquelon"
+            "lippu"
         ]
     },
     "1F1F5-1F1F3": {
         "emoji": "🇵🇳",
         "tags": [
             "PN",
-            "lippu",
-            "lippu: pitcairn"
+            "lippu"
         ]
     },
     "1F1F5-1F1F7": {
         "emoji": "🇵🇷",
         "tags": [
             "PR",
-            "lippu",
-            "lippu: puerto rico"
+            "lippu"
         ]
     },
     "1F1F5-1F1F8": {
         "emoji": "🇵🇸",
         "tags": [
             "PS",
-            "lippu",
-            "lippu: palestiinalaisalue"
+            "lippu"
         ]
     },
     "1F1F5-1F1F9": {
         "emoji": "🇵🇹",
         "tags": [
             "PT",
-            "lippu",
-            "lippu: portugali"
+            "lippu"
         ]
     },
     "1F1F5-1F1FC": {
         "emoji": "🇵🇼",
         "tags": [
             "PW",
-            "lippu",
-            "lippu: palau"
+            "lippu"
         ]
     },
     "1F1F5-1F1FE": {
         "emoji": "🇵🇾",
         "tags": [
             "PY",
-            "lippu",
-            "lippu: paraguay"
+            "lippu"
         ]
     },
     "1F1F6-1F1E6": {
         "emoji": "🇶🇦",
         "tags": [
             "QA",
-            "lippu",
-            "lippu: qatar"
+            "lippu"
         ]
     },
     "1F1F7-1F1EA": {
         "emoji": "🇷🇪",
         "tags": [
             "RE",
-            "lippu",
-            "lippu: réunion"
+            "lippu"
         ]
     },
     "1F1F7-1F1F4": {
         "emoji": "🇷🇴",
         "tags": [
             "RO",
-            "lippu",
-            "lippu: romania"
+            "lippu"
         ]
     },
     "1F1F7-1F1F8": {
         "emoji": "🇷🇸",
         "tags": [
             "RS",
-            "lippu",
-            "lippu: serbia"
+            "lippu"
         ]
     },
     "1F1F7-1F1FA": {
         "emoji": "🇷🇺",
         "tags": [
             "RU",
-            "lippu",
-            "lippu: venäjä"
+            "lippu"
         ]
     },
     "1F1F7-1F1FC": {
         "emoji": "🇷🇼",
         "tags": [
             "RW",
-            "lippu",
-            "lippu: ruanda"
+            "lippu"
         ]
     },
     "1F1F8-1F1E6": {
         "emoji": "🇸🇦",
         "tags": [
             "SA",
-            "lippu",
-            "lippu: saudi-arabia"
+            "lippu"
         ]
     },
     "1F1F8-1F1E7": {
         "emoji": "🇸🇧",
         "tags": [
             "SB",
-            "lippu",
-            "lippu: salomonsaaret"
+            "lippu"
         ]
     },
     "1F1F8-1F1E8": {
         "emoji": "🇸🇨",
         "tags": [
             "SC",
-            "lippu",
-            "lippu: seychellit"
+            "lippu"
         ]
     },
     "1F1F8-1F1E9": {
         "emoji": "🇸🇩",
         "tags": [
             "SD",
-            "lippu",
-            "lippu: sudan"
+            "lippu"
         ]
     },
     "1F1F8-1F1EA": {
         "emoji": "🇸🇪",
         "tags": [
             "SE",
-            "lippu",
-            "lippu: ruotsi"
+            "lippu"
         ]
     },
     "1F1F8-1F1EC": {
         "emoji": "🇸🇬",
         "tags": [
             "SG",
-            "lippu",
-            "lippu: singapore"
+            "lippu"
         ]
     },
     "1F1F8-1F1ED": {
         "emoji": "🇸🇭",
         "tags": [
             "SH",
-            "lippu",
-            "lippu: saint helena"
+            "lippu"
         ]
     },
     "1F1F8-1F1EE": {
         "emoji": "🇸🇮",
         "tags": [
             "SI",
-            "lippu",
-            "lippu: slovenia"
+            "lippu"
         ]
     },
     "1F1F8-1F1EF": {
         "emoji": "🇸🇯",
         "tags": [
             "SJ",
-            "lippu",
-            "lippu: huippuvuoret ja jan mayen"
+            "lippu"
         ]
     },
     "1F1F8-1F1F0": {
         "emoji": "🇸🇰",
         "tags": [
             "SK",
-            "lippu",
-            "lippu: slovakia"
+            "lippu"
         ]
     },
     "1F1F8-1F1F1": {
         "emoji": "🇸🇱",
         "tags": [
             "SL",
-            "lippu",
-            "lippu: sierra leone"
+            "lippu"
         ]
     },
     "1F1F8-1F1F2": {
         "emoji": "🇸🇲",
         "tags": [
             "SM",
-            "lippu",
-            "lippu: san marino"
+            "lippu"
         ]
     },
     "1F1F8-1F1F3": {
         "emoji": "🇸🇳",
         "tags": [
             "SN",
-            "lippu",
-            "lippu: senegal"
+            "lippu"
         ]
     },
     "1F1F8-1F1F4": {
         "emoji": "🇸🇴",
         "tags": [
             "SO",
-            "lippu",
-            "lippu: somalia"
+            "lippu"
         ]
     },
     "1F1F8-1F1F7": {
         "emoji": "🇸🇷",
         "tags": [
             "SR",
-            "lippu",
-            "lippu: suriname"
+            "lippu"
         ]
     },
     "1F1F8-1F1F8": {
         "emoji": "🇸🇸",
         "tags": [
             "SS",
-            "lippu",
-            "lippu: etelä-sudan"
+            "lippu"
         ]
     },
     "1F1F8-1F1F9": {
         "emoji": "🇸🇹",
         "tags": [
             "ST",
-            "lippu",
-            "lippu: são tomé ja príncipe"
+            "lippu"
         ]
     },
     "1F1F8-1F1FB": {
         "emoji": "🇸🇻",
         "tags": [
             "SV",
-            "lippu",
-            "lippu: el salvador"
+            "lippu"
         ]
     },
     "1F1F8-1F1FD": {
         "emoji": "🇸🇽",
         "tags": [
             "SX",
-            "lippu",
-            "lippu: sint maarten"
+            "lippu"
         ]
     },
     "1F1F8-1F1FE": {
         "emoji": "🇸🇾",
         "tags": [
             "SY",
-            "lippu",
-            "lippu: syyria"
+            "lippu"
         ]
     },
     "1F1F8-1F1FF": {
         "emoji": "🇸🇿",
         "tags": [
             "SZ",
-            "lippu",
-            "lippu: eswatini"
+            "lippu"
         ]
     },
     "1F1F9-1F1E6": {
         "emoji": "🇹🇦",
         "tags": [
             "TA",
-            "lippu",
-            "lippu: tristan da cunha"
+            "lippu"
         ]
     },
     "1F1F9-1F1E8": {
         "emoji": "🇹🇨",
         "tags": [
             "TC",
-            "lippu",
-            "lippu: turks- ja caicossaaret"
+            "lippu"
         ]
     },
     "1F1F9-1F1E9": {
         "emoji": "🇹🇩",
         "tags": [
             "TD",
-            "lippu",
-            "lippu: tšad"
+            "lippu"
         ]
     },
     "1F1F9-1F1EB": {
         "emoji": "🇹🇫",
         "tags": [
             "TF",
-            "lippu",
-            "lippu: ranskan eteläiset ja antarktiset alueet"
+            "lippu"
         ]
     },
     "1F1F9-1F1EC": {
         "emoji": "🇹🇬",
         "tags": [
             "TG",
-            "lippu",
-            "lippu: togo"
+            "lippu"
         ]
     },
     "1F1F9-1F1ED": {
         "emoji": "🇹🇭",
         "tags": [
             "TH",
-            "lippu",
-            "lippu: thaimaa"
+            "lippu"
         ]
     },
     "1F1F9-1F1EF": {
         "emoji": "🇹🇯",
         "tags": [
             "TJ",
-            "lippu",
-            "lippu: tadžikistan"
+            "lippu"
         ]
     },
     "1F1F9-1F1F0": {
         "emoji": "🇹🇰",
         "tags": [
             "TK",
-            "lippu",
-            "lippu: tokelau"
+            "lippu"
         ]
     },
     "1F1F9-1F1F1": {
         "emoji": "🇹🇱",
         "tags": [
             "TL",
-            "lippu",
-            "lippu: itä-timor"
+            "lippu"
         ]
     },
     "1F1F9-1F1F2": {
         "emoji": "🇹🇲",
         "tags": [
             "TM",
-            "lippu",
-            "lippu: turkmenistan"
+            "lippu"
         ]
     },
     "1F1F9-1F1F3": {
         "emoji": "🇹🇳",
         "tags": [
             "TN",
-            "lippu",
-            "lippu: tunisia"
+            "lippu"
         ]
     },
     "1F1F9-1F1F4": {
         "emoji": "🇹🇴",
         "tags": [
             "TO",
-            "lippu",
-            "lippu: tonga"
+            "lippu"
         ]
     },
     "1F1F9-1F1F7": {
         "emoji": "🇹🇷",
         "tags": [
             "TR",
-            "lippu",
-            "lippu: turkki"
+            "lippu"
         ]
     },
     "1F1F9-1F1F9": {
         "emoji": "🇹🇹",
         "tags": [
             "TT",
-            "lippu",
-            "lippu: trinidad ja tobago"
+            "lippu"
         ]
     },
     "1F1F9-1F1FB": {
         "emoji": "🇹🇻",
         "tags": [
             "TV",
-            "lippu",
-            "lippu: tuvalu"
+            "lippu"
         ]
     },
     "1F1F9-1F1FC": {
         "emoji": "🇹🇼",
         "tags": [
             "TW",
-            "lippu",
-            "lippu: taiwan"
+            "lippu"
         ]
     },
     "1F1F9-1F1FF": {
         "emoji": "🇹🇿",
         "tags": [
             "TZ",
-            "lippu",
-            "lippu: tansania"
+            "lippu"
         ]
     },
     "1F1FA-1F1E6": {
         "emoji": "🇺🇦",
         "tags": [
             "UA",
-            "lippu",
-            "lippu: ukraina"
+            "lippu"
         ]
     },
     "1F1FA-1F1EC": {
         "emoji": "🇺🇬",
         "tags": [
             "UG",
-            "lippu",
-            "lippu: uganda"
+            "lippu"
         ]
     },
     "1F1FA-1F1F2": {
         "emoji": "🇺🇲",
         "tags": [
             "UM",
-            "lippu",
-            "lippu: yhdysvaltain erillissaaret"
+            "lippu"
         ]
     },
     "1F1FA-1F1F3": {
         "emoji": "🇺🇳",
         "tags": [
             "UN",
-            "lippu",
-            "lippu: yhdistyneet kansakunnat"
+            "lippu"
         ]
     },
     "1F1FA-1F1F8": {
         "emoji": "🇺🇸",
         "tags": [
             "US",
-            "lippu",
-            "lippu: yhdysvallat"
+            "lippu"
         ]
     },
     "1F1FA-1F1FE": {
         "emoji": "🇺🇾",
         "tags": [
             "UY",
-            "lippu",
-            "lippu: uruguay"
+            "lippu"
         ]
     },
     "1F1FA-1F1FF": {
         "emoji": "🇺🇿",
         "tags": [
             "UZ",
-            "lippu",
-            "lippu: uzbekistan"
+            "lippu"
         ]
     },
     "1F1FB-1F1E6": {
         "emoji": "🇻🇦",
         "tags": [
             "VA",
-            "lippu",
-            "lippu: vatikaani"
+            "lippu"
         ]
     },
     "1F1FB-1F1E8": {
         "emoji": "🇻🇨",
         "tags": [
             "VC",
-            "lippu",
-            "lippu: saint vincent ja grenadiinit"
+            "lippu"
         ]
     },
     "1F1FB-1F1EA": {
         "emoji": "🇻🇪",
         "tags": [
             "VE",
-            "lippu",
-            "lippu: venezuela"
+            "lippu"
         ]
     },
     "1F1FB-1F1EC": {
         "emoji": "🇻🇬",
         "tags": [
             "VG",
-            "lippu",
-            "lippu: brittiläiset neitsytsaaret"
+            "lippu"
         ]
     },
     "1F1FB-1F1EE": {
         "emoji": "🇻🇮",
         "tags": [
             "VI",
-            "lippu",
-            "lippu: yhdysvaltain neitsytsaaret"
+            "lippu"
         ]
     },
     "1F1FB-1F1F3": {
         "emoji": "🇻🇳",
         "tags": [
             "VN",
-            "lippu",
-            "lippu: vietnam"
+            "lippu"
         ]
     },
     "1F1FB-1F1FA": {
         "emoji": "🇻🇺",
         "tags": [
             "VU",
-            "lippu",
-            "lippu: vanuatu"
+            "lippu"
         ]
     },
     "1F1FC-1F1EB": {
         "emoji": "🇼🇫",
         "tags": [
             "WF",
-            "lippu",
-            "lippu: wallis ja futuna"
+            "lippu"
         ]
     },
     "1F1FC-1F1F8": {
         "emoji": "🇼🇸",
         "tags": [
             "WS",
-            "lippu",
-            "lippu: samoa"
+            "lippu"
         ]
     },
     "1F1FD-1F1F0": {
         "emoji": "🇽🇰",
         "tags": [
             "XK",
-            "lippu",
-            "lippu: kosovo"
+            "lippu"
         ]
     },
     "1F1FE-1F1EA": {
         "emoji": "🇾🇪",
         "tags": [
             "YE",
-            "lippu",
-            "lippu: jemen"
+            "lippu"
         ]
     },
     "1F1FE-1F1F9": {
         "emoji": "🇾🇹",
         "tags": [
             "YT",
-            "lippu",
-            "lippu: mayotte"
+            "lippu"
         ]
     },
     "1F1FF-1F1E6": {
         "emoji": "🇿🇦",
         "tags": [
             "ZA",
-            "lippu",
-            "lippu: etelä-afrikka"
+            "lippu"
         ]
     },
     "1F1FF-1F1F2": {
         "emoji": "🇿🇲",
         "tags": [
             "ZM",
-            "lippu",
-            "lippu: sambia"
+            "lippu"
         ]
     },
     "1F1FF-1F1FC": {
         "emoji": "🇿🇼",
         "tags": [
             "ZW",
-            "lippu",
-            "lippu: zimbabwe"
+            "lippu"
         ]
     },
     "1F201": {
@@ -2339,12 +2093,14 @@
         "emoji": "🈳",
         "tags": [
             "japani",
+            "kiina",
             "kirjoitusmerkki"
         ]
     },
     "1F234": {
         "emoji": "🈴",
         "tags": [
+            "japani",
             "kiina",
             "kirjoitusmerkki"
         ]
@@ -2359,6 +2115,7 @@
     "1F236": {
         "emoji": "🈶",
         "tags": [
+            "ei ilmainen",
             "japani",
             "kirjoitusmerkki"
         ]
@@ -2367,12 +2124,15 @@
         "emoji": "🈷️",
         "tags": [
             "japani",
-            "kirjoitusmerkki"
+            "kirjoitusmerkki",
+            "kuukausittainen määrä"
         ]
     },
     "1F238": {
         "emoji": "🈸",
         "tags": [
+            "hakemus",
+            "japani",
             "kiina",
             "kirjoitusmerkki"
         ]
@@ -2380,6 +2140,7 @@
     "1F239": {
         "emoji": "🈹",
         "tags": [
+            "alennus",
             "japani",
             "kirjoitusmerkki"
         ]
@@ -2387,6 +2148,7 @@
     "1F23A": {
         "emoji": "🈺",
         "tags": [
+            "avoinna",
             "japani",
             "kirjoitusmerkki"
         ]
@@ -2394,6 +2156,7 @@
     "1F250": {
         "emoji": "🉐",
         "tags": [
+            "hyvä ostos",
             "japani",
             "kirjoitusmerkki"
         ]
@@ -2401,6 +2164,7 @@
     "1F251": {
         "emoji": "🉑",
         "tags": [
+            "japani",
             "kiina",
             "kirjoitusmerkki"
         ]
@@ -2474,9 +2238,17 @@
     "1F308": {
         "emoji": "🌈",
         "tags": [
-            "aurinko",
+            "biseksuali",
+            "genderqueer",
+            "hlbt",
+            "hlbtq",
+            "hlbtqia",
+            "homo",
+            "lesbo",
+            "queer",
             "sade",
-            "sää"
+            "sää",
+            "trans"
         ]
     },
     "1F309": {
@@ -2544,8 +2316,10 @@
     "1F310": {
         "emoji": "🌐",
         "tags": [
+            "internet",
             "maailma",
             "maapallo",
+            "netti",
             "pituuspiirit"
         ]
     },
@@ -2665,6 +2439,7 @@
         "emoji": "🌝",
         "tags": [
             "kasvot",
+            "kirkas",
             "kuu",
             "sää",
             "valo"
@@ -2673,6 +2448,7 @@
     "1F31E": {
         "emoji": "🌞",
         "tags": [
+            "aurinko",
             "kasvot",
             "kuu",
             "paiste",
@@ -2793,7 +2569,8 @@
     "1F32E": {
         "emoji": "🌮",
         "tags": [
-            "meksikolainen"
+            "meksikolainen",
+            "tortilla"
         ]
     },
     "1F32F": {
@@ -2805,7 +2582,8 @@
     "1F330": {
         "emoji": "🌰",
         "tags": [
-            "kasvi"
+            "kasvi",
+            "pähkinä"
         ]
     },
     "1F331": {
@@ -2818,7 +2596,9 @@
     "1F332": {
         "emoji": "🌲",
         "tags": [
+            "joulukuusi",
             "kasvi",
+            "metsä",
             "puu"
         ]
     },
@@ -2963,10 +2743,19 @@
     "1F344-200D-1F7EB": {
         "emoji": "🍄‍🟫",
         "tags": [
+            "itiö",
             "kasvis",
+            "kasvissyöjä",
             "luonto",
+            "pizzan täytteet",
+            "portobello",
+            "ruoka",
+            "ruskea sieni",
             "sieni",
-            "syötävä"
+            "siitake",
+            "tryffeli",
+            "vegetaristi",
+            "vihannes"
         ]
     },
     "1F345": {
@@ -2997,6 +2786,7 @@
     "1F348": {
         "emoji": "🍈",
         "tags": [
+            "cantaloupe",
             "hedelmä",
             "kasvi"
         ]
@@ -3012,6 +2802,7 @@
         "emoji": "🍊",
         "tags": [
             "appelsiini",
+            "c-vitamiini",
             "hedelmä",
             "kasvi"
         ]
@@ -3027,9 +2818,20 @@
     "1F34B-200D-1F7E9": {
         "emoji": "🍋‍🟩",
         "tags": [
+            "cocktail",
+            "hapan",
             "hedelmä",
+            "kirpeä",
+            "koriste",
+            "lime",
+            "margarita",
+            "mojito",
+            "raikas",
+            "salsa",
             "sitrus",
-            "trooppinen"
+            "tequila",
+            "trooppinen",
+            "vihreä"
         ]
     },
     "1F34C": {
@@ -3097,6 +2899,8 @@
     "1F354": {
         "emoji": "🍔",
         "tags": [
+            "burgeri",
+            "hamppari",
             "jauhelihapihvi"
         ]
     },
@@ -3104,7 +2908,9 @@
         "emoji": "🍕",
         "tags": [
             "juusto",
-            "siivu"
+            "pepperoni",
+            "siivu",
+            "viipale"
         ]
     },
     "1F356": {
@@ -3120,6 +2926,7 @@
             "kana",
             "koipi",
             "luu",
+            "ruoka",
             "siipikarja"
         ]
     },
@@ -3135,7 +2942,8 @@
         "tags": [
             "japanilainen",
             "pallo",
-            "riisi"
+            "riisi",
+            "ruoka"
         ]
     },
     "1F35A": {
@@ -3165,18 +2973,27 @@
     "1F35D": {
         "emoji": "🍝",
         "tags": [
-            "pasta"
+            "lihapullat",
+            "pasta",
+            "ravintola",
+            "ruoka"
         ]
     },
     "1F35E": {
         "emoji": "🍞",
         "tags": [
-            "pala"
+            "aamiainen",
+            "paahtoleipä",
+            "pala",
+            "ravintola",
+            "vehnä"
         ]
     },
     "1F35F": {
         "emoji": "🍟",
         "tags": [
+            "peruna",
+            "ranskikset",
             "tikkuperunat"
         ]
     },
@@ -3202,6 +3019,8 @@
         "emoji": "🍢",
         "tags": [
             "merenelävät",
+            "ravintola",
+            "ruoka",
             "tikku",
             "varras"
         ]
@@ -3210,7 +3029,8 @@
         "emoji": "🍣",
         "tags": [
             "raaka kala",
-            "riisi"
+            "riisi",
+            "ruoka"
         ]
     },
     "1F364": {
@@ -3226,7 +3046,8 @@
         "tags": [
             "kakku",
             "kala",
-            "leivonnainen"
+            "leivonnainen",
+            "ravintola"
         ]
     },
     "1F366": {
@@ -3255,7 +3076,9 @@
         "tags": [
             "jälkiruoka",
             "kerma",
-            "makea"
+            "makea",
+            "ravintola",
+            "ruoka"
         ]
     },
     "1F369": {
@@ -3263,6 +3086,7 @@
         "tags": [
             "jälkiruoka",
             "makea",
+            "munkki",
             "munkkirinkeli"
         ]
     },
@@ -3270,7 +3094,8 @@
         "emoji": "🍪",
         "tags": [
             "jälkiruoka",
-            "makea"
+            "makea",
+            "suklaa"
         ]
     },
     "1F36B": {
@@ -3336,7 +3161,10 @@
     "1F373": {
         "emoji": "🍳",
         "tags": [
+            "aamiainen",
+            "kananmuna",
             "paistinpannu",
+            "ruoanlaitto",
             "ruoka"
         ]
     },
@@ -3392,15 +3220,19 @@
         "emoji": "🍹",
         "tags": [
             "baari",
+            "drinkki",
             "juoda",
-            "lasi"
+            "lasi",
+            "trooppinen"
         ]
     },
     "1F37A": {
         "emoji": "🍺",
         "tags": [
+            "alkoholi",
             "baari",
             "juoda",
+            "kalja",
             "olut",
             "tuoppi"
         ]
@@ -3410,6 +3242,8 @@
         "tags": [
             "baari",
             "juoda",
+            "juoma",
+            "kalja",
             "kippis",
             "olut",
             "tuoppi"
@@ -3431,8 +3265,7 @@
             "haarukka",
             "lautanen",
             "ruokailu",
-            "veitsi",
-            "veitsi ja lautanen"
+            "veitsi"
         ]
     },
     "1F37E": {
@@ -3448,7 +3281,10 @@
     "1F37F": {
         "emoji": "🍿",
         "tags": [
-            "maissi"
+            "elokuva",
+            "leffa",
+            "maissi",
+            "popparit"
         ]
     },
     "1F380": {
@@ -3529,6 +3365,7 @@
     "1F389": {
         "emoji": "🎉",
         "tags": [
+            "hurraa",
             "juhla",
             "yllätys"
         ]
@@ -3606,7 +3443,8 @@
         "tags": [
             "koulu",
             "koululaukku",
-            "laukku"
+            "laukku",
+            "reppu"
         ]
     },
     "1F393": {
@@ -3747,6 +3585,7 @@
         "emoji": "🎩",
         "tags": [
             "hattu",
+            "taikuri",
             "vaatteet"
         ]
     },
@@ -3768,7 +3607,8 @@
         "tags": [
             "elokuva",
             "klaffi",
-            "kuvaukset"
+            "kuvaukset",
+            "toiminta"
         ]
     },
     "1F3AD": {
@@ -3777,6 +3617,7 @@
             "naamio",
             "näytelmä",
             "näyttämö",
+            "shakespeare",
             "taide",
             "teatteri"
         ]
@@ -3801,6 +3642,7 @@
     "1F3B0": {
         "emoji": "🎰",
         "tags": [
+            "kasino",
             "kolikko",
             "rahapeli"
         ]
@@ -3808,7 +3650,9 @@
     "1F3B1": {
         "emoji": "🎱",
         "tags": [
+            "8",
             "biljardipallo",
+            "kahdeksan",
             "kasipallo",
             "pallo",
             "peli"
@@ -3818,7 +3662,8 @@
         "emoji": "🎲",
         "tags": [
             "noppakuutio",
-            "peli"
+            "peli",
+            "viihde"
         ]
     },
     "1F3B3": {
@@ -3905,7 +3750,8 @@
         "tags": [
             "juokseminen",
             "nauha",
-            "paita"
+            "paita",
+            "urheilu"
         ]
     },
     "1F3BE": {
@@ -3950,7 +3796,8 @@
         "emoji": "🏃",
         "tags": [
             "juokseminen",
-            "maratoni"
+            "maratoni",
+            "urheilu"
         ]
     },
     "1F3C3-200D-2640-FE0F": {
@@ -3959,17 +3806,18 @@
             "juokseminen",
             "juoksija",
             "lenkki",
-            "nainen"
+            "nainen",
+            "urheilu"
         ]
     },
     "1F3C3-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♀️‍➡️",
         "tags": [
             "juokseminen",
-            "juokseva nainen",
             "juoksija",
             "lenkki",
-            "nainen"
+            "nainen",
+            "urheilu"
         ]
     },
     "1F3C3-200D-2642-FE0F": {
@@ -3995,8 +3843,8 @@
         "emoji": "🏃‍➡️",
         "tags": [
             "juokseminen",
-            "juoksija",
-            "maratoni"
+            "maratoni",
+            "urheilu"
         ]
     },
     "1F3C4": {
@@ -4031,12 +3879,15 @@
     "1F3C6": {
         "emoji": "🏆️",
         "tags": [
-            "palkinto"
+            "kisat",
+            "palkinto",
+            "urheilu"
         ]
     },
     "1F3C7": {
         "emoji": "🏇",
         "tags": [
+            "eläin",
             "hevonen",
             "jockey",
             "kilparatsastus",
@@ -4048,6 +3899,7 @@
         "tags": [
             "jalkapallo",
             "pallo",
+            "super bowl",
             "urheilu"
         ]
     },
@@ -4071,7 +3923,8 @@
         "tags": [
             "nainen",
             "uija",
-            "uimari"
+            "uimari",
+            "urheilu"
         ]
     },
     "1F3CA-200D-2642-FE0F": {
@@ -4107,8 +3960,14 @@
     "1F3CC": {
         "emoji": "🏌️",
         "tags": [
+            "birdie",
             "golf",
-            "pallo"
+            "harjoituslyöntialue",
+            "pallo",
+            "pga",
+            "putata",
+            "tii",
+            "viheriö"
         ]
     },
     "1F3CC-FE0F-200D-2640-FE0F": {
@@ -4128,7 +3987,8 @@
     "1F3CD": {
         "emoji": "🏍️",
         "tags": [
-            "kilpa-ajot"
+            "kilpa-ajot",
+            "liikenne"
         ]
     },
     "1F3CE": {
@@ -4158,16 +4018,19 @@
             "hockey",
             "maila",
             "ottelu",
-            "pallo"
+            "pallo",
+            "peli"
         ]
     },
     "1F3D2": {
         "emoji": "🏒",
         "tags": [
             "jää",
+            "jääkiekko",
             "kiekko",
             "maila",
-            "ottelu"
+            "ottelu",
+            "peli"
         ]
     },
     "1F3D3": {
@@ -4270,6 +4133,8 @@
     "1F3E0": {
         "emoji": "🏠️",
         "tags": [
+            "asumus",
+            "koti",
             "rakennus"
         ]
     },
@@ -4345,6 +4210,7 @@
         "emoji": "🏪",
         "tags": [
             "kauppa",
+            "ostokset",
             "rakennus"
         ]
     },
@@ -4390,6 +4256,7 @@
     "1F3F0": {
         "emoji": "🏰",
         "tags": [
+            "eurooppalainen",
             "länsimainen",
             "rakennus"
         ]
@@ -4405,9 +4272,20 @@
     "1F3F3-FE0F-200D-1F308": {
         "emoji": "🏳️‍🌈",
         "tags": [
+            "biseksuaali",
+            "hlbt",
+            "hlbtq",
+            "hlbtqia",
+            "homo",
+            "lesbo",
+            "lhbt",
+            "lhbtq",
+            "lhbtqia",
             "liehuva",
             "lippu",
-            "sateenkaari"
+            "sateenkaari",
+            "trans",
+            "transsukupuolinen"
         ]
     },
     "1F3F3-FE0F-200D-26A7-FE0F": {
@@ -4440,24 +4318,21 @@
         "emoji": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "tags": [
             "gbeng",
-            "lippu",
-            "lippu: englanti"
+            "lippu"
         ]
     },
     "1F3F4-E0067-E0062-E0073-E0063-E0074-E007F": {
         "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "tags": [
             "gbsct",
-            "lippu",
-            "lippu: skotlanti"
+            "lippu"
         ]
     },
     "1F3F4-E0067-E0062-E0077-E006C-E0073-E007F": {
         "emoji": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
         "tags": [
             "gbwls",
-            "lippu",
-            "lippu: wales"
+            "lippu"
         ]
     },
     "1F3F5": {
@@ -4555,6 +4430,7 @@
     "1F400": {
         "emoji": "🐀",
         "tags": [
+            "eläin",
             "harmaa"
         ]
     },
@@ -4567,8 +4443,10 @@
     "1F402": {
         "emoji": "🐂",
         "tags": [
+            "eläin",
             "horoskooppi",
-            "horoskooppimerkki"
+            "horoskooppimerkki",
+            "maatila"
         ]
     },
     "1F403": {
@@ -4581,13 +4459,20 @@
     "1F404": {
         "emoji": "🐄",
         "tags": [
-            "läikikäs"
+            "läikikäs",
+            "maatila",
+            "muu",
+            "nauta"
         ]
     },
     "1F405": {
         "emoji": "🐅",
         "tags": [
-            "tiikeri"
+            "eläin",
+            "eläintarha",
+            "iso kissa",
+            "kissapeto",
+            "peto"
         ]
     },
     "1F406": {
@@ -4599,6 +4484,7 @@
     "1F407": {
         "emoji": "🐇",
         "tags": [
+            "eläin",
             "lemmikki",
             "pupu"
         ]
@@ -4606,12 +4492,15 @@
     "1F408": {
         "emoji": "🐈️",
         "tags": [
+            "eläin",
+            "kissanpentu",
             "lemmikki"
         ]
     },
     "1F408-200D-2B1B": {
         "emoji": "🐈‍⬛",
         "tags": [
+            "eläin",
             "epäonni",
             "kissa",
             "musta"
@@ -4626,19 +4515,22 @@
     "1F40A": {
         "emoji": "🐊",
         "tags": [
-            "krokotiili"
+            "eläin",
+            "eläintarha"
         ]
     },
     "1F40B": {
         "emoji": "🐋",
         "tags": [
-            "valas"
+            "eläin",
+            "valtameri"
         ]
     },
     "1F40C": {
         "emoji": "🐌",
         "tags": [
-            "etana"
+            "eläin",
+            "luonto"
         ]
     },
     "1F40D": {
@@ -4653,6 +4545,7 @@
     "1F40E": {
         "emoji": "🐎",
         "tags": [
+            "kilpa",
             "kilpahevonen",
             "ratsastaja",
             "ratsu",
@@ -4675,7 +4568,9 @@
         "tags": [
             "horoskooppi",
             "horoskooppimerkki",
-            "kauris"
+            "kauris",
+            "maatila",
+            "maito"
         ]
     },
     "1F411": {
@@ -4688,7 +4583,8 @@
     "1F412": {
         "emoji": "🐒",
         "tags": [
-            "seisova"
+            "banaani",
+            "eläin"
         ]
     },
     "1F413": {
@@ -4700,7 +4596,9 @@
     "1F414": {
         "emoji": "🐔",
         "tags": [
-            "lintu"
+            "eläin",
+            "lintu",
+            "muna"
         ]
     },
     "1F415": {
@@ -4719,12 +4617,17 @@
     "1F416": {
         "emoji": "🐖",
         "tags": [
-            "emakko"
+            "emakko",
+            "pekoni",
+            "porsas",
+            "possu"
         ]
     },
     "1F417": {
         "emoji": "🐗",
         "tags": [
+            "eläin",
+            "possu",
             "sika"
         ]
     },
@@ -4737,31 +4640,42 @@
     "1F419": {
         "emoji": "🐙",
         "tags": [
-            "mustekala"
+            "eläin",
+            "meri",
+            "valtameri"
         ]
     },
     "1F41A": {
         "emoji": "🐚",
         "tags": [
+            "eläin",
+            "koraali",
             "kuori"
         ]
     },
     "1F41B": {
         "emoji": "🐛",
         "tags": [
-            "hyönteinen"
+            "hyönteinen",
+            "puutarha"
         ]
     },
     "1F41C": {
         "emoji": "🐜",
         "tags": [
-            "hyönteinen"
+            "hyönteinen",
+            "murkku",
+            "puutarha"
         ]
     },
     "1F41D": {
         "emoji": "🐝",
         "tags": [
-            "hyönteinen"
+            "ampiainen",
+            "hyönteinen",
+            "kimalainen",
+            "luonto",
+            "pörriäinen"
         ]
     },
     "1F41E": {
@@ -4788,7 +4702,8 @@
     "1F421": {
         "emoji": "🐡",
         "tags": [
-            "kala"
+            "kala",
+            "pallo"
         ]
     },
     "1F422": {
@@ -4833,17 +4748,26 @@
         "tags": [
             "fantasia",
             "jälleensyntymä",
+            "jälleensyntynyt",
+            "kuolematon",
+            "muuttua",
             "reinkarnaatio",
-            "tulenlintu"
+            "tulilintu",
+            "uudelleensyntynyt",
+            "uudistuminen"
         ]
     },
     "1F426-200D-2B1B": {
         "emoji": "🐦‍⬛",
         "tags": [
+            "eläin",
             "korppi",
             "lintu",
+            "luonto",
             "musta",
             "mustavaris",
+            "nokka",
+            "siivekäs",
             "varis"
         ]
     },
@@ -4862,7 +4786,9 @@
     "1F429": {
         "emoji": "🐩",
         "tags": [
-            "koira"
+            "eläin",
+            "koira",
+            "puudeli"
         ]
     },
     "1F42A": {
@@ -4884,7 +4810,10 @@
     "1F42C": {
         "emoji": "🐬",
         "tags": [
-            "flipper"
+            "eläin",
+            "flipper",
+            "meri",
+            "pyöriäinen"
         ]
     },
     "1F42D": {
@@ -4939,7 +4868,9 @@
         "tags": [
             "naama",
             "suihkuttaa",
-            "valas"
+            "valas",
+            "valtameri",
+            "vesi"
         ]
     },
     "1F434": {
@@ -4953,6 +4884,8 @@
         "emoji": "🐵",
         "tags": [
             "apina",
+            "banaani",
+            "eläin",
             "naama"
         ]
     },
@@ -4961,13 +4894,16 @@
         "tags": [
             "koira",
             "lemmikki",
-            "naama"
+            "naama",
+            "pentu"
         ]
     },
     "1F437": {
         "emoji": "🐷",
         "tags": [
+            "eläin",
             "naama",
+            "possu",
             "sika"
         ]
     },
@@ -5011,6 +4947,7 @@
     "1F43C": {
         "emoji": "🐼",
         "tags": [
+            "bambu",
             "naama",
             "pandan naama"
         ]
@@ -5066,6 +5003,8 @@
     "1F442": {
         "emoji": "👂️",
         "tags": [
+            "kuulo",
+            "kuunnella",
             "pää",
             "vartalo"
         ]
@@ -5105,13 +5044,15 @@
             "osoittaa",
             "sormi",
             "vartalo",
-            "ylös"
+            "ylös",
+            "ylös osoittava etusormi kämmenselkä katsojaan päin"
         ]
     },
     "1F447": {
         "emoji": "👇️",
         "tags": [
             "alas",
+            "alas osoittava etusormi kämmenselkä katsojaan päin",
             "etusormi",
             "kämmenselkä",
             "käsi",
@@ -5128,7 +5069,8 @@
             "käsi",
             "osoittaa",
             "sormi",
-            "vartalo"
+            "vartalo",
+            "vasemmalle osoittava etusormi kämmenselkä katsojaan päin"
         ]
     },
     "1F449": {
@@ -5137,6 +5079,7 @@
             "etusormi",
             "kämmenselkä",
             "käsi",
+            "oikealle osoittava etusormi kämmenselkä katsojaan päin",
             "osoittaa",
             "sormi",
             "vartalo"
@@ -5176,6 +5119,7 @@
             "+1",
             "käsi",
             "peukalo",
+            "peukku",
             "vartalo",
             "ylös"
         ]
@@ -5202,6 +5146,7 @@
         "emoji": "👐",
         "tags": [
             "avoin",
+            "halaus",
             "käsi",
             "vartalo"
         ]
@@ -5255,6 +5200,7 @@
         "emoji": "👗",
         "tags": [
             "leninki",
+            "ostokset",
             "vaatteet"
         ]
     },
@@ -5268,15 +5214,19 @@
     "1F459": {
         "emoji": "👙",
         "tags": [
+            "ranta",
             "uida",
             "uimapuku",
-            "vaatteet"
+            "vaatteet",
+            "vesi"
         ]
     },
     "1F45A": {
         "emoji": "👚",
         "tags": [
             "nainen",
+            "ostokset",
+            "paita",
             "vaatteet"
         ]
     },
@@ -5291,7 +5241,8 @@
         "emoji": "👜",
         "tags": [
             "asuste",
-            "laukku"
+            "laukku",
+            "ostokset"
         ]
     },
     "1F45D": {
@@ -5342,6 +5293,7 @@
         "tags": [
             "kenkä",
             "nainen",
+            "ostokset",
             "saapas",
             "vaatteet"
         ]
@@ -5384,7 +5336,8 @@
             "neiti",
             "neito",
             "neitsyt",
-            "nuori"
+            "nuori",
+            "tytär"
         ]
     },
     "1F468": {
@@ -5415,8 +5368,10 @@
         "emoji": "👨‍🍼",
         "tags": [
             "imettävä",
+            "isä",
             "mies",
             "syöttävä",
+            "vastasyntynyt",
             "vauva"
         ]
     },
@@ -5653,6 +5608,7 @@
         "emoji": "👨‍💼",
         "tags": [
             "mies",
+            "pomo",
             "toimisto",
             "työntekijä",
             "valkokaulus"
@@ -5670,6 +5626,8 @@
     "1F468-200D-1F52C": {
         "emoji": "👨‍🔬",
         "tags": [
+            "biologi",
+            "matemaatikko",
             "mies",
             "tiede",
             "tutkija"
@@ -5696,7 +5654,8 @@
         "tags": [
             "esteettömyys",
             "mies",
-            "sokea"
+            "sokea",
+            "valkoinen keppi"
         ]
     },
     "1F468-200D-1F9AF-200D-27A1-FE0F": {
@@ -5704,8 +5663,8 @@
         "tags": [
             "esteettömyys",
             "mies",
-            "mies ja valkoinen keppi",
-            "sokea"
+            "sokea",
+            "valkoinen keppi"
         ]
     },
     "1F468-200D-1F9B0": {
@@ -5825,6 +5784,7 @@
     "1F469": {
         "emoji": "👩",
         "tags": [
+            "aikuinen",
             "naispuolinen"
         ]
     },
@@ -5852,7 +5812,8 @@
             "imettävä",
             "nainen",
             "syöttävä",
-            "vauva"
+            "vauva",
+            "äiti"
         ]
     },
     "1F469-200D-1F393": {
@@ -5860,8 +5821,10 @@
         "tags": [
             "lakki",
             "nainen",
+            "opiskelija",
             "opiskelu",
-            "valmistujaiset"
+            "valmistujaiset",
+            "valmistunut"
         ]
     },
     "1F469-200D-1F3A4": {
@@ -6085,6 +6048,7 @@
     "1F469-200D-1F9B0": {
         "emoji": "👩‍🦰",
         "tags": [
+            "aikuinen",
             "nainen",
             "naispuolinen",
             "punatukkainen"
@@ -6093,6 +6057,7 @@
     "1F469-200D-1F9B1": {
         "emoji": "👩‍🦱",
         "tags": [
+            "aikuinen",
             "kiharatukkainen",
             "nainen",
             "naispuolinen"
@@ -6101,6 +6066,7 @@
     "1F469-200D-1F9B2": {
         "emoji": "👩‍🦲",
         "tags": [
+            "aikuinen",
             "kalju",
             "nainen",
             "naispuolinen"
@@ -6109,6 +6075,7 @@
     "1F469-200D-1F9B3": {
         "emoji": "👩‍🦳",
         "tags": [
+            "aikuinen",
             "nainen",
             "naispuolinen",
             "valkotukkainen"
@@ -6240,24 +6207,32 @@
     "1F46C": {
         "emoji": "👬",
         "tags": [
-            "kaksonen",
             "kaksoset",
-            "miespari"
+            "kädestä pitäminen",
+            "käsi",
+            "miehet",
+            "pariskunta",
+            "veljet"
         ]
     },
     "1F46D": {
         "emoji": "👭",
         "tags": [
+            "kaksoset",
             "kädestä pitäminen",
             "käsi",
-            "nainen",
-            "pariskunta"
+            "naiset",
+            "pariskunta",
+            "sisaret"
         ]
     },
     "1F46E": {
         "emoji": "👮",
         "tags": [
-            "kyttä"
+            "etsivä",
+            "konstaapeli",
+            "kyttä",
+            "laki"
         ]
     },
     "1F46E-200D-2640-FE0F": {
@@ -6265,6 +6240,8 @@
         "tags": [
             "etsivä",
             "konstaapeli",
+            "kyttä",
+            "laki",
             "nainen",
             "poliisi"
         ]
@@ -6274,6 +6251,8 @@
         "tags": [
             "etsivä",
             "konstaapeli",
+            "kyttä",
+            "laki",
             "mies",
             "poliisi"
         ]
@@ -6300,9 +6279,12 @@
     "1F46F-200D-2642-FE0F": {
         "emoji": "👯‍♂️",
         "tags": [
+            "bff",
+            "juhla",
             "juhlat",
             "nainen",
             "pupu",
+            "tanssi",
             "tanssija"
         ]
     },
@@ -6310,14 +6292,14 @@
         "emoji": "👰",
         "tags": [
             "huntu",
-            "häät",
-            "morsian"
+            "häät"
         ]
     },
     "1F470-200D-2640-FE0F": {
         "emoji": "👰‍♀️",
         "tags": [
             "huntu",
+            "häät",
             "nainen",
             "nainen ja huntu"
         ]
@@ -6326,6 +6308,7 @@
         "emoji": "👰‍♂️",
         "tags": [
             "huntu",
+            "häät",
             "mies",
             "mies ja huntu"
         ]
@@ -6370,7 +6353,7 @@
     "1F473": {
         "emoji": "👳",
         "tags": [
-            "mies",
+            "henkilö",
             "turbaani"
         ]
     },
@@ -6398,6 +6381,8 @@
     "1F475": {
         "emoji": "👵",
         "tags": [
+            "mummi",
+            "mummo",
             "nainen",
             "vanha"
         ]
@@ -6406,7 +6391,8 @@
         "emoji": "👶",
         "tags": [
             "lapsi",
-            "nuori"
+            "nuori",
+            "raskaana"
         ]
     },
     "1F477": {
@@ -6420,7 +6406,9 @@
     "1F477-200D-2640-FE0F": {
         "emoji": "👷‍♀️",
         "tags": [
+            "kypärä",
             "nainen",
+            "rakennus",
             "rakennustyöläinen",
             "raksa"
         ]
@@ -6437,7 +6425,9 @@
         "emoji": "👸",
         "tags": [
             "fantasia",
-            "satu"
+            "kruunu",
+            "kuninkaallinen",
+            "satuprinsessa"
         ]
     },
     "1F479": {
@@ -6569,6 +6559,7 @@
         "tags": [
             "juhlat",
             "nainen",
+            "salsa",
             "tanssi",
             "tanssija"
         ]
@@ -6576,6 +6567,7 @@
     "1F484": {
         "emoji": "💄",
         "tags": [
+            "kosmetiikka",
             "kosmetiikkaa",
             "meikit",
             "meikki"
@@ -6587,6 +6579,7 @@
             "kosmetiikka",
             "kynsi",
             "kynsihuolto",
+            "lakka",
             "manikyyri",
             "vartalo"
         ]
@@ -6594,7 +6587,11 @@
     "1F486": {
         "emoji": "💆",
         "tags": [
-            "hieroja"
+            "henkilö",
+            "hieroja",
+            "kasvot",
+            "pääkipu",
+            "salonki"
         ]
     },
     "1F486-200D-2640-FE0F": {
@@ -6608,7 +6605,10 @@
         "emoji": "💆‍♂️",
         "tags": [
             "hieronta",
-            "mies"
+            "mies",
+            "pääkipu",
+            "rentoutuminen",
+            "salonki"
         ]
     },
     "1F487": {
@@ -6686,6 +6686,8 @@
     "1F48D": {
         "emoji": "💍",
         "tags": [
+            "häissä",
+            "kihlat",
             "romantiikka",
             "timantti"
         ]
@@ -6708,8 +6710,10 @@
         "emoji": "💐",
         "tags": [
             "kasvi",
+            "kimppu",
             "kukka",
-            "romantiikka"
+            "romantiikka",
+            "treffit"
         ]
     },
     "1F491": {
@@ -6741,16 +6745,22 @@
     "1F494": {
         "emoji": "💔",
         "tags": [
+            "suru",
             "sydän",
             "särkynyt",
-            "särkyä"
+            "särkyä",
+            "tunne",
+            "yksin"
         ]
     },
     "1F495": {
         "emoji": "💕",
         "tags": [
+            "kaksi",
+            "merkkipäivä",
             "rakkaus",
-            "sydän"
+            "sydän",
+            "xoxo"
         ]
     },
     "1F496": {
@@ -6783,8 +6793,11 @@
     "1F499": {
         "emoji": "💙",
         "tags": [
+            "rakkaus",
+            "romanssi",
             "sininen",
-            "sydän"
+            "sydän",
+            "tunne"
         ]
     },
     "1F49A": {
@@ -6812,7 +6825,9 @@
         "emoji": "💝",
         "tags": [
             "nauha",
+            "rakkaus",
             "sydän",
+            "vuosipäivä",
             "ystävänpäivä"
         ]
     },
@@ -6826,7 +6841,9 @@
     "1F49F": {
         "emoji": "💟",
         "tags": [
-            "sydän"
+            "143",
+            "sydän",
+            "tunne"
         ]
     },
     "1F4A0": {
@@ -6849,6 +6866,7 @@
     "1F4A2": {
         "emoji": "💢",
         "tags": [
+            "pettynyt",
             "sarjakuva",
             "vihainen"
         ]
@@ -6856,6 +6874,7 @@
     "1F4A3": {
         "emoji": "💣️",
         "tags": [
+            "räjähdys",
             "sarjakuva"
         ]
     },
@@ -6863,7 +6882,10 @@
         "emoji": "💤",
         "tags": [
             "sarjakuva",
-            "uni"
+            "sänky",
+            "uni",
+            "väsynyt",
+            "yö"
         ]
     },
     "1F4A5": {
@@ -6939,6 +6961,7 @@
         "emoji": "💭",
         "tags": [
             "ajatus",
+            "haaveet",
             "ilmapallo",
             "kupla",
             "sarjakuva"
@@ -7057,6 +7080,7 @@
     "1F4BA": {
         "emoji": "💺",
         "tags": [
+            "lentokone",
             "tuoli"
         ]
     },
@@ -7064,14 +7088,17 @@
         "emoji": "💻️",
         "tags": [
             "kannetava",
+            "kannettava",
             "läppäri",
-            "tietokone"
+            "pc",
+            "tietokone",
+            "toimisto"
         ]
     },
     "1F4BC": {
         "emoji": "💼",
         "tags": [
-            "salkku"
+            "toimisto"
         ]
     },
     "1F4BD": {
@@ -7166,7 +7193,8 @@
             "kasvu",
             "käyrä",
             "nousu",
-            "suuntaus"
+            "suuntaus",
+            "trendi"
         ]
     },
     "1F4C9": {
@@ -7203,7 +7231,9 @@
         "emoji": "📍",
         "tags": [
             "karttanaula",
-            "nasta"
+            "nasta",
+            "naula",
+            "neula"
         ]
     },
     "1F4CE": {
@@ -7257,6 +7287,8 @@
         "tags": [
             "kansi",
             "kirja",
+            "kirjoitus",
+            "koulu",
             "lehtiö",
             "muistikirja",
             "muistio"
@@ -7323,7 +7355,8 @@
     "1F4DD": {
         "emoji": "📝",
         "tags": [
-            "lyijykynä"
+            "lyijykynä",
+            "muistiinpanot"
         ]
     },
     "1F4DE": {
@@ -7342,7 +7375,8 @@
     "1F4E0": {
         "emoji": "📠",
         "tags": [
-            "faksilaite"
+            "faksilaite",
+            "viestintä"
         ]
     },
     "1F4E1": {
@@ -7350,6 +7384,7 @@
         "tags": [
             "antenni",
             "lautanen",
+            "satelliitti",
             "satelliittiantenni"
         ]
     },
@@ -7401,6 +7436,8 @@
         "emoji": "📧",
         "tags": [
             "e-mail",
+            "email",
+            "kirje",
             "sähköpostiviesti",
             "viesti"
         ]
@@ -7419,8 +7456,10 @@
         "emoji": "📩",
         "tags": [
             "e-mail",
+            "kirjekuori",
             "lähetetty",
             "lähtevä",
+            "posti",
             "sähköposti",
             "sähköpostiviesti",
             "viesti"
@@ -7473,6 +7512,7 @@
         "emoji": "📯",
         "tags": [
             "posti",
+            "soitin",
             "torvi"
         ]
     },
@@ -7506,6 +7546,7 @@
         "emoji": "📳",
         "tags": [
             "hiljainen",
+            "kännykkä",
             "matkapuhelin",
             "puhelin",
             "värinä",
@@ -7543,6 +7584,7 @@
     "1F4F7": {
         "emoji": "📷️",
         "tags": [
+            "instagram",
             "video"
         ]
     },
@@ -7572,7 +7614,8 @@
     "1F4FB": {
         "emoji": "📻️",
         "tags": [
-            "vastaanotin"
+            "vastaanotin",
+            "viihde"
         ]
     },
     "1F4FC": {
@@ -7644,6 +7687,7 @@
         "emoji": "🔄",
         "tags": [
             "nuoli",
+            "uudelleen",
             "vastapäivään"
         ]
     },
@@ -7750,6 +7794,7 @@
             "avain",
             "kiinni",
             "lukko",
+            "pyörä",
             "turva"
         ]
     },
@@ -7763,7 +7808,8 @@
     "1F512": {
         "emoji": "🔒️",
         "tags": [
-            "kiinni"
+            "kiinni",
+            "yksityinen"
         ]
     },
     "1F513": {
@@ -7841,6 +7887,7 @@
         "emoji": "🔜",
         "tags": [
             "nuoli",
+            "pian",
             "soon-nuoli",
             "tulossa"
         ]
@@ -7850,7 +7897,8 @@
         "tags": [
             "alkuun",
             "nuoli",
-            "top-nuoli"
+            "top-nuoli",
+            "ylös"
         ]
     },
     "1F51E": {
@@ -7911,6 +7959,7 @@
         "emoji": "🔤",
         "tags": [
             "aakkoset",
+            "abc",
             "kirjaimet",
             "latinalaiset",
             "syötä"
@@ -7929,6 +7978,7 @@
         "tags": [
             "lamppu",
             "sähkö",
+            "työkalu",
             "valo"
         ]
     },
@@ -7941,6 +7991,7 @@
     "1F528": {
         "emoji": "🔨",
         "tags": [
+            "korjaus",
             "työkalu"
         ]
     },
@@ -7973,6 +8024,8 @@
     "1F52C": {
         "emoji": "🔬",
         "tags": [
+            "koe",
+            "tiede",
             "työkalu"
         ]
     },
@@ -8009,7 +8062,8 @@
             "aloittelija",
             "auto",
             "japani",
-            "shoshinsha"
+            "shoshinsha",
+            "vihreä"
         ]
     },
     "1F531": {
@@ -8482,7 +8536,8 @@
     "1F575": {
         "emoji": "🕵️",
         "tags": [
-            "salapoliisi"
+            "salapoliisi",
+            "vakooja"
         ]
     },
     "1F575-FE0F-200D-2640-FE0F": {
@@ -8539,12 +8594,15 @@
         "tags": [
             "mies",
             "mies tanssii",
+            "salsa",
+            "tango",
             "tanssi"
         ]
     },
     "1F587": {
         "emoji": "🖇️",
         "tags": [
+            "klemmari",
             "liitin",
             "paperiliitin",
             "yhdessä"
@@ -8590,6 +8648,7 @@
     "1F595": {
         "emoji": "🖕",
         "tags": [
+            "keskari",
             "käsi",
             "sormi",
             "vartalo"
@@ -8615,6 +8674,7 @@
     "1F5A5": {
         "emoji": "🖥️",
         "tags": [
+            "näyttö",
             "tietokone"
         ]
     },
@@ -8645,7 +8705,8 @@
             "kehys",
             "maalaus",
             "museo",
-            "taide"
+            "taide",
+            "taulu"
         ]
     },
     "1F5C2": {
@@ -8717,6 +8778,7 @@
         "tags": [
             "lehti",
             "rulla",
+            "sanomalehti",
             "uutiset"
         ]
     },
@@ -8724,6 +8786,7 @@
         "emoji": "🗡️",
         "tags": [
             "ase",
+            "miekka",
             "teräase",
             "veitsi"
         ]
@@ -8794,8 +8857,8 @@
             "new york",
             "patsas",
             "usa",
-            "vapaudenpatsas",
-            "vapaus"
+            "vapaus",
+            "yhdysvallat"
         ]
     },
     "1F5FE": {
@@ -8840,6 +8903,7 @@
         "tags": [
             "ilo",
             "itkunauru",
+            "kasvot",
             "naama",
             "naurunkyyneleet"
         ]
@@ -8849,6 +8913,7 @@
         "tags": [
             "auki",
             "hymy",
+            "iloinen",
             "kasvot",
             "naama",
             "suu"
@@ -8903,6 +8968,7 @@
             "fantasia",
             "hymy",
             "naama",
+            "piru",
             "sarvet",
             "satu"
         ]
@@ -8961,7 +9027,8 @@
             "aurinko",
             "aurinkolasit",
             "cool",
-            "hymy"
+            "hymy",
+            "lasit"
         ]
     },
     "1F60F": {
@@ -8978,6 +9045,9 @@
         "tags": [
             "naama",
             "neutraali",
+            "peruslukemat",
+            "pettynyt",
+            "surullinen",
             "tunteeton"
         ]
     },
@@ -8987,7 +9057,8 @@
             "kasvot",
             "naama",
             "tunteeton",
-            "tyhjä"
+            "tyhjä",
+            "vihainen"
         ]
     },
     "1F612": {
@@ -9068,7 +9139,9 @@
     "1F61B": {
         "emoji": "😛",
         "tags": [
+            "juhla",
             "kieli",
+            "mahtavaa",
             "naama"
         ]
     },
@@ -9076,6 +9149,7 @@
         "emoji": "😜",
         "tags": [
             "kieli",
+            "kieli ulkona",
             "naama",
             "silmä",
             "silmänisku",
@@ -9112,6 +9186,7 @@
             "kiukku",
             "naama",
             "raivo",
+            "suuttunut",
             "viha"
         ]
     },
@@ -9146,7 +9221,10 @@
     "1F624": {
         "emoji": "😤",
         "tags": [
+            "höyry",
             "naama",
+            "surullinen",
+            "vihainen",
             "voittaja",
             "voitto"
         ]
@@ -9154,10 +9232,13 @@
     "1F625": {
         "emoji": "😥",
         "tags": [
+            "ahdistunut",
             "helpottunut",
+            "hiki",
             "huh",
             "naama",
-            "pettynyt"
+            "pettynyt",
+            "vaikea"
         ]
     },
     "1F626": {
@@ -9180,9 +9261,11 @@
     "1F628": {
         "emoji": "😨",
         "tags": [
+            "huolestunut",
             "naama",
             "pelko",
-            "pelästynyt"
+            "pelästynyt",
+            "yllättynyt"
         ]
     },
     "1F629": {
@@ -9240,9 +9323,12 @@
         "tags": [
             "haukkoa henkeään",
             "helpotus",
+            "hymiö",
             "hämmästyä",
             "kuiskaus",
             "puhaltaa",
+            "tupakointi",
+            "uupunut",
             "vihellys"
         ]
     },
@@ -9289,7 +9375,8 @@
         "tags": [
             "naama",
             "punastunut",
-            "tyrmistynyt"
+            "tyrmistynyt",
+            "vau"
         ]
     },
     "1F634": {
@@ -9297,6 +9384,8 @@
         "tags": [
             "naama",
             "uni",
+            "väsynyt",
+            "yö",
             "zzz"
         ]
     },
@@ -9315,8 +9404,11 @@
         "tags": [
             "apua",
             "huimata",
+            "hymiö",
             "hypnoosissa",
+            "naama",
             "ongelmia",
+            "sekava",
             "spiraali"
         ]
     },
@@ -9326,6 +9418,7 @@
             "hiljaa",
             "hiljainen",
             "naama",
+            "sanaton",
             "suu"
         ]
     },
@@ -9364,6 +9457,7 @@
             "ilo",
             "kissa",
             "kissanaama ja naurunkyyneleet",
+            "kyyneleet",
             "naama",
             "nauru"
         ]
@@ -9406,7 +9500,8 @@
             "kissa",
             "naama",
             "pusu",
-            "silmä"
+            "silmä",
+            "suukko"
         ]
     },
     "1F63E": {
@@ -9430,6 +9525,7 @@
     "1F640": {
         "emoji": "🙀",
         "tags": [
+            "eläin",
             "kissa",
             "naama",
             "oho",
@@ -9475,6 +9571,7 @@
     "1F644": {
         "emoji": "🙄",
         "tags": [
+            "ihan sama",
             "naama",
             "pyörivä",
             "silmät"
@@ -9511,7 +9608,9 @@
         "emoji": "🙆",
         "tags": [
             "ele",
+            "harjoittelu",
             "käsi",
+            "nainen",
             "ok"
         ]
     },
@@ -9548,7 +9647,8 @@
             "anteeksipyyntö",
             "ele",
             "kumarrus",
-            "nainen"
+            "nainen",
+            "pahoillaan"
         ]
     },
     "1F647-200D-2642-FE0F": {
@@ -9566,7 +9666,9 @@
             "apina",
             "ei",
             "ele",
-            "kielletty"
+            "kielletty",
+            "paholainen",
+            "pelokas"
         ]
     },
     "1F649": {
@@ -9582,6 +9684,9 @@
         "emoji": "🙊",
         "tags": [
             "apina",
+            "eläin",
+            "hiljaa",
+            "hups",
             "kielletty"
         ]
     },
@@ -9591,7 +9696,8 @@
             "ele",
             "iloinen",
             "käsi",
-            "nostettu"
+            "nostettu",
+            "viittaa"
         ]
     },
     "1F64B-200D-2640-FE0F": {
@@ -9605,6 +9711,7 @@
     "1F64B-200D-2642-FE0F": {
         "emoji": "🙋‍♂️",
         "tags": [
+            "ele",
             "käsi",
             "mies",
             "viittaus"
@@ -9639,6 +9746,7 @@
     "1F64D-200D-2642-FE0F": {
         "emoji": "🙍‍♂️",
         "tags": [
+            "ele",
             "harmi",
             "mies",
             "suru"
@@ -9662,6 +9770,7 @@
     "1F64E-200D-2642-FE0F": {
         "emoji": "🙎‍♂️",
         "tags": [
+            "ele",
             "harmi",
             "mies",
             "mökötys"
@@ -9672,6 +9781,7 @@
         "tags": [
             "kiitos",
             "kumarrus",
+            "kämmenet",
             "pliis",
             "pyyntö",
             "rukous",
@@ -9732,14 +9842,16 @@
         "emoji": "🚆",
         "tags": [
             "ajoneuvo",
-            "rautatie"
+            "rautatie",
+            "saapunut"
         ]
     },
     "1F687": {
         "emoji": "🚇️",
         "tags": [
             "ajoneuvo",
-            "maanalainen"
+            "maanalainen",
+            "matkailu"
         ]
     },
     "1F688": {
@@ -9770,7 +9882,8 @@
         "tags": [
             "ajoneuvo",
             "raiteet",
-            "ratikka"
+            "ratikka",
+            "spora"
         ]
     },
     "1F68C": {
@@ -9802,6 +9915,7 @@
         "emoji": "🚏",
         "tags": [
             "asema",
+            "bussi",
             "pysäkki"
         ]
     },
@@ -9851,7 +9965,8 @@
         "emoji": "🚕",
         "tags": [
             "ajoneuvo",
-            "auto"
+            "auto",
+            "kyyti"
         ]
     },
     "1F696": {
@@ -9887,6 +10002,7 @@
         "tags": [
             "ajoneuvo",
             "auto",
+            "kuorma-auto",
             "rekka"
         ]
     },
@@ -9895,6 +10011,7 @@
         "tags": [
             "ajoneuvo",
             "auto",
+            "kuorma-auto",
             "rekka"
         ]
     },
@@ -9902,13 +10019,15 @@
         "emoji": "🚜",
         "tags": [
             "ajoneuvo",
-            "auto"
+            "auto",
+            "maatila"
         ]
     },
     "1F69D": {
         "emoji": "🚝",
         "tags": [
             "ajoneuvo",
+            "juna",
             "raide",
             "yksiraidejuna"
         ]
@@ -9919,6 +10038,7 @@
             "ajoneuvo",
             "funikulaari",
             "juna",
+            "matka",
             "rautatie"
         ]
     },
@@ -9948,6 +10068,7 @@
         "tags": [
             "ajoneuvo",
             "gondoli",
+            "hissi",
             "kaapeli",
             "rata"
         ]
@@ -9957,7 +10078,8 @@
         "tags": [
             "ajoneuvo",
             "alus",
-            "meri"
+            "meri",
+            "vene"
         ]
     },
     "1F6A3": {
@@ -9972,6 +10094,8 @@
     "1F6A3-200D-2640-FE0F": {
         "emoji": "🚣‍♀️",
         "tags": [
+            "joki",
+            "järvi",
             "nainen",
             "soutaja"
         ]
@@ -10003,15 +10127,20 @@
     "1F6A6": {
         "emoji": "🚦",
         "tags": [
+            "ajaa",
             "liikenne",
             "liikennevalo",
+            "risteys",
             "valo"
         ]
     },
     "1F6A7": {
         "emoji": "🚧",
         "tags": [
-            "este"
+            "este",
+            "rakennustyömaa",
+            "tietyö",
+            "tietyömaa"
         ]
     },
     "1F6A8": {
@@ -10019,12 +10148,14 @@
         "tags": [
             "hälytys",
             "poliisi",
-            "valo"
+            "valo",
+            "vilkku"
         ]
     },
     "1F6A9": {
         "emoji": "🚩",
         "tags": [
+            "golf",
             "lippu"
         ]
     },
@@ -10068,13 +10199,16 @@
         "emoji": "🚯",
         "tags": [
             "kielletty",
-            "roska"
+            "roska",
+            "sotku"
         ]
     },
     "1F6B0": {
         "emoji": "🚰",
         "tags": [
+            "hana",
             "juoma",
+            "juomavesi",
             "juotava",
             "vesi"
         ]
@@ -10082,9 +10216,12 @@
     "1F6B1": {
         "emoji": "🚱",
         "tags": [
+            "ei juomakelpoinen",
             "juomakelvoton",
             "juominen kielletty",
-            "pilaantunut vesi"
+            "kielto",
+            "pilaantunut vesi",
+            "vesi"
         ]
     },
     "1F6B2": {
@@ -10115,7 +10252,8 @@
         "emoji": "🚴‍♀️",
         "tags": [
             "nainen",
-            "pyöräilijä"
+            "pyöräilijä",
+            "urheilu"
         ]
     },
     "1F6B4-200D-2642-FE0F": {
@@ -10137,6 +10275,7 @@
     "1F6B5-200D-2640-FE0F": {
         "emoji": "🚵‍♀️",
         "tags": [
+            "maastopyöräily",
             "nainen",
             "pyöräilijä",
             "vuori"
@@ -10153,6 +10292,7 @@
     "1F6B6": {
         "emoji": "🚶",
         "tags": [
+            "ihminen",
             "kävelijä",
             "kävellä",
             "kävely",
@@ -10196,7 +10336,7 @@
     "1F6B6-200D-27A1-FE0F": {
         "emoji": "🚶‍➡️",
         "tags": [
-            "jalankulkija",
+            "ihminen",
             "kävelijä",
             "kävellä",
             "kävely",
@@ -10216,7 +10356,8 @@
             "jalankulkija",
             "lapsi",
             "liikenne",
-            "suojatie"
+            "suojatie",
+            "ylitys"
         ]
     },
     "1F6B9": {
@@ -10246,13 +10387,15 @@
         "emoji": "🚼️",
         "tags": [
             "lapsenhoito",
+            "vaipanvaihto",
             "vauva"
         ]
     },
     "1F6BD": {
         "emoji": "🚽",
         "tags": [
-            "vessa"
+            "vessa",
+            "wc"
         ]
     },
     "1F6BE": {
@@ -10279,6 +10422,7 @@
     "1F6C1": {
         "emoji": "🛁",
         "tags": [
+            "amme",
             "kylpy"
         ]
     },
@@ -10292,7 +10436,7 @@
     "1F6C3": {
         "emoji": "🛃",
         "tags": [
-            "tulli"
+            "paketti"
         ]
     },
     "1F6C4": {
@@ -10323,7 +10467,9 @@
         "tags": [
             "hotelli",
             "nukkua",
-            "uni"
+            "sänky",
+            "uni",
+            "yö"
         ]
     },
     "1F6CD": {
@@ -10363,7 +10509,8 @@
         "emoji": "🛑",
         "tags": [
             "merkki",
-            "pysähtyä"
+            "pysähtyä",
+            "stop"
         ]
     },
     "1F6D2": {
@@ -10385,6 +10532,7 @@
         "emoji": "🛖",
         "tags": [
             "jurtta",
+            "koti",
             "mökki",
             "savimaja",
             "talo"
@@ -10400,21 +10548,28 @@
         "emoji": "🛜",
         "tags": [
             "internet",
+            "laajakaista",
             "netti",
+            "symboli",
             "tietokone",
-            "verkko"
+            "verkko",
+            "wifi"
         ]
     },
     "1F6DD": {
         "emoji": "🛝",
         "tags": [
             "leikki",
-            "leikkipuisto"
+            "leikkipuisto",
+            "leikkiä",
+            "liukua"
         ]
     },
     "1F6DE": {
         "emoji": "🛞",
         "tags": [
+            "ajoneuvo",
+            "auto",
             "autonrengas",
             "kääntyminen",
             "pyörä"
@@ -10425,8 +10580,10 @@
         "tags": [
             "hengenpelastus",
             "kelluminen",
+            "pelastaa",
             "pelastaminen",
-            "turvallisuus"
+            "turvallisuus",
+            "uiminen"
         ]
     },
     "1F6E0": {
@@ -10461,6 +10618,7 @@
         "emoji": "🛤️",
         "tags": [
             "juna",
+            "raide",
             "rautatie"
         ]
     },
@@ -10519,7 +10677,8 @@
         "emoji": "🛴",
         "tags": [
             "lauta",
-            "potku"
+            "potku",
+            "skuutti"
         ]
     },
     "1F6F5": {
@@ -10538,7 +10697,9 @@
         "emoji": "🛷",
         "tags": [
             "kouru",
-            "lasku"
+            "lasku",
+            "liukuri",
+            "pulkkamäki"
         ]
     },
     "1F6F8": {
@@ -10562,13 +10723,17 @@
     "1F6FB": {
         "emoji": "🛻",
         "tags": [
-            "avolava"
+            "auto",
+            "avolava",
+            "kuljetus",
+            "kuorma-auto"
         ]
     },
     "1F6FC": {
         "emoji": "🛼",
         "tags": [
-            "luistin"
+            "luistin",
+            "urheilu"
         ]
     },
     "1F7E0": {
@@ -10659,6 +10824,8 @@
         "emoji": "🟰",
         "tags": [
             "matematiikka",
+            "vastaus",
+            "yhtä kuin",
             "yhtäsuuruus"
         ]
     },
@@ -10692,9 +10859,12 @@
         "emoji": "🤏",
         "tags": [
             "hippunen",
+            "nipistys",
             "nipistysote",
             "pieni määrä",
-            "vähäinen määrä"
+            "sormet",
+            "vähäinen määrä",
+            "vähän"
         ]
     },
     "1F910": {
@@ -10728,6 +10898,8 @@
     "1F913": {
         "emoji": "🤓",
         "tags": [
+            "fiksu",
+            "hymiö",
             "jänöhammas",
             "naama",
             "silmälasit"
@@ -10743,7 +10915,9 @@
         "emoji": "🤕",
         "tags": [
             "kipeä",
+            "loukkaantunut",
             "naama",
+            "sairas",
             "side",
             "vamma"
         ]
@@ -10778,6 +10952,7 @@
         "emoji": "🤙",
         "tags": [
             "käsi",
+            "puhelu",
             "soita"
         ]
     },
@@ -10826,6 +11001,7 @@
         "emoji": "🤟",
         "tags": [
             "fanitus",
+            "kolme sormea",
             "käsi",
             "rakkaus"
         ]
@@ -10850,7 +11026,8 @@
         "tags": [
             "kasvot",
             "oksentaa",
-            "pahoinvoida"
+            "pahoinvoida",
+            "pahoinvointi"
         ]
     },
     "1F923": {
@@ -10859,7 +11036,8 @@
             "kasvot",
             "kippura",
             "naama",
-            "nauraa"
+            "nauraa",
+            "nauru"
         ]
     },
     "1F924": {
@@ -10882,10 +11060,19 @@
     "1F926": {
         "emoji": "🤦",
         "tags": [
+            "ei taas",
             "epätoivo",
+            "epäusko",
+            "facepalm",
+            "ihminen",
+            "järkytys",
             "kasvot",
             "käsi",
-            "pettymys"
+            "omg",
+            "peittää kasvot kämmenellä",
+            "pettymys",
+            "turhautuneisuus",
+            "voi ei"
         ]
     },
     "1F926-200D-2640-FE0F": {
@@ -10900,10 +11087,12 @@
     "1F926-200D-2642-FE0F": {
         "emoji": "🤦‍♂️",
         "tags": [
+            "epäusko",
             "kasvot",
             "käsi",
             "mies",
-            "pettymys"
+            "pettymys",
+            "smh"
         ]
     },
     "1F927": {
@@ -10921,6 +11110,7 @@
         "tags": [
             "epäilevä",
             "kasvot",
+            "mietteliäs",
             "naama",
             "skeptinen"
         ]
@@ -10928,6 +11118,7 @@
     "1F929": {
         "emoji": "🤩",
         "tags": [
+            "iloinen",
             "kasvot",
             "naama",
             "silmät",
@@ -10947,25 +11138,37 @@
         "emoji": "🤫",
         "tags": [
             "hiljentää",
-            "hyssyttää"
+            "hyssyttää",
+            "kasvot",
+            "shh"
         ]
     },
     "1F92C": {
         "emoji": "🤬",
         "tags": [
-            "kiroilu"
+            "kasvot",
+            "kiroilu",
+            "sensuuri",
+            "vihainen"
         ]
     },
     "1F92D": {
         "emoji": "🤭",
         "tags": [
-            "lipsahdus"
+            "hups",
+            "kiherrys",
+            "lipsahdus",
+            "salaisuus",
+            "yllätys"
         ]
     },
     "1F92E": {
         "emoji": "🤮",
         "tags": [
+            "darra",
+            "kasvot",
             "naama",
+            "oksennus",
             "oksentaa",
             "pahoinvointi",
             "yrjötä"
@@ -10978,6 +11181,7 @@
             "naama",
             "paukku",
             "raju",
+            "räjähdys",
             "sokki"
         ]
     },
@@ -10988,6 +11192,7 @@
             "masu",
             "nainen",
             "paisunut",
+            "raskaana",
             "turvonnut",
             "täynnä",
             "täysi"
@@ -11007,7 +11212,9 @@
     "1F932": {
         "emoji": "🤲",
         "tags": [
-            "anelu"
+            "anelu",
+            "kämmenet",
+            "toive"
         ]
     },
     "1F933": {
@@ -11021,21 +11228,25 @@
     "1F934": {
         "emoji": "🤴",
         "tags": [
-            "kuninkaallinen"
+            "fantasia",
+            "kruunu",
+            "kuninkaallinen",
+            "satuprinssi"
         ]
     },
     "1F935": {
         "emoji": "🤵",
         "tags": [
-            "ihminen",
+            "henkilö",
+            "häät",
             "smokki",
-            "smokkipukuinen ihminen",
-            "sulhanen"
+            "smokkipukuinen henkilö"
         ]
     },
     "1F935-200D-2640-FE0F": {
         "emoji": "🤵‍♀️",
         "tags": [
+            "häät",
             "nainen",
             "smokki",
             "smokkipukuinen nainen"
@@ -11044,6 +11255,7 @@
     "1F935-200D-2642-FE0F": {
         "emoji": "🤵‍♂️",
         "tags": [
+            "häät",
             "mies",
             "smokki",
             "smokkipukuinen mies"
@@ -11059,43 +11271,71 @@
     "1F937": {
         "emoji": "🤷",
         "tags": [
+            "ehkä",
             "ei välitä",
+            "en tiedä",
             "epäilys",
-            "kohauttaa",
-            "kohauttaa olkapäitään"
+            "epävarmuus",
+            "ihan sama",
+            "kohauttaa olkapäitään",
+            "niin kai",
+            "olankohautus",
+            "tietämättömyys",
+            "välinpitämättömyys"
         ]
     },
     "1F937-200D-2640-FE0F": {
         "emoji": "🤷‍♀️",
         "tags": [
+            "ehkä",
             "ei välitä",
+            "en tiedä",
+            "epäilys",
+            "epävarmuus",
             "ihan sama",
-            "kohauttaa",
-            "nainen"
+            "kohauttaa olkapäitään",
+            "niin kai",
+            "olankohautus",
+            "tietämättömyys",
+            "välinpitämättömyys"
         ]
     },
     "1F937-200D-2642-FE0F": {
         "emoji": "🤷‍♂️",
         "tags": [
+            "ehkä",
             "ei välitä",
+            "en tiedä",
+            "epäilys",
+            "epävarmuus",
             "ihan sama",
-            "kohauttaa",
-            "mies"
+            "kohauttaa olkapäitään",
+            "niin kai",
+            "olankohautus",
+            "tietämättömyys",
+            "välinpitämättömyys"
         ]
     },
     "1F938": {
         "emoji": "🤸",
         "tags": [
+            "aktiivinen",
+            "ihminen",
+            "iloinen",
+            "innostunut",
+            "kuperkeikka",
             "liikunta",
             "urheilu",
-            "voimistelu"
+            "voimistelu",
+            "voltti"
         ]
     },
     "1F938-200D-2640-FE0F": {
         "emoji": "🤸‍♀️",
         "tags": [
             "kärrynpyörä",
-            "nainen"
+            "nainen",
+            "urheilu"
         ]
     },
     "1F938-200D-2642-FE0F": {
@@ -11108,7 +11348,14 @@
     "1F939": {
         "emoji": "🤹",
         "tags": [
+            "hallita",
+            "ihminen",
+            "jongleerata",
             "jongleeraus",
+            "jonglöörata",
+            "jonglööraus",
+            "multitaskaus",
+            "pitää käsissä",
             "taito",
             "tasapainoilu"
         ]
@@ -11117,14 +11364,18 @@
         "emoji": "🤹‍♀️",
         "tags": [
             "jongleeraus",
-            "nainen"
+            "nainen",
+            "pallot",
+            "tasapainoilla"
         ]
     },
     "1F939-200D-2642-FE0F": {
         "emoji": "🤹‍♂️",
         "tags": [
             "jongleeraus",
-            "mies"
+            "mies",
+            "pallot",
+            "tasapainoilla"
         ]
     },
     "1F93A": {
@@ -11139,9 +11390,15 @@
     "1F93C": {
         "emoji": "🤼",
         "tags": [
+            "ihmiset",
+            "kaksintaistelu",
+            "kamppailu",
+            "kehässä",
             "liikunta",
+            "paini",
             "painia",
             "painija",
+            "painiturnaus",
             "urheilu"
         ]
     },
@@ -11164,16 +11421,21 @@
     "1F93D": {
         "emoji": "🤽",
         "tags": [
+            "ihminen",
             "liikunta",
             "pallo",
+            "uinti",
             "urheilu",
-            "vesi"
+            "vesi",
+            "vesipallo",
+            "vesiurheilu"
         ]
     },
     "1F93D-200D-2640-FE0F": {
         "emoji": "🤽‍♀️",
         "tags": [
             "nainen",
+            "uinti",
             "vesipallo"
         ]
     },
@@ -11181,23 +11443,31 @@
         "emoji": "🤽‍♂️",
         "tags": [
             "mies",
+            "uinti",
             "vesipallo"
         ]
     },
     "1F93E": {
         "emoji": "🤾",
         "tags": [
+            "heitto",
+            "heittää",
+            "ihminen",
+            "kenttä",
             "käsipallo",
             "liikunta",
+            "ottaa koppi",
             "pallo",
-            "urheilu"
+            "urheilu",
+            "viskata"
         ]
     },
     "1F93E-200D-2640-FE0F": {
         "emoji": "🤾‍♀️",
         "tags": [
             "käsipallo",
-            "nainen"
+            "nainen",
+            "urheilu"
         ]
     },
     "1F93E-200D-2642-FE0F": {
@@ -11235,7 +11505,10 @@
             "juhlia",
             "juoda",
             "kilistää",
-            "lasi"
+            "kippis",
+            "lasi",
+            "pikarit",
+            "skumppa"
         ]
     },
     "1F943": {
@@ -11310,7 +11583,8 @@
         "emoji": "🥌",
         "tags": [
             "jää",
-            "kivi"
+            "kivi",
+            "peli"
         ]
     },
     "1F94D": {
@@ -11319,14 +11593,17 @@
             "haavipallo",
             "maali",
             "maila",
-            "pallo"
+            "pallo",
+            "urheilu"
         ]
     },
     "1F94E": {
         "emoji": "🥎",
         "tags": [
+            "hanska",
             "pallo",
-            "räpylä"
+            "räpylä",
+            "urheilu"
         ]
     },
     "1F94F": {
@@ -11363,7 +11640,9 @@
     "1F953": {
         "emoji": "🥓",
         "tags": [
+            "aamiainen",
             "liha",
+            "porsas",
             "ruoka"
         ]
     },
@@ -11410,6 +11689,7 @@
         "emoji": "🥙",
         "tags": [
             "falafel",
+            "gyros",
             "kebab",
             "leipä",
             "pita",
@@ -11435,7 +11715,8 @@
         "emoji": "🥜",
         "tags": [
             "pähkinä",
-            "ruoka"
+            "ruoka",
+            "vihannes"
         ]
     },
     "1F95D": {
@@ -11457,8 +11738,11 @@
     "1F95F": {
         "emoji": "🥟",
         "tags": [
+            "gyoza",
             "myky",
-            "pelmeni"
+            "nyytti",
+            "pelmeni",
+            "ruoka"
         ]
     },
     "1F960": {
@@ -11470,7 +11754,9 @@
     "1F961": {
         "emoji": "🥡",
         "tags": [
-            "noutoruoka"
+            "noutoruoka",
+            "ruoka",
+            "syömäpuikot"
         ]
     },
     "1F962": {
@@ -11484,26 +11770,33 @@
         "emoji": "🥣",
         "tags": [
             "aamiainen",
-            "murot"
+            "congee",
+            "murot",
+            "puuro"
         ]
     },
     "1F964": {
         "emoji": "🥤",
         "tags": [
             "juoma",
-            "mehu"
+            "limsa",
+            "mehu",
+            "pilli",
+            "vesi"
         ]
     },
     "1F965": {
         "emoji": "🥥",
         "tags": [
-            "palmu"
+            "palmu",
+            "piña colada"
         ]
     },
     "1F966": {
         "emoji": "🥦",
         "tags": [
-            "broccoli"
+            "broccoli",
+            "vihannes"
         ]
     },
     "1F967": {
@@ -11532,15 +11825,21 @@
     "1F96A": {
         "emoji": "🥪",
         "tags": [
+            "aamiainen",
             "kerrosleipä",
             "leipä",
+            "ruoka",
+            "sandwich",
             "täyte"
         ]
     },
     "1F96B": {
         "emoji": "🥫",
         "tags": [
-            "purkki"
+            "purkki",
+            "ruoka",
+            "säilykepurkki",
+            "tölkki"
         ]
     },
     "1F96C": {
@@ -11556,6 +11855,8 @@
         "emoji": "🥭",
         "tags": [
             "hedelmä",
+            "ruoka",
+            "tehosekoitin",
             "trooppinen"
         ]
     },
@@ -11570,6 +11871,9 @@
     "1F96F": {
         "emoji": "🥯",
         "tags": [
+            "aamiainen",
+            "aamupala",
+            "bagel",
             "bageli",
             "leivonnainen",
             "rinkeli"
@@ -11578,8 +11882,10 @@
     "1F970": {
         "emoji": "🥰",
         "tags": [
+            "hymy",
             "ihailla",
             "ihastunut",
+            "kasvot",
             "rakastunut"
         ]
     },
@@ -11587,7 +11893,9 @@
         "emoji": "🥱",
         "tags": [
             "haukotus",
+            "kasvot",
             "kyllästynyt",
+            "uni",
             "väsynyt"
         ]
     },
@@ -11595,7 +11903,9 @@
         "emoji": "🥲",
         "tags": [
             "helpottunut",
+            "hymiö",
             "hymyilee",
+            "itku",
             "kiitollinen",
             "kyynel",
             "liikuttunut",
@@ -11608,7 +11918,10 @@
             "hattu",
             "juhla",
             "juhlia",
-            "pilli"
+            "kasvot",
+            "leikki",
+            "pilli",
+            "syntymäpäivä"
         ]
     },
     "1F974": {
@@ -11616,19 +11929,24 @@
         "tags": [
             "aaltoileva suu",
             "heikotus",
+            "humala",
             "huppelissa",
+            "kännissä",
             "päissään",
-            "silmät sikkaralla"
+            "silmät sikkaralla",
+            "tokkurainen"
         ]
     },
     "1F975": {
         "emoji": "🥵",
         "tags": [
             "hikoilee",
+            "kuume",
             "kuumeinen",
             "kuumissaan",
             "lämpöhalvaus",
-            "punanaama"
+            "punanaama",
+            "sairaus"
         ]
     },
     "1F976": {
@@ -11636,6 +11954,7 @@
         "tags": [
             "jääpuikot",
             "jäätynyt",
+            "kasvot",
             "kylmettynyt",
             "kylmä",
             "sininen naama"
@@ -11645,6 +11964,7 @@
         "emoji": "🥷",
         "tags": [
             "piilossa",
+            "sotilas",
             "soturi",
             "taistelija",
             "väijyy"
@@ -11653,20 +11973,26 @@
     "1F978": {
         "emoji": "🥸",
         "tags": [
+            "henkilö",
             "lasit",
             "naama",
             "naamio",
             "nenä",
             "tuntematon",
-            "valepuku"
+            "valepuku",
+            "viikset"
         ]
     },
     "1F979": {
         "emoji": "🥹",
         "tags": [
+            "hämmentynyt",
             "itku",
+            "kiitollinen",
             "pidätellä itkua",
             "surullinen",
+            "tunteellinen",
+            "tunteet",
             "vihainen",
             "ylpeä"
         ]
@@ -11800,6 +12126,7 @@
         "emoji": "🦋",
         "tags": [
             "hyönteinen",
+            "kaunis",
             "sievä"
         ]
     },
@@ -11860,6 +12187,7 @@
     "1F994": {
         "emoji": "🦔",
         "tags": [
+            "eläin",
             "piikikäs"
         ]
     },
@@ -11867,14 +12195,17 @@
         "emoji": "🦕",
         "tags": [
             "brontosaurus",
-            "dinosaurus"
+            "dinosaurus",
+            "eläin"
         ]
     },
     "1F996": {
         "emoji": "🦖",
         "tags": [
             "dinosaurus",
-            "hirmulisko"
+            "eläin",
+            "hirmulisko",
+            "rex"
         ]
     },
     "1F997": {
@@ -11904,17 +12235,19 @@
     "1F99A": {
         "emoji": "🦚",
         "tags": [
+            "eläin",
             "komeileva",
             "lintu",
             "mahtaileva",
             "pramea",
+            "värikäs",
             "ylpeä"
         ]
     },
     "1F99B": {
         "emoji": "🦛",
         "tags": [
-            "virtahepo"
+            "eläin"
         ]
     },
     "1F99C": {
@@ -11962,18 +12295,22 @@
         "tags": [
             "ameba",
             "bakteeri",
+            "sairaus",
+            "tiede",
             "virus"
         ]
     },
     "1F9A1": {
         "emoji": "🦡",
         "tags": [
+            "eläin",
             "mesimäyrä"
         ]
     },
     "1F9A2": {
         "emoji": "🦢",
         "tags": [
+            "eläin",
             "lintu",
             "ruma ankanpoikanen"
         ]
@@ -11981,6 +12318,7 @@
     "1F9A3": {
         "emoji": "🦣",
         "tags": [
+            "eläin",
             "sukupuutto",
             "suuri",
             "torahammas",
@@ -11990,7 +12328,9 @@
     "1F9A4": {
         "emoji": "🦤",
         "tags": [
+            "eläin",
             "lentokyvytön",
+            "lintu",
             "mauritius",
             "sukupuutto"
         ]
@@ -12006,19 +12346,23 @@
         "emoji": "🦦",
         "tags": [
             "kalastaja",
+            "kalastus",
             "leikkisä"
         ]
     },
     "1F9A7": {
         "emoji": "🦧",
         "tags": [
-            "apina"
+            "apina",
+            "eläin"
         ]
     },
     "1F9A8": {
         "emoji": "🦨",
         "tags": [
-            "haista"
+            "eläin",
+            "haista",
+            "haju"
         ]
     },
     "1F9A9": {
@@ -12038,12 +12382,15 @@
     "1F9AB": {
         "emoji": "🦫",
         "tags": [
+            "eläin",
+            "hampaat",
             "pato"
         ]
     },
     "1F9AC": {
         "emoji": "🦬",
         "tags": [
+            "eläin",
             "lauma",
             "puhveli",
             "visentti"
@@ -12052,13 +12399,17 @@
     "1F9AD": {
         "emoji": "🦭",
         "tags": [
+            "eläin",
+            "meri",
             "merileijona"
         ]
     },
     "1F9AE": {
         "emoji": "🦮",
         "tags": [
+            "eläin",
             "esteettömyys",
+            "koira",
             "opas",
             "sokea"
         ]
@@ -12104,6 +12455,7 @@
     "1F9B4": {
         "emoji": "🦴",
         "tags": [
+            "koira",
             "luuranko",
             "luusto"
         ]
@@ -12130,16 +12482,19 @@
         "emoji": "🦷",
         "tags": [
             "hammaslääkäri",
-            "hampaisto"
+            "hampaisto",
+            "lääkäri"
         ]
     },
     "1F9B8": {
         "emoji": "🦸",
         "tags": [
+            "batman",
             "hyvis",
             "hyvä",
             "sankari",
             "sankaritar",
+            "supermies",
             "supervoimat"
         ]
     },
@@ -12198,6 +12553,7 @@
     "1F9BA": {
         "emoji": "🦺",
         "tags": [
+            "hätä",
             "hätätilanne",
             "liivi",
             "turvallisuus"
@@ -12215,13 +12571,15 @@
     "1F9BC": {
         "emoji": "🦼",
         "tags": [
-            "esteettömyys"
+            "esteettömyys",
+            "pyörätuoli"
         ]
     },
     "1F9BD": {
         "emoji": "🦽",
         "tags": [
-            "esteettömyys"
+            "esteettömyys",
+            "pyörätuoli"
         ]
     },
     "1F9BE": {
@@ -12239,7 +12597,8 @@
     "1F9C0": {
         "emoji": "🧀",
         "tags": [
-            "juusto"
+            "juusto",
+            "palanen"
         ]
     },
     "1F9C1": {
@@ -12262,7 +12621,10 @@
     "1F9C3": {
         "emoji": "🧃",
         "tags": [
-            "pillijuoma"
+            "juomat",
+            "mehu",
+            "pillijuoma",
+            "tetra"
         ]
     },
     "1F9C4": {
@@ -12287,8 +12649,8 @@
     "1F9C7": {
         "emoji": "🧇",
         "tags": [
-            "päättämätön",
-            "ratkaisematon",
+            "aamiainen",
+            "aamupala",
             "vohvelirauta"
         ]
     },
@@ -12307,6 +12669,8 @@
     "1F9CA": {
         "emoji": "🧊",
         "tags": [
+            "jää",
+            "jääpala",
             "kylmä"
         ]
     },
@@ -12314,8 +12678,11 @@
         "emoji": "🧋",
         "tags": [
             "helmi",
+            "juoma",
             "kupla",
             "maito",
+            "ruoka",
+            "taiwan",
             "tee"
         ]
     },
@@ -12328,12 +12695,14 @@
             "mörökölli",
             "peikko",
             "rölli",
-            "satuolento"
+            "satuolento",
+            "trollata"
         ]
     },
     "1F9CD": {
         "emoji": "🧍",
         "tags": [
+            "ihminen",
             "seisoa",
             "seisova"
         ]
@@ -12355,6 +12724,9 @@
     "1F9CE": {
         "emoji": "🧎",
         "tags": [
+            "ihminen",
+            "polvi",
+            "polvillaan",
             "polvistua",
             "polvistuminen"
         ]
@@ -12390,9 +12762,11 @@
     "1F9CE-200D-27A1-FE0F": {
         "emoji": "🧎‍➡️",
         "tags": [
+            "ihminen",
+            "polvi",
+            "polvillaan",
             "polvistua",
-            "polvistuminen",
-            "polvistuva ihminen"
+            "polvistuminen"
         ]
     },
     "1F9CF": {
@@ -12421,7 +12795,9 @@
     "1F9D0": {
         "emoji": "🧐",
         "tags": [
+            "fiinu",
             "kalkkis",
+            "katse",
             "vanhanaikainen"
         ]
     },
@@ -12453,7 +12829,11 @@
         "tags": [
             "henkilö",
             "imettävä",
+            "imetys",
+            "isä",
             "syöttävä",
+            "vanhempi",
+            "vastasyntynyt",
             "vauva",
             "vauvaa imettävä henkilö"
         ]
@@ -12461,7 +12841,10 @@
     "1F9D1-200D-1F384": {
         "emoji": "🧑‍🎄",
         "tags": [
-            "joulutonttu"
+            "joulu",
+            "joulupukki",
+            "joulutonttu",
+            "xmas"
         ]
     },
     "1F9D1-200D-1F393": {
@@ -12553,9 +12936,9 @@
     "1F9D1-200D-1F91D-200D-1F9D1": {
         "emoji": "🧑‍🤝‍🧑",
         "tags": [
-            "henkilö",
             "käsi",
             "pari",
+            "pariskunta",
             "pitää",
             "pitää toisiaan käsistä"
         ]
@@ -12672,15 +13055,17 @@
     "1F9D1-200D-1F9D2": {
         "emoji": "🧑‍🧒",
         "tags": [
+            "aikuinen",
             "lapsi",
-            "perhe: aikuinen"
+            "perhe"
         ]
     },
     "1F9D1-200D-1F9D2-200D-1F9D2": {
         "emoji": "🧑‍🧒‍🧒",
         "tags": [
+            "aikuinen",
             "lapsi",
-            "perhe: aikuinen"
+            "perhe"
         ]
     },
     "1F9D1-200D-2695-FE0F": {
@@ -12760,10 +13145,16 @@
     "1F9D6": {
         "emoji": "🧖",
         "tags": [
+            "hemmotella",
             "höyry",
             "kiuas",
+            "kylpylä",
             "löyly",
-            "sauna"
+            "löylyhuone",
+            "nautinto",
+            "rentoutua",
+            "sauna",
+            "spa"
         ]
     },
     "1F9D6-200D-2640-FE0F": {
@@ -12787,8 +13178,11 @@
     "1F9D7": {
         "emoji": "🧗",
         "tags": [
+            "ihminen kiipeilee",
             "kallio",
+            "kalliokiipeilijä",
             "kiipeily",
+            "kiivetä ylös",
             "seinä",
             "vuori"
         ]
@@ -12814,8 +13208,16 @@
     "1F9D8": {
         "emoji": "🧘",
         "tags": [
+            "jalat ristissä",
             "jooga",
-            "mietiskely"
+            "joogi",
+            "meditaatio",
+            "mietiskely",
+            "rauha",
+            "rento",
+            "rentoutua",
+            "risti-istunta",
+            "zen"
         ]
     },
     "1F9D8-200D-2640-FE0F": {
@@ -12835,12 +13237,17 @@
     "1F9D9": {
         "emoji": "🧙",
         "tags": [
+            "fantasia",
+            "loitsu",
             "maagi",
             "noita",
+            "roolileikki",
             "sauva",
+            "taikasanat",
             "taikasauva",
             "taikavoima",
             "taikuri",
+            "taikuus",
             "tietäjä"
         ]
     },
@@ -12871,13 +13278,16 @@
     "1F9DA": {
         "emoji": "🧚",
         "tags": [
+            "fantasia",
             "hyönteismäinen",
-            "ilmatar",
             "keijukainen",
             "luonnotar",
-            "oberon",
-            "puck",
-            "titania"
+            "menninkäinen",
+            "myytti",
+            "satu",
+            "siivet",
+            "tarina",
+            "taru"
         ]
     },
     "1F9DA-200D-2640-FE0F": {
@@ -12905,10 +13315,15 @@
         "tags": [
             "dracula",
             "elävä kuollut",
+            "halloween",
             "hampaat",
+            "naamiaisasu",
+            "pelottava",
             "torahammas",
             "verenhimo",
-            "verenimijä"
+            "verenimijä",
+            "veri",
+            "yliluonnollinen"
         ]
     },
     "1F9DB-200D-2640-FE0F": {
@@ -12935,8 +13350,10 @@
     "1F9DC": {
         "emoji": "🧜",
         "tags": [
+            "ahti",
             "kalanpyrstö",
             "merenhaltija",
+            "pyrstö",
             "vedenhaltija",
             "vetehinen"
         ]
@@ -12966,10 +13383,13 @@
     "1F9DD": {
         "emoji": "🧝",
         "tags": [
-            "alf",
+            "fantasia",
+            "haltija",
+            "kansanperinne",
             "keiju",
             "keijukainen",
-            "legolas",
+            "mystinen",
+            "myyttinen",
             "suippokorva"
         ]
     },
@@ -12996,10 +13416,16 @@
     "1F9DE": {
         "emoji": "🧞",
         "tags": [
+            "fantasia",
             "genius",
+            "hiero lamppua",
             "jinni",
             "juno",
-            "lamppu"
+            "lamppu",
+            "lampunhenki",
+            "mystinen",
+            "myyttinen",
+            "toive"
         ]
     },
     "1F9DE-200D-2640-FE0F": {
@@ -13023,6 +13449,10 @@
         "emoji": "🧟",
         "tags": [
             "elävä kuollut",
+            "halloween",
+            "kauhu",
+            "maailmanloppu",
+            "pelottava",
             "tahdoton",
             "voodoo",
             "zombie"
@@ -13075,13 +13505,15 @@
         "tags": [
             "asuste",
             "kaula",
-            "kaulaliina"
+            "kaulaliina",
+            "niska"
         ]
     },
     "1F9E4": {
         "emoji": "🧤",
         "tags": [
             "asuste",
+            "hanskat",
             "kädet",
             "käsineet"
         ]
@@ -13089,6 +13521,7 @@
     "1F9E5": {
         "emoji": "🧥",
         "tags": [
+            "hrr",
             "pusero",
             "päällysvaate",
             "vaatteet"
@@ -13172,6 +13605,7 @@
     "1F9EE": {
         "emoji": "🧮",
         "tags": [
+            "koulu",
             "laskeminen"
         ]
     },
@@ -13179,8 +13613,10 @@
         "emoji": "🧯",
         "tags": [
             "palonsammutin",
+            "palosammutin",
             "sammuttaa",
             "sammutusväline",
+            "tuli",
             "tulipalo"
         ]
     },
@@ -13209,6 +13645,8 @@
         "tags": [
             "hevosenkenkä",
             "magneettinen",
+            "negatiivinen",
+            "positiivinen",
             "puoleensavetävä"
         ]
     },
@@ -13352,21 +13790,26 @@
         "emoji": "🩲",
         "tags": [
             "alushousut",
-            "uima-asu"
+            "uima-asu",
+            "vaatteet"
         ]
     },
     "1FA73": {
         "emoji": "🩳",
         "tags": [
             "alushousut",
-            "shortsit"
+            "shortsit",
+            "uimahousut",
+            "uinti"
         ]
     },
     "1FA74": {
         "emoji": "🩴",
         "tags": [
+            "flip flop",
             "rantasandaalit",
             "sandaalit",
+            "tossut",
             "varvassandaalit",
             "varvastossut"
         ]
@@ -13374,9 +13817,11 @@
     "1FA75": {
         "emoji": "🩵",
         "tags": [
+            "rakkaus",
             "sinivihreä",
             "syaani",
             "sydän",
+            "tunne",
             "vaaleansininen"
         ]
     },
@@ -13385,8 +13830,10 @@
         "tags": [
             "harmaa",
             "hopea",
+            "rakkaus",
             "siniharmaa",
-            "sydän"
+            "sydän",
+            "tunne"
         ]
     },
     "1FA77": {
@@ -13396,7 +13843,9 @@
             "rakkaus",
             "sydän",
             "söpö",
-            "tykkäys"
+            "tunne",
+            "tykkäys",
+            "vaaleanpunainen"
         ]
     },
     "1FA78": {
@@ -13404,6 +13853,7 @@
         "tags": [
             "kuukautiset",
             "lääketiede",
+            "vamma",
             "verenluovutus"
         ]
     },
@@ -13466,6 +13916,7 @@
     "1FA83": {
         "emoji": "🪃",
         "tags": [
+            "ase",
             "australia",
             "kimmota takaisin",
             "seuraus"
@@ -13476,14 +13927,20 @@
         "tags": [
             "noita",
             "taika",
+            "taikuri",
             "velho"
         ]
     },
     "1FA85": {
         "emoji": "🪅",
         "tags": [
+            "juhla",
             "juhlat",
-            "juhlinta"
+            "juhlinta",
+            "karkki",
+            "meksiko",
+            "pinada",
+            "pinata"
         ]
     },
     "1FA86": {
@@ -13497,11 +13954,13 @@
     "1FA87": {
         "emoji": "🪇",
         "tags": [
+            "esine",
             "instrumentti",
             "kalina",
             "lyömäsoittimet",
             "musiikki",
             "ravista",
+            "ravistaa",
             "rämistä",
             "soitin"
         ]
@@ -13509,12 +13968,35 @@
     "1FA88": {
         "emoji": "🪈",
         "tags": [
+            "esine",
+            "instrumentti",
             "musiikki",
             "nokkahuilu",
+            "orkesteri",
             "pilli",
             "puupuhallin",
+            "soitin",
             "säkkipilli",
             "urkupilli"
+        ]
+    },
+    "1FA89": {
+        "emoji": "🪉",
+        "tags": [
+            "musiikki",
+            "orkesteri",
+            "rakkaus",
+            "soitin"
+        ]
+    },
+    "1FA8F": {
+        "emoji": "🪏",
+        "tags": [
+            "haudata",
+            "kaivaa",
+            "kasvi",
+            "kuoppa",
+            "puutarha"
         ]
     },
     "1FA90": {
@@ -13543,6 +14025,7 @@
         "tags": [
             "hakata",
             "halkoa",
+            "metsä",
             "pilkkoa",
             "puu"
         ]
@@ -13583,8 +14066,10 @@
         "emoji": "🪘",
         "tags": [
             "conga",
+            "kongo",
             "rumpu",
-            "rytmi"
+            "rytmi",
+            "soitin"
         ]
     },
     "1FA99": {
@@ -13611,6 +14096,7 @@
         "tags": [
             "meisseli",
             "ruuvi",
+            "taltta",
             "työkalu"
         ]
     },
@@ -13633,6 +14119,7 @@
         "emoji": "🪞",
         "tags": [
             "heijastus",
+            "meikkaus",
             "peilata"
         ]
     },
@@ -13650,6 +14137,7 @@
         "emoji": "🪠",
         "tags": [
             "imukuppi",
+            "kakka",
             "putkimies",
             "wc"
         ]
@@ -13685,6 +14173,8 @@
         "emoji": "🪤",
         "tags": [
             "ansa",
+            "hiiri",
+            "juusto",
             "loukku",
             "syötti"
         ]
@@ -13703,12 +14193,15 @@
         "emoji": "🪦",
         "tags": [
             "hauta",
-            "hautausmaa"
+            "hautausmaa",
+            "kuolema",
+            "muisto"
         ]
     },
     "1FAA7": {
         "emoji": "🪧",
         "tags": [
+            "kortti",
             "mielenosoitus",
             "protesti"
         ]
@@ -13736,6 +14229,8 @@
     "1FAAA": {
         "emoji": "🪪",
         "tags": [
+            "ajokortti",
+            "henkilötodistus",
             "henkkarit",
             "kortti",
             "kulkulupa",
@@ -13746,7 +14241,9 @@
     "1FAAB": {
         "emoji": "🪫",
         "tags": [
+            "akku",
             "sähkö",
+            "tyhjä",
             "virta vähissä"
         ]
     },
@@ -13754,7 +14251,9 @@
         "emoji": "🪬",
         "tags": [
             "amuletti",
+            "ennustus",
             "fatima",
+            "kämmen",
             "käsi",
             "maria",
             "miriam",
@@ -13771,6 +14270,7 @@
             "lepatus",
             "tanssi",
             "ujo",
+            "viilentää",
             "viuhka"
         ]
     },
@@ -13778,6 +14278,7 @@
         "emoji": "🪮",
         "tags": [
             "afrokampaus",
+            "esine",
             "harva",
             "hiukset",
             "kampa",
@@ -13787,23 +14288,30 @@
     "1FAAF": {
         "emoji": "🪯",
         "tags": [
+            "khalsa",
             "sikhi",
             "sikhiläinen",
-            "uskonto"
+            "sikhismi",
+            "symboli",
+            "uskonto",
+            "veljeys"
         ]
     },
     "1FAB0": {
         "emoji": "🪰",
         "tags": [
+            "eläin",
             "mätänevä",
             "sairaus",
             "tauti",
-            "toukka"
+            "toukka",
+            "tuholainen"
         ]
     },
     "1FAB1": {
         "emoji": "🪱",
         "tags": [
+            "eläin",
             "kastemato",
             "loinen"
         ]
@@ -13832,6 +14340,7 @@
             "kasvaa",
             "kasvi",
             "kokousfiikus",
+            "koriste",
             "koti",
             "tylsä"
         ]
@@ -13839,6 +14348,7 @@
     "1FAB5": {
         "emoji": "🪵",
         "tags": [
+            "metsä",
             "puu",
             "puutavara",
             "pölkky"
@@ -13859,14 +14369,17 @@
             "buddhalaisuus",
             "hindulaisuus",
             "intia",
+            "kauneus",
             "kukka",
             "puhtaus",
+            "rauhallinen",
             "viattomuus"
         ]
     },
     "1FAB8": {
         "emoji": "🪸",
         "tags": [
+            "ilmastonmuutos",
             "koralliriutta",
             "meri",
             "riutta"
@@ -13875,15 +14388,19 @@
     "1FAB9": {
         "emoji": "🪹",
         "tags": [
+            "koti",
             "linnunpesä",
             "pesiminen",
-            "pesintä"
+            "pesintä",
+            "pesä"
         ]
     },
     "1FABA": {
         "emoji": "🪺",
         "tags": [
             "linnunpesä",
+            "muna",
+            "munat",
             "muninta",
             "pesiminen",
             "pesintä"
@@ -13892,19 +14409,27 @@
     "1FABB": {
         "emoji": "🪻",
         "tags": [
+            "kasvi",
             "kukka",
             "laventeli",
             "leijonankita",
+            "luonto",
             "lupiini",
-            "sinilupiini"
+            "sinilupiini",
+            "syreeni",
+            "violetti"
         ]
     },
     "1FABC": {
         "emoji": "🪼",
         "tags": [
             "auts",
+            "eläin",
             "hyytelö",
             "kirvely",
+            "lonkero",
+            "luonto",
+            "meri",
             "pistävä",
             "polte",
             "selkärangaton"
@@ -13916,16 +14441,30 @@
             "enkeli",
             "lentäminen",
             "lentää",
+            "liitää",
             "lintu",
             "mytologia"
+        ]
+    },
+    "1FABE": {
+        "emoji": "🪾",
+        "tags": [
+            "kelo",
+            "kuivuus",
+            "lehdetön",
+            "oksat",
+            "paljas",
+            "talvi"
         ]
     },
     "1FABF": {
         "emoji": "🪿",
         "tags": [
+            "eläin",
             "hanhen huuto",
             "hassu",
             "lintu",
+            "luonto",
             "siivekäs"
         ]
     },
@@ -13952,7 +14491,9 @@
         "tags": [
             "hei",
             "kiitos",
-            "näkemiin"
+            "näkemiin",
+            "rakkaus",
+            "ystävä"
         ]
     },
     "1FAC3": {
@@ -13982,15 +14523,27 @@
         "tags": [
             "aatelinen",
             "kruunupäinen",
+            "kuningas",
+            "kuningatar",
             "kuninkaallinen",
             "monarkki",
             "ruhtinaallinen"
+        ]
+    },
+    "1FAC6": {
+        "emoji": "🫆",
+        "tags": [
+            "henkilöllisyys",
+            "johtolanka",
+            "rikostutkinta",
+            "turvallisuus"
         ]
     },
     "1FACE": {
         "emoji": "🫎",
         "tags": [
             "eläin",
+            "luonto",
             "nisäkäs",
             "sarvet"
         ]
@@ -14000,8 +14553,11 @@
         "tags": [
             "eläin",
             "itsepäinen",
+            "luonto",
             "muuli",
-            "nisäkäs"
+            "muuliaasi",
+            "nisäkäs",
+            "potku"
         ]
     },
     "1FAD0": {
@@ -14030,8 +14586,10 @@
         "tags": [
             "arepa",
             "lavash",
+            "leipä",
             "naan",
-            "pita"
+            "pita",
+            "ruoka"
         ]
     },
     "1FAD4": {
@@ -14046,6 +14604,7 @@
         "tags": [
             "juusto",
             "pata",
+            "ruoka",
             "suklaa",
             "sulatettu",
             "sveitsiläinen"
@@ -14055,7 +14614,9 @@
         "emoji": "🫖",
         "tags": [
             "juoda",
+            "juoma",
             "pannu",
+            "ruoka",
             "tee"
         ]
     },
@@ -14067,6 +14628,7 @@
             "lasi",
             "läikyttää",
             "tyhjä",
+            "vahinko",
             "valuttaa"
         ]
     },
@@ -14097,7 +14659,8 @@
         "tags": [
             "juuri",
             "mauste",
-            "olut"
+            "olut",
+            "ruoka"
         ]
     },
     "1FADB": {
@@ -14108,15 +14671,41 @@
             "palko",
             "palkokasvi",
             "pavut",
+            "ruoka",
             "vihannes"
+        ]
+    },
+    "1FADC": {
+        "emoji": "🫜",
+        "tags": [
+            "juuri",
+            "juurikas",
+            "kasvis",
+            "kasvissyöjä",
+            "nauris",
+            "puutarha",
+            "retiisi",
+            "ruoka",
+            "salaatti"
+        ]
+    },
+    "1FADF": {
+        "emoji": "🫟",
+        "tags": [
+            "holi",
+            "maali",
+            "tahra"
         ]
     },
     "1FAE0": {
         "emoji": "🫠",
         "tags": [
             "kadota",
+            "kuuma",
             "liueta",
+            "nolo",
             "pehmenevä",
+            "sarkasmi",
             "sulaa",
             "sulavat kasvot",
             "valuva"
@@ -14142,6 +14731,7 @@
             "nolo",
             "peloissaan",
             "yllättyny",
+            "yllättynyt",
             "ällikkä",
             "ällistys"
         ]
@@ -14154,6 +14744,7 @@
             "kurkistaa",
             "kurkkia",
             "tiirata",
+            "ujo",
             "vilkuilla"
         ]
     },
@@ -14162,10 +14753,12 @@
         "tags": [
             "epäilevä",
             "epävarma",
+            "hämmentynyt",
             "pah",
             "pettynyt",
             "pyh",
-            "skeptinen"
+            "skeptinen",
+            "turhautunut"
         ]
     },
     "1FAE5": {
@@ -14186,14 +14779,20 @@
             "flirttaileva",
             "hermostunut",
             "huolestunut",
+            "huuli",
+            "huulipuna",
             "kiusaantunut",
             "pelokas",
+            "seksikäs",
             "vaivautunut"
         ]
     },
     "1FAE7": {
         "emoji": "🫧",
         "tags": [
+            "helmi",
+            "kupla",
+            "leijua",
             "pinnanalainen",
             "puhdas",
             "röyhtäisy",
@@ -14204,11 +14803,25 @@
     "1FAE8": {
         "emoji": "🫨",
         "tags": [
+            "hymiö",
             "maanjäristys",
             "naama",
+            "omg",
+            "paniikki",
+            "shokissa",
             "tärähdys",
             "vapiseva",
-            "värisevä"
+            "värisevä",
+            "yllättynyt"
+        ]
+    },
+    "1FAE9": {
+        "emoji": "🫩",
+        "tags": [
+            "pussit silmien alla",
+            "uninen",
+            "uupunut",
+            "väsynyt"
         ]
     },
     "1FAF0": {
@@ -14218,7 +14831,9 @@
             "hinta",
             "kallis",
             "napsautus",
-            "raha"
+            "raha",
+            "rakkaus",
+            "sydän"
         ]
     },
     "1FAF1": {
@@ -14226,6 +14841,7 @@
         "tags": [
             "kädenojennus",
             "käsi",
+            "oikea käsi",
             "oikealle"
         ]
     },
@@ -14246,7 +14862,10 @@
             "hylätä",
             "hätistää",
             "hätyyttää",
-            "pudottaa"
+            "nostaa",
+            "noutaa",
+            "pudottaa",
+            "tarttua"
         ]
     },
     "1FAF4": {
@@ -14254,6 +14873,9 @@
         "tags": [
             "houkutella",
             "kutsua",
+            "käsi",
+            "nostaa",
+            "pidellä",
             "pyydystää",
             "tarjota",
             "viittilöidä",
@@ -14273,7 +14895,9 @@
         "tags": [
             "rakas",
             "rakastaa",
+            "rakastan sinua",
             "rakkaus",
+            "sydän",
             "sydänkädet"
         ]
     },
@@ -14281,10 +14905,12 @@
         "emoji": "🫷",
         "tags": [
             "kieltäytyä",
+            "käsi",
             "odota",
             "seis",
             "stop",
             "työntö",
+            "vartalo",
             "vasemmalle",
             "ylävitonen"
         ]
@@ -14293,11 +14919,13 @@
         "emoji": "🫸",
         "tags": [
             "kieltäytyä",
+            "käsi",
             "odota",
             "oikealle",
             "seis",
             "stop",
             "työntö",
+            "vartalo",
             "ylävitonen"
         ]
     },
@@ -14394,12 +15022,14 @@
     "21AA": {
         "emoji": "↪️",
         "tags": [
-            "nuoli"
+            "nuoli",
+            "oikea"
         ]
     },
     "231A": {
         "emoji": "⌚️",
         "tags": [
+            "ranne",
             "rannekello"
         ]
     },
@@ -14507,12 +15137,14 @@
         "emoji": "⏰️",
         "tags": [
             "herätys",
-            "kello"
+            "kello",
+            "myöhä"
         ]
     },
     "23F1": {
         "emoji": "⏱️",
         "tags": [
+            "aika",
             "ajanotto",
             "kello"
         ]
@@ -14520,7 +15152,9 @@
     "23F2": {
         "emoji": "⏲️",
         "tags": [
+            "ajastus",
             "ajoitus",
+            "kello",
             "munakello"
         ]
     },
@@ -14573,6 +15207,7 @@
         "emoji": "▪️",
         "tags": [
             "muoto",
+            "musta",
             "neliö"
         ]
     },
@@ -14580,7 +15215,8 @@
         "emoji": "▫️",
         "tags": [
             "muoto",
-            "neliö"
+            "neliö",
+            "valkoinen"
         ]
     },
     "25B6": {
@@ -14622,13 +15258,15 @@
         "emoji": "◽️",
         "tags": [
             "muoto",
-            "neliö"
+            "neliö",
+            "valkoinen"
         ]
     },
     "25FE": {
         "emoji": "◾️",
         "tags": [
             "muoto",
+            "musta",
             "neliö"
         ]
     },
@@ -14636,6 +15274,7 @@
         "emoji": "☀️",
         "tags": [
             "helle",
+            "kirkas",
             "paiste",
             "säteet",
             "sää"
@@ -14728,6 +15367,7 @@
         "tags": [
             "hirviö",
             "kuolema",
+            "myrkyllinen",
             "naama",
             "pääkallo",
             "reisiluut",
@@ -14773,7 +15413,8 @@
     "262E": {
         "emoji": "☮️",
         "tags": [
-            "rauha"
+            "rauha",
+            "symboli"
         ]
     },
     "262F": {
@@ -14783,7 +15424,8 @@
             "jin",
             "tao",
             "taolaisuus",
-            "uskonto"
+            "uskonto",
+            "vaikea"
         ]
     },
     "2638": {
@@ -14810,6 +15452,7 @@
         "tags": [
             "hymy",
             "naama",
+            "punoitus",
             "rento"
         ]
     },
@@ -14881,6 +15524,7 @@
         "tags": [
             "horoskooppi",
             "horoskooppimerkki",
+            "libra",
             "vaaka"
         ]
     },
@@ -14964,12 +15608,16 @@
         "tags": [
             "kortti",
             "korttipeli",
-            "maa"
+            "maa",
+            "peli",
+            "timantti"
         ]
     },
     "2668": {
         "emoji": "♨️",
         "tags": [
+            "höyry",
+            "kuuma",
             "kylpylä",
             "lähde",
             "vesi"
@@ -15019,13 +15667,15 @@
         "emoji": "⚔️",
         "tags": [
             "ase",
-            "miekka"
+            "miekka",
+            "risti"
         ]
     },
     "2695": {
         "emoji": "⚕️",
         "tags": [
-            "asklepioksen sauva"
+            "asklepioksen sauva",
+            "lääketiede"
         ]
     },
     "2696": {
@@ -15071,6 +15721,7 @@
         "emoji": "⚠️",
         "tags": [
             "muu vaara",
+            "tiedote",
             "vaara"
         ]
     },
@@ -15101,6 +15752,7 @@
         "emoji": "⚫️",
         "tags": [
             "muoto",
+            "musta",
             "ympyrä"
         ]
     },
@@ -15108,7 +15760,8 @@
         "emoji": "⚰️",
         "tags": [
             "kuolema",
-            "ruumisarkku"
+            "ruumisarkku",
+            "vampyyri"
         ]
     },
     "26B1": {
@@ -15242,6 +15895,8 @@
         "emoji": "⛱️",
         "tags": [
             "aurinko",
+            "kesä",
+            "ranta",
             "sää",
             "varjo"
         ]
@@ -15336,6 +15991,7 @@
     "2702": {
         "emoji": "✂️",
         "tags": [
+            "leikkaus",
             "työkalu"
         ]
     },
@@ -15343,15 +15999,19 @@
         "emoji": "✅️",
         "tags": [
             "merkki",
+            "oikein",
             "rasti",
             "tarkistusmerkki",
-            "v"
+            "v",
+            "valmis"
         ]
     },
     "2708": {
         "emoji": "✈️",
         "tags": [
-            "ajoneuvo"
+            "ajoneuvo",
+            "matkailu",
+            "suihkukone"
         ]
     },
     "2709": {
@@ -15414,6 +16074,7 @@
         "emoji": "✔️",
         "tags": [
             "merkki",
+            "oikein",
             "tarkistusmerkki",
             "v",
             "valintamerkki"
@@ -15452,6 +16113,7 @@
         "emoji": "✨️",
         "tags": [
             "loiste",
+            "taika",
             "tähti"
         ]
     },
@@ -15528,6 +16190,7 @@
         "tags": [
             "huutomerkki",
             "merkki",
+            "valkoinen",
             "välimerkki"
         ]
     },
@@ -15549,7 +16212,10 @@
     "2764": {
         "emoji": "❤️",
         "tags": [
-            "sydän"
+            "punainen",
+            "rakkaus",
+            "sydän",
+            "tunne"
         ]
     },
     "2764-FE0F-200D-1F525": {
@@ -15676,13 +16342,15 @@
         "emoji": "⬜️",
         "tags": [
             "muoto",
-            "neliö"
+            "neliö",
+            "valkoinen"
         ]
     },
     "2B50": {
         "emoji": "⭐️",
         "tags": [
-            "tähti"
+            "tähti",
+            "tähtitiede"
         ]
     },
     "2B55": {
