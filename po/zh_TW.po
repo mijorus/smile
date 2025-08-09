@@ -1,0 +1,327 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the smile package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: smile\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-14 15:46+0900\n"
+"PO-Revision-Date: 2025-07-24 00:07+0800\n"
+"Last-Translator: ApicalShark <dennyxbox890@gmail.com>\n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+
+#: src/main.py:109
+msgid "translator_credits"
+msgstr "ApicalShark <dennyxbox890@gmail.com>"
+
+#: src/Picker.py:88
+msgid ""
+"Whoa, it's still empty! \n"
+"Your most used emojis will show up here\n"
+msgstr ""
+"哇，這裡還什麼都沒有！\n"
+"您最常用的表情符號將會顯示在此處\n"
+
+#: src/Picker.py:510
+msgid "No skintones available"
+msgstr "沒有可用的膚色"
+
+#: src/Picker.py:626
+msgid "Copied!"
+msgstr "已複製！"
+
+#: src/Picker.py:627
+msgid ""
+"I have copied the emoji to the clipboard. You can now paste it in any input "
+"field."
+msgstr "已將表情符號複製到剪貼簿。您現在可以將其貼到任何輸入欄位中。"
+
+#: src/Settings.py:28
+msgid "Settings"
+msgstr "設定"
+
+#. General group
+#: src/Settings.py:31
+msgid "General"
+msgstr "一般"
+
+#: src/Settings.py:33
+msgid "Run in the background"
+msgstr "在背景執行"
+
+#: src/Settings.py:33
+msgid "Keep Smile running in the background for a faster launch"
+msgstr "讓 Smile 在背景執行以加快啟動速度"
+
+#: src/Settings.py:37
+msgid "Minimize on exit"
+msgstr "選擇後最小化"
+
+#: src/Settings.py:37
+msgid "Minimize the window when selecting an emoji"
+msgstr "選擇表情符號時將視窗最小化"
+
+#. Mouse group
+#: src/Settings.py:43
+msgid "Mouse behaviour"
+msgstr "滑鼠行為"
+
+#: src/Settings.py:45
+msgid "Mouse multi select"
+msgstr "滑鼠多選"
+
+#: src/Settings.py:45
+msgid ""
+"Select multiple emojis with a single mouse click, replacing Shift + Click; "
+"press Enter to confirm and Esc to dismiss."
+msgstr ""
+"單擊滑鼠即可選取多個表情符號，以取代 Shift + 單擊按下 Enter 確認，按下 Esc "
+"取消。"
+
+#. Paste emoji group
+#: src/Settings.py:49
+msgid "Paste emojis automatically"
+msgstr "自動貼上表情符號"
+
+#: src/Settings.py:55
+msgid "Status:"
+msgstr "狀態："
+
+#: src/Settings.py:60
+msgid "Enabled"
+msgstr "已啟用"
+
+#: src/Settings.py:62
+msgid ""
+"Emulates the Ctrl+V shortcut; might <b>not work</b> on some programs.\n"
+"If using the extension, <b>please ensure that it is correctly ENABLED</b>."
+msgstr ""
+"模擬 Ctrl+V 快捷鍵；可能在某些應用程式上<b>無法運作</b>。\n"
+"如果正在使用擴充功能，<b>請確保其已正確啟用</b>。"
+
+#: src/Settings.py:68
+msgid "Get the GNOME extension"
+msgstr "取得 GNOME 擴充功能"
+
+#: src/Settings.py:68
+msgid "Install the extension to paste automatically on X11 and Wayland"
+msgstr "安裝擴充功能以在 X11 和 Wayland 上自動貼上"
+
+#. Customization group
+#: src/Settings.py:72
+msgid "Customization"
+msgstr "自訂"
+
+#: src/Settings.py:76 src/Settings.py:247
+msgid "Localized tags"
+msgstr "在地化標籤"
+
+#: src/Settings.py:78
+msgid "Use localized tags"
+msgstr "使用在地化標籤"
+
+#: src/Settings.py:83
+msgid "Merge localized and English tags"
+msgstr "合併在地化標籤與英文標籤"
+
+#: src/Settings.py:85
+msgid "Use both localized tags and English ones at the same time"
+msgstr "同時使用在地化標籤與英文標籤"
+
+#. Page 2
+#: src/Settings.py:94
+msgid "Custom tags"
+msgstr "自訂標籤"
+
+#: src/Settings.py:126
+msgid "Available (using the GNOME extension)"
+msgstr "可用 (使用 GNOME 擴充功能)"
+
+#: src/Settings.py:128
+msgid "Requires the GNOME extension on Wayland"
+msgstr "在 Wayland 上需要 GNOME 擴充功能"
+
+#: src/Settings.py:130
+msgid "Available (using xdotool on X11)"
+msgstr "可用 (在 X11 上使用 xdotool)"
+
+#: src/Settings.py:143
+msgid "Launch the app with a shortcut"
+msgstr "使用快捷鍵啟動應用程式"
+
+#: src/Settings.py:144
+msgid ""
+"Create a new keyboard shortcut in your system settings and paste the "
+"following code as a custom command"
+msgstr "在您的系統設定中建立一個新的鍵盤快捷鍵，並將下列指令貼上為自訂指令"
+
+#: src/Settings.py:180
+msgid "Remove"
+msgstr "移除"
+
+#: src/Settings.py:198
+msgid "There are no custom tags yet: create one with Alt + T"
+msgstr "尚無自訂標籤：使用 Alt + T 來建立一個"
+
+#: src/Settings.py:211
+msgid "Default skintone"
+msgstr "預設膚色"
+
+#: src/Settings.py:226
+msgid "Emoji size"
+msgstr "表情符號大小"
+
+#: src/Settings.py:228
+msgid "Default"
+msgstr "預設"
+
+#: src/Settings.py:229
+msgid "Big"
+msgstr "大"
+
+#: src/Settings.py:230
+msgid "Bigger"
+msgstr "更大"
+
+#: src/Settings.py:231
+msgid "Giant"
+msgstr "最大"
+
+#: src/Settings.py:330
+msgid "Invalid file selected"
+msgstr "選取了無效的檔案"
+
+#: src/Settings.py:331
+msgid "The configuration file that you selected is not a valid backup."
+msgstr "您選取的設定檔不是有效的備份。"
+
+#: src/Settings.py:334
+msgid "Close"
+msgstr "關閉"
+
+#: src/ui/menu.ui:6
+msgid "Preferences"
+msgstr "偏好設定"
+
+#: src/ui/menu.ui:10
+msgid "Shortcuts"
+msgstr "快捷鍵"
+
+#: src/ui/menu.ui:15
+msgid "What's new?"
+msgstr "新功能"
+
+#: src/ui/menu.ui:19
+msgid "Install GNOME extension"
+msgstr "安裝 GNOME 擴充功能"
+
+#: src/ui/menu.ui:23
+msgid "Translate this app"
+msgstr "翻譯此應用程式"
+
+#: src/ui/menu.ui:26
+msgid "About"
+msgstr "關於"
+
+#: src/ui/shortcuts.ui:12
+msgid "Mouse"
+msgstr "滑鼠"
+
+#: src/ui/shortcuts.ui:48 src/ui/shortcuts.ui:164
+msgid "Open the skintone selector (if available)"
+msgstr "開啟膚色選擇器 (如果可用)"
+
+#: src/ui/shortcuts.ui:68 src/ui/shortcuts.ui:171
+msgid "Add a custom tag"
+msgstr "新增自訂標籤"
+
+#: src/ui/shortcuts.ui:109
+msgid "Keyboard"
+msgstr "鍵盤"
+
+#: src/ui/shortcuts.ui:114
+msgid ""
+"Copy the selected emoji and hide the window (When an emoji is highlighted)"
+msgstr "複製已選擇的表情符號並隱藏視窗 (當表情符號反白顯示時)"
+
+#: src/ui/shortcuts.ui:121
+msgid "Copy first emoji and hide the window (When using the search bar)"
+msgstr "複製第一個表情符號並隱藏視窗 (當使用搜尋列時)"
+
+#: src/ui/shortcuts.ui:128
+msgid "Show the category on the right"
+msgstr "在右側顯示類別"
+
+#: src/ui/shortcuts.ui:135
+msgid "Show the category on the left"
+msgstr "在左側顯示類別"
+
+#: src/ui/shortcuts.ui:142 src/ShortcutsWindow.py:22
+msgid "Add an emoji to selection"
+msgstr "將表情符號新增至選取項目"
+
+#: src/ui/shortcuts.ui:150
+msgid "Remove the last emoji from the selection"
+msgstr "從選取項目中移除最後一個表情符號"
+
+#: src/ui/shortcuts.ui:157
+msgid "Copy the selection and hide the window, without the highlighted emoji"
+msgstr "複製選取項目並隱藏視窗，不包含反白顯示的表情符號"
+
+#: src/ui/importexport-customtags.ui:7
+msgid "Export and import custom tags"
+msgstr "匯出與匯入自訂標籤"
+
+#: src/ui/importexport-customtags.ui:8
+msgid ""
+"Use the buttons below to create or restore custom tags from another machine"
+msgstr "使用下方的按鈕從其他機器建立或還原自訂標籤"
+
+#: src/ui/importexport-customtags.ui:23
+msgid "Export to file"
+msgstr "匯出檔案"
+
+#: src/ui/importexport-customtags.ui:29
+msgid "Import from file"
+msgstr "從檔案匯入"
+
+#: src/components/SkintoneSelector.py:89
+msgid "<small>Press Enter to select or ESC to close</small>"
+msgstr "<small>按下 Enter 鍵選取或按下 ESC 鍵關閉</small>"
+
+#: src/components/CustomTagEntry.py:42
+#, python-brace-format
+msgid "<b>{emoji} Edit custom tags</b>"
+msgstr "<b>{emoji} 編輯自訂標籤</b>"
+
+#: src/components/CustomTagEntry.py:51
+msgid "List of custom tags, separated  by comma"
+msgstr "自訂標籤列表，以逗號分隔"
+
+#: src/components/CustomTagEntry.py:57
+#, python-brace-format
+msgid "<small><b>Default tags</b>: {default_tags}</small>"
+msgstr "<small><b>預設標籤</b>: {default_tags}</small>"
+
+#: src/components/CustomTagEntry.py:65
+msgid "<small>Press Enter to save or ESC to dismiss</small>"
+msgstr "<small>按下 Enter 鍵儲存或按下 ESC 鍵取消</small>"
+
+#: src/components/UpdateDialog.py:29
+msgid "New features!"
+msgstr "新功能！"
+
+#: src/components/UpdateDialog.py:33
+msgid "Dismiss"
+msgstr "取消"
+
+#: src/ShortcutsWindow.py:23
+msgid "Copy the selected emoji and hide the window"
+msgstr "複製已選擇的表情符號並隱藏視窗"
