@@ -1,0 +1,338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the smile package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: smile\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-14 15:46+0900\n"
+"PO-Revision-Date: 2025-06-22 07:49+0200\n"
+"Last-Translator: Dennis Cederberg <dennis@isgvc.com>\n"
+"Language-Team: \n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: src/main.py:109
+msgid "translator_credits"
+msgstr "Dennis Cederberg"
+
+#: src/Picker.py:88
+msgid ""
+"Whoa, it's still empty! \n"
+"Your most used emojis will show up here\n"
+msgstr ""
+"Här var det tomt!\n"
+"Dina mest använda emojier kommer visas här\n"
+
+#: src/Picker.py:510
+msgid "No skintones available"
+msgstr "Inga hudfärger tillgängliga"
+
+#: src/Picker.py:626
+msgid "Copied!"
+msgstr "Kopierat!"
+
+#: src/Picker.py:627
+msgid ""
+"I have copied the emoji to the clipboard. You can now paste it in any input "
+"field."
+msgstr ""
+"Emojin är kopierad till urklipp. Du kan klistra in den i valfritt "
+"inmatningsfält."
+
+#: src/Settings.py:28
+msgid "Settings"
+msgstr "Inställningar"
+
+#. General group
+#: src/Settings.py:31
+msgid "General"
+msgstr "Allmänt"
+
+#: src/Settings.py:33
+msgid "Run in the background"
+msgstr "Kör i bakgrunden"
+
+#: src/Settings.py:33
+msgid "Keep Smile running in the background for a faster launch"
+msgstr "Smile fortsätter köras i bakgrunden för snabbare uppstart"
+
+#: src/Settings.py:37
+msgid "Minimize on exit"
+msgstr "Minimera vid avslut"
+
+#: src/Settings.py:37
+msgid "Minimize the window when selecting an emoji"
+msgstr "Minimera fönstret när en emoji har valts"
+
+#. Mouse group
+#: src/Settings.py:43
+msgid "Mouse behaviour"
+msgstr "Musbeteende"
+
+#: src/Settings.py:45
+msgid "Mouse multi select"
+msgstr "Flerval"
+
+#: src/Settings.py:45
+msgid ""
+"Select multiple emojis with a single mouse click, replacing Shift + Click; "
+"press Enter to confirm and Esc to dismiss."
+msgstr ""
+"Välj flera emojier med enkelklick, ersätter Skift + Klick; tryck Retur för "
+"att bekräfta och Esc för att avfärda."
+
+#. Paste emoji group
+#: src/Settings.py:49
+msgid "Paste emojis automatically"
+msgstr "Klistra in emojier automatiskt"
+
+#: src/Settings.py:55
+msgid "Status:"
+msgstr "Status:"
+
+#: src/Settings.py:60
+msgid "Enabled"
+msgstr "Aktiverat"
+
+#: src/Settings.py:62
+msgid ""
+"Emulates the Ctrl+V shortcut; might <b>not work</b> on some programs.\n"
+"If using the extension, <b>please ensure that it is correctly ENABLED</b>."
+msgstr ""
+"Emulerar genvägen Ctrl+V; kanske <b>inte fungerar</b> i vissa program.\n"
+"Om tillägget används, <b>vänligen säkerställ att det är ordentligt "
+"AKTIVERAT</b>."
+
+#: src/Settings.py:68
+msgid "Get the GNOME extension"
+msgstr "Skaffa GNOME-tillägget"
+
+#: src/Settings.py:68
+msgid "Install the extension to paste automatically on X11 and Wayland"
+msgstr ""
+"Installera tillägget för att klistra in automatiskt under X11 och Wayland"
+
+#. Customization group
+#: src/Settings.py:72
+msgid "Customization"
+msgstr "Anpassning"
+
+#: src/Settings.py:76 src/Settings.py:247
+msgid "Localized tags"
+msgstr "Lokaliserade taggar"
+
+#: src/Settings.py:78
+msgid "Use localized tags"
+msgstr "Använd lokaliserade taggar"
+
+#: src/Settings.py:83
+msgid "Merge localized and English tags"
+msgstr "Slå ihop lokaliserade och engelska taggar"
+
+#: src/Settings.py:85
+msgid "Use both localized tags and English ones at the same time"
+msgstr "Använd både lokaliserade och engelska taggar samtidigt"
+
+#. Page 2
+#: src/Settings.py:94
+msgid "Custom tags"
+msgstr "Anpassade taggar"
+
+#: src/Settings.py:126
+msgid "Available (using the GNOME extension)"
+msgstr "Tillgängligt (med GNOME-tillägget)"
+
+#: src/Settings.py:128
+msgid "Requires the GNOME extension on Wayland"
+msgstr "Kräver GNOME-tillägget under Wayland"
+
+#: src/Settings.py:130
+msgid "Available (using xdotool on X11)"
+msgstr "Tillgängligt (med xdotool under X11)"
+
+#: src/Settings.py:143
+msgid "Launch the app with a shortcut"
+msgstr "Starta appen med en genväg"
+
+#: src/Settings.py:144
+msgid ""
+"Create a new keyboard shortcut in your system settings and paste the "
+"following code as a custom command"
+msgstr ""
+"Skapa en ny tangentbordsgenväg i systeminställningarna och klistra in "
+"följande kod som ett anpassat kommando"
+
+#: src/Settings.py:180
+msgid "Remove"
+msgstr "Ta bort"
+
+#: src/Settings.py:198
+msgid "There are no custom tags yet: create one with Alt + T"
+msgstr "Det finns inga anpassade taggar än: skapa en med Alt + T"
+
+#: src/Settings.py:211
+msgid "Default skintone"
+msgstr "Förvald hudfärg"
+
+#: src/Settings.py:226
+msgid "Emoji size"
+msgstr "Emojistorlek"
+
+#: src/Settings.py:228
+msgid "Default"
+msgstr "Standard"
+
+#: src/Settings.py:229
+msgid "Big"
+msgstr "Stor"
+
+#: src/Settings.py:230
+msgid "Bigger"
+msgstr "Större"
+
+#: src/Settings.py:231
+msgid "Giant"
+msgstr "Störst"
+
+#: src/Settings.py:330
+msgid "Invalid file selected"
+msgstr "Ogiltig fil vald"
+
+#: src/Settings.py:331
+msgid "The configuration file that you selected is not a valid backup."
+msgstr "Den valda konfigurationsfilen är inte en giltig säkerhetskopia."
+
+#: src/Settings.py:334
+msgid "Close"
+msgstr "Stäng"
+
+#: src/ui/menu.ui:6
+msgid "Preferences"
+msgstr "Inställningar"
+
+#: src/ui/menu.ui:10
+msgid "Shortcuts"
+msgstr "Genvägar"
+
+#: src/ui/menu.ui:15
+msgid "What's new?"
+msgstr "Vad är nytt?"
+
+#: src/ui/menu.ui:19
+msgid "Install GNOME extension"
+msgstr "Installera GNOME-tillägget"
+
+#: src/ui/menu.ui:23
+msgid "Translate this app"
+msgstr "Översätt den här appen"
+
+#: src/ui/menu.ui:26
+msgid "About"
+msgstr "Om"
+
+#: src/ui/shortcuts.ui:12
+msgid "Mouse"
+msgstr "Mus"
+
+#: src/ui/shortcuts.ui:48 src/ui/shortcuts.ui:164
+msgid "Open the skintone selector (if available)"
+msgstr "Öppna hudfärgsväljaren (om tillgänglig)"
+
+#: src/ui/shortcuts.ui:68 src/ui/shortcuts.ui:171
+msgid "Add a custom tag"
+msgstr "Lägg till anpassad tagg"
+
+#: src/ui/shortcuts.ui:109
+msgid "Keyboard"
+msgstr "Tangentbord"
+
+#: src/ui/shortcuts.ui:114
+msgid ""
+"Copy the selected emoji and hide the window (When an emoji is highlighted)"
+msgstr "Kopiera den valda emojin och göm fönstret (när en emoji är markerad)"
+
+#: src/ui/shortcuts.ui:121
+msgid "Copy first emoji and hide the window (When using the search bar)"
+msgstr ""
+"Kopiera den första emojin och göm fönstret (vid användning av sökrutan)"
+
+#: src/ui/shortcuts.ui:128
+msgid "Show the category on the right"
+msgstr "Visa kategorin till höger"
+
+#: src/ui/shortcuts.ui:135
+msgid "Show the category on the left"
+msgstr "Visa kategorin till vänster"
+
+#: src/ui/shortcuts.ui:142 src/ShortcutsWindow.py:22
+msgid "Add an emoji to selection"
+msgstr "Lägg till en emoji i urvalet"
+
+#: src/ui/shortcuts.ui:150
+msgid "Remove the last emoji from the selection"
+msgstr "Ta bort den senaste emojin från urvalet"
+
+#: src/ui/shortcuts.ui:157
+msgid "Copy the selection and hide the window, without the highlighted emoji"
+msgstr "Kopiera urvalet och göm fönstret, utan den markerade emojin"
+
+#: src/ui/importexport-customtags.ui:7
+msgid "Export and import custom tags"
+msgstr "Exportera och importera anpassade taggar"
+
+#: src/ui/importexport-customtags.ui:8
+msgid ""
+"Use the buttons below to create or restore custom tags from another machine"
+msgstr ""
+"Använd knapparna nedan för att skapa eller återställa anpassade taggar från "
+"en annan enhet"
+
+#: src/ui/importexport-customtags.ui:23
+msgid "Export to file"
+msgstr "Exportera till fil"
+
+#: src/ui/importexport-customtags.ui:29
+msgid "Import from file"
+msgstr "Importera från fil"
+
+#: src/components/SkintoneSelector.py:89
+msgid "<small>Press Enter to select or ESC to close</small>"
+msgstr "<small>Tryck Retur för att välja eller Esc för att stänga</small>"
+
+#: src/components/CustomTagEntry.py:42
+#, python-brace-format
+msgid "<b>{emoji} Edit custom tags</b>"
+msgstr "<b>{emoji} Ändra anpassade taggar</b>"
+
+#: src/components/CustomTagEntry.py:51
+msgid "List of custom tags, separated  by comma"
+msgstr "Lista över anpassade taggar, kommaseparerade"
+
+#: src/components/CustomTagEntry.py:57
+#, python-brace-format
+msgid "<small><b>Default tags</b>: {default_tags}</small>"
+msgstr "<small><b>Standardtaggar</b>: {default_tags}</small>"
+
+#: src/components/CustomTagEntry.py:65
+msgid "<small>Press Enter to save or ESC to dismiss</small>"
+msgstr "<small>Tryck Retur för att spara eller Esc för att avfärda</small>"
+
+#: src/components/UpdateDialog.py:29
+msgid "New features!"
+msgstr "Nya funktioner!"
+
+#: src/components/UpdateDialog.py:33
+msgid "Dismiss"
+msgstr "Avfärda"
+
+#: src/ShortcutsWindow.py:23
+msgid "Copy the selected emoji and hide the window"
+msgstr "Kopiera den valda emojin och göm fönstret"
