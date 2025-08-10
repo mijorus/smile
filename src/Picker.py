@@ -379,7 +379,11 @@ class Picker(Gtk.ApplicationWindow):
                     return True
 
         elif ctrl_key:
-            if keyval == Gdk.KEY_question:
+            if keyval == Gdk.KEY_q:
+                self.get_application().activate_action("quit", None)
+                return True
+
+            elif keyval == Gdk.KEY_question:
                 shortcut_window = ShortcutsWindow()
                 shortcut_window.open()
 
