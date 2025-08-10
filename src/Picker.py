@@ -34,7 +34,8 @@ from .lib.emoji_history import increment_emoji_usage_counter, get_history
 from .utils import tag_list_contains, debounce, idle
 from .lib.widget_utils import create_flowbox_child, flowbox_child_set_as_selected, flowbox_child_set_as_active, flowbox_child_deselect, create_emoji_button
 from .lib.DbusService import DbusService, DBUS_SERVICE_INTERFACE, DBUS_SERVICE_PATH
-from .assets.emoji_list import emojis, emoji_categories
+from .lib.lazy_loader import emoji_loader
+from .lib.progressive_renderer import ProgressiveEmojiRenderer
 
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
@@ -64,6 +65,12 @@ class Picker(Gtk.ApplicationWindow):
         self.shortcut_window: Optional[ShortcutsWindow] = None
         self.shift_key_pressed = False
         self.skintone_selector: Optional[SkintoneSelector] = None
+
+        # Lazy loading related variables
+        self.emoji_data_loaded = False
+        self.progressive_renderer = None
+        self.loading_label = None
+        self.initial_category_to_load = 'smileys-emotion'
 
         event_controller_keys = Gtk.EventControllerKey()
         event_controller_keys.connect('key-pressed', self.handle_window_key_press)
@@ -122,9 +129,10 @@ class Picker(Gtk.ApplicationWindow):
             min_children_per_line=self.EMOJI_GRID_COL_N
         )
 
-        self.refresh_emoji_list()
+        self.progressive_renderer = ProgressiveEmojiRenderer(self.emoji_list)
+
         self.category_picker_widgets: list[Gtk.Button] = []
-        self.category_picker = self.create_category_picker()
+        self.category_picker = Gtk.Box(spacing=0, halign=Gtk.Align.CENTER, hexpand=True, name='emoji_categories_box')
 
         scrolled_emoji_window = Gtk.ScrolledWindow(
             min_content_height=EMOJI_LIST_MIN_HEIGHT,
@@ -134,10 +142,13 @@ class Picker(Gtk.ApplicationWindow):
         )
 
         scrolled_emoji_window.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
-        scrolled_container = Adw.Clamp(maximum_size=600)
+        self.scrolled_container = Adw.Clamp(maximum_size=600)
 
-        scrolled_container.set_child(self.emoji_list)
-        scrolled_emoji_window.set_child(scrolled_container)
+        self.scrolled_container.set_child(self.emoji_list)
+        scrolled_emoji_window.set_child(self.scrolled_container)
+
+        # Show loading state after container is set up
+        self.show_loading_state()
 
         emoji_list_overlay_container = Gtk.Overlay(child=scrolled_emoji_window)
 
@@ -174,10 +185,11 @@ class Picker(Gtk.ApplicationWindow):
         self.overlay = Adw.ToastOverlay()
         self.overlay.set_child(self.viewport_box)
 
-        self.set_active_category('smileys-emotion')
-
         self.set_child(self.overlay)
         self.search_entry.grab_focus()
+
+        # Start lazy loading emoji data after UI is fully set up
+        emoji_loader.load_async(self.on_emoji_data_loaded)
 
     def on_activation(self):
         self.present_with_time(Gdk.CURRENT_TIME)
@@ -190,6 +202,48 @@ class Picker(Gtk.ApplicationWindow):
 
         self.set_focus(self.search_entry)
 
+    def show_loading_state(self):
+        """Show loading spinner and message while emoji data is being loaded"""
+        # Create a simple centered loading widget
+        loading_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=12)
+        loading_box.set_valign(Gtk.Align.CENTER)
+        loading_box.set_halign(Gtk.Align.CENTER)
+
+        # Create spinner
+        spinner = Gtk.Spinner()
+        spinner.set_spinning(True)
+        spinner.set_size_request(32, 32)
+        loading_box.append(spinner)
+
+        # Create loading label
+        label = Gtk.Label(label=_("Loading emojis..."))
+        label.add_css_class("dim-label")
+        loading_box.append(label)
+
+        # Temporarily replace the emoji_list with the loading widget
+        self.scrolled_container.set_child(loading_box)
+        self.loading_widget = loading_box
+
+    def on_emoji_data_loaded(self):
+        """Callback for when emoji data has completed loading in the background"""
+        self.emoji_data_loaded = True
+
+        # Replace loading state with now loaded emoji_list
+        if hasattr(self, 'loading_widget') and self.loading_widget:
+            self.scrolled_container.set_child(self.emoji_list)
+            self.loading_widget = None
+
+        # Create category picker now that we have data
+        emoji_categories = emoji_loader.get_emoji_categories()
+        if emoji_categories:
+            self.create_category_picker(emoji_categories)
+
+        # Load the initial category
+        self.set_active_category(self.initial_category_to_load)
+
+        # Refresh the emoji list to show emojis
+        self.refresh_emoji_list()
+
     # Create stuff
     def create_menu_button(self):
         builder = Gtk.Builder()
@@ -198,8 +252,10 @@ class Picker(Gtk.ApplicationWindow):
 
         return Gtk.MenuButton(menu_model=menu, icon_name='open-menu-symbolic')
 
-    def create_category_picker(self) -> Gtk.Box:
-        box = Gtk.Box(spacing=0, halign=Gtk.Align.CENTER, hexpand=True, name='emoji_categories_box')
+    def create_category_picker(self, emoji_categories):
+        self.category_picker_widgets.clear()
+        for child in list(self.category_picker):
+            self.category_picker.remove(child)
 
         i = 0
         for c, cat in emoji_categories.items():
@@ -212,19 +268,24 @@ class Picker(Gtk.ApplicationWindow):
             button.category = c
             button.index = i
 
-            box.append(button)
+            self.category_picker.append(button)
             self.category_picker_widgets.append(button)
             i += 1
 
         self.categories_count = i
-
-        return box
 
     def refresh_emoji_list(self):
         start = time_ns()
 
         self.emoji_list.remove_all()
         self.emoji_list_widgets = []
+
+        # Check if emoji data is loaded
+        emojis = emoji_loader.get_emoji_data()
+        if not emojis:
+            if not self.emoji_data_loaded:
+                self.show_loading_state()
+            return
 
         self.history = get_history()
         filter_for_recents = self.selected_category == 'recents'
@@ -236,6 +297,8 @@ class Picker(Gtk.ApplicationWindow):
 
         if self.query:
             use_localised_tags = self.settings.get_boolean('use-localized-tags')
+
+        filtered_emojis = []
 
         for emoji in emojis.values():
             is_recent = (emoji['hexcode'] in self.history)
@@ -274,6 +337,9 @@ class Picker(Gtk.ApplicationWindow):
                 elif emoji['group'] != self.selected_category:
                     continue
 
+            filtered_emojis.append(emoji)
+
+        def emoji_factory(emoji):
             emoji_button = create_emoji_button(emoji, click_handler=self.handle_emoji_button_click)
             self.emoji_button_update_css_classes(emoji_button)
             self.update_emoji_button_skintone(emoji_button, skintone_modifier)
@@ -283,11 +349,20 @@ class Picker(Gtk.ApplicationWindow):
                 middle_click_gesture_callback=self.flowbox_child_middle_btn_gesture_end
             )
 
-            self.emoji_list.append(flowbox_child)
             self.emoji_list_widgets.append(flowbox_child)
+            return flowbox_child
 
-        self.emoji_list.set_sort_func(self.sort_emoji_list, None)
-        # print('Emoji list creation took ' + str((time_ns() - start) / 1000000) + 'ms')
+        def on_render_complete():
+            self.emoji_list.set_sort_func(self.sort_emoji_list, None)
+
+        # Stop any ongoing rendering
+        if self.progressive_renderer:
+            self.progressive_renderer.stop_rendering()
+
+        # Start progressive rendering
+        self.progressive_renderer.render_emojis_progressive(
+            filtered_emojis, emoji_factory, on_render_complete
+        )
 
     # Handle events
     def handle_emoji_button_click(self, widget: Gtk.Button):
@@ -544,11 +619,18 @@ class Picker(Gtk.ApplicationWindow):
         self.select_buffer_revealer.set_reveal_child(True if selection else False)
 
     def set_active_category(self, category: str):
+        # Store the category even if UI isn't ready yet
+        self.selected_category = category
+
+        # Only update UI if category picker widgets are available
+        if not self.category_picker_widgets: return None
+
         for b in self.category_picker_widgets:
             if b.category != category:
                 b.get_style_context().remove_class('selected')
             else:
                 b.get_style_context().add_class('selected')
+                self.selected_category_index = b.index
 
     def select_emoji_button(self, button: Gtk.Button):
         flowbox_child = button.get_parent()
