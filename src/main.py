@@ -44,6 +44,10 @@ class Smile(Adw.Application):
     def do_startup(self):
         Adw.Application.do_startup(self)
 
+        # Start loading emoji data as early as possible
+        from .lib.lazy_loader import emoji_loader
+        emoji_loader.load_async()
+
         css_provider = Gtk.CssProvider()
         css_provider.load_from_resource('/it/mijorus/smile/assets/style.css')
         Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
