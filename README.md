@@ -99,8 +99,8 @@ Awesome resources that made Smile possible:
 You will need:
 - flatpak
 - flatpak-builder
-- org.gnome.Platform 44
-- org.gnome.Sdk 44
+- org.gnome.Platform 48
+- org.gnome.Sdk 48
 - pango devel kit
 
 ```sh
