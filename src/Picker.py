@@ -77,8 +77,8 @@ class Picker(Gtk.ApplicationWindow):
         self.viewport_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, css_classes=['viewport'], vexpand=True)
 
         self.list_tip_revealer = Gtk.Revealer(
-            reveal_child=False, 
-            transition_type=Gtk.RevealerTransitionType.NONE, 
+            reveal_child=False,
+            transition_type=Gtk.RevealerTransitionType.NONE,
             css_classes=['solid-overlay'],
             visible=False
             # valign=Gtk.Align.START,
@@ -86,7 +86,7 @@ class Picker(Gtk.ApplicationWindow):
 
         self.list_tip_label = Gtk.Label(
             label= _("Whoa, it's still empty! \nYour most used emojis will show up here\n"),
-            css_classes=['dim-label'], 
+            css_classes=['dim-label'],
             justify=Gtk.Justification.CENTER
         )
 
@@ -96,7 +96,7 @@ class Picker(Gtk.ApplicationWindow):
 
         select_buffer_button = Gtk.Button(icon_name='arrow2-right-symbolic', valign=Gtk.Align.CENTER)
         select_buffer_button.connect('clicked', lambda w: self.copy_and_quit())
-        
+
         pop_buffer_btn = Gtk.Button(icon_name='smile-entry-clear-symbolic', valign=Gtk.Align.CENTER, css_classes=['flat'])
         pop_buffer_btn.connect('clicked', lambda w: self.deselect_last_selected_emoji())
 
@@ -104,9 +104,9 @@ class Picker(Gtk.ApplicationWindow):
         [select_buffer_container.append(w) for w in [self.select_buffer_label, pop_buffer_btn, select_buffer_button]]
 
         self.select_buffer_revealer = Gtk.Revealer(
-            reveal_child=False, 
+            reveal_child=False,
             css_classes=['solid-overlay'],
-            child=select_buffer_container, 
+            child=select_buffer_container,
             valign=Gtk.Align.END
         )
 
@@ -127,9 +127,9 @@ class Picker(Gtk.ApplicationWindow):
         self.category_picker = self.create_category_picker()
 
         scrolled_emoji_window = Gtk.ScrolledWindow(
-            min_content_height=EMOJI_LIST_MIN_HEIGHT, 
-            propagate_natural_height=True, 
-            propagate_natural_width=True, 
+            min_content_height=EMOJI_LIST_MIN_HEIGHT,
+            propagate_natural_height=True,
+            propagate_natural_width=True,
             vexpand=True
         )
 
@@ -224,7 +224,7 @@ class Picker(Gtk.ApplicationWindow):
         start = time_ns()
 
         self.emoji_list.remove_all()
-        self.emoji_list_widgets = []        
+        self.emoji_list_widgets = []
 
         self.history = get_history()
         filter_for_recents = self.selected_category == 'recents'
@@ -264,8 +264,8 @@ class Picker(Gtk.ApplicationWindow):
                     filter_result = tag_list_contains(emoji['tags'], self.query)
                 else:
                     filter_result = False
-                
-                if not filter_result: 
+
+                if not filter_result:
                     continue
             else:
                 if filter_for_recents:
@@ -278,8 +278,8 @@ class Picker(Gtk.ApplicationWindow):
             self.emoji_button_update_css_classes(emoji_button)
             self.update_emoji_button_skintone(emoji_button, skintone_modifier)
 
-            flowbox_child = create_flowbox_child(emoji_button, 
-                secondary_click_geture_callback=self.flowbox_child_secondary_btn_gesture_end, 
+            flowbox_child = create_flowbox_child(emoji_button,
+                secondary_click_geture_callback=self.flowbox_child_secondary_btn_gesture_end,
                 middle_click_gesture_callback=self.flowbox_child_middle_btn_gesture_end
             )
 
@@ -379,7 +379,11 @@ class Picker(Gtk.ApplicationWindow):
                     return True
 
         elif ctrl_key:
-            if keyval == Gdk.KEY_question:
+            if keyval == Gdk.KEY_q:
+                self.get_application().activate_action("quit", None)
+                return True
+
+            elif keyval == Gdk.KEY_question:
                 shortcut_window = ShortcutsWindow()
                 shortcut_window.open()
 
@@ -689,7 +693,7 @@ class Picker(Gtk.ApplicationWindow):
 
     def update_emoji_skintones(self, settings: Gio.Settings, key):
         modifier_settings = settings.get_string(key)
-        
+
         for widget in self.emoji_list_widgets:
             emoji_button = widget.get_child()
             self.update_emoji_button_skintone(emoji_button, modifier_settings)
@@ -711,5 +715,5 @@ class Picker(Gtk.ApplicationWindow):
 
         if apply_border_radius and ('skintones' in widget.emoji_data) and widget.emoji_data['skintones']:
             emoji_button_css.append('emoji-with-skintones')
-            
+
         widget.set_css_classes(emoji_button_css)

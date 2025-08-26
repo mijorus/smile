@@ -63,6 +63,10 @@ class Smile(Adw.Application):
             self.create_action("gnome_extension", lambda w, e: Gtk.UriLauncher.new(GNOME_EXTENSION_LINK).launch())
 
             self.create_action("about", self.on_about_action)
+            self.create_action("quit", self.on_quit_action)
+
+            # Set up accelerators according to GNOME conventions
+            self.set_accels_for_action("app.quit", ["<Ctrl>q"])
 
             if not self.start_hidden:
                 self.window.show()
@@ -117,6 +121,11 @@ class Smile(Adw.Application):
             self.about.set_application_icon('it.mijorus.smile.crazy')
 
         self.last_about_key_pressed = Gdk.keyval_name(keyval)
+
+    def on_quit_action(self, widget, event):
+        if self.window:
+            self.window.close()
+        self.quit()
 
 def main(version: str, datadir: str) -> None:
     app = Smile(version=version, datadir=datadir)
