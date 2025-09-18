@@ -33,6 +33,7 @@ def create_flowbox_child(emoji_button: Gtk.Button, secondary_click_geture_callba
 
 def create_emoji_button(emoji_data: dict, click_handler=None) -> Gtk.Button:
     emoji_button = Gtk.Button(label=emoji_data['emoji'], can_focus=False)
+    emoji_button.set_tooltip_text(emoji_data.get('annotation', ''))
     emoji_button.emoji_data = emoji_data
     emoji_button.hexcode = emoji_data['hexcode']
     emoji_button.base_skintone_widget = None
