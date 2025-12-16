@@ -38,15 +38,14 @@ class DbusService():
             DbusService.extension_status = 'unavailable'
 
     def connect(self):
-        if (DbusService.extension_status != 'unavailable') and (not self.dbus_connection):
-            Gio.bus_own_name(
-                Gio.BusType.SESSION,
-                DBUS_SERVICE_INTERFACE,
-                Gio.BusNameOwnerFlags.NONE,
-                self.on_bus_acquired,
-                None,
-                None,
-            )
+        Gio.bus_own_name(
+            Gio.BusType.SESSION,
+            DBUS_SERVICE_INTERFACE,
+            Gio.BusNameOwnerFlags.NONE,
+            self.on_bus_acquired,
+            None,
+            None,
+        )
 
     def handle_method_call(self, connection, sender, object_path, interface_name, method_name, params, invocation):
         pass
