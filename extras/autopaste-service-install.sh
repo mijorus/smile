@@ -2,9 +2,12 @@
 
 set -e
 
+echo 'Installing Smile autopaste service...'
+
 SYSTEMD_USER_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/systemd/user"
 DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 DATA_DIR="$DATA_HOME/it.mijorus.smile"
+SERVICE_NAME="smile-autopaste.service"
 
 # Create the directory if it doesn't exist
 mkdir -p $DATA_DIR
@@ -35,7 +38,7 @@ chmod +x "$DATA_DIR/smile-autopaste.sh"
 mkdir -p $SYSTEMD_USER_DIR
 
 # Create the systemd service file
-cat > "$SYSTEMD_USER_DIR/smile-autopaste.service" << 'EOF'
+cat > "$SYSTEMD_USER_DIR/$SERVICE_NAME" << EOF
 [Unit]
 Description=Smile Autopaste Service for Smile
 After=graphical-session.target
@@ -54,5 +57,12 @@ EOF
 systemctl --user daemon-reload
 
 # Enable and start the service
-systemctl --user enable smile-autopaste.service
-systemctl --user start smile-autopaste.service
+systemctl --user enable $SERVICE_NAME
+systemctl --user start $SERVICE_NAME
+systemctl --user is-active $SERVICE_NAME --quiet
+
+echo "$SERVICE_NAME installed and started correctly."
+
+ if ! which dotool &> /dev/null; then
+    echo "NOTE: dotool was not found on the system, please follow the documentation at https://sr.ht/~geb/dotool/ to install it." >&2
+fi
