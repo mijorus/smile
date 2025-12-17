@@ -481,7 +481,12 @@ class Picker(Gtk.ApplicationWindow):
             return
 
         if DbusService.dbus_connection:
-            DbusService.dbus_connection.emit_signal(None, DBUS_SERVICE_PATH, DBUS_SERVICE_INTERFACE, 'CopiedEmoji', GLib.Variant('(s)', (self.last_copied_text,)))
+            if DbusService.extension_status == 'installed':
+                DbusService.dbus_connection.emit_signal(None, DBUS_SERVICE_PATH, DBUS_SERVICE_INTERFACE, 
+                                                        'CopiedEmoji', GLib.Variant('(s)', (self.last_copied_text,)))
+            else:
+                DbusService.dbus_connection.emit_signal(None, DBUS_SERVICE_PATH, DBUS_SERVICE_INTERFACE, 
+                                                        'CopiedEmojiBroadcast', GLib.Variant('(s)', (self.last_copied_text,)))
         elif os.getenv('XDG_SESSION_TYPE') != 'wayland':
             subprocess.check_output(['xdotool', 'key', 'ctrl+v'])
 

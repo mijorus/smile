@@ -5,7 +5,7 @@ from ..utils import portal
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Gdk, Adw, GLib  # noqa
+from gi.repository import Gio  # noqa
 
 GNOME_EXTENSION_LINK = 'https://extensions.gnome.org/extension/6096/smile-complementary-extension/'
 GNOME_EXTENSION_UUID = 'smile-extension@mijorus.it'
@@ -16,6 +16,10 @@ DBUS_NODE_XML = """
     <node>"
       <interface name='it.mijorus.smile'>"
         <signal name='CopiedEmoji'>"
+          <arg type='s' name='msg'>"
+          </arg>"
+        </signal>"
+         <signal name='CopiedEmojiBroadcast'>"
           <arg type='s' name='msg'>"
           </arg>"
         </signal>"
@@ -47,7 +51,7 @@ class DbusService():
             None,
         )
 
-    def handle_method_call(self, connection, sender, object_path, interface_name, method_name, params, invocation):
+    def handle_method_call(self, *args):
         pass
 
     def on_bus_acquired(self, connection, name):
