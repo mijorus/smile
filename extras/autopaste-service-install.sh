@@ -7,13 +7,14 @@ echo 'Installing Smile autopaste service...'
 SYSTEMD_USER_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/systemd/user"
 DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 DATA_DIR="$DATA_HOME/it.mijorus.smile"
+AUTOPASTE_SCRIPT_LOCATION="$DATA_DIR/smile-autopaste.sh"
 SERVICE_NAME="smile-autopaste.service"
 
 # Create the directory if it doesn't exist
 mkdir -p $DATA_DIR
 
 # Create the smile-autopaste.sh script
-cat > "$DATA_DIR/smile-autopaste.sh" << 'EOF'
+cat > "$AUTOPASTE_SCRIPT_LOCATION" << 'EOF'
 #!/bin/bash
 
 # Monitor D-Bus signals and trigger dotool command
@@ -32,7 +33,7 @@ done
 EOF
 
 # Make the script executable
-chmod +x "$DATA_DIR/smile-autopaste.sh"
+chmod +x "$AUTOPASTE_SCRIPT_LOCATION"
 
 # Create systemd user service directory if it doesn't exist
 mkdir -p $SYSTEMD_USER_DIR
@@ -45,7 +46,7 @@ After=graphical-session.target
 
 [Service]
 Type=simple
-ExecStart=$DATA_DIR/smile-autopaste.sh
+ExecStart=$AUTOPASTE_SCRIPT_LOCATION
 Restart=on-failure
 RestartSec=5
 
