@@ -1,0 +1,32 @@
+name: Flatpak Release
+
+on: 
+  workflow_dispatch:
+  push:
+    paths:
+      - 'meson.build'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: bilelmoussaoui/flatpak-github-actions:gnome-44
+      options: --privileged
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Generate release tag
+        id: tag
+        run: |
+          echo "::set-output name=release_tag::$(cat meson.build | grep "\sversion.*" | grep -oE "'([^']+)'" | sed "s/'//g")"
+      - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+        with:
+          bundle: smile-${{ steps.tag.outputs.release_tag }}-x86_64.flatpak
+          manifest-path: it.mijorus.smile.json
+      - name: Publish release package
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.tag.outputs.release_tag }}
+          files: smile-${{ steps.tag.outputs.release_tag }}-x86_64.flatpak
