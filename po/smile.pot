@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-18 10:52+0100\n"
+"POT-Creation-Date: 2025-12-18 11:10+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,161 +41,165 @@ msgid ""
 "field."
 msgstr ""
 
-#: src/Settings.py:28
+#: src/Settings.py:30
 msgid "Settings"
 msgstr ""
 
-#: src/Settings.py:31
+#: src/Settings.py:33
 msgid "General"
 msgstr ""
 
-#: src/Settings.py:33
+#: src/Settings.py:35
 msgid "Run in the background"
 msgstr ""
 
-#: src/Settings.py:33
+#: src/Settings.py:35
 msgid "Keep Smile running in the background for a faster launch"
 msgstr ""
 
-#: src/Settings.py:37
+#: src/Settings.py:39
 msgid "Minimize on exit"
 msgstr ""
 
-#: src/Settings.py:37
+#: src/Settings.py:39
 msgid "Minimize the window when selecting an emoji"
 msgstr ""
 
-#: src/Settings.py:43
+#: src/Settings.py:45
 msgid "Mouse behaviour"
 msgstr ""
 
-#: src/Settings.py:45
+#: src/Settings.py:47
 msgid "Mouse multi select"
 msgstr ""
 
-#: src/Settings.py:45
+#: src/Settings.py:47
 msgid ""
 "Select multiple emojis with a single mouse click, replacing Shift + Click; "
 "press Enter to confirm and Esc to dismiss."
 msgstr ""
 
-#: src/Settings.py:49
+#: src/Settings.py:51
 msgid "Paste emojis automatically"
 msgstr ""
 
-#: src/Settings.py:55
+#: src/Settings.py:57
 msgid "Status:"
 msgstr ""
 
-#: src/Settings.py:60
+#: src/Settings.py:62
 msgid "Enabled"
 msgstr ""
 
-#: src/Settings.py:62
+#: src/Settings.py:64
 msgid ""
 "Emulates the Ctrl+V shortcut; might <b>not work</b> on some programs.\n"
 "If using the extension, <b>please ensure that it is correctly ENABLED</b>."
 msgstr ""
 
-#: src/Settings.py:68
+#: src/Settings.py:70
+msgid "Learn how to paste automatically on Wayland"
+msgstr ""
+
+#: src/Settings.py:71
 msgid "Get the GNOME extension"
 msgstr ""
 
-#: src/Settings.py:68
+#: src/Settings.py:71
 msgid "Install the extension to paste automatically on X11 and Wayland"
 msgstr ""
 
-#: src/Settings.py:72
+#: src/Settings.py:75
 msgid "Customization"
 msgstr ""
 
-#: src/Settings.py:76 src/Settings.py:250
+#: src/Settings.py:79 src/Settings.py:253
 msgid "Localized tags"
 msgstr ""
 
-#: src/Settings.py:78
+#: src/Settings.py:81
 msgid "Use localized tags"
 msgstr ""
 
-#: src/Settings.py:83
+#: src/Settings.py:86
 msgid "Merge localized and English tags"
 msgstr ""
 
-#: src/Settings.py:85
+#: src/Settings.py:88
 msgid "Use both localized tags and English ones at the same time"
 msgstr ""
 
-#: src/Settings.py:94
+#: src/Settings.py:97
 msgid "Custom tags"
 msgstr ""
 
-#: src/Settings.py:126
+#: src/Settings.py:129
 msgid "Available (using the GNOME extension)"
 msgstr ""
 
-#: src/Settings.py:129
+#: src/Settings.py:132
 msgid "Available using D-Bus (setup may be required)"
 msgstr ""
 
-#: src/Settings.py:131
+#: src/Settings.py:134
 msgid "Requires the GNOME extension on Wayland"
 msgstr ""
 
-#: src/Settings.py:133
+#: src/Settings.py:136
 msgid "Available (using xdotool on X11)"
 msgstr ""
 
-#: src/Settings.py:146
+#: src/Settings.py:149
 msgid "Launch the app with a shortcut"
 msgstr ""
 
-#: src/Settings.py:147
+#: src/Settings.py:150
 msgid ""
 "Create a new keyboard shortcut in your system settings and paste the "
 "following code as a custom command"
 msgstr ""
 
-#: src/Settings.py:183
+#: src/Settings.py:186
 msgid "Remove"
 msgstr ""
 
-#: src/Settings.py:201
+#: src/Settings.py:204
 msgid "There are no custom tags yet: create one with Alt + T"
 msgstr ""
 
-#: src/Settings.py:214
+#: src/Settings.py:217
 msgid "Default skintone"
 msgstr ""
 
-#: src/Settings.py:229
+#: src/Settings.py:232
 msgid "Emoji size"
 msgstr ""
 
-#: src/Settings.py:231
+#: src/Settings.py:234
 msgid "Default"
 msgstr ""
 
-#: src/Settings.py:232
+#: src/Settings.py:235
 msgid "Big"
 msgstr ""
 
-#: src/Settings.py:233
+#: src/Settings.py:236
 msgid "Bigger"
 msgstr ""
 
-#: src/Settings.py:234
+#: src/Settings.py:237
 msgid "Giant"
 msgstr ""
 
-#: src/Settings.py:333
+#: src/Settings.py:336
 msgid "Invalid file selected"
 msgstr ""
 
-#: src/Settings.py:334
+#: src/Settings.py:337
 msgid "The configuration file that you selected is not a valid backup."
 msgstr ""
 
-#: src/Settings.py:337
+#: src/Settings.py:340
 msgid "Close"
 msgstr ""
 
