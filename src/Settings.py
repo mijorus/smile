@@ -125,7 +125,10 @@ class Settings(Adw.PreferencesWindow):
         if DbusService.extension_status == 'installed':
             return (True, 'checkmark-symbolic', 'success', _('Available (using the GNOME extension)'))
         elif os.getenv('XDG_SESSION_TYPE') == 'wayland':
-            return (False, 'smile-warning-small-symbolic', 'warning', _('Requires the GNOME extension on Wayland'))
+            if DbusService.dbus_connection:
+                return (False, 'horizontal-arrows-none-symbolic', 'success', _('Available using D-Bus (setup may be required)'))
+            else:
+                return (False, 'smile-warning-small-symbolic', 'warning', _('Requires the GNOME extension on Wayland'))
         else:
             return (True, 'checkmark-symbolic', 'success', _('Available (using xdotool on X11)'))
 
