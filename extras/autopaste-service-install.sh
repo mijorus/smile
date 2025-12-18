@@ -27,7 +27,7 @@ while read -r line; do
         fi
 
         # Trigger the dotool command
-        echo 'key ctrl+shift+v' | dotool
+        echo 'key ctrl+v' | dotool
     fi
 done
 EOF
