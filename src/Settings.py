@@ -17,6 +17,8 @@ from gi.repository import Gtk, Gio, Gdk, GLib, Adw
 
 
 class Settings(Adw.PreferencesWindow):
+    WIKI_PAGE = 'https://github.com/mijorus/smile/wiki'
+
     def __init__(self, application_id: str, **kwargs):
         super().__init__(**kwargs)
         self.application_id = application_id
@@ -65,8 +67,9 @@ class Settings(Adw.PreferencesWindow):
         paste_emoji_group.set_header_suffix(auto_paste_suff)
         use_ext_row.set_sensitive(auto_paste_status[0])
 
+        wiki_page_row = UriRow(website=self.WIKI_PAGE, title=_('Learn how to paste automatically on Wayland'))
         get_ext_link_row = UriRow(website=GNOME_EXTENSION_LINK, title=_('Get the GNOME extension'), subtitle=_('Install the extension to paste automatically on X11 and Wayland'))
-        [paste_emoji_group.add(el) for el in [use_ext_row, get_ext_link_row]]
+        [paste_emoji_group.add(el) for el in [use_ext_row, wiki_page_row, get_ext_link_row]]
 
         # Customization group
         customization_group = Adw.PreferencesGroup(title=_('Customization'))
@@ -126,7 +129,7 @@ class Settings(Adw.PreferencesWindow):
             return (True, 'checkmark-symbolic', 'success', _('Available (using the GNOME extension)'))
         elif os.getenv('XDG_SESSION_TYPE') == 'wayland':
             if DbusService.dbus_connection:
-                return (False, 'horizontal-arrows-none-symbolic', 'success', _('Available using D-Bus (setup may be required)'))
+                return (True, 'horizontal-arrows-none-symbolic', 'success', _('Available using D-Bus (setup may be required)'))
             else:
                 return (False, 'smile-warning-small-symbolic', 'warning', _('Requires the GNOME extension on Wayland'))
         else:
