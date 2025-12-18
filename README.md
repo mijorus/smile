@@ -24,18 +24,12 @@
   <img width="200" src="https://flathub.org/assets/badges/flathub-badge-i-en.png">
 </a>
 
-### Automatically paste with the GNOME Extension
+## Automatically paste on Wayland
 
-**Requires Smile 2.4.0+**
+**Requires Smile 2.11.0**
 
-<a href="https://extensions.gnome.org/extension/6096/smile-complementary-extension" align="center">
-  <img width="200" src="docs/gnome-extension.svg">
-</a>
-
-###  1.1 Source
-<a href="https://github.com/mijorus/smile" align="center">
-  <img width="100" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png">
-</a>
+Please, read:
+https://github.com/mijorus/smile/wiki/Automatically-paste-on-Wayland
 
 Note: Flathub and Github are the only official release channels for Smile. Any release on external marketplaces or packaging formats are unofficial and not supported by me.
 
