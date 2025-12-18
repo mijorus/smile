@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the smile package.
+# This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: smile\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-14 15:46+0900\n"
+"POT-Creation-Date: 2025-12-18 10:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.py:109
+#: src/main.py:113
 msgid "translator_credits"
 msgstr ""
 
@@ -27,15 +27,15 @@ msgid ""
 "Your most used emojis will show up here\n"
 msgstr ""
 
-#: src/Picker.py:510
+#: src/Picker.py:523
 msgid "No skintones available"
 msgstr ""
 
-#: src/Picker.py:626
+#: src/Picker.py:639
 msgid "Copied!"
 msgstr ""
 
-#: src/Picker.py:627
+#: src/Picker.py:640
 msgid ""
 "I have copied the emoji to the clipboard. You can now paste it in any input "
 "field."
@@ -45,7 +45,6 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#. General group
 #: src/Settings.py:31
 msgid "General"
 msgstr ""
@@ -66,7 +65,6 @@ msgstr ""
 msgid "Minimize the window when selecting an emoji"
 msgstr ""
 
-#. Mouse group
 #: src/Settings.py:43
 msgid "Mouse behaviour"
 msgstr ""
@@ -81,7 +79,6 @@ msgid ""
 "press Enter to confirm and Esc to dismiss."
 msgstr ""
 
-#. Paste emoji group
 #: src/Settings.py:49
 msgid "Paste emojis automatically"
 msgstr ""
@@ -108,12 +105,11 @@ msgstr ""
 msgid "Install the extension to paste automatically on X11 and Wayland"
 msgstr ""
 
-#. Customization group
 #: src/Settings.py:72
 msgid "Customization"
 msgstr ""
 
-#: src/Settings.py:76 src/Settings.py:247
+#: src/Settings.py:76 src/Settings.py:250
 msgid "Localized tags"
 msgstr ""
 
@@ -129,7 +125,6 @@ msgstr ""
 msgid "Use both localized tags and English ones at the same time"
 msgstr ""
 
-#. Page 2
 #: src/Settings.py:94
 msgid "Custom tags"
 msgstr ""
@@ -138,65 +133,69 @@ msgstr ""
 msgid "Available (using the GNOME extension)"
 msgstr ""
 
-#: src/Settings.py:128
+#: src/Settings.py:129
+msgid "Available using D-Bus (setup may be required)"
+msgstr ""
+
+#: src/Settings.py:131
 msgid "Requires the GNOME extension on Wayland"
 msgstr ""
 
-#: src/Settings.py:130
+#: src/Settings.py:133
 msgid "Available (using xdotool on X11)"
 msgstr ""
 
-#: src/Settings.py:143
+#: src/Settings.py:146
 msgid "Launch the app with a shortcut"
 msgstr ""
 
-#: src/Settings.py:144
+#: src/Settings.py:147
 msgid ""
 "Create a new keyboard shortcut in your system settings and paste the "
 "following code as a custom command"
 msgstr ""
 
-#: src/Settings.py:180
+#: src/Settings.py:183
 msgid "Remove"
 msgstr ""
 
-#: src/Settings.py:198
+#: src/Settings.py:201
 msgid "There are no custom tags yet: create one with Alt + T"
 msgstr ""
 
-#: src/Settings.py:211
+#: src/Settings.py:214
 msgid "Default skintone"
 msgstr ""
 
-#: src/Settings.py:226
+#: src/Settings.py:229
 msgid "Emoji size"
 msgstr ""
 
-#: src/Settings.py:228
+#: src/Settings.py:231
 msgid "Default"
 msgstr ""
 
-#: src/Settings.py:229
+#: src/Settings.py:232
 msgid "Big"
 msgstr ""
 
-#: src/Settings.py:230
+#: src/Settings.py:233
 msgid "Bigger"
 msgstr ""
 
-#: src/Settings.py:231
+#: src/Settings.py:234
 msgid "Giant"
 msgstr ""
 
-#: src/Settings.py:330
+#: src/Settings.py:333
 msgid "Invalid file selected"
 msgstr ""
 
-#: src/Settings.py:331
+#: src/Settings.py:334
 msgid "The configuration file that you selected is not a valid backup."
 msgstr ""
 
-#: src/Settings.py:334
+#: src/Settings.py:337
 msgid "Close"
 msgstr ""
 
@@ -269,6 +268,10 @@ msgstr ""
 msgid "Copy the selection and hide the window, without the highlighted emoji"
 msgstr ""
 
+#: src/ui/shortcuts.ui:178
+msgid "Quit the application"
+msgstr ""
+
 #: src/ui/importexport-customtags.ui:7
 msgid "Export and import custom tags"
 msgstr ""
@@ -286,7 +289,7 @@ msgstr ""
 msgid "Import from file"
 msgstr ""
 
-#: src/components/SkintoneSelector.py:89
+#: src/components/SkintoneSelector.py:90
 msgid "<small>Press Enter to select or ESC to close</small>"
 msgstr ""
 
