@@ -14,61 +14,81 @@
     "0030-FE0F-20E3": {
         "emoji": "0️⃣",
         "tags": [
-            "klahv"
+            "0",
+            "klahv",
+            "null"
         ]
     },
     "0031-FE0F-20E3": {
         "emoji": "1️⃣",
         "tags": [
-            "klahv"
+            "1",
+            "klahv",
+            "üks"
         ]
     },
     "0032-FE0F-20E3": {
         "emoji": "2️⃣",
         "tags": [
+            "2",
+            "kaks",
             "klahv"
         ]
     },
     "0033-FE0F-20E3": {
         "emoji": "3️⃣",
         "tags": [
-            "klahv"
+            "3",
+            "klahv",
+            "kolm"
         ]
     },
     "0034-FE0F-20E3": {
         "emoji": "4️⃣",
         "tags": [
-            "klahv"
+            "4",
+            "klahv",
+            "neli"
         ]
     },
     "0035-FE0F-20E3": {
         "emoji": "5️⃣",
         "tags": [
-            "klahv"
+            "5",
+            "klahv",
+            "viis"
         ]
     },
     "0036-FE0F-20E3": {
         "emoji": "6️⃣",
         "tags": [
-            "klahv"
+            "6",
+            "klahv",
+            "kuus"
         ]
     },
     "0037-FE0F-20E3": {
         "emoji": "7️⃣",
         "tags": [
-            "klahv"
+            "7",
+            "klahv",
+            "seitse"
         ]
     },
     "0038-FE0F-20E3": {
         "emoji": "8️⃣",
         "tags": [
+            "8",
+            "kaheksa",
             "klahv"
         ]
     },
     "0039-FE0F-20E3": {
         "emoji": "9️⃣",
         "tags": [
-            "klahv"
+            "9",
+            "klahv",
+            "üheksa"
         ]
     },
     "00A9": {
@@ -3824,6 +3844,8 @@
             "jooksja",
             "maraton",
             "naine",
+            "paremale",
+            "suunaga",
             "võistlus"
         ]
     },
@@ -3843,6 +3865,8 @@
             "jooksja",
             "maraton",
             "mees",
+            "paremale",
+            "suunaga",
             "võistlus"
         ]
     },
@@ -3857,7 +3881,9 @@
             "kiirus",
             "kiirustamine",
             "liikumine",
-            "maraton"
+            "maraton",
+            "paremale",
+            "suunaga"
         ]
     },
     "1F3C4": {
@@ -5720,7 +5746,9 @@
         "tags": [
             "ligipääs",
             "mees",
+            "paremale",
             "pime",
+            "suunaga",
             "valge kepiga mees"
         ]
     },
@@ -5775,7 +5803,9 @@
             "elektri",
             "ligipääs",
             "mees",
-            "ratastool"
+            "paremale",
+            "ratastool",
+            "suunaga"
         ]
     },
     "1F468-200D-1F9BD": {
@@ -5793,7 +5823,9 @@
             "ligipääs",
             "manuaal",
             "mees",
-            "ratastool"
+            "paremale",
+            "ratastool",
+            "suunaga"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -6105,7 +6137,9 @@
         "tags": [
             "ligipääs",
             "naine",
+            "paremale",
             "pime",
+            "suunaga",
             "valge kepiga naine"
         ]
     },
@@ -6160,7 +6194,9 @@
             "elektri",
             "ligipääs",
             "naine",
-            "ratastool"
+            "paremale",
+            "ratastool",
+            "suunaga"
         ]
     },
     "1F469-200D-1F9BD": {
@@ -6178,7 +6214,9 @@
             "elektri",
             "ligipääs",
             "naine",
-            "ratastool"
+            "paremale",
+            "ratastool",
+            "suunaga"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -10861,7 +10899,9 @@
             "jalutamine",
             "kõndimine",
             "kõndiv naine",
-            "naine"
+            "naine",
+            "paremale",
+            "suunaga"
         ]
     },
     "1F6B6-200D-2642-FE0F": {
@@ -10880,7 +10920,9 @@
             "jalutamine",
             "kõndimine",
             "kõndiv mees",
-            "mees"
+            "mees",
+            "paremale",
+            "suunaga"
         ]
     },
     "1F6B6-200D-27A1-FE0F": {
@@ -10895,7 +10937,9 @@
             "kõnnak",
             "lonkimine",
             "mees",
-            "samm"
+            "paremale",
+            "samm",
+            "suunaga"
         ]
     },
     "1F6B7": {
@@ -11101,6 +11145,18 @@
             "juurdepääs",
             "ligipääs",
             "tõstuk"
+        ]
+    },
+    "1F6D8": {
+        "emoji": "🛘",
+        "tags": [
+            "katastroof",
+            "kivid",
+            "laviin",
+            "maavärin",
+            "mudalaviin",
+            "mägi",
+            "oht"
         ]
     },
     "1F6DC": {
@@ -13444,8 +13500,10 @@
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
             "naine",
+            "paremale",
             "põlvili",
-            "põlvitav"
+            "põlvitav",
+            "suunaga"
         ]
     },
     "1F9CE-200D-2642-FE0F": {
@@ -13460,16 +13518,20 @@
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
             "mees",
+            "paremale",
             "põlvili",
-            "põlvitav"
+            "põlvitav",
+            "suunaga"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
         "emoji": "🧎‍➡️",
         "tags": [
             "inimene",
+            "paremale",
             "põlvili",
-            "põlvitav"
+            "põlvitav",
+            "suunaga"
         ]
     },
     "1F9CF": {
@@ -13650,7 +13712,9 @@
         "emoji": "🧑‍🦯‍➡️",
         "tags": [
             "ligipääs",
+            "paremale",
             "pime",
+            "suunaga",
             "valge kepiga inimene"
         ]
     },
@@ -13698,7 +13762,9 @@
         "tags": [
             "elektrilises ratastoolis inimene",
             "ligipääsetavus",
-            "ratastool"
+            "paremale",
+            "ratastool",
+            "suunaga"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -13713,7 +13779,9 @@
         "tags": [
             "ligipääsetavus",
             "manuaalses ratastoolis inimene",
-            "ratastool"
+            "paremale",
+            "ratastool",
+            "suunaga"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {
@@ -13746,6 +13814,13 @@
             "laps",
             "pere",
             "täiskasvanu"
+        ]
+    },
+    "1F9D1-200D-1FA70": {
+        "emoji": "🧑‍🩰",
+        "tags": [
+            "ballett",
+            "tantsija"
         ]
     },
     "1F9D1-200D-2695-FE0F": {
@@ -14592,6 +14667,30 @@
             "orkester"
         ]
     },
+    "1FA8A": {
+        "emoji": "🪊",
+        "tags": [
+            "džäss",
+            "instrument",
+            "kurb",
+            "muusika",
+            "puhkpill"
+        ]
+    },
+    "1FA8E": {
+        "emoji": "🪎",
+        "tags": [
+            "auhind",
+            "hõbe",
+            "juveelid",
+            "kalliskivi",
+            "kuld",
+            "raha",
+            "rikkus",
+            "saak",
+            "väärisesemed"
+        ]
+    },
     "1FA8F": {
         "emoji": "🪏",
         "tags": [
@@ -15153,6 +15252,24 @@
             "vihje"
         ]
     },
+    "1FAC8": {
+        "emoji": "🫈",
+        "tags": [
+            "hiiglane",
+            "jeti",
+            "karvane",
+            "lumeinimene",
+            "mets"
+        ]
+    },
+    "1FACD": {
+        "emoji": "🫍",
+        "tags": [
+            "mereline",
+            "ookean",
+            "vaal"
+        ]
+    },
     "1FACE": {
         "emoji": "🫎",
         "tags": [
@@ -15459,6 +15576,28 @@
             "tülpinud",
             "unine",
             "väsinud"
+        ]
+    },
+    "1FAEA": {
+        "emoji": "🫪",
+        "tags": [
+            "haavatav",
+            "paanika",
+            "paistes",
+            "ärevus",
+            "üllatunud",
+            "šokeeritud"
+        ]
+    },
+    "1FAEF": {
+        "emoji": "🫯",
+        "tags": [
+            "debatt",
+            "kaklus",
+            "kära",
+            "lahkarvamus",
+            "maadlema",
+            "vaidlus"
         ]
     },
     "1FAF0": {

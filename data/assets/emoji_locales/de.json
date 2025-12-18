@@ -14,60 +14,80 @@
     "0030-FE0F-20E3": {
         "emoji": "0️⃣",
         "tags": [
+            "0",
+            "null",
             "taste"
         ]
     },
     "0031-FE0F-20E3": {
         "emoji": "1️⃣",
         "tags": [
+            "1",
+            "eins",
             "taste"
         ]
     },
     "0032-FE0F-20E3": {
         "emoji": "2️⃣",
         "tags": [
-            "taste"
+            "2",
+            "taste",
+            "zwei"
         ]
     },
     "0033-FE0F-20E3": {
         "emoji": "3️⃣",
         "tags": [
+            "3",
+            "drei",
             "taste"
         ]
     },
     "0034-FE0F-20E3": {
         "emoji": "4️⃣",
         "tags": [
-            "taste"
+            "4",
+            "taste",
+            "vier"
         ]
     },
     "0035-FE0F-20E3": {
         "emoji": "5️⃣",
         "tags": [
+            "5",
+            "fünf",
             "taste"
         ]
     },
     "0036-FE0F-20E3": {
         "emoji": "6️⃣",
         "tags": [
+            "6",
+            "sechs",
             "taste"
         ]
     },
     "0037-FE0F-20E3": {
         "emoji": "7️⃣",
         "tags": [
+            "7",
+            "sieben",
             "taste"
         ]
     },
     "0038-FE0F-20E3": {
         "emoji": "8️⃣",
         "tags": [
+            "8",
+            "acht",
             "taste"
         ]
     },
     "0039-FE0F-20E3": {
         "emoji": "9️⃣",
         "tags": [
+            "9",
+            "neun",
             "taste"
         ]
     },
@@ -599,7 +619,8 @@
     "1F1E8-1F1F6": {
         "emoji": "🇨🇶",
         "tags": [
-            "CQ"
+            "CQ",
+            "flagge"
         ]
     },
     "1F1E8-1F1F7": {
@@ -4053,6 +4074,8 @@
             "läufer",
             "läuferin",
             "marathon",
+            "nach",
+            "rechts",
             "rennen",
             "renner",
             "rennerin",
@@ -4077,7 +4100,9 @@
             "jogger",
             "laufen",
             "laufender mann",
-            "marathon"
+            "marathon",
+            "nach",
+            "rechts"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
@@ -4090,7 +4115,9 @@
             "läufer",
             "läuferin",
             "marathon",
+            "nach",
             "person",
+            "rechts",
             "rennen",
             "schnell",
             "sport"
@@ -5954,21 +5981,10 @@
         "emoji": "👨‍🍼",
         "tags": [
             "baby",
-            "der baby die flasche gibt",
-            "eltern",
             "flasche geben",
             "flasche gebender mann",
             "füttern",
-            "kind",
-            "mann",
-            "mann, der baby die flasche gibt",
-            "milch",
-            "männlich",
-            "neugeborenes",
-            "papa",
-            "person",
-            "säugling",
-            "vater"
+            "mann"
         ]
     },
     "1F468-200D-1F393": {
@@ -6283,7 +6299,9 @@
             "mann mit gehstock",
             "mann mit langstock",
             "mensch",
+            "nach",
             "person",
+            "rechts",
             "sehbehindert"
         ]
     },
@@ -6345,7 +6363,9 @@
             "mann in elektrischem rollstuhl",
             "mann in rollstuhl",
             "mensch",
+            "nach",
             "person",
+            "rechts",
             "rollstuhl"
         ]
     },
@@ -6371,7 +6391,9 @@
             "mann in manuellem rollstuhl",
             "mann in rollstuhl",
             "mensch",
+            "nach",
             "person",
+            "rechts",
             "rollstuhl"
         ]
     },
@@ -6718,7 +6740,9 @@
             "frau mit gehstock",
             "frau mit langstock",
             "mensch",
-            "person"
+            "nach",
+            "person",
+            "rechts"
         ]
     },
     "1F469-200D-1F9B0": {
@@ -6779,7 +6803,9 @@
             "frau in elektrischem rollstuhl",
             "frau in rollstuhl",
             "mensch",
+            "nach",
             "person",
+            "rechts",
             "rollstuhl"
         ]
     },
@@ -6805,7 +6831,9 @@
             "frau in manuellem rollstuhl",
             "frau in rollstuhl",
             "mensch",
+            "nach",
             "person",
+            "rechts",
             "rollstuhl"
         ]
     },
@@ -6999,7 +7027,7 @@
             "männer mit hasenohren",
             "party",
             "tanzen",
-            "twillinge"
+            "zwillinge"
         ]
     },
     "1F470": {
@@ -7384,10 +7412,16 @@
     "1F483": {
         "emoji": "💃",
         "tags": [
+            "elegant",
+            "festlich",
+            "flair",
+            "flamenco",
             "frau",
+            "salsa",
+            "schwung",
+            "tango",
             "tanz",
             "tanzen",
-            "tanzende frau",
             "tänzerin"
         ]
     },
@@ -7432,10 +7466,22 @@
     "1F486-200D-2640-FE0F": {
         "emoji": "💆‍♀️",
         "tags": [
-            "die eine kopfmassage bekommt",
+            "behandlung",
+            "entspannen",
+            "entspannend",
             "frau",
-            "frau, die eine kopfmassage bekommt",
-            "kopfmassage"
+            "gesicht",
+            "kopf",
+            "kopfmassage",
+            "kopfschmerzen",
+            "kopfweh",
+            "lindern",
+            "massage",
+            "relaxen",
+            "salon",
+            "spa",
+            "therapie",
+            "verspannung"
         ]
     },
     "1F486-200D-2642-FE0F": {
@@ -9128,8 +9174,6 @@
         "emoji": "🔴",
         "tags": [
             "ball",
-            "großer roter kreis",
-            "kreis",
             "punkt",
             "rot",
             "roter punkt"
@@ -9640,9 +9684,17 @@
     "1F57A": {
         "emoji": "🕺",
         "tags": [
+            "elegant",
+            "festlich",
+            "flair",
+            "flamenco",
             "mann",
+            "salsa",
+            "schwung",
+            "tango",
+            "tanz",
             "tanzen",
-            "tanzender mann"
+            "tänzer"
         ]
     },
     "1F587": {
@@ -11900,6 +11952,8 @@
             "frau",
             "fußgängerin",
             "gehen",
+            "nach",
+            "rechts",
             "schlendern",
             "spazieren",
             "spaziergang"
@@ -11920,6 +11974,8 @@
             "fußgänger",
             "gehen",
             "mann",
+            "nach",
+            "rechts",
             "spaziergang"
         ]
     },
@@ -11931,7 +11987,9 @@
             "fußgängerin",
             "gehen",
             "gehend",
+            "nach",
             "person",
+            "rechts",
             "schlendern",
             "schlurfen",
             "wandern"
@@ -12164,6 +12222,20 @@
             "lift",
             "symbol",
             "transport"
+        ]
+    },
+    "1F6D8": {
+        "emoji": "🛘",
+        "tags": [
+            "berg",
+            "erdbeben",
+            "felsen",
+            "gefahr",
+            "katastrophe",
+            "lawine",
+            "murenabgang",
+            "murgang",
+            "schlammlawine"
         ]
     },
     "1F6DC": {
@@ -14337,9 +14409,7 @@
             "dinosaurier",
             "diplodocus",
             "saurier",
-            "sauropod",
-            "sauropode",
-            "tier"
+            "sauropode"
         ]
     },
     "1F996": {
@@ -15052,7 +15122,9 @@
         "tags": [
             "frau",
             "kniend",
-            "kniende frau"
+            "kniende frau",
+            "nach",
+            "rechts"
         ]
     },
     "1F9CE-200D-2642-FE0F": {
@@ -15068,7 +15140,9 @@
         "tags": [
             "kniend",
             "kniender mann",
-            "mann"
+            "mann",
+            "nach",
+            "rechts"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
@@ -15081,7 +15155,9 @@
             "meditation",
             "meditieren",
             "mensch",
+            "nach",
             "person",
+            "rechts",
             "seiza",
             "zazen"
         ]
@@ -15155,19 +15231,9 @@
         "emoji": "🧑‍🍼",
         "tags": [
             "baby",
-            "die baby die flasche gibt",
             "flasche geben",
             "flasche gebende person",
-            "frau",
-            "füttern",
-            "mama",
-            "mann",
-            "neugeborenes",
-            "papa",
-            "person",
-            "person, die baby die flasche gibt",
-            "säugling",
-            "vater"
+            "person"
         ]
     },
     "1F9D1-200D-1F384": {
@@ -15306,8 +15372,10 @@
         "tags": [
             "barrierefreiheit",
             "blind",
+            "nach",
             "person mit blindenstock",
-            "person mit langstock"
+            "person mit langstock",
+            "rechts"
         ]
     },
     "1F9D1-200D-1F9B0": {
@@ -15362,7 +15430,9 @@
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
             "barrierefreiheit",
+            "nach",
             "person in elektrischem rollstuhl",
+            "rechts",
             "rollstuhl"
         ]
     },
@@ -15378,40 +15448,53 @@
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
             "barrierefreiheit",
+            "nach",
             "person in manuellem rollstuhl",
+            "rechts",
             "rollstuhl"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {
         "emoji": "🧑‍🧑‍🧒",
         "tags": [
-            "1 kind",
-            "familie: 2 erwachsene",
-            "familie: 2 erwachsene, 1 kind"
+            "erwachsene",
+            "erwachsener",
+            "familie",
+            "kind"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2-200D-1F9D2": {
         "emoji": "🧑‍🧑‍🧒‍🧒",
         "tags": [
-            "2 kinder",
-            "familie: 2 erwachsene",
-            "familie: 2 erwachsene, 2 kinder"
+            "erwachsene",
+            "erwachsener",
+            "familie",
+            "kind"
         ]
     },
     "1F9D1-200D-1F9D2": {
         "emoji": "🧑‍🧒",
         "tags": [
-            "1 kind",
-            "familie: 1 erwachsene(r)",
-            "familie: 1 erwachsene(r), 1 kind"
+            "erwachsene",
+            "erwachsener",
+            "familie",
+            "kind"
         ]
     },
     "1F9D1-200D-1F9D2-200D-1F9D2": {
         "emoji": "🧑‍🧒‍🧒",
         "tags": [
-            "2 kinder",
-            "familie: 1 erwachsene(r)",
-            "familie: 1 erwachsene(r), 2 kinder"
+            "erwachsene",
+            "erwachsener",
+            "familie",
+            "kind"
+        ]
+    },
+    "1F9D1-200D-1FA70": {
+        "emoji": "🧑‍🩰",
+        "tags": [
+            "ballett",
+            "tänzerin"
         ]
     },
     "1F9D1-200D-2695-FE0F": {
@@ -16512,6 +16595,34 @@
             "orchester"
         ]
     },
+    "1FA8A": {
+        "emoji": "🪊",
+        "tags": [
+            "blasinstrument",
+            "blechblasinstrument",
+            "blechbläser",
+            "instrument",
+            "jazz",
+            "musik",
+            "schieben",
+            "traurig",
+            "ziehen"
+        ]
+    },
+    "1FA8E": {
+        "emoji": "🪎",
+        "tags": [
+            "beute",
+            "edelstein",
+            "geld",
+            "gold",
+            "juwelen",
+            "preis",
+            "reichtum",
+            "silber",
+            "wertgegenstände"
+        ]
+    },
     "1FA8F": {
         "emoji": "🪏",
         "tags": [
@@ -17248,6 +17359,33 @@
             "sicherheit"
         ]
     },
+    "1FAC8": {
+        "emoji": "🫈",
+        "tags": [
+            "bigfoot",
+            "fabelwesen",
+            "gigant",
+            "haarig",
+            "kryptid",
+            "riese",
+            "sasquatch",
+            "wald",
+            "wilder mann",
+            "woodwose",
+            "yeti"
+        ]
+    },
+    "1FACD": {
+        "emoji": "🫍",
+        "tags": [
+            "meer",
+            "meeressäuger",
+            "meerestier",
+            "orka",
+            "ozean",
+            "wal"
+        ]
+    },
     "1FACE": {
         "emoji": "🫎",
         "tags": [
@@ -17615,6 +17753,32 @@
             "schläfrig",
             "smiley",
             "übermüdet"
+        ]
+    },
+    "1FAEA": {
+        "emoji": "🫪",
+        "tags": [
+            "angst",
+            "aufgedunsen",
+            "besorgt",
+            "panik",
+            "panisch",
+            "schockiert",
+            "ängstlich",
+            "überrascht"
+        ]
+    },
+    "1FAEF": {
+        "emoji": "🫯",
+        "tags": [
+            "handgemenge",
+            "kampf",
+            "krawall",
+            "prügelei",
+            "rauferei",
+            "schlägerei",
+            "streit",
+            "wortgefecht"
         ]
     },
     "1FAF0": {

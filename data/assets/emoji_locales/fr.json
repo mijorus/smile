@@ -14,60 +14,80 @@
     "0030-FE0F-20E3": {
         "emoji": "0️⃣",
         "tags": [
-            "touches"
+            "0",
+            "touches",
+            "zéro"
         ]
     },
     "0031-FE0F-20E3": {
         "emoji": "1️⃣",
         "tags": [
-            "touches"
+            "1",
+            "touches",
+            "un"
         ]
     },
     "0032-FE0F-20E3": {
         "emoji": "2️⃣",
         "tags": [
+            "2",
+            "deux",
             "touches"
         ]
     },
     "0033-FE0F-20E3": {
         "emoji": "3️⃣",
         "tags": [
-            "touches"
+            "3",
+            "touches",
+            "trois"
         ]
     },
     "0034-FE0F-20E3": {
         "emoji": "4️⃣",
         "tags": [
+            "4",
+            "quatre",
             "touches"
         ]
     },
     "0035-FE0F-20E3": {
         "emoji": "5️⃣",
         "tags": [
+            "5",
+            "cinq",
             "touches"
         ]
     },
     "0036-FE0F-20E3": {
         "emoji": "6️⃣",
         "tags": [
+            "6",
+            "six",
             "touches"
         ]
     },
     "0037-FE0F-20E3": {
         "emoji": "7️⃣",
         "tags": [
+            "7",
+            "sept",
             "touches"
         ]
     },
     "0038-FE0F-20E3": {
         "emoji": "8️⃣",
         "tags": [
+            "8",
+            "huit",
             "touches"
         ]
     },
     "0039-FE0F-20E3": {
         "emoji": "9️⃣",
         "tags": [
+            "9",
+            "neuf",
             "touches"
         ]
     },
@@ -599,7 +619,8 @@
     "1F1E8-1F1F6": {
         "emoji": "🇨🇶",
         "tags": [
-            "CQ"
+            "CQ",
+            "drapeau"
         ]
     },
     "1F1E8-1F1F7": {
@@ -2262,21 +2283,14 @@
     "1F308": {
         "emoji": "🌈",
         "tags": [
-            "bisexuel",
             "bisexuelle",
-            "gay",
             "gay pride",
-            "homosexuel",
             "homosexuelle",
             "lesbienne",
-            "lgbt",
-            "lgbtq",
             "lgbtqia",
             "météo",
             "nature",
-            "orgueil",
             "pluie",
-            "trans",
             "transgenre"
         ]
     },
@@ -2512,7 +2526,6 @@
             "rayon de soleil",
             "soleil",
             "soleil à visage",
-            "éclat",
             "éclatant"
         ]
     },
@@ -4038,13 +4051,16 @@
         "emoji": "🏃‍♀️‍➡️",
         "tags": [
             "course à pied",
+            "droite",
             "femme",
             "femme qui court",
             "joggeuse",
             "jogging",
+            "la",
             "marathon",
             "running",
             "se dépêcher",
+            "vers",
             "vite",
             "vitesse"
         ]
@@ -4062,10 +4078,13 @@
         "emoji": "🏃‍♂️‍➡️",
         "tags": [
             "course à pied",
+            "droite",
             "homme",
             "homme qui court",
             "jogging",
-            "marathon"
+            "la",
+            "marathon",
+            "vers"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
@@ -4075,14 +4094,17 @@
             "coureur",
             "courir",
             "course à pied",
+            "droite",
             "homme qui court",
             "jogging",
+            "la",
             "marathon",
             "marathonien",
             "personne qui court",
             "pressé",
             "rapide",
             "sportif",
+            "vers",
             "vite"
         ]
     },
@@ -6244,12 +6266,15 @@
         "tags": [
             "accessibilité",
             "aveugle",
+            "droite",
             "déficient visuel",
             "handicap",
             "handicap visuel",
             "homme",
             "homme avec canne blanche",
-            "malvoyant"
+            "la",
+            "malvoyant",
+            "vers"
         ]
     },
     "1F468-200D-1F9B0": {
@@ -6313,10 +6338,13 @@
         "emoji": "👨‍🦼‍➡️",
         "tags": [
             "accessibilité",
+            "droite",
             "fauteuil roulant",
             "handicap",
             "homme",
-            "homme en fauteuil motorisé"
+            "homme en fauteuil motorisé",
+            "la",
+            "vers"
         ]
     },
     "1F468-200D-1F9BD": {
@@ -6332,10 +6360,13 @@
         "emoji": "👨‍🦽‍➡️",
         "tags": [
             "accessibilité",
+            "droite",
             "fauteuil roulant",
             "handicap",
             "homme",
-            "homme en fauteuil roulant manuel"
+            "homme en fauteuil roulant manuel",
+            "la",
+            "vers"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -6716,11 +6747,14 @@
         "tags": [
             "accessibilité",
             "aveugle",
+            "droite",
             "déficiente visuelle",
             "femme",
             "femme avec canne blanche",
             "handicap",
-            "malvoyante"
+            "la",
+            "malvoyante",
+            "vers"
         ]
     },
     "1F469-200D-1F9B0": {
@@ -6776,10 +6810,13 @@
         "emoji": "👩‍🦼‍➡️",
         "tags": [
             "accessibilité",
+            "droite",
             "fauteuil roulant",
             "femme",
             "femme en fauteuil motorisé",
-            "handicap"
+            "handicap",
+            "la",
+            "vers"
         ]
     },
     "1F469-200D-1F9BD": {
@@ -6795,10 +6832,13 @@
         "emoji": "👩‍🦽‍➡️",
         "tags": [
             "accessibilité",
+            "droite",
             "fauteuil roulant",
             "femme",
             "femme en fauteuil roulant manuel",
-            "handicap"
+            "handicap",
+            "la",
+            "vers"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -7831,7 +7871,6 @@
     "1F4A7": {
         "emoji": "💧",
         "tags": [
-            "bande dessinée",
             "bd",
             "eau",
             "froid",
@@ -7840,7 +7879,6 @@
             "météo",
             "nature",
             "pluie",
-            "sueur",
             "sueurs froides",
             "tristesse"
         ]
@@ -8301,7 +8339,6 @@
             "lecture",
             "lire",
             "littérature",
-            "livre",
             "manuel scolaire",
             "roman",
             "savoir",
@@ -8362,7 +8399,6 @@
             "lecture",
             "lire",
             "littérature",
-            "livre",
             "manuels scolaires",
             "roman",
             "savoir",
@@ -10041,7 +10077,6 @@
             "rire",
             "sourire",
             "sourire mignon",
-            "visage",
             "visage avec la bouche ouverte et les yeux souriants",
             "émoticône"
         ]
@@ -10088,8 +10123,6 @@
             "paix",
             "sourire",
             "spirituel",
-            "visage",
-            "visage souriant avec une auréole",
             "émoticône"
         ]
     },
@@ -10316,7 +10349,6 @@
             "amour",
             "baiser",
             "bise",
-            "bisou",
             "bisou et cœur",
             "bonjour",
             "bonne nuit",
@@ -10395,7 +10427,6 @@
             "omd",
             "on ne vit qu’une fois",
             "peu importe",
-            "visage",
             "visage qui tire la langue et ferme les yeux",
             "yeux fermés",
             "émoticône",
@@ -10454,7 +10485,6 @@
             "rouge",
             "rouge de colère",
             "sourcils froncés",
-            "visage",
             "émoticône",
             "énervé"
         ]
@@ -10536,7 +10566,6 @@
             "stressé",
             "surpris",
             "terrifié",
-            "visage",
             "émoticône"
         ]
     },
@@ -10642,7 +10671,6 @@
             "chuchoter",
             "découragé",
             "déçu",
-            "ennuyé",
             "expiration",
             "exténué",
             "fatigué",
@@ -10673,18 +10701,14 @@
         "tags": [
             "aah",
             "bleu",
-            "bouche",
             "bouche bée",
             "effrayé",
             "froid",
             "mince",
             "nerveux",
-            "peur",
             "peur bleue",
-            "sueur",
             "sueurs froides",
             "terrifié",
-            "visage",
             "visage en sueur bouche ouverte",
             "émoticône"
         ]
@@ -10723,15 +10747,11 @@
             "chaud",
             "comment",
             "gêné",
-            "hébété",
             "impressionné",
             "incroyable",
             "incrédule",
             "quoi",
             "rouge",
-            "rougissant",
-            "stupéfait",
-            "visage",
             "ébahi",
             "émoticône",
             "étonné"
@@ -10789,7 +10809,6 @@
             "secret",
             "silence",
             "sourdine",
-            "visage",
             "émoticône"
         ]
     },
@@ -11912,12 +11931,15 @@
     "1F6B6-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♀️‍➡️",
         "tags": [
+            "droite",
             "femme",
             "femme qui marche",
+            "la",
             "marche",
             "marcher",
             "piétonne",
-            "randonneuse"
+            "randonneuse",
+            "vers"
         ]
     },
     "1F6B6-200D-2642-FE0F": {
@@ -11931,19 +11953,24 @@
     "1F6B6-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♂️‍➡️",
         "tags": [
+            "droite",
             "homme",
             "homme qui marche",
+            "la",
             "marche",
-            "piéton"
+            "piéton",
+            "vers"
         ]
     },
     "1F6B6-200D-27A1-FE0F": {
         "emoji": "🚶‍➡️",
         "tags": [
             "balade",
+            "droite",
             "en route",
             "flâner",
             "homme",
+            "la",
             "marche",
             "marcher",
             "nonchalant",
@@ -11951,7 +11978,8 @@
             "personne qui marche",
             "piéton",
             "promenade",
-            "se balader"
+            "se balader",
+            "vers"
         ]
     },
     "1F6B7": {
@@ -12157,7 +12185,7 @@
             "hindou",
             "pagode",
             "religion",
-            "stūpa",
+            "stupa",
             "temple",
             "temple bouddhiste"
         ]
@@ -12180,6 +12208,19 @@
             "monte-charge",
             "monte-personnes",
             "montée"
+        ]
+    },
+    "1F6D8": {
+        "emoji": "🛘",
+        "tags": [
+            "avalanche",
+            "catastrophe",
+            "coulée de boue",
+            "danger",
+            "glissement de terrain",
+            "montagne",
+            "rochers",
+            "tremblement de terre"
         ]
     },
     "1F6DC": {
@@ -12603,8 +12644,7 @@
             "premier de la classe",
             "ringard",
             "surdoué",
-            "tronche",
-            "visage"
+            "tronche"
         ]
     },
     "1F914": {
@@ -12862,7 +12902,6 @@
             "mouchoir",
             "rhume",
             "se moucher",
-            "visage",
             "à tes souhaits",
             "émoticône",
             "éternuement",
@@ -13573,7 +13612,6 @@
             "dumpling",
             "empanada",
             "gyoza",
-            "gyōza",
             "jiaozi",
             "pierogi",
             "potsticker",
@@ -13738,15 +13776,11 @@
             "adorer",
             "aimer",
             "amour",
-            "amoureuse",
-            "amoureux",
             "béguin",
             "coeur",
-            "coeurs",
             "cœurs",
             "je t’aime",
             "j’adore",
-            "romance",
             "smiley avec 3 coeurs",
             "sourire"
         ]
@@ -13782,7 +13816,6 @@
         "emoji": "🥳",
         "tags": [
             "anniversaire",
-            "chapeau",
             "chapeau pointu",
             "célébration",
             "fête",
@@ -13824,7 +13857,6 @@
             "toute rouge",
             "transpiration",
             "trop chaud",
-            "visage",
             "visage tout rouge"
         ]
     },
@@ -13943,7 +13975,6 @@
         "emoji": "🥾",
         "tags": [
             "camping",
-            "chaussure",
             "chaussure de marche",
             "chaussures de chantier",
             "chaussures de montagne",
@@ -14797,8 +14828,11 @@
     "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
+            "droite",
             "femme",
             "femme à genoux",
+            "la",
+            "vers",
             "à genoux"
         ]
     },
@@ -14812,17 +14846,23 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
+            "droite",
             "homme",
             "homme à genoux",
+            "la",
+            "vers",
             "à genoux"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
         "emoji": "🧎‍➡️",
         "tags": [
+            "droite",
+            "la",
             "personne à genoux",
             "prière",
             "religion",
+            "vers",
             "à genoux"
         ]
     },
@@ -15039,7 +15079,10 @@
         "tags": [
             "accessibilité",
             "aveugle",
-            "personne avec une canne blanche"
+            "droite",
+            "la",
+            "personne avec une canne blanche",
+            "vers"
         ]
     },
     "1F9D1-200D-1F9B0": {
@@ -15089,8 +15132,11 @@
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
             "accessibilité",
+            "droite",
             "fauteuil roulant",
-            "personne en fauteuil motorisé"
+            "la",
+            "personne en fauteuil motorisé",
+            "vers"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -15104,8 +15150,11 @@
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
             "accessibilité",
+            "droite",
             "fauteuil roulant",
-            "personne en fauteuil roulant manuel"
+            "la",
+            "personne en fauteuil roulant manuel",
+            "vers"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {
@@ -15138,6 +15187,15 @@
             "enfant",
             "famille : adulte",
             "famille monoparentale"
+        ]
+    },
+    "1F9D1-200D-1FA70": {
+        "emoji": "🧑‍🩰",
+        "tags": [
+            "ballerine",
+            "ballet",
+            "danse classique",
+            "danseuse"
         ]
     },
     "1F9D1-200D-2695-FE0F": {
@@ -15893,9 +15951,7 @@
             "amour",
             "bleu ciel",
             "bleu clair",
-            "bleu sarcelle",
             "cyan",
-            "cœur",
             "jtm",
             "mignon",
             "spécial",
@@ -16093,6 +16149,30 @@
             "instrument",
             "musique",
             "orchestre"
+        ]
+    },
+    "1FA8A": {
+        "emoji": "🪊",
+        "tags": [
+            "brass",
+            "instrument",
+            "jazz",
+            "music",
+            "sad",
+            "slide"
+        ]
+    },
+    "1FA8E": {
+        "emoji": "🪎",
+        "tags": [
+            "argent",
+            "argenterie",
+            "bijoux",
+            "butin",
+            "objets de valeur",
+            "or",
+            "pierre précieuse",
+            "richesse"
         ]
     },
     "1FA8F": {
@@ -16718,6 +16798,27 @@
             "sécurité"
         ]
     },
+    "1FAC8": {
+        "emoji": "🫈",
+        "tags": [
+            "bigfoot",
+            "cryptide",
+            "forêt",
+            "géant",
+            "homme sauvage",
+            "poilu",
+            "sasquatch",
+            "yéti"
+        ]
+    },
+    "1FACD": {
+        "emoji": "🫍",
+        "tags": [
+            "baleine",
+            "marin",
+            "océan"
+        ]
+    },
     "1FACE": {
         "emoji": "🫎",
         "tags": [
@@ -17005,6 +17106,30 @@
             "fatigué",
             "sommeil",
             "épuisé"
+        ]
+    },
+    "1FAEA": {
+        "emoji": "🫪",
+        "tags": [
+            "anxiété",
+            "bouffi",
+            "choc",
+            "gonflé",
+            "panique",
+            "surprise",
+            "vulnérabilité"
+        ]
+    },
+    "1FAEF": {
+        "emoji": "🫯",
+        "tags": [
+            "bagarre",
+            "combat",
+            "discussion",
+            "dispute",
+            "désaccord",
+            "grabuge",
+            "lutte"
         ]
     },
     "1FAF0": {

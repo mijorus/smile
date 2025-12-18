@@ -14,60 +14,80 @@
     "0030-FE0F-20E3": {
         "emoji": "0️⃣",
         "tags": [
+            "0",
+            "nul",
             "toets"
         ]
     },
     "0031-FE0F-20E3": {
         "emoji": "1️⃣",
         "tags": [
+            "1",
+            "een",
             "toets"
         ]
     },
     "0032-FE0F-20E3": {
         "emoji": "2️⃣",
         "tags": [
-            "toets"
+            "2",
+            "toets",
+            "twee"
         ]
     },
     "0033-FE0F-20E3": {
         "emoji": "3️⃣",
         "tags": [
+            "3",
+            "drie",
             "toets"
         ]
     },
     "0034-FE0F-20E3": {
         "emoji": "4️⃣",
         "tags": [
-            "toets"
+            "4",
+            "toets",
+            "vier"
         ]
     },
     "0035-FE0F-20E3": {
         "emoji": "5️⃣",
         "tags": [
-            "toets"
+            "5",
+            "toets",
+            "vijf"
         ]
     },
     "0036-FE0F-20E3": {
         "emoji": "6️⃣",
         "tags": [
-            "toets"
+            "6",
+            "toets",
+            "zes"
         ]
     },
     "0037-FE0F-20E3": {
         "emoji": "7️⃣",
         "tags": [
-            "toets"
+            "7",
+            "toets",
+            "zeven"
         ]
     },
     "0038-FE0F-20E3": {
         "emoji": "8️⃣",
         "tags": [
+            "8",
+            "acht",
             "toets"
         ]
     },
     "0039-FE0F-20E3": {
         "emoji": "9️⃣",
         "tags": [
+            "9",
+            "negen",
             "toets"
         ]
     },
@@ -107,27 +127,27 @@
     "1F170": {
         "emoji": "🅰️",
         "tags": [
-            "a",
-            "a-knop",
-            "bloedgroep"
+            "bloed",
+            "groep",
+            "knop"
         ]
     },
     "1F171": {
         "emoji": "🅱️",
         "tags": [
             "b",
-            "b-knop",
             "bloed",
-            "bloedgroep"
+            "groep",
+            "knop"
         ]
     },
     "1F17E": {
         "emoji": "🅾️",
         "tags": [
             "bloed",
-            "bloedgroep",
-            "o",
-            "o-knop"
+            "groep",
+            "knop",
+            "o"
         ]
     },
     "1F17F": {
@@ -143,7 +163,8 @@
         "tags": [
             "ab",
             "bloed",
-            "bloedgroep"
+            "groep",
+            "knop"
         ]
     },
     "1F191": {
@@ -2664,19 +2685,19 @@
         "emoji": "🌲",
         "tags": [
             "boom",
+            "bos",
             "dennenboom",
-            "plant",
-            "spar"
+            "kerst"
         ]
     },
     "1F333": {
         "emoji": "🌳",
         "tags": [
-            "bladeren verliezen",
             "boom",
-            "boom die bladeren verliest",
             "bos",
-            "loof verliezen"
+            "groen",
+            "habitat",
+            "verliezen"
         ]
     },
     "1F334": {
@@ -2685,14 +2706,15 @@
             "boom",
             "palm",
             "plant",
-            "tropisch",
-            "vakantie"
+            "strand",
+            "tropisch"
         ]
     },
     "1F335": {
         "emoji": "🌵",
         "tags": [
             "droogte",
+            "natuur",
             "plant",
             "woestijn"
         ]
@@ -2708,6 +2730,8 @@
         "emoji": "🌷",
         "tags": [
             "bloem",
+            "bloesem",
+            "groei",
             "plant"
         ]
     },
@@ -2717,15 +2741,20 @@
             "bloem",
             "bloesem",
             "kers",
-            "plant"
+            "lente",
+            "plant",
+            "voorjaar"
         ]
     },
     "1F339": {
         "emoji": "🌹",
         "tags": [
             "bloem",
+            "elegant",
             "liefde",
             "plant",
+            "rood",
+            "schoonheid",
             "valentijn"
         ]
     },
@@ -2740,6 +2769,7 @@
         "emoji": "🌻",
         "tags": [
             "bloem",
+            "buiten",
             "plant",
             "zon"
         ]
@@ -2768,6 +2798,7 @@
         "tags": [
             "aar",
             "graan",
+            "granen",
             "plant",
             "rijst",
             "rijstaar"
@@ -2786,6 +2817,7 @@
             "4",
             "blad",
             "geluk",
+            "iers",
             "klaver",
             "plant",
             "vier"
@@ -3257,8 +3289,8 @@
     "1F372": {
         "emoji": "🍲",
         "tags": [
-            "eenpansgerecht",
-            "eten",
+            "pan",
+            "soep",
             "voedsel"
         ]
     },
@@ -4089,11 +4121,14 @@
             "atleet",
             "baan",
             "beroep",
+            "gericht",
             "haasten",
             "hardlopen",
             "kom eraan",
             "marathon",
+            "naar",
             "persoon",
+            "rechts",
             "rennen",
             "rennende vrouw",
             "snel",
@@ -4115,9 +4150,12 @@
     "1F3C3-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♂️‍➡️",
         "tags": [
+            "gericht",
             "hardlopen",
             "man",
             "marathon",
+            "naar",
+            "rechts",
             "rennen",
             "rennende man"
         ]
@@ -4125,13 +4163,16 @@
     "1F3C3-200D-27A1-FE0F": {
         "emoji": "🏃‍➡️",
         "tags": [
+            "gericht",
             "hardlopen",
             "hardloper",
             "hollen",
             "joggen",
             "man",
             "marathon",
+            "naar",
             "persoon",
+            "rechts",
             "rennen",
             "snel",
             "sport"
@@ -4788,14 +4829,15 @@
         "emoji": "🐁",
         "tags": [
             "dier",
-            "knaagdier"
+            "dieren"
         ]
     },
     "1F402": {
         "emoji": "🐂",
         "tags": [
+            "boerderij",
             "dier",
-            "horoscoop",
+            "dieren",
             "sterrenbeeld",
             "stier",
             "taurus"
@@ -4806,6 +4848,7 @@
         "tags": [
             "buffel",
             "dier",
+            "dierentuin",
             "water"
         ]
     },
@@ -4813,7 +4856,9 @@
         "emoji": "🐄",
         "tags": [
             "boe",
+            "boerderij",
             "dier",
+            "dieren",
             "melk"
         ]
     },
@@ -4821,6 +4866,9 @@
         "emoji": "🐅",
         "tags": [
             "dier",
+            "dierentuin",
+            "groot",
+            "kat",
             "roofdier"
         ]
     },
@@ -4828,7 +4876,9 @@
         "emoji": "🐆",
         "tags": [
             "dier",
-            "panter",
+            "dierentuin",
+            "groot",
+            "kat",
             "roofdier"
         ]
     },
@@ -4844,7 +4894,9 @@
         "emoji": "🐈️",
         "tags": [
             "dier",
+            "dieren",
             "huisdier",
+            "katten",
             "kitten"
         ]
     },
@@ -4879,7 +4931,8 @@
         "emoji": "🐋",
         "tags": [
             "dier",
-            "vis"
+            "oceaan",
+            "strand"
         ]
     },
     "1F40C": {
@@ -4905,9 +4958,9 @@
     "1F40E": {
         "emoji": "🐎",
         "tags": [
+            "boerderij",
             "dier",
             "racen",
-            "racepaard",
             "renpaard",
             "ruitersport"
         ]
@@ -4917,7 +4970,8 @@
         "tags": [
             "aries",
             "dier",
-            "horoscoop",
+            "dierentuin",
+            "horens",
             "mannelijk",
             "schaap",
             "sterrenbeeld"
@@ -4926,10 +4980,10 @@
     "1F410": {
         "emoji": "🐐",
         "tags": [
-            "bok",
+            "boerderij",
+            "capricorn",
             "dier",
-            "horoscoop",
-            "steenbok",
+            "melk",
             "sterrenbeeld"
         ]
     },
@@ -4937,15 +4991,19 @@
         "emoji": "🐑",
         "tags": [
             "blaten",
+            "boerderij",
             "dier",
-            "ram",
+            "lam",
             "schaap",
-            "vrouwelijk"
+            "vrouwelijk",
+            "wol",
+            "wollig"
         ]
     },
     "1F412": {
         "emoji": "🐒",
         "tags": [
+            "banaan",
             "dier"
         ]
     },
@@ -4968,8 +5026,9 @@
         "emoji": "🐕️",
         "tags": [
             "dier",
-            "huisdier",
-            "viervoeter"
+            "dieren",
+            "honden",
+            "huisdier"
         ]
     },
     "1F415-200D-1F9BA": {
@@ -4985,8 +5044,9 @@
     "1F416": {
         "emoji": "🐖",
         "tags": [
-            "big",
+            "boerderij",
             "dier",
+            "spek",
             "zeug"
         ]
     },
@@ -5008,7 +5068,7 @@
         "tags": [
             "dier",
             "oceaan",
-            "zee"
+            "wezen"
         ]
     },
     "1F41A": {
@@ -5025,14 +5085,15 @@
         "tags": [
             "beestje",
             "dier",
-            "rups"
+            "tuin"
         ]
     },
     "1F41C": {
         "emoji": "🐜",
         "tags": [
             "dier",
-            "insect"
+            "insect",
+            "tuin"
         ]
     },
     "1F41D": {
@@ -5041,8 +5102,10 @@
             "bij",
             "dier",
             "hommel",
+            "honing",
             "insect",
-            "wesp"
+            "lente",
+            "natuur"
         ]
     },
     "1F41E": {
@@ -5051,14 +5114,17 @@
             "dier",
             "insect",
             "kever",
-            "lieveheersbeest"
+            "lieveheersbeest",
+            "natuur",
+            "tuin"
         ]
     },
     "1F41F": {
         "emoji": "🐟️",
         "tags": [
             "dier",
-            "horoscoop",
+            "eten",
+            "pisces",
             "sterrenbeeld",
             "vissen"
         ]
@@ -5068,7 +5134,8 @@
         "tags": [
             "dier",
             "tropisch",
-            "vis"
+            "vis",
+            "vissen"
         ]
     },
     "1F421": {
@@ -5164,8 +5231,11 @@
         "tags": [
             "australië",
             "beer",
+            "buideldier",
             "dier",
-            "down under"
+            "down",
+            "gezicht",
+            "under"
         ]
     },
     "1F429": {
@@ -5181,8 +5251,9 @@
         "tags": [
             "bult",
             "dier",
-            "kameel met één bult",
-            "woestijn"
+            "kameel",
+            "woestijn",
+            "één"
         ]
     },
     "1F42B": {
@@ -5190,8 +5261,9 @@
         "tags": [
             "bult",
             "dier",
-            "kameel met twee bulten",
-            "vervoermiddel",
+            "dromedaris",
+            "twee",
+            "twee bulten",
             "woestijn"
         ]
     },
@@ -5199,7 +5271,9 @@
         "emoji": "🐬",
         "tags": [
             "dier",
-            "flipper"
+            "flipper",
+            "oceaan",
+            "strand"
         ]
     },
     "1F42D": {
@@ -5214,9 +5288,11 @@
         "emoji": "🐮",
         "tags": [
             "boe",
+            "boerderij",
             "dier",
             "gezicht",
-            "koe"
+            "koe",
+            "melk"
         ]
     },
     "1F42F": {
@@ -5224,6 +5300,8 @@
         "tags": [
             "dier",
             "gezicht",
+            "groot",
+            "kat",
             "roofdier",
             "tijger"
         ]
@@ -5261,23 +5339,28 @@
         "tags": [
             "dier",
             "gezicht",
+            "oceaan",
             "spuitend",
-            "spuitgat",
+            "strand",
             "walvis"
         ]
     },
     "1F434": {
         "emoji": "🐴",
         "tags": [
+            "boerderij",
             "dier",
+            "dressuur",
             "gezicht",
-            "paard"
+            "paard",
+            "paarden"
         ]
     },
     "1F435": {
         "emoji": "🐵",
         "tags": [
             "aap",
+            "banaan",
             "dier",
             "gezicht"
         ]
@@ -5289,14 +5372,18 @@
             "gezicht",
             "hond",
             "huisdier",
-            "viervoeter"
+            "puppy",
+            "puppy’s",
+            "schattig"
         ]
     },
     "1F437": {
         "emoji": "🐷",
         "tags": [
+            "boerderij",
             "dier",
             "gezicht",
+            "spek",
             "varken"
         ]
     },
@@ -5325,10 +5412,11 @@
     "1F43B": {
         "emoji": "🐻",
         "tags": [
-            "berengezicht",
             "dier",
             "gezicht",
-            "knuffel"
+            "grizzly",
+            "grommen",
+            "honing"
         ]
     },
     "1F43B-200D-2744-FE0F": {
@@ -5864,9 +5952,9 @@
     "1F468-200D-1F393": {
         "emoji": "👨‍🎓",
         "tags": [
+            "man",
             "scholier",
-            "student",
-            "vrouw"
+            "student"
         ]
     },
     "1F468-200D-1F3A4": {
@@ -6129,9 +6217,12 @@
         "emoji": "👨‍🦯‍➡️",
         "tags": [
             "blind",
+            "gericht",
             "man",
             "man met blindenstok",
             "man met taststok",
+            "naar",
+            "rechts",
             "toegankelijkheid"
         ]
     },
@@ -6184,7 +6275,10 @@
         "emoji": "👨‍🦼‍➡️",
         "tags": [
             "elektrisch",
+            "gericht",
             "man",
+            "naar",
+            "rechts",
             "rolstoel",
             "toegankelijkheid"
         ]
@@ -6201,8 +6295,11 @@
     "1F468-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "👨‍🦽‍➡️",
         "tags": [
+            "gericht",
             "handmatig",
             "man",
+            "naar",
+            "rechts",
             "rolstoel",
             "toegankelijkheid"
         ]
@@ -6519,6 +6616,9 @@
         "emoji": "👩‍🦯‍➡️",
         "tags": [
             "blind",
+            "gericht",
+            "naar",
+            "rechts",
             "toegankelijkheid",
             "vrouw",
             "vrouw met blindenstok",
@@ -6574,6 +6674,9 @@
         "emoji": "👩‍🦼‍➡️",
         "tags": [
             "elektrisch",
+            "gericht",
+            "naar",
+            "rechts",
             "rolstoel",
             "toegankelijkheid",
             "vrouw"
@@ -6591,7 +6694,10 @@
     "1F469-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "👩‍🦽‍➡️",
         "tags": [
+            "gericht",
             "handmatig",
+            "naar",
+            "rechts",
             "rolstoel",
             "toegankelijkheid",
             "vrouw"
@@ -7761,7 +7867,7 @@
         "emoji": "💮",
         "tags": [
             "bloem",
-            "bloemenstempel"
+            "wit"
         ]
     },
     "1F4AF": {
@@ -9002,11 +9108,11 @@
             "beginner",
             "blad",
             "chevron",
-            "groen en geel",
+            "geel",
+            "gereedschap",
+            "groen",
             "japans",
-            "japans ideogram voor beginner",
-            "japans symbool voor beginner",
-            "onderscheiding"
+            "symbool"
         ]
     },
     "1F531": {
@@ -9123,7 +9229,7 @@
     "1F53D": {
         "emoji": "🔽",
         "tags": [
-            "driehoek",
+            "beneden",
             "knop",
             "omlaag",
             "pijl",
@@ -9582,7 +9688,6 @@
         "emoji": "🕷️",
         "tags": [
             "dier",
-            "geleedpotigen",
             "insect"
         ]
     },
@@ -9912,36 +10017,39 @@
     "1F600": {
         "emoji": "😀",
         "tags": [
+            "blij",
+            "fijn",
             "gezicht",
-            "grappig",
+            "glimlachen",
             "grijns",
+            "grijnzend",
+            "lach",
             "lachen",
-            "lachend gezicht met open ogen",
             "leuk",
-            "smiley"
+            "tanden",
+            "vrolijk"
         ]
     },
     "1F601": {
         "emoji": "😁",
         "tags": [
+            "blij",
+            "fijn",
             "gezicht",
-            "glimlach",
-            "grappig",
+            "glimlachen",
             "grijns",
             "grijnzend",
-            "grijnzend gezicht met lachende ogen",
             "lach",
-            "lachen",
-            "lachende ogen",
-            "leuk",
+            "ogen",
             "oog",
-            "smiley"
+            "stralend",
+            "tanden"
         ]
     },
     "1F602": {
         "emoji": "😂",
         "tags": [
-            "gelukkig",
+            "blij",
             "gevoelens",
             "gezicht",
             "grappig",
@@ -9961,26 +10069,29 @@
     "1F603": {
         "emoji": "😃",
         "tags": [
+            "blij",
             "gaaf",
             "gezicht",
-            "grappig",
-            "haha",
+            "glimlachen",
+            "grijns",
+            "grijnzend",
+            "groot",
+            "joepie",
             "lach",
-            "lachen",
-            "lachend gezicht met open mond",
-            "leuk",
             "mond",
+            "ogen",
             "open",
-            "smiley"
+            "tanden"
         ]
     },
     "1F604": {
         "emoji": "😄",
         "tags": [
-            "gelukkig",
+            "blij",
             "gezicht",
+            "glimlachen",
             "grijns",
-            "grijnzen",
+            "grijnzend",
             "lach",
             "lachen",
             "lol",
@@ -9995,10 +10106,10 @@
         "tags": [
             "gestrest",
             "gezicht",
-            "grijnzen",
+            "glimlachen",
+            "grijnzend",
             "koud",
             "lach",
-            "lachen",
             "mond",
             "neerslachtig",
             "nerveus",
@@ -10011,39 +10122,42 @@
     "1F606": {
         "emoji": "😆",
         "tags": [
-            "dichtgeknepen ogen",
-            "gelukkig",
+            "blij",
             "gesloten",
             "gezicht",
-            "glimlach",
-            "glimlachend",
-            "grijnzen",
+            "glimlachen",
+            "grijnzend",
             "haha",
             "hahaha",
+            "lach",
             "lachen",
             "lol",
             "mond",
             "ogen",
             "open",
-            "rofl"
+            "rofl",
+            "scheelzien"
         ]
     },
     "1F607": {
         "emoji": "😇",
         "tags": [
-            "aureool",
+            "blij",
+            "elfje",
             "engel",
+            "engelachtig",
+            "engelen",
             "fantasie",
+            "geest",
             "gezegend",
             "gezicht",
             "glimlach",
-            "halo",
-            "heilig",
-            "lach",
-            "lach met halo",
+            "glimlachen",
             "onschuldig",
-            "smiley",
-            "stralenkrans"
+            "sprookje",
+            "stralenkrans",
+            "verhaal",
+            "vredig"
         ]
     },
     "1F608": {
@@ -10066,24 +10180,26 @@
         "tags": [
             "flirten",
             "gezicht",
+            "hartenbreker",
+            "knipogen",
             "knipoog",
+            "knipoogt",
+            "plagerij",
             "sexy",
-            "smiley",
             "zwoel"
         ]
     },
     "1F60A": {
         "emoji": "😊",
         "tags": [
-            "blosjes",
             "blozen",
+            "gelukkig",
             "gezicht",
             "glimlach",
-            "lach",
-            "lachen",
+            "glimlachen",
+            "ogen",
             "oog",
-            "rode wangen",
-            "smiley"
+            "tevreden"
         ]
     },
     "1F60B": {
@@ -10303,16 +10419,22 @@
     "1F619": {
         "emoji": "😙",
         "tags": [
+            "143",
+            "afspraakje",
+            "daten",
+            "flirten",
+            "gesloten",
             "gezicht",
-            "glimlach",
-            "glimlachen",
-            "hou van jou",
-            "hvj",
+            "ik hou van je",
             "kus",
-            "kus en lach",
-            "lachende ogen",
-            "oog",
-            "smiley"
+            "kussen",
+            "kussend",
+            "lach",
+            "lachen",
+            "liefde",
+            "nacht",
+            "ogen",
+            "oog"
         ]
     },
     "1F61A": {
@@ -10807,18 +10929,14 @@
         "emoji": "😹",
         "tags": [
             "dier",
-            "gelukstranen",
             "gezicht",
-            "grappig",
-            "hilarisch",
             "kat",
-            "kattengezicht met tranen van geluk",
+            "lach",
             "lachen",
-            "smiley",
+            "lol",
             "traan",
             "tranen",
-            "vreugde",
-            "vreugdetranen"
+            "vreugde"
         ]
     },
     "1F63A": {
@@ -10928,11 +11046,11 @@
     "1F642": {
         "emoji": "🙂",
         "tags": [
+            "blij",
+            "enigszins",
             "gezicht",
-            "glimlach",
-            "lach",
-            "smiley",
-            "tevreden"
+            "glimlachen",
+            "lach"
         ]
     },
     "1F642-200D-2194-FE0F": {
@@ -11780,17 +11898,17 @@
     "1F6B0": {
         "emoji": "🚰",
         "tags": [
-            "drinkwatersymbool",
-            "kraan met glas",
-            "kraanwater"
+            "drink",
+            "drinkbaar",
+            "water"
         ]
     },
     "1F6B1": {
         "emoji": "🚱",
         "tags": [
-            "drinken verboden",
+            "droog",
             "niet drinkbaar",
-            "niet drinken",
+            "verboden",
             "water"
         ]
     },
@@ -11907,9 +12025,12 @@
     "1F6B6-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♀️‍➡️",
         "tags": [
+            "gericht",
             "kuieren",
             "lopen",
+            "naar",
             "persoon",
+            "rechts",
             "slenteren",
             "voetganger",
             "vrouw",
@@ -11929,8 +12050,11 @@
     "1F6B6-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♂️‍➡️",
         "tags": [
+            "gericht",
             "lopen",
             "man",
+            "naar",
+            "rechts",
             "wandelen",
             "wandelende man"
         ]
@@ -11938,8 +12062,11 @@
     "1F6B6-200D-27A1-FE0F": {
         "emoji": "🚶‍➡️",
         "tags": [
+            "gericht",
             "lopen",
+            "naar",
             "persoon",
+            "rechts",
             "slenteren",
             "stappen",
             "struien",
@@ -11971,33 +12098,29 @@
     "1F6B9": {
         "emoji": "🚹️",
         "tags": [
-            "heren-wc",
-            "herensymbool",
+            "heren",
             "man",
-            "mannen",
-            "symbool",
+            "plee",
             "toilet",
+            "urinoir",
             "wc"
         ]
     },
     "1F6BA": {
         "emoji": "🚺️",
         "tags": [
-            "dames-wc",
-            "damessymbool",
-            "symbool",
+            "dames",
+            "plee",
             "toilet",
             "vrouw",
-            "vrouwen",
             "wc"
         ]
     },
     "1F6BB": {
         "emoji": "🚻",
         "tags": [
+            "plee",
             "toilet",
-            "toiletsymbool",
-            "unisex",
             "wc"
         ]
     },
@@ -12056,7 +12179,7 @@
     "1F6C3": {
         "emoji": "🛃",
         "tags": [
-            "vliegveld"
+            "inpakken"
         ]
     },
     "1F6C4": {
@@ -12064,11 +12187,16 @@
         "tags": [
             "aangekomen",
             "bagage",
-            "bagage ophalen",
-            "bagageband",
+            "ingecheckt",
+            "inpakken",
+            "klaar",
             "koffer",
+            "ophalen",
+            "reis",
+            "reisje",
             "reizen",
-            "vliegveld"
+            "tassen",
+            "vliegtuig"
         ]
     },
     "1F6C5": {
@@ -12134,9 +12262,9 @@
         "emoji": "🛐",
         "tags": [
             "bidden",
-            "geloof",
-            "religie",
-            "tempel"
+            "godsdienst",
+            "plaats",
+            "religie"
         ]
     },
     "1F6D1": {
@@ -12191,6 +12319,18 @@
             "personenlift",
             "toegankelijkheid",
             "voorwerp"
+        ]
+    },
+    "1F6D8": {
+        "emoji": "🛘",
+        "tags": [
+            "aardbeving",
+            "berg",
+            "gevaar",
+            "lawine",
+            "modderlawine",
+            "ramp",
+            "stenen"
         ]
     },
     "1F6DC": {
@@ -12498,9 +12638,7 @@
         "emoji": "🟨",
         "tags": [
             "geel",
-            "gele kaart",
             "kaart",
-            "kleur",
             "penalty",
             "vierkant"
         ]
@@ -12776,7 +12914,7 @@
     "1F923": {
         "emoji": "🤣",
         "tags": [
-            "gelukkig",
+            "blij",
             "gezicht",
             "grappig",
             "haha",
@@ -13533,7 +13671,7 @@
     "1F95A": {
         "emoji": "🥚",
         "tags": [
-            "eten",
+            "ontbijt",
             "voedsel"
         ]
     },
@@ -13736,14 +13874,16 @@
     "1F970": {
         "emoji": "🥰",
         "tags": [
+            "3",
             "crush",
             "dol",
             "gezicht",
+            "glimlach",
+            "glimlachen",
             "hart",
             "hartjes",
+            "hou van jou",
             "jou",
-            "lach",
-            "lachen",
             "liefde",
             "romantiek"
         ]
@@ -13969,22 +14109,23 @@
     "1F981": {
         "emoji": "🦁",
         "tags": [
+            "alfa",
             "brul",
             "dier",
             "gezicht",
-            "horoscoop",
-            "leeuwengezicht",
             "leo",
-            "simba",
+            "manen",
+            "orde",
+            "safari",
+            "sterk",
             "sterrenbeeld"
         ]
     },
     "1F982": {
         "emoji": "🦂",
         "tags": [
-            "dier",
-            "horoscoop",
             "scorpio",
+            "scorpius",
             "sterrenbeeld"
         ]
     },
@@ -14693,8 +14834,11 @@
     "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
+            "gericht",
             "knielend",
             "knielende vrouw",
+            "naar",
+            "rechts",
             "vrouw"
         ]
     },
@@ -14708,18 +14852,24 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
+            "gericht",
             "knielend",
             "knielende man",
-            "man"
+            "man",
+            "naar",
+            "rechts"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
         "emoji": "🧎‍➡️",
         "tags": [
+            "gericht",
             "knielen",
             "knielend",
             "knieën",
-            "persoon"
+            "naar",
+            "persoon",
+            "rechts"
         ]
     },
     "1F9CF": {
@@ -14909,7 +15059,10 @@
         "emoji": "🧑‍🦯‍➡️",
         "tags": [
             "blind",
+            "gericht",
+            "naar",
             "persoon met taststok",
+            "rechts",
             "toegankelijkheid"
         ]
     },
@@ -14955,7 +15108,10 @@
     "1F9D1-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
+            "gericht",
+            "naar",
             "persoon in elektrische rolstoel",
+            "rechts",
             "rolstoel",
             "toegankelijkheid"
         ]
@@ -14970,7 +15126,10 @@
     "1F9D1-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
+            "gericht",
+            "naar",
             "persoon in rolstoel",
+            "rechts",
             "rolstoel",
             "toegankelijkheid"
         ]
@@ -14994,15 +15153,24 @@
     "1F9D1-200D-1F9D2": {
         "emoji": "🧑‍🧒",
         "tags": [
-            "gezin: volwassene",
-            "kind"
+            "gezin",
+            "kind",
+            "volwassene"
         ]
     },
     "1F9D1-200D-1F9D2-200D-1F9D2": {
         "emoji": "🧑‍🧒‍🧒",
         "tags": [
-            "gezin: volwassene",
-            "kind"
+            "gezin",
+            "kind",
+            "volwassene"
+        ]
+    },
+    "1F9D1-200D-1FA70": {
+        "emoji": "🧑‍🩰",
+        "tags": [
+            "ballet",
+            "danser"
         ]
     },
     "1F9D1-200D-2695-FE0F": {
@@ -15934,6 +16102,31 @@
             "orkestra"
         ]
     },
+    "1FA8A": {
+        "emoji": "🪊",
+        "tags": [
+            "droevig",
+            "instrument",
+            "jazz",
+            "koper",
+            "muziek",
+            "schuiven"
+        ]
+    },
+    "1FA8E": {
+        "emoji": "🪎",
+        "tags": [
+            "buit",
+            "edelsteen",
+            "geld",
+            "goud",
+            "juwelen",
+            "kostbaarheden",
+            "prijs",
+            "rijkdom",
+            "zilver"
+        ]
+    },
     "1FA8F": {
         "emoji": "🪏",
         "tags": [
@@ -16034,15 +16227,11 @@
         "emoji": "🪘",
         "tags": [
             "beat",
-            "bongo",
             "conga",
-            "dans",
-            "dansen",
-            "drummen",
+            "hoog",
+            "instrument",
             "ritme",
-            "trom",
-            "trommelen",
-            "voorwerp"
+            "trom"
         ]
     },
     "1FA99": {
@@ -16446,11 +16635,16 @@
     "1FABC": {
         "emoji": "🪼",
         "tags": [
+            "aquarium",
             "au",
+            "beet",
             "branden",
+            "dier",
             "gelei",
+            "leven",
             "oceaan",
             "ongewerveld",
+            "plankton",
             "stekel",
             "tentakels",
             "zee"
@@ -16469,9 +16663,16 @@
     "1FABE": {
         "emoji": "🪾",
         "tags": [
+            "boom",
+            "boomstam",
+            "dood",
             "droogte",
+            "hout",
             "kaal",
-            "winter"
+            "leeg",
+            "takken",
+            "winter",
+            "zonder bladeren"
         ]
     },
     "1FABF": {
@@ -16563,6 +16764,27 @@
             "forensisch",
             "identiteit",
             "veiligheid"
+        ]
+    },
+    "1FAC8": {
+        "emoji": "🫈",
+        "tags": [
+            "bigfoot",
+            "cryptide",
+            "harig",
+            "reus",
+            "sasquatch",
+            "wildeman",
+            "woud",
+            "yeti"
+        ]
+    },
+    "1FACD": {
+        "emoji": "🫍",
+        "tags": [
+            "oceaan",
+            "walvis",
+            "zee"
         ]
     },
     "1FACE": {
@@ -16719,20 +16941,30 @@
     "1FADF": {
         "emoji": "🫟",
         "tags": [
+            "druppel",
+            "geknoei",
             "gemors",
             "gespat",
             "holi",
+            "inkt",
             "verf",
-            "vlek"
+            "vlek",
+            "vloeistof"
         ]
     },
     "1FAE0": {
         "emoji": "🫠",
         "tags": [
+            "beschaamd",
+            "gezicht",
+            "haha",
             "heet",
+            "lol",
             "oplossen",
+            "sarcasme",
+            "sarcastisch",
+            "smelt",
             "smelten",
-            "smiley",
             "verdwijnen",
             "vloeibaar",
             "warm"
@@ -16849,6 +17081,29 @@
             "moe",
             "slaperig",
             "uitgeput"
+        ]
+    },
+    "1FAEA": {
+        "emoji": "🫪",
+        "tags": [
+            "geschokt",
+            "kwetsbaar",
+            "onrust",
+            "opgeblazen",
+            "paniek",
+            "verrast"
+        ]
+    },
+    "1FAEF": {
+        "emoji": "🫯",
+        "tags": [
+            "debat",
+            "onenigheid",
+            "ruzie",
+            "tumult",
+            "vechtpartij",
+            "woordenwisseling",
+            "worsteling"
         ]
     },
     "1FAF0": {
@@ -16975,11 +17230,10 @@
     "2122": {
         "emoji": "™️",
         "tags": [
+            "handel",
             "handelsmerk",
-            "symbool",
-            "teken",
-            "tm",
-            "trademark"
+            "merk",
+            "tm"
         ]
     },
     "2139": {
@@ -17141,12 +17395,12 @@
         "emoji": "⏮️",
         "tags": [
             "driehoek",
-            "dubbele pijl naar links",
-            "knop voor vorig nummer",
+            "knop",
+            "laatste",
+            "nummer",
             "pijl",
-            "vorige",
-            "vorige nummer",
-            "vorige scène"
+            "scène",
+            "vorige"
         ]
     },
     "23EF": {
@@ -17238,8 +17492,9 @@
         "emoji": "▫️",
         "tags": [
             "geometrisch",
+            "klein",
             "vierkant",
-            "vorm"
+            "wit"
         ]
     },
     "25B6": {
@@ -17292,10 +17547,9 @@
         "emoji": "◾️",
         "tags": [
             "geometrisch",
-            "middelgroot zwart vierkant",
-            "redelijk klein zwart vierkant",
+            "klein tot middelgroot",
             "vierkant",
-            "vorm"
+            "zwart"
         ]
     },
     "2600": {
@@ -17350,14 +17604,12 @@
         "emoji": "☑️",
         "tags": [
             "check",
-            "gedaan",
             "klaar",
-            "symbool",
-            "teken",
-            "to-do",
+            "stem",
+            "uit",
             "vak",
+            "vink",
             "vinkje",
-            "wit vinkje in grijs vak",
             "✓"
         ]
     },
@@ -17441,21 +17693,21 @@
     "262A": {
         "emoji": "☪️",
         "tags": [
-            "geloof",
             "islam",
             "moslim",
             "ramadan",
-            "religie"
+            "religie",
+            "ster",
+            "wassende maan"
         ]
     },
     "262E": {
         "emoji": "☮️",
         "tags": [
-            "hippie",
-            "peace",
+            "helend",
             "symbool",
             "vrede",
-            "vredesteken"
+            "vredig"
         ]
     },
     "262F": {
@@ -17732,12 +17984,10 @@
     "2695": {
         "emoji": "⚕️",
         "tags": [
-            "apotheek",
-            "dokter",
-            "genezing",
-            "gezondheidszorg",
-            "slang om staf",
-            "zorg"
+            "medicijnen",
+            "medisch",
+            "staf",
+            "symbool"
         ]
     },
     "2696": {
@@ -17935,10 +18185,15 @@
     "26D4": {
         "emoji": "⛔️",
         "tags": [
-            "nee",
-            "symbool",
+            "belemmerd",
+            "doorgang",
+            "geen",
+            "ingang",
+            "mislukt",
+            "niet",
+            "toegang",
             "verboden",
-            "verboden toegang"
+            "verkeer"
         ]
     },
     "26E9": {
@@ -18191,9 +18446,10 @@
     "271D": {
         "emoji": "✝️",
         "tags": [
-            "christendom",
-            "geloof",
+            "christelijk",
+            "christus",
             "kruis",
+            "latijns",
             "religie"
         ]
     },
@@ -18262,11 +18518,12 @@
     "274E": {
         "emoji": "❎️",
         "tags": [
+            "knop",
             "kruis",
             "teken",
             "vermenigvuldigen",
+            "vermenigvuldiging",
             "vierkant",
-            "wit kruis in groen vak",
             "x",
             "×"
         ]
@@ -18468,8 +18725,9 @@
         "emoji": "⬜️",
         "tags": [
             "geometrisch",
+            "groot",
             "vierkant",
-            "vorm"
+            "wit"
         ]
     },
     "2B50": {
@@ -18483,9 +18741,10 @@
         "tags": [
             "cirkel",
             "groot",
-            "grote rode cirkel",
+            "hol",
             "o",
-            "rood"
+            "rood",
+            "vet"
         ]
     },
     "3030": {

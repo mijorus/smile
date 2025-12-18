@@ -14,61 +14,81 @@
     "0030-FE0F-20E3": {
         "emoji": "0️⃣",
         "tags": [
-            "gombfej"
+            "0",
+            "gombfej",
+            "nulla"
         ]
     },
     "0031-FE0F-20E3": {
         "emoji": "1️⃣",
         "tags": [
+            "1",
+            "egy",
             "gombfej"
         ]
     },
     "0032-FE0F-20E3": {
         "emoji": "2️⃣",
         "tags": [
-            "gombfej"
+            "2",
+            "gombfej",
+            "kettő"
         ]
     },
     "0033-FE0F-20E3": {
         "emoji": "3️⃣",
         "tags": [
-            "gombfej"
+            "3",
+            "gombfej",
+            "három"
         ]
     },
     "0034-FE0F-20E3": {
         "emoji": "4️⃣",
         "tags": [
-            "gombfej"
+            "4",
+            "gombfej",
+            "négy"
         ]
     },
     "0035-FE0F-20E3": {
         "emoji": "5️⃣",
         "tags": [
-            "gombfej"
+            "5",
+            "gombfej",
+            "öt"
         ]
     },
     "0036-FE0F-20E3": {
         "emoji": "6️⃣",
         "tags": [
-            "gombfej"
+            "6",
+            "gombfej",
+            "hat"
         ]
     },
     "0037-FE0F-20E3": {
         "emoji": "7️⃣",
         "tags": [
-            "gombfej"
+            "7",
+            "gombfej",
+            "hét"
         ]
     },
     "0038-FE0F-20E3": {
         "emoji": "8️⃣",
         "tags": [
-            "gombfej"
+            "8",
+            "gombfej",
+            "nyolc"
         ]
     },
     "0039-FE0F-20E3": {
         "emoji": "9️⃣",
         "tags": [
-            "gombfej"
+            "9",
+            "gombfej",
+            "kilenc"
         ]
     },
     "00A9": {
@@ -2946,10 +2966,11 @@
     "1F34A": {
         "emoji": "🍊",
         "tags": [
+            "c-vitamin",
             "gyümölcs",
             "narancs",
-            "növény",
-            "étel"
+            "nektarin",
+            "növény"
         ]
     },
     "1F34B": {
@@ -2982,9 +3003,7 @@
         "emoji": "🍌",
         "tags": [
             "gyümölcs",
-            "majom",
-            "növény",
-            "étel"
+            "kálium"
         ]
     },
     "1F34D": {
@@ -4135,7 +4154,9 @@
             "futónő",
             "gyors",
             "gyorsaság",
+            "jobbra",
             "maraton",
+            "néző",
             "nő",
             "női futó",
             "sebesség",
@@ -4161,7 +4182,9 @@
             "futás",
             "futó férfi",
             "férfi",
+            "jobbra",
             "maraton",
+            "néző",
             "verseny"
         ]
     },
@@ -4172,7 +4195,9 @@
             "futás",
             "futó",
             "gyors",
+            "jobbra",
             "maraton",
+            "néző",
             "siet",
             "sport"
         ]
@@ -4912,7 +4937,9 @@
     "1F40B": {
         "emoji": "🐋",
         "tags": [
-            "állat"
+            "tengerpart",
+            "állat",
+            "óceán"
         ]
     },
     "1F40C": {
@@ -4979,7 +5006,7 @@
     "1F412": {
         "emoji": "🐒",
         "tags": [
-            "kismajom",
+            "banán",
             "állat"
         ]
     },
@@ -5033,7 +5060,6 @@
     "1F418": {
         "emoji": "🐘",
         "tags": [
-            "ormány",
             "állat"
         ]
     },
@@ -5041,7 +5067,8 @@
         "emoji": "🐙",
         "tags": [
             "oktopusz",
-            "állat"
+            "állat",
+            "óceán"
         ]
     },
     "1F41A": {
@@ -5240,7 +5267,10 @@
     "1F42C": {
         "emoji": "🐬",
         "tags": [
-            "állat"
+            "flipper",
+            "tengerpart",
+            "állat",
+            "óceán"
         ]
     },
     "1F42D": {
@@ -5963,191 +5993,121 @@
     "1F468-200D-1F466": {
         "emoji": "👨‍👦",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
             "fiú",
             "férfi",
-            "gyermek",
-            "kisfiú"
+            "gyerek"
         ]
     },
     "1F468-200D-1F466-200D-1F466": {
         "emoji": "👨‍👦‍👦",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
             "fiú",
             "férfi",
-            "gyermek",
-            "kisfiú"
+            "gyerek"
         ]
     },
     "1F468-200D-1F467": {
         "emoji": "👨‍👧",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
-            "fiú",
             "férfi",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "lány"
         ]
     },
     "1F468-200D-1F467-200D-1F466": {
         "emoji": "👨‍👧‍👦",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
             "fiú",
             "férfi",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "lány"
         ]
     },
     "1F468-200D-1F467-200D-1F467": {
         "emoji": "👨‍👧‍👧",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
-            "fiú",
             "férfi",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "lány"
         ]
     },
     "1F468-200D-1F468-200D-1F466": {
         "emoji": "👨‍👨‍👦",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
             "fiú",
             "férfi",
-            "gyermek",
-            "kisfiú"
+            "gyerek"
         ]
     },
     "1F468-200D-1F468-200D-1F466-200D-1F466": {
         "emoji": "👨‍👨‍👦‍👦",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
             "fiú",
             "férfi",
-            "gyermek",
-            "kisfiú"
+            "gyerek"
         ]
     },
     "1F468-200D-1F468-200D-1F467": {
         "emoji": "👨‍👨‍👧",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
-            "fiú",
             "férfi",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "lány"
         ]
     },
     "1F468-200D-1F468-200D-1F467-200D-1F466": {
         "emoji": "👨‍👨‍👧‍👦",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
             "fiú",
             "férfi",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "lány"
         ]
     },
     "1F468-200D-1F468-200D-1F467-200D-1F467": {
         "emoji": "👨‍👨‍👧‍👧",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
-            "fiú",
             "férfi",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "lány"
         ]
     },
     "1F468-200D-1F469-200D-1F466": {
         "emoji": "👨‍👩‍👦",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
             "fiú",
             "férfi",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "nő"
         ]
     },
     "1F468-200D-1F469-200D-1F466-200D-1F466": {
         "emoji": "👨‍👩‍👦‍👦",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
             "fiú",
             "férfi",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "nő"
         ]
     },
     "1F468-200D-1F469-200D-1F467": {
         "emoji": "👨‍👩‍👧",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
-            "fiú",
             "férfi",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "lány",
             "nő"
         ]
@@ -6155,15 +6115,10 @@
     "1F468-200D-1F469-200D-1F467-200D-1F466": {
         "emoji": "👨‍👩‍👧‍👦",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
             "fiú",
             "férfi",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "lány",
             "nő"
         ]
@@ -6171,15 +6126,9 @@
     "1F468-200D-1F469-200D-1F467-200D-1F467": {
         "emoji": "👨‍👩‍👧‍👧",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
-            "fiú",
             "férfi",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "lány",
             "nő"
         ]
@@ -6260,7 +6209,9 @@
             "akadálymentesség",
             "férfi",
             "férfi fehér bottal",
+            "jobbra",
             "látássérült",
+            "néző",
             "vak"
         ]
     },
@@ -6340,8 +6291,10 @@
             "akadálymentesség",
             "férfi",
             "férfi motoros kerekesszékben",
+            "jobbra",
             "kerekesszék",
             "mozgáskorlátozott",
+            "néző",
             "tolószék"
         ]
     },
@@ -6362,9 +6315,11 @@
             "akadálymentesség",
             "férfi",
             "férfi kézi hajtású kerekesszékben",
+            "jobbra",
             "kerekesszék",
             "mozgáskorlátozott",
             "mozgássérült",
+            "néző",
             "tolószék"
         ]
     },
@@ -6381,7 +6336,10 @@
     "1F468-200D-2696-FE0F": {
         "emoji": "👨‍⚖️",
         "tags": [
-            "igazság, ítél, férfi, mérleg, foglalkozás"
+            "férfi",
+            "igazság",
+            "mérleg",
+            "törvény"
         ]
     },
     "1F468-200D-2708-FE0F": {
@@ -6424,8 +6382,8 @@
     "1F469": {
         "emoji": "👩",
         "tags": [
-            "hölgy",
-            "szőke"
+            "felnőtt",
+            "hölgy"
         ]
     },
     "1F469-200D-1F33E": {
@@ -6522,42 +6480,26 @@
     "1F469-200D-1F466": {
         "emoji": "👩‍👦",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
             "fiú",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "nő"
         ]
     },
     "1F469-200D-1F466-200D-1F466": {
         "emoji": "👩‍👦‍👦",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
             "fiú",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "nő"
         ]
     },
     "1F469-200D-1F467": {
         "emoji": "👩‍👧",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
-            "fiú",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "lány",
             "nő"
         ]
@@ -6565,14 +6507,9 @@
     "1F469-200D-1F467-200D-1F466": {
         "emoji": "👩‍👧‍👦",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
             "fiú",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "lány",
             "nő"
         ]
@@ -6580,14 +6517,8 @@
     "1F469-200D-1F467-200D-1F467": {
         "emoji": "👩‍👧‍👧",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
-            "fiú",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "lány",
             "nő"
         ]
@@ -6595,42 +6526,26 @@
     "1F469-200D-1F469-200D-1F466": {
         "emoji": "👩‍👩‍👦",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
             "fiú",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "nő"
         ]
     },
     "1F469-200D-1F469-200D-1F466-200D-1F466": {
         "emoji": "👩‍👩‍👦‍👦",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
             "fiú",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "nő"
         ]
     },
     "1F469-200D-1F469-200D-1F467": {
         "emoji": "👩‍👩‍👧",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
-            "fiú",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "lány",
             "nő"
         ]
@@ -6638,14 +6553,9 @@
     "1F469-200D-1F469-200D-1F467-200D-1F466": {
         "emoji": "👩‍👩‍👧‍👦",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
             "fiú",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "lány",
             "nő"
         ]
@@ -6653,14 +6563,8 @@
     "1F469-200D-1F469-200D-1F467-200D-1F467": {
         "emoji": "👩‍👩‍👧‍👧",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
             "család",
-            "fiú",
-            "gyermek",
-            "kisfiú",
+            "gyerek",
             "lány",
             "nő"
         ]
@@ -6740,6 +6644,8 @@
         "emoji": "👩‍🦯‍➡️",
         "tags": [
             "akadálymentesség",
+            "jobbra",
+            "néző",
             "nő",
             "nő fehér bottal",
             "vak"
@@ -6748,36 +6654,36 @@
     "1F469-200D-1F9B0": {
         "emoji": "👩‍🦰",
         "tags": [
+            "felnőtt",
             "hölgy",
             "nő",
-            "szőke",
             "vörös haj"
         ]
     },
     "1F469-200D-1F9B1": {
         "emoji": "👩‍🦱",
         "tags": [
+            "felnőtt",
             "göndör haj",
             "hölgy",
-            "nő",
-            "szőke"
+            "nő"
         ]
     },
     "1F469-200D-1F9B2": {
         "emoji": "👩‍🦲",
         "tags": [
+            "felnőtt",
             "hölgy",
             "kopasz",
-            "nő",
-            "szőke"
+            "nő"
         ]
     },
     "1F469-200D-1F9B3": {
         "emoji": "👩‍🦳",
         "tags": [
+            "felnőtt",
             "hölgy",
             "nő",
-            "szőke",
             "ősz haj"
         ]
     },
@@ -6795,8 +6701,10 @@
         "emoji": "👩‍🦼‍➡️",
         "tags": [
             "akadálymentesség",
+            "jobbra",
             "kerekesszék",
             "mozgáskorlátozott",
+            "néző",
             "nő",
             "nő motoros kerekesszékben",
             "tolószék"
@@ -6816,8 +6724,10 @@
         "emoji": "👩‍🦽‍➡️",
         "tags": [
             "akadálymentesség",
+            "jobbra",
             "kerekesszék",
             "mozgáskorlátozott",
+            "néző",
             "nő",
             "nő kézi hajtású kerekesszékben",
             "tolószék"
@@ -6837,9 +6747,11 @@
     "1F469-200D-2696-FE0F": {
         "emoji": "👩‍⚖️",
         "tags": [
-            "bíró, igazság, mérleg, nő",
-            "foglalkozás",
-            "ítél"
+            "bíró",
+            "igazság",
+            "mérleg",
+            "nő",
+            "törvény"
         ]
     },
     "1F469-200D-2708-FE0F": {
@@ -6914,13 +6826,7 @@
     "1F46A": {
         "emoji": "👪️",
         "tags": [
-            "anya",
-            "anyuka",
-            "apa",
-            "apuka",
-            "fiú",
-            "gyermek",
-            "kisfiú"
+            "gyerek"
         ]
     },
     "1F46B": {
@@ -6947,12 +6853,8 @@
             "báty",
             "fiúk",
             "férfiak",
-            "homoszexuális",
             "ikrek",
             "kézen fogva",
-            "lgbt",
-            "lmbt",
-            "meleg",
             "pár",
             "randevú",
             "randi",
@@ -6971,9 +6873,6 @@
             "kislányok",
             "kézen fogva",
             "legjobb barátnők",
-            "leszbikus",
-            "lgbt",
-            "lmbt",
             "lányok",
             "nők",
             "nővér",
@@ -7310,11 +7209,15 @@
     "1F481": {
         "emoji": "💁",
         "tags": [
-            "információ",
+            "borravaló",
+            "ember",
             "kéz",
-            "nyitott tenyerű nő",
+            "mindegy",
             "nyitott tenyér",
-            "segítség"
+            "pletyka",
+            "szarkasztikus",
+            "szarkazmus",
+            "szemtelen"
         ]
     },
     "1F481-200D-2640-FE0F": {
@@ -7364,6 +7267,8 @@
         "emoji": "💃",
         "tags": [
             "nő",
+            "salsa",
+            "tangó",
             "tánc",
             "táncol",
             "táncoló",
@@ -7760,11 +7665,11 @@
         "tags": [
             "alszik",
             "fáradt",
+            "jó éjszakát",
             "képregény",
-            "zz",
             "zzz",
-            "zzzz",
-            "álmos"
+            "álmos",
+            "éjszaka"
         ]
     },
     "1F4A5": {
@@ -7779,8 +7684,11 @@
     "1F4A6": {
         "emoji": "💦",
         "tags": [
+            "csepp",
             "cseppek",
             "csobbanás",
+            "edzés",
+            "fröccsenés",
             "izzadság",
             "képregény",
             "víz"
@@ -7891,9 +7799,21 @@
         "emoji": "💯",
         "tags": [
             "100",
-            "szám",
+            "a+",
+            "aha",
+            "egyetértés",
+            "egyértelműen",
+            "hűséges",
+            "igaz",
+            "igazság",
+            "megtartás",
+            "mindenképpen",
+            "mutatás",
+            "remek",
             "száz",
-            "teljes pontszám"
+            "találat",
+            "teljes",
+            "tökéletes"
         ]
     },
     "1F4B0": {
@@ -8794,9 +8714,10 @@
     "1F509": {
         "emoji": "🔉",
         "tags": [
-            "alacsony hangerő",
+            "hang",
             "hangerő",
-            "hangszóró"
+            "hangszóró",
+            "közepes"
         ]
     },
     "1F50A": {
@@ -9703,7 +9624,10 @@
     "1F57A": {
         "emoji": "🕺",
         "tags": [
+            "flamenco",
             "férfi",
+            "salsa",
+            "tangó",
             "tánc",
             "táncol",
             "táncos"
@@ -9925,7 +9849,6 @@
         "tags": [
             "beszéd",
             "buborék",
-            "képregény",
             "párbeszéd",
             "szövegbuborék"
         ]
@@ -9935,7 +9858,7 @@
         "tags": [
             "buborék",
             "dühös",
-            "képregény",
+            "jobbra nyíló szövegbuborék",
             "mérges",
             "szövegbuborék"
         ]
@@ -10316,7 +10239,10 @@
         "tags": [
             "arc",
             "csók",
+            "flört",
             "puszi",
+            "randi",
+            "szerelem",
             "szmájli"
         ]
     },
@@ -10934,13 +10860,20 @@
     "1F642-200D-2194-FE0F": {
         "emoji": "🙂‍↔️",
         "tags": [
-            "nem, fejrázás"
+            "fej",
+            "fejcsóválás",
+            "fejrázás",
+            "nem",
+            "vízszintes"
         ]
     },
     "1F642-200D-2195-FE0F": {
         "emoji": "🙂‍↕️",
         "tags": [
-            "bólintás, igen"
+            "bólintás",
+            "fej",
+            "függőleges",
+            "igen"
         ]
     },
     "1F643": {
@@ -11913,7 +11846,9 @@
             "gyalog",
             "gyalogol",
             "gyalogos",
+            "jobbra",
             "megy",
+            "néző",
             "nő",
             "séta",
             "sétáló",
@@ -11933,6 +11868,8 @@
         "emoji": "🚶‍♂️‍➡️",
         "tags": [
             "férfi",
+            "jobbra",
+            "néző",
             "séta",
             "sétáló",
             "túra"
@@ -11944,6 +11881,8 @@
             "férfi",
             "gyaloglás",
             "gyalogos",
+            "jobbra",
+            "néző",
             "séta",
             "sétáló",
             "túra"
@@ -12173,12 +12112,32 @@
             "felvonó"
         ]
     },
+    "1F6D8": {
+        "emoji": "🛘",
+        "tags": [
+            "földrengés",
+            "hegy",
+            "katasztrófa",
+            "lavina",
+            "sziklák",
+            "sárlavina",
+            "veszély"
+        ]
+    },
     "1F6DC": {
         "emoji": "🛜",
         "tags": [
+            "hotspot",
             "hálózat",
             "internet",
-            "számítógép"
+            "kapcsolat",
+            "okostelefon",
+            "router",
+            "számítógép",
+            "szélessávú",
+            "wi-fi",
+            "wifi",
+            "wlan"
         ]
     },
     "1F6DD": {
@@ -13632,15 +13591,13 @@
     "1F96A": {
         "emoji": "🥪",
         "tags": [
-            "kenyér",
-            "szendvics, kenyér, étel"
+            "kenyér"
         ]
     },
     "1F96B": {
         "emoji": "🥫",
         "tags": [
-            "konzerv étel, konzerv, készétel, étel",
-            "konzervdoboz"
+            "étel"
         ]
     },
     "1F96C": {
@@ -14070,22 +14027,21 @@
     "1F992": {
         "emoji": "🦒",
         "tags": [
-            "folt",
-            "foltok",
-            "zsiráf, állat, foltok, foltos"
+            "foltos",
+            "állat"
         ]
     },
     "1F993": {
         "emoji": "🦓",
         "tags": [
-            "csík",
-            "zebra, állat, csík, csíkos"
+            "csíkos",
+            "állat"
         ]
     },
     "1F994": {
         "emoji": "🦔",
         "tags": [
-            "sün, sündisznó, süni, tüske, tüskés",
+            "sündisznó",
             "tüskés",
             "állat"
         ]
@@ -14276,7 +14232,8 @@
         "emoji": "🦧",
         "tags": [
             "emberszabású majom",
-            "majom"
+            "majom",
+            "állat"
         ]
     },
     "1F9A8": {
@@ -14420,12 +14377,8 @@
     "1F9B8": {
         "emoji": "🦸",
         "tags": [
-            "batman",
-            "ember",
             "hős",
-            "hősnő",
             "jó",
-            "superman",
             "szupererő",
             "szuperképesség"
         ]
@@ -14683,6 +14636,8 @@
     "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
+            "jobbra",
+            "néző",
             "nő",
             "térdel",
             "térdelő nő"
@@ -14699,6 +14654,8 @@
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
             "férfi",
+            "jobbra",
+            "néző",
             "térdel",
             "térdelő férfi"
         ]
@@ -14706,6 +14663,8 @@
     "1F9CE-200D-27A1-FE0F": {
         "emoji": "🧎‍➡️",
         "tags": [
+            "jobbra",
+            "néző",
             "térdel",
             "térdelő",
             "térdelő ember"
@@ -14905,6 +14864,8 @@
         "tags": [
             "akadálymentesség",
             "ember fehér bottal",
+            "jobbra",
+            "néző",
             "vak"
         ]
     },
@@ -14948,7 +14909,9 @@
         "tags": [
             "akadálymentesség",
             "ember motoros kerekesszékben",
-            "kerekesszék"
+            "jobbra",
+            "kerekesszék",
+            "néző"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -14962,14 +14925,16 @@
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
             "akadálymentesség",
+            "jobbra",
             "kerekesszék",
-            "kerekesszékes ember"
+            "kerekesszékes ember",
+            "néző"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {
         "emoji": "🧑‍🧑‍🧒",
         "tags": [
-            "család: felnőtt",
+            "család",
             "felnőtt",
             "gyerek"
         ]
@@ -14977,7 +14942,7 @@
     "1F9D1-200D-1F9D1-200D-1F9D2-200D-1F9D2": {
         "emoji": "🧑‍🧑‍🧒‍🧒",
         "tags": [
-            "család: felnőtt",
+            "család",
             "felnőtt",
             "gyerek"
         ]
@@ -14985,15 +14950,24 @@
     "1F9D1-200D-1F9D2": {
         "emoji": "🧑‍🧒",
         "tags": [
-            "család: felnőtt",
+            "család",
+            "felnőtt",
             "gyerek"
         ]
     },
     "1F9D1-200D-1F9D2-200D-1F9D2": {
         "emoji": "🧑‍🧒‍🧒",
         "tags": [
-            "család: felnőtt",
+            "család",
+            "felnőtt",
             "gyerek"
+        ]
+    },
+    "1F9D1-200D-1FA70": {
+        "emoji": "🧑‍🩰",
+        "tags": [
+            "balett",
+            "táncos"
         ]
     },
     "1F9D1-200D-2695-FE0F": {
@@ -15375,8 +15349,7 @@
     "1F9E6": {
         "emoji": "🧦",
         "tags": [
-            "harisnya",
-            "zokni, harisnya"
+            "harisnya"
         ]
     },
     "1F9E7": {
@@ -15652,7 +15625,6 @@
         "emoji": "🧾",
         "tags": [
             "bizonylat",
-            "bizonyíták",
             "bizonyíték",
             "könyvelés",
             "pénzügyek",
@@ -15882,6 +15854,30 @@
             "zene",
             "zenekar",
             "ámor"
+        ]
+    },
+    "1FA8A": {
+        "emoji": "🪊",
+        "tags": [
+            "hangszer",
+            "jazz",
+            "rézfúvós",
+            "szomorú",
+            "zene"
+        ]
+    },
+    "1FA8E": {
+        "emoji": "🪎",
+        "tags": [
+            "arany",
+            "drágakő",
+            "ezüst",
+            "gazdagság",
+            "jutalom",
+            "pénz",
+            "zsákmány",
+            "ékszerek",
+            "érték"
         ]
     },
     "1FA8F": {
@@ -16441,6 +16437,25 @@
             "törvényszék"
         ]
     },
+    "1FAC8": {
+        "emoji": "🫈",
+        "tags": [
+            "erdő",
+            "jeti",
+            "nagyláb",
+            "sasquatch",
+            "vadember",
+            "óriás"
+        ]
+    },
+    "1FACD": {
+        "emoji": "🫍",
+        "tags": [
+            "bálna",
+            "tengeri állat",
+            "óceán"
+        ]
+    },
     "1FACE": {
         "emoji": "🫎",
         "tags": [
@@ -16648,9 +16663,12 @@
         "emoji": "🫣",
         "tags": [
             "bámul",
+            "ijedt",
             "kukucskál",
             "megbabonázott",
-            "pillant"
+            "pillant",
+            "riadt",
+            "szégyenlős"
         ]
     },
     "1FAE4": {
@@ -16716,6 +16734,28 @@
             "táskás",
             "unatkozik",
             "álmos"
+        ]
+    },
+    "1FAEA": {
+        "emoji": "🫪",
+        "tags": [
+            "aggodalmas",
+            "felpuffadt",
+            "lesokkolt",
+            "meglepődött",
+            "pánikoló",
+            "sebezhető"
+        ]
+    },
+    "1FAEF": {
+        "emoji": "🫯",
+        "tags": [
+            "birkózás",
+            "csetepaté",
+            "dulakodás",
+            "egyet nem értés",
+            "verekedés",
+            "vita"
         ]
     },
     "1FAF0": {

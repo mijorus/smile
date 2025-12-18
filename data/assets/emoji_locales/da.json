@@ -14,61 +14,81 @@
     "0030-FE0F-20E3": {
         "emoji": "0️⃣",
         "tags": [
-            "keycap: 0"
+            "0",
+            "keycap",
+            "nul"
         ]
     },
     "0031-FE0F-20E3": {
         "emoji": "1️⃣",
         "tags": [
-            "keycap: 1"
+            "1",
+            "et",
+            "keycap"
         ]
     },
     "0032-FE0F-20E3": {
         "emoji": "2️⃣",
         "tags": [
-            "keycap: 2"
+            "2",
+            "keycap",
+            "to"
         ]
     },
     "0033-FE0F-20E3": {
         "emoji": "3️⃣",
         "tags": [
-            "keycap: 3"
+            "3",
+            "keycap",
+            "tre"
         ]
     },
     "0034-FE0F-20E3": {
         "emoji": "4️⃣",
         "tags": [
-            "keycap: 4"
+            "4",
+            "fire",
+            "keycap"
         ]
     },
     "0035-FE0F-20E3": {
         "emoji": "5️⃣",
         "tags": [
-            "keycap: 5"
+            "5",
+            "fem",
+            "keycap"
         ]
     },
     "0036-FE0F-20E3": {
         "emoji": "6️⃣",
         "tags": [
-            "keycap: 6"
+            "6",
+            "keycap",
+            "seks"
         ]
     },
     "0037-FE0F-20E3": {
         "emoji": "7️⃣",
         "tags": [
-            "keycap: 7"
+            "7",
+            "keycap",
+            "syv"
         ]
     },
     "0038-FE0F-20E3": {
         "emoji": "8️⃣",
         "tags": [
-            "keycap: 8"
+            "8",
+            "keycap",
+            "otte"
         ]
     },
     "0039-FE0F-20E3": {
         "emoji": "9️⃣",
         "tags": [
-            "keycap: 9"
+            "9",
+            "keycap",
+            "ni"
         ]
     },
     "00A9": {
@@ -2110,6 +2130,9 @@
     "1F31C": {
         "emoji": "🌜️",
         "tags": [
+            "4.",
+            "ansigt",
+            "fjerdedel",
             "halvmåne",
             "måne",
             "måneansigt"
@@ -3419,12 +3442,14 @@
     "1F3C3-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♀️‍➡️",
         "tags": [
+            "højre",
             "kvinde",
             "kvinde løber",
             "løb",
             "løbetræning",
             "løbetur",
-            "maraton"
+            "maraton",
+            "mod"
         ]
     },
     "1F3C3-200D-2642-FE0F": {
@@ -3440,12 +3465,14 @@
     "1F3C3-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♂️‍➡️",
         "tags": [
+            "højre",
             "løb",
             "løbetræning",
             "løbetur",
             "mand",
             "mand løber",
-            "maraton"
+            "maraton",
+            "mod"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
@@ -3457,12 +3484,14 @@
             "hastighed",
             "hurtig",
             "hurtigt",
+            "højre",
             "kommer nu",
             "løb",
             "løbende person",
             "løber",
             "løbetræning",
             "maraton",
+            "mod",
             "skynd dig",
             "sport",
             "tempo"
@@ -5281,8 +5310,10 @@
             "blind",
             "blindestok",
             "handicap",
+            "højre",
             "mand",
             "mand med blindestok",
+            "mod",
             "synshandicap",
             "tilgængelighed"
         ]
@@ -5342,10 +5373,12 @@
             "adgangsforhold",
             "handicap",
             "handikap",
+            "højre",
             "kørestol",
             "mand",
             "mand i elektrisk kørestol",
             "mand i elkørestol",
+            "mod",
             "rullestol",
             "tilgængelighed"
         ]
@@ -5368,9 +5401,11 @@
             "adgangsforhold",
             "handicap",
             "handikap",
+            "højre",
             "kørestol",
             "mand",
             "mand i manuel kørestol",
+            "mod",
             "rullestol",
             "tilgængelighed"
         ]
@@ -5721,8 +5756,10 @@
             "blind",
             "blindestok",
             "handicap",
+            "højre",
             "kvinde",
             "kvinde med blindestok",
+            "mod",
             "synshandicap",
             "tilgængelighed"
         ]
@@ -5782,10 +5819,12 @@
             "adgangsforhold",
             "handicap",
             "handikap",
+            "højre",
             "kvinde",
             "kvinde i elektrisk kørestol",
             "kvinde i elkørestol",
             "kørestol",
+            "mod",
             "rullestol",
             "tilgængelighed"
         ]
@@ -5808,9 +5847,11 @@
             "adgangsforhold",
             "handicap",
             "handikap",
+            "højre",
             "kvinde",
             "kvinde i manuel kørestol",
             "kørestol",
+            "mod",
             "rullestol",
             "tilgængelighed"
         ]
@@ -9966,8 +10007,10 @@
             "gå",
             "gåtur",
             "hike",
+            "højre",
             "kvinde",
             "kvinde går",
+            "mod",
             "vandre",
             "vandretur",
             "vandring"
@@ -9995,8 +10038,10 @@
             "gå",
             "gåtur",
             "hike",
+            "højre",
             "mand",
             "mand går",
+            "mod",
             "vandre",
             "vandretur",
             "vandring"
@@ -10012,6 +10057,8 @@
             "gående person",
             "gåtur",
             "hike",
+            "højre",
+            "mod",
             "skridt",
             "slente",
             "tempo",
@@ -10223,6 +10270,20 @@
             "handicapvenligt",
             "hejs",
             "tilgængelighed"
+        ]
+    },
+    "1F6D8": {
+        "emoji": "🛘",
+        "tags": [
+            "bjerg",
+            "fare",
+            "jordskælv",
+            "katastrofe",
+            "klipper",
+            "lavine",
+            "mudderskred",
+            "sten",
+            "ulykke"
         ]
     },
     "1F6DC": {
@@ -12608,8 +12669,10 @@
     "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
+            "højre",
             "knælende kvinde",
-            "kvinde"
+            "kvinde",
+            "mod"
         ]
     },
     "1F9CE-200D-2642-FE0F": {
@@ -12621,15 +12684,19 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
+            "højre",
             "knælende mand",
-            "mand"
+            "mand",
+            "mod"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
         "emoji": "🧎‍➡️",
         "tags": [
+            "højre",
             "knælende",
             "knælende person",
+            "mod",
             "på knæ"
         ]
     },
@@ -12842,6 +12909,8 @@
             "adgangsforhold",
             "blind",
             "handicap",
+            "højre",
+            "mod",
             "person med blindestok",
             "synshandicap"
         ]
@@ -12893,7 +12962,9 @@
             "adgang",
             "adgangsforhold",
             "handicap",
+            "højre",
             "kørestol",
+            "mod",
             "person i elkørestol"
         ]
     },
@@ -12912,7 +12983,9 @@
             "adgang",
             "adgangsforhold",
             "handicap",
+            "højre",
             "kørestol",
+            "mod",
             "person i manuel kørestol"
         ]
     },
@@ -12959,6 +13032,13 @@
             "forælder",
             "menneske",
             "voksen"
+        ]
+    },
+    "1F9D1-200D-1FA70": {
+        "emoji": "🧑‍🩰",
+        "tags": [
+            "ballet",
+            "danser"
         ]
     },
     "1F9D1-200D-2695-FE0F": {
@@ -13836,6 +13916,33 @@
             "orkester"
         ]
     },
+    "1FA8A": {
+        "emoji": "🪊",
+        "tags": [
+            "instrument",
+            "jazz",
+            "messing",
+            "musik",
+            "sørgmodig",
+            "trækbasun"
+        ]
+    },
+    "1FA8E": {
+        "emoji": "🪎",
+        "tags": [
+            "bytte",
+            "diamanter",
+            "gevinst",
+            "guld",
+            "juveler",
+            "penge",
+            "rigdom",
+            "rov",
+            "smykke",
+            "sølv",
+            "værdigenstande"
+        ]
+    },
     "1FA8F": {
         "emoji": "🪏",
         "tags": [
@@ -14445,6 +14552,28 @@
             "sikkerhed"
         ]
     },
+    "1FAC8": {
+        "emoji": "🫈",
+        "tags": [
+            "behåret",
+            "bigfoot",
+            "kæmpe",
+            "sasquatch",
+            "skov",
+            "skovmand",
+            "vildmand",
+            "woodwose",
+            "yeti"
+        ]
+    },
+    "1FACD": {
+        "emoji": "🫍",
+        "tags": [
+            "hav",
+            "hval",
+            "marine"
+        ]
+    },
     "1FACE": {
         "emoji": "🫎",
         "tags": [
@@ -14781,9 +14910,36 @@
     "1FAE9": {
         "emoji": "🫩",
         "tags": [
+            "ansigt",
+            "poser",
             "søvnig",
             "træt",
-            "udmattet"
+            "udmattet",
+            "øjne"
+        ]
+    },
+    "1FAEA": {
+        "emoji": "🫪",
+        "tags": [
+            "angst",
+            "chokeret",
+            "oppustet",
+            "overrasket",
+            "panik",
+            "sårbar",
+            "ængstelig"
+        ]
+    },
+    "1FAEF": {
+        "emoji": "🫯",
+        "tags": [
+            "debat",
+            "kamp",
+            "rabalder",
+            "skænderi",
+            "slagsmål",
+            "uenighed",
+            "vrede"
         ]
     },
     "1FAF0": {

@@ -14,61 +14,81 @@
     "0030-FE0F-20E3": {
         "emoji": "0️⃣",
         "tags": [
+            "0",
+            "nolla",
             "näppäin"
         ]
     },
     "0031-FE0F-20E3": {
         "emoji": "1️⃣",
         "tags": [
-            "näppäin"
+            "1",
+            "näppäin",
+            "yksi"
         ]
     },
     "0032-FE0F-20E3": {
         "emoji": "2️⃣",
         "tags": [
+            "2",
+            "kaksi",
             "näppäin"
         ]
     },
     "0033-FE0F-20E3": {
         "emoji": "3️⃣",
         "tags": [
+            "3",
+            "kolme",
             "näppäin"
         ]
     },
     "0034-FE0F-20E3": {
         "emoji": "4️⃣",
         "tags": [
+            "4",
+            "neljä",
             "näppäin"
         ]
     },
     "0035-FE0F-20E3": {
         "emoji": "5️⃣",
         "tags": [
-            "näppäin"
+            "5",
+            "näppäin",
+            "viisi"
         ]
     },
     "0036-FE0F-20E3": {
         "emoji": "6️⃣",
         "tags": [
+            "6",
+            "kuusi",
             "näppäin"
         ]
     },
     "0037-FE0F-20E3": {
         "emoji": "7️⃣",
         "tags": [
-            "näppäin"
+            "7",
+            "näppäin",
+            "seitsemän"
         ]
     },
     "0038-FE0F-20E3": {
         "emoji": "8️⃣",
         "tags": [
+            "8",
+            "kahdeksan",
             "näppäin"
         ]
     },
     "0039-FE0F-20E3": {
         "emoji": "9️⃣",
         "tags": [
-            "näppäin"
+            "9",
+            "näppäin",
+            "yhdeksän"
         ]
     },
     "00A9": {
@@ -3815,8 +3835,10 @@
         "tags": [
             "juokseminen",
             "juoksija",
+            "kohti",
             "lenkki",
             "nainen",
+            "oikeaa",
             "urheilu"
         ]
     },
@@ -3835,15 +3857,19 @@
             "juokseminen",
             "juokseva mies",
             "juoksija",
+            "kohti",
             "lenkki",
-            "mies"
+            "mies",
+            "oikeaa"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
         "emoji": "🏃‍➡️",
         "tags": [
             "juokseminen",
+            "kohti",
             "maratoni",
+            "oikeaa",
             "urheilu"
         ]
     },
@@ -5662,7 +5688,9 @@
         "emoji": "👨‍🦯‍➡️",
         "tags": [
             "esteettömyys",
+            "kohti",
             "mies",
+            "oikeaa",
             "sokea",
             "valkoinen keppi"
         ]
@@ -5711,8 +5739,10 @@
         "emoji": "👨‍🦼‍➡️",
         "tags": [
             "esteettömyys",
+            "kohti",
             "mies",
             "mies moottoroidussa pyörätuolissa",
+            "oikeaa",
             "pyörätuoli"
         ]
     },
@@ -5728,8 +5758,10 @@
         "emoji": "👨‍🦽‍➡️",
         "tags": [
             "esteettömyys",
+            "kohti",
             "mies",
             "mies käsikäyttöisessä pyörätuolissa",
+            "oikeaa",
             "pyörätuoli"
         ]
     },
@@ -6040,8 +6072,10 @@
         "emoji": "👩‍🦯‍➡️",
         "tags": [
             "esteettömyys",
+            "kohti",
             "nainen",
             "nainen ja valkoinen keppi",
+            "oikeaa",
             "sokea"
         ]
     },
@@ -6093,8 +6127,10 @@
         "emoji": "👩‍🦼‍➡️",
         "tags": [
             "esteettömyys",
+            "kohti",
             "nainen",
             "nainen moottoroidussa pyörätuolissa",
+            "oikeaa",
             "pyörätuoli"
         ]
     },
@@ -6110,8 +6146,10 @@
         "emoji": "👩‍🦽‍➡️",
         "tags": [
             "esteettömyys",
+            "kohti",
             "nainen",
             "nainen käsikäyttöisessä pyörätuolissa",
+            "oikeaa",
             "pyörätuoli"
         ]
     },
@@ -10310,9 +10348,11 @@
     "1F6B6-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♀️‍➡️",
         "tags": [
+            "kohti",
             "kävelevä nainen",
             "kävely",
             "nainen",
+            "oikeaa",
             "patikointi"
         ]
     },
@@ -10327,9 +10367,11 @@
     "1F6B6-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♂️‍➡️",
         "tags": [
+            "kohti",
             "kävelevä mies",
             "kävely",
             "mies",
+            "oikeaa",
             "patikointi"
         ]
     },
@@ -10337,9 +10379,11 @@
         "emoji": "🚶‍➡️",
         "tags": [
             "ihminen",
+            "kohti",
             "kävelijä",
             "kävellä",
             "kävely",
+            "oikeaa",
             "patikointi"
         ]
     },
@@ -10542,6 +10586,18 @@
         "emoji": "🛗",
         "tags": [
             "esteettömyys"
+        ]
+    },
+    "1F6D8": {
+        "emoji": "🛘",
+        "tags": [
+            "kivet",
+            "maanjäristys",
+            "mutavyöry",
+            "onnettomuus",
+            "vaara",
+            "vuori",
+            "vyöry"
         ]
     },
     "1F6DC": {
@@ -12741,7 +12797,9 @@
     "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
+            "kohti",
             "nainen",
+            "oikeaa",
             "polvistuva"
         ]
     },
@@ -12755,7 +12813,9 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
+            "kohti",
             "mies",
+            "oikeaa",
             "polvistuva"
         ]
     },
@@ -12763,6 +12823,8 @@
         "emoji": "🧎‍➡️",
         "tags": [
             "ihminen",
+            "kohti",
+            "oikeaa",
             "polvi",
             "polvillaan",
             "polvistua",
@@ -12955,6 +13017,8 @@
         "tags": [
             "esteettömyys",
             "henkilö ja valkoinen keppi",
+            "kohti",
+            "oikeaa",
             "sokea"
         ]
     },
@@ -13018,6 +13082,8 @@
         "tags": [
             "esteettömyys",
             "henkilö moottoroidussa pyörätuolissa",
+            "kohti",
+            "oikeaa",
             "pyörätuoli"
         ]
     },
@@ -13033,6 +13099,8 @@
         "tags": [
             "esteettömyys",
             "henkilö käsikäyttöisessä pyörätuolissa",
+            "kohti",
+            "oikeaa",
             "pyörätuoli"
         ]
     },
@@ -13066,6 +13134,13 @@
             "aikuinen",
             "lapsi",
             "perhe"
+        ]
+    },
+    "1F9D1-200D-1FA70": {
+        "emoji": "🧑‍🩰",
+        "tags": [
+            "baletti",
+            "tanssija"
         ]
     },
     "1F9D1-200D-2695-FE0F": {
@@ -13989,6 +14064,31 @@
             "soitin"
         ]
     },
+    "1FA8A": {
+        "emoji": "🪊",
+        "tags": [
+            "instrumentti",
+            "jazz",
+            "liukua",
+            "musiikki",
+            "surullinen",
+            "vaski"
+        ]
+    },
+    "1FA8E": {
+        "emoji": "🪎",
+        "tags": [
+            "arvoesineet",
+            "hopea",
+            "jalokivi",
+            "korut",
+            "kulta",
+            "palkinto",
+            "raha",
+            "ryöstösaalis",
+            "vauraus"
+        ]
+    },
     "1FA8F": {
         "emoji": "🪏",
         "tags": [
@@ -14539,6 +14639,27 @@
             "turvallisuus"
         ]
     },
+    "1FAC8": {
+        "emoji": "🫈",
+        "tags": [
+            "isojalka",
+            "jätti",
+            "karvainen",
+            "kryptidi",
+            "lumimies",
+            "metsä",
+            "sasquatch",
+            "villi-ihminen"
+        ]
+    },
+    "1FACD": {
+        "emoji": "🫍",
+        "tags": [
+            "merellinen",
+            "meri",
+            "valas"
+        ]
+    },
     "1FACE": {
         "emoji": "🫎",
         "tags": [
@@ -14822,6 +14943,29 @@
             "uninen",
             "uupunut",
             "väsynyt"
+        ]
+    },
+    "1FAEA": {
+        "emoji": "🫪",
+        "tags": [
+            "ahdistus",
+            "haavoittuvainen",
+            "järkyttynyt",
+            "paniikki",
+            "turvonnut",
+            "yllättynyt"
+        ]
+    },
+    "1FAEF": {
+        "emoji": "🫯",
+        "tags": [
+            "argumentti",
+            "erimielisyys",
+            "metakka",
+            "nujakka",
+            "paini",
+            "tappelu",
+            "väittely"
         ]
     },
     "1FAF0": {

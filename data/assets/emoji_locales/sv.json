@@ -14,61 +14,81 @@
     "0030-FE0F-20E3": {
         "emoji": "0️⃣",
         "tags": [
-            "keycap: 0"
+            "0",
+            "noll",
+            "tangent"
         ]
     },
     "0031-FE0F-20E3": {
         "emoji": "1️⃣",
         "tags": [
-            "keycap: 1"
+            "1",
+            "ett",
+            "keycap"
         ]
     },
     "0032-FE0F-20E3": {
         "emoji": "2️⃣",
         "tags": [
-            "keycap: 2"
+            "2",
+            "keycap",
+            "två"
         ]
     },
     "0033-FE0F-20E3": {
         "emoji": "3️⃣",
         "tags": [
-            "keycap: 3"
+            "3",
+            "keycap",
+            "tre"
         ]
     },
     "0034-FE0F-20E3": {
         "emoji": "4️⃣",
         "tags": [
-            "keycap: 4"
+            "4",
+            "fyra",
+            "keycap"
         ]
     },
     "0035-FE0F-20E3": {
         "emoji": "5️⃣",
         "tags": [
-            "keycap: 5"
+            "5",
+            "fem",
+            "keycap"
         ]
     },
     "0036-FE0F-20E3": {
         "emoji": "6️⃣",
         "tags": [
-            "keycap: 6"
+            "6",
+            "keycap",
+            "sex"
         ]
     },
     "0037-FE0F-20E3": {
         "emoji": "7️⃣",
         "tags": [
-            "keycap: 7"
+            "7",
+            "keycap",
+            "sju"
         ]
     },
     "0038-FE0F-20E3": {
         "emoji": "8️⃣",
         "tags": [
-            "keycap: 8"
+            "8",
+            "keycap",
+            "åtta"
         ]
     },
     "0039-FE0F-20E3": {
         "emoji": "9️⃣",
         "tags": [
-            "keycap: 9"
+            "9",
+            "keycap",
+            "nio"
         ]
     },
     "00A9": {
@@ -583,7 +603,8 @@
     "1F1E8-1F1F6": {
         "emoji": "🇨🇶",
         "tags": [
-            "CQ"
+            "CQ",
+            "flagga"
         ]
     },
     "1F1E8-1F1F7": {
@@ -2268,9 +2289,11 @@
         "tags": [
             "afrika",
             "europa",
+            "europa-afrika",
             "jorden",
-            "jordglob europa–afrika",
-            "jordglob som visar europa och afrika"
+            "jordglob",
+            "visar",
+            "världen"
         ]
     },
     "1F30E": {
@@ -2278,18 +2301,23 @@
         "tags": [
             "jorden",
             "jordglob",
-            "jordglob som visar nord- och sydamerika",
-            "nord- och sydamerika"
+            "nord- och sydamerika",
+            "nordamerika",
+            "sydamerika",
+            "visar",
+            "världen"
         ]
     },
     "1F30F": {
         "emoji": "🌏️",
         "tags": [
             "asien",
+            "asien-australien",
             "australien",
             "jorden",
-            "jordglob asien–australien",
-            "jordglob som visar asien och australien"
+            "jordglob",
+            "visar",
+            "världen"
         ]
     },
     "1F310": {
@@ -2650,8 +2678,7 @@
         "emoji": "🍁",
         "tags": [
             "höst",
-            "löv",
-            "rödgult lönnlön"
+            "löv"
         ]
     },
     "1F342": {
@@ -2818,7 +2845,8 @@
         "emoji": "🍕",
         "tags": [
             "bit",
-            "pizza"
+            "pizza",
+            "slice"
         ]
     },
     "1F356": {
@@ -2865,6 +2893,7 @@
     "1F35C": {
         "emoji": "🍜",
         "tags": [
+            "nudelsoppa",
             "nudlar",
             "rykande",
             "skål",
@@ -2893,7 +2922,8 @@
     "1F360": {
         "emoji": "🍠",
         "tags": [
-            "rostad potatis",
+            "mat",
+            "rostad",
             "sötpotatis"
         ]
     },
@@ -3467,6 +3497,7 @@
     "1F3AF": {
         "emoji": "🎯",
         "tags": [
+            "bullseye",
             "fullträff",
             "pilkastning",
             "piltavla med pil mitt i prick",
@@ -3645,11 +3676,13 @@
     "1F3C3-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♀️‍➡️",
         "tags": [
+            "höger",
             "jogga",
             "kvinna",
             "kvinna som springer",
             "kvinna springer",
-            "löpa"
+            "löpa",
+            "åt"
         ]
     },
     "1F3C3-200D-2642-FE0F": {
@@ -3664,21 +3697,25 @@
     "1F3C3-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♂️‍➡️",
         "tags": [
+            "höger",
             "jogga",
             "löpa",
             "man",
             "man som springer",
-            "man springer"
+            "man springer",
+            "åt"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
         "emoji": "🏃‍➡️",
         "tags": [
+            "höger",
             "löpare",
             "löpning",
             "maraton",
             "person som löper",
-            "person som springer"
+            "person som springer",
+            "åt"
         ]
     },
     "1F3C4": {
@@ -4096,7 +4133,10 @@
         "emoji": "🏳️‍⚧️",
         "tags": [
             "flagga",
-            "transgender"
+            "ljusblå",
+            "rosa",
+            "transgender",
+            "vit"
         ]
     },
     "1F3F4": {
@@ -4313,7 +4353,9 @@
         "tags": [
             "djur",
             "galopp",
-            "galopperande häst"
+            "galopperande häst",
+            "hästlopp",
+            "trav"
         ]
     },
     "1F40F": {
@@ -4526,9 +4568,11 @@
     "1F428": {
         "emoji": "🐨",
         "tags": [
+            "australien",
             "djur",
             "koala-ansikte",
-            "koalabjörn"
+            "koalabjörn",
+            "pungdjur"
         ]
     },
     "1F429": {
@@ -4666,8 +4710,7 @@
     "1F43B-200D-2744-FE0F": {
         "emoji": "🐻‍❄️",
         "tags": [
-            "björn",
-            "is",
+            "djur",
             "vit"
         ]
     },
@@ -5030,8 +5073,11 @@
         "tags": [
             "amma",
             "barnskötare",
+            "fader",
+            "far",
             "man",
             "mata",
+            "pappa",
             "spädbarn"
         ]
     },
@@ -5087,7 +5133,6 @@
             "barn",
             "familj",
             "mamma",
-            "mamma och pappa och en son",
             "man",
             "människor",
             "pappa",
@@ -5100,7 +5145,6 @@
             "barn",
             "familj",
             "mamma",
-            "mamma och pappa och en son",
             "man",
             "människor",
             "pappa",
@@ -5114,7 +5158,6 @@
             "familj",
             "flicka",
             "mamma",
-            "mamma och pappa och en son",
             "man",
             "människor",
             "pappa"
@@ -5127,7 +5170,6 @@
             "familj",
             "flicka",
             "mamma",
-            "mamma och pappa och en son",
             "man",
             "människor",
             "pappa",
@@ -5141,7 +5183,6 @@
             "familj",
             "flicka",
             "mamma",
-            "mamma och pappa och en son",
             "man",
             "människor",
             "pappa"
@@ -5153,7 +5194,6 @@
             "barn",
             "familj",
             "mamma",
-            "mamma och pappa och en son",
             "man",
             "människor",
             "pappa",
@@ -5166,7 +5206,6 @@
             "barn",
             "familj",
             "mamma",
-            "mamma och pappa och en son",
             "man",
             "människor",
             "pappa",
@@ -5180,7 +5219,6 @@
             "familj",
             "flicka",
             "mamma",
-            "mamma och pappa och en son",
             "man",
             "människor",
             "pappa"
@@ -5193,7 +5231,6 @@
             "familj",
             "flicka",
             "mamma",
-            "mamma och pappa och en son",
             "man",
             "människor",
             "pappa",
@@ -5207,7 +5244,6 @@
             "familj",
             "flicka",
             "mamma",
-            "mamma och pappa och en son",
             "man",
             "människor",
             "pappa"
@@ -5220,7 +5256,6 @@
             "familj",
             "kvinna",
             "mamma",
-            "mamma och pappa och en son",
             "man",
             "människor",
             "pappa",
@@ -5234,7 +5269,6 @@
             "familj",
             "kvinna",
             "mamma",
-            "mamma och pappa och en son",
             "man",
             "människor",
             "pappa",
@@ -5249,7 +5283,6 @@
             "flicka",
             "kvinna",
             "mamma",
-            "mamma och pappa och en son",
             "man",
             "människor",
             "pappa"
@@ -5263,7 +5296,6 @@
             "flicka",
             "kvinna",
             "mamma",
-            "mamma och pappa och en son",
             "man",
             "människor",
             "pappa",
@@ -5278,7 +5310,6 @@
             "flicka",
             "kvinna",
             "mamma",
-            "mamma och pappa och en son",
             "man",
             "människor",
             "pappa"
@@ -5357,10 +5388,12 @@
         "tags": [
             "blind",
             "blindkäpp",
+            "höger",
             "man",
             "man med blindkäpp",
             "man med vit käpp",
-            "vit käpp"
+            "vit käpp",
+            "åt"
         ]
     },
     "1F468-200D-1F9B0": {
@@ -5406,10 +5439,12 @@
     "1F468-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "👨‍🦼‍➡️",
         "tags": [
+            "höger",
             "man",
             "man i permobil",
             "permobil",
-            "rullstol"
+            "rullstol",
+            "åt"
         ]
     },
     "1F468-200D-1F9BD": {
@@ -5422,9 +5457,11 @@
     "1F468-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "👨‍🦽‍➡️",
         "tags": [
+            "höger",
             "man",
             "man i manuell rullstol",
-            "rullstol"
+            "rullstol",
+            "åt"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -5560,7 +5597,6 @@
             "familj",
             "kvinna",
             "mamma",
-            "mamma och pappa och en son",
             "människor",
             "pappa",
             "pojke"
@@ -5573,7 +5609,6 @@
             "familj",
             "kvinna",
             "mamma",
-            "mamma och pappa och en son",
             "människor",
             "pappa",
             "pojke"
@@ -5587,7 +5622,6 @@
             "flicka",
             "kvinna",
             "mamma",
-            "mamma och pappa och en son",
             "människor",
             "pappa"
         ]
@@ -5600,7 +5634,6 @@
             "flicka",
             "kvinna",
             "mamma",
-            "mamma och pappa och en son",
             "människor",
             "pappa",
             "pojke"
@@ -5614,7 +5647,6 @@
             "flicka",
             "kvinna",
             "mamma",
-            "mamma och pappa och en son",
             "människor",
             "pappa"
         ]
@@ -5626,7 +5658,6 @@
             "familj",
             "kvinna",
             "mamma",
-            "mamma och pappa och en son",
             "människor",
             "pappa",
             "pojke"
@@ -5639,7 +5670,6 @@
             "familj",
             "kvinna",
             "mamma",
-            "mamma och pappa och en son",
             "människor",
             "pappa",
             "pojke"
@@ -5653,7 +5683,6 @@
             "flicka",
             "kvinna",
             "mamma",
-            "mamma och pappa och en son",
             "människor",
             "pappa"
         ]
@@ -5666,7 +5695,6 @@
             "flicka",
             "kvinna",
             "mamma",
-            "mamma och pappa och en son",
             "människor",
             "pappa",
             "pojke"
@@ -5680,7 +5708,6 @@
             "flicka",
             "kvinna",
             "mamma",
-            "mamma och pappa och en son",
             "människor",
             "pappa"
         ]
@@ -5754,10 +5781,12 @@
         "tags": [
             "blind",
             "blindkäpp",
+            "höger",
             "kvinna",
             "kvinna med blindkäpp",
             "kvinna med vit käpp",
-            "vit käpp"
+            "vit käpp",
+            "åt"
         ]
     },
     "1F469-200D-1F9B0": {
@@ -5803,10 +5832,12 @@
     "1F469-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "👩‍🦼‍➡️",
         "tags": [
+            "höger",
             "kvinna",
             "kvinna i permobil",
             "permobil",
-            "rullstol"
+            "rullstol",
+            "åt"
         ]
     },
     "1F469-200D-1F9BD": {
@@ -5819,9 +5850,11 @@
     "1F469-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "👩‍🦽‍➡️",
         "tags": [
+            "höger",
             "kvinna",
             "kvinna i manuell rullstol",
-            "rullstol"
+            "rullstol",
+            "åt"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -5899,7 +5932,6 @@
         "tags": [
             "barn",
             "mamma",
-            "mamma och pappa och en son",
             "människor",
             "pappa"
         ]
@@ -5933,17 +5965,27 @@
     "1F46E": {
         "emoji": "👮",
         "tags": [
+            "aina",
+            "arrestera",
+            "bötfälla",
+            "farbror blå",
+            "gripa",
             "konstapel",
+            "lagen",
             "snut"
         ]
     },
     "1F46E-200D-2640-FE0F": {
         "emoji": "👮‍♀️",
         "tags": [
+            "aina",
+            "arrestera",
+            "bötfälla",
+            "farbror blå",
+            "gripa",
             "konstapel",
             "kvinna",
             "lagen",
-            "polis",
             "snut"
         ]
     },
@@ -7137,10 +7179,16 @@
     "1F4F6": {
         "emoji": "📶",
         "tags": [
+            "antenn",
+            "kommunikation",
             "mobil",
+            "mottagning",
+            "signal",
             "signalstyrka",
-            "staplar för mottagning",
-            "staplar för signalstyrka"
+            "stapel",
+            "staplar",
+            "telefon",
+            "täckning"
         ]
     },
     "1F4F7": {
@@ -7236,9 +7284,13 @@
     "1F504": {
         "emoji": "🔄",
         "tags": [
+            "deja vu",
+            "förnya",
             "moturs",
+            "pil",
             "pilar",
             "spola tilllbaka",
+            "uppdatera",
             "upprepa"
         ]
     },
@@ -7403,27 +7455,32 @@
     "1F51B": {
         "emoji": "🔛",
         "tags": [
-            "on! med pil höger och vänster ovanför",
-            "pil höger och vänster",
-            "på! med pil höger och vänster ovanför",
-            "utropstecken"
+            "höger",
+            "on!",
+            "pil",
+            "på!",
+            "vänster"
         ]
     },
     "1F51C": {
         "emoji": "🔜",
         "tags": [
-            "högerpil",
+            "höger",
+            "omw",
             "pil",
-            "snart med högerpil ovanför",
-            "soon med högerpil ovanför"
+            "snart",
+            "soon"
         ]
     },
     "1F51D": {
         "emoji": "🔝",
         "tags": [
+            "homie",
+            "kompis",
             "pil",
-            "top med uppåtpil",
-            "uppåt med uppåtpil ovanför",
+            "top",
+            "topp",
+            "upp",
             "uppåtpil"
         ]
     },
@@ -8326,7 +8383,6 @@
             "hahaha",
             "jätteroligt",
             "kiknar",
-            "kisande",
             "leende",
             "mun",
             "roligt",
@@ -9114,13 +9170,15 @@
     "1F647": {
         "emoji": "🙇",
         "tags": [
-            "beklagar",
-            "buga",
-            "bugar",
+            "be",
+            "bön",
+            "förlåt",
             "gest",
             "meditation",
             "meditera",
-            "ursäkt"
+            "person",
+            "ursäkt",
+            "ångra"
         ]
     },
     "1F647-200D-2640-FE0F": {
@@ -9327,9 +9385,13 @@
     "1F688": {
         "emoji": "🚈",
         "tags": [
-            "fordon",
+            "anlänt",
+            "balkbana",
+            "enskensbana",
             "lättbana",
-            "snabbtåg"
+            "monorail",
+            "spårvagn",
+            "spårväg"
         ]
     },
     "1F689": {
@@ -9734,9 +9796,11 @@
         "tags": [
             "fotgängare",
             "gå",
+            "höger",
             "kvinna",
             "kvinna går",
-            "kvinna som går"
+            "kvinna som går",
+            "åt"
         ]
     },
     "1F6B6-200D-2642-FE0F": {
@@ -9753,19 +9817,23 @@
         "tags": [
             "fotgängare",
             "gå",
+            "höger",
             "man",
             "man går",
-            "man som går"
+            "man som går",
+            "åt"
         ]
     },
     "1F6B6-200D-27A1-FE0F": {
         "emoji": "🚶‍➡️",
         "tags": [
             "fotgängare",
+            "höger",
             "lunka",
             "man som går",
             "promenerar",
-            "vandra"
+            "vandra",
+            "åt"
         ]
     },
     "1F6B7": {
@@ -9966,17 +10034,30 @@
             "vinsch"
         ]
     },
+    "1F6D8": {
+        "emoji": "🛘",
+        "tags": [
+            "berg",
+            "fallande",
+            "fara",
+            "ras",
+            "stenar"
+        ]
+    },
     "1F6DC": {
         "emoji": "🛜",
         "tags": [
-            "dator",
+            "bredband",
             "hotspot",
             "internet",
+            "internetdelning",
             "nätverk",
+            "router",
             "surfpunkt",
             "surfzon",
             "trådlöst",
-            "wifi"
+            "wi‑fi",
+            "wlan"
         ]
     },
     "1F6DD": {
@@ -10126,9 +10207,9 @@
     "1F6FA": {
         "emoji": "🛺",
         "tags": [
-            "bilriksha",
-            "motordriven rickshaw",
-            "motordriven riksha",
+            "motordriven",
+            "rickshaw",
+            "riksha",
             "tuk-tuk"
         ]
     },
@@ -10632,7 +10713,7 @@
         "emoji": "🤵",
         "tags": [
             "brudgum",
-            "man i smoking",
+            "bröllop",
             "person",
             "smoking"
         ]
@@ -11027,7 +11108,7 @@
         "emoji": "🥘",
         "tags": [
             "mat",
-            "paella"
+            "stekpanna"
         ]
     },
     "1F959": {
@@ -12010,9 +12091,11 @@
     "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
+            "höger",
             "knäsittande",
             "knästående",
-            "kvinna"
+            "kvinna",
+            "åt"
         ]
     },
     "1F9CE-200D-2642-FE0F": {
@@ -12026,17 +12109,21 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
+            "höger",
             "knäsittande",
             "knästående",
-            "man"
+            "man",
+            "åt"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
         "emoji": "🧎‍➡️",
         "tags": [
+            "höger",
             "knäsittande",
             "knästående person",
-            "på knäna"
+            "på knäna",
+            "åt"
         ]
     },
     "1F9CF": {
@@ -12051,15 +12138,24 @@
     "1F9CF-200D-2640-FE0F": {
         "emoji": "🧏‍♀️",
         "tags": [
-            "hörselskadad",
-            "kvinna"
+            "döv",
+            "funktion",
+            "hörselskada",
+            "kvinna",
+            "nedsatt",
+            "öra"
         ]
     },
     "1F9CF-200D-2642-FE0F": {
         "emoji": "🧏‍♂️",
         "tags": [
-            "hörselskadad",
-            "man"
+            "dåligt",
+            "döv",
+            "gest",
+            "höra",
+            "man",
+            "tillgänglighet",
+            "öra"
         ]
     },
     "1F9D0": {
@@ -12096,6 +12192,8 @@
         "tags": [
             "amma",
             "barnskötare",
+            "bebis",
+            "förälder",
             "mata",
             "person",
             "person matar spädbarn",
@@ -12119,7 +12217,10 @@
     "1F9D1-200D-1F3A4": {
         "emoji": "🧑‍🎤",
         "tags": [
-            "sångare"
+            "artist",
+            "rockstjärna",
+            "underhållare",
+            "vokalist"
         ]
     },
     "1F9D1-200D-1F3A8": {
@@ -12209,8 +12310,10 @@
         "emoji": "🧑‍🦯‍➡️",
         "tags": [
             "hjälpmedel",
+            "höger",
             "person med vit käpp",
-            "synskadad"
+            "synskadad",
+            "åt"
         ]
     },
     "1F9D1-200D-1F9B0": {
@@ -12262,8 +12365,10 @@
         "tags": [
             "eldriven rullstol",
             "elektrisk rullstol",
+            "höger",
             "person i permobil",
-            "tillträde"
+            "tillträde",
+            "åt"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -12276,9 +12381,11 @@
     "1F9D1-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
+            "höger",
             "person i manuell rullstol",
             "rullstol",
-            "tillträde"
+            "tillträde",
+            "åt"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {
@@ -12286,7 +12393,7 @@
         "tags": [
             "barn",
             "familj",
-            "vuxen"
+            "vuxna"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2-200D-1F9D2": {
@@ -12311,6 +12418,14 @@
             "barn",
             "familj",
             "vuxen"
+        ]
+    },
+    "1F9D1-200D-1FA70": {
+        "emoji": "🧑‍🩰",
+        "tags": [
+            "balett",
+            "ballerina",
+            "dansare"
         ]
     },
     "1F9D1-200D-2695-FE0F": {
@@ -12429,8 +12544,12 @@
     "1F9D8": {
         "emoji": "🧘",
         "tags": [
+            "ben",
+            "fokus",
+            "frid",
+            "korsade",
+            "lotusposition",
             "meditation",
-            "person i lotusställning",
             "yoga"
         ]
     },
@@ -13055,12 +13174,37 @@
             "romantik"
         ]
     },
+    "1FA8A": {
+        "emoji": "🪊",
+        "tags": [
+            "bleckblås",
+            "instrument",
+            "jazz",
+            "musik",
+            "sorgen"
+        ]
+    },
+    "1FA8E": {
+        "emoji": "🪎",
+        "tags": [
+            "guld",
+            "pengar",
+            "pris",
+            "rikedom",
+            "ädelstenar"
+        ]
+    },
     "1FA8F": {
         "emoji": "🪏",
         "tags": [
-            "grop",
+            "begrava",
             "gräva",
-            "skopa"
+            "hål",
+            "plantera",
+            "scoop",
+            "skopa",
+            "skyffel",
+            "trädgård"
         ]
     },
     "1FA90": {
@@ -13396,10 +13540,10 @@
         "tags": [
             "blomma",
             "buddhism",
+            "frid",
             "hinduism",
-            "indien",
             "renhet",
-            "vietnam"
+            "stillhet"
         ]
     },
     "1FAB8": {
@@ -13544,6 +13688,24 @@
             "identitet",
             "kriminalteknik",
             "säkerhet"
+        ]
+    },
+    "1FAC8": {
+        "emoji": "🫈",
+        "tags": [
+            "bigfoot",
+            "hårig",
+            "jätte",
+            "sasquatch",
+            "yeti"
+        ]
+    },
+    "1FACD": {
+        "emoji": "🫍",
+        "tags": [
+            "hav",
+            "ocean",
+            "val"
         ]
     },
     "1FACE": {
@@ -13719,9 +13881,7 @@
             "förvånad",
             "generad",
             "hand",
-            "misstro",
             "mun",
-            "oops",
             "rädd",
             "stora",
             "åh nej",
@@ -13816,14 +13976,42 @@
             "utmattad"
         ]
     },
+    "1FAEA": {
+        "emoji": "🫪",
+        "tags": [
+            "chockad",
+            "förstoppad",
+            "orolig",
+            "panik",
+            "rädd",
+            "vettskrämd",
+            "överraskad"
+        ]
+    },
+    "1FAEF": {
+        "emoji": "🫯",
+        "tags": [
+            "brottas",
+            "bråk",
+            "fajt",
+            "fajtas",
+            "fight",
+            "slåss",
+            "våld"
+        ]
+    },
     "1FAF0": {
         "emoji": "🫰",
         "tags": [
+            "<3",
+            "betala",
             "dyrt",
-            "knäppa med fingrarna",
-            "pengaprassel",
+            "fingrarna",
+            "knäppa",
+            "korsade",
+            "pekfinger",
             "pengar",
-            "snäppa med fingrarna"
+            "tumme"
         ]
     },
     "1FAF1": {

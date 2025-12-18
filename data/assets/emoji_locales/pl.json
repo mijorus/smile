@@ -14,60 +14,80 @@
     "0030-FE0F-20E3": {
         "emoji": "0️⃣",
         "tags": [
-            "klawisz"
+            "0",
+            "klawisz",
+            "zero"
         ]
     },
     "0031-FE0F-20E3": {
         "emoji": "1️⃣",
         "tags": [
+            "1",
+            "jeden",
             "klawisz"
         ]
     },
     "0032-FE0F-20E3": {
         "emoji": "2️⃣",
         "tags": [
+            "2",
+            "dwa",
             "klawisz"
         ]
     },
     "0033-FE0F-20E3": {
         "emoji": "3️⃣",
         "tags": [
-            "klawisz"
+            "3",
+            "klawisz",
+            "trzy"
         ]
     },
     "0034-FE0F-20E3": {
         "emoji": "4️⃣",
         "tags": [
+            "4",
+            "cztery",
             "klawisz"
         ]
     },
     "0035-FE0F-20E3": {
         "emoji": "5️⃣",
         "tags": [
-            "klawisz"
+            "5",
+            "klawisz",
+            "pięć"
         ]
     },
     "0036-FE0F-20E3": {
         "emoji": "6️⃣",
         "tags": [
-            "klawisz"
+            "6",
+            "klawisz",
+            "sześć"
         ]
     },
     "0037-FE0F-20E3": {
         "emoji": "7️⃣",
         "tags": [
-            "klawisz"
+            "7",
+            "klawisz",
+            "siedem"
         ]
     },
     "0038-FE0F-20E3": {
         "emoji": "8️⃣",
         "tags": [
-            "klawisz"
+            "8",
+            "klawisz",
+            "osiem"
         ]
     },
     "0039-FE0F-20E3": {
         "emoji": "9️⃣",
         "tags": [
+            "9",
+            "dziewięć",
             "klawisz"
         ]
     },
@@ -602,7 +622,8 @@
     "1F1E8-1F1F6": {
         "emoji": "🇨🇶",
         "tags": [
-            "CQ"
+            "CQ",
+            "flaga"
         ]
     },
     "1F1E8-1F1F7": {
@@ -4112,9 +4133,12 @@
             "maraton",
             "osoba",
             "pośpiech",
+            "prawo",
             "sport",
             "szybko",
-            "w ruchu"
+            "w",
+            "w ruchu",
+            "zwrócony"
         ]
     },
     "1F3C3-200D-2642-FE0F": {
@@ -4142,9 +4166,12 @@
             "mężczyzna",
             "osoba",
             "pośpiech",
+            "prawo",
             "sport",
             "szybko",
-            "w ruchu"
+            "w",
+            "w ruchu",
+            "zwrócony"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
@@ -4158,9 +4185,12 @@
             "maraton",
             "osoba",
             "pośpiech",
+            "prawo",
             "sport",
             "szybko",
-            "w ruchu"
+            "w",
+            "w ruchu",
+            "zwrócony"
         ]
     },
     "1F3C4": {
@@ -6384,7 +6414,10 @@
             "dostępność",
             "mężczyzna",
             "mężczyzna z białą laską",
-            "niewidomy"
+            "niewidomy",
+            "prawo",
+            "w",
+            "zwrócony"
         ]
     },
     "1F468-200D-1F9B0": {
@@ -6433,7 +6466,10 @@
             "dostępność",
             "mężczyzna",
             "mężczyzna na elektrycznym wózku inwalidzkim",
-            "wózek inwalidzki"
+            "prawo",
+            "w",
+            "wózek inwalidzki",
+            "zwrócony"
         ]
     },
     "1F468-200D-1F9BD": {
@@ -6450,7 +6486,10 @@
             "dostępność",
             "mężczyzna",
             "mężczyzna na wózku inwalidzkim",
-            "wózek inwalidzki"
+            "prawo",
+            "w",
+            "wózek inwalidzki",
+            "zwrócony"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -6844,7 +6883,10 @@
             "dostępność",
             "kobieta",
             "kobieta z białą laską",
-            "niewidoma"
+            "niewidoma",
+            "prawo",
+            "w",
+            "zwrócony"
         ]
     },
     "1F469-200D-1F9B0": {
@@ -6893,7 +6935,10 @@
             "dostępność",
             "kobieta",
             "kobieta na elektrycznym wózku inwalidzkim",
-            "wózek inwalidzki"
+            "prawo",
+            "w",
+            "wózek inwalidzki",
+            "zwrócony"
         ]
     },
     "1F469-200D-1F9BD": {
@@ -6910,7 +6955,10 @@
             "dostępność",
             "kobieta",
             "kobieta na wózku inwalidzkim",
-            "wózek inwalidzki"
+            "prawo",
+            "w",
+            "wózek inwalidzki",
+            "zwrócony"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -7056,7 +7104,6 @@
     "1F46D": {
         "emoji": "👭",
         "tags": [
-            "dwie kobiety trzymające się za ręce",
             "kobieca para",
             "kobieta",
             "kobiety",
@@ -12060,7 +12107,10 @@
             "na piechotę",
             "piechur",
             "pieszo",
-            "spacer"
+            "prawo",
+            "spacer",
+            "w",
+            "zwrócony"
         ]
     },
     "1F6B6-200D-2642-FE0F": {
@@ -12086,7 +12136,10 @@
             "na piechotę",
             "piechur",
             "pieszo",
-            "spacer"
+            "prawo",
+            "spacer",
+            "w",
+            "zwrócony"
         ]
     },
     "1F6B6-200D-27A1-FE0F": {
@@ -12099,7 +12152,10 @@
             "osoba",
             "piechur",
             "pieszo",
-            "spacer"
+            "prawo",
+            "spacer",
+            "w",
+            "zwrócony"
         ]
     },
     "1F6B7": {
@@ -12364,6 +12420,18 @@
             "dźwig osobowy",
             "podnośnik",
             "wyciąg pionowy"
+        ]
+    },
+    "1F6D8": {
+        "emoji": "🛘",
+        "tags": [
+            "góra",
+            "katastrofa",
+            "lawina",
+            "lawina błotna",
+            "niebezpieczeństwo",
+            "skały",
+            "trzęsienie ziemi"
         ]
     },
     "1F6DC": {
@@ -13060,7 +13128,7 @@
             "nie wierzę",
             "sceptyczny",
             "twarz",
-            "zdiwiony",
+            "zdziwiony",
             "że co"
         ]
     },
@@ -15132,7 +15200,10 @@
         "tags": [
             "klęczeć",
             "klęcząca kobieta",
-            "kobieta"
+            "kobieta",
+            "prawo",
+            "w",
+            "zwrócony"
         ]
     },
     "1F9CE-200D-2642-FE0F": {
@@ -15147,7 +15218,10 @@
         "tags": [
             "klęczeć",
             "klęczący mężczyzna",
-            "mężczyzna"
+            "mężczyzna",
+            "prawo",
+            "w",
+            "zwrócony"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
@@ -15157,7 +15231,10 @@
             "klęczki",
             "klęcząca osoba",
             "kolana",
-            "na kolanach"
+            "na kolanach",
+            "prawo",
+            "w",
+            "zwrócony"
         ]
     },
     "1F9CF": {
@@ -15358,7 +15435,10 @@
             "dostępność",
             "niewidoma",
             "niewidomy",
-            "osoba z białą laską"
+            "osoba z białą laską",
+            "prawo",
+            "w",
+            "zwrócony"
         ]
     },
     "1F9D1-200D-1F9B0": {
@@ -15421,7 +15501,10 @@
         "tags": [
             "dostępność",
             "osoba na elektrycznym wózku inwalidzkim",
-            "wózek inwalidzki"
+            "prawo",
+            "w",
+            "wózek inwalidzki",
+            "zwrócony"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -15436,7 +15519,10 @@
         "tags": [
             "dostępność",
             "osoba na wózku inwalidzkim",
-            "wózek inwalidzki"
+            "prawo",
+            "w",
+            "wózek inwalidzki",
+            "zwrócony"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {
@@ -15465,6 +15551,14 @@
         "tags": [
             "dorosły",
             "dziecko"
+        ]
+    },
+    "1F9D1-200D-1FA70": {
+        "emoji": "🧑‍🩰",
+        "tags": [
+            "balet",
+            "tancerka",
+            "tancerz"
         ]
     },
     "1F9D1-200D-2695-FE0F": {
@@ -16455,6 +16549,31 @@
             "orkiestra"
         ]
     },
+    "1FA8A": {
+        "emoji": "🪊",
+        "tags": [
+            "instrument",
+            "instrument dęty blaszany",
+            "jazz",
+            "muzyka",
+            "smutek",
+            "suwak"
+        ]
+    },
+    "1FA8E": {
+        "emoji": "🪎",
+        "tags": [
+            "bogactwo",
+            "kamień szlachetny",
+            "klejnot",
+            "kosztowności",
+            "nagroda",
+            "pieniądze",
+            "srebro",
+            "złoto",
+            "łup"
+        ]
+    },
     "1FA8F": {
         "emoji": "🪏",
         "tags": [
@@ -17117,6 +17236,27 @@
             "tożsamość"
         ]
     },
+    "1FAC8": {
+        "emoji": "🫈",
+        "tags": [
+            "człowiek z lasu",
+            "gigant",
+            "kryptyda",
+            "las",
+            "sasquatch",
+            "wielka stopa",
+            "włochate",
+            "yeti"
+        ]
+    },
+    "1FACD": {
+        "emoji": "🫍",
+        "tags": [
+            "morski",
+            "ocean",
+            "wieloryb"
+        ]
+    },
     "1FACE": {
         "emoji": "🫎",
         "tags": [
@@ -17421,6 +17561,28 @@
             "senność",
             "worki pod oczami",
             "zmęczenie"
+        ]
+    },
+    "1FAEA": {
+        "emoji": "🫪",
+        "tags": [
+            "bezradność",
+            "niepokój",
+            "opuchlizna",
+            "panika",
+            "szok",
+            "zaskoczenie"
+        ]
+    },
+    "1FAEF": {
+        "emoji": "🫯",
+        "tags": [
+            "awantura",
+            "dyskusja",
+            "kłótnia",
+            "raban",
+            "różnica zdań",
+            "walka"
         ]
     },
     "1FAF0": {

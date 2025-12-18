@@ -14,60 +14,80 @@
     "0030-FE0F-20E3": {
         "emoji": "0️⃣",
         "tags": [
-            "tasto"
+            "0",
+            "tasto",
+            "zero"
         ]
     },
     "0031-FE0F-20E3": {
         "emoji": "1️⃣",
         "tags": [
-            "tasto"
+            "1",
+            "tasto",
+            "uno"
         ]
     },
     "0032-FE0F-20E3": {
         "emoji": "2️⃣",
         "tags": [
+            "2",
+            "due",
             "tasto"
         ]
     },
     "0033-FE0F-20E3": {
         "emoji": "3️⃣",
         "tags": [
-            "tasto"
+            "3",
+            "tasto",
+            "tre"
         ]
     },
     "0034-FE0F-20E3": {
         "emoji": "4️⃣",
         "tags": [
+            "4",
+            "quattro",
             "tasto"
         ]
     },
     "0035-FE0F-20E3": {
         "emoji": "5️⃣",
         "tags": [
+            "5",
+            "cinque",
             "tasto"
         ]
     },
     "0036-FE0F-20E3": {
         "emoji": "6️⃣",
         "tags": [
+            "6",
+            "sei",
             "tasto"
         ]
     },
     "0037-FE0F-20E3": {
         "emoji": "7️⃣",
         "tags": [
+            "7",
+            "sette",
             "tasto"
         ]
     },
     "0038-FE0F-20E3": {
         "emoji": "8️⃣",
         "tags": [
+            "8",
+            "otto",
             "tasto"
         ]
     },
     "0039-FE0F-20E3": {
         "emoji": "9️⃣",
         "tags": [
+            "9",
+            "nove",
             "tasto"
         ]
     },
@@ -609,7 +629,8 @@
     "1F1E8-1F1F6": {
         "emoji": "🇨🇶",
         "tags": [
-            "CQ"
+            "CQ",
+            "bandiera"
         ]
     },
     "1F1E8-1F1F7": {
@@ -2065,8 +2086,6 @@
         "emoji": "🈁",
         "tags": [
             "giapponese",
-            "ideogramma giapponese per “qui”",
-            "ideogramma katakana qui",
             "katakana",
             "parola",
             "pulsante",
@@ -2151,8 +2170,7 @@
             "ideogramma giapponese di “nessun posto libero”",
             "nessun posto libero",
             "pienezza",
-            "pieno",
-            "満"
+            "pieno"
         ]
     },
     "1F236": {
@@ -2183,8 +2201,7 @@
             "cinese",
             "giapponese",
             "ideogramma",
-            "ideogramma giapponese di “candidatura”",
-            "申"
+            "ideogramma giapponese di “candidatura”"
         ]
     },
     "1F239": {
@@ -3437,7 +3454,6 @@
     "1F36B": {
         "emoji": "🍫",
         "tags": [
-            "barretta",
             "barretta di cioccolato",
             "break",
             "cibo",
@@ -3559,15 +3575,12 @@
             "cena",
             "che fame",
             "cibo",
-            "coltello",
             "cucinare",
             "fame",
-            "forchetta",
             "mangiare",
             "posate",
             "pranzo",
-            "ristorante",
-            "si mangia"
+            "ristorante"
         ]
     },
     "1F375": {
@@ -3646,7 +3659,6 @@
             "bar",
             "bere",
             "birra",
-            "boccale",
             "estate",
             "germania",
             "octoberfest",
@@ -3663,8 +3675,6 @@
             "bar",
             "birra",
             "birre",
-            "boccale",
-            "boccali",
             "boccali di birra che brindano",
             "brindisi",
             "celebrare",
@@ -3711,7 +3721,6 @@
             "auguri",
             "bar",
             "bere",
-            "bottiglia",
             "brindisi",
             "celebrare",
             "champagne",
@@ -3766,7 +3775,6 @@
             "festeggiare",
             "pasticceria",
             "tanti auguri",
-            "torta",
             "zucchero"
         ]
     },
@@ -3846,12 +3854,9 @@
             "compleanno",
             "congratulazioni",
             "coriandoli",
-            "evvai",
             "evviva",
-            "felice",
             "felicità",
             "festa",
-            "festeggiare",
             "party",
             "stelle filanti",
             "urrà",
@@ -4230,14 +4235,11 @@
         "tags": [
             "arte",
             "arti performative",
-            "attore",
-            "attrice",
             "carnevale",
             "dietro le quinte",
             "intrattenimento",
             "palco",
             "performance",
-            "quinte",
             "recitare",
             "scena",
             "shakespeare",
@@ -4520,8 +4522,10 @@
     "1F3C3-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♀️‍➡️",
         "tags": [
+            "a",
             "correre",
             "corsa",
+            "destra",
             "di corsa",
             "donna",
             "donna che corre",
@@ -4543,8 +4547,10 @@
     "1F3C3-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♂️‍➡️",
         "tags": [
+            "a",
             "correre",
             "corsa",
+            "destra",
             "sport",
             "uomo",
             "uomo che corre"
@@ -4553,8 +4559,10 @@
     "1F3C3-200D-27A1-FE0F": {
         "emoji": "🏃‍➡️",
         "tags": [
+            "a",
             "correre",
             "corsa",
+            "destra",
             "di corsa",
             "gara",
             "jogging",
@@ -4580,7 +4588,6 @@
     "1F3C4-200D-2640-FE0F": {
         "emoji": "🏄‍♀️",
         "tags": [
-            "donna",
             "donna che fa surf",
             "mare",
             "oceano",
@@ -4590,8 +4597,6 @@
             "surf",
             "surfare",
             "surfer",
-            "surfista",
-            "tavola",
             "tavola da surf"
         ]
     },
@@ -4924,8 +4929,6 @@
         "emoji": "🏚️",
         "tags": [
             "abbandonata",
-            "abbandonato",
-            "casa",
             "crepa",
             "crepe",
             "decrepita",
@@ -5199,20 +5202,16 @@
     "1F3F3-FE0F-200D-1F308": {
         "emoji": "🏳️‍🌈",
         "tags": [
-            "bandiera",
-            "bi",
             "bisessuale",
             "bisex",
             "gay",
             "genderqueer",
             "glbtq",
             "lesbica",
-            "lgbt",
             "lgbtqia",
             "omosessuale",
             "pace",
             "pride",
-            "trans",
             "transgender"
         ]
     },
@@ -6031,7 +6030,6 @@
         "tags": [
             "animale",
             "bosco",
-            "faccina",
             "fiaba",
             "lago",
             "muso di rana",
@@ -6040,7 +6038,6 @@
             "raganella",
             "ranocchia",
             "ranocchio",
-            "rospetto",
             "rospo",
             "stagno"
         ]
@@ -6293,13 +6290,9 @@
             "d’accordo",
             "gesto di ok",
             "ho capito",
-            "indice",
             "indice e pollice",
-            "mano",
             "mano che fa ok",
-            "ok",
             "ok con la mano",
-            "segno",
             "segno di ok",
             "va bene"
         ]
@@ -6313,14 +6306,9 @@
             "certo",
             "dito",
             "d’accordo",
-            "mano",
             "mi piace",
             "ok",
             "perfetto",
-            "pollice",
-            "pollice alzato",
-            "segno",
-            "su",
             "sì",
             "va bene"
         ]
@@ -6348,9 +6336,6 @@
             "clap clap",
             "complimenti",
             "congratulazioni",
-            "mani",
-            "mani giunte",
-            "mano",
             "ok",
             "pregare",
             "preghiera",
@@ -7028,9 +7013,11 @@
     "1F468-200D-1F9AF-200D-27A1-FE0F": {
         "emoji": "👨‍🦯‍➡️",
         "tags": [
+            "a",
             "accessibilità",
             "cecità",
             "cieco",
+            "destra",
             "ipovedente",
             "ipovedenti",
             "non vedente",
@@ -7116,7 +7103,9 @@
     "1F468-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "👨‍🦼‍➡️",
         "tags": [
+            "a",
             "accessibilità",
+            "destra",
             "disabile",
             "persona",
             "sedia a rotelle",
@@ -7140,7 +7129,9 @@
     "1F468-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "👨‍🦽‍➡️",
         "tags": [
+            "a",
             "accessibilità",
+            "destra",
             "disabile",
             "persona",
             "uomo",
@@ -7540,9 +7531,11 @@
     "1F469-200D-1F9AF-200D-27A1-FE0F": {
         "emoji": "👩‍🦯‍➡️",
         "tags": [
+            "a",
             "accessibilità",
             "cecità",
             "cieca",
+            "destra",
             "donna",
             "donna con bastone bianco di orientamento",
             "donna con bastone per ciechi",
@@ -7625,7 +7618,9 @@
     "1F469-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "👩‍🦼‍➡️",
         "tags": [
+            "a",
             "accessibilità",
+            "destra",
             "disabile",
             "donna",
             "donna in carrozzina",
@@ -7650,7 +7645,9 @@
     "1F469-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "👩‍🦽‍➡️",
         "tags": [
+            "a",
             "accessibilità",
+            "destra",
             "disabile",
             "donna",
             "donna in carrozzina",
@@ -7794,16 +7791,12 @@
     "1F46C": {
         "emoji": "👬",
         "tags": [
-            "appuntamento",
             "bff",
             "compagni",
             "coppia",
-            "due uomini per mano",
             "fidanzati",
-            "gay",
             "gemelli",
             "innamorati",
-            "mano",
             "oroscopo",
             "persone",
             "tenersi per mano",
@@ -7820,9 +7813,7 @@
             "bff",
             "coppia",
             "darsi la mano",
-            "donne",
             "legame",
-            "mano",
             "migliori amiche",
             "persone",
             "ragazze",
@@ -7890,17 +7881,10 @@
             "ballerino",
             "cabaret",
             "coniglietti",
-            "coniglietto",
             "festa",
             "intrattenimento",
-            "orecchie",
-            "orecchie da coniglietto",
-            "orecchie da coniglio",
             "party",
-            "show",
-            "uomini",
-            "uomo",
-            "velini"
+            "show"
         ]
     },
     "1F470": {
@@ -8124,8 +8108,6 @@
             "fantasmino",
             "favola",
             "fiaba",
-            "giocare",
-            "gioco",
             "halloween",
             "horror",
             "mostro",
@@ -8357,15 +8339,12 @@
         "tags": [
             "centro estetico",
             "mal di testa",
-            "massaggio",
             "massaggio al viso per uomo",
-            "massaggio facciale",
             "persona",
             "relax",
             "spa",
             "tensione",
             "testa",
-            "uomo",
             "viso"
         ]
     },
@@ -8426,7 +8405,6 @@
             "ospedale",
             "puntura",
             "sangue",
-            "vaccinare",
             "vaccinazione",
             "vaccino"
         ]
@@ -8473,8 +8451,6 @@
     "1F48D": {
         "emoji": "💍",
         "tags": [
-            "anello di diamanti",
-            "anello di fidanzamento",
             "brillante",
             "diamante",
             "fidanzamento",
@@ -8484,7 +8460,7 @@
             "gioielli",
             "gioiello",
             "matrimonio",
-            "romanticismo"
+            "romanticismo undefined"
         ]
     },
     "1F48E": {
@@ -8522,15 +8498,10 @@
             "appuntamento",
             "bouquet",
             "compleanno",
-            "festa della donna",
-            "festa della mamma",
             "fioraio",
             "fiore",
             "fiori",
-            "mazzo",
             "natura",
-            "pianta",
-            "piante",
             "regalo",
             "romanticismo",
             "romantico"
@@ -8635,8 +8606,6 @@
         "tags": [
             "amore",
             "appuntamento",
-            "cuore",
-            "cuore rosa con freccia",
             "cupido",
             "emozione",
             "emozioni",
@@ -8851,8 +8820,6 @@
         "emoji": "💪",
         "tags": [
             "bodybuilding",
-            "braccio",
-            "braccio di ferro",
             "braccio piegato",
             "corpo",
             "forte",
@@ -8933,14 +8900,11 @@
             "dollari",
             "oro",
             "pagare",
-            "paperone",
             "ricchezza",
             "ricco",
-            "sacco",
             "sacco per soldi",
             "soldi",
-            "tesoro",
-            "vincere"
+            "tesoro"
         ]
     },
     "1F4B1": {
@@ -9025,7 +8989,6 @@
     "1F4B7": {
         "emoji": "💷",
         "tags": [
-            "banconota",
             "banconote",
             "brexit",
             "cash",
@@ -9056,12 +9019,9 @@
             "banca",
             "crescita",
             "finanza",
-            "grafico",
-            "grafico in rialzo",
             "grafico yen in rialzo",
             "in rialzo",
             "mercati",
-            "mercato",
             "mercato in salita",
             "rialzo",
             "trend",
@@ -9442,15 +9402,11 @@
             "biblioteca",
             "compiti",
             "doposcuola",
-            "formazione",
             "leggere",
             "libreria",
-            "libro",
             "pila di libri",
             "quaderni",
-            "relax",
             "romanzi",
-            "scrivere",
             "scuola",
             "studiare",
             "università"
@@ -9782,7 +9738,6 @@
     "1F4F5": {
         "emoji": "📵",
         "tags": [
-            "cellulare",
             "cellulari vietati",
             "divieto",
             "niente cellulare",
@@ -9793,7 +9748,6 @@
             "segno",
             "simbolo",
             "telefono",
-            "vietato",
             "vietato telefonare"
         ]
     },
@@ -9889,7 +9843,6 @@
             "fotocamera",
             "fotografare",
             "macchina fotografica",
-            "proiettore",
             "ricordi",
             "riproduzione",
             "scattare foto",
@@ -10004,11 +9957,8 @@
             "muto",
             "no audio",
             "no volume",
-            "silenzio",
             "silenzioso",
-            "speaker",
             "speaker barrato",
-            "suono",
             "suono disattivato",
             "volume",
             "zitto"
@@ -10445,21 +10395,15 @@
         "emoji": "🔭",
         "tags": [
             "astronomia",
-            "cielo",
             "corpi celesti",
             "costellazioni",
             "galileo galilei",
-            "osservare",
             "osservatorio",
-            "osservazione",
             "osservazione delle stelle",
             "scientifico",
             "scienza",
-            "scienze",
             "spazio",
             "stelle",
-            "strumento",
-            "telescopi",
             "universo"
         ]
     },
@@ -10506,7 +10450,6 @@
             "dio del mare",
             "favola",
             "fiaba",
-            "mare",
             "marino",
             "naufragio",
             "nave",
@@ -11135,14 +11078,12 @@
     "1F590": {
         "emoji": "🖐️",
         "tags": [
-            "batti cinque",
             "batti il cinque",
             "cinque",
             "dita",
             "fermo",
             "gesto",
             "high five",
-            "mano",
             "mano alzata",
             "palmo della mano",
             "stop",
@@ -11466,9 +11407,6 @@
             "allegria",
             "allegro",
             "denti",
-            "faccina",
-            "faccina che ride",
-            "faccina che sogghigna",
             "felice",
             "molto felice",
             "risata",
@@ -11518,22 +11456,19 @@
     "1F603": {
         "emoji": "😃",
         "tags": [
-            "bocca",
             "bocca aperta",
             "che bello",
             "contento",
             "denti",
             "evvai",
-            "faccina",
-            "faccina che ride",
-            "faccina sorridente",
+            "faccina con un gran sorriso e occhi spalancati",
             "felice",
             "felicità",
             "ottimo",
             "ridere",
             "risata",
+            "sorridente",
             "sorridere",
-            "sorriso",
             "sorriso a bocca aperta",
             "urrà"
         ]
@@ -11559,18 +11494,16 @@
         "emoji": "😅",
         "tags": [
             "emozionato",
-            "faccina",
-            "faccina sudata che ride",
+            "faccina con un gran sorriso e goccia di sudore",
             "felice",
             "goccia",
             "nervoso",
             "sollevato",
             "sollievo",
-            "sorriso",
             "sorriso con goccia di sudore",
-            "sorriso teso",
             "stressato",
-            "sudore"
+            "sudore",
+            "teso"
         ]
     },
     "1F606": {
@@ -11594,14 +11527,10 @@
             "angelo",
             "angioletto",
             "aureola",
-            "faccina",
-            "faccina con aureola",
-            "faccina con sorriso",
             "faccina sorridente con aureola",
             "innocente",
             "santarellino",
             "santo",
-            "sorriso",
             "sorriso con aureola",
             "spirito"
         ]
@@ -11654,9 +11583,6 @@
             "buono",
             "che buono",
             "cibo delizioso",
-            "faccina",
-            "faccina che fa la lingua",
-            "faccina con lingua",
             "gnam",
             "golosa",
             "goloso",
@@ -11695,18 +11621,12 @@
         "emoji": "😎",
         "tags": [
             "cool",
-            "faccina",
-            "faccina con occhiali da sole",
             "fighetto",
             "figo",
             "ganzo",
             "luce",
-            "occhiali",
-            "occhiali da sole",
             "relax",
-            "sole",
             "soleggiato",
-            "sorriso",
             "spensierato",
             "vacanza"
         ]
@@ -11717,8 +11637,6 @@
             "ammiccante",
             "bocca",
             "faccia",
-            "faccina",
-            "faccina che sorride",
             "flirtare",
             "furbetto",
             "malizioso",
@@ -11735,7 +11653,6 @@
         "emoji": "😐️",
         "tags": [
             "ah",
-            "faccina",
             "imbarazzato",
             "imbarazzo",
             "impassibile",
@@ -11797,7 +11714,6 @@
     "1F614": {
         "emoji": "😔",
         "tags": [
-            "faccina",
             "mai una gioia",
             "male",
             "mi dispiace",
@@ -11858,16 +11774,10 @@
         "tags": [
             "amore",
             "bacetti",
-            "baci",
             "bacini",
-            "bacio",
             "buona notte",
             "cuore",
-            "faccina",
-            "faccina che dà i baci",
             "faccina che manda baci",
-            "faccina con baci",
-            "faccina con bacio",
             "innamorato",
             "mandare baci",
             "mi manchi",
@@ -11920,11 +11830,7 @@
         "tags": [
             "barzelletta",
             "divertente",
-            "faccina",
-            "faccina che fa la lingua",
-            "lingua",
             "lingua fuori con occhiolino",
-            "linguaccia",
             "linguaccia con occhiolino",
             "occhiolino",
             "pazzerello",
@@ -11957,7 +11863,6 @@
             "delusione",
             "disilluso",
             "emozione",
-            "faccia",
             "faccina",
             "fallimento",
             "fallire",
@@ -12176,7 +12081,6 @@
         "tags": [
             "bocca",
             "bocca aperta",
-            "faccina",
             "non ci credo",
             "non mi dire",
             "oh",
@@ -12194,7 +12098,6 @@
             "ansimare",
             "esausto",
             "espirare",
-            "faccina",
             "fischiare",
             "fumo",
             "soffio",
@@ -12223,8 +12126,6 @@
             "ansia",
             "blu",
             "esami",
-            "faccina",
-            "faccina sotto pressione",
             "faccina spaventata",
             "freddo",
             "nervoso",
@@ -12349,13 +12250,10 @@
         "tags": [
             "dentista",
             "dottore",
-            "faccia",
-            "faccina",
             "germi",
             "infermiera",
             "infermiere",
             "malato",
-            "maschera",
             "mascherina",
             "medicina",
             "raffreddato",
@@ -12526,15 +12424,12 @@
         "emoji": "🙄",
         "tags": [
             "evabbé",
-            "faccina",
             "guardare altrove",
             "noia",
-            "occhi",
             "occhi al cielo",
             "pazienza",
             "roteare gli occhi",
             "ruotare gli occhi",
-            "sollevare gli occhi",
             "sollevare gli occhi al cielo",
             "uffa",
             "vabbè"
@@ -12570,15 +12465,11 @@
         "tags": [
             "basta",
             "braccia incrociate",
-            "gesto",
-            "gesto di rifiuto",
             "incrocio",
             "no",
             "persona",
             "proibito",
-            "rifiuto",
             "stop",
-            "uomo",
             "vietato"
         ]
     },
@@ -12611,7 +12502,6 @@
     "1F646-200D-2642-FE0F": {
         "emoji": "🙆‍♂️",
         "tags": [
-            "braccia",
             "cerchio",
             "d’accordo",
             "esercizio",
@@ -12619,8 +12509,6 @@
             "mani",
             "mano",
             "ok",
-            "person",
-            "uomo",
             "uomo con braccia a cerchio",
             "uomo con braccia alzate",
             "uomo con gesto ok",
@@ -12703,13 +12591,11 @@
         "tags": [
             "animale",
             "animali",
-            "faccia",
             "faccina",
             "in silenzio",
             "monello",
             "proibito",
             "scimmia",
-            "scimmietta",
             "scimmietta non parlo",
             "segreto",
             "vietato"
@@ -12748,11 +12634,8 @@
             "domanda",
             "gesto",
             "io",
-            "mano",
             "mano alzata",
-            "person",
-            "persona felice con mano alzata",
-            "uomo"
+            "persona felice con mano alzata"
         ]
     },
     "1F64C": {
@@ -12765,8 +12648,6 @@
             "gesto",
             "grazie",
             "innocente",
-            "mani",
-            "mani aperte",
             "mano",
             "urrà",
             "vittoria"
@@ -12805,10 +12686,7 @@
             "deluso",
             "emozione",
             "faccia",
-            "gesto",
             "infelice",
-            "maschio",
-            "persona",
             "persona corrucciata",
             "preoccupato",
             "ragazzo",
@@ -12998,7 +12876,6 @@
         "tags": [
             "arrivo",
             "ferrovia",
-            "frecce",
             "freccia",
             "partire",
             "pendolare",
@@ -13121,12 +12998,9 @@
     "1F694": {
         "emoji": "🚔️",
         "tags": [
-            "auto",
             "auto della polizia",
-            "auto della polizia in arrivo",
             "automobile",
             "gazzella",
-            "macchina",
             "macchina della polizia",
             "mezzo",
             "polizia",
@@ -13327,15 +13201,12 @@
     "1F6A3-200D-2640-FE0F": {
         "emoji": "🚣‍♀️",
         "tags": [
-            "barca",
             "barca a remi",
             "canoa",
             "canottaggio",
-            "donna",
             "imbarcazione",
             "lago",
             "mare",
-            "persona",
             "persona che rema",
             "pesca",
             "remi",
@@ -13649,8 +13520,10 @@
     "1F6B6-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♀️‍➡️",
         "tags": [
+            "a",
             "camminare",
             "camminata",
+            "destra",
             "donna",
             "donna che cammina",
             "donna che passeggia",
@@ -13674,7 +13547,9 @@
     "1F6B6-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🚶‍♂️‍➡️",
         "tags": [
+            "a",
             "camminare",
+            "destra",
             "passeggiata",
             "pedone",
             "uomo",
@@ -13684,9 +13559,11 @@
     "1F6B6-200D-27A1-FE0F": {
         "emoji": "🚶‍➡️",
         "tags": [
+            "a",
             "attività",
             "camminare",
             "camminata",
+            "destra",
             "giro a piedi",
             "passeggiare",
             "passeggiare lentamente",
@@ -13859,13 +13736,11 @@
             "arrivare",
             "bagagli",
             "check in",
-            "fare i bagagli",
             "gita",
             "partire",
             "pronti",
             "ritiro",
             "valigie",
-            "viaggiare",
             "viaggio"
         ]
     },
@@ -14000,6 +13875,18 @@
         "tags": [
             "accessibilità",
             "montacarichi"
+        ]
+    },
+    "1F6D8": {
+        "emoji": "🛘",
+        "tags": [
+            "disastro",
+            "montagna",
+            "pericolo",
+            "rocce",
+            "smottamento",
+            "terremoto",
+            "valanga"
         ]
     },
     "1F6DC": {
@@ -14152,8 +14039,6 @@
             "arrivare",
             "arrivi",
             "arrivo",
-            "mezzo",
-            "pista",
             "pista d’atterraggio",
             "trasporti",
             "trasporto",
@@ -14408,8 +14293,6 @@
         "tags": [
             "che vuoi",
             "cosa vuoi",
-            "cuoppo",
-            "dita",
             "dita unite",
             "gesto della mano",
             "interrogativo",
@@ -14470,22 +14353,17 @@
     "1F911": {
         "emoji": "🤑",
         "tags": [
-            "arricchire",
             "avarizia",
             "avidità",
-            "avidità di denaro",
             "avido",
             "denaro",
             "dollari",
-            "faccina",
             "faccina con lingua verde",
             "guadagnare",
             "lingua",
-            "occhi",
             "pagare",
             "ricchezza",
             "ricco",
-            "soldi",
             "taccagno"
         ]
     },
@@ -14572,15 +14450,10 @@
         "tags": [
             "concerto",
             "corna",
-            "cornuto",
-            "dita",
-            "dito",
             "fare le corna",
             "gesto",
             "mani",
-            "mano",
             "mano con le corna",
-            "rock",
             "rock and roll",
             "rockstar"
         ]
@@ -14627,23 +14500,17 @@
     "1F91D": {
         "emoji": "🤝",
         "tags": [
-            "accordo",
-            "affare",
             "affare fatto",
             "conoscere",
             "d’accordo",
-            "mani",
             "mani che si stringono",
-            "mano",
             "ok",
             "patto",
             "piacere",
             "presentarsi",
+            "presentazione",
             "promessa",
-            "promettere",
-            "stringersi la mano",
-            "ti presento",
-            "vi presento"
+            "stringersi la mano"
         ]
     },
     "1F91E": {
@@ -14716,17 +14583,15 @@
             "crepapelle",
             "divertente",
             "esilarante",
+            "faccia che si rotola",
             "faccina che ride",
-            "faccina che si rotola",
             "felice",
             "felicissimo",
-            "lacrime",
             "lacrime dal ridere",
             "lmao",
             "lol",
             "molto felice",
             "occhi chiusi",
-            "ridere",
             "ridicolo",
             "risata",
             "rofl"
@@ -14820,7 +14685,7 @@
             "diffidente",
             "disappunto",
             "eh",
-            "faccina",
+            "faccia con sopracciglia alzate",
             "faccina con sopracciglio alzato",
             "incredulo",
             "mah",
@@ -14838,14 +14703,11 @@
             "emozionante",
             "emozionato",
             "faccia sorridente",
-            "faccina",
             "faccina con le stelle",
             "felice",
             "figata",
             "figo",
-            "occhi",
             "occhi a stella",
-            "stelle",
             "stelline",
             "wow"
         ]
@@ -14897,12 +14759,10 @@
     "1F92D": {
         "emoji": "🤭",
         "tags": [
-            "faccina",
             "faccina che sogghigna",
-            "faccina con mano davanti alla bocca",
             "imbarazzato",
             "imbarazzo",
-            "mano",
+            "mano davanti alla bocca",
             "non ci credo",
             "oddio",
             "oops",
@@ -14931,8 +14791,6 @@
         "emoji": "🤯",
         "tags": [
             "cervello",
-            "faccina",
-            "faccina con testa che esplode",
             "faccina sorpresa",
             "mindblown",
             "non ci credo",
@@ -14978,7 +14836,6 @@
             "mano",
             "offrire",
             "palmi",
-            "palmo",
             "palmo della mano",
             "pregare",
             "preghiera"
@@ -15065,9 +14922,8 @@
     "1F937-200D-2640-FE0F": {
         "emoji": "🤷‍♀️",
         "tags": [
+            "alzare le spalle",
             "boh",
-            "donna",
-            "donna che alza le spalle",
             "dubitare",
             "forse",
             "gesto",
@@ -15082,6 +14938,7 @@
     "1F937-200D-2642-FE0F": {
         "emoji": "🤷‍♂️",
         "tags": [
+            "alzare le spalle",
             "boh",
             "dubbio",
             "dubitare",
@@ -15091,9 +14948,7 @@
             "mani",
             "non saprei",
             "non so",
-            "persona",
-            "uomo",
-            "uomo che alza le spalle"
+            "persona"
         ]
     },
     "1F938": {
@@ -15340,7 +15195,6 @@
             "auguri",
             "bere",
             "brindare",
-            "brindiamo",
             "champagne",
             "cin cin",
             "compleanno",
@@ -15635,14 +15489,12 @@
         "emoji": "🥞",
         "tags": [
             "america",
-            "americano",
             "brunch",
             "burro",
             "cibo",
             "colazione",
             "crêpe",
             "dolce",
-            "francese",
             "francia",
             "frittelle",
             "sciroppo d’acero",
@@ -15869,7 +15721,6 @@
             "annoiato",
             "assonnato",
             "buona notte",
-            "faccina",
             "mi annoio",
             "noia",
             "pisolino",
@@ -15900,10 +15751,6 @@
             "celebrazione",
             "compleanno",
             "entusiasta",
-            "faccina",
-            "faccina da festa",
-            "faccina da party",
-            "faccina festosa",
             "festa",
             "festeggiamenti",
             "festeggiamento",
@@ -15920,13 +15767,9 @@
             "alticcio",
             "bocca ondulata",
             "brillo",
-            "faccina con occhi semiaperti",
-            "faccina confusa",
-            "frastornata",
+            "confuso",
             "frastornato",
-            "occhi irregolari",
             "occhi storti",
-            "stordito",
             "ubriaco",
             "vertigini"
         ]
@@ -15937,21 +15780,14 @@
             "accaldato",
             "bollente",
             "caldo",
-            "caldone",
             "colpo di calore",
-            "colpo di sole",
-            "faccina",
             "febbre",
             "febbricitante",
             "fuoco",
             "lingua di fuori",
             "morendo dal caldo",
-            "morendo di caldo",
-            "morire",
             "morire di caldo",
-            "muoio di caldo",
             "sudare",
-            "sudato",
             "sudore"
         ]
     },
@@ -15960,14 +15796,9 @@
         "tags": [
             "blu",
             "congelare",
-            "congelato",
             "denti che battono per il freddo",
-            "faccina blu",
-            "faccina fredda",
             "freddo",
             "gelo",
-            "gelone",
-            "geloni",
             "ghiaccioli",
             "ghiacciolo",
             "ipotermia",
@@ -16113,14 +15944,12 @@
             "alpha",
             "animale",
             "criniera",
-            "faccina",
             "forte",
             "forza",
             "muso di leone",
             "oroscopo",
             "roar",
             "ruggito",
-            "savana",
             "segno zodiacale",
             "selvaggio",
             "selvatico"
@@ -16913,7 +16742,6 @@
             "sfera",
             "taiwan",
             "thè",
-            "tè",
             "tè con le bolle"
         ]
     },
@@ -16970,6 +16798,8 @@
     "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
+            "a",
+            "destra",
             "donna",
             "donna inginocchiata",
             "in ginocchio",
@@ -16987,6 +16817,8 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
+            "a",
+            "destra",
             "in ginocchio",
             "inginocchiarsi",
             "uomo",
@@ -16996,6 +16828,8 @@
     "1F9CE-200D-27A1-FE0F": {
         "emoji": "🧎‍➡️",
         "tags": [
+            "a",
+            "destra",
             "in ginocchio",
             "inginocchiarsi",
             "meditare",
@@ -17209,8 +17043,10 @@
     "1F9D1-200D-1F9AF-200D-27A1-FE0F": {
         "emoji": "🧑‍🦯‍➡️",
         "tags": [
+            "a",
             "accessibilità",
             "cecità",
+            "destra",
             "persona con bastone di orientamento"
         ]
     },
@@ -17260,7 +17096,9 @@
     "1F9D1-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
+            "a",
             "accessibilità",
+            "destra",
             "persona su sedia a rotelle motorizzata",
             "sedia a rotelle"
         ]
@@ -17275,7 +17113,9 @@
     "1F9D1-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
+            "a",
             "accessibilità",
+            "destra",
             "persona su sedia a rotelle manuale",
             "sedia a rotelle"
         ]
@@ -17292,6 +17132,7 @@
         "emoji": "🧑‍🧑‍🧒‍🧒",
         "tags": [
             "famiglia: persona adulta",
+            "famiglia: persona adulta, persona adulta, minore, minore",
             "minore",
             "persona adulta"
         ]
@@ -17308,6 +17149,14 @@
         "tags": [
             "famiglia: persona adulta",
             "minore"
+        ]
+    },
+    "1F9D1-200D-1FA70": {
+        "emoji": "🧑‍🩰",
+        "tags": [
+            "ballerina",
+            "ballerino",
+            "balletto"
         ]
     },
     "1F9D1-200D-2695-FE0F": {
@@ -17743,7 +17592,6 @@
             "busta rossa",
             "busta soldi",
             "denaro",
-            "hongbao",
             "hóngbāo",
             "lai see",
             "regalo",
@@ -18279,6 +18127,31 @@
             "musica",
             "orchestra",
             "strumento"
+        ]
+    },
+    "1FA8A": {
+        "emoji": "🪊",
+        "tags": [
+            "coulisse",
+            "jazz",
+            "musica",
+            "ottone",
+            "strumento",
+            "tiro"
+        ]
+    },
+    "1FA8E": {
+        "emoji": "🪎",
+        "tags": [
+            "argento",
+            "bottino",
+            "denaro",
+            "gemme",
+            "gioielli",
+            "oro",
+            "premio",
+            "ricchezza",
+            "valori"
         ]
     },
     "1FA8F": {
@@ -18898,6 +18771,28 @@
             "traccia"
         ]
     },
+    "1FAC8": {
+        "emoji": "🫈",
+        "tags": [
+            "bigfoot",
+            "criptide",
+            "foresta",
+            "gigante",
+            "peloso",
+            "sasquatch",
+            "scimmione",
+            "yeti"
+        ]
+    },
+    "1FACD": {
+        "emoji": "🫍",
+        "tags": [
+            "animale",
+            "cetaceo",
+            "marino",
+            "oceano"
+        ]
+    },
     "1FACE": {
         "emoji": "🫎",
         "tags": [
@@ -19067,7 +18962,6 @@
             "afa",
             "caldo",
             "dissolversi",
-            "faccina che si squaglia",
             "liquefarsi",
             "liquido",
             "sciogliendo",
@@ -19101,7 +18995,6 @@
             "imbarazzo",
             "incredibile",
             "incredulità",
-            "mano sulla bocca",
             "meraviglia",
             "non ci credo",
             "non ci posso credere",
@@ -19208,6 +19101,29 @@
             "sonno",
             "stanchezza",
             "stanco"
+        ]
+    },
+    "1FAEA": {
+        "emoji": "🫪",
+        "tags": [
+            "ansia",
+            "panico",
+            "scioccato",
+            "sconvolto",
+            "sorpresa",
+            "vulnerabile"
+        ]
+    },
+    "1FAEF": {
+        "emoji": "🫯",
+        "tags": [
+            "confusione",
+            "dibattito",
+            "disaccordo",
+            "discussione",
+            "lotta",
+            "rissa",
+            "zuffa"
         ]
     },
     "1FAF0": {

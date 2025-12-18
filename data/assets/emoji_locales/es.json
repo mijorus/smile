@@ -14,61 +14,81 @@
     "0030-FE0F-20E3": {
         "emoji": "0️⃣",
         "tags": [
-            "teclas"
+            "0",
+            "cero",
+            "tecla"
         ]
     },
     "0031-FE0F-20E3": {
         "emoji": "1️⃣",
         "tags": [
-            "teclas"
+            "1",
+            "tecla",
+            "uno"
         ]
     },
     "0032-FE0F-20E3": {
         "emoji": "2️⃣",
         "tags": [
-            "teclas"
+            "2",
+            "dos",
+            "tecla"
         ]
     },
     "0033-FE0F-20E3": {
         "emoji": "3️⃣",
         "tags": [
-            "teclas"
+            "3",
+            "tecla",
+            "tres"
         ]
     },
     "0034-FE0F-20E3": {
         "emoji": "4️⃣",
         "tags": [
-            "teclas"
+            "4",
+            "cuatro",
+            "tecla"
         ]
     },
     "0035-FE0F-20E3": {
         "emoji": "5️⃣",
         "tags": [
-            "teclas"
+            "5",
+            "cinco",
+            "tecla"
         ]
     },
     "0036-FE0F-20E3": {
         "emoji": "6️⃣",
         "tags": [
-            "teclas"
+            "6",
+            "seis",
+            "tecla"
         ]
     },
     "0037-FE0F-20E3": {
         "emoji": "7️⃣",
         "tags": [
-            "teclas"
+            "7",
+            "siete",
+            "tecla"
         ]
     },
     "0038-FE0F-20E3": {
         "emoji": "8️⃣",
         "tags": [
-            "teclas"
+            "8",
+            "ocho",
+            "tecla"
         ]
     },
     "0039-FE0F-20E3": {
         "emoji": "9️⃣",
         "tags": [
-            "teclas"
+            "9",
+            "nueve",
+            "tecla"
         ]
     },
     "00A9": {
@@ -585,7 +605,8 @@
     "1F1E8-1F1F6": {
         "emoji": "🇨🇶",
         "tags": [
-            "CQ"
+            "CQ",
+            "bandera"
         ]
     },
     "1F1E8-1F1F7": {
@@ -3717,6 +3738,9 @@
         "tags": [
             "carrera",
             "correr",
+            "derecha",
+            "hacia",
+            "la",
             "maratón",
             "mujer",
             "mujer corriendo"
@@ -3736,8 +3760,11 @@
         "tags": [
             "carrera",
             "correr",
+            "derecha",
+            "hacia",
             "hombre",
             "hombre corriendo",
+            "la",
             "maratón"
         ]
     },
@@ -3746,6 +3773,9 @@
         "tags": [
             "carrera",
             "deporte",
+            "derecha",
+            "hacia",
+            "la",
             "maratón",
             "persona corriendo"
         ]
@@ -5428,9 +5458,12 @@
             "accesibilidad",
             "bastón",
             "ciego",
+            "derecha",
+            "hacia",
             "hombre",
             "hombre con bastón",
-            "invidente"
+            "invidente",
+            "la"
         ]
     },
     "1F468-200D-1F9B0": {
@@ -5477,8 +5510,11 @@
         "emoji": "👨‍🦼‍➡️",
         "tags": [
             "accesibilidad",
+            "derecha",
+            "hacia",
             "hombre",
             "hombre en silla de ruedas eléctrica",
+            "la",
             "silla de ruedas"
         ]
     },
@@ -5494,8 +5530,11 @@
         "emoji": "👨‍🦽‍➡️",
         "tags": [
             "accesibilidad",
+            "derecha",
+            "hacia",
             "hombre",
             "hombre en silla de ruedas manual",
+            "la",
             "silla de ruedas"
         ]
     },
@@ -5787,7 +5826,10 @@
             "accesibilidad",
             "bastón",
             "ciega",
+            "derecha",
+            "hacia",
             "invidente",
+            "la",
             "mujer",
             "mujer con bastón"
         ]
@@ -5836,6 +5878,9 @@
         "emoji": "👩‍🦼‍➡️",
         "tags": [
             "accesibilidad",
+            "derecha",
+            "hacia",
+            "la",
             "mujer",
             "mujer en silla de ruedas eléctrica",
             "silla de ruedas"
@@ -5853,6 +5898,9 @@
         "emoji": "👩‍🦽‍➡️",
         "tags": [
             "accesibilidad",
+            "derecha",
+            "hacia",
+            "la",
             "mujer",
             "mujer en silla de ruedas manual",
             "silla de ruedas"
@@ -9711,6 +9759,9 @@
         "tags": [
             "andar",
             "caminata",
+            "derecha",
+            "hacia",
+            "la",
             "marcha",
             "mujer",
             "mujer caminando"
@@ -9730,8 +9781,11 @@
         "tags": [
             "andar",
             "caminata",
+            "derecha",
+            "hacia",
             "hombre",
             "hombre caminando",
+            "la",
             "marcha"
         ]
     },
@@ -9741,6 +9795,9 @@
             "andar",
             "caminando",
             "caminar",
+            "derecha",
+            "hacia",
+            "la",
             "persona caminando"
         ]
     },
@@ -9945,6 +10002,18 @@
             "accesibilidad",
             "elevador",
             "montacargas"
+        ]
+    },
+    "1F6D8": {
+        "emoji": "🛘",
+        "tags": [
+            "alud",
+            "avalancha",
+            "desastre",
+            "montaña",
+            "peligro",
+            "rocas",
+            "terremoto"
         ]
     },
     "1F6DC": {
@@ -11995,6 +12064,9 @@
             "arrodillada",
             "arrodillarse",
             "de rodillas",
+            "derecha",
+            "hacia",
+            "la",
             "mujer",
             "mujer de rodillas"
         ]
@@ -12014,8 +12086,11 @@
             "arrodillado",
             "arrodillarse",
             "de rodillas",
+            "derecha",
+            "hacia",
             "hombre",
-            "hombre de rodillas"
+            "hombre de rodillas",
+            "la"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
@@ -12025,6 +12100,9 @@
             "arrodillado",
             "arrodillarse",
             "de rodillas",
+            "derecha",
+            "hacia",
+            "la",
             "persona de rodillas"
         ]
     },
@@ -12229,7 +12307,10 @@
         "tags": [
             "accesibilidad",
             "ciego",
+            "derecha",
+            "hacia",
             "invidente",
+            "la",
             "persona con bastón"
         ]
     },
@@ -12280,6 +12361,9 @@
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
             "accesibilidad",
+            "derecha",
+            "hacia",
+            "la",
             "persona en silla de ruedas eléctrica",
             "silla de ruedas"
         ]
@@ -12295,6 +12379,9 @@
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
             "accesibilidad",
+            "derecha",
+            "hacia",
+            "la",
             "persona en silla de ruedas manual",
             "silla de ruedas"
         ]
@@ -12329,6 +12416,14 @@
             "adulto",
             "familia",
             "niño"
+        ]
+    },
+    "1F9D1-200D-1FA70": {
+        "emoji": "🧑‍🩰",
+        "tags": [
+            "bailarina",
+            "bailarín",
+            "ballet"
         ]
     },
     "1F9D1-200D-2695-FE0F": {
@@ -13100,6 +13195,31 @@
             "orquesta"
         ]
     },
+    "1FA8A": {
+        "emoji": "🪊",
+        "tags": [
+            "instrumento",
+            "jazz",
+            "metal",
+            "música",
+            "triste",
+            "viento"
+        ]
+    },
+    "1FA8E": {
+        "emoji": "🪎",
+        "tags": [
+            "botín",
+            "dinero",
+            "joyas",
+            "objetos de valor",
+            "oro",
+            "piedras preciosas",
+            "plata",
+            "premio",
+            "riqueza"
+        ]
+    },
     "1FA8F": {
         "emoji": "🪏",
         "tags": [
@@ -13633,6 +13753,28 @@
             "seguridad"
         ]
     },
+    "1FAC8": {
+        "emoji": "🫈",
+        "tags": [
+            "bigfoot",
+            "bosque",
+            "críptido",
+            "gigante",
+            "monstruo",
+            "peludo",
+            "sasquatch",
+            "yeti"
+        ]
+    },
+    "1FACD": {
+        "emoji": "🫍",
+        "tags": [
+            "ballena",
+            "mar",
+            "marino",
+            "océano"
+        ]
+    },
     "1FACE": {
         "emoji": "🫎",
         "tags": [
@@ -13901,6 +14043,29 @@
             "ojeras",
             "ojos",
             "sueño"
+        ]
+    },
+    "1FAEA": {
+        "emoji": "🫪",
+        "tags": [
+            "ansiedad",
+            "conmocionado",
+            "hinchado",
+            "pánico",
+            "sorprendido",
+            "vulnerable"
+        ]
+    },
+    "1FAEF": {
+        "emoji": "🫯",
+        "tags": [
+            "alboroto",
+            "altercado",
+            "bronca",
+            "desacuerdo",
+            "discusión",
+            "lucha",
+            "pelea"
         ]
     },
     "1FAF0": {

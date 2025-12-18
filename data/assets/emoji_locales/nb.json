@@ -14,60 +14,91 @@
     "0030-FE0F-20E3": {
         "emoji": "0️⃣",
         "tags": [
+            "0",
+            "null",
+            "tast",
             "taster"
         ]
     },
     "0031-FE0F-20E3": {
         "emoji": "1️⃣",
         "tags": [
-            "taster"
+            "1",
+            "tast",
+            "taster",
+            "én"
         ]
     },
     "0032-FE0F-20E3": {
         "emoji": "2️⃣",
         "tags": [
-            "taster"
+            "2",
+            "tast",
+            "taster",
+            "to"
         ]
     },
     "0033-FE0F-20E3": {
         "emoji": "3️⃣",
         "tags": [
-            "taster"
+            "3",
+            "tast",
+            "taster",
+            "tre"
         ]
     },
     "0034-FE0F-20E3": {
         "emoji": "4️⃣",
         "tags": [
+            "4",
+            "fire",
+            "tast",
             "taster"
         ]
     },
     "0035-FE0F-20E3": {
         "emoji": "5️⃣",
         "tags": [
+            "5",
+            "fem",
+            "tast",
             "taster"
         ]
     },
     "0036-FE0F-20E3": {
         "emoji": "6️⃣",
         "tags": [
+            "6",
+            "seks",
+            "tast",
             "taster"
         ]
     },
     "0037-FE0F-20E3": {
         "emoji": "7️⃣",
         "tags": [
+            "7",
+            "sju",
+            "syv",
+            "tast",
             "taster"
         ]
     },
     "0038-FE0F-20E3": {
         "emoji": "8️⃣",
         "tags": [
-            "taster"
+            "8",
+            "tast",
+            "taster",
+            "åtte"
         ]
     },
     "0039-FE0F-20E3": {
         "emoji": "9️⃣",
         "tags": [
+            "9",
+            "ni",
+            "tast",
             "taster"
         ]
     },
@@ -2807,19 +2838,16 @@
         "emoji": "🍋‍🟩",
         "tags": [
             "cocktail",
-            "drink",
             "frukt",
-            "grønn",
-            "juice",
-            "key lime pie",
+            "garnityr",
             "margarita",
-            "mat",
             "mojito",
             "salsa",
             "sitrus",
-            "sur",
+            "syrlig",
             "tequila",
-            "tropisk"
+            "tropisk",
+            "zest"
         ]
     },
     "1F34C": {
@@ -3146,9 +3174,9 @@
             "matlaging",
             "middag",
             "nam",
-            "namnam",
             "restaurant",
-            "spise"
+            "spise",
+            "sulten"
         ]
     },
     "1F375": {
@@ -3804,11 +3832,14 @@
     "1F3C3-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♀️‍➡️",
         "tags": [
+            "høyre",
             "jogge",
             "kvinne",
             "kvinnelig løper",
             "løpe",
-            "maraton"
+            "maraton",
+            "mot",
+            "vendt"
         ]
     },
     "1F3C3-200D-2642-FE0F": {
@@ -3823,11 +3854,14 @@
     "1F3C3-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🏃‍♂️‍➡️",
         "tags": [
+            "høyre",
             "jogge",
             "løpe",
             "mann",
             "mannlig løper",
-            "maraton"
+            "maraton",
+            "mot",
+            "vendt"
         ]
     },
     "1F3C3-200D-27A1-FE0F": {
@@ -3835,14 +3869,17 @@
         "tags": [
             "fart",
             "fort",
+            "høyre",
             "idrett",
             "jogger",
             "jogging",
             "løp",
             "maraton",
+            "mot",
             "person",
             "rask",
-            "sport"
+            "sport",
+            "vendt"
         ]
     },
     "1F3C4": {
@@ -3979,19 +4016,16 @@
         "emoji": "🏌️",
         "tags": [
             "ball",
-            "caddie",
+            "birdie",
             "caddy",
-            "drive",
-            "driving range",
+            "driving",
             "golf",
-            "golfball",
             "golfe",
-            "golfer",
-            "golfslag",
             "green",
+            "person",
             "pga",
             "putte",
-            "sport",
+            "range",
             "tee"
         ]
     },
@@ -4813,7 +4847,10 @@
     "1F42C": {
         "emoji": "🐬",
         "tags": [
-            "dyr"
+            "dyr",
+            "flipper",
+            "hav",
+            "strand"
         ]
     },
     "1F42D": {
@@ -5072,18 +5109,16 @@
     "1F44B": {
         "emoji": "👋",
         "tags": [
-            "er du der?",
-            "ha det",
+            "farvel",
             "hallo",
+            "hand",
             "hei",
             "hilse",
             "hånd",
             "sees",
+            "senere",
             "ses",
-            "vi sees",
-            "vi ses",
-            "vinke",
-            "vinking"
+            "vinke"
         ]
     },
     "1F44C": {
@@ -5679,9 +5714,12 @@
         "emoji": "👨‍🦯‍➡️",
         "tags": [
             "blind",
+            "høyre",
             "mann",
             "mann med blindestokk",
-            "tilgjengelighet"
+            "mot",
+            "tilgjengelighet",
+            "vendt"
         ]
     },
     "1F468-200D-1F9B0": {
@@ -5732,10 +5770,13 @@
     "1F468-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "👨‍🦼‍➡️",
         "tags": [
+            "høyre",
             "mann",
+            "mot",
             "motorisert",
             "rullestol",
-            "tilgjengelighet"
+            "tilgjengelighet",
+            "vendt"
         ]
     },
     "1F468-200D-1F9BD": {
@@ -5750,10 +5791,13 @@
     "1F468-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "👨‍🦽‍➡️",
         "tags": [
+            "høyre",
             "mann",
             "manuell",
+            "mot",
             "rullestol",
-            "tilgjengelighet"
+            "tilgjengelighet",
+            "vendt"
         ]
     },
     "1F468-200D-2695-FE0F": {
@@ -6098,9 +6142,12 @@
         "emoji": "👩‍🦯‍➡️",
         "tags": [
             "blind",
+            "høyre",
             "kvinne",
             "kvinne med blindestokk",
-            "tilgjengelighet"
+            "mot",
+            "tilgjengelighet",
+            "vendt"
         ]
     },
     "1F469-200D-1F9B0": {
@@ -6151,10 +6198,13 @@
     "1F469-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "👩‍🦼‍➡️",
         "tags": [
+            "høyre",
             "kvinne",
+            "mot",
             "motorisert",
             "rullestol",
-            "tilgjengelighet"
+            "tilgjengelighet",
+            "vendt"
         ]
     },
     "1F469-200D-1F9BD": {
@@ -6169,10 +6219,13 @@
     "1F469-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "👩‍🦽‍➡️",
         "tags": [
+            "høyre",
             "kvinne",
             "manuell",
+            "mot",
             "rullestol",
-            "tilgjengelighet"
+            "tilgjengelighet",
+            "vendt"
         ]
     },
     "1F469-200D-2695-FE0F": {
@@ -6277,23 +6330,16 @@
     "1F46C": {
         "emoji": "👬",
         "tags": [
-            "bestevenn",
             "bestevenner",
             "bff",
             "brødre",
             "dating",
-            "forelsket",
             "gutter",
             "hender",
-            "holde",
-            "homo",
-            "hånd",
-            "kjærester",
-            "lhbt",
-            "mann",
+            "karer",
             "menn",
             "par",
-            "skeiv",
+            "tvillinger",
             "venner",
             "vennskap"
         ]
@@ -6301,24 +6347,16 @@
     "1F46D": {
         "emoji": "👭",
         "tags": [
-            "bestevenn",
             "bestevenner",
             "bff",
             "damer",
             "dating",
-            "forelsket",
             "hender",
-            "holde",
-            "homo",
-            "hånd",
             "jenter",
-            "kjærester",
             "kvinner",
-            "lesbisk",
-            "lhbt",
             "par",
-            "skeiv",
             "søstre",
+            "tvillinger",
             "venner",
             "vennskap"
         ]
@@ -6516,6 +6554,7 @@
         "tags": [
             "anlegg",
             "arbeider",
+            "bygg",
             "hjelm",
             "ingeniør",
             "menneske",
@@ -6532,7 +6571,8 @@
             "bygg",
             "hjelm",
             "ingeniør",
-            "kvinne"
+            "kvinne",
+            "refleksvest"
         ]
     },
     "1F477-200D-2642-FE0F": {
@@ -6543,7 +6583,8 @@
             "bygg",
             "hjelm",
             "ingeniør",
-            "mann"
+            "mann",
+            "refleksvest"
         ]
     },
     "1F478": {
@@ -8990,23 +9031,15 @@
         "emoji": "😂",
         "tags": [
             "fjes",
-            "fjes med gledestårer",
-            "flir",
             "flire",
             "glede",
-            "glis",
-            "glise",
             "gøy",
             "haha",
             "hoho",
-            "hæhæ",
             "latter",
             "le",
-            "ler",
-            "ler så jeg griner",
             "lol",
             "morsomt",
-            "roflmao",
             "tårer"
         ]
     },
@@ -10402,9 +10435,12 @@
         "tags": [
             "fotgjenger",
             "gå",
+            "høyre",
             "kvinne",
             "kvinnelig fotgjenger",
-            "tur"
+            "mot",
+            "tur",
+            "vendt"
         ]
     },
     "1F6B6-200D-2642-FE0F": {
@@ -10421,9 +10457,12 @@
         "tags": [
             "fotgjenger",
             "gå",
+            "høyre",
             "mann",
             "mannlig fotgjenger",
-            "tur"
+            "mot",
+            "tur",
+            "vendt"
         ]
     },
     "1F6B6-200D-27A1-FE0F": {
@@ -10435,10 +10474,13 @@
             "gående",
             "går",
             "gåtur",
+            "høyre",
+            "mot",
             "person",
             "spasere",
             "steg",
-            "tur"
+            "tur",
+            "vendt"
         ]
     },
     "1F6B7": {
@@ -10654,6 +10696,19 @@
             "ned",
             "opp",
             "tilgjengelighet"
+        ]
+    },
+    "1F6D8": {
+        "emoji": "🛘",
+        "tags": [
+            "fare",
+            "fjell",
+            "jordskjelv",
+            "katastrofe",
+            "lavine",
+            "skred",
+            "steiner",
+            "steinsprang"
         ]
     },
     "1F6DC": {
@@ -12934,9 +12989,12 @@
     "1F9CE-200D-2640-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♀️‍➡️",
         "tags": [
+            "høyre",
             "kneler",
             "kvinne",
-            "kvinne som kneler"
+            "kvinne som kneler",
+            "mot",
+            "vendt"
         ]
     },
     "1F9CE-200D-2642-FE0F": {
@@ -12949,17 +13007,23 @@
     "1F9CE-200D-2642-FE0F-200D-27A1-FE0F": {
         "emoji": "🧎‍♂️‍➡️",
         "tags": [
+            "høyre",
             "kneler",
             "mann",
-            "mann som kneler"
+            "mann som kneler",
+            "mot",
+            "vendt"
         ]
     },
     "1F9CE-200D-27A1-FE0F": {
         "emoji": "🧎‍➡️",
         "tags": [
+            "høyre",
             "knele",
             "kneler",
-            "person som kneler"
+            "mot",
+            "person som kneler",
+            "vendt"
         ]
     },
     "1F9CF": {
@@ -13153,8 +13217,11 @@
         "emoji": "🧑‍🦯‍➡️",
         "tags": [
             "blind",
+            "høyre",
+            "mot",
             "person med blindestokk",
-            "tilgjengelighet"
+            "tilgjengelighet",
+            "vendt"
         ]
     },
     "1F9D1-200D-1F9B0": {
@@ -13207,9 +13274,12 @@
     "1F9D1-200D-1F9BC-200D-27A1-FE0F": {
         "emoji": "🧑‍🦼‍➡️",
         "tags": [
+            "høyre",
+            "mot",
             "person i motorisert rullestol",
             "rullestol",
-            "tilgjengelighet"
+            "tilgjengelighet",
+            "vendt"
         ]
     },
     "1F9D1-200D-1F9BD": {
@@ -13222,9 +13292,12 @@
     "1F9D1-200D-1F9BD-200D-27A1-FE0F": {
         "emoji": "🧑‍🦽‍➡️",
         "tags": [
+            "høyre",
+            "mot",
             "person i manuell rullestol",
             "rullestol",
-            "tilgjengelighet"
+            "tilgjengelighet",
+            "vendt"
         ]
     },
     "1F9D1-200D-1F9D1-200D-1F9D2": {
@@ -13257,6 +13330,13 @@
             "barn",
             "familie",
             "voksen"
+        ]
+    },
+    "1F9D1-200D-1FA70": {
+        "emoji": "🧑‍🩰",
+        "tags": [
+            "ballett",
+            "danser"
         ]
     },
     "1F9D1-200D-2695-FE0F": {
@@ -13598,14 +13678,13 @@
     "1F9DF": {
         "emoji": "🧟",
         "tags": [
-            "apocalypse",
-            "dead",
+            "apokalypse",
+            "død",
             "halloween",
             "skrekk",
             "skummel",
             "udød",
-            "vandød",
-            "walking"
+            "vandød"
         ]
     },
     "1F9DF-200D-2640-FE0F": {
@@ -14142,6 +14221,33 @@
             "kjærlighet",
             "musikk",
             "orkester"
+        ]
+    },
+    "1FA8A": {
+        "emoji": "🪊",
+        "tags": [
+            "brass",
+            "instrument",
+            "jazz",
+            "messing",
+            "musikk",
+            "trekkbasun",
+            "trist"
+        ]
+    },
+    "1FA8E": {
+        "emoji": "🪎",
+        "tags": [
+            "edelstener",
+            "gull",
+            "juveler",
+            "penger",
+            "premie",
+            "rikdom",
+            "skatt",
+            "sølv",
+            "velstand",
+            "verdisaker"
         ]
     },
     "1FA8F": {
@@ -14800,6 +14906,29 @@
             "tyveri"
         ]
     },
+    "1FAC8": {
+        "emoji": "🫈",
+        "tags": [
+            "bigfoot",
+            "gigant",
+            "hårete",
+            "kjempe",
+            "kryptid",
+            "skog",
+            "uhyre",
+            "vesen",
+            "villmann",
+            "yeti"
+        ]
+    },
+    "1FACD": {
+        "emoji": "🫍",
+        "tags": [
+            "hav",
+            "hval",
+            "sjø"
+        ]
+    },
     "1FACE": {
         "emoji": "🫎",
         "tags": [
@@ -15001,32 +15130,37 @@
     "1FAE2": {
         "emoji": "🫢",
         "tags": [
+            "fjes",
             "flau",
             "forskrekkelse",
             "gispe",
+            "hånd",
+            "munnen",
             "omg",
+            "over",
             "overraskelse",
             "redd",
             "sjokk",
-            "sjokkert",
-            "stille"
+            "stille",
+            "åpne",
+            "øyne"
         ]
     },
     "1FAE3": {
         "emoji": "🫣",
         "tags": [
-            "engstelig",
+            "fascinert",
+            "fjes",
             "flau",
-            "gjemme seg",
-            "gjemmer seg",
+            "gjemme",
             "kikke",
-            "kikker",
-            "klarer ikke dy seg",
-            "må se",
             "redd",
             "sjenert",
+            "skjule",
+            "smugkikke",
             "stirre",
-            "titte"
+            "titte",
+            "øyne"
         ]
     },
     "1FAE4": {
@@ -15064,19 +15198,18 @@
     "1FAE6": {
         "emoji": "🫦",
         "tags": [
-            "bekymre seg",
             "bekymret",
             "bite",
-            "bite seg i leppa",
-            "flørt",
+            "engstelig",
             "flørte",
             "kyss",
-            "leppe",
+            "lepper",
             "leppestift",
+            "munn",
             "nervøs",
             "redd",
             "sexy",
-            "ukomfortabel"
+            "utilpass"
         ]
     },
     "1FAE7": {
@@ -15096,17 +15229,15 @@
         "emoji": "🫨",
         "tags": [
             "ansikt",
-            "fjes",
             "jordskjelv",
             "omg",
             "overraskelse",
             "panikk",
             "riste",
-            "rister",
             "sjokk",
             "skjelvende",
             "sprøtt",
-            "vibrerer",
+            "vibrere",
             "wow",
             "ør"
         ]
@@ -15122,6 +15253,30 @@
             "trøtt",
             "utslitt",
             "øyne"
+        ]
+    },
+    "1FAEA": {
+        "emoji": "🫪",
+        "tags": [
+            "angst",
+            "oppblåst",
+            "overrasket",
+            "panikk",
+            "sjokkert",
+            "sårbar"
+        ]
+    },
+    "1FAEF": {
+        "emoji": "🫯",
+        "tags": [
+            "bryting",
+            "bråk",
+            "diskusjon",
+            "krangel",
+            "slagsmål",
+            "slåssing",
+            "slåsskamp",
+            "uenighet"
         ]
     },
     "1FAF0": {
@@ -15177,18 +15332,18 @@
     "1FAF4": {
         "emoji": "🫴",
         "tags": [
-            "fortell meg",
-            "gripe",
+            "fortell",
             "holde",
             "hånd",
+            "håndflate",
             "invitere",
-            "kalle på",
+            "kalle",
             "kom",
-            "lokke",
             "løfte",
+            "på",
             "tilbud",
             "tilby",
-            "vet ikke"
+            "vinke"
         ]
     },
     "1FAF5": {
