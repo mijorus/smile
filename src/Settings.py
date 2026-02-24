@@ -17,7 +17,7 @@ from gi.repository import Gtk, Gio, Gdk, GLib, Adw
 
 
 class Settings(Adw.PreferencesWindow):
-    WIKI_PAGE = 'https://github.com/mijorus/smile/wiki'
+    WIKI_PAGE = 'https://smile.mijorus.it/docs/paste-automatically-on-wayland/'
 
     def __init__(self, application_id: str, **kwargs):
         super().__init__(**kwargs)
