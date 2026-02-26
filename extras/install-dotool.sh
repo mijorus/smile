@@ -1,17 +1,12 @@
 if [ -d "dotool" ]; then
         echo "Directory 'dotool' already exists. Skipping download."
 else
-        if  command -v git &> /dev/null; then
-            git clone https://git.sr.ht/~geb/dotool
-        else
-            wget https://git.sr.ht/~geb/dotool/archive/1.6.tar.gz -O dotool.tar.gz
-            tar -xzvf dotool.tar.gz
-            mv dotool-1.6 dotool
-            rm dotool.tar.gz
-        fi
+        wget https://git.sr.ht/~geb/dotool/archive/1.6.tar.gz -O dotool-1.6.tar.gz
+        tar -xzvf dotool-1.6.tar.gz
+        rm dotool-1.6.tar.gz
 fi
 
-cd dotool
+cd dotool-1.6
 ./build.sh && sudo ./build.sh install
 sudo udevadm control --reload && sudo udevadm trigger
 
