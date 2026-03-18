@@ -28,6 +28,8 @@ from typing import Optional
 from .ShortcutsWindow import ShortcutsWindow
 from .components.CustomTagEntry import CustomTagEntry
 from .components.SkintoneSelector import SkintoneSelector
+from .components.EmojiItem import EmojiItem
+from .components.EmojiButton import EmojiButton
 from .lib.custom_tags import get_custom_tags
 from .lib.localized_tags import get_localized_tags
 from .lib.emoji_history import increment_emoji_usage_counter, get_history
@@ -48,6 +50,23 @@ class Picker(Gtk.ApplicationWindow):
         EMOJI_LIST_MIN_HEIGHT = 320
 
         self.set_default_size(1, 1)
+
+        self.list_model = Gio.ListStore(item_type=EmojiItem)
+        factory = Gtk.SignalListItemFactory()
+        factory.connect('setup', self.on_setup)
+        factory.connect('bind', self.on_bind)
+        self.selection_model = Gtk.MultiSelection(model=self.list_model)
+        self.grid_view = Gtk.GridView(
+            model=self.selection_model,
+            factory=factory,
+            min_columns=5,
+            max_columns=5,
+            hexpand=True,
+            vexpand=True,
+        )
+
+        for emoji in emojis.values():
+            self.list_model.append(EmojiItem(emoji=emoji, skintone=''))
 
         self.last_copied_text = None
         self.data_dir = Gio.Application.get_default().datadir
@@ -136,7 +155,7 @@ class Picker(Gtk.ApplicationWindow):
         scrolled_emoji_window.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
         scrolled_container = Adw.Clamp(maximum_size=600)
 
-        scrolled_container.set_child(self.emoji_list)
+        scrolled_container.set_child(self.grid_view)
         scrolled_emoji_window.set_child(scrolled_container)
 
         emoji_list_overlay_container = Gtk.Overlay(child=scrolled_emoji_window)
@@ -226,6 +245,8 @@ class Picker(Gtk.ApplicationWindow):
         self.emoji_list.remove_all()
         self.emoji_list_widgets = []
 
+        self.list_model.remove_all()
+
         self.history = get_history()
         filter_for_recents = self.selected_category == 'recents'
         tags_locale = self.settings.get_string('tags-locale')
@@ -237,7 +258,8 @@ class Picker(Gtk.ApplicationWindow):
         if self.query:
             use_localised_tags = self.settings.get_boolean('use-localized-tags')
 
-        for emoji in emojis.values():
+        for item in self.list_model.get_data():
+            emoji = item.emoji
             is_recent = (emoji['hexcode'] in self.history)
 
             if self.query:
@@ -274,19 +296,21 @@ class Picker(Gtk.ApplicationWindow):
                 elif emoji['group'] != self.selected_category:
                     continue
 
-            emoji_button = create_emoji_button(emoji, click_handler=self.handle_emoji_button_click)
-            self.emoji_button_update_css_classes(emoji_button)
-            self.update_emoji_button_skintone(emoji_button, skintone_modifier)
+            # self.list_model.append(EmojiItem(emoji=emoji, skintone=skintone_modifier))
 
-            flowbox_child = create_flowbox_child(emoji_button,
-                secondary_click_geture_callback=self.flowbox_child_secondary_btn_gesture_end,
-                middle_click_gesture_callback=self.flowbox_child_middle_btn_gesture_end
-            )
+            # emoji_button = create_emoji_button(emoji, click_handler=self.handle_emoji_button_click)
+            # self.emoji_button_update_css_classes(emoji_button)
+            # self.update_emoji_button_skintone(emoji_button, skintone_modifier)
 
-            self.emoji_list.append(flowbox_child)
-            self.emoji_list_widgets.append(flowbox_child)
+            # flowbox_child = create_flowbox_child(emoji_button,
+            #     secondary_click_geture_callback=self.flowbox_child_secondary_btn_gesture_end,
+            #     middle_click_gesture_callback=self.flowbox_child_middle_btn_gesture_end
+            # )
 
-        self.emoji_list.set_sort_func(self.sort_emoji_list, None)
+            # self.emoji_list.append(flowbox_child)
+            # self.emoji_list_widgets.append(flowbox_child)
+
+        # self.emoji_list.set_sort_func(self.sort_emo ji_list, None)
         # print('Emoji list creation took ' + str((time_ns() - start) / 1000000) + 'ms')
 
     # Handle events
@@ -559,16 +583,17 @@ class Picker(Gtk.ApplicationWindow):
             else:
                 b.get_style_context().add_class('selected')
 
-    def select_emoji_button(self, button: Gtk.Button):
-        flowbox_child = button.get_parent()
-        self.selected_buttons.append(button)
+    def select_emoji_button(self, button: EmojiButton):
+        # flowbox_child = button.get_parent()
+        # self.selected_buttons.append(button)
         self.selection.append(button.get_label())
-        self.emoji_list.select_child(flowbox_child)
+        # self.emoji_list.select_child(flowbox_child)
+        self.selection_model.select_item(button.position)
 
         increment_emoji_usage_counter(button)
 
-        flowbox_child_set_as_selected(None, widget=flowbox_child)
-        flowbox_child_set_as_active(flowbox_child)
+        # flowbox_child_set_as_selected(None, widget=flowbox_child)
+        # flowbox_child_set_as_active(flowbox_child)
 
         if button.base_skintone_widget:
             flowbox_child_set_as_selected(None, widget=button.base_skintone_widget)
@@ -722,3 +747,24 @@ class Picker(Gtk.ApplicationWindow):
             emoji_button_css.append('emoji-with-skintones')
 
         widget.set_css_classes(emoji_button_css)
+
+    def on_setup(self, factory, list_item):
+        # Called once to create the widget template
+        btn = EmojiButton(vexpand=False, valign=Gtk.Align.CENTER)
+        list_item.set_child(btn)
+
+
+    def on_bind(self, factory, list_item: Gtk.ListItem):
+        # Called each time an item is recycled/shown
+        item: EmojiItem = list_item.get_item()
+        emoji_data = item.emoji
+        emoji_button: EmojiButton = list_item.get_child()
+        emoji_button.position = list_item.get_position()
+        emoji_button.emoji_data = emoji_data
+        emoji_button.hexcode = emoji_data['hexcode']
+        emoji_button.base_skintone_widget = None
+        emoji_button.set_label(item.emoji['emoji'].strip())
+        emoji_button.connect('clicked', self.handle_emoji_button_click)
+        self.update_emoji_button_skintone(emoji_button, item.skintone)
+        # if click_handler:
+        # btn.set_tooltip_text(item.name)
