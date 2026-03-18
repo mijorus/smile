@@ -258,8 +258,7 @@ class Picker(Gtk.ApplicationWindow):
         if self.query:
             use_localised_tags = self.settings.get_boolean('use-localized-tags')
 
-        for item in self.list_model.get_data():
-            emoji = item.emoji
+        for emoji in emojis.values():
             is_recent = (emoji['hexcode'] in self.history)
 
             if self.query:
@@ -296,7 +295,7 @@ class Picker(Gtk.ApplicationWindow):
                 elif emoji['group'] != self.selected_category:
                     continue
 
-            # self.list_model.append(EmojiItem(emoji=emoji, skintone=skintone_modifier))
+            self.list_model.append(EmojiItem(emoji=emoji, skintone=skintone_modifier))
 
             # emoji_button = create_emoji_button(emoji, click_handler=self.handle_emoji_button_click)
             # self.emoji_button_update_css_classes(emoji_button)
