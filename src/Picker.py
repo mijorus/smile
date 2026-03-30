@@ -50,6 +50,7 @@ class Picker(Gtk.ApplicationWindow):
         EMOJI_LIST_MIN_HEIGHT = 320
 
         self.set_default_size(1, 1)
+        self.settings: Gio.Settings = Gio.Settings.new('it.mijorus.smile')
 
         self.list_model = Gio.ListStore(item_type=EmojiItem)
         factory = Gtk.SignalListItemFactory()
@@ -66,6 +67,12 @@ class Picker(Gtk.ApplicationWindow):
             hexpand=True,
             vexpand=True,
         )
+
+        self.emoji_items: list[EmojiItem] = []
+        skintone_modifier = self.settings.get_string('skintone-modifier')
+        for emoji in emojis.values():
+            emoji_item = EmojiItem(emoji=emoji, skintone=skintone_modifier)
+            self.emoji_items.append(emoji_item)
 
         self.last_copied_text = None
         self.data_dir = Gio.Application.get_default().datadir
@@ -88,7 +95,6 @@ class Picker(Gtk.ApplicationWindow):
         event_controller_keys.connect('key-released', self.handle_window_key_release)
         self.add_controller(event_controller_keys)
 
-        self.settings: Gio.Settings = Gio.Settings.new('it.mijorus.smile')
         self.settings.connect('changed::skintone-modifier', self.update_emoji_skintones)
         self.settings.connect('changed::emoji-size-class', self.update_emoji_size)
 
@@ -255,7 +261,8 @@ class Picker(Gtk.ApplicationWindow):
             use_localised_tags = self.settings.get_boolean('use-localized-tags')
 
         emoji_items = []
-        for emoji in emojis.values():
+        for emoji_item in self.emoji_items:
+            emoji = emoji_item.emoji
             is_recent = (emoji['hexcode'] in self.history)
 
             if self.query:
@@ -292,7 +299,6 @@ class Picker(Gtk.ApplicationWindow):
                 elif emoji['group'] != self.selected_category:
                     continue
 
-            emoji_item = EmojiItem(emoji=emoji, skintone=skintone_modifier)
             emoji_items.append(emoji_item)
         
         self.list_model.splice(
@@ -300,24 +306,6 @@ class Picker(Gtk.ApplicationWindow):
             n_removals=self.list_model.get_n_items(),
             additions=emoji_items
         )
-        # self.list_model.append(emoji_item)
-
-        # self.list_model.append(EmojiItem(emoji=emoji, skintone=skintone_modifier))
-
-            # emoji_button = create_emoji_button(emoji, click_handler=self.handle_emoji_button_click)
-            # self.emoji_button_update_css_classes(emoji_button)
-            # self.update_emoji_button_skintone(emoji_button, skintone_modifier)
-
-            # flowbox_child = create_flowbox_child(emoji_button,
-            #     secondary_click_geture_callback=self.flowbox_child_secondary_btn_gesture_end,
-            #     middle_click_gesture_callback=self.flowbox_child_middle_btn_gesture_end
-            # )
-
-            # self.emoji_list.append(flowbox_child)
-            # self.emoji_list_widgets.append(flowbox_child)
-
-        # self.emoji_list.set_sort_func(self.sort_emo ji_list, None)
-        # print('Emoji list creation took ' + str((time_ns() - start) / 1000000) + 'ms')
 
     # Handle events
     def handle_emoji_button_click(self, widget: Gtk.Button):
