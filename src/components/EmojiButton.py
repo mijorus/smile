@@ -11,4 +11,4 @@ class EmojiButton(Gtk.Button):
         self.position: int = None
         self.emoji_data: dict = None
         self.hexcode: str = None
-        self.base_skintone_widget: Gtk.Widget = None
+        self.base_skintone_widget: Gtk.Widget | None = None

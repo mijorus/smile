@@ -55,18 +55,17 @@ class Picker(Gtk.ApplicationWindow):
         factory = Gtk.SignalListItemFactory()
         factory.connect('setup', self.on_setup)
         factory.connect('bind', self.on_bind)
-        self.selection_model = Gtk.MultiSelection(model=self.list_model)
+        self.selection_model = Gtk.SingleSelection(model=self.list_model)
         self.grid_view = Gtk.GridView(
             model=self.selection_model,
+            enable_rubberband=False,
+            single_click_activate=False,
             factory=factory,
             min_columns=5,
             max_columns=5,
             hexpand=True,
             vexpand=True,
         )
-
-        for emoji in emojis.values():
-            self.list_model.append(EmojiItem(emoji=emoji, skintone=''))
 
         self.last_copied_text = None
         self.data_dir = Gio.Application.get_default().datadir
@@ -76,7 +75,7 @@ class Picker(Gtk.ApplicationWindow):
         self.selected_category = 'smileys-emotion'
         self.query: str = None
         self.selection: list[str] = []
-        self.selected_buttons: list[Gtk.Button] = []
+        self.selected_buttons: list[EmojiButton] = []
         self.clipboard = Gdk.Display.get_default().get_clipboard()
         self.categories_count = 0
         self.history = []
@@ -100,7 +99,6 @@ class Picker(Gtk.ApplicationWindow):
             transition_type=Gtk.RevealerTransitionType.NONE,
             css_classes=['solid-overlay'],
             visible=False
-            # valign=Gtk.Align.START,
         )
 
         self.list_tip_label = Gtk.Label(
@@ -240,8 +238,6 @@ class Picker(Gtk.ApplicationWindow):
         return box
 
     def refresh_emoji_list(self):
-        start = time_ns()
-
         self.emoji_list.remove_all()
         self.emoji_list_widgets = []
 
@@ -258,6 +254,7 @@ class Picker(Gtk.ApplicationWindow):
         if self.query:
             use_localised_tags = self.settings.get_boolean('use-localized-tags')
 
+        emoji_items = []
         for emoji in emojis.values():
             is_recent = (emoji['hexcode'] in self.history)
 
@@ -295,7 +292,17 @@ class Picker(Gtk.ApplicationWindow):
                 elif emoji['group'] != self.selected_category:
                     continue
 
-            self.list_model.append(EmojiItem(emoji=emoji, skintone=skintone_modifier))
+            emoji_item = EmojiItem(emoji=emoji, skintone=skintone_modifier)
+            emoji_items.append(emoji_item)
+        
+        self.list_model.splice(
+            position=0,
+            n_removals=self.list_model.get_n_items(),
+            additions=emoji_items
+        )
+        # self.list_model.append(emoji_item)
+
+        # self.list_model.append(EmojiItem(emoji=emoji, skintone=skintone_modifier))
 
             # emoji_button = create_emoji_button(emoji, click_handler=self.handle_emoji_button_click)
             # self.emoji_button_update_css_classes(emoji_button)
@@ -567,7 +574,7 @@ class Picker(Gtk.ApplicationWindow):
         self.list_tip_revealer.set_visible(enabled)
         self.list_tip_revealer.set_reveal_child(enabled)
 
-    def update_selection_content(self, selection: Optional[str] = None):
+    def update_selection_content(self, selection: list[str] = []):
         if selection:
             self.select_buffer_label.set_label(''.join(selection))
         else:
@@ -583,20 +590,9 @@ class Picker(Gtk.ApplicationWindow):
                 b.get_style_context().add_class('selected')
 
     def select_emoji_button(self, button: EmojiButton):
-        # flowbox_child = button.get_parent()
-        # self.selected_buttons.append(button)
+        self.selected_buttons.append(button)
         self.selection.append(button.get_label())
-        # self.emoji_list.select_child(flowbox_child)
-        self.selection_model.select_item(button.position)
-
         increment_emoji_usage_counter(button)
-
-        # flowbox_child_set_as_selected(None, widget=flowbox_child)
-        # flowbox_child_set_as_active(flowbox_child)
-
-        if button.base_skintone_widget:
-            flowbox_child_set_as_selected(None, widget=button.base_skintone_widget)
-
         self.update_selection_content(self.selection)
 
     def deselect_last_selected_emoji(self):
@@ -604,23 +600,10 @@ class Picker(Gtk.ApplicationWindow):
             return
 
         last_button = self.selected_buttons[-1]
+        last_button_pos = len(self.selected_buttons) - 1
 
         self.selection.pop()
         self.selected_buttons.pop()
-
-        if not last_button.get_label() in self.selection:
-            flowbox_child_deselect(last_button.get_parent())
-
-        if last_button.base_skintone_widget:
-            base_skintone_widget_is_selected = False
-
-            for sb in self.selected_buttons:
-                if sb.base_skintone_widget is last_button.base_skintone_widget:
-                    base_skintone_widget_is_selected = True
-                    break
-
-            if not base_skintone_widget_is_selected:
-                flowbox_child_deselect(last_button.base_skintone_widget)
 
         self.update_selection_content(self.selection)
 
@@ -756,14 +739,13 @@ class Picker(Gtk.ApplicationWindow):
     def on_bind(self, factory, list_item: Gtk.ListItem):
         # Called each time an item is recycled/shown
         item: EmojiItem = list_item.get_item()
+
         emoji_data = item.emoji
         emoji_button: EmojiButton = list_item.get_child()
-        emoji_button.position = list_item.get_position()
+        emoji_button.position = list_item.get_position() + 1
         emoji_button.emoji_data = emoji_data
         emoji_button.hexcode = emoji_data['hexcode']
         emoji_button.base_skintone_widget = None
         emoji_button.set_label(item.emoji['emoji'].strip())
         emoji_button.connect('clicked', self.handle_emoji_button_click)
         self.update_emoji_button_skintone(emoji_button, item.skintone)
-        # if click_handler:
-        # btn.set_tooltip_text(item.name)
