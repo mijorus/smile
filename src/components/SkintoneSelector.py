@@ -11,7 +11,7 @@ from gi.repository import Gtk, Gio, Gdk, GLib, Adw  # noqa
 
 
 class SkintoneSelector(CustomPopover):
-    def __init__(self, emoji_button: EmojiButton, parent: Gtk.Window, click_handler: callable, keypress_handler: callable, emoji_active_selection: list[Gtk.Button]):
+    def __init__(self, emoji_button: EmojiButton, parent: Gtk.Window, click_handler: callable, keypress_handler: callable):
         super().__init__(parent=parent)
         self.click_handler = click_handler
         self.emoji_button = emoji_button
@@ -74,14 +74,6 @@ class SkintoneSelector(CustomPopover):
 
             skintone_emojis.append(button)
             self.flowbox_widgets.append(button)
-        
-
-        for e in emoji_active_selection:
-            for widget in self.flowbox_widgets:
-                if e.hexcode == widget.get_child().emoji_data['hexcode']:
-                    widget._is_selected = True
-                    widget.set_css_classes(['flowbox-child-custom', 'selected'])
-                    break
 
         popover_container.set_child(skintone_emojis)
         popover_content.append(popover_container)

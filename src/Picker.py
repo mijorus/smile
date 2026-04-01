@@ -525,7 +525,6 @@ class Picker(Gtk.ApplicationWindow):
                 parent=self,
                 click_handler=self.handle_emoji_button_click,
                 keypress_handler=self.handle_skintone_selector_key_press,
-                emoji_active_selection=self.selected_buttons
             )
 
             for widget in self.skintone_selector.flowbox_widgets:
@@ -533,7 +532,7 @@ class Picker(Gtk.ApplicationWindow):
 
             self.skintone_selector.show()
 
-    def show_custom_tag_entry(self, focused_widget: Gtk.FlowBoxChild):
+    def show_custom_tag_entry(self, focused_widget: EmojiButton):
         popup = CustomTagEntry(focused_widget, self)
         popup.show()
 

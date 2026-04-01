@@ -1,6 +1,7 @@
 import gi
 from ..lib.custom_tags import set_custom_tags, get_custom_tags
 from ..lib.localized_tags import get_localized_tags, get_countries_list
+from .EmojiButton import EmojiButton
 from .CustomPopover import CustomPopover
 
 gi.require_version('Gtk', '4.0')
@@ -10,11 +11,9 @@ from gi.repository import Gtk, Gio, Gdk, GLib, Adw  # noqa
 
 
 class CustomTagEntry(CustomPopover):
-    def __init__(self, flowbox_child: Gtk.FlowBoxChild, parent: Gtk.Window):
+    def __init__(self, emoji_button: EmojiButton, parent: Gtk.Window):
         super().__init__(parent=parent)
-
-        self.emoji_button = flowbox_child.get_child()
-        self.flowbox_child = flowbox_child
+        self.emoji_button = emoji_button
 
         popover_content = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, name='custom_tag_entry')
         self.relative_widget_hexcode = self.emoji_button.emoji_data['hexcode']
