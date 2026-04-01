@@ -1,8 +1,7 @@
 import gi
 from ..assets.emoji_list import emojis
 from ..lib.widget_utils import create_emoji_button, create_flowbox_child
-from ..lib.custom_tags import set_custom_tags, get_custom_tags
-from ..lib.localized_tags import get_localized_tags, get_countries_list
+from ..components.EmojiButton import EmojiButton
 from .CustomPopover import CustomPopover
 
 gi.require_version('Gtk', '4.0')
@@ -12,11 +11,11 @@ from gi.repository import Gtk, Gio, Gdk, GLib, Adw  # noqa
 
 
 class SkintoneSelector(CustomPopover):
-    def __init__(self, parent_flowbox_child: Gtk.FlowBoxChild, parent: Gtk.Window, click_handler: callable, keypress_handler: callable, emoji_active_selection: list[Gtk.Button]):
+    def __init__(self, emoji_button: EmojiButton, parent: Gtk.Window, click_handler: callable, keypress_handler: callable, emoji_active_selection: list[Gtk.Button]):
         super().__init__(parent=parent)
         self.click_handler = click_handler
-        self.parent_flowbox_child = parent_flowbox_child
-        self.flowbox_widgets: list[Gtk.FlowBoxChild] = []
+        self.emoji_button = emoji_button
+        self.flowbox_widgets: list[EmojiButton] = []
         settings: Gio.Settings = Gio.Settings.new('it.mijorus.smile')
         skintone_modifier = settings.get_string('skintone-modifier')
 
@@ -52,11 +51,11 @@ class SkintoneSelector(CustomPopover):
         popover_container.set_propagate_natural_width(True)
         popover_container.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.NEVER)
 
-        emoji_data = self.parent_flowbox_child.get_child().emoji_data
+        emoji_data = self.emoji_button.emoji_data
         relative_widget_hexcode = emoji_data['hexcode']
         available_skintones = [
             emoji_data,
-            *emojis[relative_widget_hexcode]['skintones']
+            *emojis[relative_widget_hexcode].get('skintones', [])
         ]
 
         for skintone in available_skintones:
@@ -66,13 +65,15 @@ class SkintoneSelector(CustomPopover):
             elif skintone_modifier and (f'-{skintone_modifier}' in skintone['hexcode']):
                 continue
 
-            button = create_emoji_button(skintone, self.handle_activate)
-            button.base_skintone_widget = self.parent_flowbox_child
+            button = EmojiButton()
+            button.position = -1
+            button.emoji_data = skintone
+            button.hexcode = skintone['hexcode']
+            button.base_skintone_widget = self.emoji_button
+            button.set_label(skintone['emoji'])
 
-            child = create_flowbox_child(button)
-
-            skintone_emojis.append(child)
-            self.flowbox_widgets.append(child)
+            skintone_emojis.append(button)
+            self.flowbox_widgets.append(button)
         
 
         for e in emoji_active_selection:
@@ -101,10 +102,13 @@ class SkintoneSelector(CustomPopover):
         self.click_handler(event)
         return True
 
-    def check_skintone(flowbox_child):
-        relative_widget_hexcode = flowbox_child.get_child().emoji_data['hexcode']
-        if ('skintones' in emojis[relative_widget_hexcode]):
-            for skintone in emojis[relative_widget_hexcode]['skintones']:
-                return True
+    @staticmethod
+    def check_skintone(emoji_button: EmojiButton):
+        relative_widget_hexcode = emoji_button.hexcode
+        relative_widget_hexcode = relative_widget_hexcode.split('-')[0]
+
+        if relative_widget_hexcode in emojis \
+            and emojis[relative_widget_hexcode].get('skintones', []):
+            return True
 
         return False
