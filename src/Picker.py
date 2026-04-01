@@ -80,7 +80,7 @@ class Picker(Gtk.ApplicationWindow):
         self.emoji_grid_first_row = []
         self.selected_category_index = 0
         self.selected_category = 'smileys-emotion'
-        self.query: str = None
+        self.query: Optional[str] = None
         self.selection: list[str] = []
         self.selected_buttons: list[EmojiButton] = []
         self.clipboard = Gdk.Display.get_default().get_clipboard()
@@ -206,8 +206,6 @@ class Picker(Gtk.ApplicationWindow):
         self.present_with_time(Gdk.CURRENT_TIME)
         self.grab_focus()
 
-        self.emoji_list.unselect_all()
-
         if self.settings.get_boolean('iconify-on-esc'):
             self.unminimize()
 
@@ -244,9 +242,7 @@ class Picker(Gtk.ApplicationWindow):
         return box
 
     def refresh_emoji_list(self):
-        self.emoji_list.remove_all()
         self.emoji_list_widgets = []
-
         self.list_model.remove_all()
 
         self.history = get_history()
@@ -352,10 +348,13 @@ class Picker(Gtk.ApplicationWindow):
 
         if self.search_entry is focused_widget.get_parent():
             if (keyval == Gdk.KEY_Down):
-                self.load_first_row()
-                if self.emoji_grid_first_row:
-                    self.emoji_grid_first_row[0].grab_focus()
-                    self.emoji_list.emit('move-cursor', Gtk.MovementStep.BUFFER_ENDS, -1, False, False)
+                self.grid_view.grab_focus()
+                # self.list_model.
+                # self.grid_view.scroll_to(0)
+                # self.load_first_row()
+                # if self.emoji_grid_first_row:
+                #     self.emoji_grid_first_row[0].grab_focus()
+                    # self.emoji_list.emit('move-cursor', Gtk.MovementStep.BUFFER_ENDS, -1, False, False)
 
                 return True
 
@@ -489,10 +488,11 @@ class Picker(Gtk.ApplicationWindow):
         return False
 
     def handle_search_entry_activate(self, entry: Gtk.Entry):
-        if self.query:
-            self.load_first_row()
-            if self.emoji_grid_first_row:
-                self.copy_and_quit(self.emoji_grid_first_row[0].get_child())
+        pass
+        # if self.query:
+        #     if self.list_model.get_n_items():
+        #         item: EmojiItem = self.list_model.get_item(0)
+        #         self.copy_and_quit(item.get_item().get_child())
 
     def send_paste_signal(self):
         if not self.settings.get_boolean('auto-paste') or not self.last_copied_text:
@@ -534,8 +534,6 @@ class Picker(Gtk.ApplicationWindow):
 
     # # # # # #
     def show_skintone_selector(self, focused_widget: Gtk.FlowBoxChild):
-        self.emoji_list.select_child(focused_widget)
-
         if not SkintoneSelector.check_skintone(focused_widget):
             self.overlay.add_toast(
                 Adw.Toast(title=_("No skintones available"), timeout=1)
@@ -587,19 +585,10 @@ class Picker(Gtk.ApplicationWindow):
         if not self.selection:
             return
 
-        last_button = self.selected_buttons[-1]
-        last_button_pos = len(self.selected_buttons) - 1
-
         self.selection.pop()
         self.selected_buttons.pop()
 
         self.update_selection_content(self.selection)
-
-    def load_first_row(self):
-        self.emoji_grid_first_row = []
-        for widget in self.emoji_list_widgets:
-            if (len(self.emoji_grid_first_row) < self.EMOJI_GRID_COL_N) and widget.props.visible:
-                self.emoji_grid_first_row.append(widget)
 
     def filter_for_category(self, widget: Gtk.Button):
         self.set_active_category(widget.category)
@@ -613,7 +602,6 @@ class Picker(Gtk.ApplicationWindow):
         self.set_empty_recent_tip(show_empty_recent_tip)
 
         self.refresh_emoji_list()
-        self.load_first_row()
 
     def copy_and_quit(self, button: Optional[Gtk.Button] = None):
         text = ''
@@ -642,19 +630,15 @@ class Picker(Gtk.ApplicationWindow):
 
     @debounce(0.1)
     @idle
-    def search_emoji(self, search_entry: str):
-        start = time_ns()
-
+    def search_emoji(self, search_entry: Gtk.Entry):
         self.search_entry.grab_focus()
         query = search_entry.get_text().strip()
 
-        self.query = query if query else None
+        self.query = None
+        if query:
+            self.query = query
 
         self.refresh_emoji_list()
-        self.emoji_list.invalidate_sort()
-
-        gc.collect()
-        # print('Search took ' + str((time_ns() - start) / 1000000) + 'ms')
 
     def sort_emoji_list(self, child1: Gtk.FlowBoxChild, child2: Gtk.FlowBoxChild, user_data):
         child1 = child1.get_child()
