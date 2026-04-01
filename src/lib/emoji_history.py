@@ -1,12 +1,8 @@
-import gi
 from time import time
 from .user_config import read_json_config, save_json_config
-from gi.repository import Gtk, Gio, Gdk
+from ..components.EmojiButton import EmojiButton
 
-history: dict = None
-
-def increment_emoji_usage_counter(button: Gtk.Button):
-    global history
+def increment_emoji_usage_counter(button: EmojiButton):
     max_history_size = 30
     
     emoji_hexcode = button.hexcode
@@ -25,15 +21,8 @@ def increment_emoji_usage_counter(button: Gtk.Button):
         older_key = [*sorted_h][0]
         del history[older_key]
 
-    button.recent = True
-
     save_json_config(history, 'usage_history')
 
 
-def get_history(cache=True) -> dict:
-    global history
-
-    if (history == None):
-        history = read_json_config('usage_history')
-
-    return history
+def get_history() -> dict:
+    return read_json_config('usage_history')

@@ -55,12 +55,12 @@
     padding: 3px;
 }
 
-#emoji_categories_box button:focus {
+/* #emoji_categories_box button:focus {
     border-bottom-color: var(--accent-color);
     box-shadow: 0px 3px 0px 0px var(--accent-color);
     outline: transparent;
     border-radius: 0;
-}
+} */
 
 #emoji_categories_box button.selected {
     border-bottom-color: var(--accent-color);

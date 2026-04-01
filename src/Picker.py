@@ -34,7 +34,7 @@ from .lib.custom_tags import get_custom_tags
 from .lib.localized_tags import get_localized_tags
 from .lib.emoji_history import increment_emoji_usage_counter, get_history
 from .utils import tag_list_contains, debounce, idle
-from .lib.widget_utils import create_flowbox_child, flowbox_child_set_as_selected, flowbox_child_set_as_active, flowbox_child_deselect, create_emoji_button
+from .lib.widget_utils import  flowbox_child_deselect, create_emoji_button
 from .lib.DbusService import DbusService, DBUS_SERVICE_INTERFACE, DBUS_SERVICE_PATH
 from .assets.emoji_list import emojis, emoji_categories
 
@@ -48,6 +48,7 @@ class Picker(Gtk.ApplicationWindow):
         super().__init__(title="Smile", resizable=True, *args, **kwargs)
 
         EMOJI_LIST_MIN_HEIGHT = 320
+        self.EMOJI_GRID_COL_N = 5
 
         self.set_default_size(1, 1)
         self.settings: Gio.Settings = Gio.Settings.new('it.mijorus.smile')
@@ -62,10 +63,10 @@ class Picker(Gtk.ApplicationWindow):
             enable_rubberband=False,
             single_click_activate=False,
             factory=factory,
-            min_columns=5,
-            max_columns=5,
-            hexpand=True,
-            vexpand=True,
+            min_columns=self.EMOJI_GRID_COL_N,
+            max_columns=self.EMOJI_GRID_COL_N,
+            # hexpand=True,
+            # vexpand=True,
         )
 
         self.emoji_items: list[EmojiItem] = []
@@ -76,7 +77,6 @@ class Picker(Gtk.ApplicationWindow):
 
         self.last_copied_text = None
         self.data_dir = Gio.Application.get_default().datadir
-        self.EMOJI_GRID_COL_N = 5
         self.emoji_grid_first_row = []
         self.selected_category_index = 0
         self.selected_category = 'smileys-emotion'
@@ -157,10 +157,7 @@ class Picker(Gtk.ApplicationWindow):
         )
 
         scrolled_emoji_window.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
-        scrolled_container = Adw.Clamp(maximum_size=600)
-
-        scrolled_container.set_child(self.grid_view)
-        scrolled_emoji_window.set_child(scrolled_container)
+        scrolled_emoji_window.set_child(self.grid_view)
 
         emoji_list_overlay_container = Gtk.Overlay(child=scrolled_emoji_window)
 
@@ -343,19 +340,12 @@ class Picker(Gtk.ApplicationWindow):
         focused_widget = self.get_focus()
         focused_button = None
 
-        if isinstance(focused_widget, Gtk.FlowBoxChild):
+        if isinstance(focused_widget, EmojiButton):
             focused_button = focused_widget.get_child()
 
         if self.search_entry is focused_widget.get_parent():
             if (keyval == Gdk.KEY_Down):
                 self.grid_view.grab_focus()
-                # self.list_model.
-                # self.grid_view.scroll_to(0)
-                # self.load_first_row()
-                # if self.emoji_grid_first_row:
-                #     self.emoji_grid_first_row[0].grab_focus()
-                    # self.emoji_list.emit('move-cursor', Gtk.MovementStep.BUFFER_ENDS, -1, False, False)
-
                 return True
 
         if alt_key:
@@ -515,22 +505,19 @@ class Picker(Gtk.ApplicationWindow):
         self.query = None
         self.selection = []
         self.set_empty_recent_tip(None)
-
-        for flowbox_child in self.emoji_list_widgets:
-            flowbox_child_deselect(flowbox_child)
-
         self.selected_buttons = []
 
         if self.settings.get_boolean('iconify-on-esc'):
             self.minimize()
             if paste_on_exit: self.send_paste_signal()
         elif not self.settings.get_boolean('load-hidden-on-startup'):
-            self.hide()
             self.send_paste_signal()
+            self.hide()
             self.close()
         else:
             self.set_visible(False)
-            if paste_on_exit: self.send_paste_signal()
+            if paste_on_exit: 
+                self.send_paste_signal()
 
     # # # # # #
     def show_skintone_selector(self, focused_widget: Gtk.FlowBoxChild):
@@ -578,8 +565,8 @@ class Picker(Gtk.ApplicationWindow):
     def select_emoji_button(self, button: EmojiButton):
         self.selected_buttons.append(button)
         self.selection.append(button.get_label())
-        increment_emoji_usage_counter(button)
         self.update_selection_content(self.selection)
+        increment_emoji_usage_counter(button)
 
     def deselect_last_selected_emoji(self):
         if not self.selection:
@@ -704,7 +691,7 @@ class Picker(Gtk.ApplicationWindow):
 
     def on_setup(self, factory, list_item):
         # Called once to create the widget template
-        btn = EmojiButton(vexpand=False, valign=Gtk.Align.CENTER)
+        btn = EmojiButton()
         list_item.set_child(btn)
 
 
