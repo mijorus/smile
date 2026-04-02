@@ -67,11 +67,10 @@ class Picker(Gtk.ApplicationWindow):
             max_columns=self.EMOJI_GRID_COL_N,
         )
 
+
+
         self.emoji_items: list[EmojiItem] = []
-        skintone_modifier = self.settings.get_string('skintone-modifier')
-        for emoji in emojis.values():
-            emoji_item = EmojiItem(emoji=emoji, skintone=skintone_modifier)
-            self.emoji_items.append(emoji_item)
+        self.refresh_emoji_items()
 
         self.last_copied_text = None
         self.data_dir = Gio.Application.get_default().datadir
@@ -627,7 +626,15 @@ class Picker(Gtk.ApplicationWindow):
                 emoji_button.hexcode = update_data['hexcode']
                 emoji_button.set_label(update_data['emoji'])
 
+    def refresh_emoji_items(self):
+        self.emoji_items = []
+        skintone_modifier = self.settings.get_string('skintone-modifier')
+        for emoji in emojis.values():
+            emoji_item = EmojiItem(emoji=emoji, skintone=skintone_modifier)
+            self.emoji_items.append(emoji_item)
+
     def update_emoji_skintones(self, settings: Gio.Settings, key):
+        self.refresh_emoji_items()
         self.refresh_emoji_list()
 
     def update_emoji_size(self, settings: Gio.Settings, key):
