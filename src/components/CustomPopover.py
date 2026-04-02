@@ -9,7 +9,7 @@ from gi.repository import Gtk, Gio, Gdk, GLib, Adw  # noqa
 
 class CustomPopover(Adw.Window):
     def __init__(self, parent: Gtk.Window):
-        super().__init__(resizable=False, transient_for=parent, destroy_with_parent=True, modal=True, deletable=False)
+        super().__init__(resizable=False, transient_for=parent, destroy_with_parent=True, modal=True, deletable=True)
 
         self.event_controller_keys = Gtk.EventControllerKey()
         self.event_controller_keys.connect('key-pressed', self.handle_key_press)

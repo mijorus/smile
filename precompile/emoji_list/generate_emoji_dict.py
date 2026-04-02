@@ -1,6 +1,7 @@
 import json
 import requests
 import os
+from fnmatch import fnmatch
 from io import StringIO
 
 problematic = [
@@ -19,6 +20,11 @@ problematic = [
 
     # duplicated USA flag
     "1F1FA-1F1F2"
+
+    '1F46F',
+    '1F9D1',
+    '1F46F-*',
+    '1F9D1-*',
 ]
 
 output = {}
@@ -92,6 +98,15 @@ def main():
         # ignore if an emoji is misbehaving
         
         if (el['hexcode'] in problematic) or (el['group'] == 'extras-openmoji'):
+            continue
+
+        skipmatch = False
+        for p in problematic:
+            if fnmatch(el['hexcode'], p):
+                skipmatch = True
+                break
+        
+        if skipmatch:
             continue
 
         if (len(el['skintone_base_hexcode']) > 0) and (el['skintone_base_hexcode'] != el['hexcode']):

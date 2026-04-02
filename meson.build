@@ -1,5 +1,5 @@
 project('smile',
-    version: '2.11.0',
+    version: '2.12.0',
     meson_version: '>= 0.59.0',
     default_options: [ 'warning_level=2', ],
 )

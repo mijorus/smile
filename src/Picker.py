@@ -222,8 +222,6 @@ class Picker(Gtk.ApplicationWindow):
 
     def refresh_emoji_list(self):
         self.list_model.remove_all()
-        self.selection_model.unselect_all()
-
         self.history = get_history()
         filter_for_recents = self.selected_category == 'recents'
         tags_locale = self.settings.get_string('tags-locale')
@@ -281,6 +279,9 @@ class Picker(Gtk.ApplicationWindow):
             n_removals=self.list_model.get_n_items(),
             additions=emoji_items
         )
+
+        self.selection_model.unselect_all()
+
 
     # Handle events
     def handle_emoji_button_click(self, widget: Gtk.Button):
@@ -563,6 +564,7 @@ class Picker(Gtk.ApplicationWindow):
         text = ''
         if button:
             text = button.get_label()
+            print(text)
             increment_emoji_usage_counter(button)
 
         copied_text = ''.join([*self.selection, text])

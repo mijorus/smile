@@ -18,6 +18,11 @@
         <p>Smile is a simple emoji picker for linux with custom tags support</p>
     </description>
     <releases>
+        <release type="stable" version="2.12.0" date="2026-04-02T00:00:00Z">
+            <description>
+                <p>This updates focuses on lowering memory usage of the application</p>
+            </description>
+        </release>
         <release type="stable" version="2.11.0" date="2025-12-19T00:00:00Z">
             <description>
                 <p>Smile can now auto-paste on Wayland using some additional configuration, please read the changes on Github</p>
