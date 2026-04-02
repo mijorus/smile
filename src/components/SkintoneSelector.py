@@ -1,6 +1,5 @@
 import gi
 from ..assets.emoji_list import emojis
-from ..lib.widget_utils import create_emoji_button, create_flowbox_child
 from ..components.EmojiButton import EmojiButton
 from .CustomPopover import CustomPopover
 

@@ -34,7 +34,6 @@ from .lib.custom_tags import get_custom_tags
 from .lib.localized_tags import get_localized_tags
 from .lib.emoji_history import increment_emoji_usage_counter, get_history
 from .utils import tag_list_contains, debounce, idle
-from .lib.widget_utils import  flowbox_child_deselect, create_emoji_button
 from .lib.DbusService import DbusService, DBUS_SERVICE_INTERFACE, DBUS_SERVICE_PATH
 from .assets.emoji_list import emojis, emoji_categories
 
@@ -76,7 +75,6 @@ class Picker(Gtk.ApplicationWindow):
 
         self.last_copied_text = None
         self.data_dir = Gio.Application.get_default().datadir
-        self.emoji_grid_first_row = []
         self.selected_category_index = 0
         self.selected_category = 'smileys-emotion'
         self.selection: list[str] = []
@@ -84,7 +82,6 @@ class Picker(Gtk.ApplicationWindow):
         self.clipboard = Gdk.Display.get_default().get_clipboard()
         self.categories_count = 0
         self.history = []
-        self.shortcut_window: Optional[ShortcutsWindow] = None
         self.shift_key_pressed = False
         self.skintone_selector: Optional[SkintoneSelector] = None
 
@@ -131,18 +128,6 @@ class Picker(Gtk.ApplicationWindow):
             valign=Gtk.Align.END
         )
 
-        self.emoji_list_widgets: list[Gtk.FlowBoxChild] = []
-        self.emoji_list = Gtk.FlowBox(
-            valign=Gtk.Align.START,
-            homogeneous=True,
-            css_classes=['emoji_list_box'],
-            margin_top=2,
-            margin_bottom=2,
-            selection_mode=Gtk.SelectionMode.SINGLE,
-            max_children_per_line=self.EMOJI_GRID_COL_N,
-            min_children_per_line=self.EMOJI_GRID_COL_N
-        )
-
         self.refresh_emoji_list()
         self.category_picker_widgets: list[Gtk.Button] = []
         self.category_picker = self.create_category_picker()
@@ -175,7 +160,7 @@ class Picker(Gtk.ApplicationWindow):
         search_controller_key = Gtk.EventControllerKey()
         search_controller_key.connect(
             'key-pressed',
-            lambda q, w, e, r: self.default_hiding_action(paste_on_exit=False) if w == Gdk.KEY_Escape else False
+            self.handle_search_entry_keypress
         )
 
         self.search_entry.add_controller(search_controller_key)
@@ -237,12 +222,12 @@ class Picker(Gtk.ApplicationWindow):
 
     def refresh_emoji_list(self):
         self.list_model.remove_all()
+        self.selection_model.unselect_all()
 
         self.history = get_history()
         filter_for_recents = self.selected_category == 'recents'
         tags_locale = self.settings.get_string('tags-locale')
         merge_english_tags = self.settings.get_boolean('merge-english-tags')
-        skintone_modifier = self.settings.get_string('skintone-modifier')
         tags_locale_is_en = (tags_locale == 'en')
         use_localised_tags = False
         query = self.search_entry.get_text().strip()
@@ -420,8 +405,6 @@ class Picker(Gtk.ApplicationWindow):
                     self.search_entry.set_position(-1)
                     self.search_entry.grab_focus()
                     return True
-                elif (keyval == Gdk.KEY_Up) and (focused_widget in self.emoji_grid_first_row):
-                    self.search_entry.grab_focus()
 
             elif isinstance(focused_widget, Gtk.Button) and hasattr(focused_widget, 'category'):
                 # Focus is on a category button
@@ -432,18 +415,6 @@ class Picker(Gtk.ApplicationWindow):
                 else:
                     if (keyval == Gdk.KEY_Up):
                         self.set_active_category(focused_widget.category)
-
-                        # for flexbox_child in self.emoji_list_widgets:
-                        #     button = flexbox_child.get_child()
-                        #     if self.selected_category == 'recents':
-                        #         if button.hexcode in get_history():
-                        #             button.grab_focus()
-                        #             break
-                        #     else:
-                        #         if button.emoji_data['group'] == self.selected_category:
-                        #             button.grab_focus()
-                        #             break
-
                     return True
 
         return False
@@ -478,6 +449,12 @@ class Picker(Gtk.ApplicationWindow):
         #     if self.list_model.get_n_items():
         #         item: EmojiItem = self.list_model.get_item(0)
         #         self.copy_and_quit(item.get_item().get_child())
+
+    def handle_search_entry_keypress(self,  q, w, e, r):
+        if w == Gdk.KEY_Escape:
+            self.default_hiding_action(paste_on_exit=False)
+            return True
+        return False
 
     def send_paste_signal(self):
         if not self.settings.get_boolean('auto-paste') or not self.last_copied_text:

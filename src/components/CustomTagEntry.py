@@ -15,7 +15,7 @@ class CustomTagEntry(CustomPopover):
         super().__init__(parent=parent)
         self.emoji_button = emoji_button
 
-        popover_content = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, name='custom_tag_entry')
+        popover_content = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, name='custom_tag_entry', valign=Gtk.Align.CENTER)
         self.relative_widget_hexcode = self.emoji_button.emoji_data['hexcode']
 
         max_tags_lengh = 30
