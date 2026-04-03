@@ -53,7 +53,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/bugaevc/wl-clipboard.git",
-                    "tag": "v2.2.1"
+                    "commit": "67a7b937895bceec1ae5ccebb10216f63f70ca1b"
                 }
             ]
         },
