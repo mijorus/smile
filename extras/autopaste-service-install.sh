@@ -17,6 +17,13 @@ mkdir -p $DATA_DIR
 cat > "$AUTOPASTE_SCRIPT_LOCATION" << 'EOF'
 #!/bin/bash
 
+set -e
+
+if pgrep -fx "/bin/bash $0" | grep -v "^$$\$" > /dev/null 2>&1; then
+    echo "smile-autopaste.sh is already running, exiting." >&2
+    exit 0
+fi
+
 # Monitor D-Bus signals and trigger dotool command
 dbus-monitor --session "type='signal',interface='it.mijorus.smile',member='CopiedEmojiBroadcast',path='/it/mijorus/smile/actions'" | \
 while read -r line; do
