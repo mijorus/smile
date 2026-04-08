@@ -80,7 +80,6 @@ class Picker(Gtk.ApplicationWindow):
         self.selected_buttons: list[EmojiButton] = []
         self.clipboard = Gdk.Display.get_default().get_clipboard()
         self.categories_count = 0
-        self.history = []
         self.shift_key_pressed = False
         self.skintone_selector: Optional[SkintoneSelector] = None
 
@@ -221,7 +220,7 @@ class Picker(Gtk.ApplicationWindow):
 
     def refresh_emoji_list(self):
         self.list_model.remove_all()
-        self.history = get_history()
+        history = get_history()
         filter_for_recents = self.selected_category == 'recents'
         tags_locale = self.settings.get_string('tags-locale')
         merge_english_tags = self.settings.get_boolean('merge-english-tags')
@@ -232,10 +231,10 @@ class Picker(Gtk.ApplicationWindow):
         if query:
             use_localised_tags = self.settings.get_boolean('use-localized-tags')
 
-        emoji_items = []
+        emoji_items: list[EmojiItem] = []
         for emoji_item in self.emoji_items:
             emoji = emoji_item.emoji
-            is_recent = (emoji['hexcode'] in self.history)
+            is_recent = (emoji['hexcode'] in history)
 
             if query:
                 localized_tags = []
@@ -272,7 +271,25 @@ class Picker(Gtk.ApplicationWindow):
                     continue
 
             emoji_items.append(emoji_item)
-        
+
+        if (not query) and filter_for_recents:
+            s_emoji_items = []
+            s_history = []
+
+            if history.items():
+                for h, hv in history.items():
+                    hv['hexcode'] = h
+                    s_history.append(hv)
+
+                s_history = sorted(s_history, key=lambda sh: sh['lastUsage'])
+
+                for s in s_history:
+                    for se in emoji_items:
+                        if se.emoji['hexcode'] == s['hexcode']:
+                            s_emoji_items.insert(0, se)
+                            break
+                emoji_items = s_emoji_items
+                
         self.list_model.splice(
             position=0,
             n_removals=self.list_model.get_n_items(),
@@ -563,7 +580,6 @@ class Picker(Gtk.ApplicationWindow):
         text = ''
         if button:
             text = button.get_label()
-            print(text)
             increment_emoji_usage_counter(button)
 
         copied_text = ''.join([*self.selection, text])
@@ -590,25 +606,6 @@ class Picker(Gtk.ApplicationWindow):
     def search_emoji(self, search_entry: Gtk.Entry):
         self.search_entry.grab_focus()
         self.refresh_emoji_list()
-
-    def sort_emoji_list(self, child1: Gtk.FlowBoxChild, child2: Gtk.FlowBoxChild, user_data):
-        child1 = child1.get_child()
-        child2 = child2.get_child()
-
-        if (self.selected_category == 'recents'):
-            h1 = self.history[child1.hexcode] if child1.hexcode in self.history else None
-            h2 = self.history[child2.hexcode] if child2.hexcode in self.history else None
-            return ((h2['lastUsage'] if h2 else 0) - (h1['lastUsage'] if h1 else 0))
-
-        elif self.search_entry.get_text():
-            hexcode = child2.emoji_data.get('skintone_base_hexcode', child2.hexcode)
-            if get_custom_tags(hexcode, True):
-                return 1
-            else:
-                return (child1.emoji_data['order'] - child2.emoji_data['order'])
-
-        else:
-            return (child1.emoji_data['order'] - child2.emoji_data['order'])
 
     def update_emoji_button_skintone(self, emoji_button, modifier_settings):
         if 'skintones' in emoji_button.emoji_data:
