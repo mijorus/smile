@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-    <id>it.mijorus.smile.desktop</id>
+    <id>it.mijorus.smile</id>
     <name>Smile</name>
     <summary>An emoji picker</summary>
     <launchable type="desktop-id">it.mijorus.smile.desktop</launchable>
