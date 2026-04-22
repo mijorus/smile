@@ -28,7 +28,8 @@
 **Requires Smile 2.11.0**
 
 Please, read:
-https://github.com/mijorus/smile/wiki/Automatically-paste-on-Wayland
+
+https://smile.mijorus.it/docs/paste-automatically-on-wayland/
 
 Note: Flathub and Github are the only official release channels for Smile. Any release on external marketplaces or packaging formats are unofficial and not supported by me.
 
