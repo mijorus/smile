@@ -75,6 +75,7 @@ class Settings(Adw.PreferencesWindow):
         customization_group = Adw.PreferencesGroup(title=_('Customization'))
         customization_group.add(self.create_modifiers_combo_boxes())
         customization_group.add(self.create_emoji_sizes_combo_boxes())
+        customization_group.add(self.create_boolean_settings_entry(_('Set default tab to recent'), 'default-to-recent', '',))
 
         self.localized_tags_group = Adw.PreferencesGroup(title=_('Localized tags'))
         self.localized_tags_group.add(

@@ -129,6 +129,13 @@ class Picker(Gtk.ApplicationWindow):
         self.refresh_emoji_list()
         self.category_picker_widgets: list[Gtk.Button] = []
         self.category_picker = self.create_category_picker()
+        
+        if self.settings.get_boolean('default-to-recent'):
+            self.set_active_category('recents')
+            self.selected_category = 'recents'
+            self.selected_category_index = 0
+
+        self.refresh_emoji_list()
 
         scrolled_emoji_window = Gtk.ScrolledWindow(
             min_content_height=EMOJI_LIST_MIN_HEIGHT,
@@ -175,6 +182,15 @@ class Picker(Gtk.ApplicationWindow):
         self.overlay.set_child(self.viewport_box)
 
         self.set_active_category('smileys-emotion')
+        
+        initial_category = (
+            'recents'
+            if self.settings.get_boolean('default-to-recent')
+            else 'smileys-emotion'
+        )
+
+        self.selected_category = initial_category
+        self.set_active_category(initial_category)
 
         self.set_child(self.overlay)
         self.search_entry.grab_focus()

@@ -44,5 +44,8 @@
         <key name="mouse-multi-select" type="b">
             <default>false</default>
         </key>
+	<key name="default-to-recent" type="b">
+            <default>false</default>
+        </key>
     </schema>
 </schemalist>
