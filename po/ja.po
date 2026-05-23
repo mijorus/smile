@@ -1,14 +1,14 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# Ryo Nakano <ryonakaknock3@gmail.com>, 2023, 2024.
+# Japanese translation for Smile.
+# Copyright (C) 2026 Lorenzo Paderi
+# This file is distributed under the same license as the smile package.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2023-2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: smile\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-14 15:46+0900\n"
-"PO-Revision-Date: 2024-04-14 15:49+0900\n"
+"POT-Creation-Date: 2025-12-18 11:10+0100\n"
+"PO-Revision-Date: 2026-05-23 09:48+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -16,68 +16,66 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.py:109
+#: src/main.py:113
 msgid "translator_credits"
-msgstr "Ryo Nakano"
+msgstr "Ryo Nakano <ryonakaknock3@gmail.com>"
 
 #: src/Picker.py:88
 msgid ""
 "Whoa, it's still empty! \n"
 "Your most used emojis will show up here\n"
 msgstr ""
-"おっと、ここにはまだ何もありません!\n"
+"まだここに表示できるものがありません。\n"
 "最も使用する絵文字がここに表示されます\n"
 
-#: src/Picker.py:510
+#: src/Picker.py:523
 msgid "No skintones available"
 msgstr "肌の色は選択できません"
 
-#: src/Picker.py:626
+#: src/Picker.py:639
 msgid "Copied!"
 msgstr "コピーしました!"
 
-#: src/Picker.py:627
+#: src/Picker.py:640
 msgid ""
 "I have copied the emoji to the clipboard. You can now paste it in any input "
 "field."
 msgstr ""
 "絵文字をクリップボードにコピーしました。お好きな入力欄に貼り付けできます。"
 
-#: src/Settings.py:28
+#: src/Settings.py:30
 msgid "Settings"
 msgstr "設定"
 
-#. General group
-#: src/Settings.py:31
+#: src/Settings.py:33
 msgid "General"
 msgstr "一般"
 
-#: src/Settings.py:33
+#: src/Settings.py:35
 msgid "Run in the background"
 msgstr "バックグラウンドで実行"
 
-#: src/Settings.py:33
+#: src/Settings.py:35
 msgid "Keep Smile running in the background for a faster launch"
 msgstr "Smile をバックグランドで実行したままにすることで、起動を速くします"
 
-#: src/Settings.py:37
+#: src/Settings.py:39
 msgid "Minimize on exit"
 msgstr "終了時に最小化"
 
-#: src/Settings.py:37
+#: src/Settings.py:39
 msgid "Minimize the window when selecting an emoji"
 msgstr "絵文字を選択すると、ウィンドウを最小化します"
 
-#. Mouse group
-#: src/Settings.py:43
+#: src/Settings.py:45
 msgid "Mouse behaviour"
 msgstr "マウスの挙動"
 
-#: src/Settings.py:45
+#: src/Settings.py:47
 msgid "Mouse multi select"
 msgstr "マウスで複数選択"
 
-#: src/Settings.py:45
+#: src/Settings.py:47
 msgid ""
 "Select multiple emojis with a single mouse click, replacing Shift + Click; "
 "press Enter to confirm and Esc to dismiss."
@@ -85,20 +83,19 @@ msgstr ""
 "Shift + クリックの代わりに、クリックで複数の絵文字を選択します。Enter で確"
 "定、Esc で閉じます。"
 
-#. Paste emoji group
-#: src/Settings.py:49
+#: src/Settings.py:51
 msgid "Paste emojis automatically"
 msgstr "絵文字を自動的に貼り付け"
 
-#: src/Settings.py:55
+#: src/Settings.py:57
 msgid "Status:"
 msgstr "状態:"
 
-#: src/Settings.py:60
+#: src/Settings.py:62
 msgid "Enabled"
 msgstr "有効"
 
-#: src/Settings.py:62
+#: src/Settings.py:64
 msgid ""
 "Emulates the Ctrl+V shortcut; might <b>not work</b> on some programs.\n"
 "If using the extension, <b>please ensure that it is correctly ENABLED</b>."
@@ -107,57 +104,63 @@ msgstr ""
 "</b>可能性があります。\n"
 "拡張機能使用時は<b>必ず有効にしてください</b>。"
 
-#: src/Settings.py:68
+#: src/Settings.py:70
+msgid "Learn how to paste automatically on Wayland"
+msgstr "Wayland 上で自動的に貼り付けを行う方法を知る"
+
+#: src/Settings.py:71
 msgid "Get the GNOME extension"
 msgstr "GNOME 拡張機能を入手"
 
-#: src/Settings.py:68
+#: src/Settings.py:71
 msgid "Install the extension to paste automatically on X11 and Wayland"
 msgstr "X11 と Wayland 上で自動的に貼り付けを行う拡張機能をインストールします"
 
-#. Customization group
-#: src/Settings.py:72
+#: src/Settings.py:75
 msgid "Customization"
 msgstr "カスタマイズ"
 
-#: src/Settings.py:76 src/Settings.py:247
+#: src/Settings.py:79 src/Settings.py:253
 msgid "Localized tags"
 msgstr "ローカライズされたタグ"
 
-#: src/Settings.py:78
+#: src/Settings.py:81
 msgid "Use localized tags"
 msgstr "ローカライズされたタグを使う"
 
-#: src/Settings.py:83
+#: src/Settings.py:86
 msgid "Merge localized and English tags"
 msgstr "ローカライズされたタグと英語のタグを統合"
 
-#: src/Settings.py:85
+#: src/Settings.py:88
 msgid "Use both localized tags and English ones at the same time"
 msgstr "ローカライズされたタグと英語のタグの両方を同時に使います"
 
-#. Page 2
-#: src/Settings.py:94
+#: src/Settings.py:97
 msgid "Custom tags"
 msgstr "カスタムタグ"
 
-#: src/Settings.py:126
+#: src/Settings.py:129
 msgid "Available (using the GNOME extension)"
 msgstr "利用可能 (GNOME 拡張機能を使用中)"
 
-#: src/Settings.py:128
+#: src/Settings.py:132
+msgid "Available using D-Bus (setup may be required)"
+msgstr "D-Bus 経由で利用可能 (セットアップが必要な場合があります)"
+
+#: src/Settings.py:134
 msgid "Requires the GNOME extension on Wayland"
 msgstr "Wayland 上では GNOME 拡張機能が必要"
 
-#: src/Settings.py:130
+#: src/Settings.py:136
 msgid "Available (using xdotool on X11)"
 msgstr "利用可能 (X11 上で xdotool を使用中)"
 
-#: src/Settings.py:143
+#: src/Settings.py:149
 msgid "Launch the app with a shortcut"
 msgstr "ショートカットを使ってアプリを起動"
 
-#: src/Settings.py:144
+#: src/Settings.py:150
 msgid ""
 "Create a new keyboard shortcut in your system settings and paste the "
 "following code as a custom command"
@@ -165,47 +168,47 @@ msgstr ""
 "システム設定で新しいキーボードショートカットを作成して、次のコードをカスタム"
 "コマンドとして貼り付けてください"
 
-#: src/Settings.py:180
+#: src/Settings.py:186
 msgid "Remove"
 msgstr "削除"
 
-#: src/Settings.py:198
+#: src/Settings.py:204
 msgid "There are no custom tags yet: create one with Alt + T"
 msgstr "カスタムタグがまだありません。Alt + T で作成してください"
 
-#: src/Settings.py:211
+#: src/Settings.py:217
 msgid "Default skintone"
 msgstr "デフォルトの肌の色"
 
-#: src/Settings.py:226
+#: src/Settings.py:232
 msgid "Emoji size"
 msgstr "絵文字の大きさ"
 
-#: src/Settings.py:228
+#: src/Settings.py:234
 msgid "Default"
 msgstr "デフォルト"
 
-#: src/Settings.py:229
+#: src/Settings.py:235
 msgid "Big"
 msgstr "大"
 
-#: src/Settings.py:230
+#: src/Settings.py:236
 msgid "Bigger"
 msgstr "特大"
 
-#: src/Settings.py:231
+#: src/Settings.py:237
 msgid "Giant"
 msgstr "極大"
 
-#: src/Settings.py:330
+#: src/Settings.py:336
 msgid "Invalid file selected"
 msgstr "無効なファイルが選択されました"
 
-#: src/Settings.py:331
+#: src/Settings.py:337
 msgid "The configuration file that you selected is not a valid backup."
 msgstr "選択された設定ファイルは有効なバックアップではありません。"
 
-#: src/Settings.py:334
+#: src/Settings.py:340
 msgid "Close"
 msgstr "閉じる"
 
@@ -279,8 +282,12 @@ msgstr "最後の絵文字を選択対象から削除する"
 #: src/ui/shortcuts.ui:157
 msgid "Copy the selection and hide the window, without the highlighted emoji"
 msgstr ""
-"選択対象をコピーしてウィンドウを非表示にする　(ハイライトされた絵文字は含ま"
-"ない)"
+"選択対象をコピーしてウィンドウを非表示にする　(ハイライトされた絵文字は含まな"
+"い)"
+
+#: src/ui/shortcuts.ui:178
+msgid "Quit the application"
+msgstr "アプリケーションを終了する"
 
 #: src/ui/importexport-customtags.ui:7
 msgid "Export and import custom tags"
@@ -301,7 +308,7 @@ msgstr "ファイルにエクスポート"
 msgid "Import from file"
 msgstr "ファイルからインポート"
 
-#: src/components/SkintoneSelector.py:89
+#: src/components/SkintoneSelector.py:90
 msgid "<small>Press Enter to select or ESC to close</small>"
 msgstr "<small>Enter で選択、ESC で閉じる</small>"
 
