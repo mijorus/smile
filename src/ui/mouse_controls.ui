@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <object class="AdwDialog" id="mouse_controls_dialog">
+        <property name="title" translatable="yes">Mouse Controls</property>
+        <property name="content-width">500</property>
+        <child>
+            <object class="AdwToolbarView">
+                <child type="top">
+                    <object class="AdwHeaderBar"/>
+                </child>
+                <property name="content">
+                    <object class="AdwPreferencesPage">
+                        <child>
+                            <object class="AdwPreferencesGroup">
+                                <child>
+                                    <object class="AdwActionRow" id="left-click-row">
+                                        <property name="title" translatable="yes">Copy the selected emoji and hide the window</property>
+                                        <child type="suffix">
+                                            <object class="GtkLabel">
+                                                <property name="label">Left Click</property>
+                                                <property name="margin-start">24</property>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </child>
+                                <child>
+                                    <object class="AdwActionRow">
+                                        <property name="title" translatable="yes">Open the skintone selector (if available)</property>
+                                        <child type="suffix">
+                                            <object class="GtkLabel">
+                                                <property name="label">Right Click</property>
+                                                <property name="margin-start">24</property>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </child>
+                                <child>
+                                    <object class="AdwActionRow">
+                                        <property name="title" translatable="yes">Add a custom tag</property>
+                                        <child type="suffix">
+                                            <object class="GtkLabel">
+                                                <property name="label">Middle Click</property>
+                                                <property name="margin-start">24</property>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </child>
+                                <child>
+                                    <object class="AdwActionRow" id="shift-left-click-row">
+                                        <property name="title" translatable="yes">Add an emoji to selection</property>
+                                        <child type="suffix">
+                                            <object class="GtkBox">
+                                                <property name="spacing">4</property>
+                                                <property name="valign">center</property>
+                                                <property name="margin-start">24</property>
+                                                <child>
+                                                    <object class="GtkLabel">
+                                                        <property name="label">Shift</property>
+                                                    </object>
+                                                </child>
+                                                <child>
+                                                    <object class="GtkLabel">
+                                                        <property name="label">+</property>
+                                                        <style>
+                                                            <class name="dimmed"/>
+                                                        </style>
+                                                    </object>
+                                                </child>
+                                                <child>
+                                                    <object class="GtkLabel">
+                                                        <property name="label">Left Click</property>
+                                                    </object>
+                                                </child>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </child>
+                            </object>
+                        </child>
+                    </object>
+                </property>
+            </object>
+        </child>
+    </object>
+</interface>

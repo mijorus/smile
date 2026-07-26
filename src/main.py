@@ -4,6 +4,7 @@ import gi
 from .utils import make_option, portal
 from .Picker import Picker
 from .ShortcutsWindow import ShortcutsWindow
+from .MouseControlsDialog import MouseControlsDialog
 from .Settings import Settings
 from .components.UpdateDialog import UpdateDialog
 from .lib.DbusService import DbusService, GNOME_EXTENSION_LINK
@@ -57,7 +58,8 @@ class Smile(Adw.Application):
             self.window = Picker(application=self)
 
             self.create_action("preferences", lambda w, e: self.on_preferences_action())
-            self.create_action("open_shortcuts", lambda w, e: ShortcutsWindow().open())
+            self.create_action("open_shortcuts", lambda w, e: ShortcutsWindow().open(self.window))
+            self.create_action("open_mouse_controls", lambda w, e: MouseControlsDialog().open(self.window))
             self.create_action("open_changelog", lambda w, e: Gtk.UriLauncher.new('https://smile.mijorus.it/changelog').launch())
             self.create_action("translate", lambda w, e: Gtk.UriLauncher.new('https://github.com/mijorus/smile/tree/master/po').launch())
             self.create_action("gnome_extension", lambda w, e: Gtk.UriLauncher.new(GNOME_EXTENSION_LINK).launch())

@@ -390,7 +390,7 @@ class Picker(Gtk.ApplicationWindow):
 
             elif keyval == Gdk.KEY_question:
                 shortcut_window = ShortcutsWindow()
-                shortcut_window.open()
+                shortcut_window.open(self)
 
             elif (keyval == Gdk.KEY_Return):
                 if self.selection:
