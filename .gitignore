@@ -6,8 +6,7 @@ build
 flatpak-pip-generator.py
 problematic_emojis.cpython*
 run.sh
-src/lib/__pycache__
-src/lib/__pycache__
+__pycache__/
 .glade~
 install.sh
 
